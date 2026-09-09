@@ -1,0 +1,89 @@
+- generic [ref=f3e2]:
+  - banner [ref=f3e3]:
+    - generic [ref=f3e5]:
+      - link "TodoEnUno" [ref=f3e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=f3e7]:
+        - searchbox "Buscar productos y servicios..." [ref=f3e12]
+      - navigation "Principal" [ref=f3e13]:
+        - link "Categorías" [ref=f3e14] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Mis órdenes" [ref=f3e15] [cursor=pointer]:
+          - /url: /ordenes
+      - generic [ref=f3e16]:
+        - link "Notificaciones" [ref=f3e17] [cursor=pointer]:
+          - /url: /perfil
+        - link "Carrito" [ref=f3e21] [cursor=pointer]:
+          - /url: /carrito
+        - link "Mi perfil" [ref=f3e26] [cursor=pointer]:
+          - /url: /perfil
+        - button "Salir" [ref=f3e30] [cursor=pointer]
+  - main [ref=f3e31]:
+    - generic [ref=f3e32]:
+      - heading "Catálogo" [level=1] [ref=f3e33]
+      - complementary [ref=f3e35]:
+        - heading "Filtros" [level=2] [ref=f3e36]
+        - generic [ref=f3e37]:
+          - heading "Tipo" [level=3] [ref=f3e38]
+          - generic [ref=f3e39] [cursor=pointer]:
+            - radio "Todos" [checked] [ref=f3e40]
+            - text: Todos
+          - generic [ref=f3e41] [cursor=pointer]:
+            - radio "Productos" [ref=f3e42]
+            - text: Productos
+          - generic [ref=f3e43] [cursor=pointer]:
+            - radio "Servicios" [ref=f3e44]
+            - text: Servicios
+        - generic [ref=f3e45]:
+          - heading "Categoría" [level=3] [ref=f3e46]
+          - generic [ref=f3e47] [cursor=pointer]:
+            - radio "Todas" [checked] [ref=f3e48]
+            - text: Todas
+          - generic [ref=f3e49] [cursor=pointer]:
+            - radio "Electrónica" [ref=f3e50]
+            - text: Electrónica
+          - generic [ref=f3e51] [cursor=pointer]:
+            - radio "Hogar" [ref=f3e52]
+            - text: Hogar
+          - generic [ref=f3e53] [cursor=pointer]:
+            - radio "Moda" [ref=f3e54]
+            - text: Moda
+          - generic [ref=f3e55] [cursor=pointer]:
+            - radio "Servicios profesionales" [ref=f3e56]
+            - text: Servicios profesionales
+          - generic [ref=f3e57] [cursor=pointer]:
+            - radio "Belleza" [ref=f3e58]
+            - text: Belleza
+        - generic [ref=f3e59]:
+          - heading "Precio" [level=3] [ref=f3e60]
+          - generic [ref=f3e61]:
+            - spinbutton "Mín." [ref=f3e62]
+            - spinbutton "Máx." [ref=f3e63]
+        - button "Limpiar filtros" [ref=f3e64] [cursor=pointer]
+  - contentinfo [ref=f3e68]:
+    - generic [ref=f3e69]:
+      - generic [ref=f3e70]:
+        - generic [ref=f3e71]: TodoEnUno
+        - paragraph [ref=f3e72]: Un marketplace para vendedores y compradores independientes. Prototipo académico construido sobre una arquitectura de microservicios.
+      - generic [ref=f3e73]:
+        - generic [ref=f3e74]:
+          - heading "Comprar" [level=4] [ref=f3e75]
+          - link "Explorar catálogo" [ref=f3e76] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Mis órdenes" [ref=f3e77] [cursor=pointer]:
+            - /url: /ordenes
+          - link "Mi carrito" [ref=f3e78] [cursor=pointer]:
+            - /url: /carrito
+        - generic [ref=f3e79]:
+          - heading "Vender" [level=4] [ref=f3e80]
+          - link "Panel de vendedor" [ref=f3e81] [cursor=pointer]:
+            - /url: /vendedor
+          - generic [ref=f3e82]: Publicar producto
+          - generic [ref=f3e83]: Publicar servicio
+        - generic [ref=f3e84]:
+          - heading "Cuenta" [level=4] [ref=f3e85]
+          - link "Iniciar sesión" [ref=f3e86] [cursor=pointer]:
+            - /url: /login
+          - link "Crear cuenta" [ref=f3e87] [cursor=pointer]:
+            - /url: /registro
+    - generic [ref=f3e88]: © 2026 TodoEnUno — prototipo de trabajo de graduación.

@@ -1,0 +1,356 @@
+- generic [ref=f186e1]:
+  - region "We value your privacy" [ref=f186e2]:
+    - generic [ref=f186e3]:
+      - generic [ref=f186e5]:
+        - heading "We value your privacy" [level=2] [ref=f186e6]
+        - generic [ref=f186e7]:
+          - generic [ref=f186e8]:
+            - paragraph [ref=f186e9]:
+              - text: We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking
+              - strong [ref=f186e10]: “Accept All,”
+              - text: you consent to our use of cookies.
+            - paragraph [ref=f186e11]
+          - group [ref=f186e12]:
+            - button "Customize" [ref=f186e13] [cursor=pointer]
+            - button "Reject All" [ref=f186e14] [cursor=pointer]
+            - button "Accept All" [ref=f186e15] [cursor=pointer]
+      - generic [ref=f186e18]:
+        - text: Powered by
+        - link "Visit CookieYes website" [ref=f186e19] [cursor=pointer]:
+          - /url: https://www.cookieyes.com/product/cookie-consent/?ref=cypbcyb&utm_source=cookie-banner&utm_medium=fl-branding
+  - navigation "Main" [ref=f186e39]:
+    - link "Go to home page" [ref=f186e40] [cursor=pointer]:
+      - /url: /
+      - generic [ref=f186e85]: Home
+    - link "Book Repair" [ref=f186e87] [cursor=pointer]:
+      - /url: /locations
+  - main [ref=f186e89]:
+    - generic [ref=f186e90]:
+      - img "Three men sitting and talking at a white table inside a cell phone repair store with displayed phone cases on the wall and a screen showing the store logo." [ref=f186e91]
+      - generic [ref=f186e94]:
+        - text: The Global Leader in
+        - heading "Fast, reliable repairs that keep your tech working when it matters." [level=1] [ref=f186e95]
+        - paragraph [ref=f186e96]: Repair services for smartphones, tablets, computers and game consoles, backed by access to certified devices when repair isn’t the best option.
+      - generic [ref=f186e97]:
+        - link "Book your repair" [ref=f186e99] [cursor=pointer]:
+          - /url: https://www.cellphonerepair.com/locations/i/book-repair/
+        - generic [ref=f186e100]:
+          - generic [ref=f186e102]: Already have a repair with us?
+          - link "Check status" [ref=f186e104] [cursor=pointer]:
+            - /url: /repair-status
+    - generic [ref=f186e105]:
+      - generic [ref=f186e107]:
+        - paragraph [ref=f186e113]: Our Benefits
+        - heading "Expert Solutions for Your Everyday Tech" [level=2] [ref=f186e115]
+        - group "Our benefits" [ref=f186e116]:
+          - generic [ref=f186e117]:
+            - heading "Limited Lifetime Warranty" [level=3] [ref=f186e118]
+            - paragraph [ref=f186e119]: If a part we installed or the repair isn’t performing as it should, we’ll make it right at no cost.
+            - img "Lifetime Warranty" [ref=f186e120]
+          - generic [ref=f186e121]:
+            - heading "60M + Devices Fixed" [level=3] [ref=f186e122]
+            - paragraph [ref=f186e123]: From everyday phones to specialized devices like tablets and computers, we fix it all with care and expertise.
+            - img "60M + Devices Fixed" [ref=f186e124]
+          - generic [ref=f186e125]:
+            - heading "Same-Day Repairs" [level=3] [ref=f186e126]
+            - paragraph [ref=f186e127]: We offer same-day repair solutions for many common issues, helping you get back to your device faster.
+            - img "Same-Day Repairs" [ref=f186e128]
+          - generic [ref=f186e129]:
+            - heading "Expert Technicians" [level=3] [ref=f186e130]
+            - paragraph [ref=f186e131]: Our certified experts combine proven methods with attention to detail, ensuring every repair restores reliable performance.
+            - img "Expert Technicians" [ref=f186e132]
+      - generic [ref=f186e133]:
+        - heading "Common Issues We Fix Every Day" [level=3] [ref=f186e134]
+        - generic [ref=f186e135]:
+          - link "Phone Screen Repair" [ref=f186e136] [cursor=pointer]:
+            - /url: /repairs/smartphone
+          - link "Phone Battery Replacement" [ref=f186e137] [cursor=pointer]:
+            - /url: /common-issues/iphone-battery-replacement-repair-guide
+          - link "Tablet Repair" [ref=f186e138] [cursor=pointer]:
+            - /url: /repairs/tablet
+          - link "Computer & Laptop Repair" [ref=f186e139] [cursor=pointer]:
+            - /url: /repairs/computer
+          - link "Game Console Repair" [ref=f186e140] [cursor=pointer]:
+            - /url: /repairs/console
+          - link "Charging Port Repair" [ref=f186e141] [cursor=pointer]:
+            - /url: /common-issues/charging-port-replacement-repair
+          - link "Water Damage Repair" [ref=f186e142] [cursor=pointer]:
+            - /url: /common-issues/water-damaged-phone-repair
+          - link "Back Glass Repair" [ref=f186e143] [cursor=pointer]:
+            - /url: /common-issues/back-housing-glass-damage
+    - generic [ref=f186e145]:
+      - generic [ref=f186e147]:
+        - generic [ref=f186e148]:
+          - paragraph [ref=f186e154]: Top Rated
+          - heading "See Why Customers Trust Us" [level=3] [ref=f186e155]
+        - generic [ref=f186e156]:
+          - button "Previous" [ref=f186e158] [cursor=pointer]
+          - button "Next" [ref=f186e160] [cursor=pointer]
+      - group "See Why Customers Trust Us" [ref=f186e162]:
+        - generic [ref=f186e163]:
+          - paragraph [ref=f186e164]: "\"I would recommend this place to anyone looking to get their devices repaired. He stayed late to try and get my phone fixed for me on a Friday evening. I appreciated that so much anyone willing to go above and beyond for their clients will always have a customer.\""
+          - generic [ref=f186e167]:
+            - heading "Charese Mitchell" [level=4] [ref=f186e168]
+            - paragraph [ref=f186e169]: 05/12/26
+        - generic [ref=f186e187]:
+          - paragraph [ref=f186e188]: "\"Great service, the staff is very helpful even in the most challenging circumstances. Very quick, I was able to have my phone back in two hours, they really care about offering the best client experience in town. Highly recommended!\""
+          - generic [ref=f186e191]:
+            - heading "Valeriano Romero" [level=4] [ref=f186e192]
+            - paragraph [ref=f186e193]: 5/9/2026
+        - generic [ref=f186e211]:
+          - paragraph [ref=f186e212]: "\"Great service, so helpful, informative and caring. Purchasing electronics is expensive especially cell phones and computers. It's reassuring to know there is someplace local to keep those investments working at an affordable price.\""
+          - generic [ref=f186e215]:
+            - heading "Tara Plaugher" [level=4] [ref=f186e216]
+            - paragraph [ref=f186e217]: 04/21/26
+        - generic [ref=f186e235]:
+          - paragraph [ref=f186e236]: "\"The guy I spoke with was honest and up front about the issues with my phone. He could have just repaired the phone as requested without telling me the underlying issue that caused the problem in the first place, the battery. Should I need future service I will remember CPR Cell Phone Repair\""
+          - generic [ref=f186e239]:
+            - heading [level=5] [ref=f186e240]:
+              - strong [ref=f186e241]: Kevin Carr
+            - paragraph [ref=f186e242]: 4/19/26
+    - generic [ref=f186e263]:
+      - paragraph [ref=f186e268]: Find a CPR
+      - heading "Your Tech Fix Is Closer Than You Think" [level=3] [ref=f186e269]
+      - paragraph [ref=f186e270]: Get fast, reliable device repair from certified experts at one of our convenient locations. From cracked screens to performance issues, we’re here to keep your tech running smoothly.
+      - paragraph [ref=f186e275]: Same-day repair availability
+      - paragraph [ref=f186e280]: Skilled technicians with expert training
+      - paragraph [ref=f186e285]: Reliable solutions for phones, tablets, and more
+      - paragraph [ref=f186e290]: 400+ Convenient locations across the US and Canada
+      - generic [ref=f186e292]:
+        - generic [aria-hidden]:
+          - strong: Find my Store
+        - link "Find my Store" [ref=f186e293] [cursor=pointer]:
+          - /url: /locations
+    - generic [ref=f186e296]:
+      - generic [ref=f186e297]:
+        - generic [ref=f186e298]:
+          - paragraph [ref=f186e304]: Limited Lifetime Warranty
+          - heading "We Stand Behind Every Repair" [level=3] [ref=f186e310]
+          - paragraph [ref=f186e311]: We back every phone and device repair with a limited lifetime warranty on parts and workmanship, so you can leave your repair with confidence.
+          - generic [ref=f186e313]:
+            - generic [aria-hidden]: Learn More about Warranty
+            - link "Learn More about Warranty" [ref=f186e314] [cursor=pointer]:
+              - /url: /warranty
+        - generic [ref=f186e316]:
+          - paragraph [ref=f186e322]: Certified Devices
+          - heading "Certified Pre-Owned Devices" [level=3] [ref=f186e328]
+          - paragraph [ref=f186e329]: Find certified pre-owned devices at CPR Cell Phone Repair that are professionally refurbished, tested, and ready for everyday use. Each device is inspected by trained technicians to deliver reliable performance at a more affordable price.
+          - generic [ref=f186e331]:
+            - generic [aria-hidden]: Explore Certified Pre-Owned Devices
+            - link "Explore Certified Pre-Owned Devices" [ref=f186e332] [cursor=pointer]:
+              - /url: /certified-pre-owned-phones
+      - group "Genuine parts" [ref=f186e334]:
+        - generic [ref=f186e335]:
+          - generic [ref=f186e336]:
+            - generic [ref=f186e337]: Service you can trust.
+            - heading "Samsung parts you can depend on." [level=3] [ref=f186e338]
+            - paragraph [ref=f186e339]: As a Samsung Service Provider, CPR Cell Phone Repair proudly offers genuine parts on select Samsung repairs. Count on our certified repair technicians to quickly fix your broken Samsung device using OEM parts, proprietary tools, and processes.
+          - generic [ref=f186e340]:
+            - img "Samsung logo" [ref=f186e342]
+            - img "Samsung Image Banner" [ref=f186e344]
+        - generic [ref=f186e345]:
+          - generic [ref=f186e346]:
+            - generic [ref=f186e347]: Available at CPR.
+            - heading "Apple® Genuine Parts" [level=3] [ref=f186e348]
+            - paragraph [ref=f186e349]: As an Independent Repair Provider, CPR Cell Phone Repair uses genuine Apple parts along with trusted diagnostics and repair processes to service select Apple devices with safety, quality, and reliability.
+          - generic [ref=f186e350]:
+            - img "Genuine Apple Battery Replacement Independent Repair Provider badge with battery icon." [ref=f186e352]
+            - img "Apple Image Banner" [ref=f186e354]
+    - generic [ref=f186e355]:
+      - paragraph [ref=f186e361]: FAQs
+      - generic [ref=f186e362]:
+        - heading "Frequently Asked Questions" [level=3] [ref=f186e363]
+        - paragraph [ref=f186e364]: Answer
+      - generic [ref=f186e371]:
+        - list [ref=f186e373]:
+          - listitem [ref=f186e374]:
+            - button "What does CPR Cell Phone Repair fix?" [expanded] [ref=f186e377] [cursor=pointer]
+          - listitem [ref=f186e381]:
+            - button "Does CPR Cell Phone Repair fix cracked phone screens?" [ref=f186e384] [cursor=pointer]
+          - listitem [ref=f186e388]:
+            - button "How long will my repair take?" [ref=f186e391] [cursor=pointer]
+          - listitem [ref=f186e395]:
+            - button "How much will my repair cost?" [ref=f186e398] [cursor=pointer]
+          - listitem [ref=f186e402]:
+            - button "Does CPR Cell Phone Repair sell Certified Pre-Owned phones?" [ref=f186e405] [cursor=pointer]
+          - listitem [ref=f186e409]:
+            - button "Do I need an appointment to visit a store?" [ref=f186e412] [cursor=pointer]
+        - region "Selected question details" [ref=f186e416]:
+          - paragraph [ref=f186e418]: CPR Cell Phone Repair fixes a wide range of electronic devices including smartphones, tablets, laptops, desktop computers, and game consoles. Our technicians handle everything from cracked screens and battery replacements to water damage and hardware issues.
+    - generic [ref=f186e419]:
+      - generic [ref=f186e420]:
+        - paragraph [ref=f186e426]: About Us
+        - 'heading "About CPR: Trusted Electronics Repair Since 1996" [level=3] [ref=f186e432]'
+        - paragraph [ref=f186e433]: CPR Cell Phone Repair provides fast, reliable smartphone, tablet, computer, and game console repair services at locations nationwide. Our certified technicians fix cracked screens, battery issues, charging problems, and more for top brands like Apple, Samsung, and Google—all backed by a limited lifetime warranty.
+        - generic [ref=f186e434]:
+          - paragraph [ref=f186e439]:
+            - strong [ref=f186e440]: 25+ Years in Business
+          - paragraph [ref=f186e445]:
+            - strong [ref=f186e446]: Hundreds of Locations Nationwide
+          - paragraph [ref=f186e451]:
+            - strong [ref=f186e452]: Millions of Devices Repaired
+          - paragraph [ref=f186e457]:
+            - strong [ref=f186e458]: Locally Owned & Community Trusted
+          - paragraph [ref=f186e463]:
+            - strong [ref=f186e464]: Limited Lifetime Warranty
+        - generic [ref=f186e466]:
+          - generic [aria-hidden]: Learn More About CPR
+          - link "Learn More About CPR" [ref=f186e467] [cursor=pointer]:
+            - /url: /about-us
+      - img "About image" [ref=f186e470]
+    - generic [ref=f186e472]:
+      - generic [ref=f186e473]:
+        - paragraph [ref=f186e484]: Blogs
+        - heading "CPR Guide to Tech & Repair" [level=3] [ref=f186e486]
+      - list [ref=f186e490]:
+        - listitem [ref=f186e491]:
+          - generic [ref=f186e493]:
+            - link "Repair or Replace Your Computer? Cost Guide" [ref=f186e496] [cursor=pointer]:
+              - /url: /blog/repair-or-replace-your-computer-cost-guide
+            - link "Read more" [ref=f186e498] [cursor=pointer]:
+              - /url: /blog/repair-or-replace-your-computer-cost-guide
+        - listitem [ref=f186e499]:
+          - generic [ref=f186e501]:
+            - link "Gaming PC Overheating? Causes, Fixes & Prevention Guide" [ref=f186e504] [cursor=pointer]:
+              - /url: /blog/gaming-pc-overheating-causes-fixes-prevention-guide
+            - link "Read more" [ref=f186e506] [cursor=pointer]:
+              - /url: /blog/gaming-pc-overheating-causes-fixes-prevention-guide
+        - listitem [ref=f186e507]:
+          - generic [ref=f186e509]:
+            - link "Desktop Computer Won’t Turn On? 10 Causes & Fixes" [ref=f186e512] [cursor=pointer]:
+              - /url: /blog/desktop-computer-wont-turn-on-10-causes-fixes
+            - link "Read more" [ref=f186e514] [cursor=pointer]:
+              - /url: /blog/desktop-computer-wont-turn-on-10-causes-fixes
+        - listitem [ref=f186e515]:
+          - generic [ref=f186e517]:
+            - link "Xbox Series X Keeps Shutting Off? Causes & Easy Fixes" [ref=f186e520] [cursor=pointer]:
+              - /url: /blog/xbox-series-x-keeps-shutting-off-causes-easy-fixes
+            - link "Read more" [ref=f186e522] [cursor=pointer]:
+              - /url: /blog/xbox-series-x-keeps-shutting-off-causes-easy-fixes
+        - listitem [ref=f186e523]:
+          - generic [ref=f186e525]:
+            - link "PS5 HDMI Port Not Working? Fixes, Repair Cost & Solutions" [ref=f186e528] [cursor=pointer]:
+              - /url: /blog/ps5-hdmi-port-not-working-fixes-repair-cost-solutions
+            - link "Read more" [ref=f186e530] [cursor=pointer]:
+              - /url: /blog/ps5-hdmi-port-not-working-fixes-repair-cost-solutions
+        - listitem [ref=f186e531]:
+          - generic [ref=f186e533]:
+            - link "Why Buying Certified Pre-Owned is Better Than New" [ref=f186e536] [cursor=pointer]:
+              - /url: /blog/why-buying-certified-pre-owned-is-better-than-new
+            - link "Read more" [ref=f186e538] [cursor=pointer]:
+              - /url: /blog/why-buying-certified-pre-owned-is-better-than-new
+    - generic [ref=f186e541]:
+      - link "CPR Cell Phone Repair home" [ref=f186e544] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f186e588]:
+        - generic [ref=f186e589]:
+          - list [ref=f186e590]:
+            - listitem [ref=f186e591]:
+              - link "Repair Services" [ref=f186e592]:
+                - /url: "#"
+          - list [ref=f186e594]:
+            - listitem [ref=f186e595]:
+              - link "iPhone Repair" [ref=f186e596] [cursor=pointer]:
+                - /url: /series/iphone-repair
+            - listitem [ref=f186e597]:
+              - link "Smartphone Repair" [ref=f186e598] [cursor=pointer]:
+                - /url: /repairs/smartphone
+            - listitem [ref=f186e599]:
+              - link "iPad Repair" [ref=f186e600] [cursor=pointer]:
+                - /url: /series/ipad-repair
+            - listitem [ref=f186e601]:
+              - link "Mac Repair" [ref=f186e602] [cursor=pointer]:
+                - /url: /series/imac
+            - listitem [ref=f186e603]:
+              - link "Laptop/Computer Repair" [ref=f186e604] [cursor=pointer]:
+                - /url: /repairs/computer
+            - listitem [ref=f186e605]:
+              - link "Tablet Repair" [ref=f186e606] [cursor=pointer]:
+                - /url: /repairs/tablet
+        - generic [ref=f186e607]:
+          - list [ref=f186e608]:
+            - listitem [ref=f186e609]:
+              - link "Information" [ref=f186e610]:
+                - /url: "#"
+          - generic [ref=f186e611]:
+            - list [ref=f186e612]:
+              - listitem [ref=f186e613]:
+                - link "Blog" [ref=f186e614] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=f186e615]:
+                - link "Common Issues" [ref=f186e616] [cursor=pointer]:
+                  - /url: /common-issues
+              - listitem [ref=f186e617]:
+                - link "Franchise info" [ref=f186e618] [cursor=pointer]:
+                  - /url: /franchising
+              - listitem [ref=f186e619]:
+                - link "Contact Us" [ref=f186e620] [cursor=pointer]:
+                  - /url: /contact-us
+              - listitem [ref=f186e621]:
+                - link "Locations" [ref=f186e622] [cursor=pointer]:
+                  - /url: /locations
+              - listitem [ref=f186e623]:
+                - link "FAQ" [ref=f186e624] [cursor=pointer]:
+                  - /url: /faq
+            - list [ref=f186e625]:
+              - listitem [ref=f186e626]:
+                - link "CPR for Business" [ref=f186e627] [cursor=pointer]:
+                  - /url: /business-and-education/business
+              - listitem [ref=f186e628]:
+                - link "CPR for Education" [ref=f186e629] [cursor=pointer]:
+                  - /url: /business-and-education/education
+              - listitem [ref=f186e630]:
+                - link "Limited Warranty" [ref=f186e631] [cursor=pointer]:
+                  - /url: /warranty
+              - listitem [ref=f186e632]:
+                - link "About Us" [ref=f186e633] [cursor=pointer]:
+                  - /url: /about-us
+    - generic [ref=f186e635]:
+      - generic [ref=f186e636]:
+        - generic [ref=f186e637]:
+          - link [ref=f186e638] [cursor=pointer]:
+            - /url: https://www.facebook.com/cellphonerepairfranchise
+            - img "facebook icon" [ref=f186e640]
+          - link [ref=f186e642] [cursor=pointer]:
+            - /url: https://x.com/CPRCorporate
+            - img "twitter icon" [ref=f186e644]
+          - link [ref=f186e646] [cursor=pointer]:
+            - /url: https://linkedin.com/company/cpr-cell-phone-repair-franchise-systems-inc-/
+            - img "linkedin icon" [ref=f186e648]
+          - link [ref=f186e650] [cursor=pointer]:
+            - /url: https://www.instagram.com/cprcellphonerepair_/?hl=en
+            - img "instagram icon" [ref=f186e652]
+        - generic [ref=f186e654]:
+          - list [ref=f186e655]:
+            - listitem [ref=f186e656]:
+              - link "Privacy Policy" [ref=f186e657] [cursor=pointer]:
+                - /url: /privacy-policy
+          - list [ref=f186e658]:
+            - listitem [ref=f186e659]:
+              - link "Terms of Use" [ref=f186e660] [cursor=pointer]:
+                - /url: /terms-of-use
+          - list [ref=f186e661]:
+            - listitem [ref=f186e662]:
+              - link "California Supply Chain Act" [ref=f186e663] [cursor=pointer]:
+                - /url: /california-supply-chain-act
+          - list [ref=f186e664]:
+            - listitem [ref=f186e665]:
+              - link "Accessibility Statement" [ref=f186e666] [cursor=pointer]:
+                - /url: /accessibility-statement
+      - generic [ref=f186e668]:
+        - generic [ref=f186e669]:
+          - generic:
+            - link "partners icons":
+              - /url: "#"
+              - img "partners icons"
+            - link "footer logo icons":
+              - /url: "#"
+              - img "footer logo icons"
+            - link "partners icons":
+              - /url: "#"
+              - img "partners icons"
+            - link "partners icons":
+              - /url: "#"
+              - img "partners icons"
+          - paragraph [ref=f186e670]: © 2026 CPR® Cell Phone Repair. All Rights Reserved
+        - paragraph [ref=f186e671]: All CPR Stores are independently owned and operated and may not offer all of the repair and warranty types listed on this website. Contact your local store for their specific repair capabilities and warranty terms. MMI-CPR, LLC and CPR Stores are not liable for warranties made by third parties on specific accessories or devices sold at CPR Stores. All product and company names are trademarks of their respective holders. iPhone, iPad, iPod, iPod touch, Mac and iMac are registered trademarks and property of Apple, Inc. CPR is a third-party repair company and is not affiliated with Apple.

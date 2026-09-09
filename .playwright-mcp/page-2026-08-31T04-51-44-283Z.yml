@@ -1,0 +1,44 @@
+- generic [ref=f11e3]:
+  - complementary [ref=f11e4]:
+    - generic [ref=f11e5]: TodoEnUno
+    - navigation [ref=f11e6]:
+      - generic [ref=f11e7]: Resumen
+      - generic [ref=f11e13]: Publicaciones
+      - generic [ref=f11e17]: Órdenes recibidas
+      - generic [ref=f11e20]: Perfil
+    - link "Cerrar sesión" [ref=f11e25] [cursor=pointer]:
+      - /url: "#"
+  - main [ref=f11e29]:
+    - paragraph [ref=f11e30]: Publicaciones / Nueva publicación
+    - heading "Nueva publicación" [level=1] [ref=f11e32]
+    - generic [ref=f11e33]:
+      - heading "Tipo de publicación" [level=3] [ref=f11e34]
+      - generic [ref=f11e35]:
+        - generic [ref=f11e36]: Producto
+        - generic [ref=f11e40]: Servicio
+      - generic [ref=f11e43]:
+        - generic [ref=f11e44]: Nombre de la publicación
+        - textbox "Ej. Lámpara de mesa en cerámica artesanal" [ref=f11e45]
+      - generic [ref=f11e46]:
+        - generic [ref=f11e47]:
+          - generic [ref=f11e48]: Categoría
+          - combobox [ref=f11e49]:
+            - option "Hogar y decoración" [selected]
+        - generic [ref=f11e50]:
+          - generic [ref=f11e51]: Precio (USD)
+          - textbox "0.00" [ref=f11e52]
+      - generic [ref=f11e53]:
+        - generic [ref=f11e54]: Descripción
+        - textbox "Describe los materiales, el proceso y qué hace única a tu publicación." [ref=f11e55]
+      - generic [ref=f11e56]:
+        - generic [ref=f11e57]: Stock disponible
+        - textbox "Cantidad de unidades disponibles" [ref=f11e58]
+        - paragraph [ref=f11e59]: Para servicios, indica la cantidad de cupos disponibles por semana.
+    - generic [ref=f11e60]:
+      - heading "Imágenes" [level=3] [ref=f11e61]
+      - generic [ref=f11e62]:
+        - generic [ref=f11e67]: Arrastra tus fotos aquí o haz clic para subir
+        - text: PNG o JPG, hasta 5 imágenes, máx. 5 MB cada una
+    - generic [ref=f11e68]:
+      - button "Guardar borrador" [ref=f11e69] [cursor=pointer]
+      - button "Publicar" [ref=f11e70] [cursor=pointer]

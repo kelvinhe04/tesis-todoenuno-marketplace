@@ -1,0 +1,202 @@
+- generic [ref=f3e2]:
+  - generic [ref=f3e3]:
+    - list [ref=f3e4]:
+      - listitem [ref=f3e5]:
+        - generic [ref=f3e42]: Refreshed 2026-08-31 11:43:23
+        - combobox "Refreshed 2026-08-31 11:43:23" [ref=f3e43]:
+          - option "Refresh every 5 seconds" [selected]
+          - option "Refresh every 10 seconds"
+          - option "Refresh every 30 seconds"
+          - option "Do not refresh"
+      - listitem [ref=f3e7]:
+        - text: Virtual host
+        - combobox "Virtual host" [ref=f3e8]:
+          - option "All" [selected]
+          - option /
+      - listitem [ref=f3e9]:
+        - text: Cluster
+        - link "rabbit@496f3f998873" [ref=f3e10] [cursor=pointer]:
+          - /url: "#/cluster-name"
+      - listitem [ref=f3e11]:
+        - text: User
+        - link "guest" [ref=f3e12] [cursor=pointer]:
+          - /url: "#/users/guest"
+        - button "Log out" [ref=f3e14] [cursor=pointer]
+    - generic [ref=f3e15]:
+      - link [ref=f3e16] [cursor=pointer]:
+        - /url: "#/"
+        - img "RabbitMQ logo" [ref=f3e17]
+      - generic [ref=f3e18]: RabbitMQ 3.13.7Erlang 26.2.5.16
+    - list [ref=f3e45]:
+      - listitem [ref=f3e46]:
+        - link "Overview" [ref=f3e47] [cursor=pointer]:
+          - /url: "#/"
+      - listitem [ref=f3e48]:
+        - link "Connections" [ref=f3e49] [cursor=pointer]:
+          - /url: "#/connections"
+      - listitem [ref=f3e50]:
+        - link "Channels" [ref=f3e51] [cursor=pointer]:
+          - /url: "#/channels"
+      - listitem [ref=f3e52]:
+        - link "Exchanges" [ref=f3e53] [cursor=pointer]:
+          - /url: "#/exchanges"
+      - listitem [ref=f3e54]:
+        - link "Queues and Streams" [ref=f3e55] [cursor=pointer]:
+          - /url: "#/queues"
+      - listitem [ref=f3e56]:
+        - link "Admin" [ref=f3e57] [cursor=pointer]:
+          - /url: "#/users"
+  - generic [ref=f3e20]:
+    - heading "Exchanges" [level=1] [ref=f3e58]
+    - generic [ref=f3e59]:
+      - heading "All exchanges (8)" [level=2] [ref=f3e60] [cursor=pointer]
+      - generic [ref=f3e61]:
+        - heading "Pagination" [level=3] [ref=f3e62]
+        - generic [ref=f3e63]:
+          - table [ref=f3e64]:
+            - rowgroup [ref=f3e65]:
+              - row [ref=f3e66]:
+                - columnheader "Page 1" [ref=f3e67]:
+                  - text: Page
+                  - combobox "Page" [ref=f3e68]:
+                    - option "1" [selected]
+                - columnheader "of 1" [ref=f3e69]
+                - columnheader [ref=f3e70]:
+                  - generic [ref=f3e71]:
+                    - text: "- Filter:"
+                    - textbox "- Filter:" [ref=f3e72]
+                - columnheader "Regex ?" [ref=f3e73]:
+                  - checkbox [ref=f3e74]
+                  - text: Regex
+                  - generic [ref=f3e75] [cursor=pointer]: "?"
+          - paragraph [ref=f3e76]:
+            - generic [ref=f3e78]:
+              - text: "Displaying 8 items , page size up to:"
+              - textbox "Displaying 8 items , page size up to:" [ref=f3e79]: "100"
+    - table [ref=f3e81]:
+      - rowgroup [ref=f3e82]:
+        - row [ref=f3e83]:
+          - columnheader "Virtual host" [ref=f3e84]
+          - columnheader "Name" [ref=f3e86]
+          - columnheader "Type" [ref=f3e88]
+          - columnheader "Features" [ref=f3e90]
+          - columnheader "Message rate in" [ref=f3e91]
+          - columnheader "Message rate out" [ref=f3e93]
+          - columnheader "+/-" [ref=f3e95]
+      - rowgroup [ref=f3e96]:
+        - row [ref=f3e97]:
+          - cell / [ref=f3e98]
+          - cell [ref=f3e99]:
+            - link "(AMQP default)" [ref=f3e100] [cursor=pointer]:
+              - /url: "#/exchanges/%2F/amq.default"
+          - cell "direct" [ref=f3e101]
+          - cell "D" [ref=f3e102]:
+            - 'generic "durable: true" [ref=f3e103]': D
+          - cell [ref=f3e104]
+          - cell [ref=f3e105]
+        - row [ref=f3e106]:
+          - cell / [ref=f3e107]
+          - cell [ref=f3e108]:
+            - link "amq.direct" [ref=f3e109] [cursor=pointer]:
+              - /url: "#/exchanges/%2F/amq.direct"
+          - cell "direct" [ref=f3e110]
+          - cell "D" [ref=f3e111]:
+            - 'generic "durable: true" [ref=f3e112]': D
+          - cell [ref=f3e113]
+          - cell [ref=f3e114]
+        - row [ref=f3e115]:
+          - cell / [ref=f3e116]
+          - cell [ref=f3e117]:
+            - link "amq.fanout" [ref=f3e118] [cursor=pointer]:
+              - /url: "#/exchanges/%2F/amq.fanout"
+          - cell "fanout" [ref=f3e119]
+          - cell "D" [ref=f3e120]:
+            - 'generic "durable: true" [ref=f3e121]': D
+          - cell [ref=f3e122]
+          - cell [ref=f3e123]
+        - row [ref=f3e124]:
+          - cell / [ref=f3e125]
+          - cell [ref=f3e126]:
+            - link "amq.headers" [ref=f3e127] [cursor=pointer]:
+              - /url: "#/exchanges/%2F/amq.headers"
+          - cell "headers" [ref=f3e128]
+          - cell "D" [ref=f3e129]:
+            - 'generic "durable: true" [ref=f3e130]': D
+          - cell [ref=f3e131]
+          - cell [ref=f3e132]
+        - row [ref=f3e133]:
+          - cell / [ref=f3e134]
+          - cell [ref=f3e135]:
+            - link "amq.match" [ref=f3e136] [cursor=pointer]:
+              - /url: "#/exchanges/%2F/amq.match"
+          - cell "headers" [ref=f3e137]
+          - cell "D" [ref=f3e138]:
+            - 'generic "durable: true" [ref=f3e139]': D
+          - cell [ref=f3e140]
+          - cell [ref=f3e141]
+        - row [ref=f3e142]:
+          - cell / [ref=f3e143]
+          - cell [ref=f3e144]:
+            - link "amq.rabbitmq.trace" [ref=f3e145] [cursor=pointer]:
+              - /url: "#/exchanges/%2F/amq.rabbitmq.trace"
+          - cell "topic" [ref=f3e146]
+          - cell "D I" [ref=f3e147]:
+            - 'generic "durable: true" [ref=f3e148]': D
+            - 'generic "internal: true" [ref=f3e149]': I
+          - cell [ref=f3e150]
+          - cell [ref=f3e151]
+        - row [ref=f3e152]:
+          - cell / [ref=f3e153]
+          - cell [ref=f3e154]:
+            - link "amq.topic" [ref=f3e155] [cursor=pointer]:
+              - /url: "#/exchanges/%2F/amq.topic"
+          - cell "topic" [ref=f3e156]
+          - cell "D" [ref=f3e157]:
+            - 'generic "durable: true" [ref=f3e158]': D
+          - cell [ref=f3e159]
+          - cell [ref=f3e160]
+        - row [ref=f3e161]:
+          - cell / [ref=f3e162]
+          - cell [ref=f3e163]:
+            - link "eventos" [ref=f3e164] [cursor=pointer]:
+              - /url: "#/exchanges/%2F/eventos"
+          - cell "topic" [ref=f3e165]
+          - cell "D" [ref=f3e166]:
+            - 'generic "durable: true" [ref=f3e167]': D
+          - cell "0.00/s" [ref=f3e168]
+          - cell "0.00/s" [ref=f3e169]
+    - generic [ref=f3e170]:
+      - heading "Add a new exchange" [level=2] [ref=f3e171] [cursor=pointer]
+      - text: "? ? ?"
+  - generic [ref=f3e21]:
+    - list:
+      - listitem [ref=f3e22]:
+        - link "HTTP API" [ref=f3e23] [cursor=pointer]:
+          - /url: api/
+      - listitem [ref=f3e24]:
+        - link "Documentation" [ref=f3e25] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/docs
+      - listitem [ref=f3e26]:
+        - link "Tutorials" [ref=f3e27] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/tutorials
+      - listitem [ref=f3e28]:
+        - link "New releases" [ref=f3e29] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/release-information
+      - listitem [ref=f3e30]:
+        - link "Commercial edition" [ref=f3e31] [cursor=pointer]:
+          - /url: https://www.vmware.com/products/rabbitmq.html
+      - listitem [ref=f3e32]:
+        - link "Commercial support" [ref=f3e33] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/commercial-offerings
+      - listitem [ref=f3e34]:
+        - link "Discussions" [ref=f3e35] [cursor=pointer]:
+          - /url: https://github.com/rabbitmq/rabbitmq-server/discussions
+      - listitem [ref=f3e36]:
+        - link "Discord" [ref=f3e37] [cursor=pointer]:
+          - /url: https://rabbitmq.com/discord/
+      - listitem [ref=f3e38]:
+        - link "Plugins" [ref=f3e39] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/docs/plugins
+      - listitem [ref=f3e40]:
+        - link "GitHub" [ref=f3e41] [cursor=pointer]:
+          - /url: https://www.rabbitmq.com/github

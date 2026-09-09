@@ -1,0 +1,47 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - generic [ref=f1e5]:
+      - link "marketplace" [ref=f1e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=f1e7]:
+        - searchbox "Buscar productos y servicios..." [ref=f1e12]
+      - navigation "Principal" [ref=f1e13]:
+        - link "Categorías" [ref=f1e14] [cursor=pointer]:
+          - /url: /catalogo
+      - generic [ref=f1e15]:
+        - link "Iniciar sesión" [ref=f1e16] [cursor=pointer]:
+          - /url: /login
+        - link "Crear cuenta" [ref=f1e17] [cursor=pointer]:
+          - /url: /registro
+  - main [ref=f1e18]:
+    - generic [ref=f1e20]:
+      - link "marketplace" [ref=f1e21] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f1e22]:
+        - heading "Crear cuenta" [level=1] [ref=f1e23]
+        - paragraph [ref=f1e24]: Regístrate como comprador o vendedor
+      - tablist "Tipo de cuenta" [ref=f1e25]:
+        - tab "Comprador" [selected] [ref=f1e26] [cursor=pointer]
+        - tab "Vendedor" [ref=f1e27] [cursor=pointer]
+      - generic [ref=f1e28]:
+        - generic [ref=f1e29]: Nombre completo
+        - textbox "Nombre completo" [ref=f1e30]:
+          - /placeholder: Ej. Kelvin He
+      - generic [ref=f1e31]:
+        - generic [ref=f1e32]: Correo electrónico
+        - textbox "Correo electrónico" [ref=f1e33]:
+          - /placeholder: correo@dominio.com
+      - generic [ref=f1e34]:
+        - generic [ref=f1e35]: Contraseña
+        - textbox "Contraseña" [ref=f1e36]:
+          - /placeholder: Mínimo 8 caracteres
+      - generic [ref=f1e37]:
+        - generic [ref=f1e38]: Confirmar contraseña
+        - textbox "Confirmar contraseña" [ref=f1e39]
+      - button "Crear cuenta" [ref=f1e40] [cursor=pointer]
+      - paragraph [ref=f1e41]:
+        - text: ¿Ya tienes cuenta?
+        - link "Iniciar sesión" [ref=f1e42] [cursor=pointer]:
+          - /url: /login
+  - contentinfo [ref=f1e43]:
+    - generic [ref=f1e44]: Prototipo académico — Plataforma Marketplace basada en arquitectura de microservicios.

@@ -1,0 +1,23 @@
+- generic [ref=f3e2]:
+  - banner [ref=f3e3]:
+    - generic [ref=f3e5]:
+      - link "marketplace" [ref=f3e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=f3e7]:
+        - searchbox "Buscar productos y servicios..." [ref=f3e12]
+      - navigation "Principal" [ref=f3e13]:
+        - link "Categorías" [ref=f3e14] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Mis órdenes" [ref=f3e15] [cursor=pointer]:
+          - /url: /ordenes
+      - generic [ref=f3e16]:
+        - link "Notificaciones" [ref=f3e17] [cursor=pointer]:
+          - /url: /perfil
+        - link "Carrito" [ref=f3e21] [cursor=pointer]:
+          - /url: /carrito
+        - link "Mi perfil" [ref=f3e26] [cursor=pointer]:
+          - /url: /perfil
+        - button "Salir" [ref=f3e30] [cursor=pointer]
+  - main [ref=f3e31]
+  - contentinfo [ref=f3e34]:
+    - generic [ref=f3e35]: Prototipo académico — Plataforma Marketplace basada en arquitectura de microservicios.

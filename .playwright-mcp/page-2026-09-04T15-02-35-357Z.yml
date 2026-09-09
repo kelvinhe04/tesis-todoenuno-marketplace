@@ -1,0 +1,38 @@
+- generic [ref=f1e3]:
+  - generic [ref=f1e4]:
+    - link "TodoEnUno" [ref=f1e5] [cursor=pointer]:
+      - /url: /
+    - generic [ref=f1e6]:
+      - heading "Publica lo que haces, vende a tu manera." [level=2] [ref=f1e7]
+      - paragraph [ref=f1e8]: Únete a talleres, estudios y profesionales que ya venden productos y servicios en TodoEnUno, con pago protegido y sin comisiones ocultas.
+    - generic [ref=f1e9]:
+      - text: "\"Publiqué mi primer producto en cinco minutos y ya tenía mi primera orden esa semana.\""
+      - generic [ref=f1e10]: — Ana Ríos, Taller Barro Fino
+  - generic [ref=f1e12]:
+    - heading "Crea tu cuenta" [level=1] [ref=f1e13]
+    - paragraph [ref=f1e14]: Es gratis y toma menos de un minuto.
+    - tablist "Tipo de cuenta" [ref=f1e15]:
+      - tab "Quiero comprar" [selected] [ref=f1e16] [cursor=pointer]
+      - tab "Quiero vender" [ref=f1e17] [cursor=pointer]
+    - generic [ref=f1e18]:
+      - generic [ref=f1e19]: Nombre completo
+      - textbox "Nombre completo" [ref=f1e20]:
+        - /placeholder: Tu nombre y apellido
+    - generic [ref=f1e21]:
+      - generic [ref=f1e22]: Correo electrónico
+      - textbox "Correo electrónico" [ref=f1e23]:
+        - /placeholder: tucorreo@ejemplo.com
+    - generic [ref=f1e24]:
+      - generic [ref=f1e25]: Contraseña
+      - textbox "Contraseña" [ref=f1e26]:
+        - /placeholder: Mínimo 8 caracteres
+    - generic [ref=f1e27]:
+      - generic [ref=f1e28]: Confirmar contraseña
+      - textbox "Confirmar contraseña" [ref=f1e29]:
+        - /placeholder: Repite tu contraseña
+    - button "Crear cuenta" [ref=f1e30] [cursor=pointer]
+    - paragraph [ref=f1e31]: Al crear tu cuenta aceptas los Términos de servicio y la Política de privacidad de TodoEnUno.
+    - paragraph [ref=f1e32]:
+      - text: ¿Ya tienes cuenta?
+      - link "Inicia sesión" [ref=f1e33] [cursor=pointer]:
+        - /url: /login

@@ -1,0 +1,2167 @@
+- generic [ref=f3e2]:
+  - navigation "Shortcuts menu" [ref=f3e3]:
+    - heading "Skip to" [level=2] [ref=f3e4]
+    - list "Skip to" [ref=f3e5]:
+      - listitem [ref=f3e6]:
+        - link "main content" [ref=f3e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=f3e8]:
+        - link "About this item" [ref=f3e9] [cursor=pointer]:
+          - /url: "#featurebullets_feature_div"
+      - listitem [ref=f3e10]:
+        - link "Buying options" [ref=f3e11] [cursor=pointer]:
+          - /url: "#buybox"
+      - listitem [ref=f3e12]:
+        - link "Videos" [ref=f3e13] [cursor=pointer]:
+          - /url: "#va-related-videos-widget_feature_div"
+      - listitem [ref=f3e14]:
+        - link "Reviews" [ref=f3e15] [cursor=pointer]:
+          - /url: "#customerReviews"
+    - separator [aria-hidden] [ref=f3e16]
+    - heading "Keyboard shortcuts" [level=2] [ref=f3e17]
+    - list "Keyboard shortcuts" [ref=f3e18]:
+      - listitem [ref=f3e19]:
+        - link "Search, alt, forward slash" [ref=f3e20] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f3e21]:
+            - generic [ref=f3e22]: Search
+            - generic [ref=f3e23]:
+              - generic [ref=f3e24]: alt
+              - generic [ref=f3e25]: +
+              - generic [ref=f3e26]: /
+      - listitem [ref=f3e27]:
+        - link "Cart, shift, alt, c" [ref=f3e28] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f3e29]:
+            - generic [ref=f3e30]: Cart
+            - generic [ref=f3e31]:
+              - generic [ref=f3e32]: shift
+              - generic [ref=f3e33]: +
+              - generic [ref=f3e34]: alt
+              - generic [ref=f3e35]: +
+              - generic [ref=f3e36]: C
+      - listitem [ref=f3e37]:
+        - link "Home, shift, alt, h" [ref=f3e38] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f3e39]:
+            - generic [ref=f3e40]: Home
+            - generic [ref=f3e41]:
+              - generic [ref=f3e42]: shift
+              - generic [ref=f3e43]: +
+              - generic [ref=f3e44]: alt
+              - generic [ref=f3e45]: +
+              - generic [ref=f3e46]: H
+      - listitem [ref=f3e47]:
+        - link "Your orders, shift, alt, o" [ref=f3e48] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f3e49]:
+            - generic [ref=f3e50]: Orders
+            - generic [ref=f3e51]:
+              - generic [ref=f3e52]: shift
+              - generic [ref=f3e53]: +
+              - generic [ref=f3e54]: alt
+              - generic [ref=f3e55]: +
+              - generic [ref=f3e56]: O
+      - listitem [ref=f3e57]:
+        - button "Product summary, shift, alt, d" [ref=f3e58] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f3e59]:
+            - generic [ref=f3e60]: Product summary
+            - generic [ref=f3e61]:
+              - generic [ref=f3e62]: shift
+              - generic [ref=f3e63]: +
+              - generic [ref=f3e64]: alt
+              - generic [ref=f3e65]: +
+              - generic [ref=f3e66]: D
+      - listitem [ref=f3e67]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=f3e68] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f3e69]:
+            - generic [ref=f3e70]: Show/Hide shortcuts
+            - generic [ref=f3e71]:
+              - generic [ref=f3e72]: shift
+              - generic [ref=f3e73]: +
+              - generic [ref=f3e74]: alt
+              - generic [ref=f3e75]: +
+              - generic [ref=f3e76]: Z
+    - generic [ref=f3e79]:
+      - generic [ref=f3e80] [cursor=pointer]
+      - generic [ref=f3e82]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=f3e83]:
+    - navigation "Primary" [ref=f3e84]:
+      - generic [ref=f3e85]:
+        - generic [ref=f3e86]:
+          - link "Amazon" [ref=f3e88] [cursor=pointer]:
+            - /url: /ref=nav_logo
+          - button "Deliver to Panama" [ref=f3e91] [cursor=pointer]:
+            - generic [ref=f3e93]:
+              - generic [ref=f3e94]: Deliver to
+              - generic [ref=f3e95]: Panama
+        - search [ref=f3e98]:
+          - generic [ref=f3e101]:
+            - generic [ref=f3e102]: All
+            - combobox "Select the department you want to search in" [ref=f3e105] [cursor=pointer]:
+              - option "All Departments" [selected]
+              - option "Arts & Crafts"
+              - option "Automotive"
+              - option "Baby"
+              - option "Beauty & Personal Care"
+              - option "Books"
+              - option "Boys' Fashion"
+              - option "Computers"
+              - option "Deals"
+              - option "Digital Music"
+              - option "Electronics"
+              - option "Girls' Fashion"
+              - option "Health & Household"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Kindle Store"
+              - option "Luggage"
+              - option "Men's Fashion"
+              - option "Movies & TV"
+              - option "Music, CDs & Vinyl"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Software"
+              - option "Sports & Outdoors"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Video Games"
+              - option "Women's Fashion"
+          - searchbox "Search Amazon" [ref=f3e108]
+          - generic [ref=f3e109]:
+            - generic "Go" [ref=f3e111] [cursor=pointer]:
+              - button "Go" [ref=f3e112]
+            - button [ref=f3e114]: Agent Search
+        - generic [ref=f3e116]:
+          - generic [ref=f3e117]:
+            - link "Choose a language for shopping in Amazon United States. The current selection is English (EN)." [ref=f3e118] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+              - generic [ref=f3e121]:
+                - img "United States" [ref=f3e122]
+                - generic [ref=f3e123]: EN
+            - button "Expand to Change Language or Country" [ref=f3e124] [cursor=pointer]
+          - generic [ref=f3e125]:
+            - link "Hello, sign in Account & Lists" [ref=f3e126] [cursor=pointer]:
+              - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FLogitech-Lightspeed-PowerPlay-Compatible-Lightsync%2Fdp%2FB07L4BM851%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=f3e127]: Hello, sign in
+              - generic [ref=f3e129]: Account & Lists
+            - button "Expand Account and Lists" [ref=f3e130] [cursor=pointer]
+          - link "Returns & Orders" [ref=f3e131] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=f3e132]: Returns
+            - generic [ref=f3e133]: "& Orders"
+          - link "0 items in cart" [ref=f3e134] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [aria-hidden] [ref=f3e136]: "0"
+            - generic [aria-hidden] [ref=f3e139]: Cart
+      - alertdialog "International Shopping Transition Alert" [ref=f3e140]:
+        - generic [ref=f3e141]:
+          - generic [ref=f3e145]:
+            - text: We're showing you items that ship to
+            - strong [ref=f3e146]: Panama
+            - text: . To see items that ship to a different country, change your delivery address.
+          - generic [ref=f3e147]:
+            - generic [ref=f3e149] [cursor=pointer]:
+              - button "Dismiss" [ref=f3e150]
+              - generic [aria-hidden] [ref=f3e151]: Dismiss
+            - generic [ref=f3e153] [cursor=pointer]:
+              - button "Change Address" [ref=f3e154]
+              - generic [aria-hidden] [ref=f3e155]: Change Address
+      - generic [ref=f3e159]:
+        - link "Sign in" [ref=f3e160] [cursor=pointer]:
+          - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FLogitech-Lightspeed-PowerPlay-Compatible-Lightsync%2Fdp%2FB07L4BM851%3Fref_%3Dnav_custrec_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+        - generic [ref=f3e162]:
+          - text: New customer?
+          - link "New to Amazon? Start here to create an account" [ref=f3e163] [cursor=pointer]:
+            - /url: https://www.amazon.com/ap/register?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FLogitech-Lightspeed-PowerPlay-Compatible-Lightsync%2Fdp%2FB07L4BM851%2F%3F_encoding%3DUTF8%26ref_%3Dnav_custrec_newcust&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+            - text: Start here.
+      - generic [ref=f3e168]:
+        - button "Open All Categories Menu" [ref=f3e170] [cursor=pointer]:
+          - generic [ref=f3e172]: All
+        - list [ref=f3e176]:
+          - listitem [ref=f3e177]:
+            - link "Today's Deals" [ref=f3e179] [cursor=pointer]:
+              - /url: /gp/goldbox?ref_=nav_cs_gb
+          - listitem [ref=f3e180]:
+            - link "Customer Service" [ref=f3e182] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+          - listitem [ref=f3e183]:
+            - link "Prime Video" [ref=f3e185] [cursor=pointer]:
+              - /url: /Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video
+          - listitem [ref=f3e186]:
+            - link "Gift Cards" [ref=f3e188] [cursor=pointer]:
+              - /url: /gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+          - listitem [ref=f3e189]:
+            - link "Sell" [ref=f3e191] [cursor=pointer]:
+              - /url: /b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+          - listitem [ref=f3e192]:
+            - link "Registry" [ref=f3e194] [cursor=pointer]:
+              - /url: /gp/browse.html?node=16115931011&ref_=nav_cs_registry
+          - link "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678" [ref=f3e195] [cursor=pointer]:
+            - /url: /gp/help/customer/accessibility
+            - text: Disability Customer Support
+      - dialog [ref=f3e198]
+  - generic [ref=f3e200]:
+    - heading "Product summary presents key product information Keyboard shortcut shift + alt + D" [level=1] [ref=f3e202]:
+      - button "Product summary presents key product information" [ref=f3e204] [cursor=pointer]
+      - separator [aria-hidden] [ref=f3e207]
+      - generic [ref=f3e208]:
+        - text: Keyboard shortcut
+        - generic [ref=f3e209]: shift + alt + D
+    - main [ref=f3e210]:
+      - generic [ref=f3e211]:
+        - link [ref=f3e215] [cursor=pointer]:
+          - /url: /b/?_encoding=UTF8&node=21439846011&pd_rd_w=q6Nxb&content-id=amzn1.sym.34ef58bd-dcf4-4e33-b605-79695e8e618a&pf_rd_p=34ef58bd-dcf4-4e33-b605-79695e8e618a&pf_rd_r=09Q9YNE5C18ECB1V8WGM&pd_rd_wg=ObItU&pd_rd_r=ad2e5ab1-0038-4ab6-bb71-56fbee1d429f
+          - img "Shop top categories that ship internationally" [ref=f3e216]
+        - list [ref=f3e221]:
+          - listitem [ref=f3e222]:
+            - link "Video Games" [ref=f3e224] [cursor=pointer]:
+              - /url: /computer-video-games-hardware-accessories/b/ref=dp_bc_1?ie=UTF8&node=468642
+          - listitem [aria-hidden] [ref=f3e225]: ›
+          - listitem [ref=f3e226]:
+            - link "PC" [ref=f3e228] [cursor=pointer]:
+              - /url: /PC-Games/b/ref=dp_bc_2?ie=UTF8&node=229575
+          - listitem [aria-hidden] [ref=f3e229]: ›
+          - listitem [ref=f3e230]:
+            - link "Accessories" [ref=f3e232] [cursor=pointer]:
+              - /url: /PC-Accessories/b/ref=dp_bc_3?ie=UTF8&node=318813011
+          - listitem [aria-hidden] [ref=f3e233]: ›
+          - listitem [ref=f3e234]:
+            - link "Gaming Mice" [ref=f3e236] [cursor=pointer]:
+              - /url: /PC-Gaming-Mice/b/ref=dp_bc_4?ie=UTF8&node=402052011
+      - generic [ref=f3e237]:
+        - generic [ref=f3e238]:
+          - generic [ref=f3e243]:
+            - generic [ref=f3e244]: No featured offers available
+            - button "Learn more" [ref=f3e246] [cursor=pointer]
+          - generic [ref=f3e255]:
+            - generic [ref=f3e256]:
+              - text: This item cannot be shipped to your selected delivery location. Please choose a different delivery location.
+              - generic [ref=f3e263] [cursor=pointer]:
+                - button "See Similar Items" [ref=f3e264]
+                - generic [aria-hidden] [ref=f3e265]: See Similar Items
+              - button "Deliver to Panama" [ref=f3e267] [cursor=pointer]:
+                - generic [ref=f3e269]: Deliver to Panama
+            - separator [aria-hidden] [ref=f3e274]
+            - link "Add to List" [ref=f3e279] [cursor=pointer]:
+              - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Faw%2Fd%2FB07L4BM851&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&
+        - generic [ref=f3e281]:
+          - generic [ref=f3e283]:
+            - button [ref=f3e284]:
+              - button "Share" [ref=f3e285] [cursor=pointer]
+            - generic [ref=f3e288]:
+              - radiogroup "Image thumbnails" [ref=f3e290]:
+                - listitem [ref=f3e291]:
+                  - radio [ref=f3e296] [cursor=pointer]
+                - listitem [ref=f3e298]:
+                  - radio [ref=f3e303] [cursor=pointer]
+                - listitem [ref=f3e305]:
+                  - radio [ref=f3e310] [cursor=pointer]
+                - listitem [ref=f3e312]:
+                  - radio [ref=f3e317] [cursor=pointer]
+                - listitem [ref=f3e319]:
+                  - radio [ref=f3e324] [cursor=pointer]
+                - listitem [ref=f3e326]:
+                  - generic [ref=f3e330] [cursor=pointer]:
+                    - radio "5+" [ref=f3e331]
+                    - generic [ref=f3e333]: 5+
+                - listitem [ref=f3e334]:
+                  - generic [ref=f3e336]:
+                    - radio [ref=f3e339] [cursor=pointer]
+                    - generic [ref=f3e341]: 16 VIDEOS
+              - generic [ref=f3e342]:
+                - generic [ref=f3e344]:
+                  - list
+                  - list [ref=f3e345]:
+                    - listitem [ref=f3e346] [cursor=pointer]:
+                      - button [ref=f3e349]:
+                        - img "Logitech G502 Lightspeed Wireless Gaming Mouse - Black | RGB, Adjustable Weights, 11 Programmable Buttons, POWERPLAY Compatible, On-Board Memory, for PC/Mac" [ref=f3e350]
+                    - text:           
+                - link "Click to see full view" [ref=f3e354] [cursor=pointer]:
+                  - /url: "#"
+            - text:           
+          - generic [ref=f3e356]:
+            - generic:
+              - button
+          - link [ref=f3e358]:
+            - list [ref=f3e361]:
+              - listitem [ref=f3e362]:
+                - link "View in virtual showroom" [ref=f3e366] [cursor=pointer]:
+                  - /url: /beyond/?hm_store_id=g1Eg2U3A22P&asin=B07L4BM851&productPointId=Ya716pk99X1&ref_=hm-dp-atf-desktop
+        - generic [ref=f3e369]:
+          - generic [ref=f3e371]:
+            - link [ref=f3e374] [cursor=pointer]:
+              - /url: /stores/LogitechG/page/0F4BFDF6-CD4A-4A8C-83A2-3104165D740C?lp_asin=B07L4BM851&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto
+              - img "Logitech G" [ref=f3e375]
+            - link "Visit the Logitech G Store" [ref=f3e378] [cursor=pointer]:
+              - /url: /stores/LogitechG/page/0F4BFDF6-CD4A-4A8C-83A2-3104165D740C?lp_asin=B07L4BM851&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto
+          - generic [ref=f3e380]:
+            - heading "Logitech G502 Lightspeed Wireless Gaming Mouse - Black" [level=1] [ref=f3e381]
+            - generic [ref=f3e382]: RGB, Adjustable Weights, 11 Programmable Buttons, POWERPLAY Compatible, On-Board Memory, for PC/Mac
+          - generic [ref=f3e384]:
+            - generic "4.6 out of 5 stars" [ref=f3e386]:
+              - button "4.6 out of 5 stars" [ref=f3e388] [cursor=pointer]: "4.6"
+            - link "13,617 Reviews" [ref=f3e393] [cursor=pointer]:
+              - /url: "#averageCustomerReviewsAnchor"
+              - text: (13,617)
+          - separator [ref=f3e394]
+          - generic [ref=f3e395]: This item cannot be shipped to your selected delivery location. Please choose a different delivery location.
+          - generic [ref=f3e403]:
+            - generic [ref=f3e404]:
+              - generic "Selected Style is Wireless. Tap to collapse." [ref=f3e405] [cursor=pointer]: "Style: Wireless"
+              - generic "There are 2 options." [ref=f3e408]:
+                - group "Make a Style selection" [ref=f3e410]:
+                  - radiogroup [ref=f3e411]:
+                    - listitem [ref=f3e412]:
+                      - generic [ref=f3e415] [cursor=pointer]:
+                        - radio "Wired 4 options from $40.99" [ref=f3e416]
+                        - generic [ref=f3e418]:
+                          - generic [ref=f3e419]: Wired
+                          - separator [aria-hidden] [ref=f3e421]
+                          - generic [ref=f3e422]: 4 options from $40.99
+                    - listitem [ref=f3e424]:
+                      - generic [ref=f3e427] [cursor=pointer]:
+                        - radio "Wireless This item cannot be shipped to your selected delivery location. Please choose a different delivery location." [checked] [ref=f3e428]
+                        - generic [ref=f3e430]:
+                          - generic [ref=f3e431]: Wireless
+                          - separator [aria-hidden] [ref=f3e433]
+                          - generic [ref=f3e434]: This item cannot be shipped to your selected delivery location. Please choose a different delivery location.
+                  - navigation
+            - generic [ref=f3e436]:
+              - generic "Selected Pattern Name is Mouse. Tap to collapse." [ref=f3e437] [cursor=pointer]: "Pattern Name: Mouse"
+              - generic "There are 2 options." [ref=f3e440]:
+                - group "Make a Pattern Name selection" [ref=f3e442]:
+                  - radiogroup [ref=f3e443]:
+                    - listitem [ref=f3e444]:
+                      - generic [ref=f3e447] [cursor=pointer]:
+                        - radio "Mouse" [checked] [ref=f3e448]
+                        - generic [ref=f3e450]: Mouse
+                    - listitem [ref=f3e453]:
+                      - generic [ref=f3e456] [cursor=pointer]:
+                        - radio "Mouse + Keyboard" [ref=f3e457]
+                        - generic [ref=f3e459]: Mouse + Keyboard
+            - generic [ref=f3e462]: "Color: Black"
+          - list [ref=f3e466]:
+            - rowgroup [ref=f3e467]:
+              - listitem [ref=f3e468]: Brand Logitech G
+              - listitem [ref=f3e469]: Color Black
+              - listitem [ref=f3e470]: Connectivity Technology LIGHTSPEED Wireless
+              - listitem [ref=f3e471]: Special Feature Wireless
+              - listitem [ref=f3e472]: Movement Detection Technology Optical
+          - generic [ref=f3e474]:
+            - separator [aria-hidden] [ref=f3e475]
+            - heading "About this item" [level=1] [ref=f3e476]
+            - list [ref=f3e477]:
+              - listitem [ref=f3e478]: "PowerPlay wireless charging: Never worry about your battery life again. Add the power play wireless charging system to keep your G502 Lightspeed Wireless Mouse and other compatible G mice charged while at rest and at play. Powerplay wireless charging system sold separately"
+              - listitem [ref=f3e479]: "Light speed wireless gaming mouse: Exclusive Logitech G ultra-fast wireless technology used by Pro gamers in competitions worldwide"
+              - listitem [ref=f3e480]: "Hero 25K sensor through a software update from G HUB, this upgrade is free to all players: Our most advanced, with 1:1 tracking, 400plus ips, and 100 - 25,600 max dpi sensitivity plus zero smoothing, filtering, or acceleration"
+              - listitem [ref=f3e481]: "11 customizable buttons and hyper fast scroll wheel: Assign custom macro and shortcut commands to the buttons for each game with Logitech G hub software. Use hyper fast scrolling to rapidly review menus, long web pages and more"
+              - listitem [ref=f3e482]: "Note: In case of Wireless mouse, the USB receiver will be provided inside or along with the mouse"
+            - generic [ref=f3e483]:
+              - text: ›
+              - link "See more product details" [ref=f3e484] [cursor=pointer]:
+                - /url: "#productDetails"
+          - link "Report an issue with this product or seller" [ref=f3e490] [cursor=pointer]:
+            - /url: javascript:void(0)
+          - generic [ref=f3e493]:
+            - separator [aria-hidden] [ref=f3e494]
+            - heading "Check Compatibility" [level=2] [ref=f3e495]
+            - generic [ref=f3e502]:
+              - generic [ref=f3e503]: Choose your brand
+              - list [ref=f3e506]:
+                - listitem [ref=f3e507]:
+                  - button "Apple" [ref=f3e511] [cursor=pointer]
+                - listitem [ref=f3e514]:
+                  - button "SAMSUNG" [ref=f3e518] [cursor=pointer]
+                - listitem [ref=f3e521]:
+                  - button "Microsoft" [ref=f3e525] [cursor=pointer]
+                - listitem [ref=f3e528]:
+                  - button "Lenovo" [ref=f3e532] [cursor=pointer]
+                - listitem [ref=f3e535]:
+                  - button "Google" [ref=f3e539] [cursor=pointer]
+                - listitem [ref=f3e542]:
+                  - button "See all options" [ref=f3e546] [cursor=pointer]
+          - generic [ref=f3e550]:
+            - separator [aria-hidden] [ref=f3e551]
+            - generic [ref=f3e552]:
+              - heading "Consider a similar item" [level=4] [ref=f3e554]
+              - generic [ref=f3e556]:
+                - generic [ref=f3e557]: Amazon's
+                - generic [ref=f3e558]: Choice
+              - generic [ref=f3e561]:
+                - link [aria-hidden] [ref=f3e564] [cursor=pointer]:
+                  - /url: /dp/B0BXBC26X8/ref=vp_d_cpf-substitute-widget-prsubs_pd?_encoding=UTF8&pf_rd_p=3b384b6f-3e1a-4384-bf9e-527aad01ce71&pf_rd_r=09Q9YNE5C18ECB1V8WGM&pd_rd_wg=Rdqnm&pd_rd_i=B0BXBC26X8&pd_rd_w=DxY4E&content-id=amzn1.sym.3b384b6f-3e1a-4384-bf9e-527aad01ce71&pd_rd_r=56f2dff6-b10a-494c-a994-5ada0a65e98c&psc=1
+                - generic [ref=f3e566]:
+                  - link "Razer Basilisk V3 X HyperSpeed Customizable Wireless Gaming Mouse, Black | Mechanical Switches Gen-2, 5G Advanced 18K Optical Sensor, Chroma RGB, 9 Programmable Controls, 285 Hr Battery" [ref=f3e568] [cursor=pointer]:
+                    - /url: /dp/B0BXBC26X8/ref=vp_d_cpf-substitute-widget-prsubs_pd?_encoding=UTF8&pf_rd_p=3b384b6f-3e1a-4384-bf9e-527aad01ce71&pf_rd_r=09Q9YNE5C18ECB1V8WGM&pd_rd_wg=Rdqnm&pd_rd_i=B0BXBC26X8&pd_rd_w=DxY4E&content-id=amzn1.sym.3b384b6f-3e1a-4384-bf9e-527aad01ce71&pd_rd_r=56f2dff6-b10a-494c-a994-5ada0a65e98c&psc=1
+                  - generic [ref=f3e569]:
+                    - generic [ref=f3e570]: 4.4 out of 5 stars
+                    - link "2407 ratings" [ref=f3e572] [cursor=pointer]:
+                      - /url: /product-reviews/B0BXBC26X8/ref=vp_d_cpf-substitute-widget-prsubs_rv?_encoding=UTF8&pf_rd_p=3b384b6f-3e1a-4384-bf9e-527aad01ce71&pf_rd_r=09Q9YNE5C18ECB1V8WGM&pd_rd_wg=Rdqnm&pd_rd_i=B0BXBC26X8&pd_rd_w=DxY4E&content-id=amzn1.sym.3b384b6f-3e1a-4384-bf9e-527aad01ce71&pd_rd_r=56f2dff6-b10a-494c-a994-5ada0a65e98c?showViewpoints=1
+                      - text: (2407)
+                  - generic [ref=f3e573]: PAB48.99
+                  - generic [ref=f3e574]: 2 sustainability features
+        - generic [ref=f3e576]:
+          - separator [aria-hidden] [ref=f3e577]
+          - generic [ref=f3e583]:
+            - link [aria-hidden] [ref=f3e585] [cursor=pointer]:
+              - /url: /b/?_encoding=UTF8&node=221475775011&pf_rd_p=99da70da-5a57-47eb-804f-e6f9a14ea623&pf_rd_r=09Q9YNE5C18ECB1V8WGM
+            - generic [ref=f3e586]:
+              - generic [ref=f3e587]: "Amazon preowned: Second Chance Savings"
+              - generic [ref=f3e590]:
+                - text: Save up to 30% on preonwed
+                - link "Second Chance Savings" [ref=f3e591] [cursor=pointer]:
+                  - /url: /b/?_encoding=UTF8&node=221475775011&pf_rd_p=99da70da-5a57-47eb-804f-e6f9a14ea623&pf_rd_r=09Q9YNE5C18ECB1V8WGM
+                  - text: Shop now
+      - generic [ref=f3e595]:
+        - separator [aria-hidden] [ref=f3e596]
+        - region "Deals on related products" [ref=f3e597]:
+          - generic [ref=f3e599]:
+            - heading "Deals on related products" [level=2] [ref=f3e600]
+            - link "Sponsored" [ref=f3e604] [cursor=pointer]:
+              - /url: "#sp_detail_thematic-hercules_hybrid_deals_T1_feedbackForm"
+          - list [ref=f3e614]:
+            - listitem [ref=f3e615]:
+              - generic [ref=f3e616]:
+                - link "ASUS ROG Strix Scope II X Wired USB Mechanical Gaming Keyboard – 100% Full-Size, Hot Swappable Pre-lubed ROG NX Snow V2 Linear Switches, PBT Keycaps, RGB, PC/Mac Support - Black" [ref=f3e617] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDk4OTAxNTk1NDYwMjo6Ojo&url=%2Fdp%2FB0FGGZK4X7%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FGGZK4X7%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f3e621]: ASUS ROG Strix Scope II X Wired USB Mechanical Gaming Keyboard – 100% Full-Size, Ho...
+                - link "4.6 out of 5 stars 279 ratings" [ref=f3e623] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDk4OTAxNTk1NDYwMjo6Ojo&url=%2Fdp%2FB0FGGZK4X7%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FGGZK4X7%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: "279"
+                - generic [ref=f3e625]:
+                  - link "Amazon's Choice":
+                    - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDk4OTAxNTk1NDYwMjo6Ojo&url=%2Fdp%2FB0FGGZK4X7%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FGGZK4X7%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f3e628]:
+              - generic [ref=f3e629]:
+                - link "TMKB Wireless White Gaming Mouse, 24000 DPI, 180-Hour Battery | Optical Sensor, 90g Ergonomic Honeycomb Design, 6 Programmable Buttons, RGB Strip, 2.4GHz, BT5.2 and USB-C Wired Connectivity" [ref=f3e630] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE4NzE5MjQ4NTQwMjo6Ojo&url=%2Fdp%2FB0FPQDCTF4%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FPQDCTF4%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f3e634]: TMKB Wireless White Gaming Mouse, 24000 DPI, 180-Hour Battery | Optical Sensor, 90g...
+                - link "4.4 out of 5 stars 81 ratings" [ref=f3e636] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE4NzE5MjQ4NTQwMjo6Ojo&url=%2Fdp%2FB0FPQDCTF4%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FPQDCTF4%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: "81"
+                - link "Limited time deal" [ref=f3e638] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE4NzE5MjQ4NTQwMjo6Ojo&url=%2Fdp%2FB0FPQDCTF4%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FPQDCTF4%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-25% PAB 26.19 List: PAB 34.92 List: null" [ref=f3e642] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE4NzE5MjQ4NTQwMjo6Ojo&url=%2Fdp%2FB0FPQDCTF4%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FPQDCTF4%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-25%"
+                  - generic [ref=f3e643]:
+                    - generic [ref=f3e644]: PAB 26.19
+                    - generic [aria-hidden] [ref=f3e645]:
+                      - text: PAB
+                      - generic [ref=f3e646]:
+                        - text: "26"
+                        - generic [ref=f3e647]: .
+                      - text: "19"
+                  - generic [ref=f3e648]: "List: PAB 34.92"
+                  - generic [ref=f3e649]:
+                    - text: "List:"
+                    - generic [ref=f3e650]:
+                      - generic [ref=f3e651]: "null"
+                      - text: PAB34.92
+                - link "PAB 15.21 delivery Sat, Sep 12" [ref=f3e653] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE4NzE5MjQ4NTQwMjo6Ojo&url=%2Fdp%2FB0FPQDCTF4%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0FPQDCTF4%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f3e659]:
+              - generic [ref=f3e660]:
+                - link "G11 Lightweight Wireless Gaming Mouse for FPS & Competitive Gaming, Tri-Mode Blueto..." [ref=f3e661] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTM5NjcyMzUyNDMwMjo6Ojo&url=%2Fdp%2FB0GYWNQJ93%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GYWNQJ93%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f3e665]: G11 Lightweight Wireless Gaming Mouse for FPS & Competitive Gaming, Tri-Mode…
+                - link "4.2 out of 5 stars 40 ratings" [ref=f3e667] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTM5NjcyMzUyNDMwMjo6Ojo&url=%2Fdp%2FB0GYWNQJ93%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GYWNQJ93%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: "40"
+                - generic [ref=f3e669]:
+                  - generic:
+                    - link "#1 New Release":
+                      - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTM5NjcyMzUyNDMwMjo6Ojo&url=%2Fdp%2FB0GYWNQJ93%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GYWNQJ93%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - link "Limited time deal" [ref=f3e672] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTM5NjcyMzUyNDMwMjo6Ojo&url=%2Fdp%2FB0GYWNQJ93%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GYWNQJ93%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-13% PAB 35.85 List: PAB 40.99 List: null" [ref=f3e676] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTM5NjcyMzUyNDMwMjo6Ojo&url=%2Fdp%2FB0GYWNQJ93%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GYWNQJ93%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-13%"
+                  - generic [ref=f3e677]:
+                    - generic [ref=f3e678]: PAB 35.85
+                    - generic [aria-hidden] [ref=f3e679]:
+                      - text: PAB
+                      - generic [ref=f3e680]:
+                        - text: "35"
+                        - generic [ref=f3e681]: .
+                      - text: "85"
+                  - generic [ref=f3e682]: "List: PAB 40.99"
+                  - generic [ref=f3e683]:
+                    - text: "List:"
+                    - generic [ref=f3e684]:
+                      - generic [ref=f3e685]: "null"
+                      - text: PAB40.99
+                - link "PAB 15.15 delivery Sat, Sep 12" [ref=f3e687] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTM5NjcyMzUyNDMwMjo6Ojo&url=%2Fdp%2FB0GYWNQJ93%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0GYWNQJ93%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f3e693]:
+              - generic [ref=f3e694]:
+                - link "EPOMAKER TH80 V2 PRO Wireless Gaming Keyboard with Screen&Knob, 10000mAh | 2.4Ghz/BT/USB-C, RGB, Hot Swap, Custom Driver, NKRO, PBT Keycap, Mechanical Keyboard for PC/Mac (Pink, Sea Salt Silent)" [ref=f3e695] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIxNTg4MzM1NDMwMjo6Ojo&url=%2Fdp%2FB0GL7Y31WX%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GL7Y31WX%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f3e699]: EPOMAKER TH80 V2 PRO Wireless Gaming Keyboard with Screen&Knob,…
+                - link "4.4 out of 5 stars 64 ratings" [ref=f3e701] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIxNTg4MzM1NDMwMjo6Ojo&url=%2Fdp%2FB0GL7Y31WX%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GL7Y31WX%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: "64"
+                - link "Limited time deal" [ref=f3e703] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIxNTg4MzM1NDMwMjo6Ojo&url=%2Fdp%2FB0GL7Y31WX%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GL7Y31WX%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-25% PAB 61.64 List: PAB 82.19 List: null" [ref=f3e707] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIxNTg4MzM1NDMwMjo6Ojo&url=%2Fdp%2FB0GL7Y31WX%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GL7Y31WX%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-25%"
+                  - generic [ref=f3e708]:
+                    - generic [ref=f3e709]: PAB 61.64
+                    - generic [aria-hidden] [ref=f3e710]:
+                      - text: PAB
+                      - generic [ref=f3e711]:
+                        - text: "61"
+                        - generic [ref=f3e712]: .
+                      - text: "64"
+                  - generic [ref=f3e713]: "List: PAB 82.19"
+                  - generic [ref=f3e714]:
+                    - text: "List:"
+                    - generic [ref=f3e715]:
+                      - generic [ref=f3e716]: "null"
+                      - text: PAB82.19
+                - link "PAB 20.18 delivery Wed, Sep 16" [ref=f3e718] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIxNTg4MzM1NDMwMjo6Ojo&url=%2Fdp%2FB0GL7Y31WX%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GL7Y31WX%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - link "Climate Pledge Friendly" [ref=f3e725] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIxNTg4MzM1NDMwMjo6Ojo&url=%2Fdp%2FB0GL7Y31WX%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0GL7Y31WX%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f3e727]:
+              - generic [ref=f3e728]:
+                - link "TMKB Falcon M1SE White Gaming Mouse, Wired, Lightweight Honeycomb, 12800DPI | High-Precision Optical Sensor, 6 Programmable Buttons, Customizable 16.8M RGB, Ergonomic, Drag-Free Paracord, PTFE Skates" [ref=f3e729] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIyODk5MzAwMDkwMjo6Ojo&url=%2Fdp%2FB0BGKBT1JG%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0BGKBT1JG%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f3e733]: TMKB Falcon M1SE White Gaming Mouse, Wired, Lightweight Honeycomb,…
+                - link "4.5 out of 5 stars 3,737 ratings" [ref=f3e735] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIyODk5MzAwMDkwMjo6Ojo&url=%2Fdp%2FB0BGKBT1JG%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0BGKBT1JG%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: 3,737
+                - link "Limited time deal" [ref=f3e737] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIyODk5MzAwMDkwMjo6Ojo&url=%2Fdp%2FB0BGKBT1JG%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0BGKBT1JG%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-15% PAB 17.46 Typical: PAB 20.54 Typical: null" [ref=f3e741] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIyODk5MzAwMDkwMjo6Ojo&url=%2Fdp%2FB0BGKBT1JG%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0BGKBT1JG%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-15%"
+                  - generic [ref=f3e742]:
+                    - generic [ref=f3e743]: PAB 17.46
+                    - generic [aria-hidden] [ref=f3e744]:
+                      - text: PAB
+                      - generic [ref=f3e745]:
+                        - text: "17"
+                        - generic [ref=f3e746]: .
+                      - text: "46"
+                  - generic [ref=f3e747]: "Typical: PAB 20.54"
+                  - generic [ref=f3e748]:
+                    - text: "Typical:"
+                    - generic [ref=f3e749]:
+                      - generic [ref=f3e750]: "null"
+                      - text: PAB20.54
+                - link "FREE delivery Sep 14 - 15 to Panama on $49 (PAB 50.35) of eligible items" [ref=f3e752] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTIyODk5MzAwMDkwMjo6Ojo&url=%2Fdp%2FB0BGKBT1JG%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0BGKBT1JG%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f3e758]:
+              - generic [ref=f3e759]:
+                - link "INPHIC Wireless Mouse Rechargeable, Silent Click, [Battery Level Visible] | USB 2.4G Cordless Mouse for Laptop PC Computer Tablets, 6 Buttons, 2400DPI 4 Adjustment Levels, Black" [ref=f3e760] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTA0OTEyNTYxNTMwMjo6Ojo&url=%2Fdp%2FB0FQCCP1VH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FQCCP1VH%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f3e764]: INPHIC Wireless Mouse Rechargeable, Silent Click, [Battery Level Visible] | USB 2.4...
+                - link "4.4 out of 5 stars 4,091 ratings" [ref=f3e766] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTA0OTEyNTYxNTMwMjo6Ojo&url=%2Fdp%2FB0FQCCP1VH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FQCCP1VH%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: 4,091
+                - link "Limited time deal" [ref=f3e768] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTA0OTEyNTYxNTMwMjo6Ojo&url=%2Fdp%2FB0FQCCP1VH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FQCCP1VH%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-20% PAB 12.32 Typical: PAB 15.40 Typical: null" [ref=f3e772] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTA0OTEyNTYxNTMwMjo6Ojo&url=%2Fdp%2FB0FQCCP1VH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FQCCP1VH%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-20%"
+                  - generic [ref=f3e773]:
+                    - generic [ref=f3e774]: PAB 12.32
+                    - generic [aria-hidden] [ref=f3e775]:
+                      - text: PAB
+                      - generic [ref=f3e776]:
+                        - text: "12"
+                        - generic [ref=f3e777]: .
+                      - text: "32"
+                  - generic [ref=f3e778]: "Typical: PAB 15.40"
+                  - generic [ref=f3e779]:
+                    - text: "Typical:"
+                    - generic [ref=f3e780]:
+                      - generic [ref=f3e781]: "null"
+                      - text: PAB15.40
+                - link "PAB 14.92 delivery Thu, Sep 17" [ref=f3e783] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTA0OTEyNTYxNTMwMjo6Ojo&url=%2Fdp%2FB0FQCCP1VH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FQCCP1VH%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f3e789]:
+              - generic [ref=f3e790]:
+                - link "RedThunder 60% Wireless Gaming Keyboard and Mouse Combo, 2500mAh Rechargeable Battery, Ultra-Compact Small RGB Mechanical Feel Keyboard, Lightweight Honeycomb Optical Mouse for Gaming/Business, White" [ref=f3e791] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDA4MzMzODA0ODUwMjo6Ojo&url=%2Fdp%2FB0CHRCY3GW%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CHRCY3GW%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f3e795]: RedThunder 60% Wireless Gaming Keyboard and Mouse Combo, 2500mAh…
+                - link "4.2 out of 5 stars 350 ratings" [ref=f3e797] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDA4MzMzODA0ODUwMjo6Ojo&url=%2Fdp%2FB0CHRCY3GW%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CHRCY3GW%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: "350"
+                - link "Limited time deal" [ref=f3e799] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDA4MzMzODA0ODUwMjo6Ojo&url=%2Fdp%2FB0CHRCY3GW%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CHRCY3GW%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-11% PAB 39.18 Typical: PAB 44.17 Typical: null" [ref=f3e803] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDA4MzMzODA0ODUwMjo6Ojo&url=%2Fdp%2FB0CHRCY3GW%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CHRCY3GW%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-11%"
+                  - generic [ref=f3e804]:
+                    - generic [ref=f3e805]: PAB 39.18
+                    - generic [aria-hidden] [ref=f3e806]:
+                      - text: PAB
+                      - generic [ref=f3e807]:
+                        - text: "39"
+                        - generic [ref=f3e808]: .
+                      - text: "18"
+                  - generic [ref=f3e809]: "Typical: PAB 44.17"
+                  - generic [ref=f3e810]:
+                    - text: "Typical:"
+                    - generic [ref=f3e811]:
+                      - generic [ref=f3e812]: "null"
+                      - text: PAB44.17
+                - link "PAB 17.28 delivery Sat, Sep 12" [ref=f3e814] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDA4MzMzODA0ODUwMjo6Ojo&url=%2Fdp%2FB0CHRCY3GW%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CHRCY3GW%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - link "Climate Pledge Friendly" [ref=f3e821] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo2NjM5OTIxNjExNzM1OTI4OjE3ODg3MjQ4MDA6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDA4MzMzODA0ODUwMjo6Ojo&url=%2Fdp%2FB0CHRCY3GW%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0CHRCY3GW%26pd_rd_w%3DeKV4Q%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+      - generic [ref=f3e827]:
+        - separator [aria-hidden] [ref=f3e828]
+        - region "Products related to this item" [ref=f3e829]:
+          - generic [ref=f3e831]:
+            - heading "Products related to this item" [level=2] [ref=f3e832]
+            - link "Sponsored" [ref=f3e836] [cursor=pointer]:
+              - /url: "#sp_detail_feedbackForm"
+          - list [ref=f3e846]:
+            - listitem [ref=f3e847]:
+              - generic [ref=f3e848]:
+                - link "Office Pro Shortcuts Mouse Pad with Magnetic Wireless Charger & Holder Large Desk Mat with Keyboard Shortcuts with 15W Fast Qi Wireless Charging Compatible with iPhone Samsung Smartphones" [ref=f3e849] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTMyOTcxMDY5MjEwMjo6Ojo&url=%2Fdp%2FB0776SKMGH%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0776SKMGH%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [aria-hidden] [ref=f3e853]: Office Pro Shortcuts Mouse Pad with Magnetic Wireless Charger & Holder…
+                - link "4.6 out of 5 stars 1,811 ratings" [ref=f3e855] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTMyOTcxMDY5MjEwMjo6Ojo&url=%2Fdp%2FB0776SKMGH%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0776SKMGH%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                  - text: 1,811
+                - 'link "-21% PAB 23.12 Typical: PAB 29.27 Typical: null" [ref=f3e858] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTMyOTcxMDY5MjEwMjo6Ojo&url=%2Fdp%2FB0776SKMGH%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0776SKMGH%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - text: "-21%"
+                  - generic [ref=f3e859]:
+                    - generic [ref=f3e860]: PAB 23.12
+                    - generic [aria-hidden] [ref=f3e861]:
+                      - text: PAB
+                      - generic [ref=f3e862]:
+                        - text: "23"
+                        - generic [ref=f3e863]: .
+                      - text: "12"
+                  - generic [ref=f3e864]: "Typical: PAB 29.27"
+                  - generic [ref=f3e865]:
+                    - text: "Typical:"
+                    - generic [ref=f3e866]:
+                      - generic [ref=f3e867]: "null"
+                      - text: PAB29.27
+                - link "FREE delivery Sat, Sep 12 to Panama on $49 (PAB 50.35) of eligible items" [ref=f3e869] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTMyOTcxMDY5MjEwMjo6Ojo&url=%2Fdp%2FB0776SKMGH%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0776SKMGH%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+            - listitem [ref=f3e875]:
+              - generic [ref=f3e876]:
+                - link "ASUS ROG Spatha X Wireless Gaming Mouse – MMO/MOBA Design, 12 Programmable Buttons, Right-Handed, 168g, Dual-Mode (Wired/2.4GHz), 19K DPI, up to 67Hr Battery, Magnetic Charging Dock, PC/Mac Support" [ref=f3e877] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMDIzNTU3Njg2NzIwMjo6Ojo&url=%2Fdp%2FB09726KT4R%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB09726KT4R%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [aria-hidden] [ref=f3e881]: ASUS ROG Spatha X Wireless Gaming Mouse – MMO/MOBA Design, 12 Programmable…
+                - link "4.1 out of 5 stars 1,986 ratings" [ref=f3e883] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMDIzNTU3Njg2NzIwMjo6Ojo&url=%2Fdp%2FB09726KT4R%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB09726KT4R%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                  - text: 1,986
+                - 'link "-29% PAB 123.29 List: PAB 174.66 List: null" [ref=f3e886] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMDIzNTU3Njg2NzIwMjo6Ojo&url=%2Fdp%2FB09726KT4R%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB09726KT4R%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - text: "-29%"
+                  - generic [ref=f3e887]:
+                    - generic [ref=f3e888]: PAB 123.29
+                    - generic [aria-hidden] [ref=f3e889]:
+                      - text: PAB
+                      - generic [ref=f3e890]:
+                        - text: "123"
+                        - generic [ref=f3e891]: .
+                      - text: "29"
+                  - generic [ref=f3e892]: "List: PAB 174.66"
+                  - generic [ref=f3e893]:
+                    - text: "List:"
+                    - generic [ref=f3e894]:
+                      - generic [ref=f3e895]: "null"
+                      - text: PAB174.66
+                - link "PAB 18.82 delivery Mon, Sep 14" [ref=f3e897] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMDIzNTU3Njg2NzIwMjo6Ojo&url=%2Fdp%2FB09726KT4R%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB09726KT4R%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+            - listitem [ref=f3e903]:
+              - generic [ref=f3e904]:
+                - link "GravaStar Mercury M1 Pro Tri-Mode Wireless Gaming Mouse | Magnesium Alloy • Ergonomic Comfort • PAW3395 Sensor • 200H Battery • 5 Programmable Buttons" [ref=f3e905] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM0MTUzNDU5MjAwMjo6Ojo&url=%2Fdp%2FB0DJ11FRD2%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DJ11FRD2%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [aria-hidden] [ref=f3e909]: GravaStar Mercury M1 Pro Tri-Mode Wireless Gaming Mouse | Magnesium Alloy •…
+                - link "4.5 out of 5 stars 1,491 ratings" [ref=f3e911] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM0MTUzNDU5MjAwMjo6Ojo&url=%2Fdp%2FB0DJ11FRD2%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DJ11FRD2%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                  - text: 1,491
+                - link "PAB 102.70" [ref=f3e914] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM0MTUzNDU5MjAwMjo6Ojo&url=%2Fdp%2FB0DJ11FRD2%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DJ11FRD2%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [ref=f3e915]:
+                    - generic [ref=f3e916]: PAB 102.70
+                    - generic [aria-hidden] [ref=f3e917]:
+                      - text: PAB
+                      - generic [ref=f3e918]:
+                        - text: "102"
+                        - generic [ref=f3e919]: .
+                      - text: "70"
+                - link "PAB 15.97 delivery Sat, Sep 12" [ref=f3e921] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM0MTUzNDU5MjAwMjo6Ojo&url=%2Fdp%2FB0DJ11FRD2%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DJ11FRD2%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                - link "Climate Pledge Friendly" [ref=f3e928] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM0MTUzNDU5MjAwMjo6Ojo&url=%2Fdp%2FB0DJ11FRD2%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0DJ11FRD2%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+            - listitem [ref=f3e930]:
+              - generic [ref=f3e931]:
+                - link "USB-C Charging Adapter Compatible with Logitech GPW1/GPW2 Wireless Gaming Mouse | No Dock,Micro-USB to Type-C Converter | Compact & Lightweight Design | Charging & Data Transfer | Model-Specific" [ref=f3e932] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE2NDQ4Mjk2NzYwMjo6Ojo&url=%2Fdp%2FB0FTG9LVJN%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FTG9LVJN%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [aria-hidden] [ref=f3e936]: USB-C Charging Adapter Compatible with Logitech GPW1/GPW2 Wireless Gaming…
+                - link "4.6 out of 5 stars 17 ratings" [ref=f3e938] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE2NDQ4Mjk2NzYwMjo6Ojo&url=%2Fdp%2FB0FTG9LVJN%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FTG9LVJN%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                  - text: "17"
+                - link "PAB 13.10" [ref=f3e941] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE2NDQ4Mjk2NzYwMjo6Ojo&url=%2Fdp%2FB0FTG9LVJN%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FTG9LVJN%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [ref=f3e942]:
+                    - generic [ref=f3e943]: PAB 13.10
+                    - generic [aria-hidden] [ref=f3e944]:
+                      - text: PAB
+                      - generic [ref=f3e945]:
+                        - text: "13"
+                        - generic [ref=f3e946]: .
+                      - text: "10"
+                - link "FREE delivery Sat, Sep 12 to Panama on $49 (PAB 50.35) of eligible items" [ref=f3e948] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE2NDQ4Mjk2NzYwMjo6Ojo&url=%2Fdp%2FB0FTG9LVJN%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0FTG9LVJN%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+            - listitem [ref=f3e954]:
+              - generic [ref=f3e955]:
+                - link "Redragon Wireless Gaming Mouse, Tri-Mode 2.4G/Bluetooth/USB-C, 7 Programmable Buttons, Tactile Rapid Fire Key, 8000 DPI RGB Ergonomic Mouse for PC Windows Gaming & Work, M814" [ref=f3e956] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM3Mzg0NjY0MDMwMjo6Ojo&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [aria-hidden] [ref=f3e960]: Redragon Wireless Gaming Mouse, Tri-Mode 2.4G/Bluetooth/USB-C, 7 Programmable Butto...
+                - link "4.5 out of 5 stars 978 ratings" [ref=f3e962] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM3Mzg0NjY0MDMwMjo6Ojo&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                  - text: "978"
+                - generic [ref=f3e964]:
+                  - link "Amazon's Choice":
+                    - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM3Mzg0NjY0MDMwMjo6Ojo&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                - link "PAB 33.90" [ref=f3e968] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM3Mzg0NjY0MDMwMjo6Ojo&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [ref=f3e969]:
+                    - generic [ref=f3e970]: PAB 33.90
+                    - generic [aria-hidden] [ref=f3e971]:
+                      - text: PAB
+                      - generic [ref=f3e972]:
+                        - text: "33"
+                        - generic [ref=f3e973]: .
+                      - text: "90"
+                - link "PAB 15.84 delivery Sat, Sep 12" [ref=f3e975] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM3Mzg0NjY0MDMwMjo6Ojo&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                - link "Save 5% with coupon" [ref=f3e982] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTM3Mzg0NjY0MDMwMjo6Ojo&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [ref=f3e983]:
+                    - generic [ref=f3e984]: Save 5%
+                    - text: with coupon
+            - listitem [ref=f3e985]:
+              - generic [ref=f3e986]:
+                - link "Rapoo MT760 Multi-Device Wireless Mouse, Bluetooth 5.0 and 2.4G Multi-Mode Connection, Up to 4 Devices, 11 Programmable Buttons, 4K DPI, 90 Days Battery Life, PC, Light Grey" [ref=f3e987] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE0Mzc5MDkwODMwMjo6Ojo&url=%2Fdp%2FB0CMZ1PQV6%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CMZ1PQV6%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [aria-hidden] [ref=f3e991]: Rapoo MT760 Multi-Device Wireless Mouse, Bluetooth 5.0 and 2.4G Multi-Mode Connecti...
+                - link "4.2 out of 5 stars 829 ratings" [ref=f3e993] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE0Mzc5MDkwODMwMjo6Ojo&url=%2Fdp%2FB0CMZ1PQV6%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CMZ1PQV6%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                  - text: "829"
+                - 'link "-5% PAB 39.63 Typical: PAB 41.72 Typical: null" [ref=f3e996] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE0Mzc5MDkwODMwMjo6Ojo&url=%2Fdp%2FB0CMZ1PQV6%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CMZ1PQV6%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - text: "-5%"
+                  - generic [ref=f3e997]:
+                    - generic [ref=f3e998]: PAB 39.63
+                    - generic [aria-hidden] [ref=f3e999]:
+                      - text: PAB
+                      - generic [ref=f3e1000]:
+                        - text: "39"
+                        - generic [ref=f3e1001]: .
+                      - text: "63"
+                  - generic [ref=f3e1002]: "Typical: PAB 41.72"
+                  - generic [ref=f3e1003]:
+                    - text: "Typical:"
+                    - generic [ref=f3e1004]:
+                      - generic [ref=f3e1005]: "null"
+                      - text: PAB41.72
+                - link "PAB 16.12 delivery Sat, Sep 12" [ref=f3e1007] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE0Mzc5MDkwODMwMjo6Ojo&url=%2Fdp%2FB0CMZ1PQV6%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CMZ1PQV6%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                - link "Climate Pledge Friendly" [ref=f3e1014] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTE0Mzc5MDkwODMwMjo6Ojo&url=%2Fdp%2FB0CMZ1PQV6%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CMZ1PQV6%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+            - listitem [ref=f3e1016]:
+              - generic [ref=f3e1017]:
+                - link "FMOUSE Wireless Gaming Mouse, Tri-Mode 2.4G & Dual Bluetooth & Wired, Gray | 12000 DPI | 65g Ultra-Light | Hollow RGB | Charge While Using | Side Buttons | Mac iPad Laptop | Custom Macro Programming" [ref=f3e1018] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTMwOTY4NDM1NjMwMjo6Ojo&url=%2Fdp%2FB0FPQRXB7P%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FPQRXB7P%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [aria-hidden] [ref=f3e1022]: FMOUSE Wireless Gaming Mouse, Tri-Mode 2.4G & Dual Bluetooth & Wired, Gray | 12000 ...
+                - link "4.0 out of 5 stars 38 ratings" [ref=f3e1024] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTMwOTY4NDM1NjMwMjo6Ojo&url=%2Fdp%2FB0FPQRXB7P%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FPQRXB7P%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw#customerReviews
+                  - text: "38"
+                - link "PAB 24.65" [ref=f3e1027] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTMwOTY4NDM1NjMwMjo6Ojo&url=%2Fdp%2FB0FPQRXB7P%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FPQRXB7P%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+                  - generic [ref=f3e1028]:
+                    - generic [ref=f3e1029]: PAB 24.65
+                    - generic [aria-hidden] [ref=f3e1030]:
+                      - text: PAB
+                      - generic [ref=f3e1031]:
+                        - text: "24"
+                        - generic [ref=f3e1032]: .
+                      - text: "65"
+                - link "PAB 15.56 delivery Sat, Sep 12" [ref=f3e1034] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo4NzM0NDg0NTIwNDE3MDY2OjE3ODg3MjQ4MDA6c3BfZGV0YWlsOjMwMTMwOTY4NDM1NjMwMjo6Ojo&url=%2Fdp%2FB0FPQRXB7P%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FPQRXB7P%26pd_rd_w%3DLfD7f%26content-id%3Damzn1.sym.ac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_p%3Dac210bc5-f6e8-418c-8a77-e0c4ca3bcd7f%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWw
+      - generic [ref=f3e1040]:
+        - generic [ref=f3e1042]:
+          - separator [ref=f3e1043]
+          - heading "From the manufacturer" [level=2] [ref=f3e1044]
+          - generic [ref=f3e1047]:
+            - generic [ref=f3e1058]:
+              - generic "Click to play video, aplus content video"
+              - application [ref=f3e1059]
+              - generic [ref=f3e1060] [cursor=pointer]
+              - button "Click to play video" [ref=f3e1061] [cursor=pointer]: 
+              - text:          
+            - generic [ref=f3e1065]:
+              - img "G502 LIGHTSPEED" [ref=f3e1067]
+              - generic [ref=f3e1071]:
+                - heading "PLAY AT LIGHTSPEED" [level=1] [ref=f3e1072]
+                - paragraph [ref=f3e1074]: Now you can game faster and more accurately. The iconic G502 now features superfast LIGHTSPEED 1 ms wireless connectivity.
+            - generic [ref=f3e1076]:
+              - heading "HIGH PERFORMANCE DESIGN" [level=1] [ref=f3e1077]
+              - generic [ref=f3e1078]:
+                - generic [ref=f3e1079]:
+                  - img "G502 LIGHTSPEED" [ref=f3e1081]
+                  - heading "Endoskeleton Design" [level=1] [ref=f3e1083]
+                  - paragraph [ref=f3e1085]: Structural integrity is achieved by an internal, lightweight endoskeleton allowing for incredibly thin and lightweight 1.2 mm shell walls.
+                - generic [ref=f3e1086]:
+                  - img "G502 LIGHTSPEED" [ref=f3e1088]
+                  - heading "Mechanical Button Tensioning" [level=1] [ref=f3e1090]
+                  - paragraph [ref=f3e1092]: Primary buttons have a metal-spring tensioning system designed for consistently fast buttons.
+                - generic [ref=f3e1093]:
+                  - img "G502 LIGHTSPEED" [ref=f3e1095]
+                  - heading "Tunable Weight System" [level=1] [ref=f3e1097]
+                  - paragraph [ref=f3e1099]: Six adjustable weights are included for a wide variety of weight and balance configurations.
+                - generic [ref=f3e1100]:
+                  - img "G502 LIGHTSPEED" [ref=f3e1102]
+                  - heading "60-Hour LiPo Battery" [level=1] [ref=f3e1104]
+                  - paragraph [ref=f3e1106]: Recharge the LiPo battery fully for up to 60 hours of gameplay.
+            - generic [ref=f3e1109]:
+              - img "G502 LIGHTSPEED" [ref=f3e1111]
+              - generic [ref=f3e1115]:
+                - heading "EXTREME CUSTOMIZABILITY" [level=1] [ref=f3e1116]
+                - paragraph [ref=f3e1118]: There are 11 programmable buttons so you can optimize gameplay with custom keybinds and macros. Configure and insert the six adjustable weights to get the perfect mouse feel for your gaming style.
+            - generic [ref=f3e1121]:
+              - img "16.8M Colors with Lightsync" [ref=f3e1123]
+              - generic [ref=f3e1127]:
+                - heading "LIGHTSYNC RGB" [level=1] [ref=f3e1128]
+                - paragraph [ref=f3e1130]: LIGHTSYNC RGB intelligently reacts with your gameplay, audio, or screen color. Set all your Logitech G RGB gear to synchronize together. Set lighting across ~16.8M colors to match your room and rig. Create your own personal RGB animations.
+            - generic [ref=f3e1133]:
+              - region "Featured content carousel" [ref=f3e1134]:
+                - list [ref=f3e1139]:
+                  - listitem [ref=f3e1140]:
+                    - generic [ref=f3e1141]:
+                      - img "POWERPLAY Wireless Charging System" [ref=f3e1143]
+                      - generic [ref=f3e1147]:
+                        - heading "POWERPLAY Wireless Charging System" [level=1] [ref=f3e1149]
+                        - paragraph [ref=f3e1151]: Continuously charge your G502 while at rest and at play with the POWERPLAY wireless charging solution.
+                        - 'link "Learn more about the product: POWERPLAY Wireless Charging System" [ref=f3e1155] [cursor=pointer]':
+                          - /url: /dp/B071WZ56G9?ref=emc_p_m_13_b
+                          - text: LEARN MORE
+                  - listitem [ref=f3e1156]:
+                    - generic [ref=f3e1157]:
+                      - img "G915 LIGHTSPEED RGB Mechanical Gaming Keyboard" [ref=f3e1159]
+                      - generic [ref=f3e1163]:
+                        - heading "G915 LIGHTSPEED RGB Mechanical Gaming Keyboard" [level=1] [ref=f3e1165]
+                        - paragraph [ref=f3e1167]: G915 is a new class of wireless mechanical gaming keyboard, featuring LIGHTSPEED wireless, advanced LIGHTSYNC RGB and low-profile mechanical gaming switches in a sleek, ultra-thin design.
+                        - 'link "Learn more about the product: G915 LIGHTSPEED RGB Mechanical Gaming Keyboard" [ref=f3e1171] [cursor=pointer]':
+                          - /url: /dp/B07NY9ZRZG?ref=emc_p_m_13_b
+                          - text: LEARN MORE
+                  - listitem [ref=f3e1172]:
+                    - generic [ref=f3e1173]:
+                      - img "G935 7.1 Surround Sound Lightsync Gaming Headset" [ref=f3e1175]
+                      - generic [ref=f3e1179]:
+                        - heading "G935 7.1 Surround Sound Lightsync Gaming Headset" [level=1] [ref=f3e1181]
+                        - paragraph [ref=f3e1183]: G935 is the ultimate wireless gaming headset, enhanced with the most advanced Logitech audio technology. Hear both subtle and explosive parts of your game in a precise positional 3D soundscape.
+                        - 'link "Learn more about the product: G935 7.1 Surround Sound Lightsync Gaming Headset" [ref=f3e1187] [cursor=pointer]':
+                          - /url: /dp/B07MP4HT95?ref=emc_p_m_13_b
+                          - text: LEARN MORE
+              - tablist "tablist-section" [ref=f3e1191]:
+                - listitem [ref=f3e1192]:
+                  - tab "slide-1" [selected] [ref=f3e1193] [cursor=pointer]
+                - listitem [ref=f3e1194]:
+                  - tab "slide-2" [ref=f3e1195] [cursor=pointer]
+                - listitem [ref=f3e1196]:
+                  - tab "slide-3" [ref=f3e1197] [cursor=pointer]
+            - generic [ref=f3e1199]:
+              - heading "COMPARE WIRELESS GAMING MICE" [level=3] [ref=f3e1200]
+              - table [ref=f3e1203]:
+                - rowgroup [ref=f3e1204]:
+                  - row [ref=f3e1205]:
+                    - cell [ref=f3e1206]
+                    - columnheader [ref=f3e1207]:
+                      - link [ref=f3e1208] [cursor=pointer]:
+                        - /url: /dp/B07L4BM851?ref=emc_p_m_5_i_atc
+                        - paragraph [ref=f3e1209]: G502 Lightspeed
+                      - link "Buying Options" [ref=f3e1213] [cursor=pointer]:
+                        - /url: /dp/B07L4BM851?ref=emc_p_m_5_i_atc
+                    - columnheader [ref=f3e1214]:
+                      - link [ref=f3e1215] [cursor=pointer]:
+                        - /url: /dp/B07CMS5Q6P?ref=emc_p_m_5_i_atc
+                        - paragraph [ref=f3e1216]: G305 Lightspeed
+                      - link "Buying Options" [ref=f3e1220] [cursor=pointer]:
+                        - /url: /dp/B07CMS5Q6P?ref=emc_p_m_5_i_atc
+                    - columnheader "G703 Lightspeed Add to Cart" [ref=f3e1221]:
+                      - link [ref=f3e1222] [cursor=pointer]:
+                        - /url: /dp/B071S8M8TB?ref=emc_p_m_5_i_atc
+                        - paragraph [ref=f3e1223]: G703 Lightspeed
+                      - generic [ref=f3e1227] [cursor=pointer]:
+                        - button "Add to Cart" [ref=f3e1228]
+                        - generic [aria-hidden] [ref=f3e1229]: Add to Cart
+                    - columnheader [ref=f3e1230]:
+                      - link [ref=f3e1231] [cursor=pointer]:
+                        - /url: /dp/B07GCKQD77?ref=emc_p_m_5_i_atc
+                        - paragraph [ref=f3e1232]: Pro Wireless
+                      - link "Buying Options" [ref=f3e1236] [cursor=pointer]:
+                        - /url: /dp/B07GCKQD77?ref=emc_p_m_5_i_atc
+                    - columnheader "G903 Lightspeed Add to Cart" [ref=f3e1237]:
+                      - link [ref=f3e1238] [cursor=pointer]:
+                        - /url: /dp/B0716ZFWWV?ref=emc_p_m_5_i_atc
+                        - paragraph [ref=f3e1239]: G903 Lightspeed
+                      - generic [ref=f3e1243] [cursor=pointer]:
+                        - button "Add to Cart" [ref=f3e1244]
+                        - generic [aria-hidden] [ref=f3e1245]: Add to Cart
+                  - row [ref=f3e1246]:
+                    - cell "Customer Reviews" [ref=f3e1247]
+                    - cell "4.6 out of 5 stars 13,617" [ref=f3e1249]:
+                      - generic [ref=f3e1251]:
+                        - generic [ref=f3e1252]: 4.6 out of 5 stars
+                        - text: 13,617
+                    - cell "4.6 out of 5 stars 39,870" [ref=f3e1254]:
+                      - generic [ref=f3e1256]:
+                        - generic [ref=f3e1257]: 4.6 out of 5 stars
+                        - text: 39,870
+                    - cell "4.2 out of 5 stars 1,735" [ref=f3e1259]:
+                      - generic [ref=f3e1261]:
+                        - generic [ref=f3e1262]: 4.2 out of 5 stars
+                        - text: 1,735
+                    - cell "4.6 out of 5 stars 13,177" [ref=f3e1264]:
+                      - generic [ref=f3e1266]:
+                        - generic [ref=f3e1267]: 4.6 out of 5 stars
+                        - text: 13,177
+                    - cell "4.0 out of 5 stars 2,287" [ref=f3e1269]:
+                      - generic [ref=f3e1271]:
+                        - generic [ref=f3e1272]: 4.0 out of 5 stars
+                        - text: 2,287
+                  - row [ref=f3e1274]:
+                    - cell "Price" [ref=f3e1275]
+                    - cell "—" [ref=f3e1277]
+                    - cell "—" [ref=f3e1278]
+                    - cell "PAB 72.99" [ref=f3e1279]:
+                      - generic [ref=f3e1281]:
+                        - generic [ref=f3e1282]: PAB 72.99
+                        - generic [aria-hidden] [ref=f3e1283]:
+                          - text: PAB
+                          - generic [ref=f3e1284]:
+                            - text: "72"
+                            - generic [ref=f3e1285]: .
+                          - text: "99"
+                    - cell "—" [ref=f3e1286]
+                    - cell "PAB 129.70" [ref=f3e1287]:
+                      - generic [ref=f3e1289]:
+                        - generic [ref=f3e1290]: PAB 129.70
+                        - generic [aria-hidden] [ref=f3e1291]:
+                          - text: PAB
+                          - generic [ref=f3e1292]:
+                            - text: "129"
+                            - generic [ref=f3e1293]: .
+                          - text: "70"
+                  - row [ref=f3e1294]:
+                    - cell "Rechargeable" [ref=f3e1295]
+                    - cell "Yes" [ref=f3e1297]
+                    - cell "No" [ref=f3e1298]
+                    - cell "Yes" [ref=f3e1299]
+                    - cell "Yes" [ref=f3e1300]
+                    - cell "Yes" [ref=f3e1301]
+                  - row [ref=f3e1302]:
+                    - cell "POWERPLAY compatible" [ref=f3e1303]
+                    - cell "Yes" [ref=f3e1305]
+                    - cell "No" [ref=f3e1306]
+                    - cell "Yes" [ref=f3e1307]
+                    - cell "Yes" [ref=f3e1308]
+                    - cell "Yes" [ref=f3e1309]
+                  - row [ref=f3e1310]:
+                    - cell "Sensor" [ref=f3e1311]
+                    - cell "HERO 25K" [ref=f3e1313]
+                    - cell "HERO 12K" [ref=f3e1314]
+                    - cell "HERO 25K" [ref=f3e1315]
+                    - cell "HERO 25K" [ref=f3e1316]
+                    - cell "HERO 25K" [ref=f3e1317]
+                  - row [ref=f3e1318]:
+                    - cell "Battery life (lights off)" [ref=f3e1319]
+                    - cell "Up to 60 hrs" [ref=f3e1321]
+                    - cell "Up to 250 hrs" [ref=f3e1322]
+                    - cell "Up to 48 hrs" [ref=f3e1323]
+                    - cell "Up to 60 hrs" [ref=f3e1324]
+                    - cell "Up to 48 hrs" [ref=f3e1325]
+                  - row [ref=f3e1326]:
+                    - cell "Customizable buttons" [ref=f3e1327]
+                    - cell "11" [ref=f3e1329]
+                    - cell "6" [ref=f3e1330]
+                    - cell "6" [ref=f3e1331]
+                    - cell "4-8" [ref=f3e1332]
+                    - cell "11" [ref=f3e1333]
+                  - row [ref=f3e1334]:
+                    - cell "LIGHTSYNC RGB lighting" [ref=f3e1335]
+                    - cell "Yes" [ref=f3e1337]
+                    - cell "No" [ref=f3e1338]
+                    - cell "Yes" [ref=f3e1339]
+                    - cell "Yes" [ref=f3e1340]
+                    - cell "Yes" [ref=f3e1341]
+                  - row [ref=f3e1342]:
+                    - cell "Adjustable DPI Range" [ref=f3e1343]
+                    - cell "100-25,600 dpi" [ref=f3e1345]
+                    - cell "200-12,000 dpi" [ref=f3e1346]
+                    - cell "200-25,600dpi" [ref=f3e1347]
+                    - cell "100-25,600 dpi" [ref=f3e1348]
+                    - cell "200-25,600 dpi" [ref=f3e1349]
+        - generic [ref=f3e1351]:
+          - separator [ref=f3e1352]
+          - heading "From the brand" [level=2] [ref=f3e1353]
+          - generic [ref=f3e1358]:
+            - img "mice" [ref=f3e1363]
+            - region "Featured content carousel" [ref=f3e1364]:
+              - list [ref=f3e1369]:
+                - listitem
+                - listitem [ref=f3e1370]:
+                  - img "Brand Message" [ref=f3e1374]
+                - listitem [ref=f3e1375]:
+                  - img "esports mice" [ref=f3e1379]
+                - listitem [ref=f3e1380]:
+                  - generic [ref=f3e1382]:
+                    - list [ref=f3e1383]:
+                      - listitem [ref=f3e1384]:
+                        - link [ref=f3e1385] [cursor=pointer]:
+                          - /url: /dp/B0G12HGHGM/ref=emc_bcc_2_i
+                          - img "Logitech PRO X2 SUPERSTRIKE Lightspeed Wireless Gaming Mouse, Ultra-Fast Performance, Ultra Light..." [ref=f3e1386]
+                      - listitem [ref=f3e1387]:
+                        - link [ref=f3e1388] [cursor=pointer]:
+                          - /url: /dp/B09NBWL8J5/ref=emc_bcc_2_i
+                          - img "Logitech G PRO X Superlight 2 Wireless Gaming Mouse, 60g Pro-Grade with 5 Programmable Buttons, 4..." [ref=f3e1389]
+                      - listitem [ref=f3e1390]:
+                        - link [ref=f3e1391] [cursor=pointer]:
+                          - /url: /dp/B0DB59DXMZ/ref=emc_bcc_2_i
+                          - img "Logitech G PRO X Superlight 2 DEX Wireless Gaming Mouse, 60g pro-Grade Right-Handed Mouse with 5 ..." [ref=f3e1392]
+                      - listitem [ref=f3e1393]:
+                        - link [ref=f3e1394] [cursor=pointer]:
+                          - /url: /dp/B0CJ4V4TRP/ref=emc_bcc_2_i
+                          - img "Logitech G PRO 2 Lightspeed Wireless Gaming Mouse, Right- or Left-Handed Mouse with up to 4 Custo..." [ref=f3e1395]
+                    - generic [ref=f3e1396]:
+                      - heading "Esports Mice" [level=3] [ref=f3e1397]
+                      - paragraph [ref=f3e1398]:
+                        - link "Visit this Brand's Amazon store" [ref=f3e1399] [cursor=pointer]:
+                          - /url: /stores/page/265587EB-2270-4415-8605-96AC6A16932D?store_ref=storeRecs_dp_aplus
+                          - text: Visit the Store
+                - listitem [ref=f3e1400]:
+                  - img "g502" [ref=f3e1404]
+                - listitem [ref=f3e1405]:
+                  - generic [ref=f3e1407]:
+                    - list [ref=f3e1408]:
+                      - listitem [ref=f3e1409]:
+                        - link [ref=f3e1410] [cursor=pointer]:
+                          - /url: /dp/B092CB69Q4/ref=emc_bcc_2_i
+                          - img "Logitech G502 X Plus Lightspeed Wireless Optical Mouse - LIGHTFORCE hybrid switches, LIGHTSYNC RG..." [ref=f3e1411]
+                      - listitem [ref=f3e1412]:
+                        - link [ref=f3e1413] [cursor=pointer]:
+                          - /url: /dp/B0943J7HJG/ref=emc_bcc_2_i
+                          - img "Logitech G502 X Wired Gaming Mouse - LIGHTFORCE hybrid optical-mechanical primary switches, HERO ..." [ref=f3e1414]
+                      - listitem [ref=f3e1415]:
+                        - link [ref=f3e1416] [cursor=pointer]:
+                          - /url: /dp/B07GBZ4Q68/ref=emc_bcc_2_i
+                          - img "Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjusta..." [ref=f3e1417]
+                      - listitem [ref=f3e1418]:
+                        - link [ref=f3e1419] [cursor=pointer]:
+                          - /url: /dp/B092CDD7HH/ref=emc_bcc_2_i
+                          - img "Logitech G502 X Lightspeed Wireless Gaming Mouse - LIGHTFORCE hybrid optical-mechanical switches,..." [ref=f3e1420]
+                    - generic [ref=f3e1421]:
+                      - heading "G502 Family" [level=3] [ref=f3e1422]
+                      - paragraph [ref=f3e1423]:
+                        - link "Visit this Brand's Amazon store" [ref=f3e1424] [cursor=pointer]:
+                          - /url: /stores/page/7A3E9328-FF39-4E79-90C0-71B1B8E7B4EB?store_ref=storeRecs_dp_aplus
+                          - text: Visit the Store
+                - listitem [ref=f3e1425]:
+                  - img "pro" [ref=f3e1429]
+                - listitem [ref=f3e1430]:
+                  - generic [ref=f3e1432]:
+                    - list [ref=f3e1433]:
+                      - listitem [ref=f3e1434]:
+                        - link [ref=f3e1435] [cursor=pointer]:
+                          - /url: /dp/B0G12HGHGM/ref=emc_bcc_2_i
+                          - img "Logitech PRO X2 SUPERSTRIKE Lightspeed Wireless Gaming Mouse, Ultra-Fast Performance, Ultra Light..." [ref=f3e1436]
+                      - listitem [ref=f3e1437]:
+                        - link [ref=f3e1438] [cursor=pointer]:
+                          - /url: /dp/B0DJCZDZXG/ref=emc_bcc_2_i
+                          - img "Logitech G PRO X TKL Rapid Tenkeyless Wired Gaming Keyboard with Magnetic Analog Switches, Rapid ..." [ref=f3e1439]
+                      - listitem [ref=f3e1440]:
+                        - link [ref=f3e1441] [cursor=pointer]:
+                          - /url: /dp/B0CW34HBKZ/ref=emc_bcc_2_i
+                          - 'img "Logitech G Pro X SE Wired Gaming Headset: Blue VO!CE Detachable Boom Mic, DTS 7.1, 50 mm Drivers,..." [ref=f3e1442]'
+                      - listitem [ref=f3e1443]:
+                        - link [ref=f3e1444] [cursor=pointer]:
+                          - /url: /dp/B0B3F8YMVV/ref=emc_bcc_2_i
+                          - 'img "Logitech G PRO X 2 Lightspeed Wireless Gaming Headset: Detachable Boom Mic, 50mm Graphene Drivers..." [ref=f3e1445]'
+                    - generic [ref=f3e1446]:
+                      - heading "Pro Family" [level=3] [ref=f3e1447]
+                      - paragraph [ref=f3e1448]:
+                        - link "Visit this Brand's Amazon store" [ref=f3e1449] [cursor=pointer]:
+                          - /url: /stores/page/5BCE9A9D-2E40-4F1D-89B7-8F85A7A0DB09?store_ref=storeRecs_dp_aplus
+                          - text: Visit the Store
+                - listitem [ref=f3e1450]:
+                  - img "featured" [ref=f3e1454]
+                - listitem [ref=f3e1455]:
+                  - generic [ref=f3e1457]:
+                    - list [ref=f3e1458]:
+                      - listitem [ref=f3e1459]:
+                        - link [ref=f3e1460] [cursor=pointer]:
+                          - /url: /dp/B0BRXJDQC1/ref=emc_bcc_2_i
+                          - 'img "Logitech G Astro A50 X Omni-Platform Wireless Gaming Headset + Base Station for PS5, Xbox, PC: PL..." [ref=f3e1461]'
+                      - listitem [ref=f3e1462]:
+                        - link [ref=f3e1463] [cursor=pointer]:
+                          - /url: /dp/B0G12HGHGM/ref=emc_bcc_2_i
+                          - img "Logitech PRO X2 SUPERSTRIKE Lightspeed Wireless Gaming Mouse, Ultra-Fast Performance, Ultra Light..." [ref=f3e1464]
+                      - listitem [ref=f3e1465]:
+                        - link [ref=f3e1466] [cursor=pointer]:
+                          - /url: /dp/B0C84ZD7L6/ref=emc_bcc_2_i
+                          - img "Logitech G309 Lightspeed Wireless Gaming Mouse, Lightweight, LIGHTFORCE Hybrid Switches, Hero 25K..." [ref=f3e1467]
+                      - listitem [ref=f3e1468]:
+                        - link [ref=f3e1469] [cursor=pointer]:
+                          - /url: /dp/B0D1DSW8TF/ref=emc_bcc_2_i
+                          - img "Logitech G515 Lightspeed TKL Low Profile Wireless Gaming Keyboard, LIGHTSYNC RGB, Thin Tenkeyless..." [ref=f3e1470]
+                    - generic [ref=f3e1471]:
+                      - heading "Featured Products" [level=3] [ref=f3e1472]
+                      - paragraph [ref=f3e1473]:
+                        - link "Visit this Brand's Amazon store" [ref=f3e1474] [cursor=pointer]:
+                          - /url: /stores/page/39A2BC4A-54DA-4CA4-96D7-41B90049A9B2?store_ref=storeRecs_dp_aplus
+                          - text: Visit the Store
+        - generic:
+          - navigation:
+            - navigation "Navigate within the product detail page":
+              - navigation "Back to top jump link":
+                - generic: Top
+              - navigation "About this item widget jump link":
+                - generic: About this item
+              - navigation "Similar widget jump link":
+                - generic: Similar
+              - navigation "Product information widget jump link":
+                - generic: Product information
+              - navigation "From the brand widget jump link":
+                - generic: From the Brand
+              - navigation "Customer reviews widget jump link":
+                - generic: Reviews
+            - navigation "Back to top Image jump link":
+              - img "Logitech G502 Lightspeed Wireless Gaming Mouse - Black"
+            - navigation "Back to top title jump link":
+              - generic: Logitech G502 Lightspeed Wireless Gaming Mouse - Black
+        - generic [ref=f3e1478]:
+          - heading "Product guides and documents" [level=2] [ref=f3e1479]
+          - link "User Manual (PDF)" [ref=f3e1481] [cursor=pointer]:
+            - /url: https://m.media-amazon.com/images/I/913cNoZSBzL.pdf
+          - separator [aria-hidden] [ref=f3e1482]
+          - link "User Guide (PDF)" [ref=f3e1484] [cursor=pointer]:
+            - /url: https://m.media-amazon.com/images/I/A1012LX01wL.pdf
+        - generic [ref=f3e1490]:
+          - heading "Product Videos" [level=2] [ref=f3e1492]
+          - generic [ref=f3e1497]:
+            - region "Video Player" [ref=f3e1498]:
+              - application [ref=f3e1499]
+              - generic [ref=f3e1500]:
+                - button "Play" [ref=f3e1501] [cursor=pointer]
+                - slider "Progress Bar" [ref=f3e1504] [cursor=pointer]: .
+                - generic [ref=f3e1505]: "-0:00"
+                - button "Mute" [ref=f3e1506] [cursor=pointer]
+            - generic [ref=f3e1509]:
+              - link [ref=f3e1510] [cursor=pointer]:
+                - /url: /shop/jermwin
+              - generic [ref=f3e1511]:
+                - generic [ref=f3e1512]:
+                  - link "✅ Let’s Talk About" [ref=f3e1513] [cursor=pointer]:
+                    - /url: /shop/jermwin
+                  - link "Click to go to amazon influencer info page" [ref=f3e1515] [cursor=pointer]:
+                    - /url: /shop/info
+                    - text: Earns commissions
+                - generic [ref=f3e1516]: "Which Logitech Gaming Mouse is Better? #thisorthat"
+            - button "Play" [ref=f3e1517] [cursor=pointer]
+        - generic [ref=f3e1589]:
+          - separator [aria-hidden] [ref=f3e1590]
+          - generic [ref=f3e1592]:
+            - heading "Product information" [level=1] [ref=f3e1593]
+            - generic [ref=f3e1597]:
+              - generic [ref=f3e1598]:
+                - generic [ref=f3e1600]:
+                  - button [ref=f3e1603] [cursor=pointer]:
+                    - heading "Features & Specs" [level=5] [ref=f3e1605]
+                  - button [ref=f3e1608] [cursor=pointer]:
+                    - heading "Style" [level=5] [ref=f3e1610]
+                - generic [ref=f3e1611]:
+                  - generic [ref=f3e1613]:
+                    - heading "Warranty & Support" [level=3] [ref=f3e1614]
+                    - generic [ref=f3e1615]: Amazon.com Return Policy:You may return any new computer purchased from Amazon.com that is "dead on arrival," arrives in damaged condition, or is still in unopened boxes, for a full refund within 30 days of purchase. Amazon.com reserves the right to test "dead on arrival" returns and impose a customer fee equal to 15 percent of the product sales price if the customer misrepresents the condition of the product. Any returned computer that is damaged through customer misuse, is missing parts, or is in unsellable condition due to customer tampering will result in the customer being charged a higher restocking fee based on the condition of the product. Amazon.com will not accept returns of any desktop or notebook computer more than 30 days after you receive the shipment. New, used, and refurbished products purchased from Marketplace vendors are subject to the returns policy of the individual vendor.
+                  - generic [ref=f3e1617]:
+                    - heading "Feedback" [level=3] [ref=f3e1618]
+                    - generic [ref=f3e1623]:
+                      - text: Would you like to
+                      - button "tell us about a lower price?" [ref=f3e1625] [cursor=pointer]
+              - generic [ref=f3e1629]:
+                - button [ref=f3e1632] [cursor=pointer]:
+                  - heading "Item details" [level=5] [ref=f3e1634]
+                - button [ref=f3e1637] [cursor=pointer]:
+                  - heading "Measurements" [level=5] [ref=f3e1639]
+                - button [ref=f3e1642] [cursor=pointer]:
+                  - heading "Materials & Care" [level=5] [ref=f3e1644]
+        - generic [ref=f3e1647]:
+          - heading "Product Description" [level=2] [ref=f3e1650]
+          - paragraph [ref=f3e1652]: "G502 is the best gaming mouse from Logitech G, completely redesigned from the inside out with Light speed wireless and power play compatibility so you can game faster and more accurately, The G502 light speed PC gaming mouse is built with superfast 1 ms wireless connectivity and a next gen Hero sensor delivering up to 25K DPI class leading performance and energy efficient up to 60 hours of uninterrupted gaming. 11 programmable buttons help you optimize game play with custom keyboards and macros. Primary buttons feature metal spring tensioning for Fast and crisp actuation. Six adjustable weights let you find the right mouse feel. Light Sync RGB gives you 16.8 million colors to create an exciting and immersive gaming environment. The hyper fast scroll wheel lets you speed through long menus and documents. Pair the G502 Wireless gaming mouse with the Logitech G Power play charging system (sold separately) for infinite charging. USB report rate: 1000 Hz (1ms). OS Compatibility: Windows 7 or later, Mac OS X 10.11 or later, Chrome OSTM."
+      - generic [ref=f3e1655]:
+        - separator [aria-hidden] [ref=f3e1656]
+        - generic [ref=f3e1657]:
+          - heading "Safety and product resources" [level=2] [ref=f3e1658]
+          - generic [ref=f3e1661]:
+            - heading "Safety documents" [level=3] [ref=f3e1662]
+            - generic [ref=f3e1666]:
+              - link "User Manual (PDF)" [ref=f3e1667] [cursor=pointer]:
+                - /url: javascript:void(0)
+              - generic [ref=f3e1668]: "|"
+              - link "User Guide (PDF)" [ref=f3e1669] [cursor=pointer]:
+                - /url: javascript:void(0)
+      - generic [ref=f3e1671]:
+        - separator [aria-hidden] [ref=f3e1672]
+        - heading "What's in the box" [level=2] [ref=f3e1673]
+        - listitem [ref=f3e1675]: User Manual
+      - generic [ref=f3e1677]:
+        - separator [aria-hidden] [ref=f3e1678]
+        - generic [ref=f3e1679]:
+          - 'heading "Top Brand: Logitech G" [level=2] [ref=f3e1680]'
+          - generic [ref=f3e1681]:
+            - generic [ref=f3e1684]:
+              - generic [ref=f3e1685]: Highly Rated
+              - generic [ref=f3e1686]: 100K+ customers rate items from this brand highly
+            - generic [ref=f3e1689]:
+              - generic [ref=f3e1690]: Trending
+              - generic [ref=f3e1691]: 100K+ orders for this brand in past 3 months
+            - generic [ref=f3e1694]:
+              - generic [ref=f3e1695]: Low Returns
+              - generic [ref=f3e1696]: Customers usually keep items from this brand
+      - generic [ref=f3e1699]:
+        - separator [aria-hidden] [ref=f3e1700]
+        - region "More from frequently bought brands" [ref=f3e1701]:
+          - generic [ref=f3e1703]:
+            - heading "More from frequently bought brands" [level=2] [ref=f3e1704]
+            - link "Sponsored" [ref=f3e1708] [cursor=pointer]:
+              - /url: "#sp_detail2-top_brands_feedbackForm"
+          - list [ref=f3e1718]:
+            - listitem [ref=f3e1719]:
+              - generic [ref=f3e1720]:
+                - link "MCHOSE L7 Ultra+ Wireless Gaming Mouse, Ergonomic Mouse Lightweight 48g | 42K DPI, PAW3950, Optical Switch, 20000 FPS, Dual 8K Polling and 7 Programmable Buttons, 3-Mode Connect, for PC/Mac - Black" [ref=f3e1721] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDExMzU5MjUxNDUwMDI6Ojo6&url=%2Fdp%2FB0FLXRB21V%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FLXRB21V%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f3e1725]: MCHOSE L7 Ultra+ Wireless Gaming Mouse, Ergonomic Mouse Lightweight 48g | 42K…
+                - link "4.4 out of 5 stars 160 ratings" [ref=f3e1727] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDExMzU5MjUxNDUwMDI6Ojo6&url=%2Fdp%2FB0FLXRB21V%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FLXRB21V%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "160"
+                - link "PAB 69.35" [ref=f3e1730] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDExMzU5MjUxNDUwMDI6Ojo6&url=%2Fdp%2FB0FLXRB21V%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FLXRB21V%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f3e1731]:
+                    - generic [ref=f3e1732]: PAB 69.35
+                    - generic [aria-hidden] [ref=f3e1733]:
+                      - text: PAB
+                      - generic [ref=f3e1734]:
+                        - text: "69"
+                        - generic [ref=f3e1735]: .
+                      - text: "35"
+                - link "PAB 15.95 delivery Sat, Sep 12" [ref=f3e1737] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDExMzU5MjUxNDUwMDI6Ojo6&url=%2Fdp%2FB0FLXRB21V%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FLXRB21V%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                - link "Save 7% with coupon" [ref=f3e1744] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDExMzU5MjUxNDUwMDI6Ojo6&url=%2Fdp%2FB0FLXRB21V%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0FLXRB21V%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f3e1745]:
+                    - generic [ref=f3e1746]: Save 7%
+                    - text: with coupon
+            - listitem [ref=f3e1747]:
+              - generic [ref=f3e1748]:
+                - link "SM809 Pro Tri-Mode MMO Gaming Mouse, 16 Custom Buttons & 24000 DPI | Interchangeabl..." [ref=f3e1749] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE0OTg3MjEzMzMwMDI6Ojo6&url=%2Fdp%2FB0H7HZH1DG%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H7HZH1DG%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f3e1753]: SM809 Pro Tri-Mode MMO Gaming Mouse, 16 Custom Buttons & 24000 DPI |…
+                - link "4.9 out of 5 stars 11 ratings" [ref=f3e1755] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE0OTg3MjEzMzMwMDI6Ojo6&url=%2Fdp%2FB0H7HZH1DG%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H7HZH1DG%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "11"
+                - 'link "-10% PAB 46.23 List: PAB 51.36 List: null" [ref=f3e1758] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE0OTg3MjEzMzMwMDI6Ojo6&url=%2Fdp%2FB0H7HZH1DG%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H7HZH1DG%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - text: "-10%"
+                  - generic [ref=f3e1759]:
+                    - generic [ref=f3e1760]: PAB 46.23
+                    - generic [aria-hidden] [ref=f3e1761]:
+                      - text: PAB
+                      - generic [ref=f3e1762]:
+                        - text: "46"
+                        - generic [ref=f3e1763]: .
+                      - text: "23"
+                  - generic [ref=f3e1764]: "List: PAB 51.36"
+                  - generic [ref=f3e1765]:
+                    - text: "List:"
+                    - generic [ref=f3e1766]:
+                      - generic [ref=f3e1767]: "null"
+                      - text: PAB51.36
+                - link "PAB 16.38 delivery Wed, Sep 16" [ref=f3e1769] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE0OTg3MjEzMzMwMDI6Ojo6&url=%2Fdp%2FB0H7HZH1DG%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H7HZH1DG%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                - link "Climate Pledge Friendly" [ref=f3e1776] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE0OTg3MjEzMzMwMDI6Ojo6&url=%2Fdp%2FB0H7HZH1DG%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H7HZH1DG%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+            - listitem [ref=f3e1778]:
+              - generic [ref=f3e1779]:
+                - link "ATTACK SHARK F1AIR Lightweight Wireless Gaming Mouse, Grip Tape - Black | 39g, 8K Polling, 720 Hr Battery, 0.168ms, Web Driver, Sweat-Resistant Coating, CNC Metal Wheel, Compatible with PC and Mac" [ref=f3e1780] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE1MDU4MDUwMjM5MDI6Ojo6&url=%2Fdp%2FB0HGG448MT%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0HGG448MT%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f3e1784]: ATTACK SHARK F1AIR Lightweight Wireless Gaming Mouse, Grip Tape - Black | 39g, 8K P...
+                - link "PAB 78.08" [ref=f3e1786] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE1MDU4MDUwMjM5MDI6Ojo6&url=%2Fdp%2FB0HGG448MT%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0HGG448MT%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f3e1787]:
+                    - generic [ref=f3e1788]: PAB 78.08
+                    - generic [aria-hidden] [ref=f3e1789]:
+                      - text: PAB
+                      - generic [ref=f3e1790]:
+                        - text: "78"
+                        - generic [ref=f3e1791]: .
+                      - text: "08"
+                - link "PAB 15.97 delivery Sep 17 - 26" [ref=f3e1793] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE1MDU4MDUwMjM5MDI6Ojo6&url=%2Fdp%2FB0HGG448MT%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0HGG448MT%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                - link "Save PAB 16.44 with coupon" [ref=f3e1800] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDE1MDU4MDUwMjM5MDI6Ojo6&url=%2Fdp%2FB0HGG448MT%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0HGG448MT%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f3e1801]:
+                    - generic [ref=f3e1802]: Save PAB 16.44
+                    - text: with coupon
+            - listitem [ref=f3e1803]:
+              - generic [ref=f3e1804]:
+                - link "DAREU Sakura Pink Wireless Gaming Mouse with Charging Dock Rechargeable RGB,12K DPI,6 Programmable Buttons High-Precision Sensor [300IPS] [1000Hz] for PC Notebook Mac" [ref=f3e1805] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDAwOTc2OTc1MzI2MDI6Ojo6&url=%2Fdp%2FB0BYDJ9LW5%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0BYDJ9LW5%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f3e1809]: DAREU Sakura Pink Wireless Gaming Mouse with Charging Dock Rechargeable RGB,12K…
+                - link "4.6 out of 5 stars 570 ratings" [ref=f3e1811] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDAwOTc2OTc1MzI2MDI6Ojo6&url=%2Fdp%2FB0BYDJ9LW5%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0BYDJ9LW5%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "570"
+                - generic [ref=f3e1813]:
+                  - link "Amazon's Choice":
+                    - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDAwOTc2OTc1MzI2MDI6Ojo6&url=%2Fdp%2FB0BYDJ9LW5%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0BYDJ9LW5%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                - link "PAB 56.50" [ref=f3e1817] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDAwOTc2OTc1MzI2MDI6Ojo6&url=%2Fdp%2FB0BYDJ9LW5%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0BYDJ9LW5%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f3e1818]:
+                    - generic [ref=f3e1819]: PAB 56.50
+                    - generic [aria-hidden] [ref=f3e1820]:
+                      - text: PAB
+                      - generic [ref=f3e1821]:
+                        - text: "56"
+                        - generic [ref=f3e1822]: .
+                      - text: "50"
+                - link "PAB 16.23 delivery Mon, Sep 14" [ref=f3e1824] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDAwOTc2OTc1MzI2MDI6Ojo6&url=%2Fdp%2FB0BYDJ9LW5%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0BYDJ9LW5%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                - link "Climate Pledge Friendly" [ref=f3e1831] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDAwOTc2OTc1MzI2MDI6Ojo6&url=%2Fdp%2FB0BYDJ9LW5%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0BYDJ9LW5%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+            - listitem [ref=f3e1833]:
+              - generic [ref=f3e1834]:
+                - link "Redragon Wireless Gaming Mouse, Tri-Mode 2.4G/Bluetooth/USB-C, 7 Programmable Buttons, Tactile Rapid Fire Key, 8000 DPI RGB Ergonomic Mouse for PC Windows Gaming & Work, M814" [ref=f3e1835] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzNzM4NDY2NDAzMDI6Ojo6&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f3e1839]: Redragon Wireless Gaming Mouse, Tri-Mode 2.4G/Bluetooth/USB-C, 7 Programmable Butto...
+                - link "4.5 out of 5 stars 978 ratings" [ref=f3e1841] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzNzM4NDY2NDAzMDI6Ojo6&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "978"
+                - link "PAB 33.90" [ref=f3e1844] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzNzM4NDY2NDAzMDI6Ojo6&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f3e1845]:
+                    - generic [ref=f3e1846]: PAB 33.90
+                    - generic [aria-hidden] [ref=f3e1847]:
+                      - text: PAB
+                      - generic [ref=f3e1848]:
+                        - text: "33"
+                        - generic [ref=f3e1849]: .
+                      - text: "90"
+                - link "PAB 15.84 delivery Sat, Sep 12" [ref=f3e1851] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzNzM4NDY2NDAzMDI6Ojo6&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                - link "Save 5% with coupon" [ref=f3e1858] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzNzM4NDY2NDAzMDI6Ojo6&url=%2Fdp%2FB0CTHHR6YF%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0CTHHR6YF%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f3e1859]:
+                    - generic [ref=f3e1860]: Save 5%
+                    - text: with coupon
+            - listitem [ref=f3e1861]:
+              - generic [ref=f3e1862]:
+                - link "Redragon Large Wireless Gaming Mouse for Big Hands, Tri-Modes 2.4G/Bluetooth/Wired Rechargeable Ergo RGB Mouse with 2 Side Buttons, 6 Backlit Modes, Programmable Macro Gamer Mouse" [ref=f3e1863] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEwMDUyNDM1NjMxMDI6Ojo6&url=%2Fdp%2FB0FJ54Q9DH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FJ54Q9DH%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f3e1867]: Redragon Large Wireless Gaming Mouse for Big Hands, Tri-Modes 2.4G/Bluetooth/Wired ...
+                - link "4.2 out of 5 stars 215 ratings" [ref=f3e1869] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEwMDUyNDM1NjMxMDI6Ojo6&url=%2Fdp%2FB0FJ54Q9DH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FJ54Q9DH%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "215"
+                - 'link "-20% PAB 20.54 List: PAB 25.68 List: null" [ref=f3e1872] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEwMDUyNDM1NjMxMDI6Ojo6&url=%2Fdp%2FB0FJ54Q9DH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FJ54Q9DH%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - text: "-20%"
+                  - generic [ref=f3e1873]:
+                    - generic [ref=f3e1874]: PAB 20.54
+                    - generic [aria-hidden] [ref=f3e1875]:
+                      - text: PAB
+                      - generic [ref=f3e1876]:
+                        - text: "20"
+                        - generic [ref=f3e1877]: .
+                      - text: "54"
+                  - generic [ref=f3e1878]: "List: PAB 25.68"
+                  - generic [ref=f3e1879]:
+                    - text: "List:"
+                    - generic [ref=f3e1880]:
+                      - generic [ref=f3e1881]: "null"
+                      - text: PAB25.68
+                - link "PAB 15.21 delivery Tue, Sep 15" [ref=f3e1883] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEwMDUyNDM1NjMxMDI6Ojo6&url=%2Fdp%2FB0FJ54Q9DH%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FJ54Q9DH%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+            - listitem [ref=f3e1889]:
+              - generic [ref=f3e1890]:
+                - link "GravaStar Mercury X AIR Wireless Gaming Mouse, True 8K Performance | Futuristic Skeleton Design, PAW3950 Sensor, RGB Lighting, 56g Lightweight, Tri-Mode Connectivity" [ref=f3e1891] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzMjgzNjMwNDQyMDI6Ojo6&url=%2Fdp%2FB0GYNSPFK6%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GYNSPFK6%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f3e1895]: GravaStar Mercury X AIR Wireless Gaming Mouse, True 8K Performance | Futuristic Ske...
+                - link "4.5 out of 5 stars 587 ratings" [ref=f3e1897] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzMjgzNjMwNDQyMDI6Ojo6&url=%2Fdp%2FB0GYNSPFK6%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GYNSPFK6%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "587"
+                - link "PAB 123.25" [ref=f3e1900] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzMjgzNjMwNDQyMDI6Ojo6&url=%2Fdp%2FB0GYNSPFK6%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GYNSPFK6%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f3e1901]:
+                    - generic [ref=f3e1902]: PAB 123.25
+                    - generic [aria-hidden] [ref=f3e1903]:
+                      - text: PAB
+                      - generic [ref=f3e1904]:
+                        - text: "123"
+                        - generic [ref=f3e1905]: .
+                      - text: "25"
+                - link "PAB 15.70 delivery Sat, Sep 12" [ref=f3e1907] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzMjgzNjMwNDQyMDI6Ojo6&url=%2Fdp%2FB0GYNSPFK6%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GYNSPFK6%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                - link "Climate Pledge Friendly" [ref=f3e1914] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo3MTE1OTQ4NjQwNDUxODY3OjE3ODg3MjQ4MDA6c3BfZGV0YWlsMjozMDEzMjgzNjMwNDQyMDI6Ojo6&url=%2Fdp%2FB0GYNSPFK6%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0GYNSPFK6%26pd_rd_w%3DXNeoG%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3D09Q9YNE5C18ECB1V8WGM%26pd_rd_wg%3DehkA4%26pd_rd_r%3D24d757d5-4125-4ecd-b3ec-5546e61f440e%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+      - generic "Top reviews" [ref=f3e1918]:
+        - separator [aria-hidden] [ref=f3e1919]
+        - generic [ref=f3e1921]:
+          - generic [ref=f3e1922]:
+            - generic [ref=f3e1927]:
+              - heading "Customer reviews" [level=2] [ref=f3e1929]
+              - generic [ref=f3e1931]:
+                - generic [ref=f3e1933]:
+                  - generic [ref=f3e1934]: 4.6 out of 5 stars
+                  - generic [aria-hidden] [ref=f3e1939]: 4.6 out of 5
+                - generic [ref=f3e1940]: 13,617 global ratings
+              - list [ref=f3e1945]:
+                - listitem [ref=f3e1946]:
+                  - link "82 percent of reviews have 5 stars" [ref=f3e1949] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B07L4BM851/ref=acr_dp_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f3e1950]: 5 star
+                    - progressbar [aria-hidden] [ref=f3e1952]
+                    - generic [aria-hidden] [ref=f3e1953]: 82%
+                - listitem [ref=f3e1954]:
+                  - link "9 percent of reviews have 4 stars" [ref=f3e1957] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B07L4BM851/ref=acr_dp_hist_4?ie=UTF8&filterByStar=four_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f3e1958]: 4 star
+                    - progressbar [aria-hidden] [ref=f3e1960]
+                    - generic [aria-hidden] [ref=f3e1961]: 9%
+                - listitem [ref=f3e1962]:
+                  - link "3 percent of reviews have 3 stars" [ref=f3e1965] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B07L4BM851/ref=acr_dp_hist_3?ie=UTF8&filterByStar=three_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f3e1966]: 3 star
+                    - progressbar [aria-hidden] [ref=f3e1968]
+                    - generic [aria-hidden] [ref=f3e1969]: 3%
+                - listitem [ref=f3e1970]:
+                  - link "2 percent of reviews have 2 stars" [ref=f3e1973] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B07L4BM851/ref=acr_dp_hist_2?ie=UTF8&filterByStar=two_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f3e1974]: 2 star
+                    - progressbar [aria-hidden] [ref=f3e1976]
+                    - generic [aria-hidden] [ref=f3e1977]: 2%
+                - listitem [ref=f3e1978]:
+                  - link "4 percent of reviews have 1 stars" [ref=f3e1981] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B07L4BM851/ref=acr_dp_hist_1?ie=UTF8&filterByStar=one_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f3e1982]: 1 star
+                    - progressbar [aria-hidden] [ref=f3e1984]
+                    - generic [aria-hidden] [ref=f3e1985]: 4%
+              - button "How customer reviews and ratings work" [ref=f3e1990] [cursor=pointer]
+            - separator [aria-hidden] [ref=f3e1992]
+          - generic [ref=f3e1996]:
+            - generic [ref=f3e2000]:
+              - heading "Customers say" [level=3] [ref=f3e2001]
+              - generic [ref=f3e2002]: Customers find this gaming mouse to be one of the best wireless options available, with an ergonomic feel and customizable weight that fits hands well. The battery life receives mixed feedback - while some praise its fantastic performance, others report it doesn't last as long. Customers disagree on the value for money, with some finding it well worth the price while others say it's not worth the cost. The button quantity and double-click functionality also receive mixed reviews, with some loving the button setup while others find them horrible, and some experiencing uncontrollable double-clicking issues.
+              - generic [ref=f3e2004]:
+                - generic [ref=f3e2005]:
+                  - generic [ref=f3e2006]: AI Generated from the text of customer reviews
+                  - generic [aria-hidden] [ref=f3e2008]: Generated from the text of customer reviews
+                - heading "Select to learn more" [level=4] [ref=f3e2009]
+                - tablist "Select to learn more" [ref=f3e2010]:
+                  - generic [ref=f3e2011]:
+                    - tab "Positive aspect, performance, 1107 mentions" [ref=f3e2015]:
+                      - button "Performance(1.1K)" [ref=f3e2016] [cursor=pointer]
+                    - tab "Positive aspect, ergonomics, 325 mentions" [ref=f3e2025]:
+                      - button "Ergonomics(325)" [ref=f3e2026] [cursor=pointer]
+                    - tab "Positive aspect, weight, 241 mentions" [ref=f3e2035]:
+                      - button "Weight(241)" [ref=f3e2036] [cursor=pointer]
+                    - tab "Mixed aspect, reliability, 487 mentions" [ref=f3e2045]:
+                      - button "Reliability(487)" [ref=f3e2046] [cursor=pointer]
+                    - tab "Mixed aspect, battery life, 434 mentions" [ref=f3e2055]:
+                      - button "Battery life(434)" [ref=f3e2056] [cursor=pointer]
+                    - tab "Mixed aspect, value for money, 331 mentions" [ref=f3e2065]:
+                      - button "Value for money(331)" [ref=f3e2066] [cursor=pointer]
+                    - tab "Mixed aspect, button quantity, 226 mentions" [ref=f3e2075]:
+                      - button "Button quantity(226)" [ref=f3e2076] [cursor=pointer]
+                    - tab "Mixed aspect, double clicking, 208 mentions" [ref=f3e2085]:
+                      - button "Double clicking(208)" [ref=f3e2086] [cursor=pointer]
+            - generic [ref=f3e2093]:
+              - group [ref=f3e2096]:
+                - generic [ref=f3e2097]:
+                  - heading "Reviews with images" [level=3] [ref=f3e2099]
+                  - link "See all photos" [ref=f3e2102] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                - group [ref=f3e2106]:
+                  - list [ref=f3e2107]:
+                    - listitem [ref=f3e2108]:
+                      - button [ref=f3e2110] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2111]
+                    - listitem [ref=f3e2113]:
+                      - button [ref=f3e2115] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2116]
+                    - listitem [ref=f3e2118]:
+                      - button [ref=f3e2120] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2121]
+                    - listitem [ref=f3e2123]:
+                      - button [ref=f3e2125] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2126]
+                    - listitem [ref=f3e2128]:
+                      - button [ref=f3e2130] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2131]
+                    - listitem [ref=f3e2133]:
+                      - button [ref=f3e2135] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2136]
+                    - listitem [ref=f3e2138]:
+                      - button [ref=f3e2140] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2141]
+                    - listitem [ref=f3e2143]:
+                      - button [ref=f3e2145] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2146]
+                    - listitem [ref=f3e2148]:
+                      - button [ref=f3e2150] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2151]
+                    - listitem [ref=f3e2153]:
+                      - button [ref=f3e2155] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2156]
+                    - listitem [ref=f3e2158]:
+                      - button [ref=f3e2160] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2161]
+                    - listitem [ref=f3e2163]:
+                      - button [ref=f3e2165] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f3e2166]
+              - separator [aria-hidden] [ref=f3e2168]
+            - generic [ref=f3e2173]:
+              - generic [ref=f3e2174]:
+                - heading "Top reviews from the United States" [level=3] [ref=f3e2175]
+                - list [ref=f3e2176]:
+                  - listitem [ref=f3e2177]:
+                    - generic [ref=f3e2180]:
+                      - link "Berit L." [ref=f3e2182] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AHYAVHO5AE5MA2CCR3NC6PQHXPHQ?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f3e2188]: 5 out of 5 stars
+                      - link [ref=f3e2191] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R3BZMOPNSYL9L5/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Gaming Mouse That Still Holds Up for Serious Play" [level=5] [ref=f3e2192]
+                      - generic [ref=f3e2193]: Reviewed in the United States on March 30, 2026
+                      - generic [ref=f3e2194]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2195] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2196]: "Color: Black"
+                          - generic [ref=f3e2197]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2200] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - generic [ref=f3e2203]:
+                        - generic [ref=f3e2209]:
+                          - paragraph [ref=f3e2210]: I’ve been using the Logitech G502 Lightspeed for a while now, and it’s one of those mice that really earns its reputation—especially if you like having control and customization at your fingertips.
+                          - paragraph
+                          - paragraph [ref=f3e2211]: The first thing that stands out is the performance. The HERO 25K sensor is extremely precise, and tracking feels smooth and accurate whether you’re gaming casually or playing something more competitive. Combined with Logitech’s LIGHTSPEED wireless tech, it honestly feels just as responsive as a wired mouse.
+                          - paragraph
+                          - paragraph [ref=f3e2212]: The button layout is a huge advantage. With 11 programmable buttons, you can map shortcuts, macros, or in-game actions exactly how you want. It’s especially useful for games like FPS, MMOs, or even productivity tasks where extra controls make a difference.
+                          - paragraph
+                          - paragraph [ref=f3e2213]: Another feature I really like is the adjustable weight system. You can customize how heavy or light the mouse feels, which makes it easier to dial in something comfortable for your playstyle. It’s a small detail, but it actually makes a noticeable difference over time.
+                          - paragraph
+                          - paragraph [ref=f3e2214]: Battery life has been solid too. I don’t feel like I’m constantly charging it, and it can last up to around 60 hours depending on usage. Plus, it’s compatible with Logitech’s PowerPlay charging system if you want a wireless charging setup.
+                          - paragraph
+                          - paragraph [ref=f3e2215]: Comfort-wise, it’s clearly designed for right-handed users with a more ergonomic shape. It fits nicely in the hand, though it’s on the heavier side compared to ultra-light gaming mice, which may not appeal to everyone.
+                          - paragraph
+                          - paragraph [ref=f3e2216]: If I had a downside, it’s exactly that—the weight and size. If you prefer lightweight mice for fast flick movements, this might feel a bit bulky. Also, there’s a bit of a learning curve with all the buttons at first.
+                          - paragraph
+                          - paragraph [ref=f3e2217]: Overall, the G502 Lightspeed is a powerful, customizable gaming mouse that’s great for players who want precision and lots of control options. It’s not the lightest or simplest mouse out there, but if you value features and performance, it’s hard to beat.
+                        - button "Read more" [ref=f3e2221] [cursor=pointer]
+                      - generic [ref=f3e2225]:
+                        - generic [ref=f3e2229] [cursor=pointer]:
+                          - button "Helpful" [ref=f3e2230]
+                          - generic [ref=f3e2232]: Helpful
+                        - button "Report Review" [ref=f3e2235] [cursor=pointer]: Report
+                  - listitem [ref=f3e2236]:
+                    - generic [ref=f3e2239]:
+                      - link "Joseph Peterson" [ref=f3e2241] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AGPH4PGVUW6BUGK46PRIW544TBNQ?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f3e2247]: 5 out of 5 stars
+                      - link [ref=f3e2250] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R2PTO69ZHDRC5H/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Holds up after years, powerplay mat is a huge bonus" [level=5] [ref=f3e2251]
+                      - generic [ref=f3e2252]: Reviewed in the United States on May 24, 2026
+                      - generic [ref=f3e2253]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2254] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2255]: "Color: Black"
+                          - generic [ref=f3e2256]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2259] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - generic [ref=f3e2262]:
+                        - generic [ref=f3e2268]:
+                          - paragraph [ref=f3e2269]: I am at over 2 Million clicks on Old School Runescape ALONE with this mouse on the powerplay mat and it's been perfect. Bought it in January 2023, so it's 3+ years of working just as brand new for me. All of my previous mice (Razer Deathadder x2) started double-clicking after 6 months or so.
+                          - paragraph
+                          - paragraph [ref=f3e2270]: I highly recommend this mouse to any gamers out there looking for a mouse. This will cost you more up front, but the price is absolutely right and it will save you WAY more in terms of having to replace prematurely.
+                          - paragraph
+                          - paragraph [ref=f3e2271]: In terms of MMO usage, it's got side buttons which I use in OSRS to hit Space to skip dialogue while questing, and to hit Esc to exit interfaces. There's not much more than that in OSRS due to heavy F-Key usage for high-level gameplay.
+                          - paragraph
+                          - paragraph [ref=f3e2272]: But for a right-hand user.. I mean, it's built for right-hand. For my large-ish hand, (I am 6 ft or 183cm tall) the size is perfectly comfortable. There is a wide DPI to choose from, but I keep mine low (? 3500 dpi) as I don't play any games competitively.
+                          - paragraph
+                          - paragraph [ref=f3e2273]: Again the powerplay mat compatibility is a HUGE plus as it charges wirelessly somehow and I have never had to plug in or swap any batteries in the entire 3 years+ that I've had the mouse.
+                          - paragraph
+                          - paragraph [ref=f3e2274]: Can't recommend it enough. Back to grinding Vorkath on my ironman on OSRS. later
+                        - button "Read more" [ref=f3e2278] [cursor=pointer]
+                      - button [ref=f3e2283] [cursor=pointer]:
+                        - img "Holds up after years, powerplay mat is a huge bonus" [ref=f3e2284]
+                      - generic [ref=f3e2285]: 3 people found this helpful
+                      - generic [ref=f3e2287]:
+                        - generic [ref=f3e2291] [cursor=pointer]:
+                          - button "Helpful" [ref=f3e2292]
+                          - generic [ref=f3e2294]: Helpful
+                        - button "Report Review" [ref=f3e2297] [cursor=pointer]: Report
+                  - listitem [ref=f3e2298]:
+                    - generic [ref=f3e2301]:
+                      - link "Brandon" [ref=f3e2303] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AFBLCGW2QGSI2FZ36Q6ST6NPNEIA?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f3e2309]: 5 out of 5 stars
+                      - link [ref=f3e2312] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R2G53Q3NDM00CH/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Great mouse, good size." [level=5] [ref=f3e2313]
+                      - generic [ref=f3e2314]: Reviewed in the United States on August 21, 2026
+                      - generic [ref=f3e2315]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2316] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2317]: "Color: Black"
+                          - generic [ref=f3e2318]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2321] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f3e2331]: It feels amazing in the hand for someone who has big hands, so the size is no complaint at all. It's surprisingly durable and fits every setup well for aesthetics with the RGB. It's helped my accuracy in games and has a stable connection. It functions great for both gaming and regular use. The only thing, which I knew going in, was that it uses micro USB, which they could've updated when they made this version of the mouse. But even then, for the micro USB usually not being durable, the cable is surprisingly durable. It also connects to SignalRGB if you do use it on your computer so you can match the RGB to your setup easily!
+                      - button [ref=f3e2334] [cursor=pointer]:
+                        - img "Great mouse, good size." [ref=f3e2335]
+                      - generic [ref=f3e2336]: One person found this helpful
+                      - generic [ref=f3e2338]:
+                        - generic [ref=f3e2342] [cursor=pointer]:
+                          - button "Helpful" [ref=f3e2343]
+                          - generic [ref=f3e2345]: Helpful
+                        - button "Report Review" [ref=f3e2348] [cursor=pointer]: Report
+                  - listitem [ref=f3e2349]:
+                    - generic [ref=f3e2352]:
+                      - link "Chris Hardwick" [ref=f3e2354] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AHW4NULBJFPCBOKUV5JXQCU6YSDA?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f3e2360]: 5 out of 5 stars
+                      - link [ref=f3e2363] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R2OTEBZWJ63F5Q/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Works flawlessly for drafting use..." [level=5] [ref=f3e2364]
+                      - generic [ref=f3e2365]: Reviewed in the United States on March 17, 2026
+                      - generic [ref=f3e2366]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2367] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2368]: "Color: Black"
+                          - generic [ref=f3e2369]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2372] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - generic [ref=f3e2381]:
+                        - paragraph [ref=f3e2382]: This mouse has been a great upgrade for my setup. The wireless connection is fast and reliable, and I honestly can’t tell the difference from a wired mouse. The sensor is very responsive, and everything feels smooth and precise, especially combined with the Logitech G mouse pad.
+                        - paragraph
+                        - paragraph [ref=f3e2383]: I actually use this all day at work for drafting, so precision and comfort really matter, and this mouse delivers on both. I’ve even purchased several more for my drafting team, and everyone has been really happy with it.
+                        - paragraph
+                        - paragraph [ref=f3e2384]: I also like the customizable weight system—you can adjust it to feel just right in your hand. Overall it feels solid, well made, and comfortable for long hours of use.
+                      - generic [ref=f3e2385]: 3 people found this helpful
+                      - generic [ref=f3e2387]:
+                        - generic [ref=f3e2391] [cursor=pointer]:
+                          - button "Helpful" [ref=f3e2392]
+                          - generic [ref=f3e2394]: Helpful
+                        - button "Report Review" [ref=f3e2397] [cursor=pointer]: Report
+                  - listitem [ref=f3e2398]:
+                    - generic [ref=f3e2401]:
+                      - link "Rikki" [ref=f3e2403] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AE2X3ZDIF3YEBTXIKWGYG7SZML5Q?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f3e2409]: 5 out of 5 stars
+                      - link [ref=f3e2412] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R1OVAI2YB14N8S/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Classic gaming mouse" [level=5] [ref=f3e2413]
+                      - generic [ref=f3e2414]: Reviewed in the United States on August 22, 2026
+                      - generic [ref=f3e2415]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2416] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2417]: "Color: Black"
+                          - generic [ref=f3e2418]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2421] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f3e2431]: So I've had this mouse before with the wired version so what else can I say that hasn't been said about this iconic mouse? Looks cool, feels comfortable, plenty of buttons and the bonus weights to adjust how heavy it is. My only complaint is that this mouse still uses micro USB, like come on Logitech it's 2026, you can afford to update this thing to USB-C. Outside of that solid recommend
+                      - generic [ref=f3e2432]: 2 people found this helpful
+                      - generic [ref=f3e2434]:
+                        - generic [ref=f3e2438] [cursor=pointer]:
+                          - button "Helpful" [ref=f3e2439]
+                          - generic [ref=f3e2441]: Helpful
+                        - button "Report Review" [ref=f3e2444] [cursor=pointer]: Report
+                  - listitem [ref=f3e2445]:
+                    - generic [ref=f3e2448]:
+                      - link "G" [ref=f3e2450] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AHWI42G3T7BAPTRHFJ6VSQZC5R3Q?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f3e2456]: 4 out of 5 stars
+                      - link [ref=f3e2459] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R198ZJWXRITR9P/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Worth The Money" [level=5] [ref=f3e2460]
+                      - generic [ref=f3e2461]: Reviewed in the United States on August 14, 2026
+                      - generic [ref=f3e2462]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2463] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2464]: "Color: Black"
+                          - generic [ref=f3e2465]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2468] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f3e2478]: Mouse is ok on battery, it charges fast and you don’t have to worry about it unplugging since it’s snug. Clicking is about the same as any other mouse. Feels nice to use and you can change the weight. My only complaint i have is it doesn’t support bluetooth but the pros outweighs the cons. Seems to hold up good against some rage every now and then as well.
+                      - generic [ref=f3e2479]: One person found this helpful
+                      - generic [ref=f3e2481]:
+                        - generic [ref=f3e2485] [cursor=pointer]:
+                          - button "Helpful" [ref=f3e2486]
+                          - generic [ref=f3e2488]: Helpful
+                        - button "Report Review" [ref=f3e2491] [cursor=pointer]: Report
+                  - listitem [ref=f3e2492]:
+                    - generic [ref=f3e2495]:
+                      - link "William Garber" [ref=f3e2497] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AGGSG7FNKPXTQK76JHLFSBIZJCRA?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f3e2503]: 5 out of 5 stars
+                      - link [ref=f3e2506] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R3AZ0248RK9VUI/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Impressive and Comfortable" [level=5] [ref=f3e2507]
+                      - generic [ref=f3e2508]: Reviewed in the United States on November 22, 2025
+                      - generic [ref=f3e2509]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2510] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2511]: "Color: Black"
+                          - generic [ref=f3e2512]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2515] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - generic [ref=f3e2518]:
+                        - generic [ref=f3e2524]:
+                          - paragraph [ref=f3e2525]: Only after a couple play sessions in BF6 with this mouse, I can already feel how much more precise I can be with it. My first play session was a bit rough getting used to the feel of it. It’s quickly getting more natural. I switched from a ghost keyboards m1 mouse to this.
+                          - paragraph
+                          - paragraph [ref=f3e2526]: The left and right mouse clicks feel a bit more stiff than my m1 mouse which I like. Easier to avoid accidental inputs. All the other buttons feel solid with clean clicks.
+                          - paragraph
+                          - paragraph [ref=f3e2527]: The mouse wheel is a very different feel with more significant bumps while scrolling, but it adds a more tactile feel being easier to control. It also has a release that lets it just spin for probably more work type use rather than gaming.
+                          - paragraph
+                          - paragraph [ref=f3e2528]: It’s easy to setup, basically plug and play but a bit confusing. It comes with of course, a charging cable but the Bluetooth usb comes in some sort of housing that plugs in by the charging cable. Not sure if that is better or worse than how I have it now which is the usb receiver plugged into the back of my pc. Works fine.
+                          - paragraph
+                          - paragraph [ref=f3e2529]: Looking at the Logitech website shows up to 48 hours of battery life with default lighting, or up to 60 hours with no lighting. Fully charged it showed 26 hours (25 hours now at 96%). And turning off the lighting at 96% only goes up to 28 hours. Which is plenty as I usually plug my wireless device in to charge after use.
+                          - paragraph
+                          - paragraph [ref=f3e2530]: My favorite part of this mouse is how comfortable it is. It’s a bit thicker filling in my smaller hands more compared to my m1 mouse. Another nice added comfort feature is the thumb ledge. It keeps my thumb off my mouse pad, and helps with control of the mouse in high stress fps situations. The weight also help in precise aiming. My m1 mouse was 65g , the g502 is 111g plus the 1 big weight and 2 smaller weights I added making it go up to maybe 119g.
+                          - paragraph
+                          - paragraph [ref=f3e2531]: Highly recommend this mouse, and will try to update if it fails prematurely.
+                        - button "Read more" [ref=f3e2535] [cursor=pointer]
+                      - generic [ref=f3e2538]: 4 people found this helpful
+                      - generic [ref=f3e2540]:
+                        - generic [ref=f3e2544] [cursor=pointer]:
+                          - button "Helpful" [ref=f3e2545]
+                          - generic [ref=f3e2547]: Helpful
+                        - button "Report Review" [ref=f3e2550] [cursor=pointer]: Report
+                  - listitem [ref=f3e2551]:
+                    - generic [ref=f3e2554]:
+                      - link "DANIEL A LIZARRAGA V" [ref=f3e2556] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AG2VH2CW5NYJRCZCDB54NN2U5C6Q?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f3e2562]: 5 out of 5 stars
+                      - link [ref=f3e2565] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/RM6DSWX5Q2X7T/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "This is the last mouse you will ever buy" [level=5] [ref=f3e2566]
+                      - generic [ref=f3e2567]: Reviewed in the United States on March 20, 2026
+                      - generic [ref=f3e2568]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2569] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2570]: "Color: Black"
+                          - generic [ref=f3e2571]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2574] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - generic [ref=f3e2583]:
+                        - paragraph [ref=f3e2584]: Just buy it.
+                        - paragraph
+                        - paragraph [ref=f3e2585]: What can be said about this mouse that hasn't been said before? This is the perfect mouse, there is no contest. I know it is a bit on the pricier side, but if you need a mouse, just get the cheapest one you can get and start saving to get this one, IT'S THAT GOOD.
+                        - paragraph
+                        - paragraph [ref=f3e2586]: The mouse glides over any decent mouse pad, you don't need to get a Logitech one. The shape is perfect for all kinds of grips and the weight system is great for customization.
+                        - paragraph
+                        - paragraph [ref=f3e2587]: The led has different brightness levels, including turning it off completely to save more battery, and the keys are just silent and satisfying to press.
+                        - paragraph
+                        - paragraph [ref=f3e2588]: Again, this is the best mouse ever, no other mouse will offer a better value for your money than this one. A bit steep, yes, but worth it.
+                      - generic [ref=f3e2589]: 3 people found this helpful
+                      - generic [ref=f3e2591]:
+                        - generic [ref=f3e2595] [cursor=pointer]:
+                          - button "Helpful" [ref=f3e2596]
+                          - generic [ref=f3e2598]: Helpful
+                        - button "Report Review" [ref=f3e2601] [cursor=pointer]: Report
+              - link "See more reviews" [ref=f3e2603] [cursor=pointer]:
+                - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_show_all_top?_encoding=UTF8&ie=UTF8&reviewerType=all_reviews
+              - generic [ref=f3e2605]:
+                - heading "Top reviews from other countries" [level=3] [ref=f3e2606]
+                - list [ref=f3e2607]:
+                  - generic [ref=f3e2611] [cursor=pointer]:
+                    - button "Translate all reviews to English" [ref=f3e2612]
+                    - generic [aria-hidden] [ref=f3e2613]: Translate all reviews to English
+                  - listitem [ref=f3e2614]:
+                    - generic [ref=f3e2617]:
+                      - generic [ref=f3e2618]: Mohammed1425
+                      - generic [ref=f3e2625]: 5 out of 5 stars
+                      - heading "جودة عالية." [level=5] [ref=f3e2628]
+                      - generic [ref=f3e2629]: Reviewed in Saudi Arabia on March 25, 2026
+                      - generic [ref=f3e2630]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2631] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2632]: "Color: Black"
+                          - generic [ref=f3e2633]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2636] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f3e2646]: ممتاز جدا. البطارية تستمر لوقت طويل
+                      - button "Report Review" [ref=f3e2650] [cursor=pointer]: Report
+                      - link "Translate review to English" [ref=f3e2653] [cursor=pointer]:
+                        - /url: javascript:void(0)
+                  - listitem [ref=f3e2654]:
+                    - generic [ref=f3e2657]:
+                      - generic [ref=f3e2658]: Khaled Emran
+                      - generic [ref=f3e2665]: 5 out of 5 stars
+                      - heading "ماوس رائع صراحة" [level=5] [ref=f3e2668]
+                      - generic [ref=f3e2669]: Reviewed in Egypt on August 17, 2026
+                      - generic [ref=f3e2670]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2671] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2672]: "Color: Black"
+                          - generic [ref=f3e2673]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2676] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f3e2686]: استخدامه يومي وشحنه بيقعد مدة كويسة ومريح جداً للي بيحب الماوسات الكبيرة شوية
+                      - button "Report Review" [ref=f3e2690] [cursor=pointer]: Report
+                      - link "Translate review to English" [ref=f3e2693] [cursor=pointer]:
+                        - /url: javascript:void(0)
+                  - listitem [ref=f3e2694]:
+                    - generic [ref=f3e2697]:
+                      - generic [ref=f3e2698]: samuel ponda reyes
+                      - generic [ref=f3e2705]: 5 out of 5 stars
+                      - heading "Great product" [level=5] [ref=f3e2708]
+                      - generic [ref=f3e2709]: Reviewed in the United Arab Emirates on December 16, 2023
+                      - generic [ref=f3e2710]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2711] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2712]: "Color: Black"
+                          - generic [ref=f3e2713]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2716] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f3e2726]: It’s all good . Happy with my purchase worth the price
+                      - button "Report Review" [ref=f3e2730] [cursor=pointer]: Report
+                  - listitem [ref=f3e2731]:
+                    - generic [ref=f3e2734]:
+                      - generic [ref=f3e2735]: hhh22
+                      - generic [ref=f3e2742]: 5 out of 5 stars
+                      - heading "Best Mouse ever" [level=5] [ref=f3e2745]
+                      - generic [ref=f3e2746]: Reviewed in Canada on August 27, 2026
+                      - generic [ref=f3e2747]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2748] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2749]: "Color: Black"
+                          - generic [ref=f3e2750]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2753] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f3e2763]: Just bought the wireless version of the G502 after owning the wired one for 11 years! It sadly died on me yesterday, I would never want to switch mouses, so I got the wireless version, and it's amazing. So many features, a nice heavy mouse that feels proper in your hand, so comfortable, nice size, nice color customization for the RGB, and so much better wireless, would absolutely recommend!
+                      - button "Report Review" [ref=f3e2767] [cursor=pointer]: Report
+                  - listitem [ref=f3e2768]:
+                    - generic [ref=f3e2771]:
+                      - generic [ref=f3e2772]: Christopher Kargas
+                      - generic [ref=f3e2779]: 5 out of 5 stars
+                      - heading "Great Qaulity and Price" [level=5] [ref=f3e2782]
+                      - generic [ref=f3e2783]: Reviewed in Australia on October 13, 2020
+                      - generic [ref=f3e2784]:
+                        - 'link "Color: Black Style: Wireless Pattern Name: Mouse" [ref=f3e2785] [cursor=pointer]':
+                          - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_rvw_fmt?_encoding=UTF8&formatType=current_format
+                          - generic [ref=f3e2786]: "Color: Black"
+                          - generic [ref=f3e2787]: "Style: Wireless"
+                          - text: "Pattern Name: Mouse"
+                        - link "Verified Purchase" [ref=f3e2790] [cursor=pointer]:
+                          - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f3e2800]: Great Product, Super responsive and fits ergonomically in your hand, i also love the rgb colour, so much value for such a great price, couldn't recommend this product more!
+                      - button "Report Review" [ref=f3e2804] [cursor=pointer]: Report
+              - link "See more reviews" [ref=f3e2806] [cursor=pointer]:
+                - /url: /portal/customer-reviews/B07L4BM851/ref=cm_cr_dp_d_show_all_top?_encoding=UTF8&ie=UTF8&reviewerType=all_reviews
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=f3e2812]:
+    - button "Back to top" [ref=f3e2813] [cursor=pointer]
+    - generic [ref=f3e2815]:
+      - generic [ref=f3e2816]:
+        - heading "Get to Know Us" [level=6] [ref=f3e2817]
+        - list [ref=f3e2818]:
+          - listitem [ref=f3e2819]:
+            - link "Careers" [ref=f3e2820] [cursor=pointer]:
+              - /url: https://www.amazon.jobs
+          - listitem [ref=f3e2821]:
+            - link "Blog" [ref=f3e2822] [cursor=pointer]:
+              - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=f3e2823]:
+            - link "About Amazon" [ref=f3e2824] [cursor=pointer]:
+              - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=f3e2825]:
+            - link "Investor Relations" [ref=f3e2826] [cursor=pointer]:
+              - /url: https://www.amazon.com/ir
+          - listitem [ref=f3e2827]:
+            - link "Amazon Devices" [ref=f3e2828] [cursor=pointer]:
+              - /url: /gp/browse.html?node=2102313011&ref_=footer_devices
+          - listitem [ref=f3e2829]:
+            - link "Amazon Science" [ref=f3e2830] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=f3e2832]:
+        - heading "Make Money with Us" [level=6] [ref=f3e2833]
+        - list [ref=f3e2834]:
+          - listitem [ref=f3e2835]:
+            - link "Sell products on Amazon" [ref=f3e2836] [cursor=pointer]:
+              - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+          - listitem [ref=f3e2837]:
+            - link "Sell on Amazon Business" [ref=f3e2838] [cursor=pointer]:
+              - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+          - listitem [ref=f3e2839]:
+            - link "Sell apps on Amazon" [ref=f3e2840] [cursor=pointer]:
+              - /url: https://developer.amazon.com
+          - listitem [ref=f3e2841]:
+            - link "Become an Affiliate" [ref=f3e2842] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.com/
+          - listitem [ref=f3e2843]:
+            - link "Advertise Your Products" [ref=f3e2844] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+          - listitem [ref=f3e2845]:
+            - link "Self-Publish with Us" [ref=f3e2846] [cursor=pointer]:
+              - /url: /gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+          - listitem [ref=f3e2847]:
+            - link "Host an Amazon Hub" [ref=f3e2848] [cursor=pointer]:
+              - /url: https://go.thehub-amazon.com/amazon-hub-locker
+          - listitem [ref=f3e2849]:
+            - text: ›
+            - link "See More Make Money with Us" [ref=f3e2850] [cursor=pointer]:
+              - /url: /b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+      - generic [ref=f3e2852]:
+        - heading "Amazon Payment Products" [level=6] [ref=f3e2853]
+        - list [ref=f3e2854]:
+          - listitem [ref=f3e2855]:
+            - link "Amazon Business Card" [ref=f3e2856] [cursor=pointer]:
+              - /url: /dp/B07984JN3L?plattr=ACOMFO&ie=UTF-8
+          - listitem [ref=f3e2857]:
+            - link "Shop with Points" [ref=f3e2858] [cursor=pointer]:
+              - /url: /gp/browse.html?node=16218619011&ref_=footer_swp
+          - listitem [ref=f3e2859]:
+            - link "Reload Your Balance" [ref=f3e2860] [cursor=pointer]:
+              - /url: /dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+          - listitem [ref=f3e2861]:
+            - link "Amazon Currency Converter" [ref=f3e2862] [cursor=pointer]:
+              - /url: /gp/browse.html?node=388305011&ref_=footer_tfx
+      - generic [ref=f3e2864]:
+        - heading "Let Us Help You" [level=6] [ref=f3e2865]
+        - list [ref=f3e2866]:
+          - listitem [ref=f3e2867]:
+            - link "Your Account" [ref=f3e2868] [cursor=pointer]:
+              - /url: https://www.amazon.com/gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=f3e2869]:
+            - link "Your Orders" [ref=f3e2870] [cursor=pointer]:
+              - /url: https://www.amazon.com/gp/css/order-history?ref_=footer_yo
+          - listitem [ref=f3e2871]:
+            - link "Shipping Rates & Policies" [ref=f3e2872] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+          - listitem [ref=f3e2873]:
+            - link "Returns & Replacements" [ref=f3e2874] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=f3e2875]:
+            - link "Manage Your Content and Devices" [ref=f3e2876] [cursor=pointer]:
+              - /url: /gp/digital/fiona/manage?ref_=footer_myk
+          - listitem [ref=f3e2877]:
+            - link "Help" [ref=f3e2878] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+    - generic [ref=f3e2880]:
+      - link "Amazon US Home" [ref=f3e2883] [cursor=pointer]:
+        - /url: /?ref_=footer_logo
+      - generic [ref=f3e2886]:
+        - generic [ref=f3e2887]:
+          - link "Choose a language for shopping. Current selection is English." [ref=f3e2888] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=f3e2890]: English
+          - button "Expand to Change Language or Country" [ref=f3e2891] [cursor=pointer]
+        - link "PAB Panamanian Balboa" [ref=f3e2892] [cursor=pointer]:
+          - /url: /customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2FLogitech-Lightspeed-PowerPlay-Compatible-Lightsync%2Fdp%2FB07L4BM851
+          - generic [ref=f3e2893]: PAB
+          - generic [ref=f3e2894]: Panamanian Balboa
+        - button "Choose a country/region for shopping. The current selection is United States." [ref=f3e2895] [cursor=pointer]:
+          - generic [ref=f3e2897]: United States
+    - navigation "More on Amazon" [ref=f3e2898]:
+      - generic "More on Amazon" [ref=f3e2899]:
+        - list [ref=f3e2900]:
+          - listitem [ref=f3e2901]:
+            - link [ref=f3e2902] [cursor=pointer]:
+              - /url: https://music.amazon.com?ref=dm_aff_amz_com
+              - heading "Amazon Music" [level=5] [ref=f3e2903]
+              - generic [ref=f3e2904]: Stream millionsof songs
+          - listitem [aria-hidden] [ref=f3e2905]
+          - listitem [ref=f3e2906]:
+            - link [ref=f3e2907] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+              - heading "Amazon Ads" [level=5] [ref=f3e2908]
+              - generic [ref=f3e2909]: Reach customerswherever theyspend their time
+          - listitem [aria-hidden] [ref=f3e2910]
+          - listitem [ref=f3e2911]:
+            - link [ref=f3e2912] [cursor=pointer]:
+              - /url: https://www.6pm.com
+              - heading "6pm" [level=5] [ref=f3e2913]
+              - generic [ref=f3e2914]: Score dealson fashion brands
+          - listitem [aria-hidden] [ref=f3e2915]
+          - listitem [ref=f3e2916]:
+            - link [ref=f3e2917] [cursor=pointer]:
+              - /url: https://www.abebooks.com
+              - heading "AbeBooks" [level=5] [ref=f3e2918]
+              - generic [ref=f3e2919]: Books, art& collectibles
+          - listitem [aria-hidden] [ref=f3e2920]
+          - listitem [ref=f3e2921]:
+            - link [ref=f3e2922] [cursor=pointer]:
+              - /url: https://www.acx.com/
+              - heading "ACX" [level=5] [ref=f3e2923]
+              - generic [ref=f3e2924]: Audiobook PublishingMade Easy
+          - listitem [aria-hidden] [ref=f3e2925]
+          - listitem [ref=f3e2926]:
+            - link "Sell on Amazon Start a Selling Account" [ref=f3e2927] [cursor=pointer]:
+              - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+              - heading "Sell on Amazon" [level=5] [ref=f3e2928]
+              - generic [ref=f3e2929]: Start a Selling Account
+          - listitem [aria-hidden] [ref=f3e2930]
+          - listitem [ref=f3e2931]:
+            - link [ref=f3e2932] [cursor=pointer]:
+              - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+              - heading "Veeqo" [level=5] [ref=f3e2933]
+              - generic [ref=f3e2934]: Shipping SoftwareInventory Management
+        - list [ref=f3e2935]:
+          - listitem [ref=f3e2936]:
+            - link [ref=f3e2937] [cursor=pointer]:
+              - /url: /business?ref_=footer_retail_b2b
+              - heading "Amazon Business" [level=5] [ref=f3e2938]
+              - generic [ref=f3e2939]: Everything ForYour Business
+          - listitem [aria-hidden] [ref=f3e2940]
+          - listitem [ref=f3e2941]:
+            - link [ref=f3e2942] [cursor=pointer]:
+              - /url: /gp/browse.html?node=20338496011&ref_=footer_amazonglobal
+              - heading "AmazonGlobal" [level=5] [ref=f3e2943]
+              - generic [ref=f3e2944]: Ship OrdersInternationally
+          - listitem [aria-hidden] [ref=f3e2945]
+          - listitem [ref=f3e2946]:
+            - link [ref=f3e2947] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=f3e2948]
+              - generic [ref=f3e2949]: Scalable CloudComputing Services
+          - listitem [aria-hidden] [ref=f3e2950]
+          - listitem [ref=f3e2951]:
+            - link [ref=f3e2952] [cursor=pointer]:
+              - /url: https://www.audible.com
+              - heading "Audible" [level=5] [ref=f3e2953]
+              - generic [ref=f3e2954]: Listen to Books & OriginalAudio Performances
+          - listitem [aria-hidden] [ref=f3e2955]
+          - listitem [ref=f3e2956]:
+            - link [ref=f3e2957] [cursor=pointer]:
+              - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+              - heading "Box Office Mojo" [level=5] [ref=f3e2958]
+              - generic [ref=f3e2959]: Find MovieBox Office Data
+          - listitem [aria-hidden] [ref=f3e2960]
+          - listitem [ref=f3e2961]:
+            - link [ref=f3e2962] [cursor=pointer]:
+              - /url: https://www.goodreads.com
+              - heading "Goodreads" [level=5] [ref=f3e2963]
+              - generic [ref=f3e2964]: Book reviews& recommendations
+          - listitem [aria-hidden] [ref=f3e2965]
+          - listitem [ref=f3e2966]:
+            - link [ref=f3e2967] [cursor=pointer]:
+              - /url: https://www.imdb.com
+              - heading "IMDb" [level=5] [ref=f3e2968]
+              - generic [ref=f3e2969]: Movies, TV& Celebrities
+        - list [ref=f3e2970]:
+          - listitem [ref=f3e2971]:
+            - link [ref=f3e2972] [cursor=pointer]:
+              - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+              - heading "IMDbPro" [level=5] [ref=f3e2973]
+              - generic [ref=f3e2974]: Get Info EntertainmentProfessionals Need
+          - listitem [aria-hidden] [ref=f3e2975]
+          - listitem [ref=f3e2976]:
+            - link [ref=f3e2977] [cursor=pointer]:
+              - /url: https://kdp.amazon.com
+              - heading "Kindle Direct Publishing" [level=5] [ref=f3e2978]
+              - generic [ref=f3e2979]: Indie Digital & Print PublishingMade Easy
+          - listitem [aria-hidden] [ref=f3e2980]
+          - listitem [ref=f3e2981]:
+            - link [ref=f3e2982] [cursor=pointer]:
+              - /url: https://videodirect.amazon.com/home/landing
+              - heading "Prime Video Direct" [level=5] [ref=f3e2983]
+              - generic [ref=f3e2984]: Video DistributionMade Easy
+          - listitem [aria-hidden] [ref=f3e2985]
+          - listitem [ref=f3e2986]:
+            - link [ref=f3e2987] [cursor=pointer]:
+              - /url: https://www.shopbop.com
+              - heading "Shopbop" [level=5] [ref=f3e2988]
+              - generic [ref=f3e2989]: DesignerFashion Brands
+          - listitem [aria-hidden] [ref=f3e2990]
+          - listitem [ref=f3e2991]:
+            - link [ref=f3e2992] [cursor=pointer]:
+              - /url: https://www.woot.com/
+              - heading "Woot!" [level=5] [ref=f3e2993]
+              - generic [ref=f3e2994]: Deals and Shenanigans
+          - listitem [aria-hidden] [ref=f3e2995]
+          - listitem [ref=f3e2996]:
+            - link [ref=f3e2997] [cursor=pointer]:
+              - /url: https://www.zappos.com
+              - heading "Zappos" [level=5] [ref=f3e2998]
+              - generic [ref=f3e2999]: Shoes &Clothing
+          - listitem [aria-hidden] [ref=f3e3000]
+          - listitem [ref=f3e3001]:
+            - link [ref=f3e3002] [cursor=pointer]:
+              - /url: https://ring.com
+              - heading "Ring" [level=5] [ref=f3e3003]
+              - generic [ref=f3e3004]: Smart HomeSecurity Systems
+        - list [ref=f3e3005]:
+          - listitem [aria-hidden] [ref=f3e3006]
+          - listitem [aria-hidden] [ref=f3e3007]
+          - listitem [ref=f3e3008]:
+            - link [ref=f3e3009] [cursor=pointer]:
+              - /url: https://eero.com/
+              - heading "eero WiFi" [level=5] [ref=f3e3010]
+              - generic [ref=f3e3011]: Stream 4K Videoin Every Room
+          - listitem [aria-hidden] [ref=f3e3012]
+          - listitem [ref=f3e3013]:
+            - link [ref=f3e3014] [cursor=pointer]:
+              - /url: https://blinkforhome.com/?ref=nav_footer
+              - heading "Blink" [level=5] [ref=f3e3015]
+              - generic [ref=f3e3016]: Smart Securityfor Every Home
+          - listitem [aria-hidden] [ref=f3e3017]
+          - listitem [ref=f3e3018]:
+            - link [ref=f3e3019] [cursor=pointer]:
+              - /url: https://shop.ring.com/pages/neighbors-app
+              - heading "Neighbors App" [level=5] [ref=f3e3020]
+              - generic [ref=f3e3021]: Real-Time Crime& Safety Alerts
+          - listitem [aria-hidden] [ref=f3e3022]
+          - listitem [ref=f3e3023]:
+            - link "PillPack Pharmacy Simplified" [ref=f3e3024] [cursor=pointer]:
+              - /url: https://www.pillpack.com
+              - heading "PillPack" [level=5] [ref=f3e3025]
+              - generic [ref=f3e3026]: Pharmacy Simplified
+          - listitem [aria-hidden] [ref=f3e3027]
+          - listitem [aria-hidden] [ref=f3e3028]
+          - listitem [aria-hidden] [ref=f3e3029]
+          - listitem [aria-hidden] [ref=f3e3030]
+    - generic [ref=f3e3031]:
+      - list [ref=f3e3032]:
+        - listitem [ref=f3e3033]:
+          - link "Conditions of Use" [ref=f3e3034] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+        - listitem [ref=f3e3035]:
+          - link "Privacy Notice" [ref=f3e3036] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+        - listitem [ref=f3e3037]:
+          - link "Consumer Health Data Privacy Disclosure" [ref=f3e3038] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+        - listitem [ref=f3e3039]:
+          - link "Your Ads Privacy Choices" [ref=f3e3040] [cursor=pointer]:
+            - /url: /privacyprefs?ref_=footer_iba
+        - listitem [ref=f3e3041]
+      - generic [ref=f3e3043]: © 1996-2026, Amazon.com, Inc. or its affiliates

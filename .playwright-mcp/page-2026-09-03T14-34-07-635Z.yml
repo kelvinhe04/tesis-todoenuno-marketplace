@@ -1,0 +1,146 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "TodoEnUno" [ref=e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=e7]:
+        - searchbox "Buscar productos y servicios..." [ref=e12]
+      - navigation "Principal" [ref=e13]:
+        - link "Categorías" [ref=e14] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Mis órdenes" [ref=e15] [cursor=pointer]:
+          - /url: /ordenes
+      - generic [ref=e16]:
+        - link "Notificaciones" [ref=e17] [cursor=pointer]:
+          - /url: /perfil
+        - link "Carrito" [ref=e21] [cursor=pointer]:
+          - /url: /carrito
+          - generic [ref=e26]: "1"
+        - link "Mi perfil" [ref=e27] [cursor=pointer]:
+          - /url: /perfil
+        - button "Salir" [ref=e31] [cursor=pointer]
+  - main [ref=e32]:
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]:
+          - generic [ref=e36]: Productos y servicios de vendedores independientes
+          - heading "Compra y vende productos y servicios en un solo lugar" [level=1] [ref=e37]
+          - paragraph [ref=e38]: "TodoEnUno reúne a vendedores y profesionales independientes en un solo lugar: compra productos o contrata un servicio, con pago seguro y todo en un mismo carrito."
+          - generic [ref=e39]:
+            - link "Explorar catálogo" [ref=e40] [cursor=pointer]:
+              - /url: /catalogo
+            - link "Vender en TodoEnUno" [ref=e41] [cursor=pointer]:
+              - /url: /registro
+        - generic [aria-hidden] [ref=e42]:
+          - generic [ref=e44]: "4.9"
+          - generic [ref=e47]: Cerámica artesanal
+          - generic [ref=e52]: $38.00
+          - generic [ref=e53]: Servicios
+      - generic [ref=e57]:
+        - link [ref=e58] [cursor=pointer]:
+          - /url: /catalogo?categoria=Electr%C3%B3nica
+        - link [ref=e63] [cursor=pointer]:
+          - /url: /catalogo?categoria=Hogar
+        - link [ref=e68] [cursor=pointer]:
+          - /url: /catalogo?categoria=Moda
+        - link [ref=e72] [cursor=pointer]:
+          - /url: /catalogo?categoria=Servicios%20profesionales
+        - link [ref=e76] [cursor=pointer]:
+          - /url: /catalogo?categoria=Belleza
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - heading "Productos y servicios destacados" [level=2] [ref=e82]
+          - link "Ver todo →" [ref=e83] [cursor=pointer]:
+            - /url: /catalogo
+        - generic [ref=e84]:
+          - link "Mouse inalámbrico Producto Mouse inalámbrico 4.1 de 5 estrellas $14.00" [ref=e85] [cursor=pointer]:
+            - /url: /productos/6a998554a322b4b805ab7b23
+            - img "Mouse inalámbrico" [ref=e87]
+            - generic [ref=e88]:
+              - generic [ref=e89]: Producto
+              - heading "Mouse inalámbrico" [level=3] [ref=e90]
+              - generic "4.1 de 5 estrellas" [ref=e91]
+              - generic [ref=e102]: $14.00
+          - link "Asesoría contable Servicio Asesoría contable 4.2 de 5 estrellas $50.00" [ref=e104] [cursor=pointer]:
+            - /url: /productos/6a998554a322b4b805ab7b22
+            - img "Asesoría contable" [ref=e106]
+            - generic [ref=e107]:
+              - generic [ref=e108]: Servicio
+              - heading "Asesoría contable" [level=3] [ref=e109]
+              - generic "4.2 de 5 estrellas" [ref=e110]
+              - generic [ref=e121]: $50.00
+          - link "Diseño de logotipo Servicio Diseño de logotipo 4.1 de 5 estrellas $40.00" [ref=e123] [cursor=pointer]:
+            - /url: /productos/6a998554a322b4b805ab7b21
+            - img "Diseño de logotipo" [ref=e125]
+            - generic [ref=e126]:
+              - generic [ref=e127]: Servicio
+              - heading "Diseño de logotipo" [level=3] [ref=e128]
+              - generic "4.1 de 5 estrellas" [ref=e129]
+              - generic [ref=e140]: $40.00
+          - link "Limpieza profunda de hogar Servicio Limpieza profunda de hogar 4.1 de 5 estrellas $35.00" [ref=e142] [cursor=pointer]:
+            - /url: /productos/6a998554a322b4b805ab7b20
+            - img "Limpieza profunda de hogar" [ref=e144]
+            - generic [ref=e145]:
+              - generic [ref=e146]: Servicio
+              - heading "Limpieza profunda de hogar" [level=3] [ref=e147]
+              - generic "4.1 de 5 estrellas" [ref=e148]
+              - generic [ref=e159]: $35.00
+          - link "Organizador de closet Producto Organizador de closet 4.6 de 5 estrellas $22.00" [ref=e161] [cursor=pointer]:
+            - /url: /productos/6a998554a322b4b805ab7b1f
+            - img "Organizador de closet" [ref=e163]
+            - generic [ref=e164]:
+              - generic [ref=e165]: Producto
+              - heading "Organizador de closet" [level=3] [ref=e166]
+              - generic "4.6 de 5 estrellas" [ref=e167]
+              - generic [ref=e178]: $22.00
+          - link "Set de sábanas queen Producto Set de sábanas queen 4.4 de 5 estrellas $28.00" [ref=e180] [cursor=pointer]:
+            - /url: /productos/6a998554a322b4b805ab7b1e
+            - img "Set de sábanas queen" [ref=e182]
+            - generic [ref=e183]:
+              - generic [ref=e184]: Producto
+              - heading "Set de sábanas queen" [level=3] [ref=e185]
+              - generic "4.4 de 5 estrellas" [ref=e186]
+              - generic [ref=e197]: $28.00
+          - link "Manicure y pedicure profesional Servicio Manicure y pedicure profesional 4.8 de 5 estrellas $15.00" [ref=e199] [cursor=pointer]:
+            - /url: /productos/6a998554a322b4b805ab7b1d
+            - img "Manicure y pedicure profesional" [ref=e201]
+            - generic [ref=e202]:
+              - generic [ref=e203]: Servicio
+              - heading "Manicure y pedicure profesional" [level=3] [ref=e204]
+              - generic "4.8 de 5 estrellas" [ref=e205]
+              - generic [ref=e216]: $15.00
+          - link "Corte y peinado a domicilio Servicio Corte y peinado a domicilio 3.8 de 5 estrellas $20.00" [ref=e218] [cursor=pointer]:
+            - /url: /productos/6a998554a322b4b805ab7b1c
+            - img "Corte y peinado a domicilio" [ref=e220]
+            - generic [ref=e221]:
+              - generic [ref=e222]: Servicio
+              - heading "Corte y peinado a domicilio" [level=3] [ref=e223]
+              - generic "3.8 de 5 estrellas" [ref=e224]
+              - generic [ref=e235]: $20.00
+  - contentinfo [ref=e237]:
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - generic [ref=e240]: TodoEnUno
+        - paragraph [ref=e241]: Un marketplace para vendedores y compradores independientes. Prototipo académico construido sobre una arquitectura de microservicios.
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - heading "Comprar" [level=4] [ref=e244]
+          - link "Explorar catálogo" [ref=e245] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Mis órdenes" [ref=e246] [cursor=pointer]:
+            - /url: /ordenes
+          - link "Mi carrito" [ref=e247] [cursor=pointer]:
+            - /url: /carrito
+        - generic [ref=e248]:
+          - heading "Vender" [level=4] [ref=e249]
+          - link "Panel de vendedor" [ref=e250] [cursor=pointer]:
+            - /url: /vendedor
+          - generic [ref=e251]: Publicar producto
+          - generic [ref=e252]: Publicar servicio
+        - generic [ref=e253]:
+          - heading "Cuenta" [level=4] [ref=e254]
+          - link "Iniciar sesión" [ref=e255] [cursor=pointer]:
+            - /url: /login
+          - link "Crear cuenta" [ref=e256] [cursor=pointer]:
+            - /url: /registro
+    - generic [ref=e257]: © 2026 TodoEnUno — prototipo de trabajo de graduación.

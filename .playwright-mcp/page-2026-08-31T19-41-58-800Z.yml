@@ -1,0 +1,11 @@
+- generic [ref=f23e2]:
+  - generic [ref=f23e3]: TODOENUNO
+  - generic [ref=f23e11]:
+    - heading "Iniciar sesión" [level=1] [ref=f23e12]
+    - generic [ref=f23e13]:
+      - generic [ref=f23e14]: Correo electrónico
+      - generic [ref=f23e15]: correo@dominio.com
+    - generic [ref=f23e16]:
+      - generic [ref=f23e17]: Contraseña
+      - generic [ref=f23e18]: ••••••••
+    - button "Iniciar sesión" [ref=f23e21]

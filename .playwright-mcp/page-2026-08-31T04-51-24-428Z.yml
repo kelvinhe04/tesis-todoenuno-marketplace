@@ -1,0 +1,59 @@
+- generic [ref=f9e2]:
+  - banner [ref=f9e3]:
+    - generic [ref=f9e4]:
+      - link "TodoEnUno" [ref=f9e5] [cursor=pointer]:
+        - /url: "#"
+      - textbox "Buscar productos o servicios" [ref=f9e10]
+      - navigation [ref=f9e11]:
+        - link "Explorar" [ref=f9e12] [cursor=pointer]:
+          - /url: "#"
+        - link "Vender en TodoEnUno" [ref=f9e13] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f9e14]:
+        - button [ref=f9e15] [cursor=pointer]
+        - button [ref=f9e18] [cursor=pointer]
+        - button [ref=f9e23] [cursor=pointer]
+  - generic [ref=f9e27]:
+    - heading "Mi cuenta" [level=1] [ref=f9e28]
+    - generic [ref=f9e29]:
+      - complementary [ref=f9e30]:
+        - generic [ref=f9e31]: RS
+        - generic [ref=f9e32]: Roberto Sanjur
+        - text: roberto.sanjur@correo.com
+        - generic [ref=f9e33]: Comprador
+        - navigation [ref=f9e35]:
+          - generic [ref=f9e36]: Datos personales
+          - generic [ref=f9e40]: Direcciones
+          - generic [ref=f9e44]: Mis órdenes
+          - generic [ref=f9e47]: Seguridad
+          - generic [ref=f9e51]: Cerrar sesión
+      - generic [ref=f9e55]:
+        - generic [ref=f9e56]:
+          - heading "Datos personales" [level=3] [ref=f9e57]
+          - generic [ref=f9e58]:
+            - generic [ref=f9e59]:
+              - generic [ref=f9e60]: Nombre completo
+              - textbox [ref=f9e61]: Roberto Sanjur
+            - generic [ref=f9e62]:
+              - generic [ref=f9e63]: Correo electrónico
+              - textbox [ref=f9e64]: roberto.sanjur@correo.com
+          - generic [ref=f9e65]:
+            - generic [ref=f9e66]:
+              - generic [ref=f9e67]: Teléfono
+              - textbox [ref=f9e68]: +507 6123-4567
+            - generic [ref=f9e69]:
+              - generic [ref=f9e70]: Ciudad
+              - textbox [ref=f9e71]: Panamá
+          - generic [ref=f9e72]:
+            - button "Cancelar" [ref=f9e73] [cursor=pointer]
+            - button "Guardar cambios" [ref=f9e74] [cursor=pointer]
+        - generic [ref=f9e75]:
+          - heading "Seguridad" [level=3] [ref=f9e76]
+          - generic [ref=f9e77]:
+            - generic [ref=f9e78]:
+              - generic [ref=f9e79]: Contraseña actual
+              - textbox [ref=f9e80]: ••••••••
+            - generic [ref=f9e81]:
+              - generic [ref=f9e82]: Contraseña nueva
+              - textbox "Mínimo 8 caracteres" [ref=f9e83]
+          - button "Actualizar contraseña" [ref=f9e85] [cursor=pointer]

@@ -1,0 +1,93 @@
+- generic [ref=f2e2]:
+  - banner [ref=f2e3]:
+    - generic [ref=f2e5]:
+      - link "TodoEnUno" [ref=f2e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=f2e7]:
+        - searchbox "Buscar productos y servicios..." [ref=f2e12]
+      - navigation "Principal" [ref=f2e13]:
+        - link "Categorías" [ref=f2e14] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Mis órdenes" [ref=f2e15] [cursor=pointer]:
+          - /url: /ordenes
+      - generic [ref=f2e16]:
+        - link "Notificaciones" [ref=f2e17] [cursor=pointer]:
+          - /url: /perfil
+        - link "Carrito" [ref=f2e21] [cursor=pointer]:
+          - /url: /carrito
+        - link "Mi perfil" [ref=f2e26] [cursor=pointer]:
+          - /url: /perfil
+        - button "Salir" [ref=f2e30] [cursor=pointer]
+  - main [ref=f2e31]:
+    - generic [ref=f2e32]:
+      - paragraph [ref=f2e33]: Catálogo / Electrónica / Corte de cabello PW m7py2z
+      - generic [ref=f2e41]:
+        - generic [ref=f2e42]: Servicio
+        - heading "Corte de cabello PW m7py2z" [level=1] [ref=f2e43]
+        - generic [ref=f2e44]:
+          - generic "0.0 de 5 estrellas" [ref=f2e45]
+          - generic [ref=f2e56]: Sin reseñas aún
+        - generic [ref=f2e57]: $20.00
+        - generic [ref=f2e63]:
+          - paragraph [ref=f2e64]: Vendedor verificado
+          - paragraph [ref=f2e65]: Se presta a domicilio del cliente
+        - generic [ref=f2e66]:
+          - generic [ref=f2e67]: Elige una fecha
+          - textbox "Elige una fecha" [ref=f2e68]: 2026-09-04
+          - generic [ref=f2e69]:
+            - button "09:00" [ref=f2e70] [cursor=pointer]
+            - button "09:30" [ref=f2e71] [cursor=pointer]
+            - button "10:00" [ref=f2e72] [cursor=pointer]
+            - button "10:30" [ref=f2e73] [cursor=pointer]
+          - paragraph [ref=f2e120]: "Horario retenido: 2026-09-04 a las 09:00. Tienes unos minutos para completar la compra."
+        - generic [ref=f2e74]:
+          - button "Agregar al carrito" [ref=f2e75] [cursor=pointer]
+          - button "Comprar ahora" [ref=f2e76] [cursor=pointer]
+      - generic [ref=f2e77]:
+        - heading "Descripción" [level=2] [ref=f2e78]
+        - paragraph [ref=f2e79]: Servicio de prueba creado por Playwright para validar citas
+      - generic [ref=f2e80]:
+        - heading "Detalles" [level=2] [ref=f2e81]
+        - generic [ref=f2e82]:
+          - generic [ref=f2e83]:
+            - term [ref=f2e84]: Categoría
+            - definition [ref=f2e85]: Electrónica
+          - generic [ref=f2e86]:
+            - term [ref=f2e87]: Tipo
+            - definition [ref=f2e88]: Servicio
+          - generic [ref=f2e89]:
+            - term [ref=f2e90]: Modalidad
+            - definition [ref=f2e91]: A domicilio del cliente
+          - generic [ref=f2e92]:
+            - term [ref=f2e93]: Duración de la cita
+            - definition [ref=f2e94]: 30 min
+      - generic [ref=f2e95]:
+        - heading "Reseñas" [level=2] [ref=f2e96]
+        - paragraph [ref=f2e97]: Todavía no hay reseñas para esta publicación.
+  - contentinfo [ref=f2e98]:
+    - generic [ref=f2e99]:
+      - generic [ref=f2e100]:
+        - generic [ref=f2e101]: TodoEnUno
+        - paragraph [ref=f2e102]: Un marketplace para vendedores y compradores independientes. Prototipo académico construido sobre una arquitectura de microservicios.
+      - generic [ref=f2e103]:
+        - generic [ref=f2e104]:
+          - heading "Comprar" [level=4] [ref=f2e105]
+          - link "Explorar catálogo" [ref=f2e106] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Mis órdenes" [ref=f2e107] [cursor=pointer]:
+            - /url: /ordenes
+          - link "Mi carrito" [ref=f2e108] [cursor=pointer]:
+            - /url: /carrito
+        - generic [ref=f2e109]:
+          - heading "Vender" [level=4] [ref=f2e110]
+          - link "Panel de vendedor" [ref=f2e111] [cursor=pointer]:
+            - /url: /vendedor
+          - generic [ref=f2e112]: Publicar producto
+          - generic [ref=f2e113]: Publicar servicio
+        - generic [ref=f2e114]:
+          - heading "Cuenta" [level=4] [ref=f2e115]
+          - link "Iniciar sesión" [ref=f2e116] [cursor=pointer]:
+            - /url: /login
+          - link "Crear cuenta" [ref=f2e117] [cursor=pointer]:
+            - /url: /registro
+    - generic [ref=f2e118]: © 2026 TodoEnUno — prototipo de trabajo de graduación.

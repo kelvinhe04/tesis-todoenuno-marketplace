@@ -1,0 +1,479 @@
+- generic [ref=f156e1]:
+  - generic [ref=f156e405]:
+    - navigation [ref=f156e408]:
+      - link [ref=f156e410] [cursor=pointer]:
+        - /url: /
+      - search [ref=f156e415]:
+        - generic [ref=f156e416]:
+          - button "Photos" [ref=f156e418] [cursor=pointer]
+          - searchbox "Search for free photos" [ref=f156e426]: laptop repair technician
+          - button [ref=f156e428] [cursor=pointer]
+      - generic [ref=f156e432]:
+        - link "Explore" [ref=f156e434] [cursor=pointer]:
+          - /url: /discover/
+        - link "License" [ref=f156e438] [cursor=pointer]:
+          - /url: /license/
+        - button [ref=f156e441] [cursor=pointer]
+        - button "Join" [ref=f156e444] [cursor=pointer]
+    - main [ref=f156e447]:
+      - generic [ref=f156e448]:
+        - generic [ref=f156e452]:
+          - paragraph [ref=f156e454] [cursor=pointer]: Any
+          - paragraph [ref=f156e459] [cursor=pointer]: Horizontal
+          - paragraph [ref=f156e464] [cursor=pointer]: Vertical
+          - paragraph [ref=f156e469] [cursor=pointer]: Square
+        - generic [ref=f156e473]:
+          - paragraph [ref=f156e475] [cursor=pointer]: Any
+          - paragraph [ref=f156e477] [cursor=pointer]: "0"
+          - paragraph [ref=f156e482] [cursor=pointer]: "1"
+          - paragraph [ref=f156e487] [cursor=pointer]: "2"
+          - paragraph [ref=f156e492] [cursor=pointer]: 3+
+        - generic [ref=f156e496]:
+          - paragraph [ref=f156e498] [cursor=pointer]: Any
+          - paragraph [ref=f156e503] [cursor=pointer]: Baby
+          - paragraph [ref=f156e508] [cursor=pointer]: Child
+          - paragraph [ref=f156e513] [cursor=pointer]: Teenager
+          - paragraph [ref=f156e518] [cursor=pointer]: Adult
+          - paragraph [ref=f156e523] [cursor=pointer]: Senior adult
+        - generic [ref=f156e526]:
+          - generic [ref=f156e527]:
+            - generic [ref=f156e528] [cursor=pointer]
+            - slider [ref=f156e530] [cursor=pointer]
+            - slider [ref=f156e531] [cursor=pointer]
+          - generic [ref=f156e532]:
+            - generic [ref=f156e533]:
+              - paragraph [ref=f156e534]: Minimum
+              - paragraph [ref=f156e535]: 1,080px
+            - generic [ref=f156e536]:
+              - paragraph [ref=f156e537]: Maximum
+              - paragraph [ref=f156e538]: 20,000px+
+        - generic [ref=f156e541]:
+          - generic [ref=f156e542]:
+            - generic [ref=f156e543] [cursor=pointer]
+            - slider [ref=f156e545] [cursor=pointer]
+            - slider [ref=f156e546] [cursor=pointer]
+          - generic [ref=f156e547]:
+            - generic [ref=f156e548]:
+              - paragraph [ref=f156e549]: Minimum
+              - paragraph [ref=f156e550]: 1,080px
+            - generic [ref=f156e551]:
+              - paragraph [ref=f156e552]: Maximum
+              - paragraph [ref=f156e553]: 20,000px+
+        - generic [ref=f156e557]:
+          - button [ref=f156e558] [cursor=pointer]:
+            - textbox [ref=f156e564]:
+              - /placeholder: Enter hex code
+          - button [ref=f156e567] [cursor=pointer]:
+            - textbox [ref=f156e573]: "#000000"
+        - generic [ref=f156e577]:
+          - paragraph [ref=f156e579] [cursor=pointer]: Any
+          - paragraph [ref=f156e584] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f156e589] [cursor=pointer]: Last week
+          - paragraph [ref=f156e594] [cursor=pointer]: Last month
+          - paragraph [ref=f156e599] [cursor=pointer]: Last year
+        - main "main-content" [ref=f156e600]:
+          - generic [ref=f156e601]:
+            - heading "Free Laptop Repair Technician Photos" [level=1] [ref=f156e604]
+            - generic [ref=f156e607]:
+              - link "Photos 56.6K" [ref=f156e609] [cursor=pointer]:
+                - /url: /search/laptop%20repair%20technician/
+                - text: Photos
+                - generic [ref=f156e610]: 56.6K
+              - link "Videos 24.2K" [ref=f156e611] [cursor=pointer]:
+                - /url: /search/videos/laptop%20repair%20technician/
+                - text: Videos
+                - generic [ref=f156e612]: 24.2K
+              - link "Users 4.3K" [ref=f156e613] [cursor=pointer]:
+                - /url: /search/users/laptop%20repair%20technician/
+                - text: Users
+                - generic [ref=f156e614]: 4.3K
+            - generic [ref=f156e616]:
+              - button "Filters" [ref=f156e618] [cursor=pointer]
+              - separator [ref=f156e625]
+              - generic [ref=f156e629]:
+                - link [ref=f156e631] [cursor=pointer]:
+                  - /url: /search/laptop%20repair/
+                  - img "laptop repair" [ref=f156e632]
+                  - generic [ref=f156e633]:
+                    - paragraph [ref=f156e634]: laptop repair
+                    - paragraph [ref=f156e635]: 54K
+                - link [ref=f156e636] [cursor=pointer]:
+                  - /url: /search/computer%20repair/
+                  - img "computer repair" [ref=f156e637]
+                  - generic [ref=f156e638]:
+                    - paragraph [ref=f156e639]: computer repair
+                    - paragraph [ref=f156e640]: 4K
+                - link [ref=f156e641] [cursor=pointer]:
+                  - /url: /search/phone%20repair/
+                  - img "phone repair" [ref=f156e642]
+                  - generic [ref=f156e643]:
+                    - paragraph [ref=f156e644]: phone repair
+                    - paragraph [ref=f156e645]: 46K
+                - link [ref=f156e646] [cursor=pointer]:
+                  - /url: /search/it%20support/
+                  - img "it support" [ref=f156e647]
+                  - generic [ref=f156e648]:
+                    - paragraph [ref=f156e649]: it support
+                    - paragraph [ref=f156e650]: 52K
+                - link [ref=f156e651] [cursor=pointer]:
+                  - /url: /search/computer%20training/
+                  - img "computer training" [ref=f156e652]
+                  - generic [ref=f156e653]:
+                    - paragraph [ref=f156e654]: computer training
+                    - paragraph [ref=f156e655]: 102K
+                - link [ref=f156e656] [cursor=pointer]:
+                  - /url: /search/software%20developer/
+                  - img "software developer" [ref=f156e657]
+                  - generic [ref=f156e658]:
+                    - paragraph [ref=f156e659]: software developer
+                    - paragraph [ref=f156e660]: 69K
+                - link [ref=f156e661] [cursor=pointer]:
+                  - /url: /search/it%20professional/
+                  - img "it professional" [ref=f156e662]
+                  - generic [ref=f156e663]:
+                    - paragraph [ref=f156e664]: it professional
+                    - paragraph [ref=f156e665]: 144K
+                - link [ref=f156e666] [cursor=pointer]:
+                  - /url: /search/software%20engineer/
+                  - img "software engineer" [ref=f156e667]
+                  - generic [ref=f156e668]:
+                    - paragraph [ref=f156e669]: software engineer
+                    - paragraph [ref=f156e670]: 95K
+                - link [ref=f156e671] [cursor=pointer]:
+                  - /url: /search/it%20services/
+                  - img "it services" [ref=f156e672]
+                  - generic [ref=f156e673]:
+                    - paragraph [ref=f156e674]: it services
+                    - paragraph [ref=f156e675]: 43K
+                - link [ref=f156e676] [cursor=pointer]:
+                  - /url: /search/web%20developer/
+                  - img "web developer" [ref=f156e677]
+                  - generic [ref=f156e678]:
+                    - paragraph [ref=f156e679]: web developer
+                    - paragraph [ref=f156e680]: 9K
+                - link [ref=f156e681] [cursor=pointer]:
+                  - /url: /search/information%20technology/
+                  - img "information technology" [ref=f156e682]
+                  - generic [ref=f156e683]:
+                    - paragraph [ref=f156e684]: information technology
+                    - paragraph [ref=f156e685]: 170K
+                - link [ref=f156e686] [cursor=pointer]:
+                  - /url: /search/gaming%20laptop/
+                  - img "gaming laptop" [ref=f156e687]
+                  - generic [ref=f156e688]:
+                    - paragraph [ref=f156e689]: gaming laptop
+                    - paragraph [ref=f156e690]: 89K
+                - link [ref=f156e691] [cursor=pointer]:
+                  - /url: /search/computer%20network/
+                  - img "computer network" [ref=f156e692]
+                  - generic [ref=f156e693]:
+                    - paragraph [ref=f156e694]: computer network
+                    - paragraph [ref=f156e695]: 41K
+                - link [ref=f156e696] [cursor=pointer]:
+                  - /url: /search/windows%20pc/
+                  - img "windows pc" [ref=f156e697]
+                  - generic [ref=f156e698]:
+                    - paragraph [ref=f156e699]: windows pc
+                    - paragraph [ref=f156e700]: 220K
+                - link [ref=f156e701] [cursor=pointer]:
+                  - /url: /search/working%20on%20laptop/
+                  - img "working on laptop" [ref=f156e702]
+                  - generic [ref=f156e703]:
+                    - paragraph [ref=f156e704]: working on laptop
+                    - paragraph [ref=f156e705]: 140K
+                - link [ref=f156e706] [cursor=pointer]:
+                  - /url: /search/hp%20laptop/
+                  - img "hp laptop" [ref=f156e707]
+                  - generic [ref=f156e708]:
+                    - paragraph [ref=f156e709]: hp laptop
+                    - paragraph [ref=f156e710]: 45K
+                - img [ref=f156e711] [cursor=pointer]
+            - generic [ref=f156e714]:
+              - generic [ref=f156e716]:
+                - generic [ref=f156e717]:
+                  - article [ref=f156e720]:
+                    - link [ref=f156e721] [cursor=pointer]:
+                      - /url: /photo/technician-repairing-laptop-in-workshop-33531806/
+                      - img "Free Focused technician repairing laptop with precision in a busy workshop environment. Stock Photo" [ref=f156e722]
+                  - article [ref=f156e727]:
+                    - link [ref=f156e728] [cursor=pointer]:
+                      - /url: /photo/a-man-wearing-a-face-mask-repairing-a-cpu-10558599/
+                      - img "Free A technician repairs a desktop computer in an indoor setting, illustrating tech maintenance. Stock Photo" [ref=f156e729]
+                  - article [ref=f156e734]:
+                    - link [ref=f156e735] [cursor=pointer]:
+                      - /url: /photo/hand-over-motherboard-7639355/
+                      - img "Free Close-up view of a hand fixing a computer motherboard showcasing technology and electronics repair. Stock Photo" [ref=f156e736]
+                  - article [ref=f156e741]:
+                    - link [ref=f156e742] [cursor=pointer]:
+                      - /url: /photo/a-hand-fixing-the-internal-parts-of-a-laptop-10558598/
+                      - img "Free Close-up of a technician assembling a laptop's internal components using tools. Stock Photo" [ref=f156e743]
+                  - article [ref=f156e748]:
+                    - link [ref=f156e749] [cursor=pointer]:
+                      - /url: /photo/technician-working-on-laptop-in-workshop-31869847/
+                      - img "Free Technician in blue shirt working on a laptop in a busy workshop setting. Stock Photo" [ref=f156e750]
+                  - article [ref=f156e755]:
+                    - link [ref=f156e756] [cursor=pointer]:
+                      - /url: /photo/technician-repairing-electronic-device-at-workshop-38264265/
+                      - img "Free Skilled technician seated at a workbench repairing electronic devices in a workshop setting. Stock Photo" [ref=f156e757]
+                  - article [ref=f156e762]:
+                    - link [ref=f156e763] [cursor=pointer]:
+                      - /url: /photo/a-person-is-using-a-laptop-with-a-broken-screen-28379998/
+                      - img "Free A person interacts with a laptop that has a cracked and distorted screen. Stock Photo" [ref=f156e764]
+                  - article [ref=f156e769]:
+                    - link [ref=f156e770] [cursor=pointer]:
+                      - /url: /photo/young-technician-repairing-electronic-device-35290682/
+                      - img "Free A young technician working meticulously on electronic repairs at a workstation. Stock Photo" [ref=f156e771]
+                - generic [ref=f156e774]:
+                  - article [ref=f156e777]:
+                    - link [ref=f156e778] [cursor=pointer]:
+                      - /url: /photo/close-up-of-man-repairing-a-computer-7639374/
+                      - img "Free Close-up image of hands repairing a laptop circuit board showing intricate details of electronics. Stock Photo" [ref=f156e779]
+                  - article [ref=f156e784]:
+                    - link [ref=f156e785] [cursor=pointer]:
+                      - /url: /photo/technician-repairing-laptop-s-internal-components-37489058/
+                      - img "Free Close-up of a technician's hands repairing a laptop's internal components with tools. Stock Photo" [ref=f156e786]
+                  - article [ref=f156e791]:
+                    - link [ref=f156e792] [cursor=pointer]:
+                      - /url: /photo/laptop-repair-and-maintenance-in-progress-34514242/
+                      - img "Free Close-up of laptop being repaired with visible components and tools. Stock Photo" [ref=f156e793]
+                  - article [ref=f156e798]:
+                    - link [ref=f156e799] [cursor=pointer]:
+                      - /url: /photo/a-man-fixing-a-laptop-7639370/
+                      - img "Free Technician repairing a laptop motherboard, focusing on electronic components. Stock Photo" [ref=f156e800]
+                  - article [ref=f156e805]:
+                    - link [ref=f156e806] [cursor=pointer]:
+                      - /url: /photo/hand-of-a-person-using-s-syringe-on-a-computer-part-10558600/
+                      - img "Free Close-up of hand applying thermal paste to a laptop microchip for maintenance. Stock Photo" [ref=f156e807]
+                  - article [ref=f156e812]:
+                    - link [ref=f156e813] [cursor=pointer]:
+                      - /url: /photo/workers-using-laptop-12741849/
+                      - img "Free Two technicians in uniforms working on laptops in a laboratory setting. Focus on teamwork and technology. Stock Photo" [ref=f156e814]
+                  - article [ref=f156e819]:
+                    - link [ref=f156e820] [cursor=pointer]:
+                      - /url: /photo/technician-repairing-electronic-device-using-multimeter-33531809/
+                      - img "Free Professional technician repairing an electronic device with precision tools and a multimeter. Stock Photo" [ref=f156e821]
+                  - article [ref=f156e826]:
+                    - link [ref=f156e827] [cursor=pointer]:
+                      - /url: /photo/person-using-a-soldering-iron-on-a-circuit-board-6755135/
+                      - img "Free Close-up of hands repairing a circuit board using a soldering iron, emphasizing technical skill. Stock Photo" [ref=f156e828]
+                  - article [ref=f156e833]:
+                    - link [ref=f156e834] [cursor=pointer]:
+                      - /url: /photo/technician-repairing-computer-in-electronics-store-35278544/
+                      - img "Free Young technician fixing a computer in a modern electronics store setting. Stock Photo" [ref=f156e835]
+                  - article [ref=f156e840]:
+                    - link [ref=f156e841] [cursor=pointer]:
+                      - /url: /photo/man-at-work-12741844/
+                      - img "Free A skilled technician focuses on repairing electronic components at a busy workbench. Stock Photo" [ref=f156e842]
+                  - article [ref=f156e847]:
+                    - link [ref=f156e848] [cursor=pointer]:
+                      - /url: /photo/a-woman-repairing-laptop-16385070/
+                      - img "Free Woman repairing a laptop at a desk with tools, showcasing technology and skill. Stock Photo" [ref=f156e849]
+                - generic [ref=f156e852]:
+                  - generic [ref=f156e854]:
+                    - generic [ref=f156e856]:
+                      - link [ref=f156e857] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20laptop%20repair%20technician%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own laptop repair technician content with Canva" [ref=f156e858]
+                      - link [ref=f156e859] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20laptop%20repair%20technician%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own laptop repair technician content with Canva" [ref=f156e860]
+                      - link [ref=f156e861] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20laptop%20repair%20technician%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own laptop repair technician content with Canva" [ref=f156e862]
+                      - link [ref=f156e863] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20laptop%20repair%20technician%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own laptop repair technician content with Canva" [ref=f156e864]
+                    - link [ref=f156e865] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20laptop%20repair%20technician%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - paragraph [ref=f156e868]: Bring your ideas to life with Canva AI
+                    - link "Get started for free" [ref=f156e869] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20laptop%20repair%20technician%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                  - article [ref=f156e874]:
+                    - link [ref=f156e875] [cursor=pointer]:
+                      - /url: /photo/hand-with-screwdriver-fixing-motherboard-7639373/
+                      - img "Free Hand repairing a laptop motherboard with a screwdriver, highlighting tech maintenance. Stock Photo" [ref=f156e876]
+                  - article [ref=f156e881]:
+                    - link [ref=f156e882] [cursor=pointer]:
+                      - /url: /photo/man-soldering-a-circuit-board-2136243/
+                      - img "Free Technician working on a laptop with multimeter in a professional workspace. Stock Photo" [ref=f156e883]
+                  - generic [ref=f156e887]:
+                    - generic [ref=f156e888]:
+                      - heading "S‌‌p‌‌‌o‌‌n‌‌s‌o‌‌r‌‌e‌d‌ ‌P‌h‌o‌‌t‌o‌s‌" [level=4] [ref=f156e889]
+                      - link [ref=f156e890] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9sYXB0b3AlMjByZXBhaXIlMjB0ZWNobmljaWFuP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9sb2dvJnV0bV90ZXJtPWxhcHRvcCUyMHJlcGFpciUyMHRlY2huaWNpYW4iLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6IjAyNzU5MmI0LTM3NTItNDJjNC1hYjk2LTIxODIyYmJjMjJjMyIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoibGFwdG9wIHJlcGFpciB0ZWNobmljaWFuIn19/
+                    - generic [ref=f156e894]:
+                      - link [ref=f156e895] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL3Nob3Qtb2YtdHdvLXRlY2huaWNpYW5zLXdvcmtpbmctdG9nZXRoZXItaW4tYS1zZXJ2ZXItcm9vbS1nbTEzNTQxOTI3NzYtNDI5MDgzODMxP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1sYXB0b3AlMjByZXBhaXIlMjB0ZWNobmljaWFuIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiIwMjc1OTJiNC0zNzUyLTQyYzQtYWI5Ni0yMTgyMmJiYzIyYzMiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6ImxhcHRvcCByZXBhaXIgdGVjaG5pY2lhbiJ9fQ/
+                      - link [ref=f156e896] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2xhcHRvcC1uZXR3b3JrLWFuZC1kYXRhLWNlbnRlci13aXRoLWEtYmxhY2std29tYW4taXQtc3VwcG9ydC1lbmdpbmVlci13b3JraW5nLWluLWEtZ20xNjMzNDkxOTA4LTUzMjY4ODkxMT91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbWVkaWEmdXRtX3Rlcm09bGFwdG9wJTIwcmVwYWlyJTIwdGVjaG5pY2lhbiIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiMDI3NTkyYjQtMzc1Mi00MmM0LWFiOTYtMjE4MjJiYmMyMmMzIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJsYXB0b3AgcmVwYWlyIHRlY2huaWNpYW4ifX0/
+                      - link [ref=f156e897] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2xhcHRvcC1kaXNhc3NlbWJsaW5nLXdpdGgtc2NyZXdkcml2ZXItYXQtcmVwYWlyLWdtNjI1MTM1NTgwLTExMDAwODI5OT91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbWVkaWEmdXRtX3Rlcm09bGFwdG9wJTIwcmVwYWlyJTIwdGVjaG5pY2lhbiIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiMDI3NTkyYjQtMzc1Mi00MmM0LWFiOTYtMjE4MjJiYmMyMmMzIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJsYXB0b3AgcmVwYWlyIHRlY2huaWNpYW4ifX0/
+                      - link [ref=f156e898] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL21hbGUtaXQtdGVjaG5pY2lhbi1ydW5uaW5nLW1haW50ZW5hbmNlLXByb2dyYW1tZS1vbi1hLWxhcHRvcC1jb250cm9scy1vcGVyYXRpb25hbC1nbTExNDgxOTU4NTUtMzEwMDAzNTkwP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1sYXB0b3AlMjByZXBhaXIlMjB0ZWNobmljaWFuIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiIwMjc1OTJiNC0zNzUyLTQyYzQtYWI5Ni0yMTgyMmJiYzIyYzMiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6ImxhcHRvcCByZXBhaXIgdGVjaG5pY2lhbiJ9fQ/
+                    - link [ref=f156e899] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9sYXB0b3AlMjByZXBhaXIlMjB0ZWNobmljaWFuP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9jb3Vwb25jb2RlJnV0bV90ZXJtPWxhcHRvcCUyMHJlcGFpciUyMHRlY2huaWNpYW4iLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6IjAyNzU5MmI0LTM3NTItNDJjNC1hYjk2LTIxODIyYmJjMjJjMyIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoibGFwdG9wIHJlcGFpciB0ZWNobmljaWFuIn19/
+                      - img [ref=f156e902]:
+                        - generic [ref=f156e903]: Get 20% off with code PEXELS20 »
+                  - article [ref=f156e906]:
+                    - link [ref=f156e907] [cursor=pointer]:
+                      - /url: /photo/engineer-working-on-laptop-in-workshop-setting-31869843/
+                      - img "Free Engineer focused on laptop in cluttered workshop. Ideal for tech and industry themes. Stock Photo" [ref=f156e908]
+                  - link [ref=f156e912] [cursor=pointer]:
+                    - /url: /collections/laptops-fwxweaj/
+                    - article [ref=f156e913]:
+                      - list [ref=f156e915]:
+                        - listitem [ref=f156e916]
+                        - listitem [ref=f156e918]
+                        - listitem [ref=f156e920]
+                      - generic [ref=f156e922]:
+                        - heading "Laptops" [level=4] [ref=f156e923]
+                        - paragraph [ref=f156e927]: "113"
+                  - article [ref=f156e930]:
+                    - link [ref=f156e931] [cursor=pointer]:
+                      - /url: /photo/ac-repair-training-at-an-institute-in-new-delhi-33958627/
+                      - img "Free Man engages in air conditioner repair at New Delhi training center, surrounded by electronic components. Stock Photo" [ref=f156e932]
+                  - article [ref=f156e937]:
+                    - link [ref=f156e938] [cursor=pointer]:
+                      - /url: /photo/technician-repairing-electronic-device-in-workshop-31718639/
+                      - img "Free Focused technician repairs electronic device in a cluttered workshop environment. Stock Photo" [ref=f156e939]
+              - button "Load More" [ref=f156e943] [cursor=pointer]
+            - navigation [ref=f156e946]:
+              - generic [ref=f156e948]:
+                - link "1" [ref=f156e950]:
+                  - /url: /search/laptop%20repair%20technician/
+                - link "2" [ref=f156e953] [cursor=pointer]:
+                  - /url: /search/laptop%20repair%20technician/?page=2
+                - link "3" [ref=f156e956] [cursor=pointer]:
+                  - /url: /search/laptop%20repair%20technician/?page=3
+                - link "4" [ref=f156e959] [cursor=pointer]:
+                  - /url: /search/laptop%20repair%20technician/?page=4
+                - link "5" [ref=f156e962] [cursor=pointer]:
+                  - /url: /search/laptop%20repair%20technician/?page=5
+                - link "6" [ref=f156e965] [cursor=pointer]:
+                  - /url: /search/laptop%20repair%20technician/?page=6
+                - link "Next" [ref=f156e968] [cursor=pointer]:
+                  - /url: /search/laptop%20repair%20technician/?page=2
+    - contentinfo [ref=f156e972]:
+      - separator [ref=f156e973]
+      - generic [ref=f156e974]:
+        - generic [ref=f156e975]:
+          - heading "Where stories come together." [level=2] [ref=f156e976]
+          - generic [ref=f156e977]:
+            - link "Download on iOS" [ref=f156e978] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Download on Android" [ref=f156e981] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f156e984]:
+            - listitem [ref=f156e985]:
+              - link "Instagram" [ref=f156e986] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f156e989]:
+              - link "Threads" [ref=f156e990] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f156e993]:
+              - link "YouTube" [ref=f156e994] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f156e997]:
+              - link "TikTok" [ref=f156e998] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f156e1001]:
+              - link "LinkedIn" [ref=f156e1002] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f156e1005]:
+              - link "X" [ref=f156e1006] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f156e1009]:
+          - list [ref=f156e1010]:
+            - heading "Pexels" [level=3] [ref=f156e1011]
+            - listitem [ref=f156e1012]:
+              - link "Free Stock Photos" [ref=f156e1013] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f156e1014]:
+              - link "Free Videos" [ref=f156e1015] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f156e1016]:
+              - link "Popular searches" [ref=f156e1017] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f156e1018]:
+              - link "Collections" [ref=f156e1019] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f156e1020]:
+              - link "Challenges" [ref=f156e1021] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f156e1022]:
+              - link "Leaderboard" [ref=f156e1023] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f156e1024]:
+              - link "Other plugins & apps" [ref=f156e1025] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f156e1026]:
+            - heading "Company" [level=3] [ref=f156e1027]
+            - listitem [ref=f156e1028]:
+              - link "About" [ref=f156e1029] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f156e1030]:
+              - link "Blog" [ref=f156e1031] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f156e1032]:
+              - link "Help Center" [ref=f156e1033] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f156e1034]:
+              - link "Report content" [ref=f156e1035] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f156e1036]:
+              - link "Become a Hero" [ref=f156e1037] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f156e1038]:
+              - link "Partner with Pexels" [ref=f156e1039] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f156e1040]:
+              - link "Image & Video API" [ref=f156e1041] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f156e1042]: Sign Up
+        - list [ref=f156e1043]:
+          - listitem [ref=f156e1044]:
+            - heading "Free Stock Photos" [level=3] [ref=f156e1045]
+          - listitem [ref=f156e1046]:
+            - generic [ref=f156e1048]:
+              - link "Black and white photography" [ref=f156e1050] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f156e1051] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f156e1052] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f156e1053] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f156e1054] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f156e1055] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f156e1056] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f156e1057] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f156e1058] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f156e1059] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f156e1060] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f156e1061] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f156e1062] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f156e1064]:
+        - generic [ref=f156e1065]: © 2026 Pexels
+        - generic [ref=f156e1067]:
+          - link "Terms of Use" [ref=f156e1069] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f156e1070] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f156e1071] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f156e1072] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f156e1073] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f156e1076] [cursor=pointer]
+      - separator [ref=f156e1081]
+  - alert [ref=f156e1082]

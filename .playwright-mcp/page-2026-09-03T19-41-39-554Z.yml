@@ -1,0 +1,475 @@
+- generic [ref=f43e1]:
+  - generic [ref=f43e405]:
+    - navigation [ref=f43e408]:
+      - link [ref=f43e410] [cursor=pointer]:
+        - /url: /
+      - search [ref=f43e415]:
+        - generic [ref=f43e416]:
+          - button "Photos" [ref=f43e418] [cursor=pointer]
+          - searchbox "Search for free photos" [ref=f43e426]: phone charger
+          - button [ref=f43e428] [cursor=pointer]
+      - generic [ref=f43e432]:
+        - link "Explore" [ref=f43e434] [cursor=pointer]:
+          - /url: /discover/
+        - link "License" [ref=f43e438] [cursor=pointer]:
+          - /url: /license/
+        - button [ref=f43e441] [cursor=pointer]
+        - button "Join" [ref=f43e444] [cursor=pointer]
+    - main [ref=f43e447]:
+      - generic [ref=f43e448]:
+        - generic [ref=f43e452]:
+          - paragraph [ref=f43e454] [cursor=pointer]: Any
+          - paragraph [ref=f43e459] [cursor=pointer]: Horizontal
+          - paragraph [ref=f43e464] [cursor=pointer]: Vertical
+          - paragraph [ref=f43e469] [cursor=pointer]: Square
+        - generic [ref=f43e473]:
+          - paragraph [ref=f43e475] [cursor=pointer]: Any
+          - paragraph [ref=f43e477] [cursor=pointer]: "0"
+          - paragraph [ref=f43e482] [cursor=pointer]: "1"
+          - paragraph [ref=f43e487] [cursor=pointer]: "2"
+          - paragraph [ref=f43e492] [cursor=pointer]: 3+
+        - generic [ref=f43e496]:
+          - paragraph [ref=f43e498] [cursor=pointer]: Any
+          - paragraph [ref=f43e503] [cursor=pointer]: Baby
+          - paragraph [ref=f43e508] [cursor=pointer]: Child
+          - paragraph [ref=f43e513] [cursor=pointer]: Teenager
+          - paragraph [ref=f43e518] [cursor=pointer]: Adult
+          - paragraph [ref=f43e523] [cursor=pointer]: Senior adult
+        - generic [ref=f43e526]:
+          - generic [ref=f43e527]:
+            - generic [ref=f43e528] [cursor=pointer]
+            - slider [ref=f43e530] [cursor=pointer]
+            - slider [ref=f43e531] [cursor=pointer]
+          - generic [ref=f43e532]:
+            - generic [ref=f43e533]:
+              - paragraph [ref=f43e534]: Minimum
+              - paragraph [ref=f43e535]: 1,080px
+            - generic [ref=f43e536]:
+              - paragraph [ref=f43e537]: Maximum
+              - paragraph [ref=f43e538]: 20,000px+
+        - generic [ref=f43e541]:
+          - generic [ref=f43e542]:
+            - generic [ref=f43e543] [cursor=pointer]
+            - slider [ref=f43e545] [cursor=pointer]
+            - slider [ref=f43e546] [cursor=pointer]
+          - generic [ref=f43e547]:
+            - generic [ref=f43e548]:
+              - paragraph [ref=f43e549]: Minimum
+              - paragraph [ref=f43e550]: 1,080px
+            - generic [ref=f43e551]:
+              - paragraph [ref=f43e552]: Maximum
+              - paragraph [ref=f43e553]: 20,000px+
+        - generic [ref=f43e557]:
+          - button [ref=f43e558] [cursor=pointer]:
+            - textbox [ref=f43e564]:
+              - /placeholder: Enter hex code
+          - button [ref=f43e567] [cursor=pointer]:
+            - textbox [ref=f43e573]: "#000000"
+        - generic [ref=f43e577]:
+          - paragraph [ref=f43e579] [cursor=pointer]: Any
+          - paragraph [ref=f43e584] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f43e589] [cursor=pointer]: Last week
+          - paragraph [ref=f43e594] [cursor=pointer]: Last month
+          - paragraph [ref=f43e599] [cursor=pointer]: Last year
+        - main "main-content" [ref=f43e600]:
+          - generic [ref=f43e601]:
+            - heading "Free Phone Charger Photos" [level=1] [ref=f43e604]
+            - generic [ref=f43e607]:
+              - link "Photos 5.3K" [ref=f43e609] [cursor=pointer]:
+                - /url: /search/phone%20charger/
+                - text: Photos
+                - generic [ref=f43e610]: 5.3K
+              - link "Videos 4.4K" [ref=f43e611] [cursor=pointer]:
+                - /url: /search/videos/phone%20charger/
+                - text: Videos
+                - generic [ref=f43e612]: 4.4K
+              - link "Users 3.3K" [ref=f43e613] [cursor=pointer]:
+                - /url: /search/users/phone%20charger/
+                - text: Users
+                - generic [ref=f43e614]: 3.3K
+            - generic [ref=f43e616]:
+              - button "Filters" [ref=f43e618] [cursor=pointer]
+              - separator [ref=f43e625]
+              - generic [ref=f43e629]:
+                - link [ref=f43e631] [cursor=pointer]:
+                  - /url: /search/phone%20charging/
+                  - img "phone charging" [ref=f43e632]
+                  - generic [ref=f43e633]:
+                    - paragraph [ref=f43e634]: phone charging
+                    - paragraph [ref=f43e635]: 38K
+                - link [ref=f43e636] [cursor=pointer]:
+                  - /url: /search/power%20bank/
+                  - img "power bank" [ref=f43e637]
+                  - generic [ref=f43e638]:
+                    - paragraph [ref=f43e639]: power bank
+                    - paragraph [ref=f43e640]: 65K
+                - link [ref=f43e641] [cursor=pointer]:
+                  - /url: /search/charger/
+                  - img "charger" [ref=f43e642]
+                  - generic [ref=f43e643]:
+                    - paragraph [ref=f43e644]: charger
+                    - paragraph [ref=f43e645]: 4K
+                - link [ref=f43e646] [cursor=pointer]:
+                  - /url: /search/phone%20accessories/
+                  - img "phone accessories" [ref=f43e647]
+                  - generic [ref=f43e648]:
+                    - paragraph [ref=f43e649]: phone accessories
+                    - paragraph [ref=f43e650]: 221K
+                - link [ref=f43e651] [cursor=pointer]:
+                  - /url: /search/cell%20phone/
+                  - img "cell phone" [ref=f43e652]
+                  - generic [ref=f43e653]:
+                    - paragraph [ref=f43e654]: cell phone
+                    - paragraph [ref=f43e655]: 4K
+                - link [ref=f43e656] [cursor=pointer]:
+                  - /url: /search/telephone/
+                  - img "telephone" [ref=f43e657]
+                  - generic [ref=f43e658]:
+                    - paragraph [ref=f43e659]: telephone
+                    - paragraph [ref=f43e660]: 7K
+                - link [ref=f43e661] [cursor=pointer]:
+                  - /url: /search/charging/
+                  - img "charging" [ref=f43e662]
+                  - generic [ref=f43e663]:
+                    - paragraph [ref=f43e664]: charging
+                    - paragraph [ref=f43e665]: 5K
+                - link [ref=f43e666] [cursor=pointer]:
+                  - /url: /search/mobile%20phone/
+                  - img "mobile phone" [ref=f43e667]
+                  - generic [ref=f43e668]:
+                    - paragraph [ref=f43e669]: mobile phone
+                    - paragraph [ref=f43e670]: 63K
+                - link [ref=f43e671] [cursor=pointer]:
+                  - /url: /search/ev%20charger/
+                  - img "ev charger" [ref=f43e672]
+                  - generic [ref=f43e673]:
+                    - paragraph [ref=f43e674]: ev charger
+                    - paragraph [ref=f43e675]: 11K
+                - link [ref=f43e676] [cursor=pointer]:
+                  - /url: /search/phone/
+                  - img "phone" [ref=f43e677]
+                  - generic [ref=f43e678]:
+                    - paragraph [ref=f43e679]: phone
+                    - paragraph [ref=f43e680]: 38K
+                - link [ref=f43e681] [cursor=pointer]:
+                  - /url: /search/mobile%20accessories/
+                  - img "mobile accessories" [ref=f43e682]
+                  - generic [ref=f43e683]:
+                    - paragraph [ref=f43e684]: mobile accessories
+                    - paragraph [ref=f43e685]: 234K
+                - link [ref=f43e686] [cursor=pointer]:
+                  - /url: /search/old%20phone/
+                  - img "old phone" [ref=f43e687]
+                  - generic [ref=f43e688]:
+                    - paragraph [ref=f43e689]: old phone
+                    - paragraph [ref=f43e690]: 268K
+                - link [ref=f43e691] [cursor=pointer]:
+                  - /url: /search/smartphone/
+                  - img "smartphone" [ref=f43e692]
+                  - generic [ref=f43e693]:
+                    - paragraph [ref=f43e694]: smartphone
+                    - paragraph [ref=f43e695]: 39K
+                - link [ref=f43e696] [cursor=pointer]:
+                  - /url: /search/battery/
+                  - img "battery" [ref=f43e697]
+                  - generic [ref=f43e698]:
+                    - paragraph [ref=f43e699]: battery
+                    - paragraph [ref=f43e700]: 5K
+                - link [ref=f43e701] [cursor=pointer]:
+                  - /url: /search/earphones/
+                  - img "earphones" [ref=f43e702]
+                  - generic [ref=f43e703]:
+                    - paragraph [ref=f43e704]: earphones
+                    - paragraph [ref=f43e705]: 7K
+                - link [ref=f43e706] [cursor=pointer]:
+                  - /url: /search/earphone/
+                  - img "earphone" [ref=f43e707]
+                  - generic [ref=f43e708]:
+                    - paragraph [ref=f43e709]: earphone
+                    - paragraph [ref=f43e710]: 7K
+                - img [ref=f43e711] [cursor=pointer]
+            - generic [ref=f43e714]:
+              - generic [ref=f43e716]:
+                - generic [ref=f43e717]:
+                  - article [ref=f43e720]:
+                    - link [ref=f43e721] [cursor=pointer]:
+                      - /url: /photo/closed-up-photography-of-two-iphones-1028674/
+                      - img "Free Two smartphones charging side by side on a desk. Modern and technological setting. Stock Photo" [ref=f43e722]
+                  - article [ref=f43e727]:
+                    - link [ref=f43e728] [cursor=pointer]:
+                      - /url: /photo/close-up-of-white-usb-charger-and-cable-36012993/
+                      - img "Free A detailed view of a white USB charger and cable on a wooden surface. Stock Photo" [ref=f43e729]
+                  - article [ref=f43e734]:
+                    - link [ref=f43e735] [cursor=pointer]:
+                      - /url: /photo/overhead-shot-of-a-cellphone-charging-from-a-power-bank-5208772/
+                      - img "Free A mobile phone and power bank connected with a coiled cable on a beige background. Ideal for tech and lifestyle themes. Stock Photo" [ref=f43e736]
+                  - generic [ref=f43e740]:
+                    - generic [ref=f43e741]:
+                      - heading "‌‌S‌‌‌p‌‌o‌‌n‌‌s‌‌o‌‌r‌‌‌e‌d‌ ‌‌‌P‌‌‌h‌‌‌o‌‌t‌o‌s‌‌" [level=4] [ref=f43e742]
+                      - link [ref=f43e743] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9waG9uZSUyMGNoYXJnZXI_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX2xvZ28mdXRtX3Rlcm09cGhvbmUlMjBjaGFyZ2VyIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJwYWdlIjoic2VhcmNoX3Jlc3VsdHMiLCJwYWdlX3ZhcmlhbnQiOiJwaG90b3MiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiJmNTJmZTJhMy03YTUyLTQ3NjctYjcyZi05NmVmMDRiNDYzNjQiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6InBob25lIGNoYXJnZXIifX0/
+                    - generic [ref=f43e747]:
+                      - link [ref=f43e748] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2VsZWN0cmljYWwtb3V0bGV0LXdpdGgtbWFueS1jaGFyZ2Vycy1jb25uZWN0ZWQtdG8taXQtZm9yLWEtc21hcnRwaG9uZS1sYXB0b3AtZ20yMTU1NzE3MjAxLTU3NjUxNzU5Mj91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbWVkaWEmdXRtX3Rlcm09cGhvbmUlMjBjaGFyZ2VyIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJwYWdlIjoic2VhcmNoX3Jlc3VsdHMiLCJwYWdlX3ZhcmlhbnQiOiJwaG90b3MiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiJmNTJmZTJhMy03YTUyLTQ3NjctYjcyZi05NmVmMDRiNDYzNjQiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6InBob25lIGNoYXJnZXIifX0/
+                      - link [ref=f43e749] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2FkYXB0ZXItY2hhcmdlci13aXRoLXVzYi1jYWJsZS1pc29sYXRlLW9uLXdoaXRlLWdtNDg0NzE5NjMwLTcxNDU3OTAzP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1waG9uZSUyMGNoYXJnZXIiLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsInBhZ2UiOiJzZWFyY2hfcmVzdWx0cyIsInBhZ2VfdmFyaWFudCI6InBob3RvcyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6ImY1MmZlMmEzLTdhNTItNDc2Ny1iNzJmLTk2ZWYwNGI0NjM2NCIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoicGhvbmUgY2hhcmdlciJ9fQ/
+                      - link [ref=f43e750] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL21vYmlsZS1waG9uZS1jb25uZWN0LXRvLXBvd2VyLWJhbmstZ20xMDYzNjQ0MDIwLTI4NDM1ODg4MD91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbWVkaWEmdXRtX3Rlcm09cGhvbmUlMjBjaGFyZ2VyIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJwYWdlIjoic2VhcmNoX3Jlc3VsdHMiLCJwYWdlX3ZhcmlhbnQiOiJwaG90b3MiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiJmNTJmZTJhMy03YTUyLTQ3NjctYjcyZi05NmVmMDRiNDYzNjQiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6InBob25lIGNoYXJnZXIifX0/
+                      - link [ref=f43e751] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2NhYmxlLWNvbm5lY3Rvci1taWNyby11c2ItdG8tdXNiLWdtNDk3NzQ5NzcyLTc5MjkyOTM5P3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1waG9uZSUyMGNoYXJnZXIiLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsInBhZ2UiOiJzZWFyY2hfcmVzdWx0cyIsInBhZ2VfdmFyaWFudCI6InBob3RvcyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6ImY1MmZlMmEzLTdhNTItNDc2Ny1iNzJmLTk2ZWYwNGI0NjM2NCIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoicGhvbmUgY2hhcmdlciJ9fQ/
+                    - link [ref=f43e752] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9waG9uZSUyMGNoYXJnZXI_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX2NvdXBvbmNvZGUmdXRtX3Rlcm09cGhvbmUlMjBjaGFyZ2VyIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJwYWdlIjoic2VhcmNoX3Jlc3VsdHMiLCJwYWdlX3ZhcmlhbnQiOiJwaG90b3MiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiJmNTJmZTJhMy03YTUyLTQ3NjctYjcyZi05NmVmMDRiNDYzNjQiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6InBob25lIGNoYXJnZXIifX0/
+                      - img [ref=f43e755]:
+                        - generic [ref=f43e756]: Get 20% off with code PEXELS20 »
+                  - article [ref=f43e759]:
+                    - link [ref=f43e760] [cursor=pointer]:
+                      - /url: /photo/close-up-shot-of-a-mobile-phone-and-a-charger-on-a-yellow-surface-5208307/
+                      - img "Free Flat lay of a smartphone and charger on a yellow background, showcasing modern tech aesthetics. Stock Photo" [ref=f43e761]
+                  - link [ref=f43e765] [cursor=pointer]:
+                    - /url: /collections/phones-cq3b6cn/
+                    - article [ref=f43e766]:
+                      - list [ref=f43e768]:
+                        - listitem [ref=f43e769]
+                        - listitem [ref=f43e771]
+                        - listitem [ref=f43e773]
+                      - generic [ref=f43e775]:
+                        - heading "Phones" [level=4] [ref=f43e776]
+                        - paragraph [ref=f43e780]: "109"
+                  - article [ref=f43e783]:
+                    - link [ref=f43e784] [cursor=pointer]:
+                      - /url: /photo/smartphone-and-charger-usb-connector-on-wooden-table-4195333/
+                      - img "Free Top view of modern cellphone with empty screen in transparent cover placed near disconnected white charger usb connector on wooden background Stock Photo" [ref=f43e785]
+                  - article [ref=f43e790]:
+                    - link [ref=f43e791] [cursor=pointer]:
+                      - /url: /photo/flat-lay-shot-of-a-cellphone-between-the-power-bank-and-the-selfie-stick-5208781/
+                      - img "Free Minimalist flat lay featuring a smartphone, gimbal, charging cables, and power bank on a beige background. Stock Photo" [ref=f43e792]
+                - generic [ref=f43e795]:
+                  - article [ref=f43e798]:
+                    - link [ref=f43e799] [cursor=pointer]:
+                      - /url: /photo/black-and-white-smartphone-947407/
+                      - img "Free A smartphone connected to a charger placed on a red leather surface. Stock Photo" [ref=f43e800]
+                  - article [ref=f43e805]:
+                    - link [ref=f43e806] [cursor=pointer]:
+                      - /url: /photo/silver-iphone-6-on-brown-wooden-table-216369/
+                      - img "Free Close-up of a smartphone charging on a wooden desk, showcasing technology in an office setting. Stock Photo" [ref=f43e807]
+                  - article [ref=f43e812]:
+                    - link [ref=f43e813] [cursor=pointer]:
+                      - /url: /photo/overhead-shot-of-a-cellphone-charging-from-a-power-bank-5208777/
+                      - img "Free Overhead shot of a smartphone charging with a power bank on a plain background. Stock Photo" [ref=f43e814]
+                  - article [ref=f43e819]:
+                    - link [ref=f43e820] [cursor=pointer]:
+                      - /url: /photo/phone-charging-on-a-table-17800265/
+                      - img "Free A smartphone connects to a charger on a wooden table, highlighting modern technology. Stock Photo" [ref=f43e821]
+                  - article [ref=f43e826]:
+                    - link [ref=f43e827] [cursor=pointer]:
+                      - /url: /photo/space-gray-iphone-5s-on-brown-bra-296626/
+                      - img "Free A smartphone with a charging cable rests on grass outdoors, showcasing modern technology in nature. Stock Photo" [ref=f43e828]
+                  - article [ref=f43e833]:
+                    - link [ref=f43e834] [cursor=pointer]:
+                      - /url: /photo/smartphone-charging-with-power-bank-on-wooden-surface-37475662/
+                      - img "Free A smartphone charging via an orange cable connected to a power bank on a wooden surface. Stock Photo" [ref=f43e835]
+                  - article [ref=f43e840]:
+                    - link [ref=f43e841] [cursor=pointer]:
+                      - /url: /photo/close-up-of-a-charger-5208825/
+                      - img "Free VR headset and smartphone with a charger on a light background, offering copy space. Stock Photo" [ref=f43e842]
+                  - article [ref=f43e847]:
+                    - link [ref=f43e848] [cursor=pointer]:
+                      - /url: /photo/turned-on-android-smartphone-with-audio-jack-305084/
+                      - img "Free Close-up of a smartphone being charged, displaying a modern interface on a dark backdrop. Stock Photo" [ref=f43e849]
+                - generic [ref=f43e852]:
+                  - generic [ref=f43e854]:
+                    - generic [ref=f43e856]:
+                      - link [ref=f43e857] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20phone%20charger%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own phone charger content with Canva" [ref=f43e858]
+                      - link [ref=f43e859] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20phone%20charger%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own phone charger content with Canva" [ref=f43e860]
+                      - link [ref=f43e861] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20phone%20charger%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own phone charger content with Canva" [ref=f43e862]
+                      - link [ref=f43e863] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20phone%20charger%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own phone charger content with Canva" [ref=f43e864]
+                    - link [ref=f43e865] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20phone%20charger%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - paragraph [ref=f43e868]: Bring your ideas to life with Canva AI
+                    - link "Get started for free" [ref=f43e869] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20phone%20charger%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                  - article [ref=f43e874]:
+                    - link [ref=f43e875] [cursor=pointer]:
+                      - /url: /photo/white-power-bank-and-blue-coated-wires-4072683/
+                      - img "Free Minimalist image of a power bank with blue USB charging cables on a white background. Stock Photo" [ref=f43e876]
+                  - article [ref=f43e881]:
+                    - link [ref=f43e882] [cursor=pointer]:
+                      - /url: /photo/black-android-smartphone-on-white-table-5083491/
+                      - img "Free Minimalist smartphone on a wireless charger with a serene beach wallpaper. Stock Photo" [ref=f43e883]
+                  - article [ref=f43e888]:
+                    - link [ref=f43e889] [cursor=pointer]:
+                      - /url: /photo/green-iphone-case-on-white-surface-5083490/
+                      - img "Free A minimalist smartphone with a green screen on a wireless charger, ideal for tech mockups. Stock Photo" [ref=f43e890]
+                  - article [ref=f43e895]:
+                    - link [ref=f43e896] [cursor=pointer]:
+                      - /url: /photo/shallow-focus-photography-of-black-iphone-7-on-brown-wooden-table-1202575/
+                      - img "Free A smartphone connected to a charger lying on a wooden table indoors. Stock Photo" [ref=f43e897]
+                  - article [ref=f43e902]:
+                    - link [ref=f43e903] [cursor=pointer]:
+                      - /url: /photo/black-android-smartphones-on-brown-wooden-surface-4387770/
+                      - img "Free Three smartphones connected to chargers on a wooden surface, showcasing modern technology Stock Photo" [ref=f43e904]
+                  - article [ref=f43e909]:
+                    - link [ref=f43e910] [cursor=pointer]:
+                      - /url: /photo/black-android-smartphone-on-white-table-5961044/
+                      - img "Free A sleek black smartphone placed on a wireless charger with a modern white background. Stock Photo" [ref=f43e911]
+                  - article [ref=f43e916]:
+                    - link [ref=f43e917] [cursor=pointer]:
+                      - /url: /photo/green-iphone-5-c-on-white-surface-5083410/
+                      - img "Free Overhead view of a smartphone with a green screen on a wireless charger, showcasing modern technology. Stock Photo" [ref=f43e918]
+                  - article [ref=f43e923]:
+                    - link [ref=f43e924] [cursor=pointer]:
+                      - /url: /photo/smartphone-charging-port-and-charger-usb-connector-4195332/
+                      - img "Free Modern cellphone in transparent cover with closeup of charging input and mobile phone white charger cable usb connector on wooden table Stock Photo" [ref=f43e925]
+                  - article [ref=f43e930]:
+                    - link [ref=f43e931] [cursor=pointer]:
+                      - /url: /photo/space-gray-iphone-6-on-green-grass-296631/
+                      - img "Free Close-up of a smartphone charging on a grassy lawn, highlighting modern technology in nature. Stock Photo" [ref=f43e932]
+              - button "Load More" [ref=f43e936] [cursor=pointer]
+            - navigation [ref=f43e939]:
+              - generic [ref=f43e941]:
+                - link "1" [ref=f43e943]:
+                  - /url: /search/phone%20charger/
+                - link "2" [ref=f43e946] [cursor=pointer]:
+                  - /url: /search/phone%20charger/?page=2
+                - link "3" [ref=f43e949] [cursor=pointer]:
+                  - /url: /search/phone%20charger/?page=3
+                - link "4" [ref=f43e952] [cursor=pointer]:
+                  - /url: /search/phone%20charger/?page=4
+                - link "5" [ref=f43e955] [cursor=pointer]:
+                  - /url: /search/phone%20charger/?page=5
+                - link "6" [ref=f43e958] [cursor=pointer]:
+                  - /url: /search/phone%20charger/?page=6
+                - link "Next" [ref=f43e961] [cursor=pointer]:
+                  - /url: /search/phone%20charger/?page=2
+    - contentinfo [ref=f43e965]:
+      - separator [ref=f43e966]
+      - generic [ref=f43e967]:
+        - generic [ref=f43e968]:
+          - heading "Where stories come together." [level=2] [ref=f43e969]
+          - generic [ref=f43e970]:
+            - link "Download on iOS" [ref=f43e971] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Download on Android" [ref=f43e974] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f43e977]:
+            - listitem [ref=f43e978]:
+              - link "Instagram" [ref=f43e979] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f43e982]:
+              - link "Threads" [ref=f43e983] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f43e986]:
+              - link "YouTube" [ref=f43e987] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f43e990]:
+              - link "TikTok" [ref=f43e991] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f43e994]:
+              - link "LinkedIn" [ref=f43e995] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f43e998]:
+              - link "X" [ref=f43e999] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f43e1002]:
+          - list [ref=f43e1003]:
+            - heading "Pexels" [level=3] [ref=f43e1004]
+            - listitem [ref=f43e1005]:
+              - link "Free Stock Photos" [ref=f43e1006] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f43e1007]:
+              - link "Free Videos" [ref=f43e1008] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f43e1009]:
+              - link "Popular searches" [ref=f43e1010] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f43e1011]:
+              - link "Collections" [ref=f43e1012] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f43e1013]:
+              - link "Challenges" [ref=f43e1014] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f43e1015]:
+              - link "Leaderboard" [ref=f43e1016] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f43e1017]:
+              - link "Other plugins & apps" [ref=f43e1018] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f43e1019]:
+            - heading "Company" [level=3] [ref=f43e1020]
+            - listitem [ref=f43e1021]:
+              - link "About" [ref=f43e1022] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f43e1023]:
+              - link "Blog" [ref=f43e1024] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f43e1025]:
+              - link "Help Center" [ref=f43e1026] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f43e1027]:
+              - link "Report content" [ref=f43e1028] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f43e1029]:
+              - link "Become a Hero" [ref=f43e1030] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f43e1031]:
+              - link "Partner with Pexels" [ref=f43e1032] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f43e1033]:
+              - link "Image & Video API" [ref=f43e1034] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f43e1035]: Sign Up
+        - list [ref=f43e1036]:
+          - listitem [ref=f43e1037]:
+            - heading "Free Stock Photos" [level=3] [ref=f43e1038]
+          - listitem [ref=f43e1039]:
+            - generic [ref=f43e1041]:
+              - link "Black and white photography" [ref=f43e1043] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f43e1044] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f43e1045] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f43e1046] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f43e1047] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f43e1048] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f43e1049] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f43e1050] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f43e1051] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f43e1052] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f43e1053] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f43e1054] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f43e1055] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f43e1057]:
+        - generic [ref=f43e1058]: © 2026 Pexels
+        - generic [ref=f43e1060]:
+          - link "Terms of Use" [ref=f43e1062] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f43e1063] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f43e1064] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f43e1065] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f43e1066] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f43e1069] [cursor=pointer]
+      - separator [ref=f43e1074]
+  - alert [ref=f43e1075]

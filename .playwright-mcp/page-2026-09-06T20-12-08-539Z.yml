@@ -1,0 +1,78 @@
+- generic [ref=f37e1]:
+  - generic [ref=f37e2]:
+    - banner [ref=f37e3]:
+      - generic [ref=f37e4]:
+        - img "Kansas City, MO Accounting Firm | Emerick & Company PC Page | Emerick & Company, PC" [ref=f37e6]
+        - navigation [ref=f37e7]:
+          - text: 
+          - generic:
+            - list:
+              - listitem [ref=f37e8]:
+                - link "Emerick & Company PC" [ref=f37e10] [cursor=pointer]:
+                  - /url: /index.php
+                - text: 
+              - listitem [ref=f37e11]:
+                - generic [ref=f37e12]:
+                  - link "About " [ref=f37e13] [cursor=pointer]:
+                    - /url: /about.php
+                    - text: About
+                    - generic [ref=f37e14]: 
+                  - generic [ref=f37e15]: 
+                - text: 
+              - listitem [ref=f37e16]:
+                - generic [ref=f37e17]:
+                  - link "Services " [ref=f37e18] [cursor=pointer]:
+                    - /url: /services.php
+                    - text: Services
+                    - generic [ref=f37e19]: 
+                  - generic [ref=f37e20]: 
+                - text: 
+              - listitem [ref=f37e21]:
+                - generic [ref=f37e22]:
+                  - link "Client Center " [ref=f37e23] [cursor=pointer]:
+                    - /url: /clientcenter.php
+                    - text: Client Center
+                    - generic [ref=f37e24]: 
+                  - generic [ref=f37e25]: 
+                - text: 
+              - listitem [ref=f37e26]:
+                - link "Contact" [ref=f37e28] [cursor=pointer]:
+                  - /url: /contact.php
+                - text: 
+    - generic [ref=f37e30]:
+      - generic:
+        - heading "Our Firm" [level=3] [ref=f37e31]
+        - generic [ref=f37e32]:
+          - generic [ref=f37e33]: 
+          - generic [ref=f37e34]: 4520 Madison Avenue Ste G Kansas City, MO 64111
+        - generic [ref=f37e35]:
+          - generic [ref=f37e36]: 
+          - generic [ref=f37e37]:
+            - text: "T:"
+            - link "(816) 753-1040" [ref=f37e38] [cursor=pointer]:
+              - /url: tel:(816) 753-1040
+            - link "info@emerickcpa.com" [ref=f37e39] [cursor=pointer]:
+              - /url: mailto:info@emerickcpa.com
+        - generic [ref=f37e40]:
+          - generic [ref=f37e41]: ⏲
+          - generic [ref=f37e42]: "Mon - Thur: 9:00 am to 5:00 pm Fri: By Appointment Only"
+    - generic [ref=f37e44]:
+      - heading "Kansas City, MO Accounting, Emerick & Company, PC" [level=1] [ref=f37e45]
+      - generic [ref=f37e46]:
+        - paragraph [ref=f37e47]: "* ANNOUNCEMENTS: None At This Time"
+        - paragraph [ref=f37e48]: Emerick & Company, P.C. is committed to providing a high level of client service and quality. Our firm’s mission is to serve our audit and tax clients and help others with exceptional professional service.
+        - paragraph [ref=f37e49]: Please call us today or email us at info@emerickcpa.com - we'll be happy to offer you additional information. Thank you for visiting. We look forward to working with you!
+  - contentinfo [ref=f37e50]:
+    - generic [ref=f37e51]:
+      - generic [ref=f37e52]: 4520 Madison Avenue Ste G · Kansas City, MO 64111
+      - navigation [ref=f37e53]:
+        - link "Login" [ref=f37e54] [cursor=pointer]:
+          - /url: https://www.securefirmportal.com/Account/Login/69115
+        - link "Search" [ref=f37e55] [cursor=pointer]:
+          - /url: search.php
+        - link "Site Map" [ref=f37e56] [cursor=pointer]:
+          - /url: sitemap.php
+        - link "Privacy Policy" [ref=f37e57] [cursor=pointer]:
+          - /url: privacy.php
+        - link "Disclaimer" [ref=f37e58] [cursor=pointer]:
+          - /url: disclaimer.php

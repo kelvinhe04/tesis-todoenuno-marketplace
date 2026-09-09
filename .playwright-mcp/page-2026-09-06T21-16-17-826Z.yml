@@ -1,0 +1,530 @@
+- generic [ref=f384e1]:
+  - generic: Get 10% OFF
+  - link "Skip to content" [ref=f384e7] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f384e8]:
+    - generic [ref=f384e11]:
+      - navigation [ref=f384e14]:
+        - navigation "Main navigation" [ref=f384e16]:
+          - link "Skip to main content" [ref=f384e17] [cursor=pointer]:
+            - /url: "#MainContent"
+          - list [ref=f384e18]:
+            - listitem [ref=f384e19]:
+              - link "Lamps" [ref=f384e20] [cursor=pointer]:
+                - /url: javascript:;
+            - listitem [ref=f384e26]:
+              - link "Wireless Audio" [ref=f384e27] [cursor=pointer]:
+                - /url: javascript:;
+            - listitem [ref=f384e33]:
+              - link "Recovery & Wellness" [ref=f384e34] [cursor=pointer]:
+                - /url: javascript:;
+            - listitem [ref=f384e40]:
+              - link "Smart Living" [ref=f384e41] [cursor=pointer]:
+                - /url: javascript:;
+            - listitem [ref=f384e47]:
+              - link "Support" [ref=f384e48] [cursor=pointer]:
+                - /url: javascript:;
+      - link "TaoTronics US" [ref=f384e54] [cursor=pointer]:
+        - /url: /
+      - list [ref=f384e57]:
+        - listitem [ref=f384e58]:
+          - link "Search" [ref=f384e59] [cursor=pointer]:
+            - /url: /search
+        - listitem [ref=f384e63]:
+          - link "Login" [ref=f384e64] [cursor=pointer]:
+            - /url: /account/login
+        - listitem [ref=f384e68]:
+          - link "Cart 0 items" [ref=f384e69] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=f384e70]: Cart
+            - generic [ref=f384e75]:
+              - generic:
+                - generic [ref=f384e76]: 0 items
+                - text: "0"
+  - main [ref=f384e77]:
+    - generic [ref=f384e81]:
+      - generic [ref=f384e82]:
+        - generic [ref=f384e84]:
+          - generic [ref=f384e85]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e87]
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e89]
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e91]
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e93]
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e95]
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e97]
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e99]
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e101]
+          - button "Zoom" [ref=f384e103] [cursor=pointer]
+        - generic [ref=f384e109]:
+          - button "Go to item 1" [ref=f384e110] [cursor=pointer]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e111]
+          - button "Go to item 2" [ref=f384e112] [cursor=pointer]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e113]
+          - button "Go to item 3" [ref=f384e114] [cursor=pointer]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e115]
+          - button "Go to item 4" [ref=f384e116] [cursor=pointer]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e117]
+          - button "Go to item 5" [ref=f384e118] [cursor=pointer]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e119]
+          - button "Go to item 6" [ref=f384e120] [cursor=pointer]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e121]
+          - button "Go to item 7" [ref=f384e122] [cursor=pointer]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e123]
+          - button "Go to item 8" [ref=f384e124] [cursor=pointer]:
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f384e125]
+      - generic [ref=f384e126]:
+        - heading "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [level=1] [ref=f384e128]
+        - generic [ref=f384e132] [cursor=pointer]:
+          - button "See all reviews" [ref=f384e133]:
+            - generic [ref=f384e134]: 
+            - generic [ref=f384e135]: 
+            - generic [ref=f384e136]: 
+            - generic [ref=f384e137]: 
+            - generic [ref=f384e138]: 
+          - text: 16 reviews
+        - generic [ref=f384e140]:
+          - generic [ref=f384e141]:
+            - generic [ref=f384e142]:
+              - generic [ref=f384e143]:
+                - generic [ref=f384e144]: Sale price
+                - text: $54.99
+              - generic [ref=f384e145]:
+                - generic [ref=f384e146]: Regular price
+                - text: $79.99
+            - generic [ref=f384e147]: Save 31%
+          - paragraph [ref=f384e149]:
+            - text: Tax excluded.
+            - link "Shipping calculated" [ref=f384e150] [cursor=pointer]:
+              - /url: /policies/shipping-policy
+            - text: at checkout
+        - paragraph [ref=f384e156]:
+          - generic [ref=f384e157]:
+            - text: 4 interest-free installments, or from $4.96/mo with
+            - img "Shop" [ref=f384e159]
+          - button "View sample plans" [ref=f384e161] [cursor=pointer]
+        - separator [ref=f384e163]
+        - group [ref=f384e167]:
+          - generic [ref=f384e169]:
+            - generic [ref=f384e170]: "Color:"
+            - generic [ref=f384e171]: White
+          - generic [ref=f384e173]:
+            - radio "White" [checked] [ref=f384e174] [cursor=pointer]
+            - generic [ref=f384e175] [cursor=pointer]: White
+            - radio "Black" [ref=f384e178] [cursor=pointer]
+            - generic [ref=f384e179] [cursor=pointer]: Black
+        - generic [ref=f384e184]:
+          - generic [ref=f384e185] [cursor=pointer]: "Quantity:"
+          - generic [ref=f384e186]:
+            - button "Decrease quantity" [ref=f384e187] [cursor=pointer]
+            - spinbutton "Quantity:" [ref=f384e189]: "1"
+            - button "Increase quantity" [ref=f384e190] [cursor=pointer]
+        - generic [ref=f384e195]:
+          - button "Add to cart" [ref=f384e196] [cursor=pointer]
+          - link "More payment options" [ref=f384e201] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f384e211]:
+      - paragraph [ref=f384e212]:
+        - text: Designed to Last
+        - generic [ref=f384e213]: Designed to Last
+      - paragraph [ref=f384e215]: With its superior energy efficiency and anodized aluminum design, this LED desk lamp is here to last. Enjoy better heat dissipation, a long bulb lifespan, and a longer product lifetime.
+      - paragraph
+      - list [ref=f384e216]:
+        - listitem [ref=f384e217]: Touch pad controls
+        - listitem [ref=f384e218]: Flicker-free LED
+        - listitem [ref=f384e219]: 7 brightness levels
+        - listitem [ref=f384e220]: 5 color modes
+        - listitem [ref=f384e221]: Integrated USB port
+        - listitem [ref=f384e222]: Adjustable design
+        - listitem [ref=f384e223]: Energy efficient LED
+    - generic [ref=f384e228]:
+      - generic [ref=f384e230]:
+        - paragraph [ref=f384e231]: Integrated USB Port
+        - paragraph [ref=f384e233]: With 5V/1A safety output USB cable, charge your mobile devices and keep them within reach.
+      - generic [ref=f384e235]:
+        - paragraph [ref=f384e236]: Any Angle
+        - paragraph [ref=f384e238]: The adjustable lamp head, neck, and body lets you shine a light on exactly what you need, no matter the position.
+      - generic [ref=f384e240]:
+        - paragraph [ref=f384e241]: For Every Mood
+        - paragraph [ref=f384e243]: Go through the many different colors temperatures and brightness levels with just touch of a button. It's easy to find the perfect light for you in any occasions.
+    - generic [ref=f384e252]:
+      - paragraph [ref=f384e253]: Specifications
+      - list [ref=f384e255]:
+        - listitem [ref=f384e256]: "Light Source: LED"
+        - listitem [ref=f384e257]: "Operating Voltage: DC 10V 1.2A"
+        - listitem [ref=f384e258]: "Power: 12W"
+        - listitem [ref=f384e259]: "Lumens: 510lm"
+        - listitem [ref=f384e260]: "Color Temperature: 3000-6500K"
+        - listitem [ref=f384e261]: "Operating Temperature: -10-40°C / 14-104°F"
+        - listitem [ref=f384e262]: "Lifespan: 50,000 Hours"
+        - listitem [ref=f384e263]: "Net Weight: 912g / 33.51oz"
+      - paragraph [ref=f384e264]: What’s in the Box
+      - paragraph [ref=f384e266]: "1 x TaoTronics Desk Lamp (Model: TT-DL13) 1 x Power Supply 1 x Cleaning Cloth 1 x User Manual"
+    - generic [ref=f384e272]:
+      - generic [ref=f384e273]:
+        - heading "Customer Reviews" [level=2] [ref=f384e274]
+        - generic [ref=f384e275]:
+          - generic [ref=f384e277]:
+            - img "Average rating is 4.50 stars" [ref=f384e278]:
+              - generic [ref=f384e279]: 
+              - generic [ref=f384e280]: 
+              - generic [ref=f384e281]: 
+              - generic [ref=f384e282]: 
+              - generic [ref=f384e283]: 
+              - text: 4.50 out of 5
+            - generic [ref=f384e284]:
+              - text: Based on 16 reviews
+              - img "Verified Checkmark" [ref=f384e285]
+          - generic [ref=f384e286]:
+            - generic [ref=f384e287] [cursor=pointer]:
+              - button "75% (12) reviews with 5 star rating" [ref=f384e288]:
+                - generic [ref=f384e289]: 
+                - generic [ref=f384e290]: 
+                - generic [ref=f384e291]: 
+                - generic [ref=f384e292]: 
+                - generic [ref=f384e293]: 
+              - generic [ref=f384e296]: "12"
+            - generic [ref=f384e297] [cursor=pointer]:
+              - button "13% (2) reviews with 4 star rating" [ref=f384e298]:
+                - generic [ref=f384e299]: 
+                - generic [ref=f384e300]: 
+                - generic [ref=f384e301]: 
+                - generic [ref=f384e302]: 
+                - generic [ref=f384e303]: 
+              - generic [ref=f384e306]: "2"
+            - generic [ref=f384e307] [cursor=pointer]:
+              - button "6% (1) reviews with 3 star rating" [ref=f384e308]:
+                - generic [ref=f384e309]: 
+                - generic [ref=f384e310]: 
+                - generic [ref=f384e311]: 
+                - generic [ref=f384e312]: 
+                - generic [ref=f384e313]: 
+              - generic [ref=f384e316]: "1"
+            - generic:
+              - button "0% (0) reviews with 2 star rating":
+                - generic: 
+                - generic: 
+                - generic: 
+                - generic: 
+                - generic: 
+              - generic: "0"
+            - generic [ref=f384e317] [cursor=pointer]:
+              - button "6% (1) reviews with 1 star rating" [ref=f384e318]:
+                - generic [ref=f384e319]: 
+                - generic [ref=f384e320]: 
+                - generic [ref=f384e321]: 
+                - generic [ref=f384e322]: 
+                - generic [ref=f384e323]: 
+              - generic [ref=f384e326]: "1"
+        - generic [ref=f384e330]:
+          - generic [ref=f384e331]:
+            - generic "Bronze Authentic Shop. At least 80% of published reviews are verified reviews" [ref=f384e332]:
+              - link "Judge.me Bronze Authentic Shop medal" [ref=f384e333] [cursor=pointer]:
+                - /url: https://app.judge.me/reviews/medals
+                - img "Judge.me Bronze Authentic Shop medal" [ref=f384e335]
+                - generic [ref=f384e336]: "81.3"
+            - generic "Silver Transparent Shop. Published at least 90% of verified reviews received in total" [ref=f384e337]:
+              - link "Judge.me Silver Transparent Shop medal" [ref=f384e338] [cursor=pointer]:
+                - /url: https://app.judge.me/reviews/medals
+                - img "Judge.me Silver Transparent Shop medal" [ref=f384e340]
+                - generic [ref=f384e341]: "92.9"
+          - link "Verified" [ref=f384e343] [cursor=pointer]:
+            - /url: https://app.judge.me/reviews/medals
+      - generic [ref=f384e348] [cursor=pointer]:
+        - generic [ref=f384e349]: Sort by
+        - combobox "Sort by " [ref=f384e350]:
+          - option "Most Recent" [selected]
+          - option "Highest Rating"
+          - option "Lowest Rating"
+          - option "Only Pictures"
+          - option "Pictures First"
+          - option "Videos First"
+          - option "Most Helpful"
+        - generic [ref=f384e351]: 
+      - generic [ref=f384e352]:
+        - generic [ref=f384e353]:
+          - generic [ref=f384e354]:
+            - generic [ref=f384e355]:
+              - generic [ref=f384e356]:
+                - img "1 star review" [ref=f384e357]:
+                  - generic [ref=f384e358]: 
+                  - generic [ref=f384e359]: 
+                  - generic [ref=f384e360]: 
+                  - generic [ref=f384e361]: 
+                  - generic [ref=f384e362]: 
+                - time [ref=f384e363]: 08/23/2026
+              - generic [ref=f384e364]:
+                - generic [ref=f384e365]: 
+                - generic [ref=f384e366]: PeteyB
+            - generic [ref=f384e368]:
+              - generic [ref=f384e369]: Not the quality it used to be
+              - paragraph [ref=f384e371]: I own a Taotronics I purchased 5+ years ago and it is great. Not so with the current line-up. They’ve signficantly lowered the quality. The lamp is flimsy and more plastic than the previous version which were made of a weighty metal. Worse, customer service is awful and you’ll be stuck paying for your own shipping to return, which is expensive and makes the return not even worth it. Avoid.
+          - generic [ref=f384e372]:
+            - generic [ref=f384e373]:
+              - generic [ref=f384e374]:
+                - img "5 star review" [ref=f384e375]:
+                  - generic [ref=f384e376]: 
+                  - generic [ref=f384e377]: 
+                  - generic [ref=f384e378]: 
+                  - generic [ref=f384e379]: 
+                  - generic [ref=f384e380]: 
+                - time [ref=f384e381]: 08/18/2026
+              - generic [ref=f384e382]:
+                - generic [ref=f384e383]:  
+                - generic [ref=f384e384]:
+                  - text: Matthew Bunch
+                  - generic [ref=f384e385]: Verified
+            - generic [ref=f384e388]:
+              - generic [ref=f384e389]: I think its great! i use it for artwork
+              - paragraph [ref=f384e391]: I think its great! i use it for artwork. one i had before is the same model and still works
+          - generic [ref=f384e392]:
+            - generic [ref=f384e393]:
+              - generic [ref=f384e394]:
+                - img "5 star review" [ref=f384e395]:
+                  - generic [ref=f384e396]: 
+                  - generic [ref=f384e397]: 
+                  - generic [ref=f384e398]: 
+                  - generic [ref=f384e399]: 
+                  - generic [ref=f384e400]: 
+                - time [ref=f384e401]: 07/19/2026
+              - generic [ref=f384e402]:
+                - generic [ref=f384e403]:  
+                - generic [ref=f384e404]:
+                  - text: Anonymous
+                  - generic [ref=f384e405]: Verified
+            - generic [ref=f384e408]:
+              - generic [ref=f384e409]: Good Lamp
+              - paragraph [ref=f384e411]: Very nice but pricey
+          - generic [ref=f384e412]:
+            - generic [ref=f384e413]:
+              - generic [ref=f384e414]:
+                - img "5 star review" [ref=f384e415]:
+                  - generic [ref=f384e416]: 
+                  - generic [ref=f384e417]: 
+                  - generic [ref=f384e418]: 
+                  - generic [ref=f384e419]: 
+                  - generic [ref=f384e420]: 
+                - time [ref=f384e421]: 07/07/2026
+              - generic [ref=f384e422]:
+                - generic [ref=f384e423]:  
+                - generic [ref=f384e424]:
+                  - text: Carmen Stine
+                  - generic [ref=f384e425]: Verified
+            - generic [ref=f384e428]:
+              - generic [ref=f384e429]: Love it
+              - paragraph [ref=f384e431]: Love it. Just the right size for a bedside. Works well.
+          - generic [ref=f384e432]:
+            - generic [ref=f384e433]:
+              - generic [ref=f384e434]:
+                - img "5 star review" [ref=f384e435]:
+                  - generic [ref=f384e436]: 
+                  - generic [ref=f384e437]: 
+                  - generic [ref=f384e438]: 
+                  - generic [ref=f384e439]: 
+                  - generic [ref=f384e440]: 
+                - time [ref=f384e441]: 06/10/2026
+              - generic [ref=f384e442]:
+                - generic [ref=f384e443]:  
+                - generic [ref=f384e444]:
+                  - text: Brett McKean
+                  - generic [ref=f384e445]: Verified
+            - generic [ref=f384e448]:
+              - generic [ref=f384e449]: These Table Lamps are really well made and
+              - paragraph [ref=f384e451]: These Table Lamps are really well made and perfect for the Task Lighting with really easy options
+        - generic [ref=f384e452]:
+          - button "Page 1": "1"
+          - button "Page 2" [ref=f384e453] [cursor=pointer]: "2"
+          - button "Page 3" [ref=f384e454] [cursor=pointer]: "3"
+          - button "Page 2" [ref=f384e455] [cursor=pointer]: 
+          - button "Page 4" [ref=f384e456] [cursor=pointer]: 
+    - generic [ref=f384e459]:
+      - heading "You may also like You may also like" [level=2] [ref=f384e462]:
+        - text: You may also like
+        - generic [ref=f384e463]: You may also like
+      - generic [ref=f384e469]:
+        - generic [ref=f384e470]:
+          - link [ref=f384e472] [cursor=pointer]:
+            - /url: /products/shipping-protection?pr_prod_strat=jac&pr_rec_id=801523942&pr_rec_pid=7911427145781&pr_ref_pid=7684778524725&pr_seq=uniform
+            - img "ship-protect image" [ref=f384e473]
+          - generic [ref=f384e475]:
+            - link "Shipping Protection" [ref=f384e477] [cursor=pointer]:
+              - /url: /products/shipping-protection?pr_prod_strat=jac&pr_rec_id=801523942&pr_rec_pid=7911427145781&pr_ref_pid=7684778524725&pr_seq=uniform
+            - generic [ref=f384e479]:
+              - generic [ref=f384e480]: Sale price
+              - text: From $0.98
+        - generic [ref=f384e481]:
+          - generic: Save 28%
+          - link [ref=f384e483] [cursor=pointer]:
+            - /url: /products/tt-dl02-led-desk-lamp?pr_prod_strat=e5_desc&pr_rec_id=801523942&pr_rec_pid=4335845277749&pr_ref_pid=7684778524725&pr_seq=uniform
+            - img "TaoTronics TT-DL02 LED Desk Lamp with USB Charging | Adjustable Desk Light with 4 Lighting Modes" [ref=f384e484]
+          - generic [ref=f384e486]:
+            - link "TaoTronics TT-DL02 LED Desk Lamp with USB Charging | Adjustable Desk Light with 4 Lighting Modes" [ref=f384e488] [cursor=pointer]:
+              - /url: /products/tt-dl02-led-desk-lamp?pr_prod_strat=e5_desc&pr_rec_id=801523942&pr_rec_pid=4335845277749&pr_ref_pid=7684778524725&pr_seq=uniform
+            - generic [ref=f384e489]:
+              - generic [ref=f384e490]:
+                - generic [ref=f384e491]: Sale price
+                - text: $64.99
+              - generic [ref=f384e492]:
+                - generic [ref=f384e493]: Regular price
+                - text: $89.99
+        - generic [ref=f384e494]:
+          - generic: Save 44%
+          - link [ref=f384e496] [cursor=pointer]:
+            - /url: /products/taotronics-led-metal-gooseneck-floor-lamp-72-large-69-3-minimalism-modern-with-stable-and-weighted-base?pr_prod_strat=e5_desc&pr_rec_id=801523942&pr_rec_pid=7535866642485&pr_ref_pid=7684778524725&pr_seq=uniform
+            - img "Floor lamp 72 Modern Standing Light-TaoTronics" [ref=f384e497]
+          - generic [ref=f384e498]:
+            - generic [ref=f384e499]:
+              - link "TaoTronics TT-DL072 LED Gooseneck Floor Lamp | Modern Adjustable Standing Lamp for Reading & Home Lighting" [ref=f384e501] [cursor=pointer]:
+                - /url: /products/taotronics-led-metal-gooseneck-floor-lamp-72-large-69-3-minimalism-modern-with-stable-and-weighted-base?pr_prod_strat=e5_desc&pr_rec_id=801523942&pr_rec_pid=7535866642485&pr_ref_pid=7684778524725&pr_seq=uniform
+              - generic [ref=f384e502]:
+                - generic [ref=f384e503]:
+                  - generic [ref=f384e504]: Sale price
+                  - text: $49.99
+                - generic [ref=f384e505]:
+                  - generic [ref=f384e506]: Regular price
+                  - text: $89.99
+            - group "Color" [ref=f384e508]:
+              - radio "White" [checked] [ref=f384e510] [cursor=pointer]
+              - generic [ref=f384e511] [cursor=pointer]: White
+        - generic [ref=f384e513]:
+          - generic: Save 32%
+          - link [ref=f384e515] [cursor=pointer]:
+            - /url: /products/taotronics-uranus-l1-new-classical-led-desk-lamp-tt-dl02?pr_prod_strat=e5_desc&pr_rec_id=801523942&pr_rec_pid=7859932332085&pr_ref_pid=7684778524725&pr_seq=uniform
+            - img "TaoTronics TT-DL1055 Jupiter L1 Full Spectrum LED Desk Lamp, Adjustable Arm & 3 Color Modes" [ref=f384e516]
+          - generic [ref=f384e518]:
+            - link "TaoTronics TT-DL1055 Jupiter L1 Full Spectrum LED Desk Lamp, Adjustable Arm & 3 Color Modes" [ref=f384e520] [cursor=pointer]:
+              - /url: /products/taotronics-uranus-l1-new-classical-led-desk-lamp-tt-dl02?pr_prod_strat=e5_desc&pr_rec_id=801523942&pr_rec_pid=7859932332085&pr_ref_pid=7684778524725&pr_seq=uniform
+            - generic [ref=f384e521]:
+              - generic [ref=f384e522]:
+                - generic [ref=f384e523]: Sale price
+                - text: $94.99
+              - generic [ref=f384e524]:
+                - generic [ref=f384e525]: Regular price
+                - text: $138.99
+        - generic [ref=f384e526]:
+          - generic: Save 43%
+          - link [ref=f384e528] [cursor=pointer]:
+            - /url: /products/taotronics-4-in-1-smart-rgb-floor-lamp-with-shelves-nb-dl003-dimmable-rgb-solid-wood-standing-lamp-with-phone-charging?pr_prod_strat=e5_desc&pr_rec_id=801523942&pr_rec_pid=7947884167221&pr_ref_pid=7684778524725&pr_seq=uniform
+            - img "TaoTronics NB-DL003 Smart RGB Floor Lamp with Shelves, Dimmable Standing Corner Lamp with Wireless Charging, App & Voice Control" [ref=f384e529]
+          - generic [ref=f384e531]:
+            - link "TaoTronics NB-DL003 Smart RGB Floor Lamp with Shelves, Dimmable Standing Corner Lamp with Wireless Charging, App & Voice Control" [ref=f384e533] [cursor=pointer]:
+              - /url: /products/taotronics-4-in-1-smart-rgb-floor-lamp-with-shelves-nb-dl003-dimmable-rgb-solid-wood-standing-lamp-with-phone-charging?pr_prod_strat=e5_desc&pr_rec_id=801523942&pr_rec_pid=7947884167221&pr_ref_pid=7684778524725&pr_seq=uniform
+            - generic [ref=f384e534]:
+              - generic [ref=f384e535]:
+                - generic [ref=f384e536]: Sale price
+                - text: $79.99
+              - generic [ref=f384e537]:
+                - generic [ref=f384e538]: Regular price
+                - text: $139.99
+    - region [ref=f384e543]:
+      - group "Item 1 of 4" [ref=f384e544]:
+        - paragraph [ref=f384e551]: Free Delivery Above $39.99
+      - group "Item 2 of 4" [ref=f384e552]:
+        - paragraph [ref=f384e558]: 30-Day Money-Back Guarantee
+      - group "Item 3 of 4" [ref=f384e559]:
+        - paragraph [ref=f384e564]: 12 Months Warranty
+      - group "Item 4 of 4" [ref=f384e565]:
+        - paragraph [ref=f384e573]: Lifetime Customer Support
+    - generic [ref=f384e577]:
+      - generic [ref=f384e578]:
+        - generic [ref=f384e579]:
+          - paragraph [ref=f384e580]: Products
+          - list [ref=f384e581]:
+            - listitem [ref=f384e582]:
+              - link "Lamp" [ref=f384e583] [cursor=pointer]:
+                - /url: /collections/lamp
+            - listitem [ref=f384e584]:
+              - link "Massage Gun" [ref=f384e585] [cursor=pointer]:
+                - /url: /collections/massage-guns
+            - listitem [ref=f384e586]:
+              - link "Headphones" [ref=f384e587] [cursor=pointer]:
+                - /url: /collections/headphones
+            - listitem [ref=f384e588]:
+              - link "Kitchenware" [ref=f384e589] [cursor=pointer]:
+                - /url: /collections/kitchen
+        - generic [ref=f384e590]:
+          - paragraph [ref=f384e591]: Support
+          - list [ref=f384e592]:
+            - listitem [ref=f384e593]:
+              - link "Privacy Policy" [ref=f384e594] [cursor=pointer]:
+                - /url: /pages/privacy-policy
+            - listitem [ref=f384e595]:
+              - link "Terms of Service" [ref=f384e596] [cursor=pointer]:
+                - /url: /pages/terms-of-service
+            - listitem [ref=f384e597]:
+              - link "Refund & Return Policy" [ref=f384e598] [cursor=pointer]:
+                - /url: /pages/refund-and-return-policy
+            - listitem [ref=f384e599]:
+              - link "Shipping Policy" [ref=f384e600] [cursor=pointer]:
+                - /url: /pages/shipping-policy
+            - listitem [ref=f384e601]:
+              - link "Official Statement" [ref=f384e602] [cursor=pointer]:
+                - /url: /pages/official-statement-on-unauthorized-websites
+        - generic [ref=f384e603]:
+          - paragraph [ref=f384e604]: Explore
+          - list [ref=f384e605]:
+            - listitem [ref=f384e606]:
+              - link "About Us" [ref=f384e607] [cursor=pointer]:
+                - /url: /pages/about-us
+            - listitem [ref=f384e608]:
+              - link "Wholesale" [ref=f384e609] [cursor=pointer]:
+                - /url: /pages/wholesale
+            - listitem [ref=f384e610]:
+              - link "Affiliates" [ref=f384e611] [cursor=pointer]:
+                - /url: /pages/affiliates
+            - listitem [ref=f384e612]:
+              - link "Contact Us" [ref=f384e613] [cursor=pointer]:
+                - /url: /pages/contact-us
+        - generic [ref=f384e615]:
+          - paragraph [ref=f384e616]: Get an Exclusive 15% Off Your First Purchase
+          - generic [ref=f384e618]:
+            - textbox "E-mail" [ref=f384e619]:
+              - /placeholder: " "
+            - generic: E-mail
+            - button "Subscribe" [ref=f384e621] [cursor=pointer]
+      - generic [ref=f384e624]:
+        - list [ref=f384e626]:
+          - listitem [ref=f384e627]:
+            - link "Follow on Facebook" [ref=f384e628] [cursor=pointer]:
+              - /url: https://www.facebook.com/TaoTronics
+          - listitem [ref=f384e630]:
+            - link "Follow on Twitter" [ref=f384e631] [cursor=pointer]:
+              - /url: https://x.com/TaoTronics
+          - listitem [ref=f384e633]:
+            - link "Follow on Instagram" [ref=f384e634] [cursor=pointer]:
+              - /url: https://www.instagram.com/taotronics_official/
+          - listitem [ref=f384e636]:
+            - link "Follow on Pinterest" [ref=f384e637] [cursor=pointer]:
+              - /url: https://www.pinterest.com/taotronics_official/
+          - listitem [ref=f384e639]:
+            - link "Follow on YouTube" [ref=f384e640] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCOACOUc8D0VA_J7yzu0xx4g
+        - generic [ref=f384e642]:
+          - list [ref=f384e643]:
+            - listitem [ref=f384e644]:
+              - img "Amazon" [ref=f384e645]
+            - listitem [ref=f384e650]:
+              - img "American Express" [ref=f384e651]
+            - listitem [ref=f384e656]:
+              - img "Diners Club" [ref=f384e657]
+            - listitem [ref=f384e661]:
+              - img "Discover" [ref=f384e662]
+            - listitem [ref=f384e671]:
+              - img "Google Pay" [ref=f384e672]
+            - listitem [ref=f384e680]:
+              - img "Mastercard" [ref=f384e681]
+            - listitem [ref=f384e688]:
+              - img "PayPal" [ref=f384e689]
+            - listitem [ref=f384e695]:
+              - img "Shop Pay" [ref=f384e696]
+            - listitem [ref=f384e700]:
+              - img "Visa" [ref=f384e701]
+          - paragraph [ref=f384e707]:
+            - text: © 2026, TaoTronics US.
+            - link "Powered by Shopify" [ref=f384e708] [cursor=pointer]:
+              - /url: https://www.shopify.com?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+  - generic:
+    - complementary:
+      - button "Click to open Judge.me floating reviews tab" [ref=f384e709] [cursor=pointer]: ★ Reviews
+      - generic:        about   about    Verified about   about    Verified about   
+  - generic:
+    - complementary

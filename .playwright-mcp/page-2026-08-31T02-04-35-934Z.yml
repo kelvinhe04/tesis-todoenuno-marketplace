@@ -1,0 +1,55 @@
+- generic [ref=f8e2]:
+  - generic [ref=f8e3]: Cap. III · 3.2 Arquitectura propuesta
+  - heading "Arquitectura del marketplace" [level=1] [ref=f8e5]
+  - paragraph [ref=f8e6]: "Diagrama de componentes de la plataforma: el frontend solo habla con el API Gateway, cada microservicio es dueño de su propia base de datos, y Órdenes, Pagos y Notificaciones se coordinan por eventos a través de RabbitMQ en lugar de llamarse directamente entre sí."
+  - figure [ref=f8e8]:
+    - 'img "Diagrama de arquitectura: el frontend React envía peticiones REST al API Gateway, que enruta hacia seis microservicios (Usuarios/Auth, Catálogo, Carrito, Órdenes, Pagos, Notificaciones), cada uno con su propia base de datos; Órdenes, Pagos y Notificaciones además se comunican de forma asíncrona a través de un broker RabbitMQ, y Notificaciones envía correos por SMTP." [ref=f8e9]':
+      - generic [ref=f8e85]:
+        - generic [ref=f8e88]: Frontend
+        - generic [ref=f8e89]: React + Vite (SPA)
+        - generic [ref=f8e90]: HTTPS · REST
+        - generic [ref=f8e93]: API Gateway
+        - generic [ref=f8e94]: valida JWT · enruta · rate limit
+        - generic [ref=f8e95]: REST (síncrono)
+        - generic [ref=f8e102]:
+          - generic [ref=f8e105]: Usuarios /
+          - generic [ref=f8e106]: Auth
+          - generic [ref=f8e109]: Catálogo
+          - generic [ref=f8e112]: Carrito
+          - generic [ref=f8e115]: Órdenes
+          - generic [ref=f8e118]: Pagos
+          - generic [ref=f8e121]: Notificaciones
+        - generic [ref=f8e124]: PostgreSQL
+        - generic [ref=f8e127]: MongoDB
+        - generic [ref=f8e130]: Redis
+        - generic [ref=f8e133]: PostgreSQL
+        - generic [ref=f8e136]: PostgreSQL
+        - generic [ref=f8e137]: (sin BD propia)
+        - generic [ref=f8e138]: OrdenCreada ↕
+        - generic [ref=f8e139]: PagoConfirmado ↕
+        - generic [ref=f8e140]: consume
+        - generic [ref=f8e143]: RabbitMQ
+        - generic [ref=f8e144]: eventos asíncronos
+        - generic [ref=f8e147]: Correo
+        - generic [ref=f8e148]: (SMTP)
+    - generic [ref=f8e149]:
+      - generic [ref=f8e150]:
+        - generic [ref=f8e151]: REST síncrono / persistencia
+        - generic [ref=f8e153]: evento asíncrono (RabbitMQ)
+        - generic [ref=f8e155]: punto único de entrada
+      - text: "Figura — El frontend solo conoce el API Gateway, que valida el JWT y enruta cada solicitud REST al microservicio correspondiente. Cada microservicio es dueño exclusivo de su base de datos (persistencia poliglota: PostgreSQL para Usuarios/Auth, Órdenes y Pagos por consistencia ACID; MongoDB para Catálogo por flexibilidad de esquema; Redis para Carrito por velocidad). Órdenes, Pagos y Notificaciones no se llaman entre sí directamente: se coordinan publicando y consumiendo eventos en RabbitMQ, lo que permite agregar o quitar consumidores sin modificar quien emite el evento."
+  - generic [ref=f8e157]:
+    - generic [ref=f8e158]:
+      - generic [ref=f8e159]: Flujo síncrono
+      - paragraph [ref=f8e160]: Login, búsqueda de catálogo y agregar al carrito necesitan respuesta inmediata → REST a través del Gateway.
+    - generic [ref=f8e161]:
+      - generic [ref=f8e162]: Flujo asíncrono
+      - paragraph [ref=f8e163]:
+        - text: Al confirmar el checkout, Órdenes publica
+        - code [ref=f8e164]: OrdenCreada
+        - text: ; Pagos la consume, cobra y publica
+        - code [ref=f8e165]: PagoConfirmado
+        - text: ; Notificaciones y Órdenes reaccionan a ese evento cada uno por su lado.
+    - generic [ref=f8e166]:
+      - generic [ref=f8e167]: Por qué Notificaciones no tiene BD
+      - paragraph [ref=f8e168]: "Es un servicio sin estado: reacciona a eventos y envía el correo; no necesita persistir nada propio para el alcance de este prototipo."

@@ -1,0 +1,48 @@
+- generic [ref=f8e2]:
+  - banner [ref=f8e3]:
+    - generic [ref=f8e5]:
+      - link "TodoEnUno" [ref=f8e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=f8e7]:
+        - searchbox "Buscar productos y servicios..." [ref=f8e12]
+      - navigation "Principal" [ref=f8e13]:
+        - link "Categorías" [ref=f8e14] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Mis órdenes" [ref=f8e15] [cursor=pointer]:
+          - /url: /ordenes
+      - generic [ref=f8e16]:
+        - link "Notificaciones" [ref=f8e17] [cursor=pointer]:
+          - /url: /perfil
+        - link "Carrito" [ref=f8e21] [cursor=pointer]:
+          - /url: /carrito
+        - link "Mi perfil" [ref=f8e26] [cursor=pointer]:
+          - /url: /perfil
+        - button "Salir" [ref=f8e30] [cursor=pointer]
+  - main [ref=f8e31]
+  - contentinfo [ref=f8e34]:
+    - generic [ref=f8e35]:
+      - generic [ref=f8e36]:
+        - generic [ref=f8e37]: TodoEnUno
+        - paragraph [ref=f8e38]: Un marketplace para vendedores y compradores independientes. Prototipo académico construido sobre una arquitectura de microservicios.
+      - generic [ref=f8e39]:
+        - generic [ref=f8e40]:
+          - heading "Comprar" [level=4] [ref=f8e41]
+          - link "Explorar catálogo" [ref=f8e42] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Mis órdenes" [ref=f8e43] [cursor=pointer]:
+            - /url: /ordenes
+          - link "Mi carrito" [ref=f8e44] [cursor=pointer]:
+            - /url: /carrito
+        - generic [ref=f8e45]:
+          - heading "Vender" [level=4] [ref=f8e46]
+          - link "Panel de vendedor" [ref=f8e47] [cursor=pointer]:
+            - /url: /vendedor
+          - generic [ref=f8e48]: Publicar producto
+          - generic [ref=f8e49]: Publicar servicio
+        - generic [ref=f8e50]:
+          - heading "Cuenta" [level=4] [ref=f8e51]
+          - link "Iniciar sesión" [ref=f8e52] [cursor=pointer]:
+            - /url: /login
+          - link "Crear cuenta" [ref=f8e53] [cursor=pointer]:
+            - /url: /registro
+    - generic [ref=f8e54]: © 2026 TodoEnUno — prototipo de trabajo de graduación.

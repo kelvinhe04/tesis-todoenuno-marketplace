@@ -1,0 +1,469 @@
+- generic [ref=f50e1]:
+  - generic [ref=f50e405]:
+    - navigation [ref=f50e408]:
+      - link [ref=f50e410] [cursor=pointer]:
+        - /url: /
+      - search [ref=f50e415]:
+        - generic [ref=f50e416]:
+          - button "Photos" [ref=f50e418] [cursor=pointer]
+          - searchbox "Search for free photos" [ref=f50e426]: mouse pad
+          - button [ref=f50e428] [cursor=pointer]
+      - generic [ref=f50e432]:
+        - link "Explore" [ref=f50e434] [cursor=pointer]:
+          - /url: /discover/
+        - link "License" [ref=f50e438] [cursor=pointer]:
+          - /url: /license/
+        - button [ref=f50e441] [cursor=pointer]
+        - button "Join" [ref=f50e444] [cursor=pointer]
+    - main [ref=f50e447]:
+      - generic [ref=f50e448]:
+        - generic [ref=f50e452]:
+          - paragraph [ref=f50e454] [cursor=pointer]: Any
+          - paragraph [ref=f50e459] [cursor=pointer]: Horizontal
+          - paragraph [ref=f50e464] [cursor=pointer]: Vertical
+          - paragraph [ref=f50e469] [cursor=pointer]: Square
+        - generic [ref=f50e473]:
+          - paragraph [ref=f50e475] [cursor=pointer]: Any
+          - paragraph [ref=f50e477] [cursor=pointer]: "0"
+          - paragraph [ref=f50e482] [cursor=pointer]: "1"
+          - paragraph [ref=f50e487] [cursor=pointer]: "2"
+          - paragraph [ref=f50e492] [cursor=pointer]: 3+
+        - generic [ref=f50e496]:
+          - paragraph [ref=f50e498] [cursor=pointer]: Any
+          - paragraph [ref=f50e503] [cursor=pointer]: Baby
+          - paragraph [ref=f50e508] [cursor=pointer]: Child
+          - paragraph [ref=f50e513] [cursor=pointer]: Teenager
+          - paragraph [ref=f50e518] [cursor=pointer]: Adult
+          - paragraph [ref=f50e523] [cursor=pointer]: Senior adult
+        - generic [ref=f50e526]:
+          - generic [ref=f50e527]:
+            - generic [ref=f50e528] [cursor=pointer]
+            - slider [ref=f50e530] [cursor=pointer]
+            - slider [ref=f50e531] [cursor=pointer]
+          - generic [ref=f50e532]:
+            - generic [ref=f50e533]:
+              - paragraph [ref=f50e534]: Minimum
+              - paragraph [ref=f50e535]: 1,080px
+            - generic [ref=f50e536]:
+              - paragraph [ref=f50e537]: Maximum
+              - paragraph [ref=f50e538]: 20,000px+
+        - generic [ref=f50e541]:
+          - generic [ref=f50e542]:
+            - generic [ref=f50e543] [cursor=pointer]
+            - slider [ref=f50e545] [cursor=pointer]
+            - slider [ref=f50e546] [cursor=pointer]
+          - generic [ref=f50e547]:
+            - generic [ref=f50e548]:
+              - paragraph [ref=f50e549]: Minimum
+              - paragraph [ref=f50e550]: 1,080px
+            - generic [ref=f50e551]:
+              - paragraph [ref=f50e552]: Maximum
+              - paragraph [ref=f50e553]: 20,000px+
+        - generic [ref=f50e557]:
+          - button [ref=f50e558] [cursor=pointer]:
+            - textbox [ref=f50e564]:
+              - /placeholder: Enter hex code
+          - button [ref=f50e567] [cursor=pointer]:
+            - textbox [ref=f50e573]: "#000000"
+        - generic [ref=f50e577]:
+          - paragraph [ref=f50e579] [cursor=pointer]: Any
+          - paragraph [ref=f50e584] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f50e589] [cursor=pointer]: Last week
+          - paragraph [ref=f50e594] [cursor=pointer]: Last month
+          - paragraph [ref=f50e599] [cursor=pointer]: Last year
+        - main "main-content" [ref=f50e600]:
+          - generic [ref=f50e601]:
+            - heading "Free Mouse Pad Photos" [level=1] [ref=f50e604]
+            - generic [ref=f50e607]:
+              - link "Photos 14.5K" [ref=f50e609] [cursor=pointer]:
+                - /url: /search/mouse%20pad/
+                - text: Photos
+                - generic [ref=f50e610]: 14.5K
+              - link "Videos 5.3K" [ref=f50e611] [cursor=pointer]:
+                - /url: /search/videos/mouse%20pad/
+                - text: Videos
+                - generic [ref=f50e612]: 5.3K
+              - link "Users 29.3K" [ref=f50e613] [cursor=pointer]:
+                - /url: /search/users/mouse%20pad/
+                - text: Users
+                - generic [ref=f50e614]: 29.3K
+            - generic [ref=f50e616]:
+              - button "Filters" [ref=f50e618] [cursor=pointer]
+              - separator [ref=f50e625]
+              - generic [ref=f50e629]:
+                - link [ref=f50e631] [cursor=pointer]:
+                  - /url: /search/clipboard/
+                  - img "clipboard" [ref=f50e632]
+                  - generic [ref=f50e633]:
+                    - paragraph [ref=f50e634]: clipboard
+                    - paragraph [ref=f50e635]: 7K
+                - link [ref=f50e636] [cursor=pointer]:
+                  - /url: /search/yoga%20mat/
+                  - img "yoga mat" [ref=f50e637]
+                  - generic [ref=f50e638]:
+                    - paragraph [ref=f50e639]: yoga mat
+                    - paragraph [ref=f50e640]: 24K
+                - link [ref=f50e641] [cursor=pointer]:
+                  - /url: /search/postcard/
+                  - img "postcard" [ref=f50e642]
+                  - generic [ref=f50e643]:
+                    - paragraph [ref=f50e644]: postcard
+                    - paragraph [ref=f50e645]: 8K
+                - link [ref=f50e646] [cursor=pointer]:
+                  - /url: /search/cutting%20board/
+                  - img "cutting board" [ref=f50e647]
+                  - generic [ref=f50e648]:
+                    - paragraph [ref=f50e649]: cutting board
+                    - paragraph [ref=f50e650]: 6K
+                - link [ref=f50e651] [cursor=pointer]:
+                  - /url: /search/greeting%20card/
+                  - img "greeting card" [ref=f50e652]
+                  - generic [ref=f50e653]:
+                    - paragraph [ref=f50e654]: greeting card
+                    - paragraph [ref=f50e655]: 21K
+                - link [ref=f50e656] [cursor=pointer]:
+                  - /url: /search/computer%20mouse/
+                  - img "computer mouse" [ref=f50e657]
+                  - generic [ref=f50e658]:
+                    - paragraph [ref=f50e659]: computer mouse
+                    - paragraph [ref=f50e660]: 4K
+                - link [ref=f50e661] [cursor=pointer]:
+                  - /url: /search/mini%20skirt/
+                  - img "mini skirt" [ref=f50e662]
+                  - generic [ref=f50e663]:
+                    - paragraph [ref=f50e664]: mini skirt
+                    - paragraph [ref=f50e665]: 30K
+                - link [ref=f50e666] [cursor=pointer]:
+                  - /url: /search/mug/
+                  - img "mug" [ref=f50e667]
+                  - generic [ref=f50e668]:
+                    - paragraph [ref=f50e669]: mug
+                    - paragraph [ref=f50e670]: 10K
+                - link [ref=f50e671] [cursor=pointer]:
+                  - /url: /search/notepad/
+                  - img "notepad" [ref=f50e672]
+                  - generic [ref=f50e673]:
+                    - paragraph [ref=f50e674]: notepad
+                    - paragraph [ref=f50e675]: 3K
+                - link [ref=f50e676] [cursor=pointer]:
+                  - /url: /search/tote%20bag/
+                  - img "tote bag" [ref=f50e677]
+                  - generic [ref=f50e678]:
+                    - paragraph [ref=f50e679]: tote bag
+                    - paragraph [ref=f50e680]: 34K
+                - link [ref=f50e681] [cursor=pointer]:
+                  - /url: /search/calendar/
+                  - img "calendar" [ref=f50e682]
+                  - generic [ref=f50e683]:
+                    - paragraph [ref=f50e684]: calendar
+                    - paragraph [ref=f50e685]: 6K
+                - link [ref=f50e686] [cursor=pointer]:
+                  - /url: /search/mouse/
+                  - img "mouse" [ref=f50e687]
+                  - generic [ref=f50e688]:
+                    - paragraph [ref=f50e689]: mouse
+                    - paragraph [ref=f50e690]: 7K
+                - link [ref=f50e691] [cursor=pointer]:
+                  - /url: /search/apron/
+                  - img "apron" [ref=f50e692]
+                  - generic [ref=f50e693]:
+                    - paragraph [ref=f50e694]: apron
+                    - paragraph [ref=f50e695]: 4K
+                - link [ref=f50e696] [cursor=pointer]:
+                  - /url: /search/sticker/
+                  - img "sticker" [ref=f50e697]
+                  - generic [ref=f50e698]:
+                    - paragraph [ref=f50e699]: sticker
+                    - paragraph [ref=f50e700]: 5K
+                - link [ref=f50e701] [cursor=pointer]:
+                  - /url: /search/menu/
+                  - img "menu" [ref=f50e702]
+                  - generic [ref=f50e703]:
+                    - paragraph [ref=f50e704]: menu
+                    - paragraph [ref=f50e705]: 5K
+                - link [ref=f50e706] [cursor=pointer]:
+                  - /url: /search/desktop/
+                  - img "desktop" [ref=f50e707]
+                  - generic [ref=f50e708]:
+                    - paragraph [ref=f50e709]: desktop
+                    - paragraph [ref=f50e710]: 28K
+                - img [ref=f50e711] [cursor=pointer]
+            - generic [ref=f50e714]:
+              - generic [ref=f50e716]:
+                - generic [ref=f50e717]:
+                  - article [ref=f50e720]:
+                    - link [ref=f50e721] [cursor=pointer]:
+                      - /url: /photo/a-mouse-and-keyboard-on-a-desk-27559521/
+                      - img "Free Close-up of a modern office desk with a mouse and pad, highlighting minimalistic design. Stock Photo" [ref=f50e722]
+                  - article [ref=f50e727]:
+                    - link [ref=f50e728] [cursor=pointer]:
+                      - /url: /photo/modern-gaming-desk-setup-with-rgb-lighting-31018745/
+                      - img "Free A sleek gaming desk setup featuring a futuristic mouse, keyboard, and digital clock with ambient RGB lighting. Stock Photo" [ref=f50e729]
+                  - generic [ref=f50e733]:
+                    - generic [ref=f50e734]:
+                      - heading "S‌‌p‌o‌‌‌n‌s‌o‌‌r‌‌‌e‌‌‌d‌‌ ‌‌‌P‌‌‌h‌‌‌o‌‌t‌o‌s" [level=4] [ref=f50e735]
+                      - link [ref=f50e736] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9tb3VzZSUyMHBhZD91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbG9nbyZ1dG1fdGVybT1tb3VzZSUyMHBhZCIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiNjM2MjRmYTYtYzA3YS00YTM4LWEzZjAtM2RiMzIxZGQzMWFlIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJtb3VzZSBwYWQifX0/
+                    - generic [ref=f50e740]:
+                      - link [ref=f50e741] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL21pbmltYWxpc3QtbW91c2VwYWQtbW9ja3VwLXdpdGgtYmxhbmstcGFkLWtleWJvYXJkLW1vdXNlLWFuZC1hLXN1Y2N1bGVudC1wbGFudC1vbi1hLWdtMjE2ODI0NjU0NC01ODgyNzkxNjg_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX21lZGlhJnV0bV90ZXJtPW1vdXNlJTIwcGFkIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJwYWdlIjoic2VhcmNoX3Jlc3VsdHMiLCJwYWdlX3ZhcmlhbnQiOiJwaG90b3MiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI2MzYyNGZhNi1jMDdhLTRhMzgtYTNmMC0zZGIzMjFkZDMxYWUiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6Im1vdXNlIHBhZCJ9fQ/
+                      - link [ref=f50e742] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL21vdXNlLXBhZC1tb2NrLXVwLW9mZmljZS1kZXNrLWtleWJvYXJkLWdtMTMxMzk1Mjk5MC00MDIzMTM3MDc_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX21lZGlhJnV0bV90ZXJtPW1vdXNlJTIwcGFkIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJwYWdlIjoic2VhcmNoX3Jlc3VsdHMiLCJwYWdlX3ZhcmlhbnQiOiJwaG90b3MiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI2MzYyNGZhNi1jMDdhLTRhMzgtYTNmMC0zZGIzMjFkZDMxYWUiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6Im1vdXNlIHBhZCJ9fQ/
+                      - link [ref=f50e743] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2JsYW5rLW1vdXNlLXBhZC13aXRoLWNvbXB1dGVyLW1vdXNlLWZvci1icmFuZGluZy1vci1kZXNpZ24tcHJlc2VudGF0aW9uLTNkLXJlbmRlci1nbTEwMDY1MTg5ODYtMjcxNjQxOTg4P3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1tb3VzZSUyMHBhZCIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiNjM2MjRmYTYtYzA3YS00YTM4LWEzZjAtM2RiMzIxZGQzMWFlIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJtb3VzZSBwYWQifX0/
+                      - link [ref=f50e744] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2JsYW5rLWFuZC1ibGFjay1jb21wdXRlci1tb3VzZS1wYWQtb24tdGhlLWRlc2stYXQtaG9tZS1tb3VzZXBhZC1tb2NrdXAtY29weS1zcGFjZS1nbTE0ODg1ODE2NTQtNTEzNzA2NDMyP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1tb3VzZSUyMHBhZCIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiNjM2MjRmYTYtYzA3YS00YTM4LWEzZjAtM2RiMzIxZGQzMWFlIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJtb3VzZSBwYWQifX0/
+                    - link [ref=f50e745] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9tb3VzZSUyMHBhZD91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfY291cG9uY29kZSZ1dG1fdGVybT1tb3VzZSUyMHBhZCIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiNjM2MjRmYTYtYzA3YS00YTM4LWEzZjAtM2RiMzIxZGQzMWFlIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJtb3VzZSBwYWQifX0/
+                      - img [ref=f50e748]:
+                        - generic [ref=f50e749]: Get 20% off with code PEXELS20 »
+                  - article [ref=f50e752]:
+                    - link [ref=f50e753] [cursor=pointer]:
+                      - /url: /photo/computer-mouse-and-a-keyboard-on-a-mouse-pad-12786603/
+                      - img "Free Stylish desktop setup featuring a mechanical keyboard, computer mouse, and widescreen monitor. Stock Photo" [ref=f50e754]
+                  - article [ref=f50e759]:
+                    - link [ref=f50e760] [cursor=pointer]:
+                      - /url: /photo/black-computer-mouse-on-the-table-7265960/
+                      - img "Free Close-up of a sleek ergonomic wireless mouse and keyboard on a modern desk setup. Stock Photo" [ref=f50e761]
+                  - article [ref=f50e766]:
+                    - link [ref=f50e767] [cursor=pointer]:
+                      - /url: /photo/a-laptop-keyboard-between-a-mouse-and-drinking-glass-4930664/
+                      - img "Free Modern workspace featuring a sleek keyboard, mouse, and coffee setup on a wooden desk. Stock Photo" [ref=f50e768]
+                  - article [ref=f50e773]:
+                    - link [ref=f50e774] [cursor=pointer]:
+                      - /url: /photo/stylus-beside-a-wireless-mouse-13791411/
+                      - img "Free Close-up of a digital tablet, stylus, and mouse on a wooden desk, ideal for a tech setup. Stock Photo" [ref=f50e775]
+                - generic [ref=f50e778]:
+                  - article [ref=f50e781]:
+                    - link [ref=f50e782] [cursor=pointer]:
+                      - /url: /photo/a-mouse-pad-with-a-keyboard-and-mouse-on-it-27559487/
+                      - img "Free A clean, modern office desk setup featuring a keyboard, mouse, and laptop. Stock Photo" [ref=f50e783]
+                  - article [ref=f50e788]:
+                    - link [ref=f50e789] [cursor=pointer]:
+                      - /url: /photo/black-logitech-mouse-near-laptop-12904989/
+                      - img "Free Close-up of a wireless mouse on a black mouse pad next to a laptop in dim lighting. Stock Photo" [ref=f50e790]
+                  - article [ref=f50e795]:
+                    - link [ref=f50e796] [cursor=pointer]:
+                      - /url: /photo/a-person-holding-black-cordless-computer-mouse-11833892/
+                      - img "Free A person using a wireless mouse at a desk, perfect for business or technology themes. Stock Photo" [ref=f50e797]
+                  - article [ref=f50e802]:
+                    - link [ref=f50e803] [cursor=pointer]:
+                      - /url: /photo/a-black-mouse-on-a-mouse-pad-7430757/
+                      - img "Free A sleek wireless computer mouse on a matte black mouse pad, perfect for an elegant workspace. Stock Photo" [ref=f50e804]
+                  - article [ref=f50e809]:
+                    - link [ref=f50e810] [cursor=pointer]:
+                      - /url: /photo/gaming-on-logitech-g-pro-keyboard-18966471/
+                      - img "Free A focused gamer playing an action-packed video game on a desktop setup with RGB lighting. Stock Photo" [ref=f50e811]
+                  - article [ref=f50e816]:
+                    - link [ref=f50e817] [cursor=pointer]:
+                      - /url: /photo/black-cordless-computer-mouse-on-black-mouse-pad-7430756/
+                      - img "Free Sleek wireless mouse on a black mouse pad in a modern office setting with plants. Stock Photo" [ref=f50e818]
+                  - article [ref=f50e823]:
+                    - link [ref=f50e824] [cursor=pointer]:
+                      - /url: /photo/a-person-using-a-laptop-5882653/
+                      - img "Free Focused shot of hands typing on a laptop with coffee and accessories nearby. Stock Photo" [ref=f50e825]
+                  - article [ref=f50e830]:
+                    - link [ref=f50e831] [cursor=pointer]:
+                      - /url: /photo/modern-workspace-with-hands-typing-on-keyboard-39068814/
+                      - img "Free Hands typing on a keyboard at a modern workspace with dual screens and accessories. Stock Photo" [ref=f50e832]
+                  - article [ref=f50e837]:
+                    - link [ref=f50e838] [cursor=pointer]:
+                      - /url: /photo/black-computer-monitor-with-keyboard-13260079/
+                      - img "Free A modern computer setup with a sleek gaming PC and large monitor on a clean desk. Stock Photo" [ref=f50e839]
+                  - article [ref=f50e844]:
+                    - link [ref=f50e845] [cursor=pointer]:
+                      - /url: /photo/faceless-person-using-mouse-of-computer-7246556/
+                      - img "Free Black and white of crop anonymous worker moving mouse wheel on pad while sitting near computer on blurred background in room Stock Photo" [ref=f50e846]
+                - generic [ref=f50e849]:
+                  - generic [ref=f50e851]:
+                    - generic [ref=f50e853]:
+                      - link [ref=f50e854] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20mouse%20pad%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own mouse pad content with Canva" [ref=f50e855]
+                      - link [ref=f50e856] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20mouse%20pad%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own mouse pad content with Canva" [ref=f50e857]
+                      - link [ref=f50e858] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20mouse%20pad%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own mouse pad content with Canva" [ref=f50e859]
+                      - link [ref=f50e860] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20mouse%20pad%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own mouse pad content with Canva" [ref=f50e861]
+                    - link [ref=f50e862] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20mouse%20pad%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - paragraph [ref=f50e865]: Bring your ideas to life with Canva AI
+                    - link "Get started for free" [ref=f50e866] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20mouse%20pad%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                  - article [ref=f50e871]:
+                    - link [ref=f50e872] [cursor=pointer]:
+                      - /url: /photo/white-apple-mouse-and-keyboard-on-the-black-elephant-pad-6417/
+                      - img "Free A sleek and modern workspace featuring a keyboard and mouse on a wooden desk, ideal for office or home use. Stock Photo" [ref=f50e873]
+                  - article [ref=f50e878]:
+                    - link [ref=f50e879] [cursor=pointer]:
+                      - /url: /photo/modern-workspace-with-gaming-mouse-and-laptop-33845371/
+                      - img "Free Stylish workspace setup featuring a gaming mouse and laptop with dramatic lighting. Stock Photo" [ref=f50e880]
+                  - article [ref=f50e885]:
+                    - link [ref=f50e886] [cursor=pointer]:
+                      - /url: /photo/black-cordless-computer-mouse-on-black-mouse-pad-8576158/
+                      - img "Free Stylish ergonomic wireless mouse on a sleek black mouse pad with ambient lighting. Stock Photo" [ref=f50e887]
+                  - article [ref=f50e892]:
+                    - link [ref=f50e893] [cursor=pointer]:
+                      - /url: /photo/black-computer-keyboard-on-black-wooden-desk-13260080/
+                      - img "Free Sleek wireless keyboard and mouse setup on a minimalist desk with ambient lighting. Stock Photo" [ref=f50e894]
+                  - article [ref=f50e899]:
+                    - link [ref=f50e900] [cursor=pointer]:
+                      - /url: /photo/acer-nitro-gaming-mouse-with-rgb-backlight-19012035/
+                      - img "Free Acer gaming mouse with RGB lighting on a vibrant gaming mat, perfect for tech enthusiasts. Stock Photo" [ref=f50e901]
+                  - article [ref=f50e906]:
+                    - link [ref=f50e907] [cursor=pointer]:
+                      - /url: /photo/computer-monitor-and-keyboard-19554895/
+                      - img "Free A stylish and tech-savvy desk setup featuring a keyboard and monitor with a digital tablet. Stock Photo" [ref=f50e908]
+                  - article [ref=f50e913]:
+                    - link [ref=f50e914] [cursor=pointer]:
+                      - /url: /photo/close-up-view-of-a-person-holding-a-gaming-mouse-7915503/
+                      - img "Free A focused hand using a gaming mouse on a vibrant mouse pad with a blurred computer setup in the background. Stock Photo" [ref=f50e915]
+                  - article [ref=f50e920]:
+                    - link [ref=f50e921] [cursor=pointer]:
+                      - /url: /photo/a-pair-of-headphones-sitting-on-top-of-a-keyboard-27679707/
+                      - img "Free A sleek gaming setup featuring a backlit keyboard, wireless headphones, and a gaming mouse on a vibrant desk pad. Stock Photo" [ref=f50e922]
+              - button "Load More" [ref=f50e926] [cursor=pointer]
+            - navigation [ref=f50e929]:
+              - generic [ref=f50e931]:
+                - link "1" [ref=f50e933]:
+                  - /url: /search/mouse%20pad/
+                - link "2" [ref=f50e936] [cursor=pointer]:
+                  - /url: /search/mouse%20pad/?page=2
+                - link "3" [ref=f50e939] [cursor=pointer]:
+                  - /url: /search/mouse%20pad/?page=3
+                - link "4" [ref=f50e942] [cursor=pointer]:
+                  - /url: /search/mouse%20pad/?page=4
+                - link "5" [ref=f50e945] [cursor=pointer]:
+                  - /url: /search/mouse%20pad/?page=5
+                - link "6" [ref=f50e948] [cursor=pointer]:
+                  - /url: /search/mouse%20pad/?page=6
+                - link "Next" [ref=f50e951] [cursor=pointer]:
+                  - /url: /search/mouse%20pad/?page=2
+    - contentinfo [ref=f50e955]:
+      - separator [ref=f50e956]
+      - generic [ref=f50e957]:
+        - generic [ref=f50e958]:
+          - heading "Where stories come together." [level=2] [ref=f50e959]
+          - generic [ref=f50e960]:
+            - link "Download on iOS" [ref=f50e961] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Download on Android" [ref=f50e964] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f50e967]:
+            - listitem [ref=f50e968]:
+              - link "Instagram" [ref=f50e969] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f50e972]:
+              - link "Threads" [ref=f50e973] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f50e976]:
+              - link "YouTube" [ref=f50e977] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f50e980]:
+              - link "TikTok" [ref=f50e981] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f50e984]:
+              - link "LinkedIn" [ref=f50e985] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f50e988]:
+              - link "X" [ref=f50e989] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f50e992]:
+          - list [ref=f50e993]:
+            - heading "Pexels" [level=3] [ref=f50e994]
+            - listitem [ref=f50e995]:
+              - link "Free Stock Photos" [ref=f50e996] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f50e997]:
+              - link "Free Videos" [ref=f50e998] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f50e999]:
+              - link "Popular searches" [ref=f50e1000] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f50e1001]:
+              - link "Collections" [ref=f50e1002] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f50e1003]:
+              - link "Challenges" [ref=f50e1004] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f50e1005]:
+              - link "Leaderboard" [ref=f50e1006] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f50e1007]:
+              - link "Other plugins & apps" [ref=f50e1008] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f50e1009]:
+            - heading "Company" [level=3] [ref=f50e1010]
+            - listitem [ref=f50e1011]:
+              - link "About" [ref=f50e1012] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f50e1013]:
+              - link "Blog" [ref=f50e1014] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f50e1015]:
+              - link "Help Center" [ref=f50e1016] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f50e1017]:
+              - link "Report content" [ref=f50e1018] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f50e1019]:
+              - link "Become a Hero" [ref=f50e1020] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f50e1021]:
+              - link "Partner with Pexels" [ref=f50e1022] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f50e1023]:
+              - link "Image & Video API" [ref=f50e1024] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f50e1025]: Sign Up
+        - list [ref=f50e1026]:
+          - listitem [ref=f50e1027]:
+            - heading "Free Stock Photos" [level=3] [ref=f50e1028]
+          - listitem [ref=f50e1029]:
+            - generic [ref=f50e1031]:
+              - link "Black and white photography" [ref=f50e1033] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f50e1034] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f50e1035] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f50e1036] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f50e1037] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f50e1038] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f50e1039] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f50e1040] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f50e1041] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f50e1042] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f50e1043] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f50e1044] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f50e1045] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f50e1047]:
+        - generic [ref=f50e1048]: © 2026 Pexels
+        - generic [ref=f50e1050]:
+          - link "Terms of Use" [ref=f50e1052] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f50e1053] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f50e1054] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f50e1055] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f50e1056] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f50e1059] [cursor=pointer]
+      - separator [ref=f50e1064]
+  - alert [ref=f50e1065]

@@ -1,0 +1,83 @@
+- generic [ref=f10e3]:
+  - complementary [ref=f10e4]:
+    - generic [ref=f10e5]: TodoEnUno
+    - navigation [ref=f10e6]:
+      - generic [ref=f10e7]: Resumen
+      - generic [ref=f10e13]: Publicaciones
+      - generic [ref=f10e17]: Órdenes recibidas
+      - generic [ref=f10e20]: Perfil
+    - link "Cerrar sesión" [ref=f10e25] [cursor=pointer]:
+      - /url: "#"
+  - main [ref=f10e29]:
+    - generic [ref=f10e30]:
+      - heading "Panel de vendedor" [level=1] [ref=f10e31]
+      - generic [ref=f10e32]:
+        - generic [ref=f10e33]: TB
+        - text: Taller Barro Fino
+    - generic [ref=f10e34]:
+      - generic [ref=f10e35]:
+        - paragraph [ref=f10e36]: Publicaciones activas
+        - paragraph [ref=f10e37]: "18"
+        - paragraph [ref=f10e38]: +2 esta semana
+      - generic [ref=f10e39]:
+        - paragraph [ref=f10e40]: Órdenes pendientes
+        - paragraph [ref=f10e41]: "4"
+        - paragraph [ref=f10e42]: Requieren atención
+      - generic [ref=f10e43]:
+        - paragraph [ref=f10e44]: Ingresos del mes
+        - paragraph [ref=f10e45]: $612.00
+        - paragraph [ref=f10e46]: +18% vs. mes anterior
+    - generic [ref=f10e47]:
+      - generic [ref=f10e48]:
+        - heading "Mis publicaciones" [level=3] [ref=f10e49]
+        - button "Nueva publicación" [ref=f10e50] [cursor=pointer]
+      - table [ref=f10e52]:
+        - rowgroup [ref=f10e53]:
+          - row [ref=f10e54]:
+            - columnheader "Publicación" [ref=f10e55]
+            - columnheader "Categoría" [ref=f10e56]
+            - columnheader "Precio" [ref=f10e57]
+            - columnheader "Stock" [ref=f10e58]
+            - columnheader "Estado" [ref=f10e59]
+            - columnheader [ref=f10e60]
+        - rowgroup [ref=f10e61]:
+          - row [ref=f10e62]:
+            - cell "Lámpara de mesa en cerámica artesanal" [ref=f10e63]
+            - cell "Hogar y decoración" [ref=f10e69]
+            - cell "$38.00" [ref=f10e70]
+            - cell "12" [ref=f10e71]
+            - cell "Activa" [ref=f10e72]
+            - cell [ref=f10e73]:
+              - generic [ref=f10e74]:
+                - button [ref=f10e75] [cursor=pointer]
+                - button [ref=f10e78] [cursor=pointer]
+          - row [ref=f10e83]:
+            - cell "Set de tazas de cerámica (x4)" [ref=f10e84]
+            - cell "Hogar y decoración" [ref=f10e90]
+            - cell "$32.00" [ref=f10e91]
+            - cell "7" [ref=f10e92]
+            - cell "Activa" [ref=f10e93]
+            - cell [ref=f10e94]:
+              - generic [ref=f10e95]:
+                - button [ref=f10e96] [cursor=pointer]
+                - button [ref=f10e99] [cursor=pointer]
+          - row [ref=f10e104]:
+            - cell "Set de macetas de barro (x3)" [ref=f10e105]
+            - cell "Hogar y decoración" [ref=f10e111]
+            - cell "$22.00" [ref=f10e112]
+            - cell "0" [ref=f10e113]
+            - cell "Pausada" [ref=f10e114]
+            - cell [ref=f10e115]:
+              - generic [ref=f10e116]:
+                - button [ref=f10e117] [cursor=pointer]
+                - button [ref=f10e120] [cursor=pointer]
+          - row [ref=f10e125]:
+            - cell "Plato decorativo pintado a mano" [ref=f10e126]
+            - cell "Hogar y decoración" [ref=f10e132]
+            - cell "$26.00" [ref=f10e133]
+            - cell "9" [ref=f10e134]
+            - cell "Activa" [ref=f10e135]
+            - cell [ref=f10e136]:
+              - generic [ref=f10e137]:
+                - button [ref=f10e138] [cursor=pointer]
+                - button [ref=f10e141] [cursor=pointer]

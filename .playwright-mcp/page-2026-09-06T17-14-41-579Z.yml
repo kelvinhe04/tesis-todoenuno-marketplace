@@ -1,0 +1,29 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - link "TodoEnUno" [ref=e5] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e6]:
+      - heading "Bienvenido de vuelta." [level=2] [ref=e7]
+      - paragraph [ref=e8]: Revisa tus órdenes, sigue tus compras y descubre nuevas publicaciones de tus vendedores favoritos.
+    - generic [ref=e9]:
+      - text: "\"Encontré una diseñadora de logos increíble en menos de diez minutos.\""
+      - generic [ref=e10]: — Roberto Sanjur, comprador
+  - generic [ref=e12]:
+    - heading "Inicia sesión" [level=1] [ref=e13]
+    - paragraph [ref=e14]: Ingresa tus datos para continuar.
+    - generic [ref=e15]:
+      - generic [ref=e16]: Correo electrónico
+      - textbox "Correo electrónico" [ref=e17]:
+        - /placeholder: tucorreo@ejemplo.com
+    - generic [ref=e18]:
+      - generic [ref=e19]: Contraseña
+      - generic [ref=e21]:
+        - textbox "Contraseña" [ref=e22]:
+          - /placeholder: Tu contraseña
+        - button "Mostrar contraseña" [ref=e23] [cursor=pointer]
+    - button "Iniciar sesión" [ref=e28] [cursor=pointer]
+    - generic [ref=e29]: o
+    - paragraph [ref=e30]:
+      - text: ¿No tienes cuenta?
+      - link "Regístrate" [ref=e31] [cursor=pointer]:
+        - /url: /registro

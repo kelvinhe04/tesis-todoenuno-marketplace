@@ -1,0 +1,451 @@
+- generic [active] [ref=f28e1]:
+  - generic [ref=f28e405]:
+    - navigation [ref=f28e408]:
+      - link [ref=f28e410] [cursor=pointer]:
+        - /url: /
+      - search [ref=f28e415]:
+        - generic [ref=f28e416]:
+          - button "Photos" [ref=f28e418] [cursor=pointer]
+          - searchbox "Search for free photos" [ref=f28e426]: software installation
+          - button [ref=f28e428] [cursor=pointer]
+      - generic [ref=f28e432]:
+        - link "Explore" [ref=f28e434] [cursor=pointer]:
+          - /url: /discover/
+        - link "License" [ref=f28e438] [cursor=pointer]:
+          - /url: /license/
+        - button [ref=f28e441] [cursor=pointer]
+        - button "Join" [ref=f28e444] [cursor=pointer]
+    - main [ref=f28e447]:
+      - generic [ref=f28e448]:
+        - generic [ref=f28e452]:
+          - paragraph [ref=f28e454] [cursor=pointer]: Any
+          - paragraph [ref=f28e459] [cursor=pointer]: Horizontal
+          - paragraph [ref=f28e464] [cursor=pointer]: Vertical
+          - paragraph [ref=f28e469] [cursor=pointer]: Square
+        - generic [ref=f28e473]:
+          - paragraph [ref=f28e475] [cursor=pointer]: Any
+          - paragraph [ref=f28e477] [cursor=pointer]: "0"
+          - paragraph [ref=f28e482] [cursor=pointer]: "1"
+          - paragraph [ref=f28e487] [cursor=pointer]: "2"
+          - paragraph [ref=f28e492] [cursor=pointer]: 3+
+        - generic [ref=f28e496]:
+          - paragraph [ref=f28e498] [cursor=pointer]: Any
+          - paragraph [ref=f28e503] [cursor=pointer]: Baby
+          - paragraph [ref=f28e508] [cursor=pointer]: Child
+          - paragraph [ref=f28e513] [cursor=pointer]: Teenager
+          - paragraph [ref=f28e518] [cursor=pointer]: Adult
+          - paragraph [ref=f28e523] [cursor=pointer]: Senior adult
+        - generic [ref=f28e526]:
+          - generic [ref=f28e527]:
+            - generic [ref=f28e528] [cursor=pointer]
+            - slider [ref=f28e530] [cursor=pointer]
+            - slider [ref=f28e531] [cursor=pointer]
+          - generic [ref=f28e532]:
+            - generic [ref=f28e533]:
+              - paragraph [ref=f28e534]: Minimum
+              - paragraph [ref=f28e535]: 1,080px
+            - generic [ref=f28e536]:
+              - paragraph [ref=f28e537]: Maximum
+              - paragraph [ref=f28e538]: 20,000px+
+        - generic [ref=f28e541]:
+          - generic [ref=f28e542]:
+            - generic [ref=f28e543] [cursor=pointer]
+            - slider [ref=f28e545] [cursor=pointer]
+            - slider [ref=f28e546] [cursor=pointer]
+          - generic [ref=f28e547]:
+            - generic [ref=f28e548]:
+              - paragraph [ref=f28e549]: Minimum
+              - paragraph [ref=f28e550]: 1,080px
+            - generic [ref=f28e551]:
+              - paragraph [ref=f28e552]: Maximum
+              - paragraph [ref=f28e553]: 20,000px+
+        - generic [ref=f28e557]:
+          - button [ref=f28e558] [cursor=pointer]:
+            - textbox [ref=f28e564]:
+              - /placeholder: Enter hex code
+          - button [ref=f28e567] [cursor=pointer]:
+            - textbox [ref=f28e573]: "#000000"
+        - generic [ref=f28e577]:
+          - paragraph [ref=f28e579] [cursor=pointer]: Any
+          - paragraph [ref=f28e584] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f28e589] [cursor=pointer]: Last week
+          - paragraph [ref=f28e594] [cursor=pointer]: Last month
+          - paragraph [ref=f28e599] [cursor=pointer]: Last year
+        - main "main-content" [ref=f28e600]:
+          - generic [ref=f28e601]:
+            - heading "Free Software Installation Photos" [level=1] [ref=f28e604]
+            - generic [ref=f28e607]:
+              - link "Photos 25.3K" [ref=f28e609] [cursor=pointer]:
+                - /url: /search/software%20installation/
+                - text: Photos
+                - generic [ref=f28e610]: 25.3K
+              - link "Videos 7.3K" [ref=f28e611] [cursor=pointer]:
+                - /url: /search/videos/software%20installation/
+                - text: Videos
+                - generic [ref=f28e612]: 7.3K
+              - link "Users 2.5K" [ref=f28e613] [cursor=pointer]:
+                - /url: /search/users/software%20installation/
+                - text: Users
+                - generic [ref=f28e614]: 2.5K
+            - generic [ref=f28e616]:
+              - button "Filters" [ref=f28e618] [cursor=pointer]
+              - separator [ref=f28e625]
+              - generic [ref=f28e629]:
+                - link [ref=f28e631] [cursor=pointer]:
+                  - /url: /search/software/
+                  - img "software" [ref=f28e632]
+                  - generic [ref=f28e633]:
+                    - paragraph [ref=f28e634]: software
+                    - paragraph [ref=f28e635]: 7K
+                - link [ref=f28e636] [cursor=pointer]:
+                  - /url: /search/software%20development/
+                  - img "software development" [ref=f28e637]
+                  - generic [ref=f28e638]:
+                    - paragraph [ref=f28e639]: software development
+                    - paragraph [ref=f28e640]: 5K
+                - link [ref=f28e641] [cursor=pointer]:
+                  - /url: /search/technical%20support/
+                  - img "technical support" [ref=f28e642]
+                  - generic [ref=f28e643]:
+                    - paragraph [ref=f28e644]: technical support
+                    - paragraph [ref=f28e645]: 59K
+                - link [ref=f28e646] [cursor=pointer]:
+                  - /url: /search/software%20company/
+                  - img "software company" [ref=f28e647]
+                  - generic [ref=f28e648]:
+                    - paragraph [ref=f28e649]: software company
+                    - paragraph [ref=f28e650]: 12K
+                - link [ref=f28e651] [cursor=pointer]:
+                  - /url: /search/installation/
+                  - img "installation" [ref=f28e652]
+                  - generic [ref=f28e653]:
+                    - paragraph [ref=f28e654]: installation
+                    - paragraph [ref=f28e655]: 22K
+                - link [ref=f28e656] [cursor=pointer]:
+                  - /url: /search/software%20engineering/
+                  - img "software engineering" [ref=f28e657]
+                  - generic [ref=f28e658]:
+                    - paragraph [ref=f28e659]: software engineering
+                    - paragraph [ref=f28e660]: 92K
+                - link [ref=f28e661] [cursor=pointer]:
+                  - /url: /search/app%20development/
+                  - img "app development" [ref=f28e662]
+                  - generic [ref=f28e663]:
+                    - paragraph [ref=f28e664]: app development
+                    - paragraph [ref=f28e665]: 73K
+                - link [ref=f28e666] [cursor=pointer]:
+                  - /url: /search/software%20developer/
+                  - img "software developer" [ref=f28e667]
+                  - generic [ref=f28e668]:
+                    - paragraph [ref=f28e669]: software developer
+                    - paragraph [ref=f28e670]: 69K
+                - link [ref=f28e671] [cursor=pointer]:
+                  - /url: /search/programming/
+                  - img "programming" [ref=f28e672]
+                  - generic [ref=f28e673]:
+                    - paragraph [ref=f28e674]: programming
+                    - paragraph [ref=f28e675]: 5K
+                - link [ref=f28e676] [cursor=pointer]:
+                  - /url: /search/web%20development/
+                  - img "web development" [ref=f28e677]
+                  - generic [ref=f28e678]:
+                    - paragraph [ref=f28e679]: web development
+                    - paragraph [ref=f28e680]: 10K
+                - link [ref=f28e681] [cursor=pointer]:
+                  - /url: /search/information%20technology/
+                  - img "information technology" [ref=f28e682]
+                  - generic [ref=f28e683]:
+                    - paragraph [ref=f28e684]: information technology
+                    - paragraph [ref=f28e685]: 170K
+                - link [ref=f28e686] [cursor=pointer]:
+                  - /url: /search/it%20services/
+                  - img "it services" [ref=f28e687]
+                  - generic [ref=f28e688]:
+                    - paragraph [ref=f28e689]: it services
+                    - paragraph [ref=f28e690]: 43K
+                - link [ref=f28e691] [cursor=pointer]:
+                  - /url: /search/computer%20repair/
+                  - img "computer repair" [ref=f28e692]
+                  - generic [ref=f28e693]:
+                    - paragraph [ref=f28e694]: computer repair
+                    - paragraph [ref=f28e695]: 4K
+                - link [ref=f28e696] [cursor=pointer]:
+                  - /url: /search/digital%20product/
+                  - img "digital product" [ref=f28e697]
+                  - generic [ref=f28e698]:
+                    - paragraph [ref=f28e699]: digital product
+                    - paragraph [ref=f28e700]: 161K
+                - link [ref=f28e701] [cursor=pointer]:
+                  - /url: /search/tech%20support/
+                  - img "tech support" [ref=f28e702]
+                  - generic [ref=f28e703]:
+                    - paragraph [ref=f28e704]: tech support
+                    - paragraph [ref=f28e705]: 4K
+                - link [ref=f28e706] [cursor=pointer]:
+                  - /url: /search/customer%20support/
+                  - img "customer support" [ref=f28e707]
+                  - generic [ref=f28e708]:
+                    - paragraph [ref=f28e709]: customer support
+                    - paragraph [ref=f28e710]: 90K
+                - img [ref=f28e711] [cursor=pointer]
+            - generic [ref=f28e714]:
+              - generic [ref=f28e716]:
+                - generic [ref=f28e717]:
+                  - article [ref=f28e720]:
+                    - link [ref=f28e721] [cursor=pointer]:
+                      - /url: /photo/photographer-using-wacom-intuos-pro-m-tablet-16313648/
+                      - img "Free Hands using a stylus on a digital drawing tablet in a creative workspace. Stock Photo" [ref=f28e722]
+                  - article [ref=f28e727]:
+                    - link [ref=f28e728] [cursor=pointer]:
+                      - /url: /photo/abstract-sculpture-of-geometric-figure-at-desk-33672511/
+                      - img "Free Artistic abstract sculpture of geometric figure seated at a desk, exploring technology themes. Stock Photo" [ref=f28e729]
+                  - article [ref=f28e734]:
+                    - link [ref=f28e735] [cursor=pointer]:
+                      - /url: /photo/web-banner-with-online-information-on-computer-3803517/
+                      - img "Free From below of monitor of modern computer with opened files on blue screen Stock Photo" [ref=f28e736]
+                  - article [ref=f28e741]:
+                    - link [ref=f28e742] [cursor=pointer]:
+                      - /url: /photo/close-up-shot-of-a-person-using-a-laptop-5475809/
+                      - img "Free Close-up of hands typing on a laptop displaying green code, indoors, purple lighting. Stock Photo" [ref=f28e743]
+                  - article [ref=f28e748]:
+                    - link [ref=f28e749] [cursor=pointer]:
+                      - /url: /photo/programming-data-on-a-computer-14553707/
+                      - img "Free Colorful HTML code displayed on a computer screen for programming projects. Stock Photo" [ref=f28e750]
+                  - article [ref=f28e755]:
+                    - link [ref=f28e756] [cursor=pointer]:
+                      - /url: /photo/modern-laptop-on-wooden-desk-with-code-displayed-34803994/
+                      - img "Free A laptop displaying code on a wooden desk, in a dimly lit workspace. Stock Photo" [ref=f28e757]
+                  - article [ref=f28e762]:
+                    - link [ref=f28e763] [cursor=pointer]:
+                      - /url: /photo/close-up-shot-of-computer-monitor-9858906/
+                      - img "Free Close-up view of colorful CSS and HTML code displayed on a dark computer screen. Stock Photo" [ref=f28e764]
+                - generic [ref=f28e767]:
+                  - article [ref=f28e770]:
+                    - link [ref=f28e771] [cursor=pointer]:
+                      - /url: /photo/vintage-cd-rom-drive-with-windows-95-disc-38117138/
+                      - img "Free A vintage CD-ROM drive showcasing a Windows 95 disc, reflecting retro technology. Stock Photo" [ref=f28e772]
+                  - article [ref=f28e777]:
+                    - link [ref=f28e778] [cursor=pointer]:
+                      - /url: /photo/vintage-windows-95-cd-rom-drive-close-up-38117134/
+                      - img "Free Close-up of a retro CD-ROM drive with a Windows 95 disc, showcasing vintage technology. Stock Photo" [ref=f28e779]
+                  - article [ref=f28e784]:
+                    - link [ref=f28e785] [cursor=pointer]:
+                      - /url: /photo/female-engineer-using-laptop-3862599/
+                      - img "Free A woman engineer focuses on software analysis using a laptop indoors. Stock Photo" [ref=f28e786]
+                  - article [ref=f28e791]:
+                    - link [ref=f28e792] [cursor=pointer]:
+                      - /url: /photo/person-using-asus-laptop-1604025/
+                      - img "Free A person typing on a laptop inside an office, emphasizing technology and productivity. Stock Photo" [ref=f28e793]
+                  - article [ref=f28e798]:
+                    - link [ref=f28e799] [cursor=pointer]:
+                      - /url: /photo/settings-android-tab-270700/
+                      - img "Free A close-up photo of a computer screen showing the settings button with a cursor hovering over it. Stock Photo" [ref=f28e800]
+                  - article [ref=f28e805]:
+                    - link [ref=f28e806] [cursor=pointer]:
+                      - /url: /photo/close-up-shot-of-a-computer-screen-6253568/
+                      - img "Free Close-up of a video editing timeline on a computer screen, showcasing modern technology. Stock Photo" [ref=f28e807]
+                  - article [ref=f28e812]:
+                    - link [ref=f28e813] [cursor=pointer]:
+                      - /url: /photo/monitor-displaying-lines-of-code-6424583/
+                      - img "Free Close-up of colorful programming code displayed on a computer monitor with a dark background. Stock Photo" [ref=f28e814]
+                  - article [ref=f28e819]:
+                    - link [ref=f28e820] [cursor=pointer]:
+                      - /url: /photo/laptop-with-tangled-cables-and-cds-on-the-floor-8720267/
+                      - img "Free An overhead view of a vintage electronics setup featuring a laptop and disks with tangled cables. Stock Photo" [ref=f28e821]
+                  - article [ref=f28e826]:
+                    - link [ref=f28e827] [cursor=pointer]:
+                      - /url: /photo/code-on-screen-6424587/
+                      - img "Free Vertical shot of colorful programming code on a screen in a dark room, highlighting technology work. Stock Photo" [ref=f28e828]
+                  - article [ref=f28e833]:
+                    - link [ref=f28e834] [cursor=pointer]:
+                      - /url: /photo/web-coding-programming-development-5125366/
+                      - img "Free Close-up view of colorful programming code on a screen, ideal for tech and development themes. Stock Photo" [ref=f28e835]
+                - generic [ref=f28e838]:
+                  - generic [ref=f28e840]:
+                    - generic [ref=f28e842]:
+                      - link [ref=f28e843] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20software%20installation%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own software installation content with Canva" [ref=f28e844]
+                      - link [ref=f28e845] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20software%20installation%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own software installation content with Canva" [ref=f28e846]
+                      - link [ref=f28e847] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20software%20installation%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own software installation content with Canva" [ref=f28e848]
+                      - link [ref=f28e849] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20software%20installation%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own software installation content with Canva" [ref=f28e850]
+                    - link [ref=f28e851] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20software%20installation%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - paragraph [ref=f28e854]: Bring your ideas to life with Canva AI
+                    - link "Get started for free" [ref=f28e855] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20software%20installation%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                  - article [ref=f28e860]:
+                    - link [ref=f28e861] [cursor=pointer]:
+                      - /url: /photo/retro-cd-rom-drive-with-windows-95-disc-38117141/
+                      - img "Free Vintage CD-ROM drive with Microsoft Windows 95 disc, iconic retro tech. Stock Photo" [ref=f28e862]
+                  - article [ref=f28e867]:
+                    - link [ref=f28e868] [cursor=pointer]:
+                      - /url: /photo/close-up-of-text-on-black-background-256502/
+                      - img "Free Close-up of colorful CSS code lines on a computer screen for web development. Stock Photo" [ref=f28e869]
+                  - article [ref=f28e874]:
+                    - link [ref=f28e875] [cursor=pointer]:
+                      - /url: /photo/a-person-holding-a-compact-disc-5473401/
+                      - img "Free CD being inserted into a sleeve near computer displays with coding interface. Stock Photo" [ref=f28e876]
+                  - article [ref=f28e881]:
+                    - link [ref=f28e882] [cursor=pointer]:
+                      - /url: /photo/open-laptop-placed-on-table-near-window-7485213/
+                      - img "Free Modern gray netbook with running music production software placed on desk against window Stock Photo" [ref=f28e883]
+                  - article [ref=f28e888]:
+                    - link [ref=f28e889] [cursor=pointer]:
+                      - /url: /photo/crop-man-using-laptop-while-making-music-7485211/
+                      - img "Free Crop unrecognizable male programmer typing on netbook while working on project and creating music Stock Photo" [ref=f28e890]
+                  - article [ref=f28e895]:
+                    - link [ref=f28e896] [cursor=pointer]:
+                      - /url: /photo/imac-turend-on-89724/
+                      - img "Free A programmer in a blue shirt coding on an iMac. Perfect for technology or work-related themes. Stock Photo" [ref=f28e897]
+                  - article [ref=f28e902]:
+                    - link [ref=f28e903] [cursor=pointer]:
+                      - /url: /photo/a-person-using-a-computer-5473311/
+                      - img "Free A home office setup with a computer screen displaying code, captured at night. Stock Photo" [ref=f28e904]
+              - button "Load More" [ref=f28e908] [cursor=pointer]
+            - navigation [ref=f28e911]:
+              - generic [ref=f28e913]:
+                - link "1" [ref=f28e915]:
+                  - /url: /search/software%20installation/
+                - link "2" [ref=f28e918] [cursor=pointer]:
+                  - /url: /search/software%20installation/?page=2
+                - link "3" [ref=f28e921] [cursor=pointer]:
+                  - /url: /search/software%20installation/?page=3
+                - link "4" [ref=f28e924] [cursor=pointer]:
+                  - /url: /search/software%20installation/?page=4
+                - link "5" [ref=f28e927] [cursor=pointer]:
+                  - /url: /search/software%20installation/?page=5
+                - link "6" [ref=f28e930] [cursor=pointer]:
+                  - /url: /search/software%20installation/?page=6
+                - link "Next" [ref=f28e933] [cursor=pointer]:
+                  - /url: /search/software%20installation/?page=2
+    - contentinfo [ref=f28e937]:
+      - separator [ref=f28e938]
+      - generic [ref=f28e939]:
+        - generic [ref=f28e940]:
+          - heading "Where stories come together." [level=2] [ref=f28e941]
+          - generic [ref=f28e942]:
+            - link "Download on iOS" [ref=f28e943] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Download on Android" [ref=f28e946] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f28e949]:
+            - listitem [ref=f28e950]:
+              - link "Instagram" [ref=f28e951] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f28e954]:
+              - link "Threads" [ref=f28e955] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f28e958]:
+              - link "YouTube" [ref=f28e959] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f28e962]:
+              - link "TikTok" [ref=f28e963] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f28e966]:
+              - link "LinkedIn" [ref=f28e967] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f28e970]:
+              - link "X" [ref=f28e971] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f28e974]:
+          - list [ref=f28e975]:
+            - heading "Pexels" [level=3] [ref=f28e976]
+            - listitem [ref=f28e977]:
+              - link "Free Stock Photos" [ref=f28e978] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f28e979]:
+              - link "Free Videos" [ref=f28e980] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f28e981]:
+              - link "Popular searches" [ref=f28e982] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f28e983]:
+              - link "Collections" [ref=f28e984] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f28e985]:
+              - link "Challenges" [ref=f28e986] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f28e987]:
+              - link "Leaderboard" [ref=f28e988] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f28e989]:
+              - link "Other plugins & apps" [ref=f28e990] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f28e991]:
+            - heading "Company" [level=3] [ref=f28e992]
+            - listitem [ref=f28e993]:
+              - link "About" [ref=f28e994] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f28e995]:
+              - link "Blog" [ref=f28e996] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f28e997]:
+              - link "Help Center" [ref=f28e998] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f28e999]:
+              - link "Report content" [ref=f28e1000] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f28e1001]:
+              - link "Become a Hero" [ref=f28e1002] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f28e1003]:
+              - link "Partner with Pexels" [ref=f28e1004] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f28e1005]:
+              - link "Image & Video API" [ref=f28e1006] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f28e1007]: Sign Up
+        - list [ref=f28e1008]:
+          - listitem [ref=f28e1009]:
+            - heading "Free Stock Photos" [level=3] [ref=f28e1010]
+          - listitem [ref=f28e1011]:
+            - generic [ref=f28e1013]:
+              - link "Black and white photography" [ref=f28e1015] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f28e1016] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f28e1017] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f28e1018] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f28e1019] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f28e1020] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f28e1021] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f28e1022] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f28e1023] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f28e1024] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f28e1025] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f28e1026] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f28e1027] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f28e1029]:
+        - generic [ref=f28e1030]: © 2026 Pexels
+        - generic [ref=f28e1032]:
+          - link "Terms of Use" [ref=f28e1034] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f28e1035] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f28e1036] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f28e1037] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f28e1038] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f28e1041] [cursor=pointer]
+      - separator [ref=f28e1046]
+  - alert [ref=f28e1047]

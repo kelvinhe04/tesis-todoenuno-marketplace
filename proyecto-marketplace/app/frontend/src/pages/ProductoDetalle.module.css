@@ -1,0 +1,217 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .layout {
+    flex-direction: row;
+  }
+}
+
+.gallery {
+  flex: 1;
+  min-width: 0;
+}
+
+.mainImage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mainImage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(21, 23, 15, 0.06);
+  background: linear-gradient(180deg, oklch(48% 0.12 152 / 0.05), transparent 40%, oklch(48% 0.12 152 / 0.05));
+  pointer-events: none;
+}
+
+.mainImage.blanco {
+  background: #fff;
+}
+
+.mainImage img {
+  width: 100%;
+  height: 100%;
+  filter: saturate(0.88) sepia(0.05) brightness(1.01);
+}
+
+.mainImage img.contain {
+  object-fit: contain;
+}
+
+.mainImage img.cover {
+  object-fit: cover;
+}
+
+.thumbStrip {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.625rem;
+}
+
+.thumbBtn {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1.5px solid var(--color-border);
+  padding: 0;
+  cursor: pointer;
+  background: var(--color-accent-soft);
+}
+
+.thumbBtn.blanco {
+  background: #fff;
+}
+
+.thumbBtn.active {
+  border-color: var(--color-accent);
+}
+
+.thumbBtn img {
+  width: 100%;
+  height: 100%;
+}
+
+.thumbBtn img.contain {
+  object-fit: contain;
+}
+
+.thumbBtn img.cover {
+  object-fit: cover;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.marca {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: -0.5rem 0;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.precio {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.vendorBox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+
+.vendorAvatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.qtyRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.qtyStepper {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.qtyStepper button {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  background: var(--color-surface);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qtyStepper button:hover {
+  background: var(--color-bg);
+}
+
+.qtyStepper span {
+  width: 2.75rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.actionsRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.section h2 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+}
+
+.specs {
+  max-width: 32rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.specRow {
+  display: flex;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.875rem;
+}
+
+.specRow dt {
+  width: 9rem;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.specRow dd {
+  margin: 0;
+  font-weight: 600;
+}

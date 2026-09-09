@@ -1,0 +1,479 @@
+- generic [ref=f128e1]:
+  - generic [ref=f128e405]:
+    - navigation [ref=f128e408]:
+      - link [ref=f128e410] [cursor=pointer]:
+        - /url: /
+      - search [ref=f128e415]:
+        - generic [ref=f128e416]:
+          - button "Photos" [ref=f128e418] [cursor=pointer]
+          - searchbox "Search for free photos" [ref=f128e426]: hair salon styling
+          - button [ref=f128e428] [cursor=pointer]
+      - generic [ref=f128e432]:
+        - link "Explore" [ref=f128e434] [cursor=pointer]:
+          - /url: /discover/
+        - link "License" [ref=f128e438] [cursor=pointer]:
+          - /url: /license/
+        - button [ref=f128e441] [cursor=pointer]
+        - button "Join" [ref=f128e444] [cursor=pointer]
+    - main [ref=f128e447]:
+      - generic [ref=f128e448]:
+        - generic [ref=f128e452]:
+          - paragraph [ref=f128e454] [cursor=pointer]: Any
+          - paragraph [ref=f128e459] [cursor=pointer]: Horizontal
+          - paragraph [ref=f128e464] [cursor=pointer]: Vertical
+          - paragraph [ref=f128e469] [cursor=pointer]: Square
+        - generic [ref=f128e473]:
+          - paragraph [ref=f128e475] [cursor=pointer]: Any
+          - paragraph [ref=f128e477] [cursor=pointer]: "0"
+          - paragraph [ref=f128e482] [cursor=pointer]: "1"
+          - paragraph [ref=f128e487] [cursor=pointer]: "2"
+          - paragraph [ref=f128e492] [cursor=pointer]: 3+
+        - generic [ref=f128e496]:
+          - paragraph [ref=f128e498] [cursor=pointer]: Any
+          - paragraph [ref=f128e503] [cursor=pointer]: Baby
+          - paragraph [ref=f128e508] [cursor=pointer]: Child
+          - paragraph [ref=f128e513] [cursor=pointer]: Teenager
+          - paragraph [ref=f128e518] [cursor=pointer]: Adult
+          - paragraph [ref=f128e523] [cursor=pointer]: Senior adult
+        - generic [ref=f128e526]:
+          - generic [ref=f128e527]:
+            - generic [ref=f128e528] [cursor=pointer]
+            - slider [ref=f128e530] [cursor=pointer]
+            - slider [ref=f128e531] [cursor=pointer]
+          - generic [ref=f128e532]:
+            - generic [ref=f128e533]:
+              - paragraph [ref=f128e534]: Minimum
+              - paragraph [ref=f128e535]: 1,080px
+            - generic [ref=f128e536]:
+              - paragraph [ref=f128e537]: Maximum
+              - paragraph [ref=f128e538]: 20,000px+
+        - generic [ref=f128e541]:
+          - generic [ref=f128e542]:
+            - generic [ref=f128e543] [cursor=pointer]
+            - slider [ref=f128e545] [cursor=pointer]
+            - slider [ref=f128e546] [cursor=pointer]
+          - generic [ref=f128e547]:
+            - generic [ref=f128e548]:
+              - paragraph [ref=f128e549]: Minimum
+              - paragraph [ref=f128e550]: 1,080px
+            - generic [ref=f128e551]:
+              - paragraph [ref=f128e552]: Maximum
+              - paragraph [ref=f128e553]: 20,000px+
+        - generic [ref=f128e557]:
+          - button [ref=f128e558] [cursor=pointer]:
+            - textbox [ref=f128e564]:
+              - /placeholder: Enter hex code
+          - button [ref=f128e567] [cursor=pointer]:
+            - textbox [ref=f128e573]: "#000000"
+        - generic [ref=f128e577]:
+          - paragraph [ref=f128e579] [cursor=pointer]: Any
+          - paragraph [ref=f128e584] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f128e589] [cursor=pointer]: Last week
+          - paragraph [ref=f128e594] [cursor=pointer]: Last month
+          - paragraph [ref=f128e599] [cursor=pointer]: Last year
+        - main "main-content" [ref=f128e600]:
+          - generic [ref=f128e601]:
+            - heading "Free Hair Salon Styling Photos" [level=1] [ref=f128e604]
+            - generic [ref=f128e607]:
+              - link "Photos 967K" [ref=f128e609] [cursor=pointer]:
+                - /url: /search/hair%20salon%20styling/
+                - text: Photos
+                - generic [ref=f128e610]: 967K
+              - link "Videos 86.5K" [ref=f128e611] [cursor=pointer]:
+                - /url: /search/videos/hair%20salon%20styling/
+                - text: Videos
+                - generic [ref=f128e612]: 86.5K
+              - link "Users 7.3K" [ref=f128e613] [cursor=pointer]:
+                - /url: /search/users/hair%20salon%20styling/
+                - text: Users
+                - generic [ref=f128e614]: 7.3K
+            - generic [ref=f128e616]:
+              - button "Filters" [ref=f128e618] [cursor=pointer]
+              - separator [ref=f128e625]
+              - generic [ref=f128e629]:
+                - link [ref=f128e631] [cursor=pointer]:
+                  - /url: /search/hair%20styling/
+                  - img "hair styling" [ref=f128e632]
+                  - generic [ref=f128e633]:
+                    - paragraph [ref=f128e634]: hair styling
+                    - paragraph [ref=f128e635]: 961K
+                - link [ref=f128e636] [cursor=pointer]:
+                  - /url: /search/hair%20salon/
+                  - img "hair salon" [ref=f128e637]
+                  - generic [ref=f128e638]:
+                    - paragraph [ref=f128e639]: hair salon
+                    - paragraph [ref=f128e640]: 406K
+                - link [ref=f128e641] [cursor=pointer]:
+                  - /url: /search/hair%20stylist/
+                  - img "hair stylist" [ref=f128e642]
+                  - generic [ref=f128e643]:
+                    - paragraph [ref=f128e644]: hair stylist
+                    - paragraph [ref=f128e645]: 407K
+                - link [ref=f128e646] [cursor=pointer]:
+                  - /url: /search/hairdresser/
+                  - img "hairdresser" [ref=f128e647]
+                  - generic [ref=f128e648]:
+                    - paragraph [ref=f128e649]: hairdresser
+                    - paragraph [ref=f128e650]: 5K
+                - link [ref=f128e651] [cursor=pointer]:
+                  - /url: /search/beauty%20salon/
+                  - img "beauty salon" [ref=f128e652]
+                  - generic [ref=f128e653]:
+                    - paragraph [ref=f128e654]: beauty salon
+                    - paragraph [ref=f128e655]: 1M
+                - link [ref=f128e656] [cursor=pointer]:
+                  - /url: /search/hair%20extensions/
+                  - img "hair extensions" [ref=f128e657]
+                  - generic [ref=f128e658]:
+                    - paragraph [ref=f128e659]: hair extensions
+                    - paragraph [ref=f128e660]: 408K
+                - link [ref=f128e661] [cursor=pointer]:
+                  - /url: /search/hair%20treatment/
+                  - img "hair treatment" [ref=f128e662]
+                  - generic [ref=f128e663]:
+                    - paragraph [ref=f128e664]: hair treatment
+                    - paragraph [ref=f128e665]: 422K
+                - link [ref=f128e666] [cursor=pointer]:
+                  - /url: /search/hair%20care/
+                  - img "hair care" [ref=f128e667]
+                  - generic [ref=f128e668]:
+                    - paragraph [ref=f128e669]: hair care
+                    - paragraph [ref=f128e670]: 523K
+                - link [ref=f128e671] [cursor=pointer]:
+                  - /url: /search/haircut/
+                  - img "haircut" [ref=f128e672]
+                  - generic [ref=f128e673]:
+                    - paragraph [ref=f128e674]: haircut
+                    - paragraph [ref=f128e675]: 8K
+                - link [ref=f128e676] [cursor=pointer]:
+                  - /url: /search/beauty%20parlour/
+                  - img "beauty parlour" [ref=f128e677]
+                  - generic [ref=f128e678]:
+                    - paragraph [ref=f128e679]: beauty parlour
+                    - paragraph [ref=f128e680]: 1M
+                - link [ref=f128e681] [cursor=pointer]:
+                  - /url: /search/hair%20model/
+                  - img "hair model" [ref=f128e682]
+                  - generic [ref=f128e683]:
+                    - paragraph [ref=f128e684]: hair model
+                    - paragraph [ref=f128e685]: 587K
+                - link [ref=f128e686] [cursor=pointer]:
+                  - /url: /search/hair%20products/
+                  - img "hair products" [ref=f128e687]
+                  - generic [ref=f128e688]:
+                    - paragraph [ref=f128e689]: hair products
+                    - paragraph [ref=f128e690]: 488K
+                - link [ref=f128e691] [cursor=pointer]:
+                  - /url: /search/hair%20spa/
+                  - img "hair spa" [ref=f128e692]
+                  - generic [ref=f128e693]:
+                    - paragraph [ref=f128e694]: hair spa
+                    - paragraph [ref=f128e695]: 421K
+                - link [ref=f128e696] [cursor=pointer]:
+                  - /url: /search/barber%20shop/
+                  - img "barber shop" [ref=f128e697]
+                  - generic [ref=f128e698]:
+                    - paragraph [ref=f128e699]: barber shop
+                    - paragraph [ref=f128e700]: 106K
+                - link [ref=f128e701] [cursor=pointer]:
+                  - /url: /search/hairstyle/
+                  - img "hairstyle" [ref=f128e702]
+                  - generic [ref=f128e703]:
+                    - paragraph [ref=f128e704]: hairstyle
+                    - paragraph [ref=f128e705]: 5K
+                - link [ref=f128e706] [cursor=pointer]:
+                  - /url: /search/hair%20color/
+                  - img "hair color" [ref=f128e707]
+                  - generic [ref=f128e708]:
+                    - paragraph [ref=f128e709]: hair color
+                    - paragraph [ref=f128e710]: 5K
+                - img [ref=f128e711] [cursor=pointer]
+            - generic [ref=f128e714]:
+              - generic [ref=f128e716]:
+                - generic [ref=f128e717]:
+                  - article [ref=f128e720]:
+                    - link [ref=f128e721] [cursor=pointer]:
+                      - /url: /photo/a-hairdresser-combing-clients-hair-23349912/
+                      - img "Free A hairdresser skillfully combs wet hair, focusing on smooth styling in a salon setting. Stock Photo" [ref=f128e722]
+                  - article [ref=f128e727]:
+                    - link [ref=f128e728] [cursor=pointer]:
+                      - /url: /photo/a-woman-at-a-hairdresser-14615063/
+                      - img "Free A stylist blow-dries a woman's hair using a brush and hairdryer in a salon. Stock Photo" [ref=f128e729]
+                  - article [ref=f128e734]:
+                    - link [ref=f128e735] [cursor=pointer]:
+                      - /url: /photo/photo-of-person-s-hairstyle-3065209/
+                      - img "Free Close-up of a stylist curling blonde hair into glamorous curls at a salon. Stock Photo" [ref=f128e736]
+                  - generic [ref=f128e740]:
+                    - generic [ref=f128e741]:
+                      - heading "‌‌S‌‌p‌‌o‌n‌‌‌s‌‌o‌‌r‌e‌‌‌d‌ ‌‌P‌h‌o‌t‌‌‌o‌‌s‌‌‌" [level=4] [ref=f128e742]
+                      - link [ref=f128e743] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9oYWlyJTIwc2Fsb24lMjBzdHlsaW5nP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9sb2dvJnV0bV90ZXJtPWhhaXIlMjBzYWxvbiUyMHN0eWxpbmciLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6Ijk0MWQzMmM4LWU2MTEtNDhhZC04YmE3LTI3ZjcyMzhiMmIzMSIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoiaGFpciBzYWxvbiBzdHlsaW5nIn19/
+                    - generic [ref=f128e747]:
+                      - link [ref=f128e748] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2hhaXJzdHlsaXN0LWN1dHRpbmctb24td2V0LWhhaXItd2l0aC1wcm9mZXNzaW9uYWxpc20tYW5kLXByZWNpc2lvbi1nbTIxNTI2NzMyMDMtNTczNjU5NTg4P3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1oYWlyJTIwc2Fsb24lMjBzdHlsaW5nIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI5NDFkMzJjOC1lNjExLTQ4YWQtOGJhNy0yN2Y3MjM4YjJiMzEiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6ImhhaXIgc2Fsb24gc3R5bGluZyJ9fQ/
+                      - link [ref=f128e749] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2hhaXItc3R5bGluZy1pbi1iZWF1dHktc2Fsb24td29tYW4tZG9lcy1oZXItaGFpci1pbi1tb2Rlcm4tYmVhdXR5LXNhbG9uLXdvbWFuLWdtMTQ5NzgwNjUwNC01MjAwNTA2MzE_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX21lZGlhJnV0bV90ZXJtPWhhaXIlMjBzYWxvbiUyMHN0eWxpbmciLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6Ijk0MWQzMmM4LWU2MTEtNDhhZC04YmE3LTI3ZjcyMzhiMmIzMSIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoiaGFpciBzYWxvbiBzdHlsaW5nIn19/
+                      - link [ref=f128e750] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2hhaXJkcmVzc2VyLXNlbmlvci13b21hbi1jbGllbnQtYW5kLWhhaXItY2FyZS1jb25zdWx0YXRpb24td2l0aC15b3VuZy1oYWlyc3R5bGlzdC1pbi1nbTE0NDc1OTA2NDEtNDg1MzU3MjEzP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1oYWlyJTIwc2Fsb24lMjBzdHlsaW5nIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI5NDFkMzJjOC1lNjExLTQ4YWQtOGJhNy0yN2Y3MjM4YjJiMzEiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6ImhhaXIgc2Fsb24gc3R5bGluZyJ9fQ/
+                      - link [ref=f128e751] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2hhaXJkcmVzc2VyLWN1dHRpbmctc29tZS1oYWlyLXRpcHMtZ202OTI5OTk0OTQtMTI3OTMxOTYzP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1oYWlyJTIwc2Fsb24lMjBzdHlsaW5nIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI5NDFkMzJjOC1lNjExLTQ4YWQtOGJhNy0yN2Y3MjM4YjJiMzEiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6ImhhaXIgc2Fsb24gc3R5bGluZyJ9fQ/
+                    - link [ref=f128e752] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9oYWlyJTIwc2Fsb24lMjBzdHlsaW5nP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9jb3Vwb25jb2RlJnV0bV90ZXJtPWhhaXIlMjBzYWxvbiUyMHN0eWxpbmciLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6Ijk0MWQzMmM4LWU2MTEtNDhhZC04YmE3LTI3ZjcyMzhiMmIzMSIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoiaGFpciBzYWxvbiBzdHlsaW5nIn19/
+                      - img [ref=f128e755]:
+                        - generic [ref=f128e756]: Get 20% off with code PEXELS20 »
+                  - article [ref=f128e759]:
+                    - link [ref=f128e760] [cursor=pointer]:
+                      - /url: /photo/a-woman-in-blue-denim-jeans-holding-a-hair-comb-7755216/
+                      - img "Free Close-up of hairstylist cutting client's hair in a salon setting. Stock Photo" [ref=f128e761]
+                  - article [ref=f128e766]:
+                    - link [ref=f128e767] [cursor=pointer]:
+                      - /url: /photo/woman-wearing-black-top-3331486/
+                      - img "Free Close-up of a hairstylist creating an elegant hairstyle for a woman in a salon. Stock Photo" [ref=f128e768]
+                  - link [ref=f128e772] [cursor=pointer]:
+                    - /url: /collections/good-hair-days-cmohear/
+                    - article [ref=f128e773]:
+                      - list [ref=f128e775]:
+                        - listitem [ref=f128e776]
+                        - listitem [ref=f128e778]
+                        - listitem [ref=f128e780]
+                      - generic [ref=f128e782]:
+                        - heading "Good Hair Days" [level=4] [ref=f128e783]
+                        - paragraph [ref=f128e787]: "64"
+                  - article [ref=f128e790]:
+                    - link [ref=f128e791] [cursor=pointer]:
+                      - /url: /photo/hairdresser-curling-hair-with-straightener-10318055/
+                      - img "Free A hairdresser styles a client's hair with a straightener in a modern salon setting. Stock Photo" [ref=f128e792]
+                  - article [ref=f128e797]:
+                    - link [ref=f128e798] [cursor=pointer]:
+                      - /url: /photo/woman-in-black-and-gold-round-watch-3993467/
+                      - img "Free Close-up of a hairstylist styling hair with a brush and dryer in a salon setting. Stock Photo" [ref=f128e799]
+                  - article [ref=f128e804]:
+                    - link [ref=f128e805] [cursor=pointer]:
+                      - /url: /photo/pink-hairbrush-next-to-a-black-round-hairbrush-7755143/
+                      - img "Free Close-up of pink and black hairbrushes on a towel in a salon setting. Stock Photo" [ref=f128e806]
+                  - article [ref=f128e811]:
+                    - link [ref=f128e812] [cursor=pointer]:
+                      - /url: /photo/photo-of-person-s-hairstyle-3065170/
+                      - img "Free Close-up of a stylist crafting an intricate updo hairstyle in a modern salon. Stock Photo" [ref=f128e813]
+                - generic [ref=f128e816]:
+                  - article [ref=f128e819]:
+                    - link [ref=f128e820] [cursor=pointer]:
+                      - /url: /photo/clips-on-woman-hair-at-hairdresser-20092122/
+                      - img "Free Back view of woman with brown hair and clips in salon setting. Stock Photo" [ref=f128e821]
+                  - article [ref=f128e826]:
+                    - link [ref=f128e827] [cursor=pointer]:
+                      - /url: /photo/woman-getting-a-haircut-3993320/
+                      - img "Free A female stylist expertly applying hair color to a client in a modern salon setting. Stock Photo" [ref=f128e828]
+                  - article [ref=f128e833]:
+                    - link [ref=f128e834] [cursor=pointer]:
+                      - /url: /photo/selective-focus-photo-of-person-ironing-a-woman-s-hair-3738339/
+                      - img "Free Close-up of a hairstylist using a straightening iron for sleek hairstyle indoors. Stock Photo" [ref=f128e835]
+                  - article [ref=f128e840]:
+                    - link [ref=f128e841] [cursor=pointer]:
+                      - /url: /photo/woman-posing-at-in-a-hair-salon-20046793/
+                      - img "Free Portrait of a woman with wavy brunette hair, smiling in a salon setting. Stock Photo" [ref=f128e842]
+                  - article [ref=f128e847]:
+                    - link [ref=f128e848] [cursor=pointer]:
+                      - /url: /photo/close-up-of-women-hairdressing-10028673/
+                      - img "Free Close-up of hair stylist using a hairdryer and brush to style long hair. Stock Photo" [ref=f128e849]
+                  - article [ref=f128e854]:
+                    - link [ref=f128e855] [cursor=pointer]:
+                      - /url: /photo/styling-long-red-hair-with-flat-iron-indoors-28994568/
+                      - img "Free Hands styling long red hair using a flat iron indoors. Haircare and beauty concept. Stock Photo" [ref=f128e856]
+                  - article [ref=f128e861]:
+                    - link [ref=f128e862] [cursor=pointer]:
+                      - /url: /photo/woman-with-curly-hair-7440128/
+                      - img "Free Back view of long blonde hair being combed into smooth curls with a red comb. Stock Photo" [ref=f128e863]
+                  - article [ref=f128e868]:
+                    - link [ref=f128e869] [cursor=pointer]:
+                      - /url: /photo/hands-holding-curling-iron-and-touching-hair-10318040/
+                      - img "Free Close-up of hands styling long brown hair with a curling iron in a salon. Stock Photo" [ref=f128e870]
+                  - article [ref=f128e875]:
+                    - link [ref=f128e876] [cursor=pointer]:
+                      - /url: /photo/woman-holding-a-curling-iron-7440125/
+                      - img "Free Stylist curling blonde hair with a professional curling iron in a salon setting. Stock Photo" [ref=f128e877]
+                - generic [ref=f128e880]:
+                  - generic [ref=f128e882]:
+                    - generic [ref=f128e884]:
+                      - link [ref=f128e885] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20hair%20salon%20styling%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own hair salon styling content with Canva" [ref=f128e886]
+                      - link [ref=f128e887] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20hair%20salon%20styling%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own hair salon styling content with Canva" [ref=f128e888]
+                      - link [ref=f128e889] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20hair%20salon%20styling%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own hair salon styling content with Canva" [ref=f128e890]
+                      - link [ref=f128e891] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20hair%20salon%20styling%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own hair salon styling content with Canva" [ref=f128e892]
+                    - link [ref=f128e893] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20hair%20salon%20styling%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - paragraph [ref=f128e896]: Bring your ideas to life with Canva AI
+                    - link "Get started for free" [ref=f128e897] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20hair%20salon%20styling%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                  - article [ref=f128e902]:
+                    - link [ref=f128e903] [cursor=pointer]:
+                      - /url: /photo/a-man-in-white-button-up-shirt-8867400/
+                      - img "Free Barber focusing as he styles a client's hair in a modern barber shop setting. Stock Photo" [ref=f128e904]
+                  - article [ref=f128e909]:
+                    - link [ref=f128e910] [cursor=pointer]:
+                      - /url: /photo/close-up-shot-of-woman-s-hair-15507425/
+                      - img "Free A professional hairstylist creates a blonde bridal updo for a wedding. Stock Photo" [ref=f128e911]
+                  - article [ref=f128e916]:
+                    - link [ref=f128e917] [cursor=pointer]:
+                      - /url: /photo/close-up-of-cutting-hair-6487882/
+                      - img "Free A hairdresser carefully cuts hair, focusing on precision and style. Stock Photo" [ref=f128e918]
+                  - article [ref=f128e923]:
+                    - link [ref=f128e924] [cursor=pointer]:
+                      - /url: /photo/a-hairstylist-curling-a-woman-s-hair-7440126/
+                      - img "Free Hairstylist curling a client's hair indoors, showcasing modern hairstyling techniques. Stock Photo" [ref=f128e925]
+                  - article [ref=f128e930]:
+                    - link [ref=f128e931] [cursor=pointer]:
+                      - /url: /photo/person-braiding-a-woman-s-hair-13212603/
+                      - img "Free Detailed view of a hairstylist braiding a woman's blonde hair in a salon setting. Stock Photo" [ref=f128e932]
+                  - article [ref=f128e937]:
+                    - link [ref=f128e938] [cursor=pointer]:
+                      - /url: /photo/a-woman-having-her-haircut-8467966/
+                      - img "Free Close-up of a woman receiving hair care and combing at a salon. Stock Photo" [ref=f128e939]
+              - button "Load More" [ref=f128e943] [cursor=pointer]
+            - navigation [ref=f128e946]:
+              - generic [ref=f128e948]:
+                - link "1" [ref=f128e950]:
+                  - /url: /search/hair%20salon%20styling/
+                - link "2" [ref=f128e953] [cursor=pointer]:
+                  - /url: /search/hair%20salon%20styling/?page=2
+                - link "3" [ref=f128e956] [cursor=pointer]:
+                  - /url: /search/hair%20salon%20styling/?page=3
+                - link "4" [ref=f128e959] [cursor=pointer]:
+                  - /url: /search/hair%20salon%20styling/?page=4
+                - link "5" [ref=f128e962] [cursor=pointer]:
+                  - /url: /search/hair%20salon%20styling/?page=5
+                - link "6" [ref=f128e965] [cursor=pointer]:
+                  - /url: /search/hair%20salon%20styling/?page=6
+                - link "Next" [ref=f128e968] [cursor=pointer]:
+                  - /url: /search/hair%20salon%20styling/?page=2
+    - contentinfo [ref=f128e972]:
+      - separator [ref=f128e973]
+      - generic [ref=f128e974]:
+        - generic [ref=f128e975]:
+          - heading "Where stories come together." [level=2] [ref=f128e976]
+          - generic [ref=f128e977]:
+            - link "Download on iOS" [ref=f128e978] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Download on Android" [ref=f128e981] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f128e984]:
+            - listitem [ref=f128e985]:
+              - link "Instagram" [ref=f128e986] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f128e989]:
+              - link "Threads" [ref=f128e990] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f128e993]:
+              - link "YouTube" [ref=f128e994] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f128e997]:
+              - link "TikTok" [ref=f128e998] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f128e1001]:
+              - link "LinkedIn" [ref=f128e1002] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f128e1005]:
+              - link "X" [ref=f128e1006] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f128e1009]:
+          - list [ref=f128e1010]:
+            - heading "Pexels" [level=3] [ref=f128e1011]
+            - listitem [ref=f128e1012]:
+              - link "Free Stock Photos" [ref=f128e1013] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f128e1014]:
+              - link "Free Videos" [ref=f128e1015] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f128e1016]:
+              - link "Popular searches" [ref=f128e1017] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f128e1018]:
+              - link "Collections" [ref=f128e1019] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f128e1020]:
+              - link "Challenges" [ref=f128e1021] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f128e1022]:
+              - link "Leaderboard" [ref=f128e1023] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f128e1024]:
+              - link "Other plugins & apps" [ref=f128e1025] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f128e1026]:
+            - heading "Company" [level=3] [ref=f128e1027]
+            - listitem [ref=f128e1028]:
+              - link "About" [ref=f128e1029] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f128e1030]:
+              - link "Blog" [ref=f128e1031] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f128e1032]:
+              - link "Help Center" [ref=f128e1033] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f128e1034]:
+              - link "Report content" [ref=f128e1035] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f128e1036]:
+              - link "Become a Hero" [ref=f128e1037] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f128e1038]:
+              - link "Partner with Pexels" [ref=f128e1039] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f128e1040]:
+              - link "Image & Video API" [ref=f128e1041] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f128e1042]: Sign Up
+        - list [ref=f128e1043]:
+          - listitem [ref=f128e1044]:
+            - heading "Free Stock Photos" [level=3] [ref=f128e1045]
+          - listitem [ref=f128e1046]:
+            - generic [ref=f128e1048]:
+              - link "Black and white photography" [ref=f128e1050] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f128e1051] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f128e1052] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f128e1053] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f128e1054] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f128e1055] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f128e1056] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f128e1057] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f128e1058] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f128e1059] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f128e1060] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f128e1061] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f128e1062] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f128e1064]:
+        - generic [ref=f128e1065]: © 2026 Pexels
+        - generic [ref=f128e1067]:
+          - link "Terms of Use" [ref=f128e1069] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f128e1070] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f128e1071] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f128e1072] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f128e1073] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f128e1076] [cursor=pointer]
+      - separator [ref=f128e1081]
+  - alert [ref=f128e1082]

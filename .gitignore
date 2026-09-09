@@ -1,0 +1,17 @@
+# Dependencies
+**/node_modules/
+
+# Build output
+**/dist/
+**/dist-ssr/
+
+# Environment files (contain local credentials) - keep the .example templates
+**/.env
+!**/.env.example
+
+# Logs
+**/*.log
+
+# OS / editor
+.DS_Store
+*.local

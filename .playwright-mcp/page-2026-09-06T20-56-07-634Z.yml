@@ -1,0 +1,482 @@
+- generic [ref=f192e1]:
+  - dialog "Clarip Cookie Consent Banner" [ref=f192e2]:
+    - generic [ref=f192e3]:
+      - text: We use cookies, pixels and other trackers on this website for purposes detailed in our
+      - link "Privacy Policy" [ref=f192e4] [cursor=pointer]:
+        - /url: https://www.guitarcenter.com/pages/privacy-rights-policy?srsltid=AfmBOorqXbrxdAA8SmypJ2-r7dYjnXMTRiyZu0_q9NUQeH_-ZSGuUH_g
+      - text: . Some trackers are offered by third parties and involve collection of your personal data by those third parties so they can provide services to us. By using this website, you agree to such uses and our
+      - link "Terms of Use" [ref=f192e5] [cursor=pointer]:
+        - /url: https://www.guitarcenter.com/pages/terms-of-use
+      - text: .
+      - button "customize cookie usage" [ref=f192e6] [cursor=pointer]: Cookie Preferences
+    - generic [ref=f192e7]:
+      - button "deny cookies" [ref=f192e8] [cursor=pointer]: Deny Cookies
+      - button "dismiss cookie message" [ref=f192e9] [cursor=pointer]: Accept All Cookies
+  - button "Open help dialog" [ref=f192e10] [cursor=pointer]:
+    - img "Help icon" [ref=f192e12]
+    - generic [ref=f192e13]: Help
+  - link "Skip to main content" [ref=f192e14] [cursor=pointer]:
+    - /url: "#main"
+  - link "Skip to footer" [ref=f192e15] [cursor=pointer]:
+    - /url: "#gc_footer"
+  - iframe [ref=f192e16]
+  - main [ref=f192e18]:
+    - generic [ref=f192e20]:
+      - generic [ref=f192e23]:
+        - generic [ref=f192e24]:
+          - link "Hottest Deals":
+            - /url: /All-Deals.gc?icid=426751#paginationTopAnchor
+        - generic [ref=f192e26]:
+          - 'link "Labor Day Sale: Up to 30% Off Select Gear—Thru Sept. 9" [ref=f192e27] [cursor=pointer]':
+            - /url: /Labor-Day.gc?icid=426859
+          - text: "|"
+          - link "Trade In, Trade Up & Save *15%—Thru Sept. 9" [ref=f192e28] [cursor=pointer]:
+            - /url: /Trade-In-Trade-Up?icid=426860
+          - text: "|"
+          - 'link "The Crossroads 2026 Collection: Fender®, Martin, PRS & More" [ref=f192e29] [cursor=pointer]':
+            - /url: /Crossroads.gc?icid=426857
+      - generic [ref=f192e32]:
+        - link [ref=f192e34] [cursor=pointer]:
+          - /url: /
+          - img "Guitar Center logo" [ref=f192e35]
+        - button "gear advisor icon Pro Gear Advisers Chat • 866-498-7882" [ref=f192e36] [cursor=pointer]:
+          - img "gear advisor icon" [ref=f192e39]
+          - generic [ref=f192e40]:
+            - generic [ref=f192e41]: Pro Gear Advisers
+            - generic [ref=f192e42]:
+              - button "Chat" [ref=f192e43]
+              - generic [ref=f192e44]: •
+              - generic [ref=f192e45]: 866-498-7882
+        - button "store-selected Select Store" [ref=f192e46] [cursor=pointer]:
+          - generic [ref=f192e47]:
+            - img "store-selected" [ref=f192e49]
+            - generic [ref=f192e52]: Select Store
+        - generic [ref=f192e54]:
+          - button "Sign In" [ref=f192e55] [cursor=pointer]:
+            - generic [ref=f192e57]:
+              - img "logged out account icon" [ref=f192e59]
+              - generic "Sign In" [ref=f192e60]
+          - button "Shopping cart" [ref=f192e61] [cursor=pointer]:
+            - img "empty mini cart icon" [ref=f192e65]
+        - generic [ref=f192e68]:
+          - textbox "search" [ref=f192e69]:
+            - /placeholder: Search for New and Used gear
+          - button [ref=f192e70] [cursor=pointer]:
+            - img "header search icon" [ref=f192e72]
+      - generic [ref=f192e74]:
+        - generic [ref=f192e76]:
+          - link "Guitars" [ref=f192e78] [cursor=pointer]:
+            - /url: /Guitars.gc?icid=LP8212
+          - link "Amps & Effects" [ref=f192e80] [cursor=pointer]:
+            - /url: /Amplifiers-Effects.gc?icid=LP8288
+          - link "Keys & MIDI" [ref=f192e82] [cursor=pointer]:
+            - /url: /Keyboards-MIDI.gc?icid=LP8409
+          - link "Drums" [ref=f192e84] [cursor=pointer]:
+            - /url: /Drums-Percussion.gc?icid=LP8331
+          - link "DJ Gear" [ref=f192e86] [cursor=pointer]:
+            - /url: /DJ-Gear.gc?icid=LP8471
+          - link "Basses" [ref=f192e88] [cursor=pointer]:
+            - /url: /Bass.gc?icid=LP8251
+          - link "Recording" [ref=f192e90] [cursor=pointer]:
+            - /url: /Recording-Gear.gc?icid=LP8384
+          - link "Live Sound" [ref=f192e92] [cursor=pointer]:
+            - /url: /Live-Sound.gc?icid=LP8447
+          - link "Accessories" [ref=f192e94] [cursor=pointer]:
+            - /url: /Accessories.gc?icid=LP8520
+          - link "Mics & Wireless" [ref=f192e96] [cursor=pointer]:
+            - /url: /Microphones-Wireless-Systems.gc?icid=LP8568
+          - link "More" [ref=f192e98] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f192e99]:
+          - link "Deals" [ref=f192e101] [cursor=pointer]:
+            - /url: /All-Deals.gc?icid=LP8657
+          - link "Used" [ref=f192e103] [cursor=pointer]:
+            - /url: /Used/?icid=LP8673
+          - link "New Arrivals" [ref=f192e105] [cursor=pointer]:
+            - /url: /New-Arrivals.gc?icid=LP8672
+          - link "Lessons" [ref=f192e107] [cursor=pointer]:
+            - /url: /Services/Lessons?icid=LP8689
+  - generic [ref=f192e109]:
+    - link [ref=f192e111] [cursor=pointer]:
+      - /url: /lessons-sign-up
+      - generic [ref=f192e112]:
+        - img "Guitar Center Lessons" [ref=f192e113]
+        - generic [ref=f192e115]:
+          - heading "Every Legend Has a Day One" [level=1] [ref=f192e116]
+          - paragraph [ref=f192e117]: Take a free, no-commitment music lesson and join the legendary musicians who began playing here
+          - button "Book Your Free Trial Lesson" [ref=f192e118]
+    - generic [ref=f192e120]:
+      - heading "Reasons To Rock With Us" [level=2] [ref=f192e121]:
+        - text: Reasons To
+        - generic [ref=f192e122]: Rock With Us
+      - heading "Why choose Guitar Center Lessons?" [level=3] [ref=f192e123]
+      - paragraph [ref=f192e124]: Here, you get the VIP treatment. Students get exclusive access to savings, events, workshops and more to elevate your learning experience.
+    - generic [ref=f192e126]:
+      - article [ref=f192e127]:
+        - group [ref=f192e128]:
+          - generic "290+ Stores Nationwide":
+            - heading "290+ Stores Nationwide" [level=3]
+          - paragraph [ref=f192e131]: Discover a Guitar Center near you, meet our team of expert instructors and tour our state-of-the-art Lessons facilities.
+      - article [ref=f192e132]:
+        - group [ref=f192e133]:
+          - generic "Play Our Pro Gear":
+            - heading "Play Our Pro Gear" [level=3]
+          - paragraph [ref=f192e136]: Pull any instrument off the wall and take a lesson with it—no gear rental required. Plus, if you find something you love, you can save with exclusive monthly student discounts.
+      - article [ref=f192e137]:
+        - group [ref=f192e138]:
+          - generic "All Ages & Skill Levels":
+            - heading "All Ages & Skill Levels" [level=3]
+          - paragraph [ref=f192e141]: No matter where your music journey is starting, we’ll get you where you’re going. Our lessons are for children, teens and adults, ranging from beginners picking up their first instrument to professional musicians honing their skills.
+      - article [ref=f192e142]:
+        - group [ref=f192e143]:
+          - generic "Tailored to You":
+            - heading "Tailored to You" [level=3]
+          - paragraph [ref=f192e146]: Our expert instructors provide private music lessons personalized to your goals and preferred learning style. From electric guitar to drums, pop to punk, our vetted instructors customize your experience to your interests.
+      - article [ref=f192e147]:
+        - group [ref=f192e148]:
+          - generic "Flexible Scheduling":
+            - heading "Flexible Scheduling" [level=3]
+          - paragraph [ref=f192e151]: Our Lessons team is here to help, with options for kids and adults with busy schedules. We have availability on weekdays or weekends, afternoons or evenings, plus convenient rescheduling and backup instructors.
+      - article [ref=f192e152]:
+        - group [ref=f192e153]:
+          - generic "Take the Stage":
+            - heading "Take the Stage" [level=3]
+          - paragraph [ref=f192e156]: Perform live for your family, friends and fans at our quarterly Showcase events, and get the complete rock star experience.
+    - generic [ref=f192e158]:
+      - generic [ref=f192e159]:
+        - heading "Ready to Jump In?" [level=2] [ref=f192e160]
+        - paragraph [ref=f192e161]: Sign up for your Lessons subscription now and get playing.
+      - generic [ref=f192e165]:
+        - article [ref=f192e166]:
+          - heading "30-Minute Lessons" [level=3] [ref=f192e167]
+          - generic [ref=f192e168]:
+            - generic [ref=f192e169]: $136
+            - generic [ref=f192e170]: /4 Lessons
+          - paragraph [ref=f192e176]: $34 per lesson
+          - paragraph [ref=f192e177]: Billed every 28 days
+          - button "Change store location" [ref=f192e180] [cursor=pointer]:
+            - paragraph [ref=f192e184]: Guitar Center Westlake Village
+          - paragraph [ref=f192e185]: Prices vary by location
+          - link "Sign Up Today" [ref=f192e186] [cursor=pointer]:
+            - /url: /Services/Lessons/Purchase-Lessons.gc
+        - article [ref=f192e187]:
+          - heading "60-Minute Lessons" [level=3] [ref=f192e188]
+          - generic [ref=f192e189]:
+            - generic [ref=f192e190]: $260
+            - generic [ref=f192e191]: /4 Lessons
+          - paragraph [ref=f192e197]: $65 per lesson
+          - paragraph [ref=f192e198]: Billed every 28 days
+          - button "Change store location" [ref=f192e201] [cursor=pointer]:
+            - paragraph [ref=f192e205]: Guitar Center Westlake Village
+          - paragraph [ref=f192e206]: Prices vary by location
+          - link "Sign Up Today" [ref=f192e207] [cursor=pointer]:
+            - /url: /Services/Lessons/Purchase-Lessons.gc
+    - generic [ref=f192e209]:
+      - heading "Next Steps" [level=2] [ref=f192e210]
+      - paragraph [ref=f192e212]: Start your musical journey today with a free trial lesson
+    - generic [ref=f192e214]:
+      - article [ref=f192e215]:
+        - generic [ref=f192e216]: "01"
+        - generic [ref=f192e217]:
+          - img "Student playing piano" [ref=f192e218]
+          - heading "Book Your Free Lesson" [level=3] [ref=f192e220]
+      - article [ref=f192e222]:
+        - generic [ref=f192e223]: "02"
+        - generic [ref=f192e224]:
+          - img "Instructor holding guitar" [ref=f192e225]
+          - heading "Meet Your Instructor" [level=3] [ref=f192e227]
+      - article [ref=f192e229]:
+        - generic [ref=f192e230]: "03"
+        - generic [ref=f192e231]:
+          - img "Student playing guitar" [ref=f192e232]
+          - heading "Start Playing What You Want" [level=3] [ref=f192e234]: Start PlayingWhat You Want
+    - link [ref=f192e236] [cursor=pointer]:
+      - /url: /lessons-sign-up
+      - generic [ref=f192e237]:
+        - img "Guitar Center Lessons" [ref=f192e238]
+        - generic [ref=f192e240]:
+          - heading "Book Your Trial Lesson" [level=3] [ref=f192e241]
+          - paragraph [ref=f192e242]: No commitment required
+          - button "Book Your Free Trial Lesson" [ref=f192e243]
+    - generic [ref=f192e245]:
+      - heading "Lessons We Offer" [level=2] [ref=f192e246]
+      - paragraph [ref=f192e247]: Instruments vary by location and availability. Select your instrument to see more.
+    - generic [ref=f192e249]:
+      - generic [ref=f192e251]:
+        - button [ref=f192e253]:
+          - generic [ref=f192e254]:
+            - img "Electric guitar" [ref=f192e255]
+            - heading "Electric Guitar" [level=3] [ref=f192e256]
+        - button [ref=f192e258]:
+          - generic [ref=f192e259]:
+            - img "Acoustic guitar" [ref=f192e260]
+            - heading "Acoustic Guitar" [level=3] [ref=f192e261]
+        - button [ref=f192e263]:
+          - generic [ref=f192e264]:
+            - img "Bass" [ref=f192e265]
+            - heading "Bass" [level=3] [ref=f192e266]
+        - button [ref=f192e268]:
+          - generic [ref=f192e269]:
+            - img "Drums" [ref=f192e270]
+            - heading "Drums" [level=3] [ref=f192e271]
+        - button [ref=f192e273]:
+          - generic [ref=f192e274]:
+            - img "Vocal" [ref=f192e275]
+            - heading "Vocal" [level=3] [ref=f192e276]
+        - button [ref=f192e278]:
+          - generic [ref=f192e279]:
+            - img "DJ" [ref=f192e280]
+            - heading "DJ" [level=3] [ref=f192e281]
+        - button [ref=f192e283]:
+          - generic [ref=f192e284]:
+            - img "Keys" [ref=f192e285]
+            - heading "Keys" [level=3] [ref=f192e286]
+      - generic [ref=f192e287]:
+        - generic [ref=f192e288]:
+          - button "Go to lesson slide 1" [ref=f192e289] [cursor=pointer]
+          - button "Go to lesson slide 2" [ref=f192e290] [cursor=pointer]
+        - generic [ref=f192e291]:
+          - button "‹" [disabled] [ref=f192e292]
+          - button "›" [ref=f192e293]
+    - dialog [aria-hidden] [ref=f192e294]:
+      - generic [ref=f192e295]:
+        - heading [level=2] [ref=f192e296]: Acoustic Guitar
+        - button [ref=f192e297]: ×
+      - generic [ref=f192e301]:
+        - heading [level=3] [ref=f192e302]: Skills You’ll Pick Up
+        - paragraph [ref=f192e303]: Here’s what you could learn that’ll put you a chord above
+        - link [ref=f192e304] [cursor=pointer]:
+          - /url: /lessons-sign-up
+          - text: Book Your Free Trial Lesson
+    - heading "WHAT PEOPLE ARE Saying" [level=2] [ref=f192e307]:
+      - text: WHAT PEOPLE ARE
+      - generic [ref=f192e308]: Saying
+    - generic [ref=f192e309]:
+      - generic [ref=f192e311]:
+        - generic [ref=f192e313]:
+          - generic [ref=f192e314]: “
+          - paragraph [ref=f192e315]: The instructors here are real musicians. They don’t just teach theory they teach you to rock!
+          - heading "Mary Smith" [level=3] [ref=f192e316]
+          - paragraph [ref=f192e317]: Guitar Student
+        - generic:
+          - generic:
+            - generic: “
+            - paragraph: My teacher helped me build confidence and actually enjoy practicing every week.
+            - heading "James Carter" [level=3]
+            - paragraph: Drum Student
+        - generic:
+          - generic:
+            - generic: “
+            - paragraph: The lessons are fun, practical, and totally focused on the music I want to play.
+            - heading "Ana Lopez" [level=3]
+            - paragraph: Bass Student
+      - generic [ref=f192e318]:
+        - button "Go to review 1" [ref=f192e319] [cursor=pointer]
+        - button "Go to review 2" [ref=f192e320] [cursor=pointer]
+        - button "Go to review 3" [ref=f192e321] [cursor=pointer]
+    - link [ref=f192e322] [cursor=pointer]:
+      - /url: /Lessons-Open-House.gc
+      - generic [ref=f192e325]:
+        - heading "Get a Preview at an Open House" [level=2] [ref=f192e326]
+        - paragraph [ref=f192e327]: Join us at one of our monthly in-store events where you can meet the team, ask questions and explore our program
+        - button "RSVP Now" [ref=f192e328]
+    - generic [ref=f192e330]:
+      - heading "Frequently Asked Questions" [level=2] [ref=f192e331]
+      - generic [ref=f192e332]:
+        - group [ref=f192e333]:
+          - generic "What instruments do you teach? −" [ref=f192e334] [cursor=pointer]:
+            - generic [ref=f192e335]: What instruments do you teach?
+            - generic [ref=f192e336]: −
+          - generic [ref=f192e337]: We offer live, one-on-one lessons on guitar (electric and acoustic), bass, drums, piano and DJ. At select locations, we offer lessons for orchestral stringed instruments and brass & woodwind instruments. We also offer singing lessons.
+        - group [ref=f192e338]:
+          - generic "What can I expect at my first lesson? +" [ref=f192e339] [cursor=pointer]:
+            - generic [ref=f192e340]: What can I expect at my first lesson?
+            - generic [ref=f192e341]: +
+        - group [ref=f192e342]:
+          - generic "What is Guitar Center's curriculum? +" [ref=f192e343] [cursor=pointer]:
+            - generic [ref=f192e344]: What is Guitar Center's curriculum?
+            - generic [ref=f192e345]: +
+        - group [ref=f192e346]:
+          - generic "What is the difference between a 30-minute and a 60-minute lesson? +" [ref=f192e347] [cursor=pointer]:
+            - generic [ref=f192e348]: What is the difference between a 30-minute and a 60-minute lesson?
+            - generic [ref=f192e349]: +
+        - group [ref=f192e350]:
+          - generic "How much practicing time is needed between lessons? +" [ref=f192e351] [cursor=pointer]:
+            - generic [ref=f192e352]: How much practicing time is needed between lessons?
+            - generic [ref=f192e353]: +
+        - group [ref=f192e354]:
+          - generic "What are the benefits of playing music? +" [ref=f192e355] [cursor=pointer]:
+            - generic [ref=f192e356]: What are the benefits of playing music?
+            - generic [ref=f192e357]: +
+        - group [ref=f192e358]:
+          - generic "Do you record the lesson? +" [ref=f192e359] [cursor=pointer]:
+            - generic [ref=f192e360]: Do you record the lesson?
+            - generic [ref=f192e361]: +
+        - group [ref=f192e362]:
+          - generic "How do you secure the recordings? +" [ref=f192e363] [cursor=pointer]:
+            - generic [ref=f192e364]: How do you secure the recordings?
+            - generic [ref=f192e365]: +
+      - heading "Our Expert Instructors" [level=2] [ref=f192e366]
+      - generic [ref=f192e367]:
+        - group [ref=f192e368]:
+          - generic "How will I be assigned an instructor? +" [ref=f192e369] [cursor=pointer]:
+            - generic [ref=f192e370]: How will I be assigned an instructor?
+            - generic [ref=f192e371]: +
+        - group [ref=f192e372]:
+          - generic "How do you select your instructors? +" [ref=f192e373] [cursor=pointer]:
+            - generic [ref=f192e374]: How do you select your instructors?
+            - generic [ref=f192e375]: +
+      - button "View All" [ref=f192e377]
+  - contentinfo [ref=f192e379]:
+    - generic [ref=f192e381]:
+      - heading "Be the first to know about exclusive offers, tips and more." [level=2] [ref=f192e382]
+      - group [ref=f192e383]:
+        - generic [ref=f192e384]: Email Address (Required)
+        - textbox "Email Address (Required)" [ref=f192e385]:
+          - /placeholder: Enter Email Address
+        - button "Sign Up" [ref=f192e386] [cursor=pointer]
+      - generic [ref=f192e387]:
+        - checkbox "Yes, I would like to receive emails with news and offers from Guitar Center." [ref=f192e388] [cursor=pointer]
+        - text: Yes, I would like to receive emails with news and offers from Guitar Center.
+    - generic [ref=f192e389]:
+      - generic [ref=f192e390]:
+        - heading "Other Ways to Shop" [level=6] [ref=f192e391]
+        - generic [ref=f192e393]:
+          - link "gear-card-icon Financing" [ref=f192e394] [cursor=pointer]:
+            - /url: /pages/finance--Special-Financing-Offers
+            - img "gear-card-icon" [ref=f192e395]
+            - generic [ref=f192e396]: Financing
+          - link "mobile-icon App" [ref=f192e397] [cursor=pointer]:
+            - /url: https://smart.link/5b5900bcdbd02
+            - img "mobile-icon" [ref=f192e398]
+            - generic [ref=f192e399]: App
+          - link "gift-card-icon Gift Cards" [ref=f192e400] [cursor=pointer]:
+            - /url: /Gift-Card
+            - img "gift-card-icon" [ref=f192e401]
+            - generic [ref=f192e402]: Gift Cards
+          - link "phone-icon 866-498-7882" [ref=f192e403] [cursor=pointer]:
+            - /url: tel:866-498-7882
+            - img "phone-icon" [ref=f192e404]
+            - generic [ref=f192e405]: 866-498-7882
+      - generic [ref=f192e406]:
+        - heading "Connect With Us" [level=6] [ref=f192e407]
+        - generic [ref=f192e409]:
+          - link "facebook-icon Facebook Opens in new window" [ref=f192e410] [cursor=pointer]:
+            - /url: https://www.facebook.com/GuitarCenter
+            - img "facebook-icon" [ref=f192e411]
+            - generic [ref=f192e412]: Facebook
+            - generic [ref=f192e413]: Opens in new window
+          - link "twitter-icon X Opens in new window" [ref=f192e414] [cursor=pointer]:
+            - /url: https://twitter.com/guitarcenter
+            - img "twitter-icon" [ref=f192e415]
+            - generic [ref=f192e416]: X
+            - generic [ref=f192e417]: Opens in new window
+          - link "youtube-icon YouTube Opens in new window" [ref=f192e418] [cursor=pointer]:
+            - /url: https://www.youtube.com/guitarcenter
+            - img "youtube-icon" [ref=f192e419]
+            - generic [ref=f192e420]: YouTube
+            - generic [ref=f192e421]: Opens in new window
+          - link "instagram-icon Instagram Opens in new window" [ref=f192e422] [cursor=pointer]:
+            - /url: https://instagram.com/guitarcenter#
+            - img "instagram-icon" [ref=f192e423]
+            - generic [ref=f192e424]: Instagram
+            - generic [ref=f192e425]: Opens in new window
+          - link "tiktok-icon TikTok Opens in new window" [ref=f192e426] [cursor=pointer]:
+            - /url: https://www.tiktok.com/@guitarcenter
+            - img "tiktok-icon" [ref=f192e427]
+            - generic [ref=f192e428]: TikTok
+            - generic [ref=f192e429]: Opens in new window
+          - link "threads-icon Threads Opens in new window" [ref=f192e430] [cursor=pointer]:
+            - /url: https://www.threads.com/@guitarcenter
+            - img "threads-icon" [ref=f192e431]
+            - generic [ref=f192e432]: Threads
+            - generic [ref=f192e433]: Opens in new window
+    - generic [ref=f192e434]:
+      - generic [ref=f192e435]:
+        - heading "Your Account" [level=6] [ref=f192e436]
+        - list [ref=f192e437]:
+          - listitem [ref=f192e438]:
+            - link "Order History" [ref=f192e439] [cursor=pointer]:
+              - /url: /trackorder
+          - listitem [ref=f192e440]:
+            - link "Returns" [ref=f192e441] [cursor=pointer]:
+              - /url: /pages/return-policy
+          - listitem [ref=f192e442]:
+            - link "Wish List" [ref=f192e443] [cursor=pointer]:
+              - /url: /wishlists/
+          - listitem [ref=f192e444]:
+            - link "Email Preferences" [ref=f192e445] [cursor=pointer]:
+              - /url: /myaccount/subscriptions
+          - listitem [ref=f192e446]:
+            - link "Business Accounts" [ref=f192e447] [cursor=pointer]:
+              - /url: /GC-Pro/
+      - generic [ref=f192e448]:
+        - heading "Features" [level=6] [ref=f192e449]
+        - list [ref=f192e450]:
+          - listitem [ref=f192e451]:
+            - link "Rebates" [ref=f192e452] [cursor=pointer]:
+              - /url: /Rebates.gc
+          - listitem [ref=f192e453]:
+            - link "Apply for Leasing" [ref=f192e454] [cursor=pointer]:
+              - /url: /lease-to-own
+          - listitem [ref=f192e455]:
+            - link "Pro Coverage" [ref=f192e456] [cursor=pointer]:
+              - /url: /pages/Pro-Coverage.gc
+          - listitem [ref=f192e457]:
+            - link "Press Room" [ref=f192e458] [cursor=pointer]:
+              - /url: /pages/press-room
+      - generic [ref=f192e459]:
+        - heading "Support" [level=6] [ref=f192e460]
+        - list [ref=f192e461]:
+          - listitem [ref=f192e462]:
+            - link "Service & Support" [ref=f192e463] [cursor=pointer]:
+              - /url: /Shopping-Assistant.gc
+          - listitem [ref=f192e464]:
+            - link "Policies" [ref=f192e465] [cursor=pointer]:
+              - /url: /customer-service
+          - listitem [ref=f192e466]:
+            - link "About" [ref=f192e467] [cursor=pointer]:
+              - /url: /pages/company-information
+          - listitem [ref=f192e468]:
+            - link "Careers" [ref=f192e469] [cursor=pointer]:
+              - /url: //careers.guitarcenter.com
+          - listitem [ref=f192e470]:
+            - link "Site Map" [ref=f192e471] [cursor=pointer]:
+              - /url: /sitemap/
+          - listitem [ref=f192e472]:
+            - link "Locations" [ref=f192e473] [cursor=pointer]:
+              - /url: https://stores.guitarcenter.com/search.html
+          - listitem [ref=f192e474]:
+            - link "Accessibility Statement" [ref=f192e475] [cursor=pointer]:
+              - /url: /pages/Accessibility-Statement.gc
+      - generic [ref=f192e476]:
+        - heading "How Are We Doing?" [level=6] [ref=f192e477]
+        - link "Contact Us" [ref=f192e478] [cursor=pointer]:
+          - /url: /customer-service/email-us?deptId=customer_service
+        - generic [ref=f192e479]:
+          - link "Better Business Bureau (opens in new window)" [ref=f192e480] [cursor=pointer]:
+            - /url: http://www.bbb.org/
+            - generic [ref=f192e481]:
+              - text: Better Business Bureau
+              - generic [ref=f192e482]: (opens in new window)
+          - link "Click for the BBB CARU Business Review" [ref=f192e483] [cursor=pointer]:
+            - /url: https://bbbprograms.org/programs/all-programs/children%27s-advertising-review-unit
+            - img "Click for the BBB Business Review" [ref=f192e484]
+    - generic [ref=f192e486]:
+      - generic [ref=f192e487]: Copyright © Guitar Center, Inc.
+      - generic [ref=f192e488]: All Rights Reserved.
+      - link "California Transparency Act" [ref=f192e489] [cursor=pointer]:
+        - /url: /pages/ca-transparency-supply-chain
+      - link "Purchase Terms & Conditions" [ref=f192e490] [cursor=pointer]:
+        - /url: /pages/purchase-terms
+      - link "Your Privacy Rights" [ref=f192e491] [cursor=pointer]:
+        - /url: /pages/privacy-rights-policy
+      - link "Terms of Use" [ref=f192e492] [cursor=pointer]:
+        - /url: /pages/terms-of-use
+      - link "Do Not Sell or Share My Info" [ref=f192e493] [cursor=pointer]:
+        - /url: /pages/data-request?clarip=1
+      - link "Data Rights Request" [ref=f192e494] [cursor=pointer]:
+        - /url: /pages/data-request
+      - link "Cookie Preferences" [ref=f192e495] [cursor=pointer]:
+        - /url: "#"
+  - alert [ref=f192e496]

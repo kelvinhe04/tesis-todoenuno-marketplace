@@ -1,0 +1,1412 @@
+- generic [ref=f13e2]:
+  - navigation "Shortcuts menu" [ref=f13e3]:
+    - heading "Skip to" [level=2] [ref=f13e4]
+    - list "Skip to" [ref=f13e5]:
+      - listitem [ref=f13e6]:
+        - link "main content" [ref=f13e7] [cursor=pointer]:
+          - /url: "#skippedLink"
+          - text: Main content
+      - listitem [ref=f13e8]:
+        - link "About this item" [ref=f13e9] [cursor=pointer]:
+          - /url: "#featurebullets_feature_div"
+      - listitem [ref=f13e10]:
+        - link "Buying options" [ref=f13e11] [cursor=pointer]:
+          - /url: "#buybox"
+      - listitem [ref=f13e12]:
+        - link "Videos" [ref=f13e13] [cursor=pointer]:
+          - /url: "#va-related-videos-widget_feature_div"
+      - listitem [ref=f13e14]:
+        - link "Reviews" [ref=f13e15] [cursor=pointer]:
+          - /url: "#customerReviews"
+    - separator [aria-hidden] [ref=f13e16]
+    - heading "Keyboard shortcuts" [level=2] [ref=f13e17]
+    - list "Keyboard shortcuts" [ref=f13e18]:
+      - listitem [ref=f13e19]:
+        - link "Search, alt, forward slash" [ref=f13e20] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f13e21]:
+            - generic [ref=f13e22]: Search
+            - generic [ref=f13e23]:
+              - generic [ref=f13e24]: alt
+              - generic [ref=f13e25]: +
+              - generic [ref=f13e26]: /
+      - listitem [ref=f13e27]:
+        - link "Cart, shift, alt, c" [ref=f13e28] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f13e29]:
+            - generic [ref=f13e30]: Cart
+            - generic [ref=f13e31]:
+              - generic [ref=f13e32]: shift
+              - generic [ref=f13e33]: +
+              - generic [ref=f13e34]: alt
+              - generic [ref=f13e35]: +
+              - generic [ref=f13e36]: C
+      - listitem [ref=f13e37]:
+        - link "Home, shift, alt, h" [ref=f13e38] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f13e39]:
+            - generic [ref=f13e40]: Home
+            - generic [ref=f13e41]:
+              - generic [ref=f13e42]: shift
+              - generic [ref=f13e43]: +
+              - generic [ref=f13e44]: alt
+              - generic [ref=f13e45]: +
+              - generic [ref=f13e46]: H
+      - listitem [ref=f13e47]:
+        - link "Your orders, shift, alt, o" [ref=f13e48] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [aria-hidden] [ref=f13e49]:
+            - generic [ref=f13e50]: Orders
+            - generic [ref=f13e51]:
+              - generic [ref=f13e52]: shift
+              - generic [ref=f13e53]: +
+              - generic [ref=f13e54]: alt
+              - generic [ref=f13e55]: +
+              - generic [ref=f13e56]: O
+      - listitem [ref=f13e57]:
+        - button "Product summary, shift, alt, d" [ref=f13e58] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f13e59]:
+            - generic [ref=f13e60]: Product summary
+            - generic [ref=f13e61]:
+              - generic [ref=f13e62]: shift
+              - generic [ref=f13e63]: +
+              - generic [ref=f13e64]: alt
+              - generic [ref=f13e65]: +
+              - generic [ref=f13e66]: D
+      - listitem [ref=f13e67]:
+        - button "Show/hide shortcuts, shift, alt, z" [ref=f13e68] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f13e69]:
+            - generic [ref=f13e70]: Show/Hide shortcuts
+            - generic [ref=f13e71]:
+              - generic [ref=f13e72]: shift
+              - generic [ref=f13e73]: +
+              - generic [ref=f13e74]: alt
+              - generic [ref=f13e75]: +
+              - generic [ref=f13e76]: Z
+    - generic [ref=f13e79]:
+      - generic [ref=f13e80] [cursor=pointer]
+      - generic [ref=f13e82]: To move between items, use your keyboard's up or down arrows.
+  - banner [ref=f13e83]:
+    - navigation "Primary" [ref=f13e84]:
+      - generic [ref=f13e85]:
+        - generic [ref=f13e86]:
+          - link "Amazon" [ref=f13e88] [cursor=pointer]:
+            - /url: /ref=nav_logo
+          - button "Deliver to Panama" [ref=f13e91] [cursor=pointer]:
+            - generic [ref=f13e93]:
+              - generic [ref=f13e94]: Deliver to
+              - generic [ref=f13e95]: Panama
+        - search [ref=f13e98]:
+          - generic [ref=f13e101]:
+            - generic [ref=f13e102]: All
+            - combobox "Select the department you want to search in" [ref=f13e105] [cursor=pointer]:
+              - option "All Departments" [selected]
+              - option "Arts & Crafts"
+              - option "Automotive"
+              - option "Baby"
+              - option "Beauty & Personal Care"
+              - option "Books"
+              - option "Boys' Fashion"
+              - option "Computers"
+              - option "Deals"
+              - option "Digital Music"
+              - option "Electronics"
+              - option "Girls' Fashion"
+              - option "Health & Household"
+              - option "Home & Kitchen"
+              - option "Industrial & Scientific"
+              - option "Kindle Store"
+              - option "Luggage"
+              - option "Men's Fashion"
+              - option "Movies & TV"
+              - option "Music, CDs & Vinyl"
+              - option "Pet Supplies"
+              - option "Prime Video"
+              - option "Software"
+              - option "Sports & Outdoors"
+              - option "Tools & Home Improvement"
+              - option "Toys & Games"
+              - option "Video Games"
+              - option "Women's Fashion"
+          - searchbox "Search Amazon" [ref=f13e108]
+          - generic [ref=f13e109]:
+            - generic "Go" [ref=f13e111] [cursor=pointer]:
+              - button "Go" [ref=f13e112]
+            - button [ref=f13e114]: Agent Search
+        - generic [ref=f13e116]:
+          - generic [ref=f13e117]:
+            - link "Choose a language for shopping in Amazon United States. The current selection is English (EN)." [ref=f13e118] [cursor=pointer]:
+              - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=topnav_lang_ais
+              - generic [ref=f13e121]:
+                - img "United States" [ref=f13e122]
+                - generic [ref=f13e123]: EN
+            - button "Expand to Change Language or Country" [ref=f13e124] [cursor=pointer]
+          - generic [ref=f13e125]:
+            - link "Hello, sign in Account & Lists" [ref=f13e126] [cursor=pointer]:
+              - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2FMinimalist-Solid-Wood-Table-Bedside%2Fdp%2FB012TH34DQ%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0
+              - generic [ref=f13e127]: Hello, sign in
+              - generic [ref=f13e129]: Account & Lists
+            - button "Expand Account and Lists" [ref=f13e130] [cursor=pointer]
+          - link "Returns & Orders" [ref=f13e131] [cursor=pointer]:
+            - /url: /gp/css/order-history?ref_=nav_orders_first
+            - generic [ref=f13e132]: Returns
+            - generic [ref=f13e133]: "& Orders"
+          - link "0 items in cart" [ref=f13e134] [cursor=pointer]:
+            - /url: /gp/cart/view.html?ref_=nav_cart
+            - generic [aria-hidden] [ref=f13e136]: "0"
+            - generic [aria-hidden] [ref=f13e139]: Cart
+      - alertdialog "International Shopping Transition Alert" [ref=f13e140]:
+        - generic [ref=f13e141]:
+          - generic [ref=f13e145]:
+            - text: We're showing you items that ship to
+            - strong [ref=f13e146]: Panama
+            - text: . To see items that ship to a different country, change your delivery address.
+          - generic [ref=f13e147]:
+            - generic [ref=f13e149] [cursor=pointer]:
+              - button "Submit" [ref=f13e150]
+              - generic [aria-hidden] [ref=f13e151]: Dismiss
+            - generic [ref=f13e153] [cursor=pointer]:
+              - button "Submit" [ref=f13e154]
+              - generic [aria-hidden] [ref=f13e155]: Change Address
+      - generic [ref=f13e156]:
+        - button "Open All Categories Menu" [ref=f13e158] [cursor=pointer]:
+          - generic [ref=f13e160]: All
+        - list [ref=f13e164]:
+          - listitem [ref=f13e165]:
+            - link "Today's Deals" [ref=f13e167] [cursor=pointer]:
+              - /url: /gp/goldbox?ref_=nav_cs_gb
+          - listitem [ref=f13e168]:
+            - link "Customer Service" [ref=f13e170] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508510&ref_=nav_cs_customerservice
+          - listitem [ref=f13e171]:
+            - link "Prime Video" [ref=f13e173] [cursor=pointer]:
+              - /url: /Amazon-Video/b/?ie=UTF8&node=2858778011&ref_=nav_cs_prime_video
+          - listitem [ref=f13e174]:
+            - link "Gift Cards" [ref=f13e176] [cursor=pointer]:
+              - /url: /gift-cards/b/?ie=UTF8&node=2238192011&ref_=nav_cs_gc
+          - listitem [ref=f13e177]:
+            - link "Sell" [ref=f13e179] [cursor=pointer]:
+              - /url: /b/?_encoding=UTF8&ld=AZUSSOA-sell&node=12766669011&ref_=nav_cs_sell
+          - listitem [ref=f13e180]:
+            - link "Registry" [ref=f13e182] [cursor=pointer]:
+              - /url: /gp/browse.html?node=16115931011&ref_=nav_cs_registry
+          - link "Click to call our Disability Customer Support line, or reach us directly at 1-888-283-1678" [ref=f13e183] [cursor=pointer]:
+            - /url: /gp/help/customer/accessibility
+            - text: Disability Customer Support
+      - dialog [ref=f13e186]
+  - generic [ref=f13e188]:
+    - heading "Product summary presents key product information Keyboard shortcut shift + alt + D" [level=1] [ref=f13e190]:
+      - button "Product summary presents key product information" [ref=f13e192] [cursor=pointer]
+      - separator [aria-hidden] [ref=f13e195]
+      - generic [ref=f13e196]:
+        - text: Keyboard shortcut
+        - generic [ref=f13e197]: shift + alt + D
+    - main [ref=f13e198]:
+      - generic [ref=f13e199]:
+        - link [ref=f13e203] [cursor=pointer]:
+          - /url: /b/?_encoding=UTF8&node=21439846011&pd_rd_w=6vI4n&content-id=amzn1.sym.34ef58bd-dcf4-4e33-b605-79695e8e618a&pf_rd_p=34ef58bd-dcf4-4e33-b605-79695e8e618a&pf_rd_r=WPW9AH0CXAJ557BRAAQJ&pd_rd_wg=Nowo7&pd_rd_r=33e011e6-a282-4b9a-a815-ed9c938e5310
+          - img "Shop top categories that ship internationally" [ref=f13e204]
+        - list [ref=f13e209]:
+          - listitem [ref=f13e210]:
+            - link "Tools & Home Improvement" [ref=f13e212] [cursor=pointer]:
+              - /url: /Tools-and-Home-Improvement/b/ref=dp_bc_1?ie=UTF8&node=228013
+          - listitem [aria-hidden] [ref=f13e213]: ›
+          - listitem [ref=f13e214]:
+            - link "Lighting & Ceiling Fans" [ref=f13e216] [cursor=pointer]:
+              - /url: /lighting-ceiling-fans/b/ref=dp_bc_2?ie=UTF8&node=495224
+          - listitem [aria-hidden] [ref=f13e217]: ›
+          - listitem [ref=f13e218]:
+            - link "Lamps & Shades" [ref=f13e220] [cursor=pointer]:
+              - /url: /Lamps-26-Shades/b/ref=dp_bc_3?ie=UTF8&node=3736561
+          - listitem [aria-hidden] [ref=f13e221]: ›
+          - listitem [ref=f13e222]:
+            - link "Table Lamps" [ref=f13e224] [cursor=pointer]:
+              - /url: /Table-Lamps/b/ref=dp_bc_4?ie=UTF8&node=1063296
+      - generic [ref=f13e225]:
+        - generic [ref=f13e226]:
+          - generic [ref=f13e234]:
+            - generic [ref=f13e235]:
+              - text: Currently unavailable. We don't know when or if this item will be back in stock.
+              - generic [ref=f13e242] [cursor=pointer]:
+                - button "See Similar Items" [ref=f13e243]
+                - generic [aria-hidden] [ref=f13e244]: See Similar Items
+              - button "Deliver to Panama" [ref=f13e246] [cursor=pointer]:
+                - generic [ref=f13e248]: Deliver to Panama
+            - separator [aria-hidden] [ref=f13e253]
+            - link "Add to List" [ref=f13e258] [cursor=pointer]:
+              - /url: https://www.amazon.com/ap/signin?openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Faw%2Fd%2FB012TH34DQ&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&
+          - generic [ref=f13e262]:
+            - iframe [ref=f13e263]:
+              - generic [ref=f14e3]:
+                - link "Sionfungluxx 24.4\" Boho Woven Seagrass Table Lamp | Rustic Farmhouse, Rattan Bedside Nightstand Lamp, Retro Wicker" [ref=f14e5] [cursor=pointer]:
+                  - /url: https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4NTEzODM4NzcxODIzNDY5OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3JpZ2h0X3NoYXJlZDozMDE0MTY4NzEzODkzMDI6Ojo6&url=%2Fdp%2FB0H5WGFNRK%2Fref%3Dsspa_dk_detail_right_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfcmlnaHRfc2hhcmVk
+                - img "Sionfungluxx 24.4\" Boho Woven Seagrass Table Lamp | Rustic Farmhouse, Rattan Bedside Nightstand Lamp, Retro Wicker" [ref=f14e8]
+                - generic [ref=f14e10]:
+                  - generic [ref=f14e12]:
+                    - generic [ref=f14e13]: Sionfungluxx 24.4" Boho Woven Seagrass Table Lamp | Rustic Farmhouse, Rattan Bedside Nightstand Lamp, Retro Wicker
+                    - generic [aria-hidden] [ref=f14e14]: Sionfungluxx 24.4" Boho Woven...
+                  - generic [ref=f14e15]: 4.4 34
+                  - generic [ref=f14e18]:
+                    - generic [ref=f14e19]: PAB 51.36
+                    - generic [aria-hidden] [ref=f14e20]:
+                      - text: PAB
+                      - generic [ref=f14e21]:
+                        - text: "51"
+                        - generic [ref=f14e22]: .
+                      - text: "36"
+            - button "Leave feedback on Sponsored ad" [ref=f13e265] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f13e266]: Sponsored
+        - generic [ref=f13e268]:
+          - generic [ref=f13e270]:
+            - button [ref=f13e271]:
+              - button "Share" [ref=f13e272] [cursor=pointer]
+            - generic [ref=f13e276]:
+              - generic [ref=f13e278]:
+                - list
+                - list [ref=f13e279]:
+                  - listitem [ref=f13e280] [cursor=pointer]:
+                    - button [ref=f13e283]:
+                      - img "Surpars House Minimalist Solid Wood Table Lamp Bedside Desk Lamp" [ref=f13e284]
+              - link "Click to see full view" [ref=f13e288] [cursor=pointer]:
+                - /url: "#"
+              - radiogroup "Image thumbnails" [ref=f13e290]:
+                - listitem [ref=f13e291]:
+                  - radio [ref=f13e296] [cursor=pointer]
+                - listitem [ref=f13e298]:
+                  - radio [ref=f13e303] [cursor=pointer]
+                - listitem [ref=f13e305]:
+                  - radio [ref=f13e310] [cursor=pointer]
+                - listitem [ref=f13e312]:
+                  - radio [ref=f13e317] [cursor=pointer]
+                - listitem [ref=f13e319]:
+                  - radio [ref=f13e324] [cursor=pointer]
+          - generic [ref=f13e327]:
+            - generic:
+              - button
+          - generic:
+            - link:
+              - generic:
+                - list
+        - generic [ref=f13e328]:
+          - heading "Surpars House Minimalist Solid Wood Table Lamp Bedside Desk Lamp" [level=1] [ref=f13e331]
+          - link "Visit the Surpars House Store" [ref=f13e334] [cursor=pointer]:
+            - /url: /stores/Surpars+House/page/013B01F3-9DAF-4C26-BC63-42655134E3AB?lp_asin=B012TH34DQ&ref_=ast_bln&store_ref=bl_ast_dp_brandlogo_sto
+          - generic [ref=f13e336]:
+            - generic "4.6 out of 5 stars" [ref=f13e338]:
+              - button "4.6 out of 5 stars" [ref=f13e340] [cursor=pointer]: "4.6"
+            - link "1,234 Reviews" [ref=f13e345] [cursor=pointer]:
+              - /url: "#averageCustomerReviewsAnchor"
+              - text: (1,234)
+          - separator [ref=f13e346]
+          - generic [ref=f13e348]:
+            - generic [ref=f13e350]: Currently unavailable.
+            - text: We don't know when or if this item will be back in stock.
+          - list [ref=f13e354]:
+            - rowgroup [ref=f13e355]:
+              - listitem [ref=f13e356]: Finish Type Painted
+              - listitem [ref=f13e357]: Base Material Wood
+              - listitem [ref=f13e358]: Bulb Base E26
+              - listitem [ref=f13e359]: Product Dimensions 5.5"D x 5.5"W x 12.6"H
+              - listitem [ref=f13e360]: Lamp Type Table Lamp
+          - generic [ref=f13e362]:
+            - separator [aria-hidden] [ref=f13e363]
+            - heading "About this item" [level=1] [ref=f13e364]
+            - list [ref=f13e365]:
+              - listitem [ref=f13e366]: Linen
+              - listitem [ref=f13e367]: Imported
+              - listitem [ref=f13e368]: Wood stand and linen shade
+              - listitem [ref=f13e369]: E26 bulb base but bulb not included
+              - listitem [ref=f13e370]: There is an on/off switch in the middle of the cord,standard American plug
+              - listitem [ref=f13e371]: Recommend putting it in bedroom or living room,it will bring you a peaceful and warm night.
+            - generic [ref=f13e372]:
+              - text: ›
+              - link "See more product details" [ref=f13e373] [cursor=pointer]:
+                - /url: "#productDetails"
+          - link "Report an issue with this product or seller" [ref=f13e379] [cursor=pointer]:
+            - /url: javascript:void(0)
+          - generic [ref=f13e383]:
+            - 'heading "Product voltage: 120" [level=4] [ref=f13e384]'
+            - paragraph [ref=f13e388]: This product is compatible with outlets that support 120 volts and might require a converter when used outside of the United States.
+        - generic [ref=f13e390]:
+          - separator [aria-hidden] [ref=f13e391]
+          - generic [ref=f13e394]:
+            - iframe [ref=f13e395]:
+              - generic [ref=f15e4]:
+                - link "Eapmic Table Lamp,Bedside End Table Lamp Traditional Nightstand Desk Lamp Geometric Lamp with Shade for Living Bedroom Office (Modern,Style 1)" [ref=f15e6] [cursor=pointer]:
+                  - /url: https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo1NDEwMjE5Njg5MTMzNTIwOjE3ODg3MjQ5MTk6c3BfaHFwX3NoYXJlZDozMDExODkwMjg0ODUzMDI6Ojo6&url=%2Fdp%2FB0C997GHBC%2Fref%3Dsspa_dk_hqp_detail_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9ocXBfc2hhcmVk
+                - img "Eapmic Table Lamp,Bedside End Table Lamp Traditional Nightstand Desk Lamp Geometric Lamp with Shade for Living Bedroom Office (Modern,Style 1)" [ref=f15e7]
+                - generic [ref=f15e8]:
+                  - generic [ref=f15e9]: Eapmic Table Lamp,Bedside End Table Lamp Traditional Nightstand Desk Lamp Geometric Lamp with Shade for Living Bedroom Office (Modern,Style 1)
+                  - generic [ref=f15e10]:
+                    - generic [ref=f15e11]: "8"
+                    - generic [ref=f15e13]: "|"
+                    - text: PAB 51.36
+                  - generic [ref=f15e14]: Shop now ›
+            - button "Leave feedback on Sponsored ad" [ref=f13e397] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f13e398]: Sponsored
+      - generic [ref=f13e403]:
+        - separator [aria-hidden] [ref=f13e404]
+        - region "Deals on related products" [ref=f13e405]:
+          - generic [ref=f13e407]:
+            - heading "Deals on related products" [level=2] [ref=f13e408]
+            - link "Sponsored" [ref=f13e412] [cursor=pointer]:
+              - /url: "#sp_detail_thematic-hercules_hybrid_deals_T1_feedbackForm"
+          - list [ref=f13e422]:
+            - listitem [ref=f13e423]:
+              - generic [ref=f13e424]:
+                - link "Piodo Living Room Deek Lamp Bedroom Table Lamp Set of 2,3 Way Dimmable Led Light Modern Industrial Table Lamps Sand Gold Metal,USB Type A+C&Outlet, Linen Lampshade,Bulb*2" [ref=f13e425] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTAzMTM5Mjc3NDUwMjo6Ojo&url=%2Fdp%2FB0F9KRVTCG%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0F9KRVTCG%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f13e429]: Piodo Living Room Deek Lamp Bedroom Table Lamp Set of 2,3 Way Dimmable Led Light…
+                - link "4.2 out of 5 stars 30 ratings" [ref=f13e431] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTAzMTM5Mjc3NDUwMjo6Ojo&url=%2Fdp%2FB0F9KRVTCG%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0F9KRVTCG%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: "30"
+                - link "Limited time deal" [ref=f13e433] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTAzMTM5Mjc3NDUwMjo6Ojo&url=%2Fdp%2FB0F9KRVTCG%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0F9KRVTCG%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-50% PAB 25.68 ( PAB 12.84 / count) Typical: PAB 51.36 Typical: null" [ref=f13e437] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTAzMTM5Mjc3NDUwMjo6Ojo&url=%2Fdp%2FB0F9KRVTCG%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0F9KRVTCG%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-50%"
+                  - generic [ref=f13e438]:
+                    - generic [ref=f13e439]: PAB 25.68
+                    - generic [aria-hidden] [ref=f13e440]:
+                      - text: PAB
+                      - generic [ref=f13e441]:
+                        - text: "25"
+                        - generic [ref=f13e442]: .
+                      - text: "68"
+                  - generic [ref=f13e443]:
+                    - text: (
+                    - generic [ref=f13e444]:
+                      - generic [ref=f13e445]: PAB 12.84
+                      - text: PAB12.84
+                    - text: / count)
+                  - generic [ref=f13e446]: "Typical: PAB 51.36"
+                  - generic [ref=f13e447]:
+                    - text: "Typical:"
+                    - generic [ref=f13e448]:
+                      - generic [ref=f13e449]: "null"
+                      - text: PAB51.36
+                - link "PAB 40.08 delivery Sep 23 - 26" [ref=f13e451] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTAzMTM5Mjc3NDUwMjo6Ojo&url=%2Fdp%2FB0F9KRVTCG%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0F9KRVTCG%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f13e457]:
+              - generic [ref=f13e458]:
+                - link "JONATHAN Y Zira 10\" Checkerboard Cordless Table Lamp, Black/White | Ceramic Body, Rechargeable Dimmable Integrated LED, Frosted Glass Globe Shade, Touch Sensor, Modern, Metal Accents" [ref=f13e459] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTQ4ODQwMjQwODgwMjo6Ojo&url=%2Fdp%2FB0H6N6R525%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H6N6R525%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f13e463]: JONATHAN Y Zira 10" Checkerboard Cordless Table Lamp, Black/White | Ceramic Body, R...
+                - link "Limited time deal" [ref=f13e464] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTQ4ODQwMjQwODgwMjo6Ojo&url=%2Fdp%2FB0H6N6R525%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H6N6R525%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-15% PAB 50.66 List: PAB 59.59 List: null" [ref=f13e468] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTQ4ODQwMjQwODgwMjo6Ojo&url=%2Fdp%2FB0H6N6R525%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H6N6R525%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-15%"
+                  - generic [ref=f13e469]:
+                    - generic [ref=f13e470]: PAB 50.66
+                    - generic [aria-hidden] [ref=f13e471]:
+                      - text: PAB
+                      - generic [ref=f13e472]:
+                        - text: "50"
+                        - generic [ref=f13e473]: .
+                      - text: "66"
+                  - generic [ref=f13e474]: "List: PAB 59.59"
+                  - generic [ref=f13e475]:
+                    - text: "List:"
+                    - generic [ref=f13e476]:
+                      - generic [ref=f13e477]: "null"
+                      - text: PAB59.59
+                - link "PAB 26.03 delivery Sep 17 - Oct 1" [ref=f13e479] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTQ4ODQwMjQwODgwMjo6Ojo&url=%2Fdp%2FB0H6N6R525%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H6N6R525%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f13e485]:
+              - generic [ref=f13e486]:
+                - link "ONEWISH Touch Bedside Lamp, Farmhouse 3-Way Dimmable Table Lamps for Nightstand with Fabric Shade, 17.32'' Desk Lamp for Reading, Bedroom, Livingroom, Office" [ref=f13e487] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0NzMwMjAyNjQwMjo6Ojo&url=%2Fdp%2FB0CK835MGD%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CK835MGD%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f13e491]: ONEWISH Touch Bedside Lamp, Farmhouse 3-Way Dimmable Table Lamps for Nightstand wit...
+                - link "4.3 out of 5 stars 2,107 ratings" [ref=f13e493] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0NzMwMjAyNjQwMjo6Ojo&url=%2Fdp%2FB0CK835MGD%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CK835MGD%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: 2,107
+                - link "Ends in 10:57:55" [ref=f13e495] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0NzMwMjAyNjQwMjo6Ojo&url=%2Fdp%2FB0CK835MGD%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CK835MGD%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-40% PAB 24.65 List: PAB 41.09 List: null" [ref=f13e499] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0NzMwMjAyNjQwMjo6Ojo&url=%2Fdp%2FB0CK835MGD%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CK835MGD%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-40%"
+                  - generic [ref=f13e500]:
+                    - generic [ref=f13e501]: PAB 24.65
+                    - generic [aria-hidden] [ref=f13e502]:
+                      - text: PAB
+                      - generic [ref=f13e503]:
+                        - text: "24"
+                        - generic [ref=f13e504]: .
+                      - text: "65"
+                  - generic [ref=f13e505]: "List: PAB 41.09"
+                  - generic [ref=f13e506]:
+                    - text: "List:"
+                    - generic [ref=f13e507]:
+                      - generic [ref=f13e508]: "null"
+                      - text: PAB41.09
+                - link "PAB 25.46 delivery Sat, Sep 12" [ref=f13e510] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0NzMwMjAyNjQwMjo6Ojo&url=%2Fdp%2FB0CK835MGD%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0CK835MGD%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f13e516]:
+              - generic [ref=f13e517]:
+                - link "Aeyee Glass Table Lamp, Antique Flower Decorative Bedside Desk Lamp with Green Leaf, Retro Decorative Lamp for Bedroom Home Office Bronze Finish" [ref=f13e518] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE4ODA3MjAzMTAwMjo6Ojo&url=%2Fdp%2FB0CG3PZ9TB%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0CG3PZ9TB%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f13e522]: Aeyee Glass Table Lamp, Antique Flower Decorative Bedside Desk Lamp with Green Leaf...
+                - link "4.1 out of 5 stars 5 ratings" [ref=f13e524] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE4ODA3MjAzMTAwMjo6Ojo&url=%2Fdp%2FB0CG3PZ9TB%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0CG3PZ9TB%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: "5"
+                - link "Limited time deal" [ref=f13e526] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE4ODA3MjAzMTAwMjo6Ojo&url=%2Fdp%2FB0CG3PZ9TB%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0CG3PZ9TB%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-20% PAB 88.77 Typical: PAB 110.96 Typical: null" [ref=f13e530] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE4ODA3MjAzMTAwMjo6Ojo&url=%2Fdp%2FB0CG3PZ9TB%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0CG3PZ9TB%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-20%"
+                  - generic [ref=f13e531]:
+                    - generic [ref=f13e532]: PAB 88.77
+                    - generic [aria-hidden] [ref=f13e533]:
+                      - text: PAB
+                      - generic [ref=f13e534]:
+                        - text: "88"
+                        - generic [ref=f13e535]: .
+                      - text: "77"
+                  - generic [ref=f13e536]: "Typical: PAB 110.96"
+                  - generic [ref=f13e537]:
+                    - text: "Typical:"
+                    - generic [ref=f13e538]:
+                      - generic [ref=f13e539]: "null"
+                      - text: PAB110.96
+                - link "PAB 57.31 delivery Mon, Sep 14" [ref=f13e541] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE4ODA3MjAzMTAwMjo6Ojo&url=%2Fdp%2FB0CG3PZ9TB%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0CG3PZ9TB%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f13e547]:
+              - generic [ref=f13e548]:
+                - link "NEWSEE Modern Cordless Table Lamp Set of 2, Brown Portable LED Desk Lamps | 5000mAh, Rechargeable, Battery Operated Lighting for Bedroom, Dining Room, Restaurant, Coffee Shop, Camping, Night Light" [ref=f13e549] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDkxMjQ1MDU0NjgwMjo6Ojo&url=%2Fdp%2FB0D14HY8TN%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0D14HY8TN%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f13e553]: NEWSEE Modern Cordless Table Lamp Set of 2, Brown Portable LED Desk Lamps | 5000mAh...
+                - link "4.5 out of 5 stars 1,281 ratings" [ref=f13e555] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDkxMjQ1MDU0NjgwMjo6Ojo&url=%2Fdp%2FB0D14HY8TN%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0D14HY8TN%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: 1,281
+                - link "Limited Prime deal" [ref=f13e557] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDkxMjQ1MDU0NjgwMjo6Ojo&url=%2Fdp%2FB0D14HY8TN%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0D14HY8TN%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-10% PAB 39.75 ( PAB 19.88 / count) Typical price: PAB 44.17 Typical price: null" [ref=f13e561] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDkxMjQ1MDU0NjgwMjo6Ojo&url=%2Fdp%2FB0D14HY8TN%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0D14HY8TN%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-10%"
+                  - generic [ref=f13e562]:
+                    - generic [ref=f13e563]: PAB 39.75
+                    - generic [aria-hidden] [ref=f13e564]:
+                      - text: PAB
+                      - generic [ref=f13e565]:
+                        - text: "39"
+                        - generic [ref=f13e566]: .
+                      - text: "75"
+                  - generic [ref=f13e567]:
+                    - text: (
+                    - generic [ref=f13e568]:
+                      - generic [ref=f13e569]: PAB 19.88
+                      - text: PAB19.88
+                    - text: / count)
+                  - generic [ref=f13e570]: "Typical price: PAB 44.17"
+                  - generic [ref=f13e571]:
+                    - text: "Typical price:"
+                    - generic [ref=f13e572]:
+                      - generic [ref=f13e573]: "null"
+                      - text: PAB44.17
+                - link "PAB 19.42 delivery Sep 14 - 17" [ref=f13e575] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDkxMjQ1MDU0NjgwMjo6Ojo&url=%2Fdp%2FB0D14HY8TN%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0D14HY8TN%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f13e581]:
+              - generic [ref=f13e582]:
+                - link "ONEWISH Industrial Table Lamp for Bedroom, Fully Dimmable Modern Bedside Lamps with 2700K Warm Light Bulb for Kids Reading, Minimalist Nightstand Lamps for Living Room, Office (Bulb Included)" [ref=f13e583] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0MDE5MDk4MjMwMjo6Ojo&url=%2Fdp%2FB0CBN6PL3Z%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CBN6PL3Z%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f13e587]: ONEWISH Industrial Table Lamp for Bedroom, Fully Dimmable Modern…
+                - link "4.5 out of 5 stars 414 ratings" [ref=f13e589] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0MDE5MDk4MjMwMjo6Ojo&url=%2Fdp%2FB0CBN6PL3Z%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CBN6PL3Z%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM#customerReviews
+                  - text: "414"
+                - generic [ref=f13e591]:
+                  - link "Amazon's Choice":
+                    - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0MDE5MDk4MjMwMjo6Ojo&url=%2Fdp%2FB0CBN6PL3Z%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CBN6PL3Z%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - link "Limited time deal" [ref=f13e594] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0MDE5MDk4MjMwMjo6Ojo&url=%2Fdp%2FB0CBN6PL3Z%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CBN6PL3Z%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-10% PAB 27.73 Typical: PAB 30.81 Typical: null" [ref=f13e598] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0MDE5MDk4MjMwMjo6Ojo&url=%2Fdp%2FB0CBN6PL3Z%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CBN6PL3Z%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-10%"
+                  - generic [ref=f13e599]:
+                    - generic [ref=f13e600]: PAB 27.73
+                    - generic [aria-hidden] [ref=f13e601]:
+                      - text: PAB
+                      - generic [ref=f13e602]:
+                        - text: "27"
+                        - generic [ref=f13e603]: .
+                      - text: "73"
+                  - generic [ref=f13e604]: "Typical: PAB 30.81"
+                  - generic [ref=f13e605]:
+                    - text: "Typical:"
+                    - generic [ref=f13e606]:
+                      - generic [ref=f13e607]: "null"
+                      - text: PAB30.81
+                - link "PAB 23.64 delivery Tue, Sep 15" [ref=f13e609] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMDE0MDE5MDk4MjMwMjo6Ojo&url=%2Fdp%2FB0CBN6PL3Z%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0CBN6PL3Z%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+            - listitem [ref=f13e615]:
+              - generic [ref=f13e616]:
+                - link "Black White Checkerboard Bedside Lamp LED Table Lamp Desk Lamp Nightstand Lamp for Bedroom Home Dorm Nursery" [ref=f13e617] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE3MjU3NzQ0MTcwMjo6Ojo&url=%2Fdp%2FB0FK5FRYCS%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FK5FRYCS%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - generic [aria-hidden] [ref=f13e621]: Black White Checkerboard Bedside Lamp LED Table Lamp Desk Lamp Nightstand…
+                - link "Limited time deal" [ref=f13e622] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE3MjU3NzQ0MTcwMjo6Ojo&url=%2Fdp%2FB0FK5FRYCS%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FK5FRYCS%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                - 'link "-50% PAB 14.37 Typical: PAB 28.76 Typical: null" [ref=f13e626] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE3MjU3NzQ0MTcwMjo6Ojo&url=%2Fdp%2FB0FK5FRYCS%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FK5FRYCS%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+                  - text: "-50%"
+                  - generic [ref=f13e627]:
+                    - generic [ref=f13e628]: PAB 14.37
+                    - generic [aria-hidden] [ref=f13e629]:
+                      - text: PAB
+                      - generic [ref=f13e630]:
+                        - text: "14"
+                        - generic [ref=f13e631]: .
+                      - text: "37"
+                  - generic [ref=f13e632]: "Typical: PAB 28.76"
+                  - generic [ref=f13e633]:
+                    - text: "Typical:"
+                    - generic [ref=f13e634]:
+                      - generic [ref=f13e635]: "null"
+                      - text: PAB28.76
+                - link "PAB 20.25 delivery Sat, Sep 19" [ref=f13e637] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MToxMzIxMjU5ODE0MjY1NDg1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX3RoZW1hdGljOjMwMTE3MjU3NzQ0MTcwMjo6Ojo&url=%2Fdp%2FB0FK5FRYCS%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FK5FRYCS%26pd_rd_w%3DZMZ1T%26content-id%3Damzn1.sym.3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_p%3D3bc66c0a-cc61-4816-aa2d-e53327eaddb6%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM
+      - generic [ref=f13e648]:
+        - generic [ref=f13e649]:
+          - separator [aria-hidden] [ref=f13e650]
+          - generic [ref=f13e652]:
+            - heading "Product information" [level=1] [ref=f13e653]
+            - generic [ref=f13e657]:
+              - generic [ref=f13e658]:
+                - generic [ref=f13e660]:
+                  - button [ref=f13e663] [cursor=pointer]:
+                    - heading "Features & Specs" [level=5] [ref=f13e665]
+                  - button [ref=f13e668] [cursor=pointer]:
+                    - heading "Style" [level=5] [ref=f13e670]
+                  - button [ref=f13e673] [cursor=pointer]:
+                    - heading "User guide" [level=5] [ref=f13e675]
+                - generic [ref=f13e678]:
+                  - heading "Feedback" [level=3] [ref=f13e679]
+                  - generic [ref=f13e684]:
+                    - text: Would you like to
+                    - button "tell us about a lower price?" [ref=f13e686] [cursor=pointer]
+              - generic [ref=f13e690]:
+                - button [ref=f13e693] [cursor=pointer]:
+                  - heading "Item details" [level=5] [ref=f13e695]
+                - button [ref=f13e698] [cursor=pointer]:
+                  - heading "Measurements" [level=5] [ref=f13e700]
+                - button [ref=f13e703] [cursor=pointer]:
+                  - heading "Materials & Care" [level=5] [ref=f13e705]
+        - generic [ref=f13e711]:
+          - heading "Product Videos" [level=2] [ref=f13e713]
+          - generic [ref=f13e718]:
+            - region "Video Player" [ref=f13e719]:
+              - application [ref=f13e720]
+              - generic [ref=f13e722]:
+                - button "Play" [ref=f13e723] [cursor=pointer]
+                - slider "Progress Bar" [ref=f13e726] [cursor=pointer]: .
+                - generic [ref=f13e727]: "-0:00"
+                - generic [ref=f13e729]:
+                  - menu
+                - button "Mute" [ref=f13e730] [cursor=pointer]
+            - generic [ref=f13e733]:
+              - link [ref=f13e734] [cursor=pointer]:
+                - /url: /gp/profile/amzn1.account.AEMKYMI247OAGDDNZ3COYE46JF3A
+              - generic [ref=f13e735]:
+                - link "Jake Larrs Nelson" [ref=f13e737] [cursor=pointer]:
+                  - /url: /gp/profile/amzn1.account.AEMKYMI247OAGDDNZ3COYE46JF3A
+                - generic [ref=f13e739]:
+                  - text: "Customer Review: Seems like a perfect size that doesn't take up your space"
+                  - link "See Full Review" [ref=f13e740] [cursor=pointer]:
+                    - /url: /gp/customer-reviews/R7678QBJD6PB1?ref=va_cr_lb
+            - button "Play" [ref=f13e741] [cursor=pointer]
+        - generic [ref=f13e815]:
+          - heading "Product Description" [level=2] [ref=f13e818]
+          - paragraph [ref=f13e820]: "Bulb Base: E26/27 but bulb not included Wattage: Max 40W Dimensions: 32cm(12.6inch) high,14cm (5.5 inch) wide. Material: wood and linen Color: light wood tone Net Weight: 1kg Shipping Wight: 1.2kg box packing"
+      - generic:
+        - navigation:
+          - navigation "Navigate within the product detail page":
+            - navigation "Back to top jump link":
+              - generic: Top
+            - navigation "About this item widget jump link":
+              - generic: About this item
+            - navigation "Similar widget jump link":
+              - generic: Similar
+            - navigation "Product information widget jump link":
+              - generic: Product information
+            - navigation "From the brand widget jump link":
+              - generic: From the Brand
+            - navigation "Customer reviews widget jump link":
+              - generic: Reviews
+          - navigation "Back to top Image jump link":
+            - img "Surpars House Minimalist Solid Wood Table Lamp Bedside Desk Lamp"
+          - navigation "Back to top title jump link":
+            - generic: Surpars House Minimalist Solid Wood Table Lamp Bedside Desk Lamp
+      - generic [ref=f13e823]:
+        - separator [aria-hidden] [ref=f13e824]
+        - region "Related products with free delivery on eligible orders" [ref=f13e825]:
+          - generic [ref=f13e827]:
+            - heading "Related products with free delivery on eligible orders" [level=2] [ref=f13e828]
+            - generic [ref=f13e830]:
+              - link "Sponsored" [ref=f13e832] [cursor=pointer]:
+                - /url: "#sp_detail2-prime_theme_for_non_prime_members_feedbackForm"
+              - text: "| Try Prime for unlimited fast, free shipping"
+          - list [ref=f13e842]:
+            - listitem [ref=f13e843]:
+              - generic [ref=f13e844]:
+                - link "JINGOE 20.8\" Modern Tripod Table Lamps Set of 2 Black and Gold Metal Table Lamps for Living Room Bedroom Nightstand End Table Decorative Lamps(Bulbs Included)" [ref=f13e845] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMDgwMTIyNzUyMDcwMjo6Ojo&url=%2Fdp%2FB0DTGDHHFV%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0DTGDHHFV%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f13e849]: JINGOE 20.8" Modern Tripod Table Lamps Set of 2 Black and Gold Metal Table Lamps fo...
+                - link "3.9 out of 5 stars 24 ratings" [ref=f13e851] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMDgwMTIyNzUyMDcwMjo6Ojo&url=%2Fdp%2FB0DTGDHHFV%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0DTGDHHFV%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "24"
+                - 'link "-33% PAB 41.09 ( PAB 20.55 / count) Typical: PAB 61.64 Typical: null" [ref=f13e854] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMDgwMTIyNzUyMDcwMjo6Ojo&url=%2Fdp%2FB0DTGDHHFV%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0DTGDHHFV%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - text: "-33%"
+                  - generic [ref=f13e855]:
+                    - generic [ref=f13e856]: PAB 41.09
+                    - generic [aria-hidden] [ref=f13e857]:
+                      - text: PAB
+                      - generic [ref=f13e858]:
+                        - text: "41"
+                        - generic [ref=f13e859]: .
+                      - text: "09"
+                  - generic [ref=f13e860]:
+                    - text: (
+                    - generic [ref=f13e861]:
+                      - generic [ref=f13e862]: PAB 20.55
+                      - text: PAB20.55
+                    - text: / count)
+                  - generic [ref=f13e863]: "Typical: PAB 61.64"
+                  - generic [ref=f13e864]:
+                    - text: "Typical:"
+                    - generic [ref=f13e865]:
+                      - generic [ref=f13e866]: "null"
+                      - text: PAB61.64
+                - link "FREE delivery Sat, Sep 19 to Panama on $49 (PAB 50.35) of eligible items" [ref=f13e868] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMDgwMTIyNzUyMDcwMjo6Ojo&url=%2Fdp%2FB0DTGDHHFV%2Fref%3Dsspa_dk_detail_0%3Fpsc%3D1%26pd_rd_i%3DB0DTGDHHFV%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+            - listitem [ref=f13e874]:
+              - generic [ref=f13e875]:
+                - link "Pia Ricco Travertine Texture Dual Base Mushroom Table Lamp, Mid Century Modern Dimmable Side Table Lamp, Black Dome Shade Nightstand Lamp for Living Room Bedroom" [ref=f13e876] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTM4NTE4NjY5ODMwMjo6Ojo&url=%2Fdp%2FB0H33KXJTH%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H33KXJTH%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f13e880]: Pia Ricco Travertine Texture Dual Base Mushroom Table Lamp, Mid Century Modern…
+                - link "1.0 out of 5 stars 1 rating" [ref=f13e882] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTM4NTE4NjY5ODMwMjo6Ojo&url=%2Fdp%2FB0H33KXJTH%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H33KXJTH%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "1"
+                - link "PAB 87.33" [ref=f13e885] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTM4NTE4NjY5ODMwMjo6Ojo&url=%2Fdp%2FB0H33KXJTH%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H33KXJTH%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f13e886]:
+                    - generic [ref=f13e887]: PAB 87.33
+                    - generic [aria-hidden] [ref=f13e888]:
+                      - text: PAB
+                      - generic [ref=f13e889]:
+                        - text: "87"
+                        - generic [ref=f13e890]: .
+                      - text: "33"
+                - link "PAB 56.40 delivery Wed, Sep 16" [ref=f13e892] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTM4NTE4NjY5ODMwMjo6Ojo&url=%2Fdp%2FB0H33KXJTH%2Fref%3Dsspa_dk_detail_1%3Fpsc%3D1%26pd_rd_i%3DB0H33KXJTH%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+            - listitem [ref=f13e898]:
+              - generic [ref=f13e899]:
+                - link "KSANA Linen Fabric Table Lamp, 9.4\" H Small Bedside Lamp with Rubber Wood Base, Natural Decorative Nightstand Lamp for Bedroom, Living Room, Kids Room, Office" [ref=f13e900] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTQ4MjU5NjkxMDgwMjo6Ojo&url=%2Fdp%2FB0H7BJVDK3%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0H7BJVDK3%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f13e904]: KSANA Linen Fabric Table Lamp, 9.4" H Small Bedside Lamp with Rubber Wood Base, Nat...
+                - 'link "-33% PAB 102.74 List: PAB 154.11 List: null" [ref=f13e906] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTQ4MjU5NjkxMDgwMjo6Ojo&url=%2Fdp%2FB0H7BJVDK3%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0H7BJVDK3%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - text: "-33%"
+                  - generic [ref=f13e907]:
+                    - generic [ref=f13e908]: PAB 102.74
+                    - generic [aria-hidden] [ref=f13e909]:
+                      - text: PAB
+                      - generic [ref=f13e910]:
+                        - text: "102"
+                        - generic [ref=f13e911]: .
+                      - text: "74"
+                  - generic [ref=f13e912]: "List: PAB 154.11"
+                  - generic [ref=f13e913]:
+                    - text: "List:"
+                    - generic [ref=f13e914]:
+                      - generic [ref=f13e915]: "null"
+                      - text: PAB154.11
+                - link "PAB 35.97 delivery Sep 18 - Oct 6" [ref=f13e917] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTQ4MjU5NjkxMDgwMjo6Ojo&url=%2Fdp%2FB0H7BJVDK3%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0H7BJVDK3%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                - link "Save 5% with coupon" [ref=f13e924] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTQ4MjU5NjkxMDgwMjo6Ojo&url=%2Fdp%2FB0H7BJVDK3%2Fref%3Dsspa_dk_detail_2%3Fpsc%3D1%26pd_rd_i%3DB0H7BJVDK3%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f13e925]:
+                    - generic [ref=f13e926]: Save 5%
+                    - text: with coupon
+            - listitem [ref=f13e927]:
+              - generic [ref=f13e928]:
+                - link "Arturesthome Bamboo Table Light Dimmable Beside Light LED Bulb Included | Vintage Wooden Nightstand Lamp,Bamboo Woven End Table Lamps, Boho Beside Lamp for Living Room, Farmhouse Accent Light" [ref=f13e929] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTUwMjc4MDk1NTcwMjo6Ojo&url=%2Fdp%2FB0HB3K8G5Q%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0HB3K8G5Q%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f13e933]: Arturesthome Bamboo Table Light Dimmable Beside Light LED Bulb Included | Vintage W...
+                - link "PAB 54.65" [ref=f13e935] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTUwMjc4MDk1NTcwMjo6Ojo&url=%2Fdp%2FB0HB3K8G5Q%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0HB3K8G5Q%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f13e936]:
+                    - generic [ref=f13e937]: PAB 54.65
+                    - generic [aria-hidden] [ref=f13e938]:
+                      - text: PAB
+                      - generic [ref=f13e939]:
+                        - text: "54"
+                        - generic [ref=f13e940]: .
+                      - text: "65"
+                - link "PAB 31.40 delivery Sat, Sep 19" [ref=f13e942] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTUwMjc4MDk1NTcwMjo6Ojo&url=%2Fdp%2FB0HB3K8G5Q%2Fref%3Dsspa_dk_detail_3%3Fpsc%3D1%26pd_rd_i%3DB0HB3K8G5Q%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+            - listitem [ref=f13e948]:
+              - generic [ref=f13e949]:
+                - link "KUNJOULAM Modern Table Lamps, Nightstand Bedside Lamps with Umbrella Form Linen Lampshade, Black Desk Lamp for Living Room Bedroom, Bulb Not Included" [ref=f13e950] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMDk0MjM2OTIwODgwMjo6Ojo&url=%2Fdp%2FB0FFMKKTGR%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0FFMKKTGR%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f13e954]: KUNJOULAM Modern Table Lamps, Nightstand Bedside Lamps with Umbrella Form Linen…
+                - link "4.8 out of 5 stars 5 ratings" [ref=f13e956] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMDk0MjM2OTIwODgwMjo6Ojo&url=%2Fdp%2FB0FFMKKTGR%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0FFMKKTGR%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "5"
+                - link "PAB 50.34" [ref=f13e959] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMDk0MjM2OTIwODgwMjo6Ojo&url=%2Fdp%2FB0FFMKKTGR%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0FFMKKTGR%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f13e960]:
+                    - generic [ref=f13e961]: PAB 50.34
+                    - generic [aria-hidden] [ref=f13e962]:
+                      - text: PAB
+                      - generic [ref=f13e963]:
+                        - text: "50"
+                        - generic [ref=f13e964]: .
+                      - text: "34"
+                - link "FREE delivery Sat, Sep 12 to Panama on $49 (PAB 50.35) of eligible items" [ref=f13e966] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMDk0MjM2OTIwODgwMjo6Ojo&url=%2Fdp%2FB0FFMKKTGR%2Fref%3Dsspa_dk_detail_4%3Fpsc%3D1%26pd_rd_i%3DB0FFMKKTGR%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+            - listitem [ref=f13e972]:
+              - generic [ref=f13e973]:
+                - link "17.5inch Modern Bedside Table Lamp with Frosted Glass Dome Shade | Plug-in Design with On/Off Switch, Soft Glare-Free Light, Sand Black Metal Base,E26 Socket (Bulb Not Included)" [ref=f13e974] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTExNzg5ODk1MzgwMjo6Ojo&url=%2Fdp%2FB0FKGZVMWX%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FKGZVMWX%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f13e978]: 17.5inch Modern Bedside Table Lamp with Frosted Glass Dome Shade | Plug-in Design…
+                - link "4.5 out of 5 stars 10 ratings" [ref=f13e980] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTExNzg5ODk1MzgwMjo6Ojo&url=%2Fdp%2FB0FKGZVMWX%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FKGZVMWX%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "10"
+                - 'link "-6% PAB 61.64 List: PAB 65.75 List: null" [ref=f13e983] [cursor=pointer]':
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTExNzg5ODk1MzgwMjo6Ojo&url=%2Fdp%2FB0FKGZVMWX%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FKGZVMWX%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - text: "-6%"
+                  - generic [ref=f13e984]:
+                    - generic [ref=f13e985]: PAB 61.64
+                    - generic [aria-hidden] [ref=f13e986]:
+                      - text: PAB
+                      - generic [ref=f13e987]:
+                        - text: "61"
+                        - generic [ref=f13e988]: .
+                      - text: "64"
+                  - generic [ref=f13e989]: "List: PAB 65.75"
+                  - generic [ref=f13e990]:
+                    - text: "List:"
+                    - generic [ref=f13e991]:
+                      - generic [ref=f13e992]: "null"
+                      - text: PAB65.75
+                - link "PAB 44.84 delivery Mon, Sep 14" [ref=f13e994] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTExNzg5ODk1MzgwMjo6Ojo&url=%2Fdp%2FB0FKGZVMWX%2Fref%3Dsspa_dk_detail_5%3Fpsc%3D1%26pd_rd_i%3DB0FKGZVMWX%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+            - listitem [ref=f13e1000]:
+              - generic [ref=f13e1001]:
+                - link "JjTavwi Rice Paper Table lamp, Bedside Paper Lantern Desk lamp for Bed Room/Study, Standing lamp Room Decoration,Ambient Lighting Night Stand" [ref=f13e1002] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTQxMzkxNjM0NDUwMjo6Ojo&url=%2Fdp%2FB0FVRXHFF8%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FVRXHFF8%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [aria-hidden] [ref=f13e1006]: JjTavwi Rice Paper Table lamp, Bedside Paper Lantern Desk lamp for Bed Room/Study, ...
+                - link "3.7 out of 5 stars 10 ratings" [ref=f13e1008] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTQxMzkxNjM0NDUwMjo6Ojo&url=%2Fdp%2FB0FVRXHFF8%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FVRXHFF8%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy#customerReviews
+                  - text: "10"
+                - link "PAB 37.66" [ref=f13e1011] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTQxMzkxNjM0NDUwMjo6Ojo&url=%2Fdp%2FB0FVRXHFF8%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FVRXHFF8%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+                  - generic [ref=f13e1012]:
+                    - generic [ref=f13e1013]: PAB 37.66
+                    - generic [aria-hidden] [ref=f13e1014]:
+                      - text: PAB
+                      - generic [ref=f13e1015]:
+                        - text: "37"
+                        - generic [ref=f13e1016]: .
+                      - text: "66"
+                - link "FREE delivery Mon, Sep 14 to Panama on $49 (PAB 50.35) of eligible items" [ref=f13e1018] [cursor=pointer]:
+                  - /url: /sspa/click?ie=UTF8&spc=MTo5OTI1MTYzNjg1MTQyMzU6MTc4ODcyNDkxOTpzcF9kZXRhaWwyOjMwMTQxMzkxNjM0NDUwMjo6Ojo&url=%2Fdp%2FB0FVRXHFF8%2Fref%3Dsspa_dk_detail_6%3Fpsc%3D1%26pd_rd_i%3DB0FVRXHFF8%26pd_rd_w%3DaFQme%26content-id%3Damzn1.sym.4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_p%3D4a7f44df-467c-45a1-af5f-91661a6df2f9%26pf_rd_r%3DWPW9AH0CXAJ557BRAAQJ%26pd_rd_wg%3DM9cO7%26pd_rd_r%3Dfee9ed7c-df62-4314-b142-0eb143931179%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWwy
+      - generic "Top reviews" [ref=f13e1026]:
+        - separator [aria-hidden] [ref=f13e1027]
+        - generic [ref=f13e1029]:
+          - generic [ref=f13e1030]:
+            - generic [ref=f13e1035]:
+              - heading "Customer reviews" [level=2] [ref=f13e1037]
+              - generic [ref=f13e1039]:
+                - generic [ref=f13e1041]:
+                  - generic [ref=f13e1042]: 4.6 out of 5 stars
+                  - generic [aria-hidden] [ref=f13e1047]: 4.6 out of 5
+                - generic [ref=f13e1048]: 1,234 global ratings
+              - list [ref=f13e1053]:
+                - listitem [ref=f13e1054]:
+                  - link "80 percent of reviews have 5 stars" [ref=f13e1057] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B012TH34DQ/ref=acr_dp_hist_5?ie=UTF8&filterByStar=five_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f13e1058]: 5 star
+                    - progressbar [aria-hidden] [ref=f13e1060]
+                    - generic [aria-hidden] [ref=f13e1061]: 80%
+                - listitem [ref=f13e1062]:
+                  - link "12 percent of reviews have 4 stars" [ref=f13e1065] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B012TH34DQ/ref=acr_dp_hist_4?ie=UTF8&filterByStar=four_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f13e1066]: 4 star
+                    - progressbar [aria-hidden] [ref=f13e1068]
+                    - generic [aria-hidden] [ref=f13e1069]: 12%
+                - listitem [ref=f13e1070]:
+                  - link "5 percent of reviews have 3 stars" [ref=f13e1073] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B012TH34DQ/ref=acr_dp_hist_3?ie=UTF8&filterByStar=three_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f13e1074]: 3 star
+                    - progressbar [aria-hidden] [ref=f13e1076]
+                    - generic [aria-hidden] [ref=f13e1077]: 5%
+                - listitem [ref=f13e1078]:
+                  - link "1 percent of reviews have 2 stars" [ref=f13e1081] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B012TH34DQ/ref=acr_dp_hist_2?ie=UTF8&filterByStar=two_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f13e1082]: 2 star
+                    - progressbar [aria-hidden] [ref=f13e1084]
+                    - generic [aria-hidden] [ref=f13e1085]: 1%
+                - listitem [ref=f13e1086]:
+                  - link "2 percent of reviews have 1 stars" [ref=f13e1089] [cursor=pointer]:
+                    - /url: /portal/customer-reviews/B012TH34DQ/ref=acr_dp_hist_1?ie=UTF8&filterByStar=one_star&reviewerType=all_reviews#reviews-filter-bar
+                    - generic [aria-hidden] [ref=f13e1090]: 1 star
+                    - progressbar [aria-hidden] [ref=f13e1092]
+                    - generic [aria-hidden] [ref=f13e1093]: 2%
+              - button "How customer reviews and ratings work" [ref=f13e1098] [cursor=pointer]
+            - separator [aria-hidden] [ref=f13e1100]
+          - generic [ref=f13e1104]:
+            - generic [ref=f13e1108]:
+              - heading "Customers say" [level=3] [ref=f13e1109]
+              - generic [ref=f13e1110]: Customers find the lamp simple and elegant, bright enough for reading, and appreciate its suitability for bedside tables and office spaces. Moreover, the light creates a warm glow that enhances room ambiance, and customers consider it good value for money. However, the size receives mixed feedback, with some finding it bigger than expected while others say it's not small enough. Additionally, durability and switch placement are also mixed aspects - while some find it well-built, others describe it as cheaply made, and the switch placement being too far down on the cord is a common complaint.
+              - generic [ref=f13e1112]:
+                - generic [ref=f13e1113]:
+                  - generic [ref=f13e1114]: AI Generated from the text of customer reviews
+                  - generic [aria-hidden] [ref=f13e1116]: Generated from the text of customer reviews
+                - heading "Select to learn more" [level=4] [ref=f13e1117]
+                - tablist "Select to learn more" [ref=f13e1118]:
+                  - generic [ref=f13e1119]:
+                    - tab "Positive aspect, appearance, 289 mentions" [ref=f13e1123]:
+                      - button "Appearance(289)" [ref=f13e1124] [cursor=pointer]
+                    - tab "Positive aspect, brightness, 131 mentions" [ref=f13e1133]:
+                      - button "Brightness(131)" [ref=f13e1134] [cursor=pointer]
+                    - tab "Positive aspect, value for money, 128 mentions" [ref=f13e1143]:
+                      - button "Value for money(128)" [ref=f13e1144] [cursor=pointer]
+                    - tab "Positive aspect, suitability, 65 mentions" [ref=f13e1153]:
+                      - button "Suitability(65)" [ref=f13e1154] [cursor=pointer]
+                    - tab "Positive aspect, ambiance, 32 mentions" [ref=f13e1163]:
+                      - button "Ambiance(32)" [ref=f13e1164] [cursor=pointer]
+                    - tab "Mixed aspect, size, 76 mentions" [ref=f13e1173]:
+                      - button "Size(76)" [ref=f13e1174] [cursor=pointer]
+                    - tab "Mixed aspect, durability, 49 mentions" [ref=f13e1183]:
+                      - button "Durability(49)" [ref=f13e1184] [cursor=pointer]
+                    - tab "Mixed aspect, switch placement, 31 mentions" [ref=f13e1193]:
+                      - button "Switch placement(31)" [ref=f13e1194] [cursor=pointer]
+            - generic [ref=f13e1201]:
+              - group [ref=f13e1204]:
+                - generic [ref=f13e1205]:
+                  - heading "Reviews with images" [level=3] [ref=f13e1207]
+                  - link "See all photos" [ref=f13e1210] [cursor=pointer]:
+                    - /url: javascript:void(0)
+                - group [ref=f13e1214]:
+                  - list [ref=f13e1215]:
+                    - listitem [ref=f13e1216]:
+                      - button [ref=f13e1218] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1219]
+                    - listitem [ref=f13e1221]:
+                      - button [ref=f13e1223] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1224]
+                    - listitem [ref=f13e1226]:
+                      - button [ref=f13e1228] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1229]
+                    - listitem [ref=f13e1231]:
+                      - button [ref=f13e1233] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1234]
+                    - listitem [ref=f13e1236]:
+                      - button [ref=f13e1238] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1239]
+                    - listitem [ref=f13e1241]:
+                      - button [ref=f13e1243] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1244]
+                    - listitem [ref=f13e1246]:
+                      - button [ref=f13e1248] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1249]
+                    - listitem [ref=f13e1251]:
+                      - button [ref=f13e1253] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1254]
+                    - listitem [ref=f13e1256]:
+                      - button [ref=f13e1258] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1259]
+                    - listitem [ref=f13e1261]:
+                      - button [ref=f13e1263] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1264]
+                    - listitem [ref=f13e1266]:
+                      - button [ref=f13e1268] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1269]
+                    - listitem [ref=f13e1271]:
+                      - button [ref=f13e1273] [cursor=pointer]:
+                        - img "Customer Image, click to open customer review" [ref=f13e1274]
+              - separator [aria-hidden] [ref=f13e1276]
+            - generic [ref=f13e1281]:
+              - generic [ref=f13e1282]:
+                - heading "Top reviews from the United States" [level=3] [ref=f13e1283]
+                - list [ref=f13e1284]:
+                  - listitem [ref=f13e1285]:
+                    - generic [ref=f13e1288]:
+                      - link "Mother Crone" [ref=f13e1290] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AGRFC2CPWJL6R3FQYFTJIEEL5PEA?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f13e1296]: 5 out of 5 stars
+                      - link [ref=f13e1299] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R3TVHP8SYHHDJ7/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Great lamp" [level=5] [ref=f13e1300]
+                      - generic [ref=f13e1301]: Reviewed in the United States on July 15, 2018
+                      - link "Verified Purchase" [ref=f13e1305] [cursor=pointer]:
+                        - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - generic [ref=f13e1314]:
+                        - paragraph [ref=f13e1315]: This is the perfect little lamp. I've placed it on a small console table and it looks great. I ordered the special LED lightbulbs they suggested but they never arrived so I went out and purchased bulbs.
+                        - paragraph
+                        - paragraph [ref=f13e1316]: "Now about the bulbs...everyone seemed confused about them so here is my suggestion: simply go to the supermarket and pick up every day bulbs. You don't need specialized bulbs. I bought both 25 watt and 40 watt bulbs. Do not purchase anything in higher wattage. I discovered I like the 25 watt for me. It throws a nice soft light."
+                        - paragraph
+                        - paragraph [ref=f13e1317]: "#2. The length of the cord is approximately 5' and the on/off switch is about 12\" from the base of the lamp."
+                        - paragraph
+                        - paragraph [ref=f13e1318]: I am very pleased with this lamp, especially at Amazon's ridiculously low price. It has a somewhat 50's retro look.
+                      - generic [ref=f13e1319]: 4 people found this helpful
+                      - generic [ref=f13e1321]:
+                        - generic [ref=f13e1325] [cursor=pointer]:
+                          - button "Helpful" [ref=f13e1326]
+                          - generic [ref=f13e1328]: Helpful
+                        - button "Report Review" [ref=f13e1331] [cursor=pointer]: Report
+                  - listitem [ref=f13e1332]:
+                    - generic [ref=f13e1335]:
+                      - link "GottaLoveBooks" [ref=f13e1337] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AGD6L6D2RKJNW3JZFDH4J5CKP4UA?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f13e1343]: 5 out of 5 stars
+                      - link [ref=f13e1346] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R3TLOOKDUAV2LI/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "This is great for a bedside table" [level=5] [ref=f13e1347]
+                      - generic [ref=f13e1348]: Reviewed in the United States on February 3, 2018
+                      - link "Verified Purchase" [ref=f13e1352] [cursor=pointer]:
+                        - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - generic [ref=f13e1355]:
+                        - generic [ref=f13e1361]:
+                          - paragraph [ref=f13e1362]: This is great for a bedside table. It fits standard lightbulbs that I use around the house, but the shade diffuses the light so they aren't as harsh. It has a switch on the cord for turning the light on/off, which I prefer to the lamp styles that have the switch in the stand. (Or one of those dreaded twist ones.) And it looks great with my cozy decor. I've actually paired this with a WiFi-enabled plug so that I can schedule the light on/off and tell Google to turn it on the rest of the time.
+                          - paragraph
+                          - paragraph [ref=f13e1363]: "Also pictured:"
+                          - paragraph [ref=f13e1364]:
+                            - text: Diffuser -
+                            - link "VicTsing 400ml Aromatherapy Essential Oil Diffuser, Ultrasonic Cool Mist Humidifier with Wood Grain Design for Office, Room, Spa (Black)" [ref=f13e1365] [cursor=pointer]:
+                              - /url: /dp/B06XCHY2X9
+                          - paragraph [ref=f13e1366]:
+                            - text: Side Table -
+                            - link "Sauder Harbor View Night Stand Salt Oak with One Drawer" [ref=f13e1367] [cursor=pointer]:
+                              - /url: /dp/B00E4P1BIC
+                          - paragraph [ref=f13e1368]:
+                            - text: WiFi-enabled plug -
+                            - link "TanTan Smart Plug 2 Pack WiFi Enabled Mini Smart Switch Compatible with Amazon Alexa & Google Assistant, No Hub Required, Remote Control Your Devices from Anywhere, ETL Listed [Upgraded Version" [ref=f13e1369] [cursor=pointer]:
+                              - /url: /dp/B071LLWLLP
+                            - text: "]"
+                          - paragraph [ref=f13e1370]: Google Home Mini in Coral - not sold on Amazon
+                        - button "Read more" [ref=f13e1374] [cursor=pointer]
+                      - generic [ref=f13e1378]:
+                        - button [ref=f13e1379] [cursor=pointer]:
+                          - img "This is great for a bedside table" [ref=f13e1380]
+                        - button [ref=f13e1381] [cursor=pointer]:
+                          - img "This is great for a bedside table" [ref=f13e1382]
+                      - generic [ref=f13e1383]: One person found this helpful
+                      - generic [ref=f13e1385]:
+                        - generic [ref=f13e1389] [cursor=pointer]:
+                          - button "Helpful" [ref=f13e1390]
+                          - generic [ref=f13e1392]: Helpful
+                        - button "Report Review" [ref=f13e1395] [cursor=pointer]: Report
+                  - listitem [ref=f13e1396]:
+                    - generic [ref=f13e1399]:
+                      - link "RPL" [ref=f13e1401] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AH6EEZIQNQJIZTKTWIM2XMQQCKAQ?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f13e1407]: 5 out of 5 stars
+                      - link [ref=f13e1410] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R2T15344JMCC19/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Nice looking lamp" [level=5] [ref=f13e1411]
+                      - generic [ref=f13e1412]: Reviewed in the United States on July 18, 2016
+                      - link "Verified Purchase" [ref=f13e1416] [cursor=pointer]:
+                        - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f13e1426]: This is a great lamp. It arrived in about 5 days after being shipped. It appears to be shipped from China instead of the U.S. This lamp takes a maximum of a 40 watt incandescent bulb. I had a 60 W LED bulb laying around, so I tried it out in this lamp. Even though the wattage was below the maximum allowed, the lamp was too bright. Even a 40 Watt LED bulb can seem a bit to bright, as the shade on this lamp is very thin, and some LEDs can be a bit brighter than incandescent bulbs . So, I added a smart dimmer to the lamp in order to attenuate the light depending on the mood I wanted. I can also use the Amazon Echo to turn on the light, turn it off, and dim the light. The lamp looks OK when it's not lit, but it looks great when the light is on.
+                      - generic [ref=f13e1427]: 2 people found this helpful
+                      - generic [ref=f13e1429]:
+                        - generic [ref=f13e1433] [cursor=pointer]:
+                          - button "Helpful" [ref=f13e1434]
+                          - generic [ref=f13e1436]: Helpful
+                        - button "Report Review" [ref=f13e1439] [cursor=pointer]: Report
+                  - listitem [ref=f13e1440]:
+                    - generic [ref=f13e1443]:
+                      - link "Cold&Wet" [ref=f13e1445] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AGPTWPO4WSGB6I5NWUX4XVFEHXEA?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f13e1451]: 4 out of 5 stars
+                      - link [ref=f13e1454] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R278XUN4HR1PGS/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Nice Lamp for a smaller nightstand" [level=5] [ref=f13e1455]
+                      - generic [ref=f13e1456]: Reviewed in the United States on February 16, 2016
+                      - link "Verified Purchase" [ref=f13e1460] [cursor=pointer]:
+                        - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f13e1470]: This lamp looks great. It was a little smaller than I expected however works well on our nightstands. There is a little sticker on the base with the company name, however that can be removed by using a little Goo Gone. The lamps don't dim, but we have them connected to a remote dimmer associated with the outlet the lamps are plugged into and they dim perfectly. Very nice product, nice design and work well for our needs.
+                      - generic [ref=f13e1471]: 8 people found this helpful
+                      - generic [ref=f13e1473]:
+                        - generic [ref=f13e1477] [cursor=pointer]:
+                          - button "Helpful" [ref=f13e1478]
+                          - generic [ref=f13e1480]: Helpful
+                        - button "Report Review" [ref=f13e1483] [cursor=pointer]: Report
+                  - listitem [ref=f13e1484]:
+                    - generic [ref=f13e1487]:
+                      - link "latte" [ref=f13e1489] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AG4OHCKAZOQ4N2J7KYQ4EM6FYNDQ?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f13e1495]: 5 out of 5 stars
+                      - link [ref=f13e1498] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R3LLXGF2GK6A0K/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "I love this little lamp." [level=5] [ref=f13e1499]
+                      - generic [ref=f13e1500]: Reviewed in the United States on January 22, 2018
+                      - link "Verified Purchase" [ref=f13e1504] [cursor=pointer]:
+                        - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - generic [ref=f13e1513]:
+                        - paragraph [ref=f13e1514]: I needed a new lamp for next to my bed. I wanted something cute, that didn't require special size bulbs, and that was budget friendly. Couldn't really find anything that I loved in the local shops so I tried Amazon where I found this little treasure.
+                        - paragraph
+                        - paragraph [ref=f13e1515]: It has a great minimalist design but still feels earthy thanks to the wood base and fabric shade. It is light-weight but sturdy (my cats haven't managed to knock it over yet) and feels like it is very high quality.
+                        - paragraph
+                        - paragraph [ref=f13e1516]: I am super happy with my purchase and would like to get a few more lamps in this style to replace other table lamps around my house.
+                        - paragraph
+                        - paragraph [ref=f13e1517]:
+                          - link "Minimalist Solid Wood Table Lamp Bedside Desk Lamp" [ref=f13e1518] [cursor=pointer]:
+                            - /url: /dp/B012TH34DQ
+                      - generic [ref=f13e1519]: One person found this helpful
+                      - generic [ref=f13e1521]:
+                        - generic [ref=f13e1525] [cursor=pointer]:
+                          - button "Helpful" [ref=f13e1526]
+                          - generic [ref=f13e1528]: Helpful
+                        - button "Report Review" [ref=f13e1531] [cursor=pointer]: Report
+                  - listitem [ref=f13e1532]:
+                    - generic [ref=f13e1535]:
+                      - link "California gal" [ref=f13e1537] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AFR46JBKYHLMITCUHMMNKF2PHG7Q?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f13e1543]: 5 out of 5 stars
+                      - link [ref=f13e1546] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R3G5OZ7F5RX4VC/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Pleasing lamp suitable for many uses" [level=5] [ref=f13e1547]
+                      - generic [ref=f13e1548]: Reviewed in the United States on November 15, 2016
+                      - link "Verified Purchase" [ref=f13e1552] [cursor=pointer]:
+                        - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f13e1562]: This lamp is aesthetically pleasing with a warm and calming cast. I have this one as well as the ZEEFO Simple Table Lamp, which I bought at the same time. I kept both of them, as they are in essence, the same lamp. I use one lamp in the spare bedroom where I meditate and where we have guests stay. (It replaced a larger, unwieldy and breakable painted porcelain lamp.) I use the other lamp in the computer room, where I turn it on whenever I am referring to a document, book, etc., while I'm on the computer. This lamp is suitable for all of these uses--and more. It was just what I was looking for.
+                      - generic [ref=f13e1564]:
+                        - generic [ref=f13e1568] [cursor=pointer]:
+                          - button "Helpful" [ref=f13e1569]
+                          - generic [ref=f13e1571]: Helpful
+                        - button "Report Review" [ref=f13e1574] [cursor=pointer]: Report
+                  - listitem [ref=f13e1575]:
+                    - generic [ref=f13e1578]:
+                      - link "Pelican" [ref=f13e1580] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AHH2RGO5IJIT4UWWKUKZFB6FWWDQ?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f13e1586]: 5 out of 5 stars
+                      - link [ref=f13e1589] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R32PBYZJKOSQV1/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Small, attractive lamp, versatile" [level=5] [ref=f13e1590]
+                      - generic [ref=f13e1591]: Reviewed in the United States on February 7, 2020
+                      - link "Verified Purchase" [ref=f13e1595] [cursor=pointer]:
+                        - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f13e1605]: My apartment doesn’t have much natural lighting and I wanted some small, inexpensive lamps for reading and just to brighten things up. This little lamp is perfect! It doesn’t take up much space. It can sit easily on a desk, end table or nightstand and it produces an incredible amount of soft but diffuse light. The shape is very cool and lends itself to lots of decorating schemes. I am thinking of getting one or two more. Highly recommend!
+                      - generic [ref=f13e1607]:
+                        - generic [ref=f13e1611] [cursor=pointer]:
+                          - button "Helpful" [ref=f13e1612]
+                          - generic [ref=f13e1614]: Helpful
+                        - button "Report Review" [ref=f13e1617] [cursor=pointer]: Report
+                  - listitem [ref=f13e1618]:
+                    - generic [ref=f13e1621]:
+                      - link "C. Hommel" [ref=f13e1623] [cursor=pointer]:
+                        - /url: /gp/profile/amzn1.account.AEO6ILK7L2K3JLI2UWXW6IOW7OTQ?ref=cm_cr_dp_d_bdcrb_top
+                      - generic [ref=f13e1629]: 5 out of 5 stars
+                      - link [ref=f13e1632] [cursor=pointer]:
+                        - /url: /portal/customer-reviews/srp/-/R1US5C3KKG07KI/ref=cm_cr_dp_d_rvw_ttl?_encoding=UTF8&ie=UTF8
+                        - heading "Looks great, modern" [level=5] [ref=f13e1633]
+                      - generic [ref=f13e1634]: Reviewed in the United States on October 26, 2016
+                      - link "Verified Purchase" [ref=f13e1638] [cursor=pointer]:
+                        - /url: /gp/help/customer/display.html/ref=cm_cr_dp_d_rvw_avp?ie=UTF8&nodeId=G8UYX7LALQC8V9KA
+                      - paragraph [ref=f13e1648]: Wow, these lamps look great in person! I am very pleased with my purchase. No assembly required. The small metal label others talk about on the base is almost completely invisible, so I haven't even bothered removing it. With a 29W halogen bulb, the lamp throws a very nice level at light - just enough for illuminating a night stand at night for reading a book, getting in bed, etc. Nice, soft, yellow-ish glow to the light/shade combo. Looks good!
+                      - generic [ref=f13e1649]: 3 people found this helpful
+                      - generic [ref=f13e1651]:
+                        - generic [ref=f13e1655] [cursor=pointer]:
+                          - button "Helpful" [ref=f13e1656]
+                          - generic [ref=f13e1658]: Helpful
+                        - button "Report Review" [ref=f13e1661] [cursor=pointer]: Report
+              - link "See more reviews" [ref=f13e1663] [cursor=pointer]:
+                - /url: /portal/customer-reviews/B012TH34DQ/ref=cm_cr_dp_d_show_all_top?_encoding=UTF8&ie=UTF8&reviewerType=all_reviews
+      - generic [ref=f13e1671]:
+        - iframe [ref=f13e1672]:
+          - generic [ref=f16e4]:
+            - link "Aqara Presence Sensor FP300 Wireless 5-in-1 Motion Sensor with mmWave | PIR, Light, Temperature & Humidity Detection, Thread & Zigbee, Supports HomeKit, Home Assistant, Alexa, Google Home" [ref=f16e7] [cursor=pointer]:
+              - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RLBJBEKkJxoK3XDohf_RbqsAAAGgeFA-ZwEAAAH0AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICBXDbiG/clv1c_ek8OM3GX57OOBXc78KNgzV4oxwSJLDQxNuqP-cx7zB72RAPfbjcAbjmcsKQK7tXKxo4PPUW8pu7ZpYIwsObO85jP1RRKI6GQeNq53aJLsc76qRo4CB0VOZbpLE-6Y9vnWRsMDgZ4Kl-AitV8-U302NCKIrXorRkgNqxTqSP34w8SSBNnbZSKg7Czavz1VMk15tcBlPg4lfUa5u9Q2zrLP2YusCsy6cLt_2KqfEwTN60lVZnzBiq-vXEznScc2Dumn0bxFh_Th2KN91B_wvgCGl9e15suBnln03yQHICUrqq11HqHsPifc_25jpSq-hCYmSq5uesTtqvBsYQcFmRpEdhoycQpw58UyooGBuHEvjb1iAdJj35cRpQiY-RTqIyFX33Zk7-dTw/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4OTE4OTA1OTA5NDkwNTM1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX2VuZGNhcF9zaGFyZWQ6MzAxMDYyMTM4MzUzODAyOjo6Og&url=%2Fdp%2FB0FG2MD3YP%2Fref%3Dsspa_dk_bot_detail_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfZW5kY2FwX3NoYXJlZA
+            - generic [ref=f16e8]:
+              - img "Aqara Presence Sensor FP300 Wireless 5-in-1 Motion Sensor with mmWave | PIR, Light, Temperature & Humidity Detection, Thread & Zigbee, Supports HomeKit, Home Assistant, Alexa, Google Home" [ref=f16e10]
+              - generic [ref=f16e11]:
+                - generic [ref=f16e12]: Aqara Presence Sensor FP300 Wireless 5-in-1 Motion Sensor with mmWave | PIR, Light...
+                - generic [ref=f16e13]:
+                  - text: PAB 51.36
+                  - link "835" [ref=f16e14] [cursor=pointer]:
+                    - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RLBJBEKkJxoK3XDohf_RbqsAAAGgeFA-ZwEAAAH0AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICBXDbiG/clv1c_ek8OM3GX57OOBXc78KNgzV4oxwSJLDQxNuqP-cx7zB72RAPfbjcAbjmcsKQK7tXKxo4PPUW8pu7ZpYIwsObO85jP1RRKI6GQeNq53aJLsc76qRo4CB0VOZbpLE-6Y9vnWRsMDgZ4Kl-AitV8-U302NCKIrXorRkgNqxTqSP34w8SSBNnbZSKg7Czavz1VMk15tcBlPg4lfUa5u9Q2zrLP2YusCsy6cLt_2KqfEwTN60lVZnzBiq-vXEznScc2Dumn0bxFh_Th2KN91B_wvgCGl9e15suBnln03yQHICUrqq11HqHsPifc_25jpSq-hCYmSq5uesTtqvBsYQcFmRpEdhoycQpw58UyooGBuHEvjb1iAdJj35cRpQiY-RTqIyFX33Zk7-dTw/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4OTE4OTA1OTA5NDkwNTM1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX2VuZGNhcF9zaGFyZWQ6MzAxMDYyMTM4MzUzODAyOjo6Og&url=%2Fdp%2FB0FG2MD3YP%2Fref%3Dsspa_dk_bot_detail_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfZW5kY2FwX3NoYXJlZA#customerReviews
+              - link "Shop now" [ref=f16e18] [cursor=pointer]:
+                - /url: https://aax-events-cell01-cf.us-east.ono.axp.amazon-adsystem.com/x/c/RLBJBEKkJxoK3XDohf_RbqsAAAGgeFA-ZwEAAAH0AQBvbm9fdHhuX2JpZDEgICBvbm9fdHhuX2ltcDIgICBXDbiG/clv1c_ek8OM3GX57OOBXc78KNgzV4oxwSJLDQxNuqP-cx7zB72RAPfbjcAbjmcsKQK7tXKxo4PPUW8pu7ZpYIwsObO85jP1RRKI6GQeNq53aJLsc76qRo4CB0VOZbpLE-6Y9vnWRsMDgZ4Kl-AitV8-U302NCKIrXorRkgNqxTqSP34w8SSBNnbZSKg7Czavz1VMk15tcBlPg4lfUa5u9Q2zrLP2YusCsy6cLt_2KqfEwTN60lVZnzBiq-vXEznScc2Dumn0bxFh_Th2KN91B_wvgCGl9e15suBnln03yQHICUrqq11HqHsPifc_25jpSq-hCYmSq5uesTtqvBsYQcFmRpEdhoycQpw58UyooGBuHEvjb1iAdJj35cRpQiY-RTqIyFX33Zk7-dTw/https://www.amazon.com/sspa/click?ie=UTF8&spc=MTo4OTE4OTA1OTA5NDkwNTM1OjE3ODg3MjQ5MTk6c3BfZGV0YWlsX2VuZGNhcF9zaGFyZWQ6MzAxMDYyMTM4MzUzODAyOjo6Og&url=%2Fdp%2FB0FG2MD3YP%2Fref%3Dsspa_dk_bot_detail_aax_0%3Fpsc%3D1%26sp_csd%3Dd2lkZ2V0TmFtZT1zcF9kZXRhaWxfZW5kY2FwX3NoYXJlZA
+        - button "Leave feedback on Sponsored ad" [ref=f13e1674] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f13e1675]: Sponsored
+  - complementary "Your recently viewed items and featured recommendations"
+  - generic [ref=f13e1677]:
+    - button "Back to top" [ref=f13e1678] [cursor=pointer]
+    - generic [ref=f13e1680]:
+      - generic [ref=f13e1681]:
+        - heading "Get to Know Us" [level=6] [ref=f13e1682]
+        - list [ref=f13e1683]:
+          - listitem [ref=f13e1684]:
+            - link "Careers" [ref=f13e1685] [cursor=pointer]:
+              - /url: https://www.amazon.jobs
+          - listitem [ref=f13e1686]:
+            - link "Blog" [ref=f13e1687] [cursor=pointer]:
+              - /url: https://blog.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=f13e1688]:
+            - link "About Amazon" [ref=f13e1689] [cursor=pointer]:
+              - /url: https://www.aboutamazon.com/?utm_source=gateway&utm_medium=footer
+          - listitem [ref=f13e1690]:
+            - link "Investor Relations" [ref=f13e1691] [cursor=pointer]:
+              - /url: https://www.amazon.com/ir
+          - listitem [ref=f13e1692]:
+            - link "Amazon Devices" [ref=f13e1693] [cursor=pointer]:
+              - /url: /gp/browse.html?node=2102313011&ref_=footer_devices
+          - listitem [ref=f13e1694]:
+            - link "Amazon Science" [ref=f13e1695] [cursor=pointer]:
+              - /url: https://www.amazon.science
+      - generic [ref=f13e1697]:
+        - heading "Make Money with Us" [level=6] [ref=f13e1698]
+        - list [ref=f13e1699]:
+          - listitem [ref=f13e1700]:
+            - link "Sell products on Amazon" [ref=f13e1701] [cursor=pointer]:
+              - /url: https://services.amazon.com/sell.html?ld=AZFSSOA&ref_=footer_soa
+          - listitem [ref=f13e1702]:
+            - link "Sell on Amazon Business" [ref=f13e1703] [cursor=pointer]:
+              - /url: https://services.amazon.com/amazon-business.html?ld=usb2bunifooter&ref_=footer_b2b
+          - listitem [ref=f13e1704]:
+            - link "Sell apps on Amazon" [ref=f13e1705] [cursor=pointer]:
+              - /url: https://developer.amazon.com
+          - listitem [ref=f13e1706]:
+            - link "Become an Affiliate" [ref=f13e1707] [cursor=pointer]:
+              - /url: https://affiliate-program.amazon.com/
+          - listitem [ref=f13e1708]:
+            - link "Advertise Your Products" [ref=f13e1709] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=ext_amzn_ftr
+          - listitem [ref=f13e1710]:
+            - link "Self-Publish with Us" [ref=f13e1711] [cursor=pointer]:
+              - /url: /gp/seller-account/mm-summary-page.html?ld=AZFooterSelfPublish&topic=200260520&ref_=footer_publishing
+          - listitem [ref=f13e1712]:
+            - link "Host an Amazon Hub" [ref=f13e1713] [cursor=pointer]:
+              - /url: https://go.thehub-amazon.com/amazon-hub-locker
+          - listitem [ref=f13e1714]:
+            - text: ›
+            - link "See More Make Money with Us" [ref=f13e1715] [cursor=pointer]:
+              - /url: /b/?node=18190131011&ld=AZUSSOA-seemore&ref_=footer_seemore
+      - generic [ref=f13e1717]:
+        - heading "Amazon Payment Products" [level=6] [ref=f13e1718]
+        - list [ref=f13e1719]:
+          - listitem [ref=f13e1720]:
+            - link "Amazon Business Card" [ref=f13e1721] [cursor=pointer]:
+              - /url: /dp/B07984JN3L?plattr=ACOMFO&ie=UTF-8
+          - listitem [ref=f13e1722]:
+            - link "Shop with Points" [ref=f13e1723] [cursor=pointer]:
+              - /url: /gp/browse.html?node=16218619011&ref_=footer_swp
+          - listitem [ref=f13e1724]:
+            - link "Reload Your Balance" [ref=f13e1725] [cursor=pointer]:
+              - /url: /dp/B0CHTVMXZJ?th=1?ref_=footer_reload_us
+          - listitem [ref=f13e1726]:
+            - link "Amazon Currency Converter" [ref=f13e1727] [cursor=pointer]:
+              - /url: /gp/browse.html?node=388305011&ref_=footer_tfx
+      - generic [ref=f13e1729]:
+        - heading "Let Us Help You" [level=6] [ref=f13e1730]
+        - list [ref=f13e1731]:
+          - listitem [ref=f13e1732]:
+            - link "Your Account" [ref=f13e1733] [cursor=pointer]:
+              - /url: https://www.amazon.com/gp/css/homepage.html?ref_=footer_ya
+          - listitem [ref=f13e1734]:
+            - link "Your Orders" [ref=f13e1735] [cursor=pointer]:
+              - /url: https://www.amazon.com/gp/css/order-history?ref_=footer_yo
+          - listitem [ref=f13e1736]:
+            - link "Shipping Rates & Policies" [ref=f13e1737] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=468520&ref_=footer_shiprates
+          - listitem [ref=f13e1738]:
+            - link "Returns & Replacements" [ref=f13e1739] [cursor=pointer]:
+              - /url: /gp/css/returns/homepage.html?ref_=footer_hy_f_4
+          - listitem [ref=f13e1740]:
+            - link "Manage Your Content and Devices" [ref=f13e1741] [cursor=pointer]:
+              - /url: /gp/digital/fiona/manage?ref_=footer_myk
+          - listitem [ref=f13e1742]:
+            - link "Help" [ref=f13e1743] [cursor=pointer]:
+              - /url: /gp/help/customer/display.html?nodeId=508510&ref_=footer_gw_m_b_he
+    - generic [ref=f13e1745]:
+      - link "Amazon US Home" [ref=f13e1748] [cursor=pointer]:
+        - /url: /?ref_=footer_logo
+      - generic [ref=f13e1751]:
+        - generic [ref=f13e1752]:
+          - link "Choose a language for shopping. Current selection is English." [ref=f13e1753] [cursor=pointer]:
+            - /url: /customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang
+            - generic [ref=f13e1755]: English
+          - button "Expand to Change Language or Country" [ref=f13e1756] [cursor=pointer]
+        - link "PAB Panamanian Balboa" [ref=f13e1757] [cursor=pointer]:
+          - /url: /customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2FMinimalist-Solid-Wood-Table-Bedside%2Fdp%2FB012TH34DQ
+          - generic [ref=f13e1758]: PAB
+          - generic [ref=f13e1759]: Panamanian Balboa
+        - button "Choose a country/region for shopping. The current selection is United States." [ref=f13e1760] [cursor=pointer]:
+          - generic [ref=f13e1762]: United States
+    - navigation "More on Amazon" [ref=f13e1763]:
+      - generic "More on Amazon" [ref=f13e1764]:
+        - list [ref=f13e1765]:
+          - listitem [ref=f13e1766]:
+            - link [ref=f13e1767] [cursor=pointer]:
+              - /url: https://music.amazon.com?ref=dm_aff_amz_com
+              - heading "Amazon Music" [level=5] [ref=f13e1768]
+              - generic [ref=f13e1769]: Stream millionsof songs
+          - listitem [aria-hidden] [ref=f13e1770]
+          - listitem [ref=f13e1771]:
+            - link [ref=f13e1772] [cursor=pointer]:
+              - /url: https://advertising.amazon.com/?ref=footer_advtsing_amzn_com
+              - heading "Amazon Ads" [level=5] [ref=f13e1773]
+              - generic [ref=f13e1774]: Reach customerswherever theyspend their time
+          - listitem [aria-hidden] [ref=f13e1775]
+          - listitem [ref=f13e1776]:
+            - link [ref=f13e1777] [cursor=pointer]:
+              - /url: https://www.6pm.com
+              - heading "6pm" [level=5] [ref=f13e1778]
+              - generic [ref=f13e1779]: Score dealson fashion brands
+          - listitem [aria-hidden] [ref=f13e1780]
+          - listitem [ref=f13e1781]:
+            - link [ref=f13e1782] [cursor=pointer]:
+              - /url: https://www.abebooks.com
+              - heading "AbeBooks" [level=5] [ref=f13e1783]
+              - generic [ref=f13e1784]: Books, art& collectibles
+          - listitem [aria-hidden] [ref=f13e1785]
+          - listitem [ref=f13e1786]:
+            - link [ref=f13e1787] [cursor=pointer]:
+              - /url: https://www.acx.com/
+              - heading "ACX" [level=5] [ref=f13e1788]
+              - generic [ref=f13e1789]: Audiobook PublishingMade Easy
+          - listitem [aria-hidden] [ref=f13e1790]
+          - listitem [ref=f13e1791]:
+            - link "Sell on Amazon Start a Selling Account" [ref=f13e1792] [cursor=pointer]:
+              - /url: https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell
+              - heading "Sell on Amazon" [level=5] [ref=f13e1793]
+              - generic [ref=f13e1794]: Start a Selling Account
+          - listitem [aria-hidden] [ref=f13e1795]
+          - listitem [ref=f13e1796]:
+            - link [ref=f13e1797] [cursor=pointer]:
+              - /url: https://www.veeqo.com/?utm_source=amazon&utm_medium=website&utm_campaign=footer
+              - heading "Veeqo" [level=5] [ref=f13e1798]
+              - generic [ref=f13e1799]: Shipping SoftwareInventory Management
+        - list [ref=f13e1800]:
+          - listitem [ref=f13e1801]:
+            - link [ref=f13e1802] [cursor=pointer]:
+              - /url: /business?ref_=footer_retail_b2b
+              - heading "Amazon Business" [level=5] [ref=f13e1803]
+              - generic [ref=f13e1804]: Everything ForYour Business
+          - listitem [aria-hidden] [ref=f13e1805]
+          - listitem [ref=f13e1806]:
+            - link [ref=f13e1807] [cursor=pointer]:
+              - /url: /gp/browse.html?node=20338496011&ref_=footer_amazonglobal
+              - heading "AmazonGlobal" [level=5] [ref=f13e1808]
+              - generic [ref=f13e1809]: Ship OrdersInternationally
+          - listitem [aria-hidden] [ref=f13e1810]
+          - listitem [ref=f13e1811]:
+            - link [ref=f13e1812] [cursor=pointer]:
+              - /url: https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter
+              - heading "Amazon Web Services" [level=5] [ref=f13e1813]
+              - generic [ref=f13e1814]: Scalable CloudComputing Services
+          - listitem [aria-hidden] [ref=f13e1815]
+          - listitem [ref=f13e1816]:
+            - link [ref=f13e1817] [cursor=pointer]:
+              - /url: https://www.audible.com
+              - heading "Audible" [level=5] [ref=f13e1818]
+              - generic [ref=f13e1819]: Listen to Books & OriginalAudio Performances
+          - listitem [aria-hidden] [ref=f13e1820]
+          - listitem [ref=f13e1821]:
+            - link [ref=f13e1822] [cursor=pointer]:
+              - /url: https://www.boxofficemojo.com/?ref_=amzn_nav_ftr
+              - heading "Box Office Mojo" [level=5] [ref=f13e1823]
+              - generic [ref=f13e1824]: Find MovieBox Office Data
+          - listitem [aria-hidden] [ref=f13e1825]
+          - listitem [ref=f13e1826]:
+            - link [ref=f13e1827] [cursor=pointer]:
+              - /url: https://www.goodreads.com
+              - heading "Goodreads" [level=5] [ref=f13e1828]
+              - generic [ref=f13e1829]: Book reviews& recommendations
+          - listitem [aria-hidden] [ref=f13e1830]
+          - listitem [ref=f13e1831]:
+            - link [ref=f13e1832] [cursor=pointer]:
+              - /url: https://www.imdb.com
+              - heading "IMDb" [level=5] [ref=f13e1833]
+              - generic [ref=f13e1834]: Movies, TV& Celebrities
+        - list [ref=f13e1835]:
+          - listitem [ref=f13e1836]:
+            - link [ref=f13e1837] [cursor=pointer]:
+              - /url: https://pro.imdb.com?ref_=amzn_nav_ftr
+              - heading "IMDbPro" [level=5] [ref=f13e1838]
+              - generic [ref=f13e1839]: Get Info EntertainmentProfessionals Need
+          - listitem [aria-hidden] [ref=f13e1840]
+          - listitem [ref=f13e1841]:
+            - link [ref=f13e1842] [cursor=pointer]:
+              - /url: https://kdp.amazon.com
+              - heading "Kindle Direct Publishing" [level=5] [ref=f13e1843]
+              - generic [ref=f13e1844]: Indie Digital & Print PublishingMade Easy
+          - listitem [aria-hidden] [ref=f13e1845]
+          - listitem [ref=f13e1846]:
+            - link [ref=f13e1847] [cursor=pointer]:
+              - /url: https://videodirect.amazon.com/home/landing
+              - heading "Prime Video Direct" [level=5] [ref=f13e1848]
+              - generic [ref=f13e1849]: Video DistributionMade Easy
+          - listitem [aria-hidden] [ref=f13e1850]
+          - listitem [ref=f13e1851]:
+            - link [ref=f13e1852] [cursor=pointer]:
+              - /url: https://www.shopbop.com
+              - heading "Shopbop" [level=5] [ref=f13e1853]
+              - generic [ref=f13e1854]: DesignerFashion Brands
+          - listitem [aria-hidden] [ref=f13e1855]
+          - listitem [ref=f13e1856]:
+            - link [ref=f13e1857] [cursor=pointer]:
+              - /url: https://www.woot.com/
+              - heading "Woot!" [level=5] [ref=f13e1858]
+              - generic [ref=f13e1859]: Deals and Shenanigans
+          - listitem [aria-hidden] [ref=f13e1860]
+          - listitem [ref=f13e1861]:
+            - link [ref=f13e1862] [cursor=pointer]:
+              - /url: https://www.zappos.com
+              - heading "Zappos" [level=5] [ref=f13e1863]
+              - generic [ref=f13e1864]: Shoes &Clothing
+          - listitem [aria-hidden] [ref=f13e1865]
+          - listitem [ref=f13e1866]:
+            - link [ref=f13e1867] [cursor=pointer]:
+              - /url: https://ring.com
+              - heading "Ring" [level=5] [ref=f13e1868]
+              - generic [ref=f13e1869]: Smart HomeSecurity Systems
+        - list [ref=f13e1870]:
+          - listitem [aria-hidden] [ref=f13e1871]
+          - listitem [aria-hidden] [ref=f13e1872]
+          - listitem [ref=f13e1873]:
+            - link [ref=f13e1874] [cursor=pointer]:
+              - /url: https://eero.com/
+              - heading "eero WiFi" [level=5] [ref=f13e1875]
+              - generic [ref=f13e1876]: Stream 4K Videoin Every Room
+          - listitem [aria-hidden] [ref=f13e1877]
+          - listitem [ref=f13e1878]:
+            - link [ref=f13e1879] [cursor=pointer]:
+              - /url: https://blinkforhome.com/?ref=nav_footer
+              - heading "Blink" [level=5] [ref=f13e1880]
+              - generic [ref=f13e1881]: Smart Securityfor Every Home
+          - listitem [aria-hidden] [ref=f13e1882]
+          - listitem [ref=f13e1883]:
+            - link [ref=f13e1884] [cursor=pointer]:
+              - /url: https://shop.ring.com/pages/neighbors-app
+              - heading "Neighbors App" [level=5] [ref=f13e1885]
+              - generic [ref=f13e1886]: Real-Time Crime& Safety Alerts
+          - listitem [aria-hidden] [ref=f13e1887]
+          - listitem [ref=f13e1888]:
+            - link "PillPack Pharmacy Simplified" [ref=f13e1889] [cursor=pointer]:
+              - /url: https://www.pillpack.com
+              - heading "PillPack" [level=5] [ref=f13e1890]
+              - generic [ref=f13e1891]: Pharmacy Simplified
+          - listitem [aria-hidden] [ref=f13e1892]
+          - listitem [aria-hidden] [ref=f13e1893]
+          - listitem [aria-hidden] [ref=f13e1894]
+          - listitem [aria-hidden] [ref=f13e1895]
+    - generic [ref=f13e1896]:
+      - list [ref=f13e1897]:
+        - listitem [ref=f13e1898]:
+          - link "Conditions of Use" [ref=f13e1899] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=508088&ref_=footer_cou
+        - listitem [ref=f13e1900]:
+          - link "Privacy Notice" [ref=f13e1901] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ&ref_=footer_privacy
+        - listitem [ref=f13e1902]:
+          - link "Consumer Health Data Privacy Disclosure" [ref=f13e1903] [cursor=pointer]:
+            - /url: /gp/help/customer/display.html?ie=UTF8&nodeId=TnACMrGVghHocjL8KB&ref_=footer_consumer_health_data_privacy
+        - listitem [ref=f13e1904]:
+          - link "Your Ads Privacy Choices" [ref=f13e1905] [cursor=pointer]:
+            - /url: /privacyprefs?ref_=footer_iba
+        - listitem [ref=f13e1906]
+      - generic [ref=f13e1908]: © 1996-2026, Amazon.com, Inc. or its affiliates

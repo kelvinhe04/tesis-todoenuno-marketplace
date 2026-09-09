@@ -1,0 +1,470 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e405]:
+    - navigation [ref=f4e408]:
+      - link [ref=f4e410] [cursor=pointer]:
+        - /url: /
+      - search [ref=f4e415]:
+        - generic [ref=f4e416]:
+          - button "Photos" [ref=f4e418] [cursor=pointer]
+          - searchbox "Search for free photos" [ref=f4e426]: accounting
+          - button [ref=f4e428] [cursor=pointer]
+      - generic [ref=f4e432]:
+        - link "Explore" [ref=f4e434] [cursor=pointer]:
+          - /url: /discover/
+        - link "License" [ref=f4e438] [cursor=pointer]:
+          - /url: /license/
+        - button [ref=f4e441] [cursor=pointer]
+        - button "Join" [ref=f4e444] [cursor=pointer]
+    - main [ref=f4e447]:
+      - generic [ref=f4e448]:
+        - generic [ref=f4e452]:
+          - paragraph [ref=f4e454] [cursor=pointer]: Any
+          - paragraph [ref=f4e459] [cursor=pointer]: Horizontal
+          - paragraph [ref=f4e464] [cursor=pointer]: Vertical
+          - paragraph [ref=f4e469] [cursor=pointer]: Square
+        - generic [ref=f4e473]:
+          - paragraph [ref=f4e475] [cursor=pointer]: Any
+          - paragraph [ref=f4e477] [cursor=pointer]: "0"
+          - paragraph [ref=f4e482] [cursor=pointer]: "1"
+          - paragraph [ref=f4e487] [cursor=pointer]: "2"
+          - paragraph [ref=f4e492] [cursor=pointer]: 3+
+        - generic [ref=f4e496]:
+          - paragraph [ref=f4e498] [cursor=pointer]: Any
+          - paragraph [ref=f4e503] [cursor=pointer]: Baby
+          - paragraph [ref=f4e508] [cursor=pointer]: Child
+          - paragraph [ref=f4e513] [cursor=pointer]: Teenager
+          - paragraph [ref=f4e518] [cursor=pointer]: Adult
+          - paragraph [ref=f4e523] [cursor=pointer]: Senior adult
+        - generic [ref=f4e526]:
+          - generic [ref=f4e527]:
+            - generic [ref=f4e528] [cursor=pointer]
+            - slider [ref=f4e530] [cursor=pointer]
+            - slider [ref=f4e531] [cursor=pointer]
+          - generic [ref=f4e532]:
+            - generic [ref=f4e533]:
+              - paragraph [ref=f4e534]: Minimum
+              - paragraph [ref=f4e535]: 1,080px
+            - generic [ref=f4e536]:
+              - paragraph [ref=f4e537]: Maximum
+              - paragraph [ref=f4e538]: 20,000px+
+        - generic [ref=f4e541]:
+          - generic [ref=f4e542]:
+            - generic [ref=f4e543] [cursor=pointer]
+            - slider [ref=f4e545] [cursor=pointer]
+            - slider [ref=f4e546] [cursor=pointer]
+          - generic [ref=f4e547]:
+            - generic [ref=f4e548]:
+              - paragraph [ref=f4e549]: Minimum
+              - paragraph [ref=f4e550]: 1,080px
+            - generic [ref=f4e551]:
+              - paragraph [ref=f4e552]: Maximum
+              - paragraph [ref=f4e553]: 20,000px+
+        - generic [ref=f4e557]:
+          - button [ref=f4e558] [cursor=pointer]:
+            - textbox [ref=f4e564]:
+              - /placeholder: Enter hex code
+          - button [ref=f4e567] [cursor=pointer]:
+            - textbox [ref=f4e573]: "#000000"
+        - generic [ref=f4e577]:
+          - paragraph [ref=f4e579] [cursor=pointer]: Any
+          - paragraph [ref=f4e584] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f4e589] [cursor=pointer]: Last week
+          - paragraph [ref=f4e594] [cursor=pointer]: Last month
+          - paragraph [ref=f4e599] [cursor=pointer]: Last year
+        - main "main-content" [ref=f4e600]:
+          - generic [ref=f4e601]:
+            - heading "Free Accounting Photos" [level=1] [ref=f4e604]
+            - generic [ref=f4e607]:
+              - link "Photos 6K" [ref=f4e609] [cursor=pointer]:
+                - /url: /search/accounting/
+                - text: Photos
+                - generic [ref=f4e610]: 6K
+              - link "Videos 4.3K" [ref=f4e611] [cursor=pointer]:
+                - /url: /search/videos/accounting/
+                - text: Videos
+                - generic [ref=f4e612]: 4.3K
+              - link "Users 538" [ref=f4e613] [cursor=pointer]:
+                - /url: /search/users/accounting/
+                - text: Users
+                - generic [ref=f4e614]: "538"
+            - generic [ref=f4e616]:
+              - button "Filters" [ref=f4e618] [cursor=pointer]
+              - separator [ref=f4e625]
+              - generic [ref=f4e629]:
+                - link [ref=f4e631] [cursor=pointer]:
+                  - /url: /search/bookkeeping/
+                  - img "bookkeeping" [ref=f4e632]
+                  - generic [ref=f4e633]:
+                    - paragraph [ref=f4e634]: bookkeeping
+                    - paragraph [ref=f4e635]: 4K
+                - link [ref=f4e636] [cursor=pointer]:
+                  - /url: /search/accounts/
+                  - img "accounts" [ref=f4e637]
+                  - generic [ref=f4e638]:
+                    - paragraph [ref=f4e639]: accounts
+                    - paragraph [ref=f4e640]: 6K
+                - link [ref=f4e641] [cursor=pointer]:
+                  - /url: /search/accountant/
+                  - img "accountant" [ref=f4e642]
+                  - generic [ref=f4e643]:
+                    - paragraph [ref=f4e644]: accountant
+                    - paragraph [ref=f4e645]: 5K
+                - link [ref=f4e646] [cursor=pointer]:
+                  - /url: /search/financial/
+                  - img "financial" [ref=f4e647]
+                  - generic [ref=f4e648]:
+                    - paragraph [ref=f4e649]: financial
+                    - paragraph [ref=f4e650]: 33K
+                - link [ref=f4e651] [cursor=pointer]:
+                  - /url: /search/tax/
+                  - img "tax" [ref=f4e652]
+                  - generic [ref=f4e653]:
+                    - paragraph [ref=f4e654]: tax
+                    - paragraph [ref=f4e655]: 4K
+                - link [ref=f4e656] [cursor=pointer]:
+                  - /url: /search/finance/
+                  - img "finance" [ref=f4e657]
+                  - generic [ref=f4e658]:
+                    - paragraph [ref=f4e659]: finance
+                    - paragraph [ref=f4e660]: 16K
+                - link [ref=f4e661] [cursor=pointer]:
+                  - /url: /search/finances/
+                  - img "finances" [ref=f4e662]
+                  - generic [ref=f4e663]:
+                    - paragraph [ref=f4e664]: finances
+                    - paragraph [ref=f4e665]: 15K
+                - link [ref=f4e666] [cursor=pointer]:
+                  - /url: /search/budgeting/
+                  - img "budgeting" [ref=f4e667]
+                  - generic [ref=f4e668]:
+                    - paragraph [ref=f4e669]: budgeting
+                    - paragraph [ref=f4e670]: 6K
+                - link [ref=f4e671] [cursor=pointer]:
+                  - /url: /search/taxes/
+                  - img "taxes" [ref=f4e672]
+                  - generic [ref=f4e673]:
+                    - paragraph [ref=f4e674]: taxes
+                    - paragraph [ref=f4e675]: 4K
+                - link [ref=f4e676] [cursor=pointer]:
+                  - /url: /search/banking/
+                  - img "banking" [ref=f4e677]
+                  - generic [ref=f4e678]:
+                    - paragraph [ref=f4e679]: banking
+                    - paragraph [ref=f4e680]: 6K
+                - link [ref=f4e681] [cursor=pointer]:
+                  - /url: /search/income%20tax/
+                  - img "income tax" [ref=f4e682]
+                  - generic [ref=f4e683]:
+                    - paragraph [ref=f4e684]: income tax
+                    - paragraph [ref=f4e685]: 6K
+                - link [ref=f4e686] [cursor=pointer]:
+                  - /url: /search/financial%20services/
+                  - img "financial services" [ref=f4e687]
+                  - generic [ref=f4e688]:
+                    - paragraph [ref=f4e689]: financial services
+                    - paragraph [ref=f4e690]: 71K
+                - link [ref=f4e691] [cursor=pointer]:
+                  - /url: /search/financial%20analysis/
+                  - img "financial analysis" [ref=f4e692]
+                  - generic [ref=f4e693]:
+                    - paragraph [ref=f4e694]: financial analysis
+                    - paragraph [ref=f4e695]: 41K
+                - link [ref=f4e696] [cursor=pointer]:
+                  - /url: /search/trading/
+                  - img "trading" [ref=f4e697]
+                  - generic [ref=f4e698]:
+                    - paragraph [ref=f4e699]: trading
+                    - paragraph [ref=f4e700]: 24K
+                - link [ref=f4e701] [cursor=pointer]:
+                  - /url: /search/personal%20finance/
+                  - img "personal finance" [ref=f4e702]
+                  - generic [ref=f4e703]:
+                    - paragraph [ref=f4e704]: personal finance
+                    - paragraph [ref=f4e705]: 415K
+                - link [ref=f4e706] [cursor=pointer]:
+                  - /url: /search/investing/
+                  - img "investing" [ref=f4e707]
+                  - generic [ref=f4e708]:
+                    - paragraph [ref=f4e709]: investing
+                    - paragraph [ref=f4e710]: 10K
+                - img [ref=f4e711] [cursor=pointer]
+            - generic [ref=f4e714]:
+              - generic [ref=f4e716]:
+                - generic [ref=f4e717]:
+                  - article [ref=f4e720]:
+                    - link [ref=f4e721] [cursor=pointer]:
+                      - /url: /photo/woman-using-calculator-at-the-office-7654131/
+                      - img "Free Two business professionals collaborating with a laptop and calculator in a modern office. Stock Photo" [ref=f4e722]
+                  - article [ref=f4e727]:
+                    - link [ref=f4e728] [cursor=pointer]:
+                      - /url: /photo/people-working-at-the-office-7654132/
+                      - img "Free Two diverse accountants working at a shared office table using laptops and calculators. Stock Photo" [ref=f4e729]
+                  - article [ref=f4e734]:
+                    - link [ref=f4e735] [cursor=pointer]:
+                      - /url: /photo/businessman-person-people-space-6779571/
+                      - img "Free Two professionals analyzing financial documents in a modern office setting. Stock Photo" [ref=f4e736]
+                  - article [ref=f4e741]:
+                    - link [ref=f4e742] [cursor=pointer]:
+                      - /url: /photo/a-person-examining-documents-8296970/
+                      - img "Free Accountant analyzing financial documents with a calculator on a desk, highlighting business tasks. Stock Photo" [ref=f4e743]
+                  - article [ref=f4e748]:
+                    - link [ref=f4e749] [cursor=pointer]:
+                      - /url: /photo/a-woman-computing-with-a-calculator-8296974/
+                      - img "Free Hands using a calculator at a desk with documents and folders, ideal for finance or accounting themes. Stock Photo" [ref=f4e750]
+                  - article [ref=f4e755]:
+                    - link [ref=f4e756] [cursor=pointer]:
+                      - /url: /photo/person-holding-a-calculator-and-pen-8297016/
+                      - img "Free A woman reviewing documents and using a calculator on a wooden table. Stock Photo" [ref=f4e757]
+                  - article [ref=f4e762]:
+                    - link [ref=f4e763] [cursor=pointer]:
+                      - /url: /photo/a-person-working-on-the-documents-using-a-calculator-8297220/
+                      - img "Free Accountant calculates finances with a calculator and documents on a desk. Stock Photo" [ref=f4e764]
+                  - article [ref=f4e769]:
+                    - link [ref=f4e770] [cursor=pointer]:
+                      - /url: /photo/a-woman-in-plaid-blazer-using-her-laptop-6693661/
+                      - img "Free A businesswoman working on finance management with cash and calculator on desk. Stock Photo" [ref=f4e771]
+                  - article [ref=f4e776]:
+                    - link [ref=f4e777] [cursor=pointer]:
+                      - /url: /photo/businessman-person-space-laptop-6779214/
+                      - img "Free Business summary sheet with a calculator on a desk for financial analysis. Stock Photo" [ref=f4e778]
+                - generic [ref=f4e781]:
+                  - article [ref=f4e784]:
+                    - link [ref=f4e785] [cursor=pointer]:
+                      - /url: /photo/a-person-holding-black-pen-writing-on-white-paper-6779565/
+                      - img "Free Black and white office scene featuring accounting documents, calculator, and laptops. Stock Photo" [ref=f4e786]
+                  - article [ref=f4e791]:
+                    - link [ref=f4e792] [cursor=pointer]:
+                      - /url: /photo/two-women-working-with-accounting-data-on-table-6779567/
+                      - img "Free Two professionals analyzing financial documents with a calculator. Stock Photo" [ref=f4e793]
+                  - article [ref=f4e798]:
+                    - link [ref=f4e799] [cursor=pointer]:
+                      - /url: /photo/financial-analysis-with-calculator-and-documents-33175651/
+                      - img "Free Close-up of a person analyzing financial documents using a calculator and pen. Stock Photo" [ref=f4e800]
+                  - article [ref=f4e805]:
+                    - link [ref=f4e806] [cursor=pointer]:
+                      - /url: /photo/an-accountant-s-workspace-6694492/
+                      - img "Free Man working on financial reports with calculator, money, and laptop on a desk. Stock Photo" [ref=f4e807]
+                  - generic [ref=f4e811]:
+                    - generic [ref=f4e812]:
+                      - heading "‌S‌‌p‌o‌‌n‌‌s‌‌o‌‌r‌‌e‌‌‌d‌‌‌ ‌‌P‌h‌o‌‌t‌‌‌o‌s‌‌‌" [level=4] [ref=f4e813]
+                      - link [ref=f4e814] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9hY2NvdW50aW5nP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9sb2dvJnV0bV90ZXJtPWFjY291bnRpbmciLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsInBhZ2UiOiJzZWFyY2hfcmVzdWx0cyIsInBhZ2VfdmFyaWFudCI6InBob3RvcyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6ImNhNWY3YmY0LThiOGYtNDA1YS05YTBkLWFjMjUyN2FlOWQ2NyIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoiYWNjb3VudGluZyJ9fQ/
+                    - generic [ref=f4e818]:
+                      - link [ref=f4e819] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2F1ZGl0b3Itb3ItaW50ZXJuYWwtcmV2ZW51ZS1zZXJ2aWNlLXN0YWZmLWJ1c2luZXNzLXdvbWVuLWNoZWNraW5nLWFubnVhbC1maW5hbmNpYWwtZ20yMTYyOTU4NjA3LTU4MzMyNzQ5Nz91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbWVkaWEmdXRtX3Rlcm09YWNjb3VudGluZyIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiY2E1ZjdiZjQtOGI4Zi00MDVhLTlhMGQtYWMyNTI3YWU5ZDY3IiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJhY2NvdW50aW5nIn19/
+                      - link [ref=f4e820] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2ludmVzdG9ycy13b3JraW5nLW9uLWRlc2stb2ZmaWNlLWFuZC1jaGVjay1kYXRhLWNvc3QtYmFsYW5jZS1wcm9maXQtYW5kLWN1cnJlbmN5LW9uLWdtMTQzMTY5NDgyMS00NzQyMTI1NDE_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX21lZGlhJnV0bV90ZXJtPWFjY291bnRpbmciLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsInBhZ2UiOiJzZWFyY2hfcmVzdWx0cyIsInBhZ2VfdmFyaWFudCI6InBob3RvcyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6ImNhNWY3YmY0LThiOGYtNDA1YS05YTBkLWFjMjUyN2FlOWQ2NyIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoiYWNjb3VudGluZyJ9fQ/
+                      - link [ref=f4e821] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL3RlY2hub2xvZ3ktYW5kLWZpbmFuY2lhbC1hZHZpc29yeS1zZXJ2aWNlcy1jb25jZXB0LWJ1c2luZXNzLXRlYW13b3JrLWFuZC13b3JraW5nLW9uLWdtMjAzNzAwNjM4OC01NjI0MjY0MTI_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX21lZGlhJnV0bV90ZXJtPWFjY291bnRpbmciLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsInBhZ2UiOiJzZWFyY2hfcmVzdWx0cyIsInBhZ2VfdmFyaWFudCI6InBob3RvcyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6ImNhNWY3YmY0LThiOGYtNDA1YS05YTBkLWFjMjUyN2FlOWQ2NyIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoiYWNjb3VudGluZyJ9fQ/
+                      - link [ref=f4e822] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2J1c2luZXNzd29tYW4tdXNlLWxhcHRvcC1hbmQtY2FsY3VsYXRvci1hbmFseXppbmctY29tcGFueS1ncm93dGgtZnV0dXJlLWJ1c2luZXNzLWdtMjE1MzQ3MTc1Mi01NzQ0MDU0NjU_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX21lZGlhJnV0bV90ZXJtPWFjY291bnRpbmciLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsInBhZ2UiOiJzZWFyY2hfcmVzdWx0cyIsInBhZ2VfdmFyaWFudCI6InBob3RvcyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6ImNhNWY3YmY0LThiOGYtNDA1YS05YTBkLWFjMjUyN2FlOWQ2NyIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoiYWNjb3VudGluZyJ9fQ/
+                    - link [ref=f4e823] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9hY2NvdW50aW5nP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9jb3Vwb25jb2RlJnV0bV90ZXJtPWFjY291bnRpbmciLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsInBhZ2UiOiJzZWFyY2hfcmVzdWx0cyIsInBhZ2VfdmFyaWFudCI6InBob3RvcyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6ImNhNWY3YmY0LThiOGYtNDA1YS05YTBkLWFjMjUyN2FlOWQ2NyIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoiYWNjb3VudGluZyJ9fQ/
+                      - img [ref=f4e826]:
+                        - generic [ref=f4e827]: Get 20% off with code PEXELS20 »
+                  - article [ref=f4e830]:
+                    - link [ref=f4e831] [cursor=pointer]:
+                      - /url: /photo/person-working-on-documents-7821540/
+                      - img "Free Overhead view of hands highlighting financial documents on a desk. Stock Photo" [ref=f4e832]
+                  - article [ref=f4e837]:
+                    - link [ref=f4e838] [cursor=pointer]:
+                      - /url: /photo/people-working-at-the-office-together-7654129/
+                      - img "Free Two employees working together on financial documents with laptops and calculators in an office setting. Stock Photo" [ref=f4e839]
+                  - article [ref=f4e844]:
+                    - link [ref=f4e845] [cursor=pointer]:
+                      - /url: /photo/business-desk-with-financial-documents-and-cash-35029019/
+                      - img "Free A hand signing financial documents on a desk with cash and a calculator, signifying finance management. Stock Photo" [ref=f4e846]
+                - generic [ref=f4e849]:
+                  - generic [ref=f4e851]:
+                    - generic [ref=f4e853]:
+                      - link [ref=f4e854] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20accounting%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own accounting content with Canva" [ref=f4e855]
+                      - link [ref=f4e856] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20accounting%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own accounting content with Canva" [ref=f4e857]
+                      - link [ref=f4e858] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20accounting%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own accounting content with Canva" [ref=f4e859]
+                      - link [ref=f4e860] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20accounting%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own accounting content with Canva" [ref=f4e861]
+                    - link [ref=f4e862] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20accounting%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - paragraph [ref=f4e865]: Bring your ideas to life with Canva AI
+                    - link "Get started for free" [ref=f4e866] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20accounting%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                  - article [ref=f4e871]:
+                    - link [ref=f4e872] [cursor=pointer]:
+                      - /url: /photo/white-papers-on-the-table-7821708/
+                      - img "Free Hands holding financial documents with calculator and laptop on office desk, business analysis scene. Stock Photo" [ref=f4e873]
+                  - article [ref=f4e878]:
+                    - link [ref=f4e879] [cursor=pointer]:
+                      - /url: /photo/man-and-woman-working-at-the-office-7654120/
+                      - img "Free A busy office scene with two professionals working on laptops and calculators. Stock Photo" [ref=f4e880]
+                  - article [ref=f4e885]:
+                    - link [ref=f4e886] [cursor=pointer]:
+                      - /url: /photo/black-and-white-pen-on-white-printer-paper-7821914/
+                      - img "Free Close-up of tax documents and calculator on wooden table, highlighting financial analysis. Stock Photo" [ref=f4e887]
+                  - article [ref=f4e892]:
+                    - link [ref=f4e893] [cursor=pointer]:
+                      - /url: /photo/man-sitting-at-the-desk-and-counting-money-while-using-a-calculator-7654190/
+                      - img "Free Close-up of a person counting cash with documents and a laptop in an office setting. Stock Photo" [ref=f4e894]
+                  - article [ref=f4e899]:
+                    - link [ref=f4e900] [cursor=pointer]:
+                      - /url: /photo/person-holding-oink-calculator-7680744/
+                      - img "Free Businesswoman calculates expenses using receipts and calculator at desk. Ideal for finance, accounting themes. Stock Photo" [ref=f4e901]
+                  - article [ref=f4e906]:
+                    - link [ref=f4e907] [cursor=pointer]:
+                      - /url: /photo/person-holding-white-printer-paper-7821672/
+                      - img "Free Hands holding financial papers for tax preparation and analysis. Stock Photo" [ref=f4e908]
+                  - article [ref=f4e913]:
+                    - link [ref=f4e914] [cursor=pointer]:
+                      - /url: /photo/a-person-examining-a-document-8296977/
+                      - img "Free An accountant using a calculator and signing paperwork, showcasing financial analysis. Stock Photo" [ref=f4e915]
+                  - article [ref=f4e920]:
+                    - link [ref=f4e921] [cursor=pointer]:
+                      - /url: /photo/man-in-white-long-sleeves-working-in-the-office-7654167/
+                      - img "Free Professional counting money in an office, emphasizing finance and accounting. Stock Photo" [ref=f4e922]
+              - button "Load More" [ref=f4e926] [cursor=pointer]
+            - navigation [ref=f4e929]:
+              - generic [ref=f4e931]:
+                - link "1" [ref=f4e933]:
+                  - /url: /search/accounting/
+                - link "2" [ref=f4e936] [cursor=pointer]:
+                  - /url: /search/accounting/?page=2
+                - link "3" [ref=f4e939] [cursor=pointer]:
+                  - /url: /search/accounting/?page=3
+                - link "4" [ref=f4e942] [cursor=pointer]:
+                  - /url: /search/accounting/?page=4
+                - link "5" [ref=f4e945] [cursor=pointer]:
+                  - /url: /search/accounting/?page=5
+                - link "6" [ref=f4e948] [cursor=pointer]:
+                  - /url: /search/accounting/?page=6
+                - link "Next" [ref=f4e951] [cursor=pointer]:
+                  - /url: /search/accounting/?page=2
+    - contentinfo [ref=f4e955]:
+      - separator [ref=f4e956]
+      - generic [ref=f4e957]:
+        - generic [ref=f4e958]:
+          - heading "Where stories come together." [level=2] [ref=f4e959]
+          - generic [ref=f4e960]:
+            - link "Download on iOS" [ref=f4e961] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Download on Android" [ref=f4e964] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f4e967]:
+            - listitem [ref=f4e968]:
+              - link "Instagram" [ref=f4e969] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f4e972]:
+              - link "Threads" [ref=f4e973] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f4e976]:
+              - link "YouTube" [ref=f4e977] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f4e980]:
+              - link "TikTok" [ref=f4e981] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f4e984]:
+              - link "LinkedIn" [ref=f4e985] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f4e988]:
+              - link "X" [ref=f4e989] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f4e992]:
+          - list [ref=f4e993]:
+            - heading "Pexels" [level=3] [ref=f4e994]
+            - listitem [ref=f4e995]:
+              - link "Free Stock Photos" [ref=f4e996] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f4e997]:
+              - link "Free Videos" [ref=f4e998] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f4e999]:
+              - link "Popular searches" [ref=f4e1000] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f4e1001]:
+              - link "Collections" [ref=f4e1002] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f4e1003]:
+              - link "Challenges" [ref=f4e1004] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f4e1005]:
+              - link "Leaderboard" [ref=f4e1006] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f4e1007]:
+              - link "Other plugins & apps" [ref=f4e1008] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f4e1009]:
+            - heading "Company" [level=3] [ref=f4e1010]
+            - listitem [ref=f4e1011]:
+              - link "About" [ref=f4e1012] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f4e1013]:
+              - link "Blog" [ref=f4e1014] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f4e1015]:
+              - link "Help Center" [ref=f4e1016] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f4e1017]:
+              - link "Report content" [ref=f4e1018] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f4e1019]:
+              - link "Become a Hero" [ref=f4e1020] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f4e1021]:
+              - link "Partner with Pexels" [ref=f4e1022] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f4e1023]:
+              - link "Image & Video API" [ref=f4e1024] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f4e1025]: Sign Up
+        - list [ref=f4e1026]:
+          - listitem [ref=f4e1027]:
+            - heading "Free Stock Photos" [level=3] [ref=f4e1028]
+          - listitem [ref=f4e1029]:
+            - generic [ref=f4e1031]:
+              - link "Black and white photography" [ref=f4e1033] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f4e1034] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f4e1035] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f4e1036] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f4e1037] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f4e1038] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f4e1039] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f4e1040] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f4e1041] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f4e1042] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f4e1043] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f4e1044] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f4e1045] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f4e1047]:
+        - generic [ref=f4e1048]: © 2026 Pexels
+        - generic [ref=f4e1050]:
+          - link "Terms of Use" [ref=f4e1052] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f4e1053] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f4e1054] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f4e1055] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f4e1056] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f4e1059] [cursor=pointer]
+      - separator [ref=f4e1064]
+  - alert [ref=f4e1065]
+  - status [ref=f4e1066]: "[object Object] has been selected."

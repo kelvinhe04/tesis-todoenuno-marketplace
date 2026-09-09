@@ -1,0 +1,361 @@
+- generic [ref=f48e1]:
+  - generic [ref=f48e2]:
+    - banner:
+      - generic [ref=f48e4]:
+        - link [ref=f48e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f48e6]:
+          - generic [ref=f48e7]:
+            - generic [ref=f48e8]: Services
+            - generic [ref=f48e14]: Platform
+            - link "Pricing" [ref=f48e20] [cursor=pointer]:
+              - /url: /pricing
+            - generic [ref=f48e22]: About
+          - generic [ref=f48e28]:
+            - link "Log in" [ref=f48e29] [cursor=pointer]:
+              - /url: https://bench.co/login
+            - link "Free Trial" [ref=f48e31] [cursor=pointer]:
+              - /url: https://signup.bench.co/
+            - link "Schedule Call" [ref=f48e32] [cursor=pointer]:
+              - /url: https://www.bench.co/#schedule-call
+    - main [ref=f48e33]:
+      - generic [ref=f48e39]:
+        - heading "Confidence in your numbers without doing the math." [level=2] [ref=f48e41]
+        - paragraph [ref=f48e42]: Get a dedicated bookkeeper in your corner who really knows your business, backed by software that keeps everything organized and visible. You get clarity when you need it and stay focused on running your business. We keep your finances ready for tax time, funding, or whatever's next.
+        - generic [ref=f48e43]:
+          - text: ✨
+          - strong [ref=f48e44]: 1M+
+          - text: months of completed books ✨
+          - strong [ref=f48e45]: $200M+
+          - text: in savings with tax credits
+        - generic [ref=f48e46]:
+          - link "Schedule Call" [ref=f48e47] [cursor=pointer]:
+            - /url: "#schedule-call"
+          - link "Free Trial" [ref=f48e48] [cursor=pointer]:
+            - /url: https://signup.bench.co/
+          - banner:
+            - generic [ref=f48e50]:
+              - link [ref=f48e51] [cursor=pointer]:
+                - /url: /
+              - generic [ref=f48e52]:
+                - generic [ref=f48e53]:
+                  - generic [ref=f48e54]: Services
+                  - generic [ref=f48e60]: Platform
+                  - link "Pricing" [ref=f48e66] [cursor=pointer]:
+                    - /url: /pricing
+                  - generic [ref=f48e68]: About
+                - generic [ref=f48e74]:
+                  - link "Log in" [ref=f48e75] [cursor=pointer]:
+                    - /url: https://bench.co/login
+                  - link "Free Trial" [ref=f48e77] [cursor=pointer]:
+                    - /url: https://signup.bench.co/
+                  - link "Schedule Call" [ref=f48e78] [cursor=pointer]:
+                    - /url: https://www.bench.co/#schedule-call
+        - generic [ref=f48e79]: Now part of Mainstreet, your one stop business operating system—bookkeeping, taxes, banking and entity formation all in one place.
+      - generic [ref=f48e85]:
+        - heading "Trusted by 35,000+ American small business owners" [level=2] [ref=f48e88]
+        - list [ref=f48e91]:
+          - listitem [ref=f48e92]:
+            - generic [ref=f48e93]:
+              - generic [ref=f48e94]: “Bench helps keep my business finances crystal clear. No more guessing, no more fumbling around in Excel sheets.”
+              - generic [ref=f48e98]:
+                - paragraph [ref=f48e99]: JUSTIN METROS
+                - generic [ref=f48e100]:
+                  - paragraph [ref=f48e101]: PROPRIETOR
+                  - paragraph [ref=f48e102]: ","
+                  - paragraph [ref=f48e103]: RADIATOR
+          - listitem [ref=f48e104]:
+            - generic [ref=f48e105]:
+              - generic [ref=f48e106]: “Now that Bench has a tax solution service, they're a 'one stop shop' for small businesses to manage their books and taxes.”
+              - generic [ref=f48e110]:
+                - paragraph [ref=f48e111]: ALBERT LAMONT
+                - generic [ref=f48e112]:
+                  - paragraph [ref=f48e113]: CEO
+                  - paragraph [ref=f48e114]: ","
+                  - paragraph [ref=f48e115]: SWEATCAST
+          - listitem [ref=f48e116]:
+            - generic [ref=f48e117]:
+              - generic [ref=f48e118]: “As a small business owner, I feel better knowing that professionals are handling my books so I can spend more time growing my business instead of monitoring nickels.”
+              - generic [ref=f48e122]:
+                - paragraph [ref=f48e123]: LAURA SIMMS
+                - paragraph [ref=f48e125]: CAREER CHANGE EXPERT
+      - generic [ref=f48e131]:
+        - heading "Small business bookkeeping year-round" [level=1] [ref=f48e135]
+        - paragraph [ref=f48e137]: "Real humans. Perfect books. That's what you get when Mainstreet is on your books. Here's what else you can expect:"
+      - generic [ref=f48e168]:
+        - heading "One-on-one expert support" [level=2] [ref=f48e170]:
+          - text: One-on-one expert support
+          - strong
+        - paragraph [ref=f48e171]: Bench gives you a dedicated team so you have a direct line to your own experts on desktop or mobile–professional support is just a few swipes, taps, or clicks away.
+        - link "Learn More" [ref=f48e173] [cursor=pointer]:
+          - /url: /small-business-experts
+      - generic [ref=f48e178]:
+        - generic [ref=f48e179]:
+          - heading "Powerful financial reporting" [level=2] [ref=f48e181]:
+            - text: Powerful financial reporting
+            - strong
+          - paragraph [ref=f48e182]: The Bench platform gives you monthly financial statements and expense overviews to keep you in control of your money. At-a-glance visual reports help you see the big picture and give you actionable insights to help you grow your business. You’ll never be in the dark again.
+          - link "Learn More" [ref=f48e184] [cursor=pointer]:
+            - /url: /small-business-financial-reporting
+        - img "Small business owner reviews an accounting report provided by their Bench bookkeeper." [ref=f48e186]
+      - generic [ref=f48e191]:
+        - img "Small business owner reviews revenue and top expenses accounting reports inside their Bench account." [ref=f48e193]
+        - generic [ref=f48e194]:
+          - heading "Real-time insights at your fingertips" [level=2] [ref=f48e196]:
+            - text: Real-time insights at your fingertips
+            - strong
+          - paragraph [ref=f48e197]: Easily see your updated financial data every time you log in. With real-time insights, you can make on-the-fly decisions about where to spend and where to save, helping your business stay on budget.
+          - link "Learn More" [ref=f48e199] [cursor=pointer]:
+            - /url: /whats-new-jan2023
+      - generic [ref=f48e204]:
+        - generic [ref=f48e205]:
+          - heading "Tax season, minus the stress" [level=2] [ref=f48e207]:
+            - text: Tax season, minus the stress
+            - strong
+          - paragraph [ref=f48e208]: A year end package with everything you need to file comes standard with Bench. Upgrade your plan, and cross even more off your to-do list. With our Bookkeeping & Tax plan, you get expert tax prep, filing, and year-round tax advisory support.
+          - link "Learn More" [ref=f48e210] [cursor=pointer]:
+            - /url: /small-business-tax
+        - img "Small business owner reviews income statement report inside their Bench account" [ref=f48e212]
+      - generic [ref=f48e217]:
+        - heading "We partner with the world’s best" [level=2] [ref=f48e220]
+        - generic [ref=f48e221]:
+          - img "Shopify Logo"
+          - img "Square logo"
+      - generic [ref=f48e226]:
+        - link [ref=f48e227] [cursor=pointer]:
+          - /url: /catch-up-bookkeeping#overview
+          - strong [ref=f48e228]: Overview
+        - link [ref=f48e229] [cursor=pointer]:
+          - /url: /catch-up-bookkeeping/how-it-works#how-it-works
+          - strong [ref=f48e230]: How it Works
+        - link [ref=f48e231] [cursor=pointer]:
+          - /url: /catch-up-bookkeeping/partners#partners
+          - strong [ref=f48e232]: Partners
+      - generic [ref=f48e236]:
+        - generic [ref=f48e237]: From the bench blog
+        - heading "Explore over 600 resources for managing small business finances" [level=2] [ref=f48e243]
+        - generic [ref=f48e244]:
+          - link "17 Big Tax Deductions (Write Offs) for Small Business You've heard of \"spend money to make money,\" but what about \"spend money to save money?\" That's the case with tax deductions and you won't want to leave any on the table. Learn more →" [ref=f48e245] [cursor=pointer]:
+            - /url: https://www.bench.co/blog/tax-tips/small-business-tax-deductions
+            - generic [ref=f48e248]:
+              - generic [ref=f48e249]:
+                - heading "17 Big Tax Deductions (Write Offs) for Small Business" [level=3] [ref=f48e251]
+                - paragraph [ref=f48e252]: You've heard of "spend money to make money," but what about "spend money to save money?" That's the case with tax deductions and you won't want to leave any on the table.
+              - generic [ref=f48e253]: Learn more →
+          - link "11 Alternatives to QuickBooks in 2024 QuickBooks isn't for everyone. Here are 11 alternatives to explore, each with a different emphasis in supporting your small business finances. Learn more →" [ref=f48e256] [cursor=pointer]:
+            - /url: https://www.bench.co/blog/accounting/quickbooks-alternatives
+            - generic [ref=f48e259]:
+              - generic [ref=f48e260]:
+                - heading "11 Alternatives to QuickBooks in 2024" [level=3] [ref=f48e262]
+                - paragraph [ref=f48e263]: QuickBooks isn't for everyone. Here are 11 alternatives to explore, each with a different emphasis in supporting your small business finances.
+              - generic [ref=f48e264]: Learn more →
+          - link "How to Read (and Analyze) Financial Statements When you know how to read your financial statements, you can find ways to increase your profit and catch problems before they grow. Learn more →" [ref=f48e267] [cursor=pointer]:
+            - /url: https://www.bench.co/blog/accounting/how-to-read-and-analyze-financial-statements
+            - generic [ref=f48e270]:
+              - generic [ref=f48e271]:
+                - heading "How to Read (and Analyze) Financial Statements" [level=3] [ref=f48e273]
+                - paragraph [ref=f48e274]: When you know how to read your financial statements, you can find ways to increase your profit and catch problems before they grow.
+              - generic [ref=f48e275]: Learn more →
+        - link "Visit the Bench Blog" [ref=f48e280] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=f48e285]:
+        - heading "Featured in" [level=2] [ref=f48e288]
+        - generic [ref=f48e289]:
+          - img "Entrepreneur logo"
+          - img "NYT Logo"
+          - img "Wall Street Journal Logo"
+          - img "Forbes logo"
+      - generic [ref=f48e294]:
+        - generic [ref=f48e295]:
+          - heading "Frequently Asked Questions" [level=2] [ref=f48e297]
+          - link "More FAQs ➞" [ref=f48e299] [cursor=pointer]:
+            - /url: /faq
+        - list [ref=f48e302]:
+          - listitem [ref=f48e303]:
+            - generic [ref=f48e304]:
+              - generic [ref=f48e305] [cursor=pointer]:
+                - img "Close and Open Icon A graphic of a plus and minus icon that represents the action to close and open." [ref=f48e307]
+                - generic [ref=f48e309]: Does Bench do all my bookkeeping tasks for me?
+              - paragraph [ref=f48e313]: Our bookkeeping software and team of experts handle most of the work, making bookkeeping simple for you. However, there are some things about your business only you can provide, like uploading certain documents and sharing context for categorizing transactions. Each month, we may check in with you to ensure your books are accurate and your deductions are maximized.
+          - listitem [ref=f48e314]:
+            - generic [ref=f48e315]:
+              - generic [ref=f48e316] [cursor=pointer]:
+                - img "Close and Open Icon A graphic of a plus and minus icon that represents the action to close and open." [ref=f48e318]
+                - generic [ref=f48e320]: What happens if I take a long time to respond to my Bench team’s requests for information?
+              - paragraph [ref=f48e324]: Timely responses help your bookkeeping team keep your books up to date and avoid delays. Staying on top of this ensures a stress-free tax season and gives you access to current financial insights, empowering you to make informed, impactful decisions for your business.
+          - listitem [ref=f48e325]:
+            - generic [ref=f48e326]:
+              - generic [ref=f48e327] [cursor=pointer]:
+                - img "Close and Open Icon A graphic of a plus and minus icon that represents the action to close and open." [ref=f48e329]
+                - generic [ref=f48e331]: Is it mandatory to connect my business accounts to Bench?
+              - paragraph [ref=f48e335]: Connecting your accounts to Bench automates repetitive tasks like data entry, saving you time and effort. It eliminates the need for manual uploads, with your data appearing in your account instantly. This ensures your bookkeeping team can work efficiently, keep your books up to date, and help you get the most out of the service.
+          - listitem [ref=f48e336]:
+            - generic [ref=f48e337]:
+              - generic [ref=f48e338] [cursor=pointer]:
+                - img "Close and Open Icon A graphic of a plus and minus icon that represents the action to close and open." [ref=f48e340]
+                - generic [ref=f48e342]: Why does Bench still need me to upload documents even if my accounts are connected?
+              - paragraph [ref=f48e346]: Occasionally, we may need additional documents, such as account statements or receipts, to ensure the information we have is accurate. Sharing files with your bookkeeping team is quick and easy—just upload the document, and we’ll handle the rest.
+      - generic [ref=f48e349]:
+        - generic [ref=f48e351]:
+          - heading "Join thousands of small business owners who trust Bench with their books" [level=2] [ref=f48e353]
+          - paragraph [ref=f48e354]: Schedule today and we’ll do one prior month of your bookkeeping and prepare a set of financial statements for free.
+        - generic [ref=f48e356]:
+          - generic [ref=f48e357]: "Bench Accounting ConsultationSee if Bench is right for your business.‍With Bench, you get both: A dedicated bookkeeper and the powerful software to back them up."
+          - iframe [ref=f48e362]:
+            - generic [ref=f52e3]:
+              - group [ref=f52e4]:
+                - generic [ref=f52e5]:
+                  - generic [ref=f52e6]: First name*
+                  - textbox "First name*" [ref=f52e8]:
+                    - /placeholder: ""
+                - generic [ref=f52e9]:
+                  - generic [ref=f52e10]: Last name*
+                  - textbox "Last name*" [ref=f52e12]:
+                    - /placeholder: ""
+              - group [ref=f52e13]:
+                - generic [ref=f52e14]:
+                  - generic [ref=f52e15]: Business Name*
+                  - textbox "Business Name*" [ref=f52e17]:
+                    - /placeholder: ""
+              - group [ref=f52e18]:
+                - generic [ref=f52e19]:
+                  - generic [ref=f52e20]: Email*
+                  - textbox "Email*" [ref=f52e22]:
+                    - /placeholder: ""
+              - group [ref=f52e23]:
+                - generic [ref=f52e24]:
+                  - generic [ref=f52e25]: Phone*
+                  - textbox "Phone*" [ref=f52e27]:
+                    - /placeholder: ""
+              - group [ref=f52e28]:
+                - generic [ref=f52e29]:
+                  - generic [ref=f52e30]: Average Monthly Revenue*
+                  - combobox "Average Monthly Revenue*" [ref=f52e32]:
+                    - option "Please Select" [disabled] [selected]
+                    - option "$0 - $5,000"
+                    - option "$5,000 - $10,000"
+                    - option "$10,000 - $25,000"
+                    - option "$25,000 - $50,000"
+                    - option "$50,000+"
+              - group [ref=f52e33]:
+                - generic [ref=f52e35]:
+                  - generic [ref=f52e36]: How Do You Currently Manage Your Books ?*
+                  - combobox "How Do You Currently Manage Your Books ?*" [ref=f52e38]:
+                    - option "Please Select" [disabled] [selected]
+                    - option "I do it myself using Quickbooks"
+                    - option "I do it myself using another Software"
+                    - option "Haven't started yet"
+                    - option "Other"
+              - group [ref=f52e39]:
+                - generic [ref=f52e40]:
+                  - generic [ref=f52e41]: How Soon Do You Need Support ?*
+                  - checkbox [ref=f52e43]:
+                    - radio [ref=f52e44]:
+                      - generic [ref=f52e45]:
+                        - radio "Now" [ref=f52e46] [cursor=pointer]
+                        - text: Now
+                    - radio [ref=f52e47]:
+                      - generic [ref=f52e48]:
+                        - radio "Just exploring" [ref=f52e49] [cursor=pointer]
+                        - text: Just exploring
+              - group
+              - group
+              - group
+              - group
+              - group
+              - group
+              - group
+              - group
+              - group [ref=f52e50]:
+                - list [ref=f52e56]:
+                  - listitem [ref=f52e57]:
+                    - generic [ref=f52e58]:
+                      - 'checkbox "By providing your contact information, you agree to receive communications (including calls, texts, and emails) from Bench Accounting. You also acknowledge and accept our End User License Agreement and Terms of Service: https://www.bench.co/terms*" [ref=f52e59] [cursor=pointer]'
+                      - generic [ref=f52e60]: "By providing your contact information, you agree to receive communications (including calls, texts, and emails) from Bench Accounting. You also acknowledge and accept our End User License Agreement and Terms of Service: https://www.bench.co/terms*"
+              - button "Submit" [ref=f52e63] [cursor=pointer]
+  - contentinfo [ref=f48e363]:
+    - contentinfo [ref=f48e364]:
+      - generic [ref=f48e367]:
+        - generic [ref=f48e368]:
+          - generic [ref=f48e369]:
+            - link [ref=f48e371] [cursor=pointer]:
+              - /url: "#"
+              - img "Bench logo" [ref=f48e372]
+              - paragraph [ref=f48e373]: Online bookkeeping and tax filing powered by real humans
+            - generic [ref=f48e374]:
+              - generic [ref=f48e375]:
+                - generic [ref=f48e376]: COMPANY
+                - link "About Us" [ref=f48e377] [cursor=pointer]:
+                  - /url: /about
+                - link "Press" [ref=f48e378] [cursor=pointer]:
+                  - /url: /press
+                - link "Privacy Policy" [ref=f48e379] [cursor=pointer]:
+                  - /url: /privacy
+                - link "Terms of Service" [ref=f48e380] [cursor=pointer]:
+                  - /url: /terms
+                - link "Contact Us" [ref=f48e381] [cursor=pointer]:
+                  - /url: /contact
+              - generic [ref=f48e383]:
+                - generic [ref=f48e384]: PRODUCT
+                - link "How It Works" [ref=f48e386] [cursor=pointer]:
+                  - /url: /how-it-works
+                - link "Pricing" [ref=f48e387] [cursor=pointer]:
+                  - /url: /pricing
+                - link "Security" [ref=f48e388] [cursor=pointer]:
+                  - /url: /security
+                - link "What's New" [ref=f48e389] [cursor=pointer]:
+                  - /url: /whats-new
+              - generic [ref=f48e390]:
+                - generic [ref=f48e391]: RESOURCES
+                - link "Education" [ref=f48e393] [cursor=pointer]:
+                  - /url: /blog/bookkeeping
+                - link "Guides" [ref=f48e394] [cursor=pointer]:
+                  - /url: "#"
+                - link "Tools" [ref=f48e395] [cursor=pointer]:
+                  - /url: /tools
+                - link "FAQ" [ref=f48e396] [cursor=pointer]:
+                  - /url: /transition-faqs
+                - link "Customer Reviews" [ref=f48e397] [cursor=pointer]:
+                  - /url: /customer-stories
+              - generic [ref=f48e398]:
+                - generic [ref=f48e399]: PARTNERS
+                - link "Refer a Friend. Get $100" [ref=f48e401] [cursor=pointer]:
+                  - /url: /campaign/summer26/referral
+                - link "Affiliates" [ref=f48e402] [cursor=pointer]:
+                  - /url: https://bench-accounting.getrewardful.com/signup
+                - link "Partner Marketplace" [ref=f48e403] [cursor=pointer]:
+                  - /url: https://www.bench.co/partner-solutions
+                - link "Bench for Accountants" [ref=f48e404] [cursor=pointer]:
+                  - /url: /bookkeeping-for-accountants-partner-program
+          - article [ref=f48e405]:
+            - link "1 (888) 760 1940" [ref=f48e406] [cursor=pointer]:
+              - /url: tel:1(888)7601940
+        - generic [ref=f48e409]:
+          - generic [ref=f48e410]:
+            - generic [ref=f48e411]: © Bench 2011-2026
+            - link "Terms of Service" [ref=f48e412] [cursor=pointer]:
+              - /url: /terms
+            - link "Privacy Policy" [ref=f48e413] [cursor=pointer]:
+              - /url: /privacy
+            - link "Cookie Policy" [ref=f48e414] [cursor=pointer]:
+              - /url: /cookie-policy
+            - link "Security" [ref=f48e415] [cursor=pointer]:
+              - /url: /security
+          - link [ref=f48e417] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/benchaccounting/
+  - generic:
+    - region "Cookie banner" [ref=f48e421]:
+      - alertdialog "Privacy" [ref=f48e422]:
+        - generic [ref=f48e424]:
+          - paragraph [ref=f48e427]:
+            - text: By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+            - link "More information about your privacy" [ref=f48e428] [cursor=pointer]:
+              - /url: https://bench.co/cookie-policy/
+              - text: More information
+          - generic [ref=f48e430]:
+            - button "Cookies Settings" [ref=f48e431] [cursor=pointer]
+            - button "Reject All" [ref=f48e432] [cursor=pointer]
+            - button "Accept All Cookies" [ref=f48e433] [cursor=pointer]
+        - button "Close" [ref=f48e435] [cursor=pointer]
+    - text: • • • • • Cookies Settings
+  - button "Hello, have a question? Let’s chat." [ref=f48e436] [cursor=pointer]

@@ -1,0 +1,462 @@
+- generic [active] [ref=f36e1]:
+  - generic [ref=f36e405]:
+    - navigation [ref=f36e408]:
+      - link [ref=f36e410] [cursor=pointer]:
+        - /url: /
+      - search [ref=f36e415]:
+        - generic [ref=f36e416]:
+          - button "Photos" [ref=f36e418] [cursor=pointer]
+          - searchbox "Search for free photos" [ref=f36e426]: headphones
+          - button [ref=f36e428] [cursor=pointer]
+      - generic [ref=f36e432]:
+        - link "Explore" [ref=f36e434] [cursor=pointer]:
+          - /url: /discover/
+        - link "License" [ref=f36e438] [cursor=pointer]:
+          - /url: /license/
+        - button [ref=f36e441] [cursor=pointer]
+        - button "Join" [ref=f36e444] [cursor=pointer]
+    - main [ref=f36e447]:
+      - generic [ref=f36e448]:
+        - generic [ref=f36e452]:
+          - paragraph [ref=f36e454] [cursor=pointer]: Any
+          - paragraph [ref=f36e459] [cursor=pointer]: Horizontal
+          - paragraph [ref=f36e464] [cursor=pointer]: Vertical
+          - paragraph [ref=f36e469] [cursor=pointer]: Square
+        - generic [ref=f36e473]:
+          - paragraph [ref=f36e475] [cursor=pointer]: Any
+          - paragraph [ref=f36e477] [cursor=pointer]: "0"
+          - paragraph [ref=f36e482] [cursor=pointer]: "1"
+          - paragraph [ref=f36e487] [cursor=pointer]: "2"
+          - paragraph [ref=f36e492] [cursor=pointer]: 3+
+        - generic [ref=f36e496]:
+          - paragraph [ref=f36e498] [cursor=pointer]: Any
+          - paragraph [ref=f36e503] [cursor=pointer]: Baby
+          - paragraph [ref=f36e508] [cursor=pointer]: Child
+          - paragraph [ref=f36e513] [cursor=pointer]: Teenager
+          - paragraph [ref=f36e518] [cursor=pointer]: Adult
+          - paragraph [ref=f36e523] [cursor=pointer]: Senior adult
+        - generic [ref=f36e526]:
+          - generic [ref=f36e527]:
+            - generic [ref=f36e528] [cursor=pointer]
+            - slider [ref=f36e530] [cursor=pointer]
+            - slider [ref=f36e531] [cursor=pointer]
+          - generic [ref=f36e532]:
+            - generic [ref=f36e533]:
+              - paragraph [ref=f36e534]: Minimum
+              - paragraph [ref=f36e535]: 1,080px
+            - generic [ref=f36e536]:
+              - paragraph [ref=f36e537]: Maximum
+              - paragraph [ref=f36e538]: 20,000px+
+        - generic [ref=f36e541]:
+          - generic [ref=f36e542]:
+            - generic [ref=f36e543] [cursor=pointer]
+            - slider [ref=f36e545] [cursor=pointer]
+            - slider [ref=f36e546] [cursor=pointer]
+          - generic [ref=f36e547]:
+            - generic [ref=f36e548]:
+              - paragraph [ref=f36e549]: Minimum
+              - paragraph [ref=f36e550]: 1,080px
+            - generic [ref=f36e551]:
+              - paragraph [ref=f36e552]: Maximum
+              - paragraph [ref=f36e553]: 20,000px+
+        - generic [ref=f36e557]:
+          - button [ref=f36e558] [cursor=pointer]:
+            - textbox [ref=f36e564]:
+              - /placeholder: Enter hex code
+          - button [ref=f36e567] [cursor=pointer]:
+            - textbox [ref=f36e573]: "#000000"
+        - generic [ref=f36e577]:
+          - paragraph [ref=f36e579] [cursor=pointer]: Any
+          - paragraph [ref=f36e584] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f36e589] [cursor=pointer]: Last week
+          - paragraph [ref=f36e594] [cursor=pointer]: Last month
+          - paragraph [ref=f36e599] [cursor=pointer]: Last year
+        - main "main-content" [ref=f36e600]:
+          - generic [ref=f36e601]:
+            - heading "Free Headphones Photos" [level=1] [ref=f36e604]
+            - generic [ref=f36e607]:
+              - link "Photos 5.1K" [ref=f36e609] [cursor=pointer]:
+                - /url: /search/headphones/
+                - text: Photos
+                - generic [ref=f36e610]: 5.1K
+              - link "Videos 4.4K" [ref=f36e611] [cursor=pointer]:
+                - /url: /search/videos/headphones/
+                - text: Videos
+                - generic [ref=f36e612]: 4.4K
+              - link "Users 20" [ref=f36e613] [cursor=pointer]:
+                - /url: /search/users/headphones/
+                - text: Users
+                - generic [ref=f36e614]: "20"
+            - generic [ref=f36e616]:
+              - button "Filters" [ref=f36e618] [cursor=pointer]
+              - separator [ref=f36e625]
+              - generic [ref=f36e629]:
+                - link [ref=f36e631] [cursor=pointer]:
+                  - /url: /search/earphones/
+                  - img "earphones" [ref=f36e632]
+                  - generic [ref=f36e633]:
+                    - paragraph [ref=f36e634]: earphones
+                    - paragraph [ref=f36e635]: 7K
+                - link [ref=f36e636] [cursor=pointer]:
+                  - /url: /search/headphone/
+                  - img "headphone" [ref=f36e637]
+                  - generic [ref=f36e638]:
+                    - paragraph [ref=f36e639]: headphone
+                    - paragraph [ref=f36e640]: 5K
+                - link [ref=f36e641] [cursor=pointer]:
+                  - /url: /search/headset/
+                  - img "headset" [ref=f36e642]
+                  - generic [ref=f36e643]:
+                    - paragraph [ref=f36e644]: headset
+                    - paragraph [ref=f36e645]: 10K
+                - link [ref=f36e646] [cursor=pointer]:
+                  - /url: /search/earphone/
+                  - img "earphone" [ref=f36e647]
+                  - generic [ref=f36e648]:
+                    - paragraph [ref=f36e649]: earphone
+                    - paragraph [ref=f36e650]: 7K
+                - link [ref=f36e651] [cursor=pointer]:
+                  - /url: /search/earbuds/
+                  - img "earbuds" [ref=f36e652]
+                  - generic [ref=f36e653]:
+                    - paragraph [ref=f36e654]: earbuds
+                    - paragraph [ref=f36e655]: 6K
+                - link [ref=f36e656] [cursor=pointer]:
+                  - /url: /search/airpods/
+                  - img "airpods" [ref=f36e657]
+                  - generic [ref=f36e658]:
+                    - paragraph [ref=f36e659]: airpods
+                    - paragraph [ref=f36e660]: 5K
+                - link [ref=f36e661] [cursor=pointer]:
+                  - /url: /search/microphone/
+                  - img "microphone" [ref=f36e662]
+                  - generic [ref=f36e663]:
+                    - paragraph [ref=f36e664]: microphone
+                    - paragraph [ref=f36e665]: 5K
+                - link [ref=f36e666] [cursor=pointer]:
+                  - /url: /search/speakers/
+                  - img "speakers" [ref=f36e667]
+                  - generic [ref=f36e668]:
+                    - paragraph [ref=f36e669]: speakers
+                    - paragraph [ref=f36e670]: 4K
+                - link [ref=f36e671] [cursor=pointer]:
+                  - /url: /search/telephone/
+                  - img "telephone" [ref=f36e672]
+                  - generic [ref=f36e673]:
+                    - paragraph [ref=f36e674]: telephone
+                    - paragraph [ref=f36e675]: 7K
+                - link [ref=f36e676] [cursor=pointer]:
+                  - /url: /search/ear/
+                  - img "ear" [ref=f36e677]
+                  - generic [ref=f36e678]:
+                    - paragraph [ref=f36e679]: ear
+                    - paragraph [ref=f36e680]: 94K
+                - link [ref=f36e681] [cursor=pointer]:
+                  - /url: /search/hearing%20aid/
+                  - img "hearing aid" [ref=f36e682]
+                  - generic [ref=f36e683]:
+                    - paragraph [ref=f36e684]: hearing aid
+                    - paragraph [ref=f36e685]: 14K
+                - link [ref=f36e686] [cursor=pointer]:
+                  - /url: /search/listening%20music/
+                  - img "listening music" [ref=f36e687]
+                  - generic [ref=f36e688]:
+                    - paragraph [ref=f36e689]: listening music
+                    - paragraph [ref=f36e690]: 55K
+                - link [ref=f36e691] [cursor=pointer]:
+                  - /url: /search/radio/
+                  - img "radio" [ref=f36e692]
+                  - generic [ref=f36e693]:
+                    - paragraph [ref=f36e694]: radio
+                    - paragraph [ref=f36e695]: 6K
+                - link [ref=f36e696] [cursor=pointer]:
+                  - /url: /search/vr%20headset/
+                  - img "vr headset" [ref=f36e697]
+                  - generic [ref=f36e698]:
+                    - paragraph [ref=f36e699]: vr headset
+                    - paragraph [ref=f36e700]: 11K
+                - link [ref=f36e701] [cursor=pointer]:
+                  - /url: /search/listening%20to%20music/
+                  - img "listening to music" [ref=f36e702]
+                  - generic [ref=f36e703]:
+                    - paragraph [ref=f36e704]: listening to music
+                    - paragraph [ref=f36e705]: 56K
+                - link [ref=f36e706] [cursor=pointer]:
+                  - /url: /search/mic/
+                  - img "mic" [ref=f36e707]
+                  - generic [ref=f36e708]:
+                    - paragraph [ref=f36e709]: mic
+                    - paragraph [ref=f36e710]: 5K
+                - img [ref=f36e711] [cursor=pointer]
+            - generic [ref=f36e714]:
+              - generic [ref=f36e716]:
+                - generic [ref=f36e717]:
+                  - article [ref=f36e720]:
+                    - link [ref=f36e721] [cursor=pointer]:
+                      - /url: /photo/headphone-headphones-listening-music-music-210927/
+                      - img "Free Minimalist image of black over-ear headphones on a white background. Stock Photo" [ref=f36e722]
+                  - article [ref=f36e727]:
+                    - link [ref=f36e728] [cursor=pointer]:
+                      - /url: /photo/close-up-of-headphones-hanging-on-a-metal-wall-5650531/
+                      - img "Free Close-up of professional headphones hanging on a perforated music stand in a studio setting. Stock Photo" [ref=f36e729]
+                  - article [ref=f36e734]:
+                    - link [ref=f36e735] [cursor=pointer]:
+                      - /url: /photo/black-jbl-headphones-on-black-nike-backpack-3081173/
+                      - img "Free JBL headphones resting on a black Nike bag, showcasing sleek and modern design. Stock Photo" [ref=f36e736]
+                  - article [ref=f36e741]:
+                    - link [ref=f36e742] [cursor=pointer]:
+                      - /url: /photo/close-up-shot-of-black-headset-11398246/
+                      - img "Free Stylish black headphones with glowing accents on a reflective surface against a dark backdrop. Stock Photo" [ref=f36e743]
+                  - article [ref=f36e748]:
+                    - link [ref=f36e749] [cursor=pointer]:
+                      - /url: /photo/black-headset-hanging-on-black-and-gray-microphone-185030/
+                      - img "Free Black and white close-up of a microphone and headphones on a stand, perfect for music and recording studio themes. Stock Photo" [ref=f36e750]
+                  - article [ref=f36e755]:
+                    - link [ref=f36e756] [cursor=pointer]:
+                      - /url: /photo/close-up-shot-of-black-headphones-on-a-wooden-surface-5269752/
+                      - img "Free Close-up of sleek wireless headphones placed on a polished wooden surface under soft studio lighting. Stock Photo" [ref=f36e757]
+                  - article [ref=f36e762]:
+                    - link [ref=f36e763] [cursor=pointer]:
+                      - /url: /photo/headphone-on-grass-17743351/
+                      - img "Free Close-up of blue headphones on grass, symbolizing relaxation and outdoor listening. Stock Photo" [ref=f36e764]
+                  - article [ref=f36e769]:
+                    - link [ref=f36e770] [cursor=pointer]:
+                      - /url: /photo/headphones-nestled-in-vibrant-greenery-28872795/
+                      - img "Free White headphones surrounded by lush green leaves and yellow flowers, creating a serene and natural setting. Stock Photo" [ref=f36e771]
+                  - article [ref=f36e776]:
+                    - link [ref=f36e777] [cursor=pointer]:
+                      - /url: /photo/black-headphones-lying-15487609/
+                      - img "Free Minimalist black and white photo of headphones on a dark background. Stock Photo" [ref=f36e778]
+                  - article [ref=f36e783]:
+                    - link [ref=f36e784] [cursor=pointer]:
+                      - /url: /photo/razer-white-and-black-corded-headphones-159472/
+                      - img "Free Close-up view of sleek white headphones against a minimalist background, perfect for technology enthusiasts. Stock Photo" [ref=f36e785]
+                - generic [ref=f36e788]:
+                  - article [ref=f36e791]:
+                    - link [ref=f36e792] [cursor=pointer]:
+                      - /url: /photo/black-headphones-on-white-surface-7772548/
+                      - img "Free From above of modern shiny black wireless headphones placed on white background in light studio Stock Photo" [ref=f36e793]
+                  - article [ref=f36e798]:
+                    - link [ref=f36e799] [cursor=pointer]:
+                      - /url: /photo/headphone-headphones-music-music-speaker-210926/
+                      - img "Free Stylish black over-ear headphones featuring a cushioned headband and branded earcups on a white background. Stock Photo" [ref=f36e800]
+                  - article [ref=f36e805]:
+                    - link [ref=f36e806] [cursor=pointer]:
+                      - /url: /photo/close-up-photo-of-headphones-on-top-of-silver-laptop-13792279/
+                      - img "Free Purple headphones rest on a laptop with an acoustic guitar in the backdrop, capturing a casual music vibe. Stock Photo" [ref=f36e807]
+                  - article [ref=f36e812]:
+                    - link [ref=f36e813] [cursor=pointer]:
+                      - /url: /photo/black-headphone-2919003/
+                      - img "Free High-quality black studio headphones close-up, ideal for music and audio production environments. Stock Photo" [ref=f36e814]
+                  - article [ref=f36e819]:
+                    - link [ref=f36e820] [cursor=pointer]:
+                      - /url: /photo/audio-headphone-hearing-mp3-1591/
+                      - img "Free Close-up of red and black headphones on a wooden surface, ideal for music concepts. Stock Photo" [ref=f36e821]
+                  - article [ref=f36e826]:
+                    - link [ref=f36e827] [cursor=pointer]:
+                      - /url: /photo/white-wireless-headphones-3394665/
+                      - img "Free Sleek white wireless headphones against a white backdrop, showcasing minimalist design and modern technology. Stock Photo" [ref=f36e828]
+                  - article [ref=f36e833]:
+                    - link [ref=f36e834] [cursor=pointer]:
+                      - /url: /photo/headphones-with-wire-20385204/
+                      - img "Free Close-up of professional headphones on a vivid orange background, ideal for audio and tech concepts. Stock Photo" [ref=f36e835]
+                  - article [ref=f36e840]:
+                    - link [ref=f36e841] [cursor=pointer]:
+                      - /url: /photo/a-close-up-shot-of-a-black-headphones-in-the-dark-9154412/
+                      - img "Free Close-up of black headphones against a dark background, emphasizing modern technology and minimalism. Stock Photo" [ref=f36e842]
+                  - article [ref=f36e847]:
+                    - link [ref=f36e848] [cursor=pointer]:
+                      - /url: /photo/white-wireless-headphone-on-a-black-surface-11945638/
+                      - img "Free A stylish pair of wireless headphones resting on a desk with ambient lighting. Stock Photo" [ref=f36e849]
+                - generic [ref=f36e852]:
+                  - generic [ref=f36e854]:
+                    - generic [ref=f36e856]:
+                      - link [ref=f36e857] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20headphones%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own headphones content with Canva" [ref=f36e858]
+                      - link [ref=f36e859] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20headphones%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own headphones content with Canva" [ref=f36e860]
+                      - link [ref=f36e861] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20headphones%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own headphones content with Canva" [ref=f36e862]
+                      - link [ref=f36e863] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20headphones%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own headphones content with Canva" [ref=f36e864]
+                    - link [ref=f36e865] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20headphones%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - paragraph [ref=f36e868]: Bring your ideas to life with Canva AI
+                    - link "Get started for free" [ref=f36e869] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20headphones%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                  - article [ref=f36e874]:
+                    - link [ref=f36e875] [cursor=pointer]:
+                      - /url: /photo/close-up-shot-of-red-headphones-on-a-wooden-surface-5269699/
+                      - img "Free Close-up of red wireless headphones resting on a wooden surface, highlighting sleek design and vibrant color. Stock Photo" [ref=f36e876]
+                  - article [ref=f36e881]:
+                    - link [ref=f36e882] [cursor=pointer]:
+                      - /url: /photo/headphones-on-a-pink-surface-8356854/
+                      - img "Free Close-up of KRK headphones on a pink background, perfect for music and audio technology themes. Stock Photo" [ref=f36e883]
+                  - article [ref=f36e888]:
+                    - link [ref=f36e889] [cursor=pointer]:
+                      - /url: /photo/low-angle-shot-of-black-headphones-on-a-wooden-floor-12671308/
+                      - img "Free Stylish black headphones with cable lying on a wooden floor in a low-angle shot. Stock Photo" [ref=f36e890]
+                  - link [ref=f36e894] [cursor=pointer]:
+                    - /url: /collections/headphones-gvb8z4b/
+                    - article [ref=f36e895]:
+                      - list [ref=f36e897]:
+                        - listitem [ref=f36e898]
+                        - listitem [ref=f36e900]
+                        - listitem [ref=f36e902]
+                      - generic [ref=f36e904]:
+                        - heading "Headphones" [level=4] [ref=f36e905]
+                        - paragraph [ref=f36e909]: "34"
+                  - article [ref=f36e912]:
+                    - link [ref=f36e913] [cursor=pointer]:
+                      - /url: /photo/white-headphones-on-yellow-background-7054718/
+                      - img "Free Stylish white headphones against a vibrant yellow background, perfect for music lovers. Stock Photo" [ref=f36e914]
+                  - article [ref=f36e919]:
+                    - link [ref=f36e920] [cursor=pointer]:
+                      - /url: /photo/black-corded-headphones-hanging-on-wall-8132514/
+                      - img "Free Close-up of black headphones hanging on a wooden hook in a studio with purple lighting Stock Photo" [ref=f36e921]
+              - button "Load More" [ref=f36e925] [cursor=pointer]
+            - navigation [ref=f36e928]:
+              - generic [ref=f36e930]:
+                - link "1" [ref=f36e932]:
+                  - /url: /search/headphones/
+                - link "2" [ref=f36e935] [cursor=pointer]:
+                  - /url: /search/headphones/?page=2
+                - link "3" [ref=f36e938] [cursor=pointer]:
+                  - /url: /search/headphones/?page=3
+                - link "4" [ref=f36e941] [cursor=pointer]:
+                  - /url: /search/headphones/?page=4
+                - link "5" [ref=f36e944] [cursor=pointer]:
+                  - /url: /search/headphones/?page=5
+                - link "6" [ref=f36e947] [cursor=pointer]:
+                  - /url: /search/headphones/?page=6
+                - link "Next" [ref=f36e950] [cursor=pointer]:
+                  - /url: /search/headphones/?page=2
+    - contentinfo [ref=f36e954]:
+      - separator [ref=f36e955]
+      - generic [ref=f36e956]:
+        - generic [ref=f36e957]:
+          - heading "Where stories come together." [level=2] [ref=f36e958]
+          - generic [ref=f36e959]:
+            - link "Download on iOS" [ref=f36e960] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Download on Android" [ref=f36e963] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f36e966]:
+            - listitem [ref=f36e967]:
+              - link "Instagram" [ref=f36e968] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f36e971]:
+              - link "Threads" [ref=f36e972] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f36e975]:
+              - link "YouTube" [ref=f36e976] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f36e979]:
+              - link "TikTok" [ref=f36e980] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f36e983]:
+              - link "LinkedIn" [ref=f36e984] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f36e987]:
+              - link "X" [ref=f36e988] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f36e991]:
+          - list [ref=f36e992]:
+            - heading "Pexels" [level=3] [ref=f36e993]
+            - listitem [ref=f36e994]:
+              - link "Free Stock Photos" [ref=f36e995] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f36e996]:
+              - link "Free Videos" [ref=f36e997] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f36e998]:
+              - link "Popular searches" [ref=f36e999] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f36e1000]:
+              - link "Collections" [ref=f36e1001] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f36e1002]:
+              - link "Challenges" [ref=f36e1003] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f36e1004]:
+              - link "Leaderboard" [ref=f36e1005] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f36e1006]:
+              - link "Other plugins & apps" [ref=f36e1007] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f36e1008]:
+            - heading "Company" [level=3] [ref=f36e1009]
+            - listitem [ref=f36e1010]:
+              - link "About" [ref=f36e1011] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f36e1012]:
+              - link "Blog" [ref=f36e1013] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f36e1014]:
+              - link "Help Center" [ref=f36e1015] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f36e1016]:
+              - link "Report content" [ref=f36e1017] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f36e1018]:
+              - link "Become a Hero" [ref=f36e1019] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f36e1020]:
+              - link "Partner with Pexels" [ref=f36e1021] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f36e1022]:
+              - link "Image & Video API" [ref=f36e1023] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f36e1024]: Sign Up
+        - list [ref=f36e1025]:
+          - listitem [ref=f36e1026]:
+            - heading "Free Stock Photos" [level=3] [ref=f36e1027]
+          - listitem [ref=f36e1028]:
+            - generic [ref=f36e1030]:
+              - link "Black and white photography" [ref=f36e1032] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f36e1033] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f36e1034] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f36e1035] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f36e1036] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f36e1037] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f36e1038] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f36e1039] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f36e1040] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f36e1041] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f36e1042] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f36e1043] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f36e1044] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f36e1046]:
+        - generic [ref=f36e1047]: © 2026 Pexels
+        - generic [ref=f36e1049]:
+          - link "Terms of Use" [ref=f36e1051] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f36e1052] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f36e1053] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f36e1054] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f36e1055] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f36e1058] [cursor=pointer]
+      - separator [ref=f36e1063]
+  - alert [ref=f36e1064]
+  - status [ref=f36e1065]: "[object Object] has been selected."

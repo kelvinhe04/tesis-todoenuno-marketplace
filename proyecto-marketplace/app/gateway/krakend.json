@@ -1,0 +1,273 @@
+{
+  "$schema": "https://www.krakend.io/schema/krakend.json",
+  "version": 3,
+  "name": "marketplace-gateway",
+  "port": 8080,
+  "timeout": "5000ms",
+  "cache_ttl": "0s",
+  "output_encoding": "json",
+  "endpoints": [
+    {
+      "endpoint": "/api/auth/health",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/health", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/health",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/health", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/carrito/health",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/health", "encoding": "no-op", "host": ["http://carrito:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes/health",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/health", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/pagos/health",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/health", "encoding": "no-op", "host": ["http://pagos:3000"] }]
+    },
+    {
+      "endpoint": "/api/notificaciones/health",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/health", "encoding": "no-op", "host": ["http://notificaciones:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/registro",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type"],
+      "backend": [{ "url_pattern": "/auth/registro", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/login",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type"],
+      "backend": [{ "url_pattern": "/auth/login", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/google",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type"],
+      "backend": [{ "url_pattern": "/auth/google", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/usuarios/{id}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/auth/usuarios/{id}", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/me", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_query_strings": ["*"],
+      "backend": [{ "url_pattern": "/catalogo", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/catalogo", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/catalogo/{id}", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/catalogo/{id}", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/catalogo/{id}", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}/resenas",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/catalogo/{id}/resenas", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}/resenas",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/catalogo/{id}/resenas", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}/disponibilidad",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_query_strings": ["fecha"],
+      "backend": [{ "url_pattern": "/catalogo/{id}/disponibilidad", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}/reservas",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/catalogo/{id}/reservas", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}/reservas/{reservaId}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/catalogo/{id}/reservas/{reservaId}", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}/reservas/{reservaId}/cancelar",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/catalogo/{id}/reservas/{reservaId}/cancelar", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}/reservas/{reservaId}/confirmar",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/catalogo/{id}/reservas/{reservaId}/confirmar", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/carrito",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/carrito", "encoding": "no-op", "host": ["http://carrito:3000"] }]
+    },
+    {
+      "endpoint": "/api/carrito",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/carrito", "encoding": "no-op", "host": ["http://carrito:3000"] }]
+    },
+    {
+      "endpoint": "/api/carrito/items",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/carrito/items", "encoding": "no-op", "host": ["http://carrito:3000"] }]
+    },
+    {
+      "endpoint": "/api/carrito/items/{productoId}",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/carrito/items/{productoId}", "encoding": "no-op", "host": ["http://carrito:3000"] }]
+    },
+    {
+      "endpoint": "/api/carrito/items/{productoId}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/carrito/items/{productoId}", "encoding": "no-op", "host": ["http://carrito:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes/demo",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/ordenes/demo", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/ordenes", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/ordenes", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes/vendedor",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/ordenes/vendedor", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes/{id}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/ordenes/{id}", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes/{id}/estado-entrega",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/ordenes/{id}/estado-entrega", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/pagos/ordenes/{ordenId}",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/pagos/ordenes/{ordenId}", "encoding": "no-op", "host": ["http://pagos:3000"] }]
+    },
+    {
+      "endpoint": "/api/pagos/ordenes/{ordenId}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/pagos/ordenes/{ordenId}", "encoding": "no-op", "host": ["http://pagos:3000"] }]
+    },
+    {
+      "endpoint": "/api/notificaciones",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/notificaciones", "encoding": "no-op", "host": ["http://notificaciones:3000"] }]
+    },
+    {
+      "endpoint": "/api/notificaciones/{id}/leida",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/notificaciones/{id}/leida", "encoding": "no-op", "host": ["http://notificaciones:3000"] }]
+    },
+    {
+      "endpoint": "/api/notificaciones/demo/log",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "backend": [{ "url_pattern": "/notificaciones/demo/log", "encoding": "no-op", "host": ["http://notificaciones:3000"] }]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+- generic [ref=f12e3]:
+  - complementary [ref=f12e4]:
+    - generic [ref=f12e5]: TodoEnUno
+    - navigation [ref=f12e6]:
+      - generic [ref=f12e7]: Resumen
+      - generic [ref=f12e13]: Publicaciones
+      - generic [ref=f12e17]: Órdenes recibidas
+      - generic [ref=f12e20]: Perfil
+    - link "Cerrar sesión" [ref=f12e25] [cursor=pointer]:
+      - /url: "#"
+  - main [ref=f12e29]:
+    - generic [ref=f12e30]:
+      - heading "Órdenes recibidas" [level=1] [ref=f12e31]
+      - generic [ref=f12e32]:
+        - generic [ref=f12e33]: Todas
+        - generic [ref=f12e34]: Pendientes
+        - generic [ref=f12e35]: Pagadas
+    - table [ref=f12e37]:
+      - rowgroup [ref=f12e38]:
+        - row [ref=f12e39]:
+          - columnheader "Orden" [ref=f12e40]
+          - columnheader "Cliente" [ref=f12e41]
+          - columnheader "Publicación" [ref=f12e42]
+          - columnheader "Fecha" [ref=f12e43]
+          - columnheader "Total" [ref=f12e44]
+          - columnheader "Estado" [ref=f12e45]
+          - columnheader [ref=f12e46]
+      - rowgroup [ref=f12e47]:
+        - row [ref=f12e48]:
+          - cell "#FR-10482" [ref=f12e49]
+          - cell "Roberto Sanjur" [ref=f12e50]
+          - cell "Lámpara de mesa en cerámica" [ref=f12e51]
+          - cell "28 ago. 2026" [ref=f12e57]
+          - cell "$38.00" [ref=f12e58]
+          - cell "Pagada" [ref=f12e59]
+          - cell [ref=f12e60]:
+            - link "Ver detalle" [ref=f12e61] [cursor=pointer]:
+              - /url: "#"
+        - row [ref=f12e62]:
+          - cell "#FR-10475" [ref=f12e63]
+          - cell "Marisol Quintero" [ref=f12e64]
+          - cell "Set de tazas de cerámica (x4)" [ref=f12e65]
+          - cell "24 ago. 2026" [ref=f12e71]
+          - cell "$32.00" [ref=f12e72]
+          - cell "En proceso" [ref=f12e73]
+          - cell [ref=f12e74]:
+            - link "Ver detalle" [ref=f12e75] [cursor=pointer]:
+              - /url: "#"
+        - row [ref=f12e76]:
+          - cell "#FR-10461" [ref=f12e77]
+          - cell "Juan Delgado" [ref=f12e78]
+          - cell "Set de macetas de barro (x3)" [ref=f12e79]
+          - cell "19 ago. 2026" [ref=f12e85]
+          - cell "$22.00" [ref=f12e86]
+          - cell "Pagada" [ref=f12e87]
+          - cell [ref=f12e88]:
+            - link "Ver detalle" [ref=f12e89] [cursor=pointer]:
+              - /url: "#"
+        - row [ref=f12e90]:
+          - cell "#FR-10448" [ref=f12e91]
+          - cell "Karina Ríos" [ref=f12e92]
+          - cell "Plato decorativo pintado a mano" [ref=f12e93]
+          - cell "12 ago. 2026" [ref=f12e99]
+          - cell "$26.00" [ref=f12e100]
+          - cell "Rechazada" [ref=f12e101]
+          - cell [ref=f12e102]:
+            - link "Ver detalle" [ref=f12e103] [cursor=pointer]:
+              - /url: "#"

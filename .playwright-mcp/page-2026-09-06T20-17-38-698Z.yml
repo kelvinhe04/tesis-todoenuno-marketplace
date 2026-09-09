@@ -1,0 +1,327 @@
+- generic [ref=f71e1]:
+  - generic [ref=f71e2]:
+    - link "Skip to main content" [ref=f71e3] [cursor=pointer]:
+      - /url: "#content"
+    - banner [ref=f71e4]:
+      - generic [ref=f71e6]:
+        - link [ref=f71e8] [cursor=pointer]:
+          - /url: https://prepacademytutors.com/
+          - img "Prep Academy Tutors" [ref=f71e9]
+        - navigation [ref=f71e10]:
+          - list [ref=f71e12]:
+            - listitem [ref=f71e13]:
+              - link "About us" [ref=f71e14] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/
+            - listitem [ref=f71e15]:
+              - link "How we work" [ref=f71e16] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/how-we-work/
+            - listitem [ref=f71e17]:
+              - link "Work with us" [ref=f71e18] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/work-with-us/
+            - listitem [ref=f71e19]:
+              - link "Contact us" [ref=f71e20] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/contact-us/
+        - generic [ref=f71e23]:
+          - link "888.995.7382" [ref=f71e24] [cursor=pointer]:
+            - /url: tel:+18889957382
+          - link "FIND YOUR LOCAL TUTOR" [ref=f71e25] [cursor=pointer]:
+            - /url: /find-your-local-tutor
+    - generic [ref=f71e31]:
+      - generic [ref=f71e33]:
+        - generic [ref=f71e35]:
+          - generic [ref=f71e43]:
+            - heading [level=2] [ref=f71e44]: It's time to start seeing the first letter of the alphabet again.
+            - link [ref=f71e46] [cursor=pointer]:
+              - /url: https://prepacademytutors.com//how-we-work/
+              - text: Learn more today
+          - tabpanel [ref=f71e47]:
+            - generic [ref=f71e54]:
+              - heading [level=1] [ref=f71e55]: Certified teachers. In-home & online tutoring. All grades and subjects.
+              - link [ref=f71e57] [cursor=pointer]:
+                - /url: https://prepacademytutors.com//how-we-work/
+                - text: Learn More Today
+          - tabpanel [aria-hidden] [ref=f71e58]:
+            - generic [ref=f71e65]:
+              - paragraph [ref=f71e67]
+              - link [ref=f71e70] [cursor=pointer]:
+                - /url: https://prepacademytutors.com//how-we-work/
+                - text: Learn more today
+          - tabpanel [aria-hidden] [ref=f71e71]:
+            - generic [ref=f71e78]:
+              - heading [level=2] [ref=f71e79]: It's time to start seeing the first letter of the alphabet again.
+              - link [ref=f71e81] [cursor=pointer]:
+                - /url: https://prepacademytutors.com//how-we-work/
+                - text: Learn more today
+          - generic [ref=f71e89]:
+            - heading [level=1] [ref=f71e90]: Certified teachers. In-home & online tutoring. All grades and subjects.
+            - link [ref=f71e92] [cursor=pointer]:
+              - /url: https://prepacademytutors.com//how-we-work/
+              - text: Learn More Today
+          - generic [ref=f71e100]:
+            - paragraph [ref=f71e102]
+            - link [ref=f71e105] [cursor=pointer]:
+              - /url: https://prepacademytutors.com//how-we-work/
+              - text: Learn more today
+          - generic [ref=f71e113]:
+            - heading [level=2] [ref=f71e114]: It's time to start seeing the first letter of the alphabet again.
+            - link [ref=f71e116] [cursor=pointer]:
+              - /url: https://prepacademytutors.com//how-we-work/
+              - text: Learn more today
+        - tablist [ref=f71e117]:
+          - tab "1 of 3" [selected] [ref=f71e118] [cursor=pointer]: • 1
+          - tab "2 of 3" [ref=f71e119] [cursor=pointer]: • 2
+          - tab "3 of 3" [ref=f71e120] [cursor=pointer]: • 3
+      - generic [ref=f71e122]:
+        - generic [ref=f71e125]:
+          - heading "gold standard" [level=2] [ref=f71e126]
+          - heading "private tutoring service" [level=2] [ref=f71e127]
+        - generic [ref=f71e128]:
+          - generic [ref=f71e130]:
+            - img "card icon ruler" [ref=f71e131]
+            - heading "Confidence builders" [level=3] [ref=f71e132]
+            - paragraph [ref=f71e133]: We provide in-home tutoring from certified teachers who prioritize building a student’s confidence through tailored personal attention. Whether your child is struggling or already has excellent grades, our end goal is improved confidence in and out of the classroom. Using proven teaching techniques and methodologies that are best suited to the individual student is the first step in helping your child achieve their goals. Then through open communication with our parents and students, we ensure ongoing progress. The final step is increased confidence through better comprehension, improved grades, and, ultimately, academic success.
+            - generic [ref=f71e134]: Read More
+          - generic [ref=f71e136]:
+            - img "card icon teacher@2x" [ref=f71e137]
+            - heading "Certified teachers & Educational Experts" [level=3] [ref=f71e138]
+            - paragraph [ref=f71e139]: We believe in the power of education. You can always be confident that your child is being instructed by the most qualified individuals, as we only hire professionally certified teachers and exceptional human beings. Each of our tutors have the experience and qualifications to make sure your child succeeds; identifying roadblocks, working to achieve better results and introducing new approaches to learning. Rest assured that your tutor is not only knowledgeable with the subject material, but also knows how to effectively teach it – an important distinction that could make all the difference for your child.
+            - generic [ref=f71e140]: Read More
+          - generic [ref=f71e142]:
+            - img "card icon house" [ref=f71e143]
+            - heading "Flexible, in-home & online tutoring" [level=3] [ref=f71e144]
+            - paragraph [ref=f71e145]: Our tutors work 7 days a week and around your family's schedule. Between extracurriculars, life, work and play, we guarantee that we will find a time for tutoring that is convenient for you and your child. Many of our tutors are extremely versatile and are able to teach across a variety of grades and ages. This can be helpful in scheduling for your family, as the same private tutor who you know and love could work with multiple siblings in the same home.
+            - generic [ref=f71e146]: Read More
+          - generic [ref=f71e148]:
+            - img "card icon star" [ref=f71e149]
+            - heading "Personal attention" [level=3] [ref=f71e150]
+            - paragraph [ref=f71e151]: We are not the teacher at the front of the classroom—we are the smart friend who can explain things in a way that is easy to understand. We offer the highest level of service and professionalism while aiming to form a personal bond with your child. Part of our teaching philosophy is recognizing every student is different and has a different style of learning. We work with each individual family to create a personalized approach that fits their tutoring needs. This includes everything from the tutors we put forward, to teaching methodologies, to programs used, to homework and follow-ups.
+            - generic [ref=f71e152]: Read More
+      - generic [ref=f71e154]:
+        - generic [ref=f71e155]:
+          - heading "LOCATIONS" [level=2] [ref=f71e158]
+          - paragraph [ref=f71e162]: We have plenty of local private tutors ready to make a difference in your child’s life.
+        - generic [ref=f71e165]:
+          - generic [ref=f71e166]:
+            - textbox "Enter your postal/zip code" [ref=f71e167]
+            - button "find your local tutor" [ref=f71e168] [cursor=pointer]
+          - generic [ref=f71e169]: Postal/zip code is not valid
+      - generic [ref=f71e172]:
+        - paragraph [ref=f71e175]
+        - generic [ref=f71e177]:
+          - heading "our story" [level=2] [ref=f71e178]
+          - paragraph [ref=f71e179]: In 2000, Carly Dougherty was busy using her free time outside of university to offer students private tutoring. She found herself almost always fully booked, with demand far greater than she could ever cope with on her own. Her passion for tutoring and helping children grew further after she obtained her Master’s Degree in Child Psychology. The increasing demand for effective tutoring services and Carly’s passion led her to found Prep Academy Tutors with the mission to help children improve their school experience and achieve their academic goals.
+          - paragraph [ref=f71e180]: After noticing the proven effectiveness of her approach, Carly and her husband Adrian assembled a dream team of like-minded individuals and opened Prep Academy Tutors across North America.
+      - generic [ref=f71e183]:
+        - generic [ref=f71e185]:
+          - heading "The power of" [level=2] [ref=f71e186]
+          - heading "a great tutor" [level=2] [ref=f71e188]
+          - paragraph
+          - paragraph [ref=f71e190]: We believe wholeheartedly that a great instructor can make all the difference in a child’s education. Our elite team of certified teachers recognize that every student learns differently, so you can trust that your child is getting the individual instruction they need.
+          - paragraph [ref=f71e191]: We recognize the power of tutors working alongside students; helping them learn in a way that lecturers may not be able to. Our method is not stuffy or unapproachable. We are not the teacher at the front of the classroom—we are the smart friend who can explain things in a way that is easy to understand. Learning can be fun if it’s done the right way!
+          - paragraph [ref=f71e192]: We provide private tutoring services for elementary school, high school and university prep in math, science, English, French, and every subject in between. Our goal is to make sure your child has the tools and confidence to score straight A’s—while enjoying the process!
+        - paragraph [ref=f71e195]:
+          - img "About-Us-Section-2-1" [ref=f71e196]
+      - generic [ref=f71e199]:
+        - paragraph [ref=f71e202]
+        - generic [ref=f71e204]:
+          - heading "every child" [level=2] [ref=f71e205]
+          - heading "learns differently" [level=2] [ref=f71e206]
+          - paragraph [ref=f71e207]: We recognize that no two students will learn exactly the same way. In fact, teachers are also naturally different in the way that they teach. For every student’s learning style, there is an ideal teacher. We ensure that our team of teachers are trained in a variety of different instructional techniques for this very reason, combining new-school learning with old-school values.
+          - paragraph [ref=f71e208]: For example, we have tutors who teach using the Wilson Reading System and others who teach the Direct Instruction Reading Mastery program. For math, we have tutors who are trained in the Singapore Math philosophy and others who employ JUMP Math.
+          - paragraph [ref=f71e209]: The idea behind our variety is some students may excel at one learning style and not another. By providing multiple options for students, we can ensure that we pair them with the best tutor for their needs. Prep Academy Tutors acts as a “matchmaker” between students, tutors, and programs, ensuring that our students are learning in the most effective way possible.
+      - generic [ref=f71e211]:
+        - generic [ref=f71e214]:
+          - heading "hear from" [level=2] [ref=f71e215]
+          - heading "some of our families" [level=2] [ref=f71e216]
+        - generic [ref=f71e220]:
+          - generic [ref=f71e221]:
+            - link [ref=f71e223] [cursor=pointer]:
+              - /url: "#"
+              - img "Play Button Icon" [ref=f71e224]
+            - generic [ref=f71e225]:
+              - heading "Prep Academy Parents and Students" [level=3] [ref=f71e226]
+              - paragraph [ref=f71e227]: Don’t just take our word for it. Hear from the families and students our professional tutors work with.
+            - paragraph
+          - paragraph
+      - generic [ref=f71e232]:
+        - generic [ref=f71e234]:
+          - heading [level=3] [ref=f71e243]:
+            - paragraph [ref=f71e244]: “I wanted to thank you so much for all your support this year and for introducing our tutor to us. She has been incredible and has made a real positive difference in how our son has approached school this year. The transformation has been huge. Thank you!!!”
+          - tabpanel [ref=f71e245]:
+            - heading [level=3] [ref=f71e253]:
+              - paragraph [ref=f71e254]: “Our son graduates this month and is heading to UBC Sauder in September.
+              - paragraph [ref=f71e255]: We can’t thank you enough for all the years of support that your tutors have provided to him. He couldn’t have grown and developed as much as he has without Prep Academy.
+              - paragraph [ref=f71e256]: We started I believe 7 years ago and each and every tutor was excellent.
+              - paragraph [ref=f71e257]: Of course Nick has had a special impact on our son over the past 3 years and they have certainly developed an awesome working relationship. Our son is attuned to each and every session and we know he looks forward to seeing Nick each time.
+              - paragraph [ref=f71e258]: Thank you again for everything”
+          - tabpanel [aria-hidden] [ref=f71e259]:
+            - heading [level=3] [ref=f71e267]:
+              - paragraph [ref=f71e268]: “Prep Academy Tutors has made such a difference in our daughter’s academic studies. She has excelled in all her subjects and gained so much confidence with your guidance over the years. Now she is in the university of her choice.”
+          - tabpanel [aria-hidden] [ref=f71e269]:
+            - heading [level=3] [ref=f71e277]:
+              - paragraph [ref=f71e278]: “Prep Academy Tutors has provided our family with convenient, flexible and professional tutoring on an as needed basis. There is no other service like it. Thank you!”
+          - tabpanel [aria-hidden] [ref=f71e279]:
+            - heading [level=3] [ref=f71e287]:
+              - paragraph [ref=f71e288]: “I wanted to thank you so much for all your support this year and for introducing our tutor to us. She has been incredible and has made a real positive difference in how our son has approached school this year. The transformation has been huge. Thank you!!!”
+          - heading [level=3] [ref=f71e297]:
+            - paragraph [ref=f71e298]: “Our son graduates this month and is heading to UBC Sauder in September.
+            - paragraph [ref=f71e299]: We can’t thank you enough for all the years of support that your tutors have provided to him. He couldn’t have grown and developed as much as he has without Prep Academy.
+            - paragraph [ref=f71e300]: We started I believe 7 years ago and each and every tutor was excellent.
+            - paragraph [ref=f71e301]: Of course Nick has had a special impact on our son over the past 3 years and they have certainly developed an awesome working relationship. Our son is attuned to each and every session and we know he looks forward to seeing Nick each time.
+            - paragraph [ref=f71e302]: Thank you again for everything”
+          - heading [level=3] [ref=f71e311]:
+            - paragraph [ref=f71e312]: “Prep Academy Tutors has made such a difference in our daughter’s academic studies. She has excelled in all her subjects and gained so much confidence with your guidance over the years. Now she is in the university of her choice.”
+          - heading [level=3] [ref=f71e321]:
+            - paragraph [ref=f71e322]: “Prep Academy Tutors has provided our family with convenient, flexible and professional tutoring on an as needed basis. There is no other service like it. Thank you!”
+          - heading [level=3] [ref=f71e331]:
+            - paragraph [ref=f71e332]: “I wanted to thank you so much for all your support this year and for introducing our tutor to us. She has been incredible and has made a real positive difference in how our son has approached school this year. The transformation has been huge. Thank you!!!”
+        - tablist [ref=f71e333]:
+          - tab "1 of 4" [selected] [ref=f71e334] [cursor=pointer]: • 1
+          - tab "2 of 4" [ref=f71e335] [cursor=pointer]: • 2
+          - tab "3 of 4" [ref=f71e336] [cursor=pointer]: • 3
+          - tab "4 of 4" [ref=f71e337] [cursor=pointer]: • 4
+      - generic [ref=f71e342]:
+        - heading "FAQ" [level=2] [ref=f71e346]
+        - generic [ref=f71e348]:
+          - generic [ref=f71e351]:
+            - generic [ref=f71e352]:
+              - heading "How long are tutoring sessions?" [level=3] [ref=f71e353]
+              - img "icon-arrow-up" [ref=f71e356]
+            - heading [level=4] [ref=f71e361]:
+              - generic "Page 1" [ref=f71e362]:
+                - paragraph [ref=f71e366]: At Prep Academy, our minimum session length for in-home tutoring is 60 minutes, and we feel this amount of time is appropriate for students in JK-Grade 6. Many of our older students will have sessions for 90 or 120 minutes, as this allows the tutor to dive more deeply into the material being studied. Online tutoring sessions have a minimum length of 30 minutes.
+          - generic [ref=f71e370]:
+            - heading "What if the tutor that has been suggested for my student is not a good match?" [level=3] [ref=f71e371]
+            - img "icon-arrow-down" [ref=f71e374]
+          - generic [ref=f71e383]:
+            - heading "Do I need to sign a contract for tutoring services?" [level=3] [ref=f71e384]
+            - img "icon-arrow-down" [ref=f71e387]
+          - generic [ref=f71e396]:
+            - heading "What is your cancellation policy?" [level=3] [ref=f71e397]
+            - img "icon-arrow-down" [ref=f71e400]
+          - generic [ref=f71e409]:
+            - heading "What is the price of tutoring?" [level=3] [ref=f71e410]
+            - img "icon-arrow-down" [ref=f71e413]
+          - generic [ref=f71e422]:
+            - heading "How does the billing process work?" [level=3] [ref=f71e423]
+            - img "icon-arrow-down" [ref=f71e426]
+      - generic [ref=f71e433]:
+        - generic [ref=f71e436]:
+          - heading "we are constantly learning too" [level=2] [ref=f71e437]
+          - heading "follow our blog" [level=2] [ref=f71e438]
+        - generic [ref=f71e439]:
+          - generic [ref=f71e440]:
+            - link [ref=f71e441] [cursor=pointer]:
+              - /url: https://prepacademytutors.com/prep-academy-tutors-a-pathway-to-academic-success-through-personalized-in-home-tutoring-services/
+            - generic [ref=f71e445]:
+              - 'heading "Prep Academy Tutors: A Pathway to Academic Success through Personalized In-Home Tutoring Services" [level=4] [ref=f71e447]'
+              - paragraph [ref=f71e448]:
+                - text: Every student deserves a personalized approach to education that allows them to unlock their full learning potential. Prep
+                - link "..." [ref=f71e449] [cursor=pointer]:
+                  - /url: https://prepacademytutors.com/prep-academy-tutors-a-pathway-to-academic-success-through-personalized-in-home-tutoring-services/
+              - link "LEARN MORE >>>" [ref=f71e450] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/prep-academy-tutors-a-pathway-to-academic-success-through-personalized-in-home-tutoring-services/
+          - generic [ref=f71e451]:
+            - link [ref=f71e452] [cursor=pointer]:
+              - /url: https://prepacademytutors.com/overcoming-exam-fear-empower-your-child-with-prep-academy-tutors-in-home-services/
+            - generic [ref=f71e456]:
+              - 'heading "Overcoming Exam Fear: Empower Your Child with Prep Academy Tutors’ In-Home Services" [level=4] [ref=f71e458]'
+              - paragraph [ref=f71e459]:
+                - text: For many students, exam season is synonymous with stress, anxiety, and sleepless nights. Fear of exams can significantly
+                - link "..." [ref=f71e460] [cursor=pointer]:
+                  - /url: https://prepacademytutors.com/overcoming-exam-fear-empower-your-child-with-prep-academy-tutors-in-home-services/
+              - link "LEARN MORE >>>" [ref=f71e461] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/overcoming-exam-fear-empower-your-child-with-prep-academy-tutors-in-home-services/
+          - generic [ref=f71e462]:
+            - link [ref=f71e463] [cursor=pointer]:
+              - /url: https://prepacademytutors.com/how-personalized-tutoring-can-enhance-your-learning-experience/
+            - generic [ref=f71e467]:
+              - heading "How Personalized Tutoring Can Enhance Your Learning Experience" [level=4] [ref=f71e469]
+              - paragraph [ref=f71e470]:
+                - text: The world of education is more competitive than ever, and every student deserves a customized approach to learning.
+                - link "..." [ref=f71e471] [cursor=pointer]:
+                  - /url: https://prepacademytutors.com/how-personalized-tutoring-can-enhance-your-learning-experience/
+              - link "LEARN MORE >>>" [ref=f71e472] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/how-personalized-tutoring-can-enhance-your-learning-experience/
+          - generic [ref=f71e473]:
+            - link [ref=f71e474] [cursor=pointer]:
+              - /url: https://prepacademytutors.com/smoothing-middle-to-high-school-transition-prep-academy-tutors-support-2/
+            - generic [ref=f71e478]:
+              - 'heading "Smoothing Middle to High School Transition: Prep Academy Tutors’ Support" [level=4] [ref=f71e480]'
+              - paragraph [ref=f71e481]:
+                - text: The shift from middle school to high school is a significant milestone in a student’s educational journey. This
+                - link "..." [ref=f71e482] [cursor=pointer]:
+                  - /url: https://prepacademytutors.com/smoothing-middle-to-high-school-transition-prep-academy-tutors-support-2/
+              - link "LEARN MORE >>>" [ref=f71e483] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/smoothing-middle-to-high-school-transition-prep-academy-tutors-support-2/
+          - generic [ref=f71e484]:
+            - link [ref=f71e485] [cursor=pointer]:
+              - /url: https://prepacademytutors.com/boost-your-academic-success-with-prep-academy-tutors-personalized-tutoring-services/
+            - generic [ref=f71e489]:
+              - heading "Boost Your Academic Success with Prep Academy Tutors’ Personalized Tutoring Services" [level=4] [ref=f71e491]
+              - paragraph [ref=f71e492]:
+                - text: As a student, having the right academic support is crucial in your pursuit of success. Prep Academy Tutors
+                - link "..." [ref=f71e493] [cursor=pointer]:
+                  - /url: https://prepacademytutors.com/boost-your-academic-success-with-prep-academy-tutors-personalized-tutoring-services/
+              - link "LEARN MORE >>>" [ref=f71e494] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/boost-your-academic-success-with-prep-academy-tutors-personalized-tutoring-services/
+          - generic [ref=f71e495]:
+            - link [ref=f71e496] [cursor=pointer]:
+              - /url: https://prepacademytutors.com/essential-study-skills-how-personalized-tutoring-can-elevate-students-academic-success/
+            - generic [ref=f71e500]:
+              - 'heading "Essential Study Skills: How Personalized Tutoring can Elevate Students’ Academic Success" [level=4] [ref=f71e502]'
+              - paragraph [ref=f71e503]:
+                - text: The process of learning involves much more than simply understanding the subjects being taught. Equally important are the
+                - link "..." [ref=f71e504] [cursor=pointer]:
+                  - /url: https://prepacademytutors.com/essential-study-skills-how-personalized-tutoring-can-elevate-students-academic-success/
+              - link "LEARN MORE >>>" [ref=f71e505] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/essential-study-skills-how-personalized-tutoring-can-elevate-students-academic-success/
+        - paragraph [ref=f71e510]:
+          - link "See Our Blog" [ref=f71e511] [cursor=pointer]:
+            - /url: /blog
+    - contentinfo [ref=f71e512]:
+      - generic [ref=f71e514]:
+        - paragraph [ref=f71e516]: Get more Prep Academy insights today.
+        - navigation [ref=f71e517]:
+          - list [ref=f71e519]:
+            - listitem [ref=f71e520]:
+              - link "About us" [ref=f71e521] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/
+            - listitem [ref=f71e522]:
+              - link "How we work" [ref=f71e523] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/how-we-work/
+            - listitem [ref=f71e524]:
+              - link "Work with us" [ref=f71e525] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/work-with-us/
+            - listitem [ref=f71e526]:
+              - link "Franchise opportunity" [ref=f71e527] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/franchisee/
+            - listitem [ref=f71e528]:
+              - link "Find your local tutor" [ref=f71e529] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/find-your-local-tutor/
+            - listitem [ref=f71e530]:
+              - link "Contact us" [ref=f71e531] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/contact-us/
+        - generic [ref=f71e532]:
+          - generic [ref=f71e533]:
+            - link [ref=f71e534] [cursor=pointer]:
+              - /url: https://ca.linkedin.com/company/prep-academy-tutors
+            - link [ref=f71e539] [cursor=pointer]:
+              - /url: https://www.facebook.com/PrepAcademyTutors/
+              - img [ref=f71e540]: 
+            - link [ref=f71e542] [cursor=pointer]:
+              - /url: https://twitter.com/pattutors
+          - generic [ref=f71e545]:
+            - paragraph [ref=f71e546]: Proud to serve studentsacross North America
+            - paragraph [ref=f71e547]:
+              - link "Privacy Policy" [ref=f71e548] [cursor=pointer]:
+                - /url: https://prepacademytutors.com/privacy-policy
+            - paragraph [ref=f71e549]: Copyright 2020, Prep Academy Tutors
+  - generic [ref=f71e550]:
+    - button "Decrease text size" [ref=f71e551]: "-"
+    - button "Increase text size" [ref=f71e552]: +
+    - button "Reset text size" [ref=f71e553]: =
+  - iframe [ref=f71e556]:
+    - generic [ref=f75e6]:
+      - text: protected by
+      - strong [ref=f75e7]: reCAPTCHA

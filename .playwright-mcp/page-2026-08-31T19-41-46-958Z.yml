@@ -1,0 +1,34 @@
+- generic [ref=f19e2]:
+  - generic [ref=f19e3]:
+    - generic [ref=f19e4]: VENDEDOR
+    - generic [ref=f19e5]: Dashboard
+    - generic [ref=f19e11]: Publicaciones
+    - generic [ref=f19e13]: Órdenes recibidas
+    - generic [ref=f19e17]: Perfil
+    - generic [ref=f19e21]: Cerrar sesión
+  - generic [ref=f19e27]:
+    - heading "Nueva publicación" [level=1] [ref=f19e30]
+    - generic [ref=f19e31]:
+      - generic [ref=f19e32]:
+        - generic [ref=f19e33]: Producto
+        - generic [ref=f19e34]: Servicio
+      - generic [ref=f19e35]:
+        - generic [ref=f19e36]:
+          - generic [ref=f19e37]: Nombre
+          - generic [ref=f19e38]: Ej. Lámpara de mesa en cerámica
+        - generic [ref=f19e39]:
+          - generic [ref=f19e40]: Categoría
+          - generic [ref=f19e41]: Selecciona una categoría
+        - generic [ref=f19e44]:
+          - generic [ref=f19e45]: Precio
+          - generic [ref=f19e46]: $ 0.00
+        - generic [ref=f19e47]:
+          - generic [ref=f19e48]: Stock
+          - generic [ref=f19e49]: "0"
+        - generic [ref=f19e50]:
+          - generic [ref=f19e51]: Descripción
+          - generic [ref=f19e52]: Describe tu producto o servicio...
+    - heading "Imágenes" [level=3] [ref=f19e54]
+    - generic [ref=f19e61]:
+      - button "Guardar borrador" [ref=f19e62]
+      - button "Publicar" [ref=f19e63]

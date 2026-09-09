@@ -1,0 +1,469 @@
+- generic [ref=f188e1]:
+  - link "Skip to main content" [ref=f188e2] [cursor=pointer]:
+    - /url: "#content"
+  - generic [ref=f188e3]:
+    - banner [ref=f188e4]:
+      - generic [ref=f188e5]:
+        - link "home page" [ref=f188e7] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f188e17]:
+          - link "Fix Your Stuff" [ref=f188e19] [cursor=pointer]:
+            - /url: /Guide
+          - link "Community" [ref=f188e21] [cursor=pointer]:
+            - /url: /Community
+          - link "Store" [ref=f188e23] [cursor=pointer]:
+            - /url: https://www.ifixit.com/Store
+        - generic [ref=f188e25]:
+          - generic [ref=f188e29]:
+            - textbox "search" [ref=f188e30]:
+              - /placeholder: Search
+            - generic: /
+          - button "Open workbench" [ref=f188e31]
+          - button "Open location selector" [ref=f188e34]
+          - button "Open cart" [ref=f188e36] [cursor=pointer]
+          - generic [ref=f188e39]:
+            - link "Join" [ref=f188e40] [cursor=pointer]:
+              - /url: /Join
+            - link "Log In" [ref=f188e42] [cursor=pointer]:
+              - /url: /Login
+    - generic [ref=f188e49]:
+      - generic [ref=f188e50]:
+        - navigation "Right to Repair" [ref=f188e52]:
+          - list [ref=f188e53]:
+            - listitem [ref=f188e54]:
+              - link "Overview" [ref=f188e55] [cursor=pointer]:
+                - /url: /Right-to-Repair
+            - listitem [ref=f188e56]:
+              - link "E-Waste" [ref=f188e57] [cursor=pointer]:
+                - /url: /Right-to-Repair/E-waste
+            - listitem [ref=f188e58]:
+              - link "Recycling" [ref=f188e59] [cursor=pointer]:
+                - /url: /Right-to-Repair/Recycling
+            - listitem [ref=f188e60]:
+              - link "Manufacturing" [ref=f188e61] [cursor=pointer]:
+                - /url: /Right-to-Repair/Manufacturing
+            - listitem [ref=f188e62]:
+              - link "Jobs" [ref=f188e63] [cursor=pointer]:
+                - /url: /Right-to-Repair/Jobs-Revolution
+            - listitem [ref=f188e64]:
+              - link "Resources" [ref=f188e65] [cursor=pointer]:
+                - /url: /Right-to-Repair/Resources
+        - generic [ref=f188e68]:
+          - heading "We Must Secure Our Right to Repair Everything We Own" [level=1] [ref=f188e69]
+          - paragraph [ref=f188e70]: Access to parts, tools, and repair information should be fair and affordable.
+      - navigation [ref=f188e71]:
+        - list [ref=f188e72]:
+          - listitem [ref=f188e73]:
+            - link [ref=f188e74] [cursor=pointer]:
+              - /url: "#repair-is-freedom"
+              - generic [ref=f188e75]:
+                - emphasis [ref=f188e76]: What is
+                - text: Right to Repair?
+          - listitem [ref=f188e77]:
+            - link [ref=f188e78] [cursor=pointer]:
+              - /url: "#repair-creates-jobs"
+              - generic [ref=f188e79]:
+                - emphasis [ref=f188e80]: Why Repair
+                - text: Our Stuff?
+          - listitem [ref=f188e81]:
+            - link [ref=f188e82] [cursor=pointer]:
+              - /url: "#repair-is-sustainable"
+              - generic [ref=f188e83]:
+                - emphasis [ref=f188e84]: How Does
+                - text: Repair Help?
+      - generic [ref=f188e85]:
+        - heading "Right to Repair is a global movement to secure our access to:" [level=2] [ref=f188e86]
+        - generic [ref=f188e87]:
+          - paragraph [ref=f188e89]: Parts and tools to get our stuff fixed
+          - paragraph [ref=f188e91]: Manuals and diagnostics manufacturers use
+          - paragraph [ref=f188e93]: Software to reset security locks and pair parts
+      - generic [ref=f188e94]:
+        - heading "Would you buy a car if you couldn't replace the tires?" [level=2] [ref=f188e95]
+        - heading "So why buy a phone if you can't replace the battery?" [level=2] [ref=f188e96]
+      - generic [ref=f188e97]:
+        - heading "Independent shops keep repair fair. The Right to Repair keeps independent shops open." [level=2] [ref=f188e98]
+        - paragraph [ref=f188e99]:
+          - text: When manufacturers don't make parts and tools available, they create repair monopolies and hurt small businesses.
+          - link "96% of independent repair shops we surveyed" [ref=f188e100] [cursor=pointer]:
+            - /url: https://uspirg.org/sites/pirg/files/resources/National%20Repair%20Shop%20Survey_0.pdf
+          - text: have to turn customers away because of repair restrictions. If the Right to Repair is not protected in law, their businesses will suffer. Manufacturers at their own service centers can push you to buy new instead of repairing. They can set prices wherever they like. And they can
+          - link "shred reusable devices" [ref=f188e101] [cursor=pointer]:
+            - /url: https://www.ifixit.com/News/94386/the-truth-about-apples-free-iphone-recycling-program-the-earth-deserves-better
+          - text: instead of recycling them. Having to compete with independent shops keeps manufacturers honest.
+      - generic [ref=f188e102]:
+        - heading "Repair Is Freedom" [level=2] [ref=f188e106]
+        - paragraph [ref=f188e107]: "The Right to Repair movement is founded on a fundamental principle: If you bought it, you own it, and you should be able to fix it. Nobody should be able to block you from restoring your things to their original function."
+        - generic [ref=f188e108]:
+          - link [ref=f188e109] [cursor=pointer]:
+            - /url: https://www.ifixit.com/News/61140/what-is-right-to-repair
+            - heading "We deserve the right to repair." [level=3] [ref=f188e110]
+            - generic [ref=f188e111]: Read Article
+          - link [ref=f188e114] [cursor=pointer]:
+            - /url: /News/category/right-to-repair
+            - heading "Catch up with the latest news." [level=3] [ref=f188e115]
+            - generic [ref=f188e116]: Read News
+      - generic [ref=f188e119]:
+        - heading "Repair creates Jobs" [level=2] [ref=f188e123]
+        - paragraph [ref=f188e124]: If it can be fixed, it should be. Refurbished cell phones can be sold to someone new. Repaired computers bridge the digital divide. Even better, repair jobs are local. They won’t ever be shipped overseas.
+        - generic [ref=f188e125]:
+          - link [ref=f188e126] [cursor=pointer]:
+            - /url: /Right-to-Repair/Jobs-Revolution
+            - heading "It’s time for a repair jobs revolution." [level=3] [ref=f188e127]
+            - generic [ref=f188e128]: Read Article
+          - link [ref=f188e131] [cursor=pointer]:
+            - /url: /Right-to-Repair/Repairable-Products
+            - heading "Repairable products make good sense." [level=3] [ref=f188e132]
+            - generic [ref=f188e133]: Read Article
+          - link [ref=f188e136] [cursor=pointer]:
+            - /url: /Right-to-Repair/Resources
+            - heading "Let's build a repairable world." [level=3] [ref=f188e137]
+            - generic [ref=f188e138]: Browse Resources
+      - generic [ref=f188e141]:
+        - heading "Repair is Sustainable" [level=2] [ref=f188e145]
+        - paragraph [ref=f188e146]: Our stuff used to be made to last. Now it’s made to last only a couple of years. Repair is green. It keeps the stuff you love in service, and out of a landfill.
+        - generic [ref=f188e147]:
+          - link [ref=f188e148] [cursor=pointer]:
+            - /url: /Right-to-Repair/E-waste
+            - heading "What’s the problem with e-waste?" [level=3] [ref=f188e149]
+            - generic [ref=f188e150]: Read Article
+          - link [ref=f188e153] [cursor=pointer]:
+            - /url: /Right-to-Repair/Recycling
+            - heading "Recycling is destruction." [level=3] [ref=f188e154]
+            - generic [ref=f188e155]: Read Article
+          - link [ref=f188e158] [cursor=pointer]:
+            - /url: /Right-to-Repair/Manufacturing
+            - heading "Manufacturing and mining are toxic." [level=3] [ref=f188e159]
+            - generic [ref=f188e160]: Read Article
+      - generic [ref=f188e163]:
+        - heading "Frequently Asked Questions" [level=2] [ref=f188e167]
+        - paragraph [ref=f188e168]: "The question we hear most often: How isn't the Right to Repair already protected in law everywhere? If that's your question, our sympathies. We agree—it's beyond time to fix our broken repair laws. But if you've got other questions, check out the list below."
+        - generic [ref=f188e169]:
+          - heading "Isn't stuff too complicated for most people to repair it these days?" [level=3] [ref=f188e170]
+          - paragraph [ref=f188e171]: Even in complicated objects like smartphones and cars, most repairs are simple—you replace a broken part with an intact one. If you can change a broken light bulb, you've got the skills you need to do the most-common electronics repairs.
+          - heading "If I'm never going to fix my own phone, why should I care about the Right to Repair?" [level=3] [ref=f188e172]
+          - paragraph [ref=f188e173]: Manufacturers' repair restrictions make repair more expensive and difficult to find for everyone. When all repair has to go through a manufacturer's authorized center, you may wait a long time for repairs. They can charge you whatever they like, without competition. And they might tell you that something can't be fixed even when that's untrue, because they make more money when you replace your stuff instead of repairing it. Breaking up those repair monopolies helps us all.
+          - heading "Will I void my warranty if I repair something myself or take it to an independent repair shop?" [level=3] [ref=f188e174]
+          - paragraph [ref=f188e175]:
+            - text: In the US, it's
+            - link "illegal for manufacturers to void your warranty" [ref=f188e176] [cursor=pointer]:
+              - /url: https://www.ifixit.com/News/15464/warranty-voiding-stickers-are-illegal-but-these-companies-are-still-using-them
+            - text: for repairing your own stuff or having an independent shop repair it. Similarly, in Australia, courts have confirmed that customers may choose their own repair avenue for
+            - link "cars" [ref=f188e177] [cursor=pointer]:
+              - /url: https://coxauto.com.au/can-i-have-my-car-serviced-at-an-independent-workshop/
+            - text: and
+            - link "phones" [ref=f188e178] [cursor=pointer]:
+              - /url: https://www.accc.gov.au/media-release/iphone-and-ipad-misrepresentations-cost-apple-inc-9-million-in-penalties
+            - text: without voiding their consumer protections. Warranty laws vary by country, so check your local regulations.
+          - heading "Why are manufacturers so opposed to the Right to Repair movement?" [level=3] [ref=f188e179]
+          - paragraph [ref=f188e180]:
+            - text: The simple answer is that repair monopolies make manufacturers money. In their own shops, they can set repair prices and push you to buy new. Even though Right to Repair legislation polls incredibly well—
+            - link "in one poll, 84% of respondents" [ref=f188e181] [cursor=pointer]:
+              - /url: https://advocacy.consumerreports.org/press_release/consumer-reports-survey-finds-americans-overwhelmingly-support-the-right-to-repair/
+            - text: were in favor—it's seen fierce opposition from manufacturers' lobbying groups. The companies publicly recorded as lobbying against Right to Repair are
+            - link "collectively worth $10.7 trillion" [ref=f188e182] [cursor=pointer]:
+              - /url: https://uspirg.org/blogs/blog/usp/who-doesn%E2%80%99t-want-right-repair-companies-worth-over-10-trillion
+            - text: . Manufacturers will say they're worried about customer safety or data security, but
+            - link "the US Federal Trade Commission says" [ref=f188e183] [cursor=pointer]:
+              - /url: https://www.ftc.gov/system/files/documents/reports/nixing-fix-ftc-report-congress-repair-restrictions/nixing_the_fix_report_final_5521_630pm-508_002.pdf
+            - text: there is 'scant evidence to support' these arguments.
+          - heading "Why do manufacturers say they're worried about customer safety? Is repair dangerous?" [level=3] [ref=f188e184]
+          - paragraph [ref=f188e185]:
+            - text: Electronics repair is
+            - link "six times safer" [ref=f188e186] [cursor=pointer]:
+              - /url: https://www.bls.gov/web/osh/summ1_00.htm
+            - text: than the average job. Sure, swollen batteries can catch fire, and you should
+            - link "be careful when handling them" [ref=f188e187] [cursor=pointer]:
+              - /url: https://www.ifixit.com/Wiki/What_to_do_with_a_swollen_battery
+            - text: . And
+            - link "don't get under your car" [ref=f188e188] [cursor=pointer]:
+              - /url: https://www.ifixit.com/Guide/How+to+Jack+Up+a+Car+(or+Truck)/67013
+            - text: when it's supported only by a jack. But manufacturers overplay the risks of repair to scare people away—when the main thing repair hurts is manufacturers' bottom line.
+          - heading "Lots of proposed Right to Repair laws mention getting into software locks. Will my data be secure, even if repair shops can break those locks?" [level=3] [ref=f188e189]
+          - paragraph [ref=f188e190]:
+            - text: The software locks that prevent repair aren't the same locks that protect your data.
+            - link "Cybersecurity experts agree" [ref=f188e191] [cursor=pointer]:
+              - /url: https://www.wired.com/story/right-to-repair-security-experts-california/
+            - text: that making repair possible won't endanger device security. The
+            - link "US Federal Trade Commission found" [ref=f188e192] [cursor=pointer]:
+              - /url: https://www.ftc.gov/system/files/documents/reports/nixing-fix-ftc-report-congress-repair-restrictions/nixing_the_fix_report_final_5521_630pm-508_002.pdf
+            - text: "that independent shops are no more or less likely than manufacturers' shops to mishandle customer data. And in fact, manufacturers have already devised systems to make repairs possible while protecting data: In Korea, Samsung Galaxy phones have a Repair Mode that lets customers choose which data to make available while enabling all the repair-necessary features of the phone. All manufacturers across the world could do the same if they wanted."
+          - heading "Don't manufacturers have a right to protect their intellectual property?" [level=3] [ref=f188e193]
+          - paragraph [ref=f188e194]: Of course they do! And Right to Repair wouldn't challenge that right. The repair manuals that Right to Repair laws are requesting can't be copyrighted. And those laws wouldn't make copyright infringement legal—manufacturers could still pursue anyone making a knockoff product. Plus, repair information shouldn't make copyright infringement any easier. If anything, manufacturers making their own parts available should decrease the incentive for knockoff parts.
+      - generic [ref=f188e196]:
+        - generic [ref=f188e197]:
+          - heading "86% of Voters" [level=3] [ref=f188e198]
+          - paragraph [ref=f188e199]:
+            - text: in Massachusetts
+            - link "voted to protect automobile owners’ Right to Repair" [ref=f188e200] [cursor=pointer]:
+              - /url: http://electionstats.state.ma.us/ballot_questions/view/6811/
+            - text: .
+            - link "Colorado" [ref=f188e201] [cursor=pointer]:
+              - /url: https://leg.colorado.gov/bills/hb22-1031
+            - text: and
+            - link "New York" [ref=f188e202] [cursor=pointer]:
+              - /url: https://www.ifixit.com/News/60893/new-york-passes-worlds-first-electronics-right-to-repair-law
+            - text: also passed popular repair bills.
+        - generic [ref=f188e203]:
+          - heading "114,322 Americans" [level=3] [ref=f188e204]
+          - paragraph [ref=f188e205]:
+            - text: signed a petition to
+            - link "legalize cell phone unlocking" [ref=f188e206] [cursor=pointer]:
+              - /url: https://obamawhitehouse.archives.gov/blog/2014/08/01/answering-publics-call
+            - text: ", an exemption the US Copyright Office has repeatedly extended since 2015."
+        - generic [ref=f188e207]:
+          - heading "1,192 Products" [level=3] [ref=f188e208]
+          - paragraph [ref=f188e209]:
+            - text: had scores listed on the
+            - link "French repairability index" [ref=f188e210] [cursor=pointer]:
+              - /url: https://www.halteobsolescence.org/wp-content/uploads/2022/02/Rapport-indice-de-reparabilite.pdf
+            - text: within its first year, helping people choose more repairable things.
+      - generic [ref=f188e211]:
+        - img "A man and young girl repair a John Deere lawnmower" [ref=f188e212]
+        - generic [ref=f188e213]:
+          - heading "Corporate lobbyists are fighting hard to keep you out of your stuff." [level=2] [ref=f188e214]
+          - paragraph [ref=f188e215]:
+            - text: Companies opposed to the Right to Repair movement are spending
+            - link "millions of dollars each year" [ref=f188e216] [cursor=pointer]:
+              - /url: https://maplightarchive.org/story/in-fight-over-the-right-to-repair-equipment-farmers-are-outspent-28-to-1/
+            - text: "to pay lobbyists to fight it. John Deere and other farm equipment manufacturers have outspent farmers 28-to-1. They're paying other lawyers, too:"
+            - link "There were 17 lawsuits filed" [ref=f188e217] [cursor=pointer]:
+              - /url: https://maplightarchive.org/story/in-fight-over-the-right-to-repair-equipment-farmers-are-outspent-28-to-1/
+            - text: against Deere in the first six months of 2022 alone.
+      - generic [ref=f188e218]:
+        - heading "The Right to Repair goes way beyond electronics." [level=2] [ref=f188e219]
+        - paragraph [ref=f188e220]: People are having trouble getting the repair parts and information they need for tractors, appliances, wheelchairs, ventilators, hearing aids, snowmobiles, boats—the list goes on. If it can be fixed, some company has probably tried to create a repair monopoly on it.
+      - generic [ref=f188e221]:
+        - heading "Repair restrictions are everywhere." [level=2] [ref=f188e222]
+        - paragraph [ref=f188e223]:
+          - text: Beyond
+          - link "restricting access to parts" [ref=f188e224] [cursor=pointer]:
+            - /url: /News/how-nikon-is-killing-camera-repair
+          - text: ", companies block repair in all kinds of other sneaky ways. Sometimes they glue in batteries with industrial-strength adhesives. Sometimes they use"
+          - link "proprietary screwheads" [ref=f188e225] [cursor=pointer]:
+            - /url: https://www.ifixit.com/blog/2011/01/20/apples-diabolical-plan-to-screw-your-iphone/
+          - text: . Sometimes they use software to
+          - link "pair parts" [ref=f188e226] [cursor=pointer]:
+            - /url: https://www.ifixit.com/News/61140/what-is-right-to-repair
+          - text: to your device's serial number or motherboard, either throwing up errors for replacement parts or blocking new parts entirely.
+      - generic [ref=f188e228]:
+        - heading "Without the Right to Repair, manufacturers will keep locking us out." [level=2] [ref=f188e229]
+        - paragraph [ref=f188e230]:
+          - text: "Nikon showed us what to expect from a world without a legally secured Right to Repair: They limited repair to their authorized shops, shut down those shops, and"
+          - link "now only offer repair in two facilities" [ref=f188e231] [cursor=pointer]:
+            - /url: https://www.ifixit.com/News/34241/nikon-is-killing-its-authorized-repair-program
+          - text: . Repairs there are slow and expensive—but the only choice. Other manufacturers will keep copying this strategy.
+      - generic [ref=f188e232]:
+        - heading "Repair is starting to win, but we've got a long way to go." [level=2] [ref=f188e233]
+        - paragraph [ref=f188e234]: Wherever you are in the world, you can join the Right to Repair movement.
+        - generic [ref=f188e235]:
+          - generic [ref=f188e236]:
+            - heading "Repair is winning" [level=3] [ref=f188e237]
+            - generic [ref=f188e238]:
+              - paragraph [ref=f188e239]:
+                - generic [ref=f188e242]:
+                  - text: At least one US state has passed protections for
+                  - link "car repair" [ref=f188e243] [cursor=pointer]:
+                    - /url: https://www.autocare.org/government-relations/current-issues/right-to-repair
+                  - text: ","
+                  - link "powered wheelchair repair" [ref=f188e244] [cursor=pointer]:
+                    - /url: https://www.ifixit.com/News/60846/colorado-fixes-wheelchair-repair-with-new-bill
+                  - text: ", and"
+                  - link "electronics repair" [ref=f188e245] [cursor=pointer]:
+                    - /url: https://www.ifixit.com/News/60893/new-york-passes-worlds-first-electronics-right-to-repair-law
+                  - text: .
+              - paragraph [ref=f188e246]:
+                - generic [ref=f188e249]:
+                  - text: Australia has secured the Right to Repair
+                  - link "motor vehicles" [ref=f188e250] [cursor=pointer]:
+                    - /url: https://www.aftermarketnews.com/australian-automotive-right-to-repair-passes-the-senate/
+                  - text: ", and the Australian Government is investigating"
+                  - link "electronics repair" [ref=f188e251] [cursor=pointer]:
+                    - /url: https://www.pc.gov.au/inquiries/completed/repair#report
+                  - text: .
+              - paragraph [ref=f188e252]:
+                - generic [ref=f188e255]:
+                  - text: France now
+                  - link "requires repairability scores" [ref=f188e256] [cursor=pointer]:
+                    - /url: https://repair.eu/news/the-french-repair-index-challenges-and-opportunities/
+                  - text: to be displayed at point of sale for a wide range of consumer goods.
+              - paragraph [ref=f188e257]:
+                - generic [ref=f188e260]:
+                  - text: The European Commission has
+                  - link "resolved to address" [ref=f188e261] [cursor=pointer]:
+                    - /url: https://www.europarl.europa.eu/meetdocs/2014_2019/plmrep/COMMITTEES/IMCO/DV/2022/03-16/MfR_RighttoRepair_EN.pdf
+                  - text: the Right to Repair in its next set of directives.
+              - paragraph [ref=f188e262]:
+                - generic [ref=f188e265]:
+                  - text: India has
+                  - link "proposed a law" [ref=f188e266] [cursor=pointer]:
+                    - /url: https://timesofindia.indiatimes.com/gadgets-news/explained-what-is-the-governments-proposed-right-to-repair-law-and-why-it-is-good-news-for-you/articleshow/92902844.cms
+                  - text: that would require manufacturers to publish manuals and make parts, tools, and software available to consumers and independent shops.
+          - generic [ref=f188e267]:
+            - heading "We need your help" [level=3] [ref=f188e268]
+            - generic [ref=f188e269]:
+              - paragraph [ref=f188e270]:
+                - generic [ref=f188e273]:
+                  - text: If you're in the US, find your state's page on
+                  - link "Repair.org." [ref=f188e274] [cursor=pointer]:
+                    - /url: https://www.repair.org/stand-up
+              - paragraph [ref=f188e275]:
+                - generic [ref=f188e278]:
+                  - text: If you're in Australia, check out the
+                  - link "Australian Repair Network" [ref=f188e279] [cursor=pointer]:
+                    - /url: https://www.griffith.edu.au/law-futures-centre/our-research/australian-repair-network
+                  - text: .
+              - paragraph [ref=f188e280]:
+                - generic [ref=f188e283]:
+                  - text: If you're in the EU, check out
+                  - link "Repair.eu" [ref=f188e284] [cursor=pointer]:
+                    - /url: https://repair.eu/join-the-campaign-2/
+                  - text: .
+              - paragraph [ref=f188e285]:
+                - generic [ref=f188e288]:
+                  - text: If you're in Canada, check out
+                  - link "Can Repair" [ref=f188e289] [cursor=pointer]:
+                    - /url: https://www.canrepair.ca/
+                  - text: .
+              - paragraph [ref=f188e290]:
+                - generic [ref=f188e293]:
+                  - text: If you're anywhere else and want to start your own repair coalition,
+                  - link "let us know" [ref=f188e294] [cursor=pointer]:
+                    - /url: mailto:press@ifixit.com
+                  - text: . We can help you get started.
+              - generic [ref=f188e295]:
+                - paragraph [ref=f188e296]:
+                  - generic [ref=f188e299]: "Keep up to date by signing up for our newsletter:"
+                - generic [ref=f188e301]:
+                  - textbox "Email Address" [ref=f188e302]
+                  - button "Sign Up" [ref=f188e303] [cursor=pointer]
+    - contentinfo [ref=f188e305]:
+      - generic [ref=f188e306]:
+        - generic [ref=f188e307]:
+          - generic [ref=f188e308]:
+            - list [ref=f188e309]:
+              - listitem [ref=f188e310]: iFixit
+              - listitem [ref=f188e311]:
+                - link "About Us" [ref=f188e312] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=f188e313]:
+                - link "Customer Support" [ref=f188e314] [cursor=pointer]:
+                  - /url: http://www.ifixit.com/Support
+              - listitem [ref=f188e315]:
+                - link "Discuss iFixit" [ref=f188e316] [cursor=pointer]:
+                  - /url: https://meta.ifixit.com
+              - listitem [ref=f188e317]:
+                - link "Careers" [ref=f188e318] [cursor=pointer]:
+                  - /url: /about-us/careers
+              - listitem [ref=f188e319]:
+                - link "Newsletter" [ref=f188e320] [cursor=pointer]:
+                  - /url: /Newsletter
+              - listitem [ref=f188e321]:
+                - link "API" [ref=f188e322] [cursor=pointer]:
+                  - /url: /api-docs
+            - list [ref=f188e323]:
+              - listitem [ref=f188e324]: Resources
+              - listitem [ref=f188e325]:
+                - link "Press" [ref=f188e326] [cursor=pointer]:
+                  - /url: /Info/Media
+              - listitem [ref=f188e327]:
+                - link "News" [ref=f188e328] [cursor=pointer]:
+                  - /url: /News
+              - listitem [ref=f188e329]:
+                - link "Participate" [ref=f188e330] [cursor=pointer]:
+                  - /url: /Participate
+              - listitem [ref=f188e331]:
+                - link "Pro Wholesale" [ref=f188e332] [cursor=pointer]:
+                  - /url: http://www.ifixit.com/pro
+              - listitem [ref=f188e333]:
+                - link "Retail Locator" [ref=f188e334] [cursor=pointer]:
+                  - /url: /Retail
+              - listitem [ref=f188e335]:
+                - link "For Manufacturers" [ref=f188e336] [cursor=pointer]:
+                  - /url: /services
+            - list [ref=f188e337]:
+              - listitem [ref=f188e338]: Legal
+              - listitem [ref=f188e339]:
+                - link "Accessibility" [ref=f188e340] [cursor=pointer]:
+                  - /url: /Info/Accessibility
+              - listitem [ref=f188e341]:
+                - link "Privacy" [ref=f188e342] [cursor=pointer]:
+                  - /url: https://www.ifixit.com/Info/Privacy
+              - listitem [ref=f188e343]:
+                - link "Terms" [ref=f188e344] [cursor=pointer]:
+                  - /url: /Info/Terms_of_Use
+              - listitem [ref=f188e345]: Cookie Consent
+            - list [ref=f188e346]:
+              - listitem [ref=f188e347]:
+                - link "Download the app" [ref=f188e348] [cursor=pointer]:
+                  - /url: http://www.ifixit.com/go/app
+              - listitem [ref=f188e349]:
+                - generic [ref=f188e350]:
+                  - link "Download on the App Store" [ref=f188e351] [cursor=pointer]:
+                    - /url: https://apps.apple.com/us/app/id6755199743
+                    - img "Download on the App Store" [ref=f188e352]
+                  - link "Get it on Google Play" [ref=f188e353] [cursor=pointer]:
+                    - /url: https://play.google.com/store/apps/details?id=com.ifixit.ifixitmobile
+                    - img "Get it on Google Play" [ref=f188e354]
+          - generic [ref=f188e355]:
+            - generic [ref=f188e356]:
+              - paragraph [ref=f188e357]: Stay in the loop
+              - paragraph [ref=f188e358]: Learn something new every month!
+            - generic [ref=f188e359]:
+              - textbox "Stay in the loop" [ref=f188e361]:
+                - /placeholder: Enter your email
+              - button "Subscribe" [ref=f188e362]
+            - link "Let me read it first!" [ref=f188e363] [cursor=pointer]:
+              - /url: /Newsletter
+        - generic [ref=f188e366]:
+          - link "Help translate" [ref=f188e368] [cursor=pointer]:
+            - /url: /Translate
+          - generic [ref=f188e371]:
+            - link "TikTok" [ref=f188e372] [cursor=pointer]:
+              - /url: https://tiktok.com/@ifixit.com
+            - link "Facebook" [ref=f188e375] [cursor=pointer]:
+              - /url: https://www.facebook.com/iFixit/
+            - link "Twitter" [ref=f188e378] [cursor=pointer]:
+              - /url: https://twitter.com/ifixit
+            - link "Instagram" [ref=f188e381] [cursor=pointer]:
+              - /url: https://www.instagram.com/ifixit/
+            - link "YouTube" [ref=f188e384] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/iFixitYourself
+            - link "Mastodon" [ref=f188e387] [cursor=pointer]:
+              - /url: https://mastodon.social/@iFixit
+            - link "Bluesky" [ref=f188e391] [cursor=pointer]:
+              - /url: https://bsky.app/profile/ifixit.com
+            - link "Threads" [ref=f188e394] [cursor=pointer]:
+              - /url: https://www.threads.com/@ifixit
+              - img "Threads" [ref=f188e395]
+            - link "The Repair Association" [ref=f188e397] [cursor=pointer]:
+              - /url: https://repair.org
+        - link "Repair is noble" [ref=f188e401] [cursor=pointer]:
+          - /url: /Manifesto
+        - generic [ref=f188e406]:
+          - generic [ref=f188e407]: © 2026 iFixit
+          - generic [ref=f188e408]:
+            - generic [ref=f188e409]: —
+            - link "Licensed under Creative Commons" [ref=f188e410] [cursor=pointer]:
+              - /url: /Info/Licensing
+  - generic:
+    - region "Notifications-top"
+    - region "Notifications-top-left"
+    - region "Notifications-top-right"
+    - region "Notifications-bottom-left"
+    - region "Notifications-bottom"
+    - region "Notifications-bottom-right"
+  - region "Notifications alt+T"
+  - generic:
+    - region "Notifications-top"
+    - region "Notifications-top-left"
+    - region "Notifications-top-right"
+    - region "Notifications-bottom-left"
+    - region "Notifications-bottom"
+    - region "Notifications-bottom-right"
+  - generic:
+    - region "Notifications-top"
+    - region "Notifications-top-left"
+    - region "Notifications-top-right"
+    - region "Notifications-bottom-left"
+    - region "Notifications-bottom"
+    - region "Notifications-bottom-right"

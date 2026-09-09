@@ -1,0 +1,598 @@
+- generic [ref=f23e1]:
+  - generic [ref=f23e2]:
+    - banner [ref=f23e4]:
+      - link "Etsy" [ref=f23e6] [cursor=pointer]:
+        - /url: /?ref=lgo
+      - navigation [ref=f23e11]:
+        - button [ref=f23e13] [cursor=pointer]
+      - search [ref=f23e22]:
+        - generic [ref=f23e23]: Search for items or shops
+        - generic [ref=f23e25]:
+          - combobox "Search for items or shops" [ref=f23e26]: leather tote bag
+          - button "Clear search" [ref=f23e27] [cursor=pointer]
+          - button "Search" [ref=f23e32] [cursor=pointer]
+      - link "Skip to Content" [ref=f23e36] [cursor=pointer]:
+        - /url: "#content"
+      - navigation "Main" [ref=f23e40]:
+        - list [ref=f23e41]:
+          - listitem [ref=f23e42]:
+            - button "Sign in" [ref=f23e43] [cursor=pointer]
+          - listitem [ref=f23e44]:
+            - button [ref=f23e46] [cursor=pointer]
+          - listitem [ref=f23e59]:
+            - link "Favorites" [ref=f23e61] [cursor=pointer]:
+              - /url: https://www.etsy.com/guest/favorites?ref=hdr-fav
+          - listitem [ref=f23e65]:
+            - link "Cart" [ref=f23e67] [cursor=pointer]:
+              - /url: https://www.etsy.com/cart?ref=hdr-cart
+    - navigation [ref=f23e71]:
+      - list [ref=f23e75]:
+        - listitem [ref=f23e76]:
+          - link "Gifts" [ref=f23e77] [cursor=pointer]:
+            - /url: /featured/hub/gifts?ref=gift_global_nav
+        - listitem [ref=f23e83]:
+          - link "Shop Local" [ref=f23e84] [cursor=pointer]:
+            - /url: /search/shops?ref=global_nav
+        - listitem [ref=f23e91]:
+          - link "Sellers to Watch" [ref=f23e92] [cursor=pointer]:
+            - /url: https://www.etsy.com/featured/hub/ones-to-watch?ref=Onestowatch7626_cat_nav
+        - listitem [ref=f23e93]:
+          - link "Home Favorites" [ref=f23e94] [cursor=pointer]:
+            - /url: /featured/hub/home-favorites?ref=contentful_promo_cat_nav-5
+        - listitem [ref=f23e95]:
+          - link "Fashion Finds" [ref=f23e96] [cursor=pointer]:
+            - /url: /featured/hub/fashion-favorites?ref=contentful_promo_cat_nav-6
+        - listitem [ref=f23e97]:
+          - link "Vintage" [ref=f23e98] [cursor=pointer]:
+            - /url: /r/curated/etsys-best-vintage-finds?sections=1461029776888&narrow=best-vintage-finds&ref=contentful_promo_cat_nav-7
+        - listitem [ref=f23e99]:
+          - link "Wedding Trends" [ref=f23e100] [cursor=pointer]:
+            - /url: /r/curated/wedding-trends?sections=1474316920789&narrow=wedding-trends&ref=contentful_promo_cat_nav-9
+        - listitem [ref=f23e101]:
+          - link "Gift Cards" [ref=f23e102] [cursor=pointer]:
+            - /url: /giftcards?ref=contentful_promo_cat_nav-10
+  - main [ref=f23e103]:
+    - generic [ref=f23e104]:
+      - generic [ref=f23e106]:
+        - generic [ref=f23e108]:
+          - heading "Leather Tote Bag" [level=1] [ref=f23e109]
+          - generic [ref=f23e110]:
+            - generic [ref=f23e111]: 1,000+ relevant results,
+            - generic [ref=f23e112]:
+              - text: with ads
+              - button "Learn more" [disabled] [ref=f23e114]
+        - generic [ref=f23e121]:
+          - generic [ref=f23e124]:
+            - link "Enable Personalizable filter" [ref=f23e125] [cursor=pointer]:
+              - /url: https://www.etsy.com/market/leather_tote_bag?is_personalizable=1&explicit=1
+              - text: Personalizable
+            - link "Enable Exclude digital items filter" [ref=f23e126] [cursor=pointer]:
+              - /url: https://www.etsy.com/market/leather_tote_bag?instant_download=0&explicit=1
+              - text: Exclude digital items
+            - link "Enable Under €75 filter" [ref=f23e127] [cursor=pointer]:
+              - /url: https://www.etsy.com/market/leather_tote_bag?max=75&explicit=1
+              - text: Under €75
+            - link "Enable Star Seller filter" [ref=f23e128] [cursor=pointer]:
+              - /url: https://www.etsy.com/market/leather_tote_bag?is_star_seller=1&explicit=1
+              - text: Star Seller
+            - link "Enable Free shipping filter" [ref=f23e129] [cursor=pointer]:
+              - /url: https://www.etsy.com/market/leather_tote_bag?free_shipping=1&explicit=1
+              - text: Free shipping
+            - link "Enable Ships from Spain filter" [ref=f23e130] [cursor=pointer]:
+              - /url: https://www.etsy.com/market/leather_tote_bag?locationQuery=2510769&explicit=1
+              - text: Ships from Spain
+          - button [ref=f23e135] [cursor=pointer]:
+            - generic [ref=f23e136]:
+              - text: "Sort by: Relevancy"
+              - 'img "Sort by: Relevancy" [ref=f23e138]'
+        - list [ref=f23e140]:
+          - listitem [ref=f23e141]:
+            - 'link "May include: A dark burgundy tote bag featuring an intricate woven leather pattern across the entire exterior. The bag includes two matching braided leather shoulder straps and a wide, rectangular base, providing a structured yet flexible shape. IN STOCK!Mila Retro hand-woven first-layer cowhide shoulder bag, Soft Leather bag ,Gift for Wife,Gifts for Mom，Mother''s Day Ad from Etsy seller 5 out of 5 stars (262) Sale Price €166.65 Original Price €256.39 (35% off) FREE shipping" [ref=f23e144] [cursor=pointer]':
+              - /url: https://www.etsy.com/listing/4351353467/in-stockmila-retro-hand-woven-first?click_key=EunKTV3Lo-RL79Kg9GOFJ4-5PA37%3ALT60b4f1bf9401e5881a799db2b8992fa036c9a23d&click_sum=aa8f2607&ls=a&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+tote+bag&ref=search_grid-1058880-1-1&sr_prefetch=1&pf_from=market&pro=1&frs=1&sts=1
+              - 'img "May include: A dark burgundy tote bag featuring an intricate woven leather pattern across the entire exterior. The bag includes two matching braided leather shoulder straps and a wide, rectangular base, providing a structured yet flexible shape." [ref=f23e148]'
+              - generic [ref=f23e149]:
+                - heading "IN STOCK!Mila Retro hand-woven first-layer cowhide shoulder bag, Soft Leather bag ,Gift for Wife,Gifts for Mom，Mother's Day" [level=2] [ref=f23e150]
+                - paragraph [ref=f23e151]:
+                  - text: Ad by Etsy seller
+                  - generic [ref=f23e152]: Ad from Etsy seller
+                - generic [ref=f23e153]:
+                  - img "5 out of 5 stars" [ref=f23e155]
+                  - generic [ref=f23e156]: (262)
+                - generic [ref=f23e157]:
+                  - paragraph [ref=f23e158]:
+                    - generic [ref=f23e159]: Sale Price €166.65
+                    - generic [aria-hidden] [ref=f23e160]: €166.65
+                  - paragraph [ref=f23e161]:
+                    - generic [aria-hidden] [ref=f23e162]: €256.39
+                    - generic [ref=f23e163]: Original Price €256.39
+                    - generic [ref=f23e164]: (35% off)
+                  - paragraph
+                - paragraph [ref=f23e166]:
+                  - generic [ref=f23e167]: FREE shipping
+          - listitem [ref=f23e168]:
+            - link "Classic Leather Tote, Everyday use tote bag, Laptop Work Student Bag, Personalized Leather Shoulder Bag, Mother’s Day Gift Classic Leather Tote, Everyday use tote bag, Laptop Work Student Bag, Personalized Leather Shoulder Bag, Mother’s Day Gift Ad from Etsy seller 5 out of 5 stars (15.2k) Sale Price €53.89 Original Price €163.28 (67% off)" [ref=f23e171] [cursor=pointer]:
+              - /url: https://www.etsy.com/listing/903795865/classic-leather-tote-everyday-use-tote?click_key=EunKTV3Lo-RL79Kg9GOFJ4-5PA37%3ALT8fc92ac446ac0fd1250c1be5e13f76282628fbb4&click_sum=f8a7746b&ls=a&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+tote+bag&ref=search_grid-1058880-1-2&sr_prefetch=1&pf_from=market&pro=1&sts=1
+              - img "Classic Leather Tote, Everyday use tote bag, Laptop Work Student Bag, Personalized Leather Shoulder Bag, Mother’s Day Gift" [ref=f23e175]
+              - generic [ref=f23e176]:
+                - heading "Classic Leather Tote, Everyday use tote bag, Laptop Work Student Bag, Personalized Leather Shoulder Bag, Mother’s Day Gift" [level=2] [ref=f23e177]
+                - paragraph [ref=f23e178]:
+                  - text: Ad by Etsy seller
+                  - generic [ref=f23e179]: Ad from Etsy seller
+                - generic [ref=f23e180]:
+                  - img "5 out of 5 stars" [ref=f23e182]
+                  - generic [ref=f23e183]: (15.2k)
+                - generic [ref=f23e184]:
+                  - paragraph [ref=f23e185]:
+                    - generic [ref=f23e186]: Sale Price €53.89
+                    - generic [aria-hidden] [ref=f23e187]: €53.89
+                  - paragraph [ref=f23e188]:
+                    - generic [aria-hidden] [ref=f23e189]: €163.28
+                    - generic [ref=f23e190]: Original Price €163.28
+                    - generic [ref=f23e191]: (67% off)
+                  - paragraph
+          - listitem [ref=f23e192]:
+            - 'link "May include: A collection of leather tote bags in various colors, including tan, red, orange, white, brown, gray, and black. Each bag has a long strap and a knotted detail at the top. The bags are held up against a white background. Flora Leather Tote Bag, Full Grain Suede Tote, Bride Gift, Bridesmaid Bag, Laptop Commuter Tote, Silky and Smooth Calf Ad from Etsy seller 5 out of 5 stars (19.8k) €180.81 FREE shipping Ships from ES" [ref=f23e195] [cursor=pointer]':
+              - /url: https://www.etsy.com/listing/4407458921/flora-leather-tote-bag-full-grain-suede?click_key=EunKTV3Lo-RL79Kg9GOFJ4-5PA37%3ALTbda91a5ff2f9b95699032352a06b65ec13cee284&click_sum=ecf76143&ls=a&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+tote+bag&ref=search_grid-1058880-1-3&sr_prefetch=1&pf_from=market&frs=1&sts=1&loc=1&local_signal_search=1
+              - 'img "May include: A collection of leather tote bags in various colors, including tan, red, orange, white, brown, gray, and black. Each bag has a long strap and a knotted detail at the top. The bags are held up against a white background." [ref=f23e199]'
+              - generic [ref=f23e200]:
+                - heading "Flora Leather Tote Bag, Full Grain Suede Tote, Bride Gift, Bridesmaid Bag, Laptop Commuter Tote, Silky and Smooth Calf" [level=2] [ref=f23e201]
+                - paragraph [ref=f23e202]:
+                  - text: Ad by Etsy seller
+                  - generic [ref=f23e203]: Ad from Etsy seller
+                - generic [ref=f23e204]:
+                  - img "5 out of 5 stars" [ref=f23e206]
+                  - generic [ref=f23e207]: (19.8k)
+                - paragraph [ref=f23e209]: €180.81
+                - paragraph [ref=f23e211]:
+                  - generic [ref=f23e212]: FREE shipping
+                - paragraph [ref=f23e217]: Ships from ES
+          - listitem [ref=f23e218]:
+            - 'link "May include: A cognac-colored leather tote bag featuring a pebbled texture, a vertical center seam, and two braided leather handles. The bag has decorative whipstitch detailing along the side panels and a spacious, open-top main compartment. Handmade Moroccan Leather Tote Bag, Cognac Brown Braided Handle Shopper, Soft Artisan Carryall Handbag Ad from Etsy seller Sale Price €202.55 Original Price €405.09 (50% off) FREE shipping" [ref=f23e221] [cursor=pointer]':
+              - /url: https://www.etsy.com/listing/4563262952/handmade-moroccan-leather-tote-bag?click_key=EunKTV3Lo-RL79Kg9GOFJ4-5PA37%3ALT25ebc152b42c297bc33480a1be7cb0522fe0c98f&click_sum=3f730423&ls=a&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+tote+bag&ref=search_grid-1058880-1-4&sr_prefetch=1&pf_from=market&pro=1&frs=1
+              - 'img "May include: A cognac-colored leather tote bag featuring a pebbled texture, a vertical center seam, and two braided leather handles. The bag has decorative whipstitch detailing along the side panels and a spacious, open-top main compartment." [ref=f23e225]'
+              - generic [ref=f23e226]:
+                - heading "Handmade Moroccan Leather Tote Bag, Cognac Brown Braided Handle Shopper, Soft Artisan Carryall Handbag" [level=2] [ref=f23e227]
+                - paragraph [ref=f23e228]:
+                  - text: Ad by Etsy seller
+                  - generic [ref=f23e229]: Ad from Etsy seller
+                - generic [ref=f23e230]:
+                  - paragraph [ref=f23e231]:
+                    - generic [ref=f23e232]: Sale Price €202.55
+                    - generic [aria-hidden] [ref=f23e233]: €202.55
+                  - paragraph [ref=f23e234]:
+                    - generic [aria-hidden] [ref=f23e235]: €405.09
+                    - generic [ref=f23e236]: Original Price €405.09
+                    - generic [ref=f23e237]: (50% off)
+                  - paragraph
+                - paragraph [ref=f23e239]:
+                  - generic [ref=f23e240]: FREE shipping
+          - listitem [ref=f23e241]:
+            - 'link "May include: A brown leather tote bag with a rectangular shape and two long handles. The bag has a glossy finish and a structured design, suitable for carrying various items. The bag is held by a person. 48Hours DELIEVRY,Handmade Italian Leather Tote Bag: Elegant Tuscany Handbag 5 out of 5 stars (6.6k) Sale Price €175.54 Original Price €351.08 (50% off) FREE shipping Ships from EU" [ref=f23e244] [cursor=pointer]':
+              - /url: https://www.etsy.com/listing/564309667/48hours-delievryhandmade-italian-leather?click_key=11d79a3e-4714-47ec-99db-e57db08121d1%3ALT7a3a99b1a1f42c94868555a68509a7a39eb977de&click_sum=1063df99&ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+tote+bag&ref=search_grid-1058881-1-1&sr_prefetch=1&pf_from=market&pro=1&frs=1&loc=1&local_signal_search=1&content_source=11d79a3e-4714-47ec-99db-e57db08121d1%253ALT7a3a99b1a1f42c94868555a68509a7a39eb977de
+              - 'img "May include: A brown leather tote bag with a rectangular shape and two long handles. The bag has a glossy finish and a structured design, suitable for carrying various items. The bag is held by a person." [ref=f23e248]'
+              - generic [ref=f23e249]:
+                - 'heading "48Hours DELIEVRY,Handmade Italian Leather Tote Bag: Elegant Tuscany Handbag" [level=2] [ref=f23e250]'
+                - generic [ref=f23e251]:
+                  - img "5 out of 5 stars" [ref=f23e253]
+                  - generic [ref=f23e254]: (6.6k)
+                - generic [ref=f23e255]:
+                  - paragraph [ref=f23e256]:
+                    - generic [ref=f23e257]: Sale Price €175.54
+                    - generic [aria-hidden] [ref=f23e258]: €175.54
+                  - paragraph [ref=f23e259]:
+                    - generic [aria-hidden] [ref=f23e260]: €351.08
+                    - generic [ref=f23e261]: Original Price €351.08
+                    - generic [ref=f23e262]: (50% off)
+                  - paragraph
+                - paragraph [ref=f23e264]:
+                  - generic [ref=f23e265]: FREE shipping
+                - paragraph [ref=f23e270]: Ships from EU
+          - listitem [ref=f23e271]:
+            - 'link "May include: A black leather shoulder bag with a textured surface, featuring a large front flap, a gold-toned rectangular turn-lock closure, and two thin shoulder straps. The bag has a structured rectangular shape with rounded bottom corners. Soft Leather Shoulder Bags, Genuine Cow Leather Tote Bag, Slouchy Style Leather Handbags Sale Price €86.27 Original Price €143.78 (40% off) FREE shipping Ships from EU" [ref=f23e274] [cursor=pointer]':
+              - /url: https://www.etsy.com/listing/4568319200/soft-leather-shoulder-bags-genuine-cow?click_key=11d79a3e-4714-47ec-99db-e57db08121d1%3ALTec96bae809e1cbe07ac037d61d1492f0164e74f7&click_sum=eae037e2&ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+tote+bag&ref=search_grid-1058881-1-2&sr_prefetch=1&pf_from=market&pro=1&frs=1&loc=1&local_signal_search=1&content_source=11d79a3e-4714-47ec-99db-e57db08121d1%253ALTec96bae809e1cbe07ac037d61d1492f0164e74f7
+              - 'img "May include: A black leather shoulder bag with a textured surface, featuring a large front flap, a gold-toned rectangular turn-lock closure, and two thin shoulder straps. The bag has a structured rectangular shape with rounded bottom corners." [ref=f23e278]'
+              - generic [ref=f23e279]:
+                - heading "Soft Leather Shoulder Bags, Genuine Cow Leather Tote Bag, Slouchy Style Leather Handbags" [level=2] [ref=f23e280]
+                - generic [ref=f23e281]:
+                  - paragraph [ref=f23e282]:
+                    - generic [ref=f23e283]: Sale Price €86.27
+                    - generic [aria-hidden] [ref=f23e284]: €86.27
+                  - paragraph [ref=f23e285]:
+                    - generic [aria-hidden] [ref=f23e286]: €143.78
+                    - generic [ref=f23e287]: Original Price €143.78
+                    - generic [ref=f23e288]: (40% off)
+                  - paragraph
+                - paragraph [ref=f23e290]:
+                  - generic [ref=f23e291]: FREE shipping
+                - paragraph [ref=f23e296]: Ships from EU
+          - listitem [ref=f23e297]:
+            - 'link "May include: Three leather tote bags in varying sizes and colors: light brown, dark brown, and cognac. The mini bag is 10 inches wide at the bottom (26 cm), the large is 13 inches (33 cm), and the oversized is 14 inches (36 cm). Leather tote bag with large outside pocket. 4 colours and 3 sizes available for the Cap Sa Sal Model 5 out of 5 stars (2.2k) €159.00 FREE shipping Ships from ES" [ref=f23e300] [cursor=pointer]':
+              - /url: https://www.etsy.com/listing/1121464097/leather-tote-bag-with-large-outside?click_key=11d79a3e-4714-47ec-99db-e57db08121d1%3ALT3259a03fbb9576c4ac041105af2931e3a623d2fb&click_sum=edbec6e4&ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+tote+bag&ref=search_grid-1058881-1-3&sr_prefetch=1&pf_from=market&frs=1&loc=1&local_signal_search=1&content_source=11d79a3e-4714-47ec-99db-e57db08121d1%253ALT3259a03fbb9576c4ac041105af2931e3a623d2fb
+              - 'img "May include: Three leather tote bags in varying sizes and colors: light brown, dark brown, and cognac. The mini bag is 10 inches wide at the bottom (26 cm), the large is 13 inches (33 cm), and the oversized is 14 inches (36 cm)." [ref=f23e304]'
+              - generic [ref=f23e305]:
+                - heading "Leather tote bag with large outside pocket. 4 colours and 3 sizes available for the Cap Sa Sal Model" [level=2] [ref=f23e306]
+                - generic [ref=f23e307]:
+                  - img "5 out of 5 stars" [ref=f23e309]
+                  - generic [ref=f23e310]: (2.2k)
+                - paragraph [ref=f23e312]: €159.00
+                - paragraph [ref=f23e314]:
+                  - generic [ref=f23e315]: FREE shipping
+                - paragraph [ref=f23e320]: Ships from ES
+          - listitem [ref=f23e321]:
+            - 'link "May include: A black leather handbag with a pebbled texture, featuring a rectangular flap closure secured by a silver-toned metal turn-lock mechanism. The bag includes two thin shoulder straps attached with silver-toned hardware rings. Slouchy Leather Shoulder Bags, Soft Leather Handbags, Genuine Cow Leather Tote Bag, Sale Price €86.27 Original Price €143.78 (40% off) FREE shipping Ships from EU" [ref=f23e324] [cursor=pointer]':
+              - /url: https://www.etsy.com/listing/4567501307/slouchy-leather-shoulder-bags-soft?click_key=11d79a3e-4714-47ec-99db-e57db08121d1%3ALT1ab94f6be070947aedbcba1f2d2358dd9eec41c3&click_sum=ccfb3dff&ls=s&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=leather+tote+bag&ref=search_grid-1058881-1-4&sr_prefetch=1&pf_from=market&pro=1&frs=1&loc=1&local_signal_search=1&content_source=11d79a3e-4714-47ec-99db-e57db08121d1%253ALT1ab94f6be070947aedbcba1f2d2358dd9eec41c3
+              - 'img "May include: A black leather handbag with a pebbled texture, featuring a rectangular flap closure secured by a silver-toned metal turn-lock mechanism. The bag includes two thin shoulder straps attached with silver-toned hardware rings." [ref=f23e328]'
+              - generic [ref=f23e329]:
+                - heading "Slouchy Leather Shoulder Bags, Soft Leather Handbags, Genuine Cow Leather Tote Bag," [level=2] [ref=f23e330]
+                - generic [ref=f23e331]:
+                  - paragraph [ref=f23e332]:
+                    - generic [ref=f23e333]: Sale Price €86.27
+                    - generic [aria-hidden] [ref=f23e334]: €86.27
+                  - paragraph [ref=f23e335]:
+                    - generic [aria-hidden] [ref=f23e336]: €143.78
+                    - generic [ref=f23e337]: Original Price €143.78
+                    - generic [ref=f23e338]: (40% off)
+                  - paragraph
+                - paragraph [ref=f23e340]:
+                  - generic [ref=f23e341]: FREE shipping
+                - paragraph [ref=f23e346]: Ships from EU
+          - listitem [ref=f23e347]:
+            - paragraph [ref=f23e349]: Loading...
+          - listitem [ref=f23e355]:
+            - paragraph [ref=f23e357]: Loading...
+          - listitem [ref=f23e363]:
+            - paragraph [ref=f23e365]: Loading...
+          - listitem [ref=f23e371]:
+            - paragraph [ref=f23e373]: Loading...
+          - listitem [ref=f23e379]:
+            - paragraph [ref=f23e381]: Loading...
+          - listitem [ref=f23e387]:
+            - paragraph [ref=f23e389]: Loading...
+          - listitem [ref=f23e395]:
+            - paragraph [ref=f23e397]: Loading...
+          - listitem [ref=f23e403]:
+            - paragraph [ref=f23e405]: Loading...
+          - listitem [ref=f23e411]:
+            - paragraph [ref=f23e413]: Loading...
+          - listitem [ref=f23e419]:
+            - paragraph [ref=f23e421]: Loading...
+          - listitem [ref=f23e427]:
+            - paragraph [ref=f23e429]: Loading...
+          - listitem [ref=f23e435]:
+            - paragraph [ref=f23e437]: Loading...
+          - listitem [ref=f23e443]:
+            - paragraph [ref=f23e445]: Loading...
+          - listitem [ref=f23e451]:
+            - paragraph [ref=f23e453]: Loading...
+          - listitem [ref=f23e459]:
+            - paragraph [ref=f23e461]: Loading...
+          - listitem [ref=f23e467]:
+            - paragraph [ref=f23e469]: Loading...
+          - listitem [ref=f23e475]:
+            - paragraph [ref=f23e477]: Loading...
+          - listitem [ref=f23e483]:
+            - paragraph [ref=f23e485]: Loading...
+          - listitem [ref=f23e491]:
+            - paragraph [ref=f23e493]: Loading...
+          - listitem [ref=f23e499]:
+            - paragraph [ref=f23e501]: Loading...
+          - listitem [ref=f23e507]:
+            - paragraph [ref=f23e509]: Loading...
+          - listitem [ref=f23e515]:
+            - paragraph [ref=f23e517]: Loading...
+          - listitem [ref=f23e523]:
+            - paragraph [ref=f23e525]: Loading...
+          - listitem [ref=f23e531]:
+            - paragraph [ref=f23e533]: Loading...
+          - listitem [ref=f23e539]:
+            - paragraph [ref=f23e541]: Loading...
+          - listitem [ref=f23e547]:
+            - paragraph [ref=f23e549]: Loading...
+          - listitem [ref=f23e555]:
+            - paragraph [ref=f23e557]: Loading...
+          - listitem [ref=f23e563]:
+            - paragraph [ref=f23e565]: Loading...
+          - listitem [ref=f23e571]:
+            - paragraph [ref=f23e573]: Loading...
+          - listitem [ref=f23e579]:
+            - paragraph [ref=f23e581]: Loading...
+          - listitem [ref=f23e587]:
+            - paragraph [ref=f23e589]: Loading...
+          - listitem [ref=f23e595]:
+            - paragraph [ref=f23e597]: Loading...
+          - listitem [ref=f23e603]:
+            - paragraph [ref=f23e605]: Loading...
+          - listitem [ref=f23e611]:
+            - paragraph [ref=f23e613]: Loading...
+          - listitem [ref=f23e619]:
+            - paragraph [ref=f23e621]: Loading...
+          - listitem [ref=f23e627]:
+            - paragraph [ref=f23e629]: Loading...
+          - listitem [ref=f23e635]:
+            - paragraph [ref=f23e637]: Loading...
+          - listitem [ref=f23e643]:
+            - paragraph [ref=f23e645]: Loading...
+          - listitem [ref=f23e651]:
+            - paragraph [ref=f23e653]: Loading...
+          - listitem [ref=f23e659]:
+            - paragraph [ref=f23e661]: Loading...
+          - listitem [ref=f23e667]:
+            - paragraph [ref=f23e669]: Loading...
+          - listitem [ref=f23e675]:
+            - paragraph [ref=f23e677]: Loading...
+          - listitem [ref=f23e683]:
+            - paragraph [ref=f23e685]: Loading...
+          - listitem [ref=f23e691]:
+            - paragraph [ref=f23e693]: Loading...
+          - listitem [ref=f23e699]:
+            - paragraph [ref=f23e701]: Loading...
+          - listitem [ref=f23e707]:
+            - paragraph [ref=f23e709]: Loading...
+          - listitem [ref=f23e715]:
+            - paragraph [ref=f23e717]: Loading...
+          - listitem [ref=f23e723]:
+            - paragraph [ref=f23e725]: Loading...
+          - listitem [ref=f23e731]:
+            - paragraph [ref=f23e733]: Loading...
+          - listitem [ref=f23e739]:
+            - paragraph [ref=f23e741]: Loading...
+          - listitem [ref=f23e747]:
+            - paragraph [ref=f23e749]: Loading...
+          - listitem [ref=f23e755]:
+            - paragraph [ref=f23e757]: Loading...
+        - navigation "Review Page Results" [ref=f23e766]:
+          - list [ref=f23e767]:
+            - listitem [ref=f23e768]:
+              - generic [ref=f23e769]: Previous page
+            - listitem [ref=f23e774]:
+              - generic [ref=f23e775]:
+                - generic [ref=f23e776]: Pagination
+                - text: "1"
+            - listitem [ref=f23e777]:
+              - link "Pagination" [ref=f23e778] [cursor=pointer]:
+                - /url: /market/leather_tote_bag?ref=pagination&page=2
+                - text: "2"
+            - listitem [ref=f23e780]:
+              - link "Pagination" [ref=f23e781] [cursor=pointer]:
+                - /url: /market/leather_tote_bag?ref=pagination&page=3
+                - text: "3"
+            - listitem [ref=f23e783]:
+              - link "Pagination" [ref=f23e784] [cursor=pointer]:
+                - /url: /market/leather_tote_bag?ref=pagination&page=4
+                - text: "4"
+            - listitem [ref=f23e786]:
+              - link "Pagination" [ref=f23e787] [cursor=pointer]:
+                - /url: /market/leather_tote_bag?ref=pagination&page=5
+                - text: "5"
+            - listitem [ref=f23e789]:
+              - link "Next page" [ref=f23e790] [cursor=pointer]:
+                - /url: /market/leather_tote_bag?ref=pagination&page=2
+      - list [ref=f23e801]:
+        - link [ref=f23e808] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/bags-and-purses/totes?ref=market_guides_carousel_category
+          - paragraph [ref=f23e809]: Totes
+          - paragraph [ref=f23e810]: Shop now
+        - link [ref=f23e817] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/bags-and-purses/handbags/top-handle-bags?ref=market_guides_carousel_category
+          - paragraph [ref=f23e818]: Top Handle Bags
+          - paragraph [ref=f23e819]: Shop now
+        - link [ref=f23e826] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/bags-and-purses/handbags/shoulder-bags?ref=market_guides_carousel_category
+          - paragraph [ref=f23e827]: Shoulder Bags
+          - paragraph [ref=f23e828]: Shop now
+        - link [ref=f23e835] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/craft-supplies-and-tools/sewing-and-fiber/leatherworking/books-and-tutorials?ref=market_guides_carousel_category
+          - paragraph [ref=f23e836]: Leatherworking Books & Tutorials
+          - paragraph [ref=f23e837]: Shop now
+        - link [ref=f23e844] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/bags-and-purses/handbags/hobo-bags?ref=market_guides_carousel_category
+          - paragraph [ref=f23e845]: Hobo Bags
+          - paragraph [ref=f23e846]: Shop now
+        - link [ref=f23e853] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/bags-and-purses/handbags/crossbody-bags?ref=market_guides_carousel_category
+          - paragraph [ref=f23e854]: Crossbody Bags
+          - paragraph [ref=f23e855]: Shop now
+        - link [ref=f23e862] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/bags-and-purses?ref=market_guides_carousel_category
+          - paragraph [ref=f23e863]: Bags & Purses
+          - paragraph [ref=f23e864]: Shop now
+        - link [ref=f23e871] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/weddings/accessories/bags-and-purses?ref=market_guides_carousel_category
+          - paragraph [ref=f23e872]: Wedding Bags & Purses
+          - paragraph [ref=f23e873]: Shop now
+        - link [ref=f23e880] [cursor=pointer]:
+          - /url: https://www.etsy.com/c/bags-and-purses/messenger-bags?ref=market_guides_carousel_category
+          - paragraph [ref=f23e881]: Messenger Bags
+          - paragraph [ref=f23e882]: Shop now
+      - generic [ref=f23e887]:
+        - heading "Related to leather tote bag" [level=4] [ref=f23e888]
+        - generic [ref=f23e889]:
+          - list [ref=f23e891]:
+            - listitem [ref=f23e892]:
+              - link [ref=f23e893] [cursor=pointer]:
+                - /url: /market/large_leather_tote_bag?ref=amp-market
+                - text: large leather tote bag
+            - listitem [ref=f23e897]:
+              - link [ref=f23e898] [cursor=pointer]:
+                - /url: /market/leather_bag?ref=amp-market
+                - text: leather bag
+            - listitem [ref=f23e902]:
+              - link [ref=f23e903] [cursor=pointer]:
+                - /url: /market/leather_tote_bags_for_women?ref=amp-market
+                - text: leather tote bags for women
+            - listitem [ref=f23e907]:
+              - link [ref=f23e908] [cursor=pointer]:
+                - /url: /market/black_leather_tote_bag?ref=amp-market
+                - text: black leather tote bag
+            - listitem [ref=f23e912]:
+              - link [ref=f23e913] [cursor=pointer]:
+                - /url: /market/faux_leather_tote_bag?ref=amp-market
+                - text: faux leather tote bag
+            - listitem [ref=f23e917]:
+              - link [ref=f23e918] [cursor=pointer]:
+                - /url: /market/canvas_tote_bag?ref=amp-market
+                - text: canvas tote bag
+            - listitem [ref=f23e922]:
+              - link [ref=f23e923] [cursor=pointer]:
+                - /url: /market/leather_duffle_bag?ref=amp-market
+                - text: leather duffle bag
+            - listitem [ref=f23e927]:
+              - link [ref=f23e928] [cursor=pointer]:
+                - /url: /market/leather_shoulder_bag?ref=amp-market
+                - text: leather shoulder bag
+            - listitem [ref=f23e932]:
+              - link [ref=f23e933] [cursor=pointer]:
+                - /url: /market/leather_backpack?ref=amp-market
+                - text: leather backpack
+            - listitem [ref=f23e937]:
+              - link [ref=f23e938] [cursor=pointer]:
+                - /url: /market/tote_bag_canvas?ref=amp-market
+                - text: tote bag canvas
+            - listitem [ref=f23e942]:
+              - link [ref=f23e943] [cursor=pointer]:
+                - /url: /market/leather_purse?ref=amp-market
+                - text: leather purse
+            - listitem [ref=f23e947]:
+              - link [ref=f23e948] [cursor=pointer]:
+                - /url: https://www.etsy.com/c/gifts/for-her/gifts-for-girlfriend?ref=amp-market
+                - text: gifts for girlfriend
+            - listitem [ref=f23e952]:
+              - link [ref=f23e953] [cursor=pointer]:
+                - /url: https://www.etsy.com/c/gifts/for-her/gifts-for-mom?ref=amp-market
+                - text: gifts for mom
+            - listitem [ref=f23e957]:
+              - link [ref=f23e958] [cursor=pointer]:
+                - /url: https://www.etsy.com/c/gifts/for-her/gifts-for-sister?ref=amp-market
+                - text: gifts for sister
+            - listitem [ref=f23e962]:
+              - link [ref=f23e963] [cursor=pointer]:
+                - /url: https://www.etsy.com/c/gifts/for-her/gifts-for-wife?ref=amp-market
+                - text: gifts for wife
+            - listitem [ref=f23e967]:
+              - link [ref=f23e968] [cursor=pointer]:
+                - /url: https://www.etsy.com/c/gifts/for-her?ref=amp-market
+                - text: gifts for her
+            - listitem [ref=f23e972]:
+              - link [ref=f23e973] [cursor=pointer]:
+                - /url: https://www.etsy.com/c/gifts?ref=amp-market
+                - text: gifts
+          - button "More" [ref=f23e978] [cursor=pointer]
+    - listitem:
+      - link:
+        - /url: https://www.etsy.com/?ref=sc_gallery
+  - contentinfo [ref=f23e980]:
+    - generic [ref=f23e982]:
+      - heading "We’re on a mission to keep commerce human." [level=2] [ref=f23e985]
+      - navigation "Footer" [ref=f23e987]:
+        - generic [ref=f23e988]:
+          - generic [ref=f23e989]:
+            - heading "Shop" [level=3] [ref=f23e990]
+            - list [ref=f23e992]:
+              - listitem [ref=f23e993]:
+                - link "Gift cards" [ref=f23e995] [cursor=pointer]:
+                  - /url: https://www.etsy.com/giftcards?ref=ftr
+              - listitem [ref=f23e996]:
+                - link "Etsy Registry" [ref=f23e998] [cursor=pointer]:
+                  - /url: https://www.etsy.com/registry?ref=ftr
+              - listitem [ref=f23e999]:
+                - link "Sitemap" [ref=f23e1001] [cursor=pointer]:
+                  - /url: https://www.etsy.com/categories
+              - listitem [ref=f23e1002]:
+                - link "Etsy blog" [ref=f23e1004] [cursor=pointer]:
+                  - /url: /blog/en/?ref=ftr
+              - listitem [ref=f23e1005]:
+                - link "Etsy United Kingdom" [ref=f23e1007] [cursor=pointer]:
+                  - /url: https://www.etsy.com/uk/?locale_override=GBP%7Cen-GB%7CGB
+              - listitem [ref=f23e1008]:
+                - link "Etsy Germany" [ref=f23e1010] [cursor=pointer]:
+                  - /url: https://www.etsy.com/de/?locale_override=EUR%7Cde%7CDE
+              - listitem [ref=f23e1011]:
+                - link "Etsy Canada" [ref=f23e1013] [cursor=pointer]:
+                  - /url: https://www.etsy.com/ca/?locale_override=CAD%7Cen-US%7CCA
+          - generic [ref=f23e1014]:
+            - heading "Sell" [level=3] [ref=f23e1015]
+            - list [ref=f23e1017]:
+              - listitem [ref=f23e1018]:
+                - link "Sell on Etsy" [ref=f23e1020] [cursor=pointer]:
+                  - /url: https://www.etsy.com/sell?ref=ftr
+              - listitem [ref=f23e1021]:
+                - link "Teams" [ref=f23e1023] [cursor=pointer]:
+                  - /url: https://community.etsy.com/pages/etsy-teams/
+              - listitem [ref=f23e1024]:
+                - link "Forums" [ref=f23e1026] [cursor=pointer]:
+                  - /url: https://community.etsy.com/feed/
+              - listitem [ref=f23e1027]:
+                - link "Affiliates & Creators" [ref=f23e1029] [cursor=pointer]:
+                  - /url: https://www.etsy.com/affiliates?ref=ftr
+          - generic [ref=f23e1030]:
+            - heading "About" [level=3] [ref=f23e1031]
+            - list [ref=f23e1033]:
+              - listitem [ref=f23e1034]:
+                - link "Etsy, Inc." [ref=f23e1036] [cursor=pointer]:
+                  - /url: https://www.etsy.com/about?ref=ftr
+              - listitem [ref=f23e1037]:
+                - link "Policies" [ref=f23e1039] [cursor=pointer]:
+                  - /url: https://www.etsy.com/legal?ref=ftr
+              - listitem [ref=f23e1040]:
+                - link "Investors" [ref=f23e1042] [cursor=pointer]:
+                  - /url: https://investors.etsy.com
+              - listitem [ref=f23e1043]:
+                - link "Careers" [ref=f23e1045] [cursor=pointer]:
+                  - /url: https://www.etsy.com/careers?ref=ftr
+              - listitem [ref=f23e1046]:
+                - link "Press" [ref=f23e1048] [cursor=pointer]:
+                  - /url: https://www.etsy.com/press?ref=ftr
+              - listitem [ref=f23e1049]:
+                - link "Impact" [ref=f23e1051] [cursor=pointer]:
+                  - /url: https://www.etsy.com/impact?ref=ftr
+              - listitem [ref=f23e1052]:
+                - link "Legal imprint" [ref=f23e1054] [cursor=pointer]:
+                  - /url: https://www.etsy.com/help/article/25840304230?ref=ftr
+          - generic [ref=f23e1055]:
+            - heading "Help" [level=3] [ref=f23e1056]
+            - list [ref=f23e1058]:
+              - listitem [ref=f23e1059]:
+                - link "Help Center" [ref=f23e1061] [cursor=pointer]:
+                  - /url: https://www.etsy.com/help?ref=ftr
+              - listitem [ref=f23e1062]:
+                - link "Privacy settings" [ref=f23e1064] [cursor=pointer]:
+                  - /url: "#"
+      - list "Download the Etsy App" [ref=f23e1068]:
+        - listitem [ref=f23e1069]:
+          - link "App Store" [ref=f23e1070] [cursor=pointer]:
+            - /url: https://etsy.app.link/d7nDUdp49V
+        - listitem [ref=f23e1071]:
+          - link "Google Play" [ref=f23e1072] [cursor=pointer]:
+            - /url: https://etsy.app.link/d7nDUdp49V
+      - img "Illustration of two people looking at a framed abstract artwork" [ref=f23e1075]
+    - generic [ref=f23e1078]:
+      - generic [ref=f23e1080]:
+        - link "Update your settings Spain English (US) € (EUR)" [ref=f23e1081] [cursor=pointer]:
+          - /url: https://www.etsy.com/your/account/locale_preferences?from_page=https%3A%2F%2Fwww.etsy.com%2Fmarket%2Fleather_tote_bag
+          - generic [ref=f23e1094]: Spain
+        - generic [ref=f23e1096]:
+          - link [ref=f23e1097] [cursor=pointer]:
+            - /url: /social-tracking?network=instagram
+          - link [ref=f23e1102] [cursor=pointer]:
+            - /url: /social-tracking?network=facebook
+          - link [ref=f23e1106] [cursor=pointer]:
+            - /url: /social-tracking?network=pinterest
+          - link [ref=f23e1110] [cursor=pointer]:
+            - /url: /social-tracking?network=youtube
+      - generic [ref=f23e1115]:
+        - generic [ref=f23e1116]: © 2026 Etsy, Inc.
+        - generic [ref=f23e1117]:
+          - generic [ref=f23e1118]:
+            - link "Terms of Use" [ref=f23e1120] [cursor=pointer]:
+              - /url: /legal/terms-of-use?ref=ftr
+            - link "Privacy" [ref=f23e1122] [cursor=pointer]:
+              - /url: /legal/privacy/?ref=ftr
+          - generic [ref=f23e1123]:
+            - link "Interest-based ads" [ref=f23e1125] [cursor=pointer]:
+              - /url: /legal/policy/cookies-tracking-technologies/44797645975?ref=ftr#marketing-services
+            - link "Local Shops" [ref=f23e1127] [cursor=pointer]:
+              - /url: /search/shops
+            - button "Regions" [ref=f23e1129] [cursor=pointer]
+  - generic [ref=f23e1130]:
+    - log
+    - log

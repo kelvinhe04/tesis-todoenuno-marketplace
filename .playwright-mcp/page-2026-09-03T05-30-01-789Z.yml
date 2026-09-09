@@ -1,0 +1,58 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]: TODOENUNO
+    - generic [ref=e4]: Buscar productos y servicios...
+    - navigation [ref=e8]:
+      - generic [ref=e9]: Explorar
+      - generic [ref=e10]: Vender
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - generic [ref=e20]: HERO / BANNER PRINCIPAL
+      - button "Explorar catálogo" [ref=e25]
+    - generic [ref=e26]:
+      - generic [ref=e28]: "4.9"
+      - generic [ref=e36]: $ --.--
+  - heading "Recién publicado" [level=2] [ref=e61]
+  - generic [ref=e63]:
+    - generic [ref=e73]:
+      - generic [ref=e74]: $ --.--
+      - generic [ref=e75]:
+        - text: ★★★★
+        - generic [ref=e76]: ★
+    - generic [ref=e86]:
+      - generic [ref=e87]: $ --.--
+      - generic [ref=e88]:
+        - text: ★★★★
+        - generic [ref=e89]: ★
+    - generic [ref=e99]:
+      - generic [ref=e100]: $ --.--
+      - generic [ref=e101]:
+        - text: ★★★★
+        - generic [ref=e102]: ★
+    - generic [ref=e112]:
+      - generic [ref=e113]: $ --.--
+      - generic [ref=e114]:
+        - text: ★★★★
+        - generic [ref=e115]: ★
+    - generic [ref=e125]:
+      - generic [ref=e126]: $ --.--
+      - generic [ref=e127]:
+        - text: ★★★★
+        - generic [ref=e128]: ★
+    - generic [ref=e138]:
+      - generic [ref=e139]: $ --.--
+      - generic [ref=e140]:
+        - text: ★★★★
+        - generic [ref=e141]: ★
+    - generic [ref=e151]:
+      - generic [ref=e152]: $ --.--
+      - generic [ref=e153]:
+        - text: ★★★★
+        - generic [ref=e154]: ★
+    - generic [ref=e164]:
+      - generic [ref=e165]: $ --.--
+      - generic [ref=e166]:
+        - text: ★★★★
+        - generic [ref=e167]: ★
+  - contentinfo [ref=e168]:
+    - generic [ref=e169]: TODOENUNO

@@ -1,0 +1,479 @@
+- generic [ref=f135e1]:
+  - generic [ref=f135e405]:
+    - navigation [ref=f135e408]:
+      - link [ref=f135e410] [cursor=pointer]:
+        - /url: /
+      - search [ref=f135e415]:
+        - generic [ref=f135e416]:
+          - button "Photos" [ref=f135e418] [cursor=pointer]
+          - searchbox "Search for free photos" [ref=f135e426]: manicure
+          - button [ref=f135e428] [cursor=pointer]
+      - generic [ref=f135e432]:
+        - link "Explore" [ref=f135e434] [cursor=pointer]:
+          - /url: /discover/
+        - link "License" [ref=f135e438] [cursor=pointer]:
+          - /url: /license/
+        - button [ref=f135e441] [cursor=pointer]
+        - button "Join" [ref=f135e444] [cursor=pointer]
+    - main [ref=f135e447]:
+      - generic [ref=f135e448]:
+        - generic [ref=f135e452]:
+          - paragraph [ref=f135e454] [cursor=pointer]: Any
+          - paragraph [ref=f135e459] [cursor=pointer]: Horizontal
+          - paragraph [ref=f135e464] [cursor=pointer]: Vertical
+          - paragraph [ref=f135e469] [cursor=pointer]: Square
+        - generic [ref=f135e473]:
+          - paragraph [ref=f135e475] [cursor=pointer]: Any
+          - paragraph [ref=f135e477] [cursor=pointer]: "0"
+          - paragraph [ref=f135e482] [cursor=pointer]: "1"
+          - paragraph [ref=f135e487] [cursor=pointer]: "2"
+          - paragraph [ref=f135e492] [cursor=pointer]: 3+
+        - generic [ref=f135e496]:
+          - paragraph [ref=f135e498] [cursor=pointer]: Any
+          - paragraph [ref=f135e503] [cursor=pointer]: Baby
+          - paragraph [ref=f135e508] [cursor=pointer]: Child
+          - paragraph [ref=f135e513] [cursor=pointer]: Teenager
+          - paragraph [ref=f135e518] [cursor=pointer]: Adult
+          - paragraph [ref=f135e523] [cursor=pointer]: Senior adult
+        - generic [ref=f135e526]:
+          - generic [ref=f135e527]:
+            - generic [ref=f135e528] [cursor=pointer]
+            - slider [ref=f135e530] [cursor=pointer]
+            - slider [ref=f135e531] [cursor=pointer]
+          - generic [ref=f135e532]:
+            - generic [ref=f135e533]:
+              - paragraph [ref=f135e534]: Minimum
+              - paragraph [ref=f135e535]: 1,080px
+            - generic [ref=f135e536]:
+              - paragraph [ref=f135e537]: Maximum
+              - paragraph [ref=f135e538]: 20,000px+
+        - generic [ref=f135e541]:
+          - generic [ref=f135e542]:
+            - generic [ref=f135e543] [cursor=pointer]
+            - slider [ref=f135e545] [cursor=pointer]
+            - slider [ref=f135e546] [cursor=pointer]
+          - generic [ref=f135e547]:
+            - generic [ref=f135e548]:
+              - paragraph [ref=f135e549]: Minimum
+              - paragraph [ref=f135e550]: 1,080px
+            - generic [ref=f135e551]:
+              - paragraph [ref=f135e552]: Maximum
+              - paragraph [ref=f135e553]: 20,000px+
+        - generic [ref=f135e557]:
+          - button [ref=f135e558] [cursor=pointer]:
+            - textbox [ref=f135e564]:
+              - /placeholder: Enter hex code
+          - button [ref=f135e567] [cursor=pointer]:
+            - textbox [ref=f135e573]: "#000000"
+        - generic [ref=f135e577]:
+          - paragraph [ref=f135e579] [cursor=pointer]: Any
+          - paragraph [ref=f135e584] [cursor=pointer]: Last 24 hours
+          - paragraph [ref=f135e589] [cursor=pointer]: Last week
+          - paragraph [ref=f135e594] [cursor=pointer]: Last month
+          - paragraph [ref=f135e599] [cursor=pointer]: Last year
+        - main "main-content" [ref=f135e600]:
+          - generic [ref=f135e601]:
+            - heading "Free Manicure Photos" [level=1] [ref=f135e604]
+            - generic [ref=f135e607]:
+              - link "Photos 9K" [ref=f135e609] [cursor=pointer]:
+                - /url: /search/manicure/
+                - text: Photos
+                - generic [ref=f135e610]: 9K
+              - link "Videos 4.9K" [ref=f135e611] [cursor=pointer]:
+                - /url: /search/videos/manicure/
+                - text: Videos
+                - generic [ref=f135e612]: 4.9K
+              - link "Users 34" [ref=f135e613] [cursor=pointer]:
+                - /url: /search/users/manicure/
+                - text: Users
+                - generic [ref=f135e614]: "34"
+            - generic [ref=f135e616]:
+              - button "Filters" [ref=f135e618] [cursor=pointer]
+              - separator [ref=f135e625]
+              - generic [ref=f135e629]:
+                - link [ref=f135e631] [cursor=pointer]:
+                  - /url: /search/pedicure/
+                  - img "pedicure" [ref=f135e632]
+                  - generic [ref=f135e633]:
+                    - paragraph [ref=f135e634]: pedicure
+                    - paragraph [ref=f135e635]: 5K
+                - link [ref=f135e636] [cursor=pointer]:
+                  - /url: /search/nail%20art/
+                  - img "nail art" [ref=f135e637]
+                  - generic [ref=f135e638]:
+                    - paragraph [ref=f135e639]: nail art
+                    - paragraph [ref=f135e640]: 523K
+                - link [ref=f135e641] [cursor=pointer]:
+                  - /url: /search/nails/
+                  - img "nails" [ref=f135e642]
+                  - generic [ref=f135e643]:
+                    - paragraph [ref=f135e644]: nails
+                    - paragraph [ref=f135e645]: 17K
+                - link [ref=f135e646] [cursor=pointer]:
+                  - /url: /search/nail%20salon/
+                  - img "nail salon" [ref=f135e647]
+                  - generic [ref=f135e648]:
+                    - paragraph [ref=f135e649]: nail salon
+                    - paragraph [ref=f135e650]: 20K
+                - link [ref=f135e651] [cursor=pointer]:
+                  - /url: /search/nail%20polish/
+                  - img "nail polish" [ref=f135e652]
+                  - generic [ref=f135e653]:
+                    - paragraph [ref=f135e654]: nail polish
+                    - paragraph [ref=f135e655]: 28K
+                - link [ref=f135e656] [cursor=pointer]:
+                  - /url: /search/nail/
+                  - img "nail" [ref=f135e657]
+                  - generic [ref=f135e658]:
+                    - paragraph [ref=f135e659]: nail
+                    - paragraph [ref=f135e660]: 5K
+                - link [ref=f135e661] [cursor=pointer]:
+                  - /url: /search/makeup/
+                  - img "makeup" [ref=f135e662]
+                  - generic [ref=f135e663]:
+                    - paragraph [ref=f135e664]: makeup
+                    - paragraph [ref=f135e665]: 98K
+                - link [ref=f135e666] [cursor=pointer]:
+                  - /url: /search/facial%20treatment/
+                  - img "facial treatment" [ref=f135e667]
+                  - generic [ref=f135e668]:
+                    - paragraph [ref=f135e669]: facial treatment
+                    - paragraph [ref=f135e670]: 79K
+                - link [ref=f135e671] [cursor=pointer]:
+                  - /url: /search/beauty%20treatment/
+                  - img "beauty treatment" [ref=f135e672]
+                  - generic [ref=f135e673]:
+                    - paragraph [ref=f135e674]: beauty treatment
+                    - paragraph [ref=f135e675]: 1M
+                - link [ref=f135e676] [cursor=pointer]:
+                  - /url: /search/facial/
+                  - img "facial" [ref=f135e677]
+                  - generic [ref=f135e678]:
+                    - paragraph [ref=f135e679]: facial
+                    - paragraph [ref=f135e680]: 5K
+                - link [ref=f135e681] [cursor=pointer]:
+                  - /url: /search/beauty%20salon/
+                  - img "beauty salon" [ref=f135e682]
+                  - generic [ref=f135e683]:
+                    - paragraph [ref=f135e684]: beauty salon
+                    - paragraph [ref=f135e685]: 1M
+                - link [ref=f135e686] [cursor=pointer]:
+                  - /url: /search/beauty%20care/
+                  - img "beauty care" [ref=f135e687]
+                  - generic [ref=f135e688]:
+                    - paragraph [ref=f135e689]: beauty care
+                    - paragraph [ref=f135e690]: 1M
+                - link [ref=f135e691] [cursor=pointer]:
+                  - /url: /search/skin%20care/
+                  - img "skin care" [ref=f135e692]
+                  - generic [ref=f135e693]:
+                    - paragraph [ref=f135e694]: skin care
+                    - paragraph [ref=f135e695]: 194K
+                - link [ref=f135e696] [cursor=pointer]:
+                  - /url: /search/eyelash%20extensions/
+                  - img "eyelash extensions" [ref=f135e697]
+                  - generic [ref=f135e698]:
+                    - paragraph [ref=f135e699]: eyelash extensions
+                    - paragraph [ref=f135e700]: 7K
+                - link [ref=f135e701] [cursor=pointer]:
+                  - /url: /search/facials/
+                  - img "facials" [ref=f135e702]
+                  - generic [ref=f135e703]:
+                    - paragraph [ref=f135e704]: facials
+                    - paragraph [ref=f135e705]: 65K
+                - link [ref=f135e706] [cursor=pointer]:
+                  - /url: /search/skin%20treatment/
+                  - img "skin treatment" [ref=f135e707]
+                  - generic [ref=f135e708]:
+                    - paragraph [ref=f135e709]: skin treatment
+                    - paragraph [ref=f135e710]: 77K
+                - img [ref=f135e711] [cursor=pointer]
+            - generic [ref=f135e714]:
+              - generic [ref=f135e716]:
+                - generic [ref=f135e717]:
+                  - article [ref=f135e720]:
+                    - link [ref=f135e721] [cursor=pointer]:
+                      - /url: /photo/woman-making-nails-at-beautician-22668317/
+                      - img "Free Close-up of a manicure in progress, showcasing hand and nail care techniques. Stock Photo" [ref=f135e722]
+                  - article [ref=f135e727]:
+                    - link [ref=f135e728] [cursor=pointer]:
+                      - /url: /photo/photo-of-person-s-hand-3557600/
+                      - img "Free Close-up of a hand with polka dot manicured nails wrapped in a knitted sweater. Stock Photo" [ref=f135e729]
+                  - article [ref=f135e734]:
+                    - link [ref=f135e735] [cursor=pointer]:
+                      - /url: /photo/a-close-up-shot-of-a-woman-wearing-a-gold-ring-10944916/
+                      - img "Free Close-up of woman's hands with vibrant purple nails and a gold ring, set against a dark background. Stock Photo" [ref=f135e736]
+                  - generic [ref=f135e740]:
+                    - generic [ref=f135e741]:
+                      - heading "‌‌S‌‌p‌o‌‌n‌‌s‌‌o‌‌r‌e‌‌‌d‌‌‌ ‌‌‌P‌‌h‌‌o‌‌t‌‌‌o‌‌s‌‌" [level=4] [ref=f135e742]
+                      - link [ref=f135e743] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9tYW5pY3VyZT91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbG9nbyZ1dG1fdGVybT1tYW5pY3VyZSIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiOTgyZDQ2Y2MtNzY2ZS00ZGU5LWIzZjEtZmVlMmFjZGZiNmVkIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJtYW5pY3VyZSJ9fQ/
+                    - generic [ref=f135e747]:
+                      - link [ref=f135e748] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL3dvbWFuLWRvaW5nLW1hbmljdXJlLWdtMTMwODg0MDY5OS0zOTg3MTgzNjU_dXRtX3NvdXJjZT1wZXhlbHMmdXRtX21lZGl1bT1hZmZpbGlhdGUmdXRtX2NhbXBhaWduPXNwb25zb3JlZF9waG90byZ1dG1fY29udGVudD1zcnBfaW5saW5lX21lZGlhJnV0bV90ZXJtPW1hbmljdXJlIiwiZGF0YSI6eyJleHBlcmltZW50cyI6e30sInBhZ2VfbG9jYWxlIjoiZW4tVVMiLCJwYWdlIjoic2VhcmNoX3Jlc3VsdHMiLCJwYWdlX3ZhcmlhbnQiOiJwaG90b3MiLCJsb2NhdGlvbiI6ImdyaWQiLCJhZF9wYXJ0bmVyIjoiZ2V0dHkiLCJhZF9mb3JtYXQiOiJpbmxpbmUiLCJhZF9wbGFjZW1lbnQiOiIxMCIsImFkX2NyZWF0aXZlIjoicGhvdG9fc2VhcmNoXzQiLCJhZF9hY3Rpb24iOiJjbGljayIsImFkX2ltcHJlc3Npb25faWQiOiI5ODJkNDZjYy03NjZlLTRkZTktYjNmMS1mZWUyYWNkZmI2ZWQiLCJtZWRpYV90eXBlIjoicGhvdG8iLCJxdWVyeSI6Im1hbmljdXJlIn19/
+                      - link [ref=f135e749] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL21hbmljdXJlLXByb2Nlc3MtZ204Mzg0ODM3NjAtMTM2NDgxMDMzP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1tYW5pY3VyZSIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiOTgyZDQ2Y2MtNzY2ZS00ZGU5LWIzZjEtZmVlMmFjZGZiNmVkIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJtYW5pY3VyZSJ9fQ/
+                      - link [ref=f135e750] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL2xpZ2h0LXBpbmstbWFuaWN1cmUtb24tc2hvcnQtbmFpbHMtZ20xNDA2NTY1Mjk1LTQ1ODA3MDMyNz91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfbWVkaWEmdXRtX3Rlcm09bWFuaWN1cmUiLCJkYXRhIjp7ImV4cGVyaW1lbnRzIjp7fSwicGFnZV9sb2NhbGUiOiJlbi1VUyIsInBhZ2UiOiJzZWFyY2hfcmVzdWx0cyIsInBhZ2VfdmFyaWFudCI6InBob3RvcyIsImxvY2F0aW9uIjoiZ3JpZCIsImFkX3BhcnRuZXIiOiJnZXR0eSIsImFkX2Zvcm1hdCI6ImlubGluZSIsImFkX3BsYWNlbWVudCI6IjEwIiwiYWRfY3JlYXRpdmUiOiJwaG90b19zZWFyY2hfNCIsImFkX2FjdGlvbiI6ImNsaWNrIiwiYWRfaW1wcmVzc2lvbl9pZCI6Ijk4MmQ0NmNjLTc2NmUtNGRlOS1iM2YxLWZlZTJhY2RmYjZlZCIsIm1lZGlhX3R5cGUiOiJwaG90byIsInF1ZXJ5IjoibWFuaWN1cmUifX0/
+                      - link [ref=f135e751] [cursor=pointer]:
+                        - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3RvL3dvbWFuLXJlY2VpdmluZy1mcmVuY2gtbWFuaWN1cmUtYnktYmVhdXRpY2lhbi1nbTEyNTAwMjI0MjItMzY0NDUwNDUxP3V0bV9zb3VyY2U9cGV4ZWxzJnV0bV9tZWRpdW09YWZmaWxpYXRlJnV0bV9jYW1wYWlnbj1zcG9uc29yZWRfcGhvdG8mdXRtX2NvbnRlbnQ9c3JwX2lubGluZV9tZWRpYSZ1dG1fdGVybT1tYW5pY3VyZSIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiOTgyZDQ2Y2MtNzY2ZS00ZGU5LWIzZjEtZmVlMmFjZGZiNmVkIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJtYW5pY3VyZSJ9fQ/
+                    - link [ref=f135e752] [cursor=pointer]:
+                      - /url: https://www.pexels.com/r/eyJkZXN0IjoiaHR0cHM6Ly93d3cuaXN0b2NrcGhvdG8uY29tL3Bob3Rvcy9tYW5pY3VyZT91dG1fc291cmNlPXBleGVscyZ1dG1fbWVkaXVtPWFmZmlsaWF0ZSZ1dG1fY2FtcGFpZ249c3BvbnNvcmVkX3Bob3RvJnV0bV9jb250ZW50PXNycF9pbmxpbmVfY291cG9uY29kZSZ1dG1fdGVybT1tYW5pY3VyZSIsImRhdGEiOnsiZXhwZXJpbWVudHMiOnt9LCJwYWdlX2xvY2FsZSI6ImVuLVVTIiwicGFnZSI6InNlYXJjaF9yZXN1bHRzIiwicGFnZV92YXJpYW50IjoicGhvdG9zIiwibG9jYXRpb24iOiJncmlkIiwiYWRfcGFydG5lciI6ImdldHR5IiwiYWRfZm9ybWF0IjoiaW5saW5lIiwiYWRfcGxhY2VtZW50IjoiMTAiLCJhZF9jcmVhdGl2ZSI6InBob3RvX3NlYXJjaF80IiwiYWRfYWN0aW9uIjoiY2xpY2siLCJhZF9pbXByZXNzaW9uX2lkIjoiOTgyZDQ2Y2MtNzY2ZS00ZGU5LWIzZjEtZmVlMmFjZGZiNmVkIiwibWVkaWFfdHlwZSI6InBob3RvIiwicXVlcnkiOiJtYW5pY3VyZSJ9fQ/
+                      - img [ref=f135e755]:
+                        - generic [ref=f135e756]: Get 20% off with code PEXELS20 »
+                  - article [ref=f135e759]:
+                    - link [ref=f135e760] [cursor=pointer]:
+                      - /url: /photo/purple-manicure-1839711/
+                      - img "Free A close-up of a woman's hand with purple manicured nails and knitwear, showcasing trendy fashion. Stock Photo" [ref=f135e761]
+                  - article [ref=f135e766]:
+                    - link [ref=f135e767] [cursor=pointer]:
+                      - /url: /photo/elegant-manicured-hand-with-gold-rings-34373400/
+                      - img "Free Close-up of a well-manicured hand adorned with gold rings against a soft white background. Stock Photo" [ref=f135e768]
+                  - article [ref=f135e773]:
+                    - link [ref=f135e774] [cursor=pointer]:
+                      - /url: /photo/person-getting-her-nails-done-5484948/
+                      - img "Free Close-up of hands during a manicure session with detailed nail art. Perfect for beauty and lifestyle concepts. Stock Photo" [ref=f135e775]
+                  - article [ref=f135e780]:
+                    - link [ref=f135e781] [cursor=pointer]:
+                      - /url: /photo/close-up-photo-of-a-hand-2600287/
+                      - img "Free A close-up of a hand showcasing stylish nail art set against a rustic countryside background. Stock Photo" [ref=f135e782]
+                  - article [ref=f135e787]:
+                    - link [ref=f135e788] [cursor=pointer]:
+                      - /url: /photo/person-applying-manicure-4530187/
+                      - img "Free Detailed view of a manicurist painting nails indoors, showcasing precision and care. Stock Photo" [ref=f135e789]
+                - generic [ref=f135e792]:
+                  - article [ref=f135e795]:
+                    - link [ref=f135e796] [cursor=pointer]:
+                      - /url: /photo/elegant-hand-with-french-manicure-and-jewelry-34997574/
+                      - img "Free Close-up of a hand with French manicure and gold rings on blue background. Stock Photo" [ref=f135e797]
+                  - article [ref=f135e802]:
+                    - link [ref=f135e803] [cursor=pointer]:
+                      - /url: /photo/a-manicurist-cleaning-a-woman-s-fingernails-7446914/
+                      - img "Free Close-up of a professional manicure session with tools and black gloves in a modern salon. Stock Photo" [ref=f135e804]
+                  - article [ref=f135e809]:
+                    - link [ref=f135e810] [cursor=pointer]:
+                      - /url: /photo/four-gold-colored-rings-2268404/
+                      - img "Free Close-up of a woman with manicured nails and rings holding a smartphone, showcasing fashion elegance. Stock Photo" [ref=f135e811]
+                  - article [ref=f135e816]:
+                    - link [ref=f135e817] [cursor=pointer]:
+                      - /url: /photo/close-up-of-elegant-manicured-hand-with-jewelry-34997566/
+                      - img "Free Graceful, manicured hand with elegant jewelry, showcasing stylish nails against a dark backdrop. Stock Photo" [ref=f135e818]
+                  - article [ref=f135e823]:
+                    - link [ref=f135e824] [cursor=pointer]:
+                      - /url: /photo/nail-stylist-removing-cuticles-4677846/
+                      - img "Free Close-up of a manicurist applying nail polish during a professional salon treatment. Stock Photo" [ref=f135e825]
+                  - article [ref=f135e830]:
+                    - link [ref=f135e831] [cursor=pointer]:
+                      - /url: /photo/a-person-getting-a-nail-polish-4677845/
+                      - img "Free Close-up of a manicurist applying nail polish during a professional manicure session. Stock Photo" [ref=f135e832]
+                  - article [ref=f135e837]:
+                    - link [ref=f135e838] [cursor=pointer]:
+                      - /url: /photo/unrecognizable-woman-resting-her-head-on-table-top-10182680/
+                      - img "Free Close-up of a woman's manicured hand with jewelry on a white table. Stock Photo" [ref=f135e839]
+                  - article [ref=f135e844]:
+                    - link [ref=f135e845] [cursor=pointer]:
+                      - /url: /photo/a-beautiful-manicured-nails-5871915/
+                      - img "Free Close-up of a tattooed hand with trendy nail art against a blue background. Stock Photo" [ref=f135e846]
+                - generic [ref=f135e849]:
+                  - generic [ref=f135e851]:
+                    - generic [ref=f135e853]:
+                      - link [ref=f135e854] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20manicure%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own manicure content with Canva" [ref=f135e855]
+                      - link [ref=f135e856] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20manicure%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own manicure content with Canva" [ref=f135e857]
+                      - link [ref=f135e858] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20manicure%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own manicure content with Canva" [ref=f135e859]
+                      - link [ref=f135e860] [cursor=pointer]:
+                        - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20manicure%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                        - img "Create your own manicure content with Canva" [ref=f135e861]
+                    - link [ref=f135e862] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20manicure%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                      - paragraph [ref=f135e865]: Bring your ideas to life with Canva AI
+                    - link "Get started for free" [ref=f135e866] [cursor=pointer]:
+                      - /url: https://www.canva.com/features/ai-image-generator/?prompt=High%20quality%20stock%20photo%20of%20manicure%2C%20professional%20lighting%2C%20sharp%20focus%2C%20natural%20colors%2C%20realistic%20detail%2C%20modern%20composition%2C%20commercial%20use%20standard%2C%20editorial%20style%2C%20ultra%20HD%2C%20clean%20background&utm_source=pexels&utm_campaign=aigc_pexelscampaign&utm_medium=partner
+                  - article [ref=f135e871]:
+                    - link [ref=f135e872] [cursor=pointer]:
+                      - /url: /photo/elegant-hand-with-french-manicure-and-jewelry-34997575/
+                      - img "Free Close-up of a hand with French manicure adorned with rings and a gold watch. Stock Photo" [ref=f135e873]
+                  - article [ref=f135e878]:
+                    - link [ref=f135e879] [cursor=pointer]:
+                      - /url: /photo/person-with-red-nail-polish-3997381/
+                      - img "Free Close-up of red manicured nails during a salon session with nail tools. Stock Photo" [ref=f135e880]
+                  - article [ref=f135e885]:
+                    - link [ref=f135e886] [cursor=pointer]:
+                      - /url: /photo/persons-hand-on-yellow-and-black-textile-4965824/
+                      - img "Free Close-up of modern nail art with geometric shapes on a yellow and black paper collage. Stock Photo" [ref=f135e887]
+                  - article [ref=f135e892]:
+                    - link [ref=f135e893] [cursor=pointer]:
+                      - /url: /photo/person-with-red-nail-polish-3997384/
+                      - img "Free Professional hand treatment features a stylish red manicure at a modern nail salon. Stock Photo" [ref=f135e894]
+                  - article [ref=f135e899]:
+                    - link [ref=f135e900] [cursor=pointer]:
+                      - /url: /photo/hands-full-of-candies-8670189/
+                      - img "Free Three hands holding a mix of colorful candies on a white background, showcasing manicured nails. Stock Photo" [ref=f135e901]
+                  - link [ref=f135e905] [cursor=pointer]:
+                    - /url: /collections/nail-inspo-khlmkrb/
+                    - article [ref=f135e906]:
+                      - list [ref=f135e908]:
+                        - listitem [ref=f135e909]
+                        - listitem [ref=f135e911]
+                        - listitem [ref=f135e913]
+                      - generic [ref=f135e915]:
+                        - heading "Nail Inspo" [level=4] [ref=f135e916]
+                        - paragraph [ref=f135e920]: "44"
+                  - article [ref=f135e923]:
+                    - link [ref=f135e924] [cursor=pointer]:
+                      - /url: /photo/person-s-hands-with-gold-glitter-nails-10632142/
+                      - img "Free Elegant gold-glittered nails with star decorations, perfect for festive occasions. Stock Photo" [ref=f135e925]
+                  - article [ref=f135e930]:
+                    - link [ref=f135e931] [cursor=pointer]:
+                      - /url: /photo/person-with-red-manicure-on-white-textile-3997388/
+                      - img "Free A close-up of a hand with one red painted nail, showcasing a minimalistic manicure style. Stock Photo" [ref=f135e932]
+                  - article [ref=f135e937]:
+                    - link [ref=f135e938] [cursor=pointer]:
+                      - /url: /photo/a-person-with-white-and-blue-nail-polish-9697759/
+                      - img "Free Close-up of a stylish hand with dazzling manicured nails on mesh fabric, adorned with sparkles. Stock Photo" [ref=f135e939]
+              - button "Load More" [ref=f135e943] [cursor=pointer]
+            - navigation [ref=f135e946]:
+              - generic [ref=f135e948]:
+                - link "1" [ref=f135e950]:
+                  - /url: /search/manicure/
+                - link "2" [ref=f135e953] [cursor=pointer]:
+                  - /url: /search/manicure/?page=2
+                - link "3" [ref=f135e956] [cursor=pointer]:
+                  - /url: /search/manicure/?page=3
+                - link "4" [ref=f135e959] [cursor=pointer]:
+                  - /url: /search/manicure/?page=4
+                - link "5" [ref=f135e962] [cursor=pointer]:
+                  - /url: /search/manicure/?page=5
+                - link "6" [ref=f135e965] [cursor=pointer]:
+                  - /url: /search/manicure/?page=6
+                - link "Next" [ref=f135e968] [cursor=pointer]:
+                  - /url: /search/manicure/?page=2
+    - contentinfo [ref=f135e972]:
+      - separator [ref=f135e973]
+      - generic [ref=f135e974]:
+        - generic [ref=f135e975]:
+          - heading "Where stories come together." [level=2] [ref=f135e976]
+          - generic [ref=f135e977]:
+            - link "Download on iOS" [ref=f135e978] [cursor=pointer]:
+              - /url: https://itunes.apple.com/us/app/pexels/id1434330413/
+            - link "Download on Android" [ref=f135e981] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pexels.app
+          - list [ref=f135e984]:
+            - listitem [ref=f135e985]:
+              - link "Instagram" [ref=f135e986] [cursor=pointer]:
+                - /url: https://www.instagram.com/pexels/
+            - listitem [ref=f135e989]:
+              - link "Threads" [ref=f135e990] [cursor=pointer]:
+                - /url: https://www.threads.net/@pexels/
+            - listitem [ref=f135e993]:
+              - link "YouTube" [ref=f135e994] [cursor=pointer]:
+                - /url: https://www.youtube.com/pexelsphotos/
+            - listitem [ref=f135e997]:
+              - link "TikTok" [ref=f135e998] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@pexels/
+            - listitem [ref=f135e1001]:
+              - link "LinkedIn" [ref=f135e1002] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/pexels/
+            - listitem [ref=f135e1005]:
+              - link "X" [ref=f135e1006] [cursor=pointer]:
+                - /url: https://x.com/pexels/
+        - generic [ref=f135e1009]:
+          - list [ref=f135e1010]:
+            - heading "Pexels" [level=3] [ref=f135e1011]
+            - listitem [ref=f135e1012]:
+              - link "Free Stock Photos" [ref=f135e1013] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=f135e1014]:
+              - link "Free Videos" [ref=f135e1015] [cursor=pointer]:
+                - /url: /videos/
+            - listitem [ref=f135e1016]:
+              - link "Popular searches" [ref=f135e1017] [cursor=pointer]:
+                - /url: /popular-searches/
+            - listitem [ref=f135e1018]:
+              - link "Collections" [ref=f135e1019] [cursor=pointer]:
+                - /url: /discover/
+            - listitem [ref=f135e1020]:
+              - link "Challenges" [ref=f135e1021] [cursor=pointer]:
+                - /url: /challenges/
+            - listitem [ref=f135e1022]:
+              - link "Leaderboard" [ref=f135e1023] [cursor=pointer]:
+                - /url: /leaderboard/
+            - listitem [ref=f135e1024]:
+              - link "Other plugins & apps" [ref=f135e1025] [cursor=pointer]:
+                - /url: /pro/
+          - list [ref=f135e1026]:
+            - heading "Company" [level=3] [ref=f135e1027]
+            - listitem [ref=f135e1028]:
+              - link "About" [ref=f135e1029] [cursor=pointer]:
+                - /url: /about/
+            - listitem [ref=f135e1030]:
+              - link "Blog" [ref=f135e1031] [cursor=pointer]:
+                - /url: /blog/
+            - listitem [ref=f135e1032]:
+              - link "Help Center" [ref=f135e1033] [cursor=pointer]:
+                - /url: https://help.pexels.com/hc/en-us
+            - listitem [ref=f135e1034]:
+              - link "Report content" [ref=f135e1035] [cursor=pointer]:
+                - /url: /report/
+            - listitem [ref=f135e1036]:
+              - link "Become a Hero" [ref=f135e1037] [cursor=pointer]:
+                - /url: /hero/
+            - listitem [ref=f135e1038]:
+              - link "Partner with Pexels" [ref=f135e1039] [cursor=pointer]:
+                - /url: /become-a-partner/
+            - listitem [ref=f135e1040]:
+              - link "Image & Video API" [ref=f135e1041] [cursor=pointer]:
+                - /url: /api/
+            - listitem [ref=f135e1042]: Sign Up
+        - list [ref=f135e1043]:
+          - listitem [ref=f135e1044]:
+            - heading "Free Stock Photos" [level=3] [ref=f135e1045]
+          - listitem [ref=f135e1046]:
+            - generic [ref=f135e1048]:
+              - link "Black and white photography" [ref=f135e1050] [cursor=pointer]:
+                - /url: /search/black%20and%20white/
+              - link "Happy birthday images" [ref=f135e1051] [cursor=pointer]:
+                - /url: /search/happy%20birthday/
+              - link "Free business videos" [ref=f135e1052] [cursor=pointer]:
+                - /url: /search/videos/business/
+              - link "Happy new year images" [ref=f135e1053] [cursor=pointer]:
+                - /url: /search/happy%20new%20year/
+              - link "Cool wallpapers" [ref=f135e1054] [cursor=pointer]:
+                - /url: /search/cool%20wallpaper/
+              - link "Best HD wallpapers" [ref=f135e1055] [cursor=pointer]:
+                - /url: /search/hd%20wallpaper/
+              - link "Galaxy wallpaper" [ref=f135e1056] [cursor=pointer]:
+                - /url: /search/galaxy%20wallpaper/
+              - link "Lock screen wallpaper" [ref=f135e1057] [cursor=pointer]:
+                - /url: /search/lock%20screen%20wallpaper/
+              - link "iPhone wallpaper" [ref=f135e1058] [cursor=pointer]:
+                - /url: /search/iphone%20wallpaper/
+              - link "4K wallpaper" [ref=f135e1059] [cursor=pointer]:
+                - /url: /search/4k%20wallpaper/
+              - link "Samsung wallpaper" [ref=f135e1060] [cursor=pointer]:
+                - /url: /search/samsung%20wallpaper/
+              - link "Love wallpaper" [ref=f135e1061] [cursor=pointer]:
+                - /url: /search/love%20wallpaper/
+              - link "Mobile wallpaper" [ref=f135e1062] [cursor=pointer]:
+                - /url: /search/mobile%20wallpaper/
+      - generic [ref=f135e1064]:
+        - generic [ref=f135e1065]: © 2026 Pexels
+        - generic [ref=f135e1067]:
+          - link "Terms of Use" [ref=f135e1069] [cursor=pointer]:
+            - /url: /terms-of-service/
+          - link "Privacy Policy" [ref=f135e1070] [cursor=pointer]:
+            - /url: /privacy-policy/
+          - link "License" [ref=f135e1071] [cursor=pointer]:
+            - /url: /license/
+          - link "Imprint" [ref=f135e1072] [cursor=pointer]:
+            - /url: /imprint/
+          - link "Cookies Policy" [ref=f135e1073] [cursor=pointer]:
+            - /url: /cookies/
+        - button "English" [ref=f135e1076] [cursor=pointer]
+      - separator [ref=f135e1081]
+  - alert [ref=f135e1082]

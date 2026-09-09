@@ -1,0 +1,352 @@
+- generic [ref=f377e1]:
+  - generic: Get 10% OFF
+  - link "Skip to content" [ref=f377e7] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f377e8]:
+    - generic [ref=f377e11]:
+      - navigation [ref=f377e14]:
+        - navigation "Main navigation" [ref=f377e16]:
+          - link "Skip to main content" [ref=f377e17] [cursor=pointer]:
+            - /url: "#MainContent"
+          - list [ref=f377e18]:
+            - listitem [ref=f377e19]:
+              - link "Lamps" [ref=f377e20] [cursor=pointer]:
+                - /url: javascript:;
+            - listitem [ref=f377e26]:
+              - link "Wireless Audio" [ref=f377e27] [cursor=pointer]:
+                - /url: javascript:;
+            - listitem [ref=f377e33]:
+              - link "Recovery & Wellness" [ref=f377e34] [cursor=pointer]:
+                - /url: javascript:;
+            - listitem [ref=f377e40]:
+              - link "Smart Living" [ref=f377e41] [cursor=pointer]:
+                - /url: javascript:;
+            - listitem [ref=f377e47]:
+              - link "Support" [ref=f377e48] [cursor=pointer]:
+                - /url: javascript:;
+      - heading [level=1] [ref=f377e54]:
+        - link "TaoTronics US" [ref=f377e55] [cursor=pointer]:
+          - /url: /
+      - list [ref=f377e58]:
+        - listitem [ref=f377e59]:
+          - link "Search" [ref=f377e60] [cursor=pointer]:
+            - /url: /search
+        - listitem [ref=f377e64]:
+          - link "Login" [ref=f377e65] [cursor=pointer]:
+            - /url: /account/login
+        - listitem [ref=f377e69]:
+          - link "Cart 0 items" [ref=f377e70] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=f377e71]: Cart
+            - generic [ref=f377e76]:
+              - generic:
+                - generic [ref=f377e77]: 0 items
+                - text: "0"
+  - main [ref=f377e78]:
+    - region [ref=f377e81]:
+      - group [ref=f377e82]:
+        - link "Shop Now" [ref=f377e87] [cursor=pointer]:
+          - /url: /pages/summer-sales
+      - generic [ref=f377e89]:
+        - button "Go to item 1" [ref=f377e90] [cursor=pointer]
+        - button "Go to item 2" [ref=f377e92] [cursor=pointer]
+        - button "Go to item 3" [ref=f377e94] [cursor=pointer]
+        - button "Go to item 4" [ref=f377e96] [cursor=pointer]
+    - generic [ref=f377e103]:
+      - link [ref=f377e104] [cursor=pointer]:
+        - /url: /collections/desk-lamp
+        - paragraph [ref=f377e108]: Desk Lamp
+      - link [ref=f377e109] [cursor=pointer]:
+        - /url: /collections/floor-lamp
+        - paragraph [ref=f377e113]: Floor Lamp
+    - region [ref=f377e116]:
+      - group [ref=f377e117]:
+        - generic [ref=f377e121]:
+          - paragraph [ref=f377e122]: Convenient, Adjustable, Eye-Friendly
+          - paragraph [ref=f377e123]:
+            - text: Apollo L1 LED Lamp | TT-DL13
+            - generic [ref=f377e124]: Apollo L1 LED Lamp | TT-DL13
+          - link "Shop Now" [ref=f377e126] [cursor=pointer]:
+            - /url: /products/taotronics-led-desk-lamp-tt-dl13-office-table-35-modes-lamps-with-stable-usb-charging-port-touch-control
+    - generic [ref=f377e129]:
+      - link "View All" [ref=f377e131] [cursor=pointer]:
+        - /url: /collections/desk-lamp
+      - generic [ref=f377e138]:
+        - generic [ref=f377e139]:
+          - generic: Save 28%
+          - link [ref=f377e141] [cursor=pointer]:
+            - /url: /products/tt-dl02-led-desk-lamp
+            - img "TaoTronics TT-DL02 LED Desk Lamp with USB Charging | Adjustable Desk Light with 4 Lighting Modes" [ref=f377e142]
+          - generic [ref=f377e144]:
+            - link "TaoTronics TT-DL02 LED Desk Lamp with USB Charging | Adjustable Desk Light with 4 Lighting Modes" [ref=f377e146] [cursor=pointer]:
+              - /url: /products/tt-dl02-led-desk-lamp
+            - generic [ref=f377e147]:
+              - generic [ref=f377e148]:
+                - generic [ref=f377e149]: Sale price
+                - text: $64.99
+              - generic [ref=f377e150]:
+                - generic [ref=f377e151]: Regular price
+                - text: $89.99
+        - generic [ref=f377e152]:
+          - generic: Save 32%
+          - link [ref=f377e154] [cursor=pointer]:
+            - /url: /products/taotronics-uranus-l1-new-classical-led-desk-lamp-tt-dl02
+            - img "TaoTronics TT-DL1055 Jupiter L1 Full Spectrum LED Desk Lamp, Adjustable Arm & 3 Color Modes" [ref=f377e155]
+          - generic [ref=f377e157]:
+            - link "TaoTronics TT-DL1055 Jupiter L1 Full Spectrum LED Desk Lamp, Adjustable Arm & 3 Color Modes" [ref=f377e159] [cursor=pointer]:
+              - /url: /products/taotronics-uranus-l1-new-classical-led-desk-lamp-tt-dl02
+            - generic [ref=f377e160]:
+              - generic [ref=f377e161]:
+                - generic [ref=f377e162]: Sale price
+                - text: $94.99
+              - generic [ref=f377e163]:
+                - generic [ref=f377e164]: Regular price
+                - text: $138.99
+        - generic [ref=f377e165]:
+          - generic: Save 31%
+          - link [ref=f377e167] [cursor=pointer]:
+            - /url: /products/taotronics-led-desk-lamp-tt-dl13-office-table-35-modes-lamps-with-stable-usb-charging-port-touch-control
+            - img "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f377e168]
+          - generic [ref=f377e169]:
+            - generic [ref=f377e170]:
+              - link "TaoTronics TT-DL13 LED Desk Lamp Office Table 35-Modes Lamps with Stable USB Charging Port & Touch Control" [ref=f377e172] [cursor=pointer]:
+                - /url: /products/taotronics-led-desk-lamp-tt-dl13-office-table-35-modes-lamps-with-stable-usb-charging-port-touch-control
+              - generic [ref=f377e173]:
+                - generic [ref=f377e174]:
+                  - generic [ref=f377e175]: Sale price
+                  - text: $54.99
+                - generic [ref=f377e176]:
+                  - generic [ref=f377e177]: Regular price
+                  - text: $79.99
+            - group "Color" [ref=f377e179]:
+              - radio "White" [checked] [ref=f377e181] [cursor=pointer]
+              - generic [ref=f377e182] [cursor=pointer]: White
+              - radio "Black" [ref=f377e184] [cursor=pointer]
+              - generic [ref=f377e185] [cursor=pointer]: Black
+        - generic [ref=f377e187]:
+          - generic: Save 16%
+          - link [ref=f377e189] [cursor=pointer]:
+            - /url: /products/taotronics-tt-dl22-led-desk-lamp-with-usb-port
+            - img "TaoTronics TT-DL22 LED Desk Lamp with USB Port" [ref=f377e190]
+          - generic [ref=f377e191]:
+            - generic [ref=f377e192]:
+              - link "TaoTronics TT-DL22 LED Desk Lamp with USB Port" [ref=f377e194] [cursor=pointer]:
+                - /url: /products/taotronics-tt-dl22-led-desk-lamp-with-usb-port
+              - generic [ref=f377e195]:
+                - generic [ref=f377e196]:
+                  - generic [ref=f377e197]: Sale price
+                  - text: $75.99
+                - generic [ref=f377e198]:
+                  - generic [ref=f377e199]: Regular price
+                  - text: $89.99
+            - group "Color" [ref=f377e201]:
+              - radio "Silver" [checked] [ref=f377e203] [cursor=pointer]
+              - generic [ref=f377e204] [cursor=pointer]: Silver
+              - radio "Black" [ref=f377e206] [cursor=pointer]
+              - generic [ref=f377e207] [cursor=pointer]: Black
+    - region [ref=f377e211]:
+      - group [ref=f377e212]:
+        - generic [ref=f377e216]:
+          - paragraph [ref=f377e217]: Luminous, Smart, Portable
+          - paragraph [ref=f377e218]:
+            - text: RGBIC Floor Lamp NB-DL006
+            - generic [ref=f377e219]: RGBIC Floor Lamp NB-DL006
+          - link "Shop Now" [ref=f377e221] [cursor=pointer]:
+            - /url: /products/taotronics-rgbic-smart-floor-lamp-nb-dl006-white
+    - generic [ref=f377e224]:
+      - link "View All" [ref=f377e226] [cursor=pointer]:
+        - /url: /collections/floor-lamp
+      - generic [ref=f377e233]:
+        - generic [ref=f377e234]:
+          - generic:
+            - generic: Sold out
+            - generic: Save 25%
+          - link [ref=f377e236] [cursor=pointer]:
+            - /url: /products/sympa-sp-dl062-dimmable-standing-tall-pole-light
+            - img "TaoTronics NB-DL007 Remote Customizable LED Floor Lamp" [ref=f377e237]
+          - generic [ref=f377e239]:
+            - link "TaoTronics NB-DL007 Remote Customizable LED Floor Lamp" [ref=f377e241] [cursor=pointer]:
+              - /url: /products/sympa-sp-dl062-dimmable-standing-tall-pole-light
+            - generic [ref=f377e242]:
+              - generic [ref=f377e243]:
+                - generic [ref=f377e244]: Sale price
+                - text: $59.99
+              - generic [ref=f377e245]:
+                - generic [ref=f377e246]: Regular price
+                - text: $79.99
+        - generic [ref=f377e247]:
+          - generic: Save 44%
+          - link [ref=f377e249] [cursor=pointer]:
+            - /url: /products/taotronics-led-metal-gooseneck-floor-lamp-72-large-69-3-minimalism-modern-with-stable-and-weighted-base
+            - img "Floor lamp 72 Modern Standing Light-TaoTronics" [ref=f377e250]
+          - generic [ref=f377e251]:
+            - generic [ref=f377e252]:
+              - link "TaoTronics TT-DL072 LED Gooseneck Floor Lamp | Modern Adjustable Standing Lamp for Reading & Home Lighting" [ref=f377e254] [cursor=pointer]:
+                - /url: /products/taotronics-led-metal-gooseneck-floor-lamp-72-large-69-3-minimalism-modern-with-stable-and-weighted-base
+              - generic [ref=f377e255]:
+                - generic [ref=f377e256]:
+                  - generic [ref=f377e257]: Sale price
+                  - text: $49.99
+                - generic [ref=f377e258]:
+                  - generic [ref=f377e259]: Regular price
+                  - text: $89.99
+            - group "Color" [ref=f377e261]:
+              - radio "White" [checked] [ref=f377e263] [cursor=pointer]
+              - generic [ref=f377e264] [cursor=pointer]: White
+        - generic [ref=f377e266]:
+          - generic: On sale
+          - link [ref=f377e268] [cursor=pointer]:
+            - /url: /products/taotronics-rgbic-smart-floor-lamp-nb-dl006-white
+            - img "TaoTronics NB-DL006 Smart RGBIC Corner Floor Lamp with Music Sync, App & Voice Control" [ref=f377e269]
+          - generic [ref=f377e271]:
+            - link "TaoTronics NB-DL006 Smart RGBIC Corner Floor Lamp with Music Sync, App & Voice Control" [ref=f377e273] [cursor=pointer]:
+              - /url: /products/taotronics-rgbic-smart-floor-lamp-nb-dl006-white
+            - generic [ref=f377e274]:
+              - generic [ref=f377e275]:
+                - generic [ref=f377e276]: Sale price
+                - text: From $39.99
+              - generic [ref=f377e277]:
+                - generic [ref=f377e278]: Regular price
+                - text: $79.99
+        - generic [ref=f377e279]:
+          - generic: Save 43%
+          - link [ref=f377e281] [cursor=pointer]:
+            - /url: /products/taotronics-4-in-1-smart-rgb-floor-lamp-with-shelves-nb-dl003-dimmable-rgb-solid-wood-standing-lamp-with-phone-charging
+            - img "TaoTronics NB-DL003 Smart RGB Floor Lamp with Shelves, Dimmable Standing Corner Lamp with Wireless Charging, App & Voice Control" [ref=f377e282]
+          - generic [ref=f377e284]:
+            - link "TaoTronics NB-DL003 Smart RGB Floor Lamp with Shelves, Dimmable Standing Corner Lamp with Wireless Charging, App & Voice Control" [ref=f377e286] [cursor=pointer]:
+              - /url: /products/taotronics-4-in-1-smart-rgb-floor-lamp-with-shelves-nb-dl003-dimmable-rgb-solid-wood-standing-lamp-with-phone-charging
+            - generic [ref=f377e287]:
+              - generic [ref=f377e288]:
+                - generic [ref=f377e289]: Sale price
+                - text: $79.99
+              - generic [ref=f377e290]:
+                - generic [ref=f377e291]: Regular price
+                - text: $139.99
+    - generic [ref=f377e295]:
+      - region [ref=f377e296]:
+        - group "Item 1 of 5" [ref=f377e297]:
+          - img "5 out of 5 stars" [ref=f377e299]
+          - blockquote [ref=f377e305]: This bundle includes the dimmable 12-inch, 6500K light itself, an up to 78-inch tall tripod stand, smartphone holder, and a remote control. The “durable thick aluminum” tripod stand has six adjustable height settings while the dual function light and Bluetooth shutter remote is great for solo operations. The light features “50 different modes” ranging from various brightness levels to five different temperature settings, and more.
+      - generic [ref=f377e306]:
+        - button "Previous" [ref=f377e307] [cursor=pointer]
+        - generic [ref=f377e309]:
+          - button "Go to item 1" [ref=f377e310] [cursor=pointer]
+          - button "Go to item 2" [ref=f377e312] [cursor=pointer]
+          - button "Go to item 3" [ref=f377e314] [cursor=pointer]
+          - button "Go to item 4" [ref=f377e316] [cursor=pointer]
+          - button "Go to item 5" [ref=f377e318] [cursor=pointer]
+        - button "Next" [ref=f377e320] [cursor=pointer]
+    - region [ref=f377e326]:
+      - group "Item 1 of 4" [ref=f377e327]:
+        - paragraph [ref=f377e334]: Free Delivery Above $39.99
+      - group "Item 2 of 4" [ref=f377e335]:
+        - paragraph [ref=f377e341]: 30-Day Money-Back Guarantee
+      - group "Item 3 of 4" [ref=f377e342]:
+        - paragraph [ref=f377e347]: 12 Months Warranty
+      - group "Item 4 of 4" [ref=f377e348]:
+        - paragraph [ref=f377e356]: Lifetime Customer Support
+    - generic [ref=f377e360]:
+      - generic [ref=f377e361]:
+        - generic [ref=f377e362]:
+          - paragraph [ref=f377e363]: Products
+          - list [ref=f377e364]:
+            - listitem [ref=f377e365]:
+              - link "Lamp" [ref=f377e366] [cursor=pointer]:
+                - /url: /collections/lamp
+            - listitem [ref=f377e367]:
+              - link "Massage Gun" [ref=f377e368] [cursor=pointer]:
+                - /url: /collections/massage-guns
+            - listitem [ref=f377e369]:
+              - link "Headphones" [ref=f377e370] [cursor=pointer]:
+                - /url: /collections/headphones
+            - listitem [ref=f377e371]:
+              - link "Kitchenware" [ref=f377e372] [cursor=pointer]:
+                - /url: /collections/kitchen
+        - generic [ref=f377e373]:
+          - paragraph [ref=f377e374]: Support
+          - list [ref=f377e375]:
+            - listitem [ref=f377e376]:
+              - link "Privacy Policy" [ref=f377e377] [cursor=pointer]:
+                - /url: /pages/privacy-policy
+            - listitem [ref=f377e378]:
+              - link "Terms of Service" [ref=f377e379] [cursor=pointer]:
+                - /url: /pages/terms-of-service
+            - listitem [ref=f377e380]:
+              - link "Refund & Return Policy" [ref=f377e381] [cursor=pointer]:
+                - /url: /pages/refund-and-return-policy
+            - listitem [ref=f377e382]:
+              - link "Shipping Policy" [ref=f377e383] [cursor=pointer]:
+                - /url: /pages/shipping-policy
+            - listitem [ref=f377e384]:
+              - link "Official Statement" [ref=f377e385] [cursor=pointer]:
+                - /url: /pages/official-statement-on-unauthorized-websites
+        - generic [ref=f377e386]:
+          - paragraph [ref=f377e387]: Explore
+          - list [ref=f377e388]:
+            - listitem [ref=f377e389]:
+              - link "About Us" [ref=f377e390] [cursor=pointer]:
+                - /url: /pages/about-us
+            - listitem [ref=f377e391]:
+              - link "Wholesale" [ref=f377e392] [cursor=pointer]:
+                - /url: /pages/wholesale
+            - listitem [ref=f377e393]:
+              - link "Affiliates" [ref=f377e394] [cursor=pointer]:
+                - /url: /pages/affiliates
+            - listitem [ref=f377e395]:
+              - link "Contact Us" [ref=f377e396] [cursor=pointer]:
+                - /url: /pages/contact-us
+        - generic [ref=f377e398]:
+          - paragraph [ref=f377e399]: Get an Exclusive 15% Off Your First Purchase
+          - generic [ref=f377e401]:
+            - textbox "E-mail" [ref=f377e402]:
+              - /placeholder: " "
+            - generic: E-mail
+            - button "Subscribe" [ref=f377e404] [cursor=pointer]
+      - generic [ref=f377e407]:
+        - list [ref=f377e409]:
+          - listitem [ref=f377e410]:
+            - link "Follow on Facebook" [ref=f377e411] [cursor=pointer]:
+              - /url: https://www.facebook.com/TaoTronics
+          - listitem [ref=f377e413]:
+            - link "Follow on Twitter" [ref=f377e414] [cursor=pointer]:
+              - /url: https://x.com/TaoTronics
+          - listitem [ref=f377e416]:
+            - link "Follow on Instagram" [ref=f377e417] [cursor=pointer]:
+              - /url: https://www.instagram.com/taotronics_official/
+          - listitem [ref=f377e419]:
+            - link "Follow on Pinterest" [ref=f377e420] [cursor=pointer]:
+              - /url: https://www.pinterest.com/taotronics_official/
+          - listitem [ref=f377e422]:
+            - link "Follow on YouTube" [ref=f377e423] [cursor=pointer]:
+              - /url: https://www.youtube.com/channel/UCOACOUc8D0VA_J7yzu0xx4g
+        - generic [ref=f377e425]:
+          - list [ref=f377e426]:
+            - listitem [ref=f377e427]:
+              - img "Amazon" [ref=f377e428]
+            - listitem [ref=f377e433]:
+              - img "American Express" [ref=f377e434]
+            - listitem [ref=f377e439]:
+              - img "Diners Club" [ref=f377e440]
+            - listitem [ref=f377e444]:
+              - img "Discover" [ref=f377e445]
+            - listitem [ref=f377e454]:
+              - img "Google Pay" [ref=f377e455]
+            - listitem [ref=f377e463]:
+              - img "Mastercard" [ref=f377e464]
+            - listitem [ref=f377e471]:
+              - img "PayPal" [ref=f377e472]
+            - listitem [ref=f377e478]:
+              - img "Shop Pay" [ref=f377e479]
+            - listitem [ref=f377e483]:
+              - img "Visa" [ref=f377e484]
+          - paragraph [ref=f377e490]:
+            - text: © 2026, TaoTronics US.
+            - link "Powered by Shopify" [ref=f377e491] [cursor=pointer]:
+              - /url: https://www.shopify.com?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore
+  - generic:
+    - complementary
+  - generic:
+    - complementary:
+      - button "Click to open Judge.me floating reviews tab" [ref=f377e492] [cursor=pointer]: ★ Reviews
+      - generic:        about   about    Verified about   about    Verified about   

@@ -1,0 +1,115 @@
+- generic [ref=f5e2]:
+  - banner [ref=f5e3]:
+    - generic [ref=f5e5]:
+      - link "TodoEnUno" [ref=f5e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=f5e7]:
+        - searchbox "Buscar productos y servicios..." [ref=f5e12]
+      - navigation "Principal" [ref=f5e13]:
+        - link "Categorías" [ref=f5e14] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Mis órdenes" [ref=f5e15] [cursor=pointer]:
+          - /url: /ordenes
+      - generic [ref=f5e16]:
+        - link "Notificaciones" [ref=f5e17] [cursor=pointer]:
+          - /url: /perfil
+        - link "Carrito" [ref=f5e21] [cursor=pointer]:
+          - /url: /carrito
+          - generic [ref=f5e56]: "2"
+        - link "Mi perfil" [ref=f5e26] [cursor=pointer]:
+          - /url: /perfil
+        - button "Salir" [ref=f5e30] [cursor=pointer]
+  - main [ref=f5e31]:
+    - generic [ref=f5e106]:
+      - heading "Checkout" [level=1] [ref=f5e107]
+      - generic [ref=f5e108]:
+        - generic [ref=f5e110]:
+          - generic [ref=f5e111]: "1"
+          - text: Carrito
+        - generic [ref=f5e114]:
+          - generic [ref=f5e115]: "2"
+          - text: Envío
+        - generic [ref=f5e118]:
+          - generic [ref=f5e119]: "3"
+          - text: Pago
+        - generic [ref=f5e122]:
+          - generic [ref=f5e123]: "4"
+          - text: Confirmación
+      - generic [ref=f5e124]:
+        - generic [ref=f5e125]:
+          - generic [ref=f5e126]:
+            - heading "Dirección de entrega" [level=2] [ref=f5e127]
+            - generic [ref=f5e128]:
+              - generic [ref=f5e129]:
+                - generic [ref=f5e130]: Nombre
+                - textbox "Nombre" [ref=f5e131]
+              - generic [ref=f5e132]:
+                - generic [ref=f5e133]: Teléfono
+                - textbox "Teléfono" [ref=f5e134]:
+                  - /placeholder: 0000-0000
+            - generic [ref=f5e135]:
+              - generic [ref=f5e136]: Dirección
+              - textbox "Dirección" [ref=f5e137]:
+                - /placeholder: Calle, número, referencia
+            - paragraph [ref=f5e138]: Para servicios, esta dirección se usa según la modalidad indicada por el vendedor (a domicilio del cliente o en el local del vendedor).
+          - generic [ref=f5e139]:
+            - heading "Método de pago" [level=2] [ref=f5e140]
+            - generic [ref=f5e141]:
+              - button "Tarjeta" [ref=f5e142] [cursor=pointer]
+              - button "PayPal" [ref=f5e143] [cursor=pointer]
+            - paragraph [ref=f5e144]:
+              - text: "Entorno de prueba (sandbox): ninguna transacción es real. Usa cualquier número de tarjeta; uno terminado en"
+              - strong [ref=f5e145]: "0002"
+              - text: simula un rechazo del banco.
+            - generic [ref=f5e146]:
+              - generic [ref=f5e147]: Número de tarjeta
+              - textbox "Número de tarjeta" [ref=f5e148]:
+                - /placeholder: 0000 0000 0000 0000
+            - generic [ref=f5e149]:
+              - generic [ref=f5e150]:
+                - generic [ref=f5e151]: Vencimiento
+                - textbox "Vencimiento" [ref=f5e152]:
+                  - /placeholder: MM/AA
+              - generic [ref=f5e153]:
+                - generic [ref=f5e154]: CVV
+                - textbox "CVV" [ref=f5e155]:
+                  - /placeholder: "123"
+          - button "Confirmar pago de $24.00" [ref=f5e156] [cursor=pointer]
+        - generic [ref=f5e157]:
+          - heading "Resumen del pedido" [level=2] [ref=f5e158]
+          - generic [ref=f5e159]:
+            - generic [ref=f5e160]: Mousepad3 × 1
+            - generic [ref=f5e161]: $10.00
+          - generic [ref=f5e162]:
+            - generic [ref=f5e163]: Mouse inalámbrico × 1
+            - generic [ref=f5e164]: $14.00
+          - generic [ref=f5e165]:
+            - generic [ref=f5e166]: Total
+            - generic [ref=f5e167]: $24.00
+  - contentinfo [ref=f5e34]:
+    - generic [ref=f5e35]:
+      - generic [ref=f5e36]:
+        - generic [ref=f5e37]: TodoEnUno
+        - paragraph [ref=f5e38]: Un marketplace para vendedores y compradores independientes. Prototipo académico construido sobre una arquitectura de microservicios.
+      - generic [ref=f5e39]:
+        - generic [ref=f5e40]:
+          - heading "Comprar" [level=4] [ref=f5e41]
+          - link "Explorar catálogo" [ref=f5e42] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Mis órdenes" [ref=f5e43] [cursor=pointer]:
+            - /url: /ordenes
+          - link "Mi carrito" [ref=f5e44] [cursor=pointer]:
+            - /url: /carrito
+        - generic [ref=f5e45]:
+          - heading "Vender" [level=4] [ref=f5e46]
+          - link "Panel de vendedor" [ref=f5e47] [cursor=pointer]:
+            - /url: /vendedor
+          - generic [ref=f5e48]: Publicar producto
+          - generic [ref=f5e49]: Publicar servicio
+        - generic [ref=f5e50]:
+          - heading "Cuenta" [level=4] [ref=f5e51]
+          - link "Iniciar sesión" [ref=f5e52] [cursor=pointer]:
+            - /url: /login
+          - link "Crear cuenta" [ref=f5e53] [cursor=pointer]:
+            - /url: /registro
+    - generic [ref=f5e54]: © 2026 TodoEnUno — prototipo de trabajo de graduación.

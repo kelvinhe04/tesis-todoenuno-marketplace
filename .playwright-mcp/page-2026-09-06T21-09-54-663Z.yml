@@ -1,0 +1,1518 @@
+- generic [ref=f333e1]:
+  - dialog [ref=f333e3]:
+    - generic [ref=f333e4]:
+      - button
+      - button "Close Pop Up" [ref=f333e6] [cursor=pointer]
+      - generic [ref=f333e9]:
+        - heading "Select your Location" [level=1] [ref=f333e12]
+        - generic [ref=f333e14]:
+          - heading "Africa" [level=2] [ref=f333e15]
+          - list [ref=f333e16]:
+            - listitem [ref=f333e17]:
+              - link [ref=f333e18] [cursor=pointer]:
+                - /url: https://www.nike.com/eg/
+                - generic [ref=f333e21]:
+                  - heading "Egypt" [level=4] [ref=f333e22]
+                  - paragraph [ref=f333e23]: English
+            - listitem [ref=f333e24]:
+              - link [ref=f333e25] [cursor=pointer]:
+                - /url: https://www.nike.com/ma/en/
+                - generic [ref=f333e28]:
+                  - heading "Morocco" [level=4] [ref=f333e29]
+                  - paragraph [ref=f333e30]: English
+            - listitem [ref=f333e31]:
+              - link [ref=f333e32] [cursor=pointer]:
+                - /url: https://www.nike.com/ma/
+                - generic [ref=f333e35]:
+                  - heading "Maroc" [level=4] [ref=f333e36]
+                  - paragraph [ref=f333e37]: Français
+            - listitem [ref=f333e38]:
+              - link [ref=f333e39] [cursor=pointer]:
+                - /url: https://www.nike.com/za/
+                - generic [ref=f333e42]:
+                  - heading "South Africa" [level=4] [ref=f333e43]
+                  - paragraph [ref=f333e44]: English
+          - heading "Americas" [level=2] [ref=f333e45]
+          - list [ref=f333e46]:
+            - listitem [ref=f333e47]:
+              - link [ref=f333e48] [cursor=pointer]:
+                - /url: https://www.nike.com.ar
+                - generic [ref=f333e51]:
+                  - heading "Argentina" [level=4] [ref=f333e52]
+                  - paragraph [ref=f333e53]: Español
+            - listitem [ref=f333e54]:
+              - link [ref=f333e55] [cursor=pointer]:
+                - /url: https://www.nike.com.br
+                - generic [ref=f333e58]:
+                  - heading "Brasil" [level=4] [ref=f333e59]
+                  - paragraph [ref=f333e60]: Português
+            - listitem [ref=f333e61]:
+              - link [ref=f333e62] [cursor=pointer]:
+                - /url: https://www.nike.com/ca/
+                - generic [ref=f333e65]:
+                  - heading "Canada" [level=4] [ref=f333e66]
+                  - paragraph [ref=f333e67]: English
+            - listitem [ref=f333e68]:
+              - link [ref=f333e69] [cursor=pointer]:
+                - /url: https://www.nike.com/ca/fr/
+                - generic [ref=f333e72]:
+                  - heading "Canada" [level=4] [ref=f333e73]
+                  - paragraph [ref=f333e74]: Français
+            - listitem [ref=f333e75]:
+              - link [ref=f333e76] [cursor=pointer]:
+                - /url: https://www.nike.cl
+                - generic [ref=f333e79]:
+                  - heading "Chile" [level=4] [ref=f333e80]
+                  - paragraph [ref=f333e81]: Español
+            - listitem [ref=f333e82]:
+              - link [ref=f333e83] [cursor=pointer]:
+                - /url: https://www.nike.com.co
+                - generic [ref=f333e86]:
+                  - heading "Colombia" [level=4] [ref=f333e87]
+                  - paragraph [ref=f333e88]: Español
+            - listitem [ref=f333e89]:
+              - link [ref=f333e90] [cursor=pointer]:
+                - /url: https://www.nike.com/mx/
+                - generic [ref=f333e93]:
+                  - heading "México" [level=4] [ref=f333e94]
+                  - paragraph [ref=f333e95]: Español
+            - listitem [ref=f333e96]:
+              - link [ref=f333e97] [cursor=pointer]:
+                - /url: https://www.nike.com.pe
+                - generic [ref=f333e100]:
+                  - heading "Peru" [level=4] [ref=f333e101]
+                  - paragraph [ref=f333e102]: Español
+            - listitem [ref=f333e103]:
+              - link [ref=f333e104] [cursor=pointer]:
+                - /url: https://www.nike.com/pr/
+                - generic [ref=f333e107]:
+                  - heading "Puerto Rico" [level=4] [ref=f333e108]
+                  - paragraph [ref=f333e109]: Español
+            - listitem [ref=f333e110]:
+              - link [ref=f333e111] [cursor=pointer]:
+                - /url: https://www.nike.com
+                - generic [ref=f333e114]:
+                  - heading "United States" [level=4] [ref=f333e115]
+                  - paragraph [ref=f333e116]: English
+            - listitem [ref=f333e117]:
+              - link [ref=f333e118] [cursor=pointer]:
+                - /url: https://www.nike.com/us/es/
+                - generic [ref=f333e121]:
+                  - heading "Estados Unidos" [level=4] [ref=f333e122]
+                  - paragraph [ref=f333e123]: Español
+            - listitem [ref=f333e124]:
+              - link [ref=f333e125] [cursor=pointer]:
+                - /url: https://www.nike.com.uy
+                - generic [ref=f333e128]:
+                  - heading "Uruguay" [level=4] [ref=f333e129]
+                  - paragraph [ref=f333e130]: Español
+            - listitem [ref=f333e131]:
+              - link [ref=f333e132] [cursor=pointer]:
+                - /url: https://www.nike.com/xl/
+                - generic [ref=f333e135]:
+                  - heading "Latin America" [level=4] [ref=f333e136]
+                  - paragraph [ref=f333e137]: Español
+          - heading "Asia Pacific" [level=2] [ref=f333e138]
+          - list [ref=f333e139]:
+            - listitem [ref=f333e140]:
+              - link [ref=f333e141] [cursor=pointer]:
+                - /url: https://www.nike.com/au/
+                - generic [ref=f333e144]:
+                  - heading "Australia" [level=4] [ref=f333e145]
+                  - paragraph [ref=f333e146]: English
+            - listitem [ref=f333e147]:
+              - link [ref=f333e148] [cursor=pointer]:
+                - /url: https://www.nike.com.cn/
+                - generic [ref=f333e151]:
+                  - heading "中国大陆" [level=4] [ref=f333e152]
+                  - paragraph [ref=f333e153]: 简体中文
+            - listitem [ref=f333e154]:
+              - link [ref=f333e155] [cursor=pointer]:
+                - /url: https://www.nike.com.hk/?locale=en-gb&intpromo=language2001
+                - generic [ref=f333e158]:
+                  - heading "Hong Kong" [level=4] [ref=f333e159]
+                  - paragraph [ref=f333e160]: English
+            - listitem [ref=f333e161]:
+              - link [ref=f333e162] [cursor=pointer]:
+                - /url: https://www.nike.com.hk/?locale=zh-hk&intpromo=language1001
+                - generic [ref=f333e165]:
+                  - heading "香港" [level=4] [ref=f333e166]
+                  - paragraph [ref=f333e167]: 繁體中文
+            - listitem [ref=f333e168]:
+              - link [ref=f333e169] [cursor=pointer]:
+                - /url: https://www.nike.in/
+                - generic [ref=f333e172]:
+                  - heading "India" [level=4] [ref=f333e173]
+                  - paragraph [ref=f333e174]: English
+            - listitem [ref=f333e175]:
+              - link [ref=f333e176] [cursor=pointer]:
+                - /url: https://www.nike.com/id/
+                - generic [ref=f333e179]:
+                  - heading "Indonesia" [level=4] [ref=f333e180]
+                  - paragraph [ref=f333e181]: English
+            - listitem [ref=f333e182]:
+              - link [ref=f333e183] [cursor=pointer]:
+                - /url: https://www.nike.com/jp/en/
+                - generic [ref=f333e186]:
+                  - heading "Japan" [level=4] [ref=f333e187]
+                  - paragraph [ref=f333e188]: English
+            - listitem [ref=f333e189]:
+              - link [ref=f333e190] [cursor=pointer]:
+                - /url: https://www.nike.com/jp/
+                - generic [ref=f333e193]:
+                  - heading "日本" [level=4] [ref=f333e194]
+                  - paragraph [ref=f333e195]: 日本語
+            - listitem [ref=f333e196]:
+              - link [ref=f333e197] [cursor=pointer]:
+                - /url: https://www.nike.com/kr/
+                - generic [ref=f333e200]:
+                  - heading "대한민국" [level=4] [ref=f333e201]
+                  - paragraph [ref=f333e202]: 한국어
+            - listitem [ref=f333e203]:
+              - link [ref=f333e204] [cursor=pointer]:
+                - /url: https://www.nike.com/my/
+                - generic [ref=f333e207]:
+                  - heading "Malaysia" [level=4] [ref=f333e208]
+                  - paragraph [ref=f333e209]: English
+            - listitem [ref=f333e210]:
+              - link [ref=f333e211] [cursor=pointer]:
+                - /url: https://www.nike.com/nz/
+                - generic [ref=f333e214]:
+                  - heading "New Zealand" [level=4] [ref=f333e215]
+                  - paragraph [ref=f333e216]: English
+            - listitem [ref=f333e217]:
+              - link [ref=f333e218] [cursor=pointer]:
+                - /url: https://www.nike.com/ph/
+                - generic [ref=f333e221]:
+                  - heading "Philippines" [level=4] [ref=f333e222]
+                  - paragraph [ref=f333e223]: English
+            - listitem [ref=f333e224]:
+              - link [ref=f333e225] [cursor=pointer]:
+                - /url: https://www.nike.com/sg/
+                - generic [ref=f333e228]:
+                  - heading "Singapore" [level=4] [ref=f333e229]
+                  - paragraph [ref=f333e230]: English
+            - listitem [ref=f333e231]:
+              - link [ref=f333e232] [cursor=pointer]:
+                - /url: https://www.nike.com/tw/
+                - generic [ref=f333e235]:
+                  - heading "台灣" [level=4] [ref=f333e236]
+                  - paragraph [ref=f333e237]: 繁體中文
+            - listitem [ref=f333e238]:
+              - link [ref=f333e239] [cursor=pointer]:
+                - /url: https://www.nike.com/th/
+                - generic [ref=f333e242]:
+                  - heading "ไทย" [level=4] [ref=f333e243]
+                  - paragraph [ref=f333e244]: ภาษาไทย
+            - listitem [ref=f333e245]:
+              - link [ref=f333e246] [cursor=pointer]:
+                - /url: https://www.nike.com/vn/
+                - generic [ref=f333e249]:
+                  - heading "Vietnam" [level=4] [ref=f333e250]
+                  - paragraph [ref=f333e251]: English
+          - heading "Europe" [level=2] [ref=f333e252]
+          - list [ref=f333e253]:
+            - listitem [ref=f333e254]:
+              - link [ref=f333e255] [cursor=pointer]:
+                - /url: https://www.nike.com/at/
+                - generic [ref=f333e258]:
+                  - heading "Österreich" [level=4] [ref=f333e259]
+                  - paragraph [ref=f333e260]: Deutsch
+            - listitem [ref=f333e261]:
+              - link [ref=f333e262] [cursor=pointer]:
+                - /url: https://www.nike.com/at/en/
+                - generic [ref=f333e265]:
+                  - heading "Austria" [level=4] [ref=f333e266]
+                  - paragraph [ref=f333e267]: English
+            - listitem [ref=f333e268]:
+              - link [ref=f333e269] [cursor=pointer]:
+                - /url: https://www.nike.com/be/de/
+                - generic [ref=f333e272]:
+                  - heading "Belgien" [level=4] [ref=f333e273]
+                  - paragraph [ref=f333e274]: Deutsch
+            - listitem [ref=f333e275]:
+              - link [ref=f333e276] [cursor=pointer]:
+                - /url: https://www.nike.com/be/en/
+                - generic [ref=f333e279]:
+                  - heading "Belgium" [level=4] [ref=f333e280]
+                  - paragraph [ref=f333e281]: English
+            - listitem [ref=f333e282]:
+              - link [ref=f333e283] [cursor=pointer]:
+                - /url: https://www.nike.com/be/fr/
+                - generic [ref=f333e286]:
+                  - heading "Belgique" [level=4] [ref=f333e287]
+                  - paragraph [ref=f333e288]: Français
+            - listitem [ref=f333e289]:
+              - link [ref=f333e290] [cursor=pointer]:
+                - /url: https://www.nike.com/be/
+                - generic [ref=f333e293]:
+                  - heading "België" [level=4] [ref=f333e294]
+                  - paragraph [ref=f333e295]: Nederlands
+            - listitem [ref=f333e296]:
+              - link [ref=f333e297] [cursor=pointer]:
+                - /url: https://www.nike.com/bg/
+                - generic [ref=f333e300]:
+                  - heading "Bulgaria" [level=4] [ref=f333e301]
+                  - paragraph [ref=f333e302]: English
+            - listitem [ref=f333e303]:
+              - link [ref=f333e304] [cursor=pointer]:
+                - /url: https://www.nike.com/hr/
+                - generic [ref=f333e307]:
+                  - heading "Croatia" [level=4] [ref=f333e308]
+                  - paragraph [ref=f333e309]: English
+            - listitem [ref=f333e310]:
+              - link [ref=f333e311] [cursor=pointer]:
+                - /url: https://www.nike.com/cz/
+                - generic [ref=f333e314]:
+                  - heading "Česká republika" [level=4] [ref=f333e315]
+                  - paragraph [ref=f333e316]: Čeština
+            - listitem [ref=f333e317]:
+              - link [ref=f333e318] [cursor=pointer]:
+                - /url: https://www.nike.com/cz/en/
+                - generic [ref=f333e321]:
+                  - heading "Czech Republic" [level=4] [ref=f333e322]
+                  - paragraph [ref=f333e323]: English
+            - listitem [ref=f333e324]:
+              - link [ref=f333e325] [cursor=pointer]:
+                - /url: https://www.nike.com/dk/
+                - generic [ref=f333e328]:
+                  - heading "Danmark" [level=4] [ref=f333e329]
+                  - paragraph [ref=f333e330]: Dansk
+            - listitem [ref=f333e331]:
+              - link [ref=f333e332] [cursor=pointer]:
+                - /url: https://www.nike.com/dk/en/
+                - generic [ref=f333e335]:
+                  - heading "Denmark" [level=4] [ref=f333e336]
+                  - paragraph [ref=f333e337]: English
+            - listitem [ref=f333e338]:
+              - link [ref=f333e339] [cursor=pointer]:
+                - /url: https://www.nike.com/fi/
+                - generic [ref=f333e342]:
+                  - heading "Finland" [level=4] [ref=f333e343]
+                  - paragraph [ref=f333e344]: English
+            - listitem [ref=f333e345]:
+              - link [ref=f333e346] [cursor=pointer]:
+                - /url: https://www.nike.com/fr/
+                - generic [ref=f333e349]:
+                  - heading "France" [level=4] [ref=f333e350]
+                  - paragraph [ref=f333e351]: Français
+            - listitem [ref=f333e352]:
+              - link [ref=f333e353] [cursor=pointer]:
+                - /url: https://www.nike.com/de/
+                - generic [ref=f333e356]:
+                  - heading "Deutschland" [level=4] [ref=f333e357]
+                  - paragraph [ref=f333e358]: Deutsch
+            - listitem [ref=f333e359]:
+              - link [ref=f333e360] [cursor=pointer]:
+                - /url: https://www.nike.com/gr/
+                - generic [ref=f333e363]:
+                  - heading "Ελλάδα" [level=4] [ref=f333e364]
+                  - paragraph [ref=f333e365]: ελληνικά
+            - listitem [ref=f333e366]:
+              - link [ref=f333e367] [cursor=pointer]:
+                - /url: https://www.nike.com/hu/en/
+                - generic [ref=f333e370]:
+                  - heading "Hungary" [level=4] [ref=f333e371]
+                  - paragraph [ref=f333e372]: English
+            - listitem [ref=f333e373]:
+              - link [ref=f333e374] [cursor=pointer]:
+                - /url: https://www.nike.com/hu/
+                - generic [ref=f333e377]:
+                  - heading "Magyarország" [level=4] [ref=f333e378]
+                  - paragraph [ref=f333e379]: Magyar
+            - listitem [ref=f333e380]:
+              - link [ref=f333e381] [cursor=pointer]:
+                - /url: https://www.nike.com/ie/
+                - generic [ref=f333e384]:
+                  - heading "Ireland" [level=4] [ref=f333e385]
+                  - paragraph [ref=f333e386]: English
+            - listitem [ref=f333e387]:
+              - link [ref=f333e388] [cursor=pointer]:
+                - /url: https://www.nike.com/il/
+                - generic [ref=f333e391]:
+                  - heading "Israel" [level=4] [ref=f333e392]
+                  - paragraph [ref=f333e393]: English
+            - listitem [ref=f333e394]:
+              - link [ref=f333e395] [cursor=pointer]:
+                - /url: https://www.nike.com/it/
+                - generic [ref=f333e398]:
+                  - heading "Italia" [level=4] [ref=f333e399]
+                  - paragraph [ref=f333e400]: Italiano
+            - listitem [ref=f333e401]:
+              - link [ref=f333e402] [cursor=pointer]:
+                - /url: https://www.nike.com/lu/de/
+                - generic [ref=f333e405]:
+                  - heading "Luxemburg" [level=4] [ref=f333e406]
+                  - paragraph [ref=f333e407]: Deutsch
+            - listitem [ref=f333e408]:
+              - link [ref=f333e409] [cursor=pointer]:
+                - /url: https://www.nike.com/lu/en/
+                - generic [ref=f333e412]:
+                  - heading "Luxembourg" [level=4] [ref=f333e413]
+                  - paragraph [ref=f333e414]: English
+            - listitem [ref=f333e415]:
+              - link [ref=f333e416] [cursor=pointer]:
+                - /url: https://www.nike.com/lu/
+                - generic [ref=f333e419]:
+                  - heading "Luxembourg" [level=4] [ref=f333e420]
+                  - paragraph [ref=f333e421]: Français
+            - listitem [ref=f333e422]:
+              - link [ref=f333e423] [cursor=pointer]:
+                - /url: https://www.nike.com/nl/en/
+                - generic [ref=f333e426]:
+                  - heading "Netherlands" [level=4] [ref=f333e427]
+                  - paragraph [ref=f333e428]: English
+            - listitem [ref=f333e429]:
+              - link [ref=f333e430] [cursor=pointer]:
+                - /url: https://www.nike.com/nl/
+                - generic [ref=f333e433]:
+                  - heading "Nederland" [level=4] [ref=f333e434]
+                  - paragraph [ref=f333e435]: Nederlands
+            - listitem [ref=f333e436]:
+              - link [ref=f333e437] [cursor=pointer]:
+                - /url: https://www.nike.com/no/en/
+                - generic [ref=f333e440]:
+                  - heading "Norway" [level=4] [ref=f333e441]
+                  - paragraph [ref=f333e442]: English
+            - listitem [ref=f333e443]:
+              - link [ref=f333e444] [cursor=pointer]:
+                - /url: https://www.nike.com/no/
+                - generic [ref=f333e447]:
+                  - heading "Norge" [level=4] [ref=f333e448]
+                  - paragraph [ref=f333e449]: Norsk
+            - listitem [ref=f333e450]:
+              - link [ref=f333e451] [cursor=pointer]:
+                - /url: https://www.nike.com/pl/
+                - generic [ref=f333e454]:
+                  - heading "Polska" [level=4] [ref=f333e455]
+                  - paragraph [ref=f333e456]: Polski
+            - listitem [ref=f333e457]:
+              - link [ref=f333e458] [cursor=pointer]:
+                - /url: https://www.nike.com/pt/en/
+                - generic [ref=f333e461]:
+                  - heading "Portugal" [level=4] [ref=f333e462]
+                  - paragraph [ref=f333e463]: English
+            - listitem [ref=f333e464]:
+              - link [ref=f333e465] [cursor=pointer]:
+                - /url: https://www.nike.com/pt/
+                - generic [ref=f333e468]:
+                  - heading "Portugal" [level=4] [ref=f333e469]
+                  - paragraph [ref=f333e470]: Português
+            - listitem [ref=f333e471]:
+              - link [ref=f333e472] [cursor=pointer]:
+                - /url: https://www.nike.com/ro/
+                - generic [ref=f333e475]:
+                  - heading "Romania" [level=4] [ref=f333e476]
+                  - paragraph [ref=f333e477]: English
+            - listitem [ref=f333e478]:
+              - link [ref=f333e479] [cursor=pointer]:
+                - /url: https://www.nike.com/ru/
+                - generic [ref=f333e482]:
+                  - heading "Россия" [level=4] [ref=f333e483]
+                  - paragraph [ref=f333e484]: Русский
+            - listitem [ref=f333e485]:
+              - link [ref=f333e486] [cursor=pointer]:
+                - /url: https://www.nike.com/sk/
+                - generic [ref=f333e489]:
+                  - heading "Slovakia" [level=4] [ref=f333e490]
+                  - paragraph [ref=f333e491]: English
+            - listitem [ref=f333e492]:
+              - link [ref=f333e493] [cursor=pointer]:
+                - /url: https://www.nike.com/si/
+                - generic [ref=f333e496]:
+                  - heading "Slovenia" [level=4] [ref=f333e497]
+                  - paragraph [ref=f333e498]: English
+            - listitem [ref=f333e499]:
+              - link [ref=f333e500] [cursor=pointer]:
+                - /url: https://www.nike.com/es/ca/
+                - generic [ref=f333e503]:
+                  - heading "Espanya" [level=4] [ref=f333e504]
+                  - paragraph [ref=f333e505]: Català
+            - listitem [ref=f333e506]:
+              - link [ref=f333e507] [cursor=pointer]:
+                - /url: https://www.nike.com/es/
+                - generic [ref=f333e510]:
+                  - heading "España" [level=4] [ref=f333e511]
+                  - paragraph [ref=f333e512]: Español
+            - listitem [ref=f333e513]:
+              - link [ref=f333e514] [cursor=pointer]:
+                - /url: https://www.nike.com/se/en/
+                - generic [ref=f333e517]:
+                  - heading "Sweden" [level=4] [ref=f333e518]
+                  - paragraph [ref=f333e519]: English
+            - listitem [ref=f333e520]:
+              - link [ref=f333e521] [cursor=pointer]:
+                - /url: https://www.nike.com/se/
+                - generic [ref=f333e524]:
+                  - heading "Sverige" [level=4] [ref=f333e525]
+                  - paragraph [ref=f333e526]: Svenska
+            - listitem [ref=f333e527]:
+              - link [ref=f333e528] [cursor=pointer]:
+                - /url: https://www.nike.com/ch/
+                - generic [ref=f333e531]:
+                  - heading "Schweiz" [level=4] [ref=f333e532]
+                  - paragraph [ref=f333e533]: Deutsch
+            - listitem [ref=f333e534]:
+              - link [ref=f333e535] [cursor=pointer]:
+                - /url: https://www.nike.com/ch/en/
+                - generic [ref=f333e538]:
+                  - heading "Switzerland" [level=4] [ref=f333e539]
+                  - paragraph [ref=f333e540]: English
+            - listitem [ref=f333e541]:
+              - link [ref=f333e542] [cursor=pointer]:
+                - /url: https://www.nike.com/ch/fr/
+                - generic [ref=f333e545]:
+                  - heading "Suisse" [level=4] [ref=f333e546]
+                  - paragraph [ref=f333e547]: Français
+            - listitem [ref=f333e548]:
+              - link [ref=f333e549] [cursor=pointer]:
+                - /url: https://www.nike.com/ch/it/
+                - generic [ref=f333e552]:
+                  - heading "Svizzera" [level=4] [ref=f333e553]
+                  - paragraph [ref=f333e554]: Italiano
+            - listitem [ref=f333e555]:
+              - link [ref=f333e556] [cursor=pointer]:
+                - /url: https://www.nike.com/tr/
+                - generic [ref=f333e559]:
+                  - heading "Türkiye" [level=4] [ref=f333e560]
+                  - paragraph [ref=f333e561]: Türkçe
+            - listitem [ref=f333e562]:
+              - link [ref=f333e563] [cursor=pointer]:
+                - /url: https://www.nike.com/gb/
+                - generic [ref=f333e566]:
+                  - heading "United Kingdom" [level=4] [ref=f333e567]
+                  - paragraph [ref=f333e568]: English
+          - heading "Middle East" [level=2] [ref=f333e569]
+          - list [ref=f333e570]:
+            - listitem [ref=f333e571]:
+              - link [ref=f333e572] [cursor=pointer]:
+                - /url: https://www.nike.sa/en/home
+                - generic [ref=f333e575]:
+                  - heading "Saudi Arabia" [level=4] [ref=f333e576]
+                  - paragraph [ref=f333e577]: English
+            - listitem [ref=f333e578]:
+              - link [ref=f333e579] [cursor=pointer]:
+                - /url: https://www.nike.sa/ar/home
+                - generic [ref=f333e582]:
+                  - heading "المملكة العربية السعودية" [level=4] [ref=f333e583]
+                  - paragraph [ref=f333e584]: العربية
+            - listitem [ref=f333e585]:
+              - link [ref=f333e586] [cursor=pointer]:
+                - /url: https://www.nike.ae/en/home
+                - generic [ref=f333e589]:
+                  - heading "United Arab Emirates" [level=4] [ref=f333e590]
+                  - paragraph [ref=f333e591]: English
+            - listitem [ref=f333e592]:
+              - link [ref=f333e593] [cursor=pointer]:
+                - /url: https://www.nike.ae/ar/home
+                - generic [ref=f333e596]:
+                  - heading "الإمارات العربية المتحدة" [level=4] [ref=f333e597]
+                  - paragraph [ref=f333e598]: العربية
+            - listitem [ref=f333e599]:
+              - link [ref=f333e600] [cursor=pointer]:
+                - /url: https://www.nike.qa/en/home
+                - generic [ref=f333e603]:
+                  - heading "Qatar" [level=4] [ref=f333e604]
+                  - paragraph [ref=f333e605]: English
+            - listitem [ref=f333e606]:
+              - link [ref=f333e607] [cursor=pointer]:
+                - /url: https://www.nike.qa/ar/home
+                - generic [ref=f333e610]:
+                  - heading "دولة قطر" [level=4] [ref=f333e611]
+                  - paragraph [ref=f333e612]: العربية
+            - listitem [ref=f333e613]:
+              - link [ref=f333e614] [cursor=pointer]:
+                - /url: https://www.nike.com.kw/en/home
+                - generic [ref=f333e617]:
+                  - heading "Kuwait" [level=4] [ref=f333e618]
+                  - paragraph [ref=f333e619]: English
+            - listitem [ref=f333e620]:
+              - link [ref=f333e621] [cursor=pointer]:
+                - /url: https://www.nike.com.kw/ar/home
+                - generic [ref=f333e624]:
+                  - heading "الكويت" [level=4] [ref=f333e625]
+                  - paragraph [ref=f333e626]: العربية
+      - button
+  - navigation [ref=f333e629]:
+    - link [ref=f333e630] [cursor=pointer]:
+      - /url: "#skip-to-content"
+      - text: Skip to main content
+    - link [ref=f333e631] [cursor=pointer]:
+      - /url: https://www.nike.com/accessibility#introduction
+      - text: Accessibility at Nike
+    - generic [ref=f333e633]:
+      - navigation [ref=f333e635]:
+        - list [ref=f333e636]:
+          - listitem [ref=f333e637]:
+            - link [ref=f333e638] [cursor=pointer]:
+              - /url: https://www.nike.com/jordan
+          - listitem [ref=f333e641]:
+            - link [ref=f333e642] [cursor=pointer]:
+              - /url: https://www.nike.com/w/converse-akmjx
+      - list [ref=f333e646]:
+        - listitem [ref=f333e647]:
+          - link [ref=f333e648] [cursor=pointer]:
+            - /url: https://www.nike.com/retail
+            - text: Find a Store
+        - listitem [ref=f333e650]:
+          - link [ref=f333e651] [cursor=pointer]:
+            - /url: https://www.nike.com/help
+            - text: Help
+          - group [ref=f333e652]:
+            - menuitem [ref=f333e653]
+        - listitem [ref=f333e655]:
+          - link [ref=f333e656] [cursor=pointer]:
+            - /url: https://www.nike.com/membership
+            - text: Join Us
+        - listitem [ref=f333e658]:
+          - link [ref=f333e659] [cursor=pointer]:
+            - /url: https://www.nike.com/register
+            - text: Sign In
+    - generic [ref=f333e662]:
+      - link [ref=f333e664] [cursor=pointer]:
+        - /url: https://www.nike.com
+      - navigation [ref=f333e668]:
+        - menu [ref=f333e669]:
+          - listitem [ref=f333e670]:
+            - generic [ref=f333e671]:
+              - link [ref=f333e672] [cursor=pointer]:
+                - /url: https://www.nike.com/men
+                - text: Men
+              - group [ref=f333e673]:
+                - menuitem [ref=f333e674]
+          - listitem [ref=f333e675]:
+            - generic [ref=f333e676]:
+              - link [ref=f333e677] [cursor=pointer]:
+                - /url: https://www.nike.com/women
+                - text: Women
+              - group [ref=f333e678]:
+                - menuitem [ref=f333e679]
+          - listitem [ref=f333e680]:
+            - generic [ref=f333e681]:
+              - link [ref=f333e682] [cursor=pointer]:
+                - /url: https://www.nike.com/kids
+                - text: Kids
+              - group [ref=f333e683]:
+                - menuitem [ref=f333e684]
+          - listitem [ref=f333e685]:
+            - generic [ref=f333e686]:
+              - link [ref=f333e687] [cursor=pointer]:
+                - /url: https://www.nike.com/jordan
+                - text: Jordan
+              - group [ref=f333e688]:
+                - menuitem [ref=f333e689]
+          - listitem [ref=f333e690]:
+            - generic [ref=f333e691]:
+              - link [ref=f333e692] [cursor=pointer]:
+                - /url: https://www.nike.com/nikeskims
+                - text: NikeSKIMS
+              - group [ref=f333e693]:
+                - menuitem [ref=f333e694]
+          - listitem [ref=f333e695]:
+            - generic [ref=f333e696]:
+              - link [ref=f333e697] [cursor=pointer]:
+                - /url: https://www.nike.com/gear-up
+                - text: Sport
+              - group [ref=f333e698]:
+                - menuitem [ref=f333e699]
+      - generic [ref=f333e701]:
+        - search [ref=f333e702]:
+          - generic [ref=f333e707]:
+            - button [ref=f333e709] [cursor=pointer]
+            - searchbox [ref=f333e712]
+        - link [ref=f333e713] [cursor=pointer]:
+          - /url: https://www.nike.com/favorites
+        - link [ref=f333e716] [cursor=pointer]:
+          - /url: https://www.nike.com/cart
+          - paragraph [ref=f333e720]
+  - generic [ref=f333e724]:
+    - generic [ref=f333e726]:
+      - link [ref=f333e727] [cursor=pointer]:
+        - /url: "#skip-to-products"
+        - text: skip to products
+      - generic [ref=f333e729]:
+        - list [ref=f333e730]:
+          - listitem [ref=f333e731]:
+            - paragraph [ref=f333e735]:
+              - link [ref=f333e736] [cursor=pointer]:
+                - /url: https://www.nike.com/w/new-3n82y
+                - text: Shop New Arrivals
+          - listitem [aria-hidden] [ref=f333e737]:
+            - paragraph [ref=f333e741]:
+              - link [ref=f333e742] [cursor=pointer]:
+                - /url: https://www.nike.com/t/gift-card-mailed-in-a-mini-nike-shoebox-B9Mv2K/GIFTCARD-7492
+                - text: Send a Gift Card
+          - listitem [aria-hidden] [ref=f333e743]:
+            - paragraph [ref=f333e747]:
+              - link [ref=f333e748] [cursor=pointer]:
+                - /url: https://www.nike.com/register
+                - text: "Members: Free Shipping on Orders $50+"
+        - button [ref=f333e749] [cursor=pointer]
+        - button [ref=f333e753] [cursor=pointer]
+    - generic [ref=f333e758]:
+      - list [ref=f333e761]:
+        - listitem [ref=f333e762]:
+          - link [ref=f333e763] [cursor=pointer]:
+            - /url: https://www.nike.com/w/lifestyle-13jrm
+            - text: Lifestyle
+        - generic [ref=f333e764]: /
+        - listitem [ref=f333e765]:
+          - link [ref=f333e766] [cursor=pointer]:
+            - /url: https://www.nike.com/w/lifestyle-shoes-13jrmzy7ok
+            - text: Shoes
+      - banner [ref=f333e768]:
+        - generic [ref=f333e769]:
+          - generic [ref=f333e770]:
+            - heading [level=1] [ref=f333e771]: Mens Lifestyle Shoes
+            - generic [ref=f333e772]: (344)
+          - navigation [ref=f333e773]:
+            - button [expanded] [ref=f333e774] [cursor=pointer]:
+              - generic [ref=f333e775]: Hide Filters
+            - listbox [ref=f333e780] [cursor=pointer]:
+              - generic [ref=f333e781]: Sort By
+      - generic [ref=f333e784]:
+        - region [ref=f333e789]:
+          - navigation [ref=f333e792]:
+            - group [ref=f333e794]:
+              - generic [ref=f333e795]:
+                - generic [ref=f333e796]: Pick Up Today
+                - switch [ref=f333e800] [cursor=pointer]
+            - generic [ref=f333e804]:
+              - link [ref=f333e805] [cursor=pointer]: Air Force 1
+              - link [ref=f333e806] [cursor=pointer]: Air Max
+              - link [ref=f333e807] [cursor=pointer]: Nike Dunk
+              - link [ref=f333e808] [cursor=pointer]: Nike Shox
+              - link [ref=f333e809] [cursor=pointer]: Nike Total 90
+              - link [ref=f333e810] [cursor=pointer]: Nike Ava
+              - link [ref=f333e811] [cursor=pointer]: Nike Rejuven8
+              - link [ref=f333e812] [cursor=pointer]: Nike Vomero
+              - link [ref=f333e813] [cursor=pointer]: Nike Pegasus
+              - link [ref=f333e814] [cursor=pointer]: Nike Tennis Classic
+              - link [ref=f333e815] [cursor=pointer]:
+                - /url: https://www.nike.com/w/mens-jordan-lifestyle-shoes-13jrmz37eefznik1zy7ok
+                - text: Jordan
+              - link [ref=f333e816] [cursor=pointer]:
+                - /url: https://www.nike.com/w/mens-nike-by-you-lifestyle-shoes-13jrmz6ealhznik1zy7ok
+                - text: Nike By You
+            - generic [ref=f333e818]:
+              - button [ref=f333e820]:
+                - button [ref=f333e821] [cursor=pointer]:
+                  - generic [ref=f333e822]:
+                    - text: Gender
+                    - generic [ref=f333e823]: (1)
+              - button [ref=f333e826]:
+                - button [ref=f333e827] [cursor=pointer]:
+                  - generic [ref=f333e828]: Sale & Offers
+              - button [ref=f333e831]:
+                - button [ref=f333e832] [cursor=pointer]:
+                  - generic [ref=f333e833]: Color
+              - button [ref=f333e836]:
+                - button [ref=f333e837] [cursor=pointer]:
+                  - generic [ref=f333e838]: Shop by Price
+              - button [ref=f333e841]:
+                - button [ref=f333e842] [cursor=pointer]:
+                  - generic [ref=f333e843]: Size
+              - button [ref=f333e846]:
+                - button [ref=f333e847] [cursor=pointer]:
+                  - generic [ref=f333e848]: Brand
+              - button [ref=f333e851]:
+                - button [ref=f333e852] [cursor=pointer]:
+                  - generic [ref=f333e853]: Collections
+              - button [ref=f333e856]:
+                - button [ref=f333e857] [cursor=pointer]:
+                  - generic [ref=f333e858]: Shoe Height
+              - button [ref=f333e861]:
+                - button [ref=f333e862] [cursor=pointer]:
+                  - generic [ref=f333e863]: Width
+              - button [ref=f333e866]:
+                - button [ref=f333e867] [cursor=pointer]:
+                  - generic [ref=f333e868]:
+                    - text: Sports
+                    - generic [ref=f333e869]: (1)
+        - main [ref=f333e872]:
+          - generic [ref=f333e874]:
+            - figure [ref=f333e877]:
+              - link [ref=f333e878] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-diamond-turf-ii-mens-shoes-bMsIingt/II7080-001
+                - text: Nike Air Diamond Turf II
+              - link [ref=f333e879] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-diamond-turf-ii-mens-shoes-bMsIingt/II7080-001
+              - generic [ref=f333e882]:
+                - generic [ref=f333e883]:
+                  - generic [ref=f333e884]: Just In
+                  - generic [ref=f333e885]:
+                    - link [ref=f333e886]: Nike Air Diamond Turf II
+                    - link [ref=f333e887]: Men's Shoes
+                - link [ref=f333e890]:
+                  - generic [ref=f333e891]: $170
+            - figure [ref=f333e896]:
+              - link [ref=f333e897] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-jordan-4-retro-tour-yellow-mens-shoes-XcyMqswH/IO2463-102
+                - text: Air Jordan 4 Retro "Tour Yellow"
+              - link [ref=f333e898] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-jordan-4-retro-tour-yellow-mens-shoes-XcyMqswH/IO2463-102
+              - generic [ref=f333e901]:
+                - generic [ref=f333e902]:
+                  - generic [ref=f333e903]: Just In
+                  - generic [ref=f333e904]:
+                    - link [ref=f333e905]: Air Jordan 4 Retro "Tour Yellow"
+                    - link [ref=f333e906]: Men's Shoes
+                - link [ref=f333e909]:
+                  - generic [ref=f333e910]: $220
+            - figure [ref=f333e915]:
+              - link [ref=f333e916] [cursor=pointer]:
+                - /url: https://www.nike.com/t/kobe-air-force-1-low-mens-shoes-ZjtWaNqY/IB0018-103
+                - text: Kobe Air Force 1 Low
+              - link [ref=f333e917] [cursor=pointer]:
+                - /url: https://www.nike.com/t/kobe-air-force-1-low-mens-shoes-ZjtWaNqY/IB0018-103
+              - generic [ref=f333e920]:
+                - generic [ref=f333e921]:
+                  - generic [ref=f333e923]:
+                    - link [ref=f333e924] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/kobe-air-force-1-low-mens-shoes-ZjtWaNqY/IB0018-103
+                    - link [ref=f333e927] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/kobe-air-force-1-low-mens-shoes-ZjtWaNqY/IB0018-006
+                    - link [ref=f333e930] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/kobe-air-force-1-low-mens-shoes-ZjtWaNqY/IB0018-005
+                  - generic [ref=f333e933]: Just In
+                  - generic [ref=f333e934]:
+                    - link [ref=f333e935]: Kobe Air Force 1 Low
+                    - link [ref=f333e936]: Men's Shoes
+                - link [ref=f333e939]:
+                  - generic [ref=f333e940]: $125
+            - figure [ref=f333e945]:
+              - link [ref=f333e946] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-force-1-07-lv8-mens-shoes-eCqXhPYF/IV5754-100
+                - text: Nike Air Force 1 '07 LV8
+              - link [ref=f333e947] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-force-1-07-lv8-mens-shoes-eCqXhPYF/IV5754-100
+              - generic [ref=f333e950]:
+                - generic [ref=f333e951]:
+                  - generic [ref=f333e952]: Just In
+                  - generic [ref=f333e953]:
+                    - link [ref=f333e954]: Nike Air Force 1 '07 LV8
+                    - link [ref=f333e955]: Men's Shoes
+                - link [ref=f333e958]:
+                  - generic [ref=f333e959]: $140
+            - figure [ref=f333e964]:
+              - link [ref=f333e965] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-force-1-lx-mens-shoes-AeP1jdsQ/JA3822-010
+                - text: Nike Air Force 1 LX
+              - link [ref=f333e966] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-force-1-lx-mens-shoes-AeP1jdsQ/JA3822-010
+              - generic [ref=f333e969]:
+                - generic [ref=f333e970]:
+                  - generic [ref=f333e971]: Just In
+                  - generic [ref=f333e972]:
+                    - link [ref=f333e973]: Nike Air Force 1 LX
+                    - link [ref=f333e974]: Men's Shoes
+                - link [ref=f333e977]:
+                  - generic [ref=f333e978]: $140
+            - generic [ref=f333e981]:
+              - link [ref=f333e982] [cursor=pointer]:
+                - /url: https://www.nike.com/w/mens-socks-7ny3qznik1
+              - generic:
+                - generic: Finish Your Fit
+                - link [ref=f333e986] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-socks-7ny3qznik1
+                  - text: Shop Socks
+            - figure [ref=f333e989]:
+              - link [ref=f333e990] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-joga-bonito-mens-shoes-GEpH4lmj/IO1753-001
+                - text: Nike Air Max "Joga Bonito"
+              - link [ref=f333e991] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-joga-bonito-mens-shoes-GEpH4lmj/IO1753-001
+              - generic [ref=f333e994]:
+                - generic [ref=f333e995]:
+                  - generic [ref=f333e997]:
+                    - link [ref=f333e998] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-joga-bonito-mens-shoes-GEpH4lmj/IO1753-001
+                    - link [ref=f333e1001] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-joga-bonito-mens-shoes-GEpH4lmj/IO1753-003
+                    - link [ref=f333e1004] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-joga-bonito-r9-mens-shoes-GEpH4lmj/IX8646-001
+                  - generic [ref=f333e1007]: Just In
+                  - generic [ref=f333e1008]:
+                    - link [ref=f333e1009]: Nike Air Max "Joga Bonito"
+                    - link [ref=f333e1010]: Men's Shoes
+                - link [ref=f333e1013]:
+                  - generic [ref=f333e1014]: $180
+            - figure [ref=f333e1019]:
+              - link [ref=f333e1020] [cursor=pointer]:
+                - /url: https://www.nike.com/t/tennis-classic-cs-prm-mens-shoes-kdKf27IF/JA8560-001
+                - text: Nike Tennis Classic CS PRM
+              - link [ref=f333e1021] [cursor=pointer]:
+                - /url: https://www.nike.com/t/tennis-classic-cs-prm-mens-shoes-kdKf27IF/JA8560-001
+              - generic [ref=f333e1024]:
+                - generic [ref=f333e1025]:
+                  - generic [ref=f333e1027]:
+                    - link [ref=f333e1028] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/tennis-classic-cs-prm-mens-shoes-kdKf27IF/JA8560-001
+                    - link [ref=f333e1031] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/tennis-classic-cs-prm-mens-shoes-kdKf27IF/JA8560-100
+                  - generic [ref=f333e1034]:
+                    - link [ref=f333e1035]: Nike Tennis Classic CS PRM
+                    - link [ref=f333e1036]: Men's Shoes
+                - link [ref=f333e1039]:
+                  - generic [ref=f333e1040]: $105
+            - figure [ref=f333e1045]:
+              - link [ref=f333e1046] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-90-premium-mens-shoes-bAZ6AeHT/IW6954-121
+                - text: Nike Air Max 90 Premium
+              - link [ref=f333e1047] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-90-premium-mens-shoes-bAZ6AeHT/IW6954-121
+              - generic [ref=f333e1050]:
+                - generic [ref=f333e1051]:
+                  - generic [ref=f333e1052]:
+                    - generic [ref=f333e1053]:
+                      - link [ref=f333e1054] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-90-premium-mens-shoes-bAZ6AeHT/IW6954-121
+                      - link [ref=f333e1057] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-90-premium-scorpion-mens-shoes-bAZ6AeHT/IQ9438-001
+                      - link [ref=f333e1060] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-90-mens-shoes-bAZ6AeHT/CN8490-100
+                      - link [ref=f333e1063] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-90-premium-mens-shoes-bAZ6AeHT/IQ0172-900
+                      - link [ref=f333e1066] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-90-mens-shoes-bAZ6AeHT/IX4089-317
+                    - generic [ref=f333e1069]: "+15"
+                  - generic [ref=f333e1070]:
+                    - link [ref=f333e1071]: Nike Air Max 90 Premium
+                    - link [ref=f333e1072]: Men's Shoes
+                - link [ref=f333e1075]:
+                  - generic [ref=f333e1076]: $145
+            - figure [ref=f333e1081]:
+              - link [ref=f333e1082] [cursor=pointer]:
+                - /url: https://www.nike.com/t/p-6000-fade-mens-shoes-nX3hJMZg/IH4465-095
+                - text: Nike P-6000 Fade
+              - link [ref=f333e1083] [cursor=pointer]:
+                - /url: https://www.nike.com/t/p-6000-fade-mens-shoes-nX3hJMZg/IH4465-095
+              - generic [ref=f333e1086]:
+                - generic [ref=f333e1087]:
+                  - generic [ref=f333e1088]:
+                    - generic [ref=f333e1089]:
+                      - link [ref=f333e1090] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/p-6000-fade-mens-shoes-nX3hJMZg/IH4465-095
+                      - link [ref=f333e1093] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/p-6000-shoes-nX3hJMZg/CN0149-001
+                      - link [ref=f333e1096] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/p-6000-shoes-nX3hJMZg/CD6404-002
+                      - link [ref=f333e1099] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/p-6000-shoes-nX3hJMZg/CD6404-107
+                      - link [ref=f333e1102] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/p-6000-se-shoes-nX3hJMZg/IO3370-300
+                    - generic [ref=f333e1105]: "+8"
+                  - generic [ref=f333e1106]: Best Seller
+                  - generic [ref=f333e1107]:
+                    - link [ref=f333e1108]: Nike P-6000 Fade
+                    - link [ref=f333e1109]: Men's Shoes
+                - link [ref=f333e1112]:
+                  - generic [ref=f333e1113]: $125
+            - figure [ref=f333e1118]:
+              - link [ref=f333e1119] [cursor=pointer]:
+                - /url: https://www.nike.com/t/zoom-vomero-5-mens-shoes-MgsTqZ/BV1358-001
+                - text: Nike Zoom Vomero 5
+              - link [ref=f333e1120] [cursor=pointer]:
+                - /url: https://www.nike.com/t/zoom-vomero-5-mens-shoes-MgsTqZ/BV1358-001
+              - generic [ref=f333e1123]:
+                - generic [ref=f333e1124]:
+                  - generic [ref=f333e1125]:
+                    - generic [ref=f333e1126]:
+                      - link [ref=f333e1127] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/zoom-vomero-5-mens-shoes-MgsTqZ/BV1358-001
+                      - link [ref=f333e1130] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/zoom-vomero-5-mens-shoes-MgsTqZ/IM2219-121
+                      - link [ref=f333e1133] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/zoom-vomero-5-mens-shoes-MgsTqZ/IM3486-002
+                      - link [ref=f333e1136] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/zoom-vomero-5-se-mens-shoes-MgsTqZ/HF0731-007
+                      - link [ref=f333e1139] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/zoom-vomero-5-mens-shoes-MgsTqZ/IM3486-600
+                    - generic [ref=f333e1142]: "+7"
+                  - generic [ref=f333e1143]: Best Seller
+                  - generic [ref=f333e1144]:
+                    - link [ref=f333e1145]: Nike Zoom Vomero 5
+                    - link [ref=f333e1146]: Men's Shoes
+                - link [ref=f333e1149]:
+                  - generic [ref=f333e1150]: $170
+            - figure [ref=f333e1155]:
+              - link [ref=f333e1156] [cursor=pointer]:
+                - /url: https://www.nike.com/t/waffle-racer-mens-shoes-amGpwcjx/IM8658-101
+                - text: Nike Waffle Racer
+              - link [ref=f333e1157] [cursor=pointer]:
+                - /url: https://www.nike.com/t/waffle-racer-mens-shoes-amGpwcjx/IM8658-101
+              - generic [ref=f333e1160]:
+                - generic [ref=f333e1161]:
+                  - generic [ref=f333e1163]:
+                    - link [ref=f333e1164] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/waffle-racer-mens-shoes-amGpwcjx/IM8658-101
+                    - link [ref=f333e1167] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/waffle-racer-mens-shoes-amGpwcjx/IM8658-001
+                    - link [ref=f333e1170] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/waffle-racer-mens-shoes-amGpwcjx/IM8658-701
+                    - link [ref=f333e1173] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/waffle-racer-mens-shoes-amGpwcjx/IM8658-102
+                    - link [ref=f333e1176] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/waffle-racer-mens-shoes-amGpwcjx/IM8658-003
+                  - generic [ref=f333e1179]:
+                    - link [ref=f333e1180]: Nike Waffle Racer
+                    - link [ref=f333e1181]: Men's Shoes
+                - link [ref=f333e1184]:
+                  - generic [ref=f333e1185]: $95
+            - figure [ref=f333e1190]:
+              - link [ref=f333e1191] [cursor=pointer]:
+                - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-5FQWGR/HF5441-010
+                - text: Nike Dunk Low Retro
+              - link [ref=f333e1192] [cursor=pointer]:
+                - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-5FQWGR/HF5441-010
+              - generic [ref=f333e1195]:
+                - generic [ref=f333e1196]:
+                  - generic [ref=f333e1197]:
+                    - generic [ref=f333e1198]:
+                      - link [ref=f333e1199] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-5FQWGR/HF5441-010
+                      - link [ref=f333e1202] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-5FQWGR/IM4415-600
+                      - link [ref=f333e1205] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-5FQWGR/HF5441-112
+                      - link [ref=f333e1208] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-5FQWGR/HF5441-105
+                      - link [ref=f333e1211] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-5FQWGR/IQ9404-349
+                    - generic [ref=f333e1214]: "+6"
+                  - generic [ref=f333e1215]: Best Seller
+                  - generic [ref=f333e1216]:
+                    - link [ref=f333e1217]: Nike Dunk Low Retro
+                    - link [ref=f333e1218]: Men's Shoes
+                - link [ref=f333e1221]:
+                  - generic [ref=f333e1222]: $120
+            - figure [ref=f333e1227]:
+              - link [ref=f333e1228] [cursor=pointer]:
+                - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-wlaYvsTw/IV6349-401
+                - text: Nike Dunk Low Retro
+              - link [ref=f333e1229] [cursor=pointer]:
+                - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-wlaYvsTw/IV6349-401
+              - generic [ref=f333e1232]:
+                - generic [ref=f333e1233]:
+                  - generic [ref=f333e1234]:
+                    - generic [ref=f333e1235]:
+                      - link [ref=f333e1236] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-wlaYvsTw/IV6349-401
+                      - link [ref=f333e1239] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-wlaYvsTw/IM4414-300
+                      - link [ref=f333e1242] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-premium-mens-shoes-wlaYvsTw/IB7746-201
+                      - link [ref=f333e1245] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-wlaYvsTw/IM4413-100
+                      - link [ref=f333e1248] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/dunk-low-retro-mens-shoes-wlaYvsTw/IO1616-002
+                    - generic [ref=f333e1251]: "+5"
+                  - generic [ref=f333e1252]:
+                    - link [ref=f333e1253]: Nike Dunk Low Retro
+                    - link [ref=f333e1254]: Men's Shoes
+                - link [ref=f333e1257]:
+                  - generic [ref=f333e1258]: $120
+            - figure [ref=f333e1263]:
+              - link [ref=f333e1264] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-95-big-bubble-mens-shoes-2xNsHz6W/IR1944-400
+                - text: Nike Air Max 95 Big Bubble
+              - link [ref=f333e1265] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-95-big-bubble-mens-shoes-2xNsHz6W/IR1944-400
+              - generic [ref=f333e1268]:
+                - generic [ref=f333e1269]:
+                  - generic [ref=f333e1270]:
+                    - generic [ref=f333e1271]:
+                      - link [ref=f333e1272] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-95-big-bubble-mens-shoes-2xNsHz6W/IR1944-400
+                      - link [ref=f333e1275] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-95-big-bubble-mens-shoes-2xNsHz6W/IV4680-010
+                      - link [ref=f333e1278] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-95-big-bubble-og-mens-shoes-2xNsHz6W/HM4740-015
+                      - link [ref=f333e1281] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-95-big-bubble-premium-mens-shoes-2xNsHz6W/IV6425-060
+                      - link [ref=f333e1284] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-95-big-bubble-scorpion-mens-shoes-2xNsHz6W/IM4691-001
+                    - generic [ref=f333e1287]: "+16"
+                  - generic [ref=f333e1288]:
+                    - link [ref=f333e1289]: Nike Air Max 95 Big Bubble
+                    - link [ref=f333e1290]: Men's Shoes
+                - link [ref=f333e1293]:
+                  - generic [ref=f333e1294]: $200
+            - figure [ref=f333e1299]:
+              - link [ref=f333e1300] [cursor=pointer]:
+                - /url: https://www.nike.com/t/v5-rnr-suede-mens-shoes-WHxi2GRN/IX0702-400
+                - text: Nike V5 RNR Suede
+              - link [ref=f333e1301] [cursor=pointer]:
+                - /url: https://www.nike.com/t/v5-rnr-suede-mens-shoes-WHxi2GRN/IX0702-400
+              - generic [ref=f333e1304]:
+                - generic [ref=f333e1305]:
+                  - generic [ref=f333e1306]:
+                    - generic [ref=f333e1307]:
+                      - link [ref=f333e1308] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/v5-rnr-suede-mens-shoes-WHxi2GRN/IX0702-400
+                      - link [ref=f333e1311] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/v5-rnr-mens-shoes-WHxi2GRN/HJ5228-014
+                      - link [ref=f333e1314] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/v5-rnr-mens-shoes-WHxi2GRN/HJ5228-011
+                      - link [ref=f333e1317] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/v5-rnr-mens-shoes-WHxi2GRN/HJ5228-104
+                      - link [ref=f333e1320] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/v5-rnr-mens-shoes-WHxi2GRN/IR7541-121
+                    - generic [ref=f333e1323]: "+10"
+                  - generic [ref=f333e1324]:
+                    - link [ref=f333e1325]: Nike V5 RNR Suede
+                    - link [ref=f333e1326]: Men's Shoes
+                - link [ref=f333e1329]:
+                  - generic [ref=f333e1330]: $95
+            - figure [ref=f333e1335]:
+              - link [ref=f333e1336] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-force-1-07-lv8-mens-shoes-5PBzpHVE/IM5752-400
+                - text: Nike Air Force 1 '07 LV8
+              - link [ref=f333e1337] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-force-1-07-lv8-mens-shoes-5PBzpHVE/IM5752-400
+              - generic [ref=f333e1340]:
+                - generic [ref=f333e1341]:
+                  - generic [ref=f333e1342]:
+                    - generic [ref=f333e1343]:
+                      - link [ref=f333e1344] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-force-1-07-lv8-mens-shoes-5PBzpHVE/IM5752-400
+                      - link [ref=f333e1347] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-force-1-07-lv8-mens-shoes-5PBzpHVE/IV6028-100
+                      - link [ref=f333e1350] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-force-1-07-lv8-denim-mens-shoes-5PBzpHVE/IR0951-400
+                      - link [ref=f333e1353] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-force-1-07-lv8-mens-shoes-5PBzpHVE/IM5752-300
+                      - link [ref=f333e1356] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-force-1-07-lv8-denim-mens-shoes-5PBzpHVE/IR0951-002
+                    - generic [ref=f333e1359]: "+10"
+                  - generic [ref=f333e1360]:
+                    - link [ref=f333e1361]: Nike Air Force 1 '07 LV8
+                    - link [ref=f333e1362]: Men's Shoes
+                - link [ref=f333e1365]:
+                  - generic [ref=f333e1366]: $125
+            - figure [ref=f333e1371]:
+              - link [ref=f333e1372] [cursor=pointer]:
+                - /url: https://www.nike.com/t/ava-edge-mens-shoes-8EA9wWpq/IM1973-001
+                - text: Nike Ava Edge
+              - link [ref=f333e1373] [cursor=pointer]:
+                - /url: https://www.nike.com/t/ava-edge-mens-shoes-8EA9wWpq/IM1973-001
+              - generic [ref=f333e1376]:
+                - generic [ref=f333e1377]:
+                  - generic [ref=f333e1379]:
+                    - link [ref=f333e1380] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/ava-edge-mens-shoes-8EA9wWpq/IM1973-001
+                    - link [ref=f333e1383] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/ava-edge-mens-shoes-8EA9wWpq/IM1973-004
+                    - link [ref=f333e1386] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/ava-edge-mens-shoes-8EA9wWpq/IM1973-002
+                    - link [ref=f333e1389] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/ava-edge-mens-shoes-8EA9wWpq/IM1973-100
+                    - link [ref=f333e1392] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/ava-edge-mens-shoes-8EA9wWpq/IM1973-003
+                  - generic [ref=f333e1395]:
+                    - link [ref=f333e1396]: Nike Ava Edge
+                    - link [ref=f333e1397]: Men's Shoes
+                - link [ref=f333e1400]:
+                  - generic [ref=f333e1401]: $155
+            - figure [ref=f333e1406]:
+              - link [ref=f333e1407] [cursor=pointer]:
+                - /url: https://www.nike.com/t/tennis-classic-mens-shoes-wmFDKGv0/IV2436-400
+                - text: Nike Tennis Classic
+              - link [ref=f333e1408] [cursor=pointer]:
+                - /url: https://www.nike.com/t/tennis-classic-mens-shoes-wmFDKGv0/IV2436-400
+              - generic [ref=f333e1411]:
+                - generic [ref=f333e1412]:
+                  - generic [ref=f333e1413]:
+                    - generic [ref=f333e1414]:
+                      - link [ref=f333e1415] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/tennis-classic-mens-shoes-wmFDKGv0/IV2436-400
+                      - link [ref=f333e1418] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/tennis-classic-cs-mens-shoes-wmFDKGv0/IX1201-101
+                      - link [ref=f333e1421] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/tennis-classic-mens-shoes-wmFDKGv0/IV2436-100
+                      - link [ref=f333e1424] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/tennis-classic-mens-shoes-wmFDKGv0/IV2436-300
+                      - link [ref=f333e1427] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/tennis-classic-cs-mens-shoes-wmFDKGv0/IV2437-002
+                    - generic [ref=f333e1430]: "+2"
+                  - generic [ref=f333e1431]:
+                    - link [ref=f333e1432]: Nike Tennis Classic
+                    - link [ref=f333e1433]: Men's Shoes
+                - generic [ref=f333e1434]:
+                  - link [ref=f333e1436]:
+                    - generic [ref=f333e1437]: $95
+                  - paragraph [ref=f333e1441]: See Price in Bag
+            - figure [ref=f333e1444]:
+              - link [ref=f333e1445] [cursor=pointer]:
+                - /url: https://www.nike.com/t/calm-2-mens-slides-IC47u696/IB0183-402
+                - text: Nike Calm 2.0
+              - link [ref=f333e1446] [cursor=pointer]:
+                - /url: https://www.nike.com/t/calm-2-mens-slides-IC47u696/IB0183-402
+              - generic [ref=f333e1449]:
+                - generic [ref=f333e1450]:
+                  - generic [ref=f333e1451]:
+                    - generic [ref=f333e1452]:
+                      - link [ref=f333e1453] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/calm-2-mens-slides-IC47u696/IB0183-402
+                      - link [ref=f333e1456] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/calm-2-mens-slides-IC47u696/IB0183-001
+                      - link [ref=f333e1459] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/calm-2-mens-slides-IC47u696/IB0183-300
+                      - link [ref=f333e1462] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/calm-2-mens-slides-IC47u696/IB0183-200
+                      - link [ref=f333e1465] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/calm-2-mens-slides-IC47u696/IB0183-202
+                    - generic [ref=f333e1468]: "+2"
+                  - generic [ref=f333e1469]: Best Seller
+                  - generic [ref=f333e1470]:
+                    - link [ref=f333e1471]: Nike Calm 2.0
+                    - link [ref=f333e1472]: Men's Slides
+                - link [ref=f333e1475]:
+                  - generic [ref=f333e1476]: $55
+            - figure [ref=f333e1481]:
+              - link [ref=f333e1482] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-270-mens-shoes-KkLcGR/IB7751-300
+                - text: Nike Air Max 270
+              - link [ref=f333e1483] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-270-mens-shoes-KkLcGR/IB7751-300
+              - generic [ref=f333e1486]:
+                - generic [ref=f333e1487]:
+                  - generic [ref=f333e1489]:
+                    - link [ref=f333e1490] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-270-mens-shoes-KkLcGR/IB7751-300
+                    - link [ref=f333e1493] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-270-mens-shoes-KkLcGR/AH8050-002
+                    - link [ref=f333e1496] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-270-mens-shoes-KkLcGR/AH8050-005
+                    - link [ref=f333e1499] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-270-mens-shoes-KkLcGR/AH8050-022
+                    - link [ref=f333e1502] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-270-mens-shoes-KkLcGR/AH8050-100
+                  - generic [ref=f333e1505]:
+                    - link [ref=f333e1506]: Nike Air Max 270
+                    - link [ref=f333e1507]: Men's Shoes
+                - link [ref=f333e1510]:
+                  - generic [ref=f333e1511]: $170
+            - figure [ref=f333e1516]:
+              - link [ref=f333e1517] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-excee-mens-shoes-vl97pm/FZ5486-107
+                - text: Nike Air Max Excee
+              - link [ref=f333e1518] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-excee-mens-shoes-vl97pm/FZ5486-107
+              - generic [ref=f333e1521]:
+                - generic [ref=f333e1522]:
+                  - generic [ref=f333e1523]:
+                    - generic [ref=f333e1524]:
+                      - link [ref=f333e1525] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-excee-mens-shoes-vl97pm/FZ5486-107
+                      - link [ref=f333e1528] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-excee-mens-shoes-vl97pm/FZ5486-009
+                      - link [ref=f333e1531] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-excee-mens-shoes-vl97pm/FZ5486-008
+                      - link [ref=f333e1534] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-excee-mens-shoes-vl97pm/FN7304-100
+                      - link [ref=f333e1537] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-max-excee-mens-shoes-vl97pm/FZ5486-200
+                    - generic [ref=f333e1540]: "+7"
+                  - generic [ref=f333e1541]:
+                    - link [ref=f333e1542]: Nike Air Max Excee
+                    - link [ref=f333e1543]: Men's Shoes
+                - link [ref=f333e1546]:
+                  - generic [ref=f333e1547]: $100
+            - figure [ref=f333e1552]:
+              - link [ref=f333e1553] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-plus-vii-mens-shoes-Qir8hMAo/HQ2197-101
+                - text: Nike Air Max Plus VII
+              - link [ref=f333e1554] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-max-plus-vii-mens-shoes-Qir8hMAo/HQ2197-101
+              - generic [ref=f333e1557]:
+                - generic [ref=f333e1558]:
+                  - generic [ref=f333e1560]:
+                    - link [ref=f333e1561] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-plus-vii-mens-shoes-Qir8hMAo/HQ2197-101
+                    - link [ref=f333e1564] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-plus-vii-mens-shoes-Qir8hMAo/HQ2197-001
+                    - link [ref=f333e1567] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-plus-vii-kylian-mbappe-mens-shoes-Qir8hMAo/HQ2197-200
+                    - link [ref=f333e1570] [cursor=pointer]:
+                      - /url: https://www.nike.com/t/air-max-plus-vii-mens-shoes-Qir8hMAo/HQ2197-600
+                  - generic [ref=f333e1573]:
+                    - link [ref=f333e1574]: Nike Air Max Plus VII
+                    - link [ref=f333e1575]: Men's Shoes
+                - link [ref=f333e1578]:
+                  - generic [ref=f333e1579]:
+                    - generic [ref=f333e1580]:
+                      - generic [aria-hidden] [ref=f333e1581]: $129.97
+                      - generic [aria-hidden] [ref=f333e1582]: $190
+                    - generic [ref=f333e1583]: 31% off
+            - figure [ref=f333e1586]:
+              - link [ref=f333e1587] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-force-1-low-retro-mens-shoes-qoeOjKwg/IO9557-900
+                - text: Nike Air Force 1 Low Retro
+              - link [ref=f333e1588] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-force-1-low-retro-mens-shoes-qoeOjKwg/IO9557-900
+              - generic [ref=f333e1591]:
+                - generic [ref=f333e1593]:
+                  - link [ref=f333e1594]: Nike Air Force 1 Low Retro
+                  - link [ref=f333e1595]: Men's Shoes
+                - link [ref=f333e1598]:
+                  - generic [ref=f333e1599]:
+                    - generic [ref=f333e1600]:
+                      - generic [aria-hidden] [ref=f333e1601]: $100.97
+                      - generic [aria-hidden] [ref=f333e1602]: $125
+                    - generic [ref=f333e1603]: 19% off
+            - figure [ref=f333e1606]:
+              - link [ref=f333e1607] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-vapormax-plus-mens-shoes-nC0dzF/924453-018
+                - text: Nike Air VaporMax Plus
+              - link [ref=f333e1608] [cursor=pointer]:
+                - /url: https://www.nike.com/t/air-vapormax-plus-mens-shoes-nC0dzF/924453-018
+              - generic [ref=f333e1611]:
+                - generic [ref=f333e1612]:
+                  - generic [ref=f333e1613]:
+                    - generic [ref=f333e1614]:
+                      - link [ref=f333e1615] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-vapormax-plus-mens-shoes-nC0dzF/924453-018
+                      - link [ref=f333e1618] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-vapormax-plus-mens-shoes-nC0dzF/924453-004
+                      - link [ref=f333e1621] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-vapormax-plus-mens-shoes-nC0dzF/924453-405
+                      - link [ref=f333e1624] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-vapormax-plus-mens-shoes-nC0dzF/CW7299-001
+                      - link [ref=f333e1627] [cursor=pointer]:
+                        - /url: https://www.nike.com/t/air-vapormax-plus-mens-shoe-nC0dzF/CW6973-600
+                    - generic [ref=f333e1630]: "+2"
+                  - generic [ref=f333e1631]: Best Seller
+                  - generic [ref=f333e1632]:
+                    - link [ref=f333e1633]: Nike Air VaporMax Plus
+                    - link [ref=f333e1634]: Men's Shoes
+                - link [ref=f333e1637]:
+                  - generic [ref=f333e1638]: $220
+          - complementary [ref=f333e1642]:
+            - heading [level=3] [ref=f333e1643]: Related Categories
+            - list [ref=f333e1644]:
+              - listitem [ref=f333e1645]:
+                - link [ref=f333e1646] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-100-and-under-shoes-3s37kznik1zy7ok
+                  - text: Men's Shoes $100 & Under
+              - listitem [ref=f333e1647]:
+                - link [ref=f333e1648] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/white-shoes-4g797zy7ok
+                  - text: White Shoes
+              - listitem [ref=f333e1649]:
+                - link [ref=f333e1650] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-road-running-shoes-37v7jz8kwewznik1zy7ok
+                  - text: Men's Road Running Shoes
+              - listitem [ref=f333e1651]:
+                - link [ref=f333e1652] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/100-and-under-shoes-3s37kzy7ok
+                  - text: Shoes $100 & Under
+              - listitem [ref=f333e1653]:
+                - link [ref=f333e1654] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-golf-high-top-shoes-23q9wz6lqy0znik1zy7ok
+                  - text: Men's Golf High Top Shoes
+              - listitem [ref=f333e1655]:
+                - link [ref=f333e1656] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-white-shoes-4g797znik1zy7ok
+                  - text: Men's White Shoes
+              - listitem [ref=f333e1657]:
+                - link [ref=f333e1658] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-red-shoes-3abn9znik1zy7ok
+                  - text: Men's Red Shoes
+              - listitem [ref=f333e1659]:
+                - link [ref=f333e1660] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-best-basketball-shoes-3glsmz76m50znik1zy7ok
+                  - text: Men's Best Sellers Basketball Shoes
+              - listitem [ref=f333e1661]:
+                - link [ref=f333e1662] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-sale-basketball-shoes-3glsmz3yaepznik1zy7ok
+                  - text: Men's Sale Basketball Shoes
+              - listitem [ref=f333e1663]:
+                - link [ref=f333e1664] [cursor=pointer]:
+                  - /url: https://www.nike.com/w/mens-purple-shoes-47w4rznik1zy7ok
+                  - text: Men's Purple Shoes
+          - generic [ref=f333e1666]:
+            - generic [ref=f333e1667]:
+              - generic [ref=f333e1668]: Related Stories
+              - generic [ref=f333e1669]:
+                - button [disabled] [aria-hidden] [ref=f333e1670]
+                - button [aria-hidden] [ref=f333e1674] [cursor=pointer]
+            - list [ref=f333e1678]:
+              - listitem [ref=f333e1679]:
+                - link [ref=f333e1680] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/air-max-dn-release-info
+                  - generic [ref=f333e1682]: Product News
+                  - generic [ref=f333e1683]: Nike Debuts Groundbreaking Technology With Launch of Air Max Dn Shoe
+              - listitem [ref=f333e1684]:
+                - link [ref=f333e1685] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/best-black-sneakers
+                  - generic [ref=f333e1687]: Buying Guide
+                  - generic [ref=f333e1688]: Check Out the Best Black Sneaker Styles by Nike
+              - listitem [ref=f333e1689]:
+                - link [ref=f333e1690] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/best-canvas-shoes
+                  - generic [ref=f333e1692]: Buying Guide
+                  - generic [ref=f333e1693]: The 5 Best Canvas Shoe Styles by Nike
+              - listitem [ref=f333e1694]:
+                - link [ref=f333e1695] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/best-selling-air-force-1
+                  - generic [ref=f333e1697]: Buying Guide
+                  - generic [ref=f333e1698]: The Best Air Force 1s to Buy Right Now
+              - listitem [ref=f333e1699]:
+                - link [ref=f333e1700] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/how-to-clean-muddy-shoes
+                  - generic [ref=f333e1702]: Product Care
+                  - generic [ref=f333e1703]: 6 Easy Steps to Clean Mud Off Shoes
+              - listitem [ref=f333e1704]:
+                - link [ref=f333e1705] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/best-high-top-sneakers
+                  - generic [ref=f333e1707]: Buying Guide
+                  - generic [ref=f333e1708]: The Best Nike High-Top Sneakers You Can Buy Right Now
+              - listitem [ref=f333e1709]:
+                - link [ref=f333e1710] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/air-jordan-11-varsity-red-release
+                  - generic [ref=f333e1712]: Product Launch
+                  - generic [ref=f333e1713]: "Air Jordan 11 Varsity Red: Blast From the Past With a Cherry on Top"
+              - listitem [ref=f333e1714]:
+                - link [ref=f333e1715] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/jordan-1-chicago-lost-and-found-inspiration
+                  - generic [ref=f333e1717]: Product Launch
+                  - generic [ref=f333e1718]: "Air Jordan 1 Chicago: The Inspiration Behind the Design"
+              - listitem [ref=f333e1719]:
+                - link [ref=f333e1720] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/nike-doernbecher-freestyle-release-2022
+                  - generic [ref=f333e1722]: Product News
+                  - generic [ref=f333e1723]: Nike and OHSU Doernbecher Children’s Hospital Reveal Doernbecher Freestyle XVIII Collection
+              - listitem [ref=f333e1724]:
+                - link [ref=f333e1725] [cursor=pointer]:
+                  - /url: https://www.nike.com/a/air-max-scorpion-release-info
+                  - generic [ref=f333e1727]: Product News
+                  - generic [ref=f333e1728]: "Nike Launches Its Newest Air Max Silhouette: Air Max Scorpion"
+  - generic [ref=f333e1730]:
+    - contentinfo [ref=f333e1731]:
+      - generic [ref=f333e1733]:
+        - generic [ref=f333e1734]:
+          - link [ref=f333e1735] [cursor=pointer]:
+            - /url: https://www.nike.com/help
+            - paragraph [ref=f333e1736]: Resources
+          - link [ref=f333e1737] [cursor=pointer]:
+            - /url: https://www.nike.com/gift-cards
+            - paragraph [ref=f333e1738]: Gift Cards
+          - link [ref=f333e1739] [cursor=pointer]:
+            - /url: https://www.nike.com/corporate-sales
+            - paragraph [ref=f333e1740]: Corporate Sales
+          - link [ref=f333e1741] [cursor=pointer]:
+            - /url: https://www.nike.com/retail
+            - paragraph [ref=f333e1742]: Find a Store
+          - link [ref=f333e1743] [cursor=pointer]:
+            - /url: https://www.nike.com/membership
+            - paragraph [ref=f333e1744]: Membership
+          - link [ref=f333e1745] [cursor=pointer]:
+            - /url: https://www.nike.com/stories
+            - paragraph [ref=f333e1746]: Nike Journal
+          - link [ref=f333e1747] [cursor=pointer]:
+            - /url: "#site-feedback"
+            - paragraph [ref=f333e1748]: Site Feedback
+        - generic [ref=f333e1749]:
+          - link [ref=f333e1750] [cursor=pointer]:
+            - /url: https://www.nike.com/help
+            - paragraph [ref=f333e1751]: Help
+          - link [ref=f333e1752] [cursor=pointer]:
+            - /url: https://www.nike.com/help
+            - paragraph [ref=f333e1753]: Get Help
+          - link [ref=f333e1754] [cursor=pointer]:
+            - /url: https://www.nike.com/orders/details/
+            - paragraph [ref=f333e1755]: Order Status
+          - link [ref=f333e1756] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/shipping-delivery
+            - paragraph [ref=f333e1757]: Shipping and Delivery
+          - link [ref=f333e1758] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/returns-policy
+            - paragraph [ref=f333e1759]: Returns
+          - link [ref=f333e1760] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/change-cancel-order
+            - paragraph [ref=f333e1761]: Order Cancellation
+          - link [ref=f333e1762] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/payment-options
+            - paragraph [ref=f333e1763]: Payment Options
+          - link [ref=f333e1764] [cursor=pointer]:
+            - /url: https://www.nike.com/orders/gift-card-lookup
+            - paragraph [ref=f333e1765]: Gift Card Balance
+          - link [ref=f333e1766] [cursor=pointer]:
+            - /url: https://www.nike.com/help/#contact
+            - paragraph [ref=f333e1767]: Contact Us
+        - generic [ref=f333e1768]:
+          - link [ref=f333e1769] [cursor=pointer]:
+            - /url: https://about.nike.com/en
+            - paragraph [ref=f333e1770]: Company
+          - link [ref=f333e1771] [cursor=pointer]:
+            - /url: https://about.nike.com/en
+            - paragraph [ref=f333e1772]: About Nike
+          - link [ref=f333e1773] [cursor=pointer]:
+            - /url: http://news.nike.com/
+            - paragraph [ref=f333e1774]: News
+          - link [ref=f333e1775] [cursor=pointer]:
+            - /url: https://jobs.nike.com/
+            - paragraph [ref=f333e1776]: Careers
+          - link [ref=f333e1777] [cursor=pointer]:
+            - /url: http://investors.nike.com/
+            - paragraph [ref=f333e1778]: Investors
+          - link [ref=f333e1779] [cursor=pointer]:
+            - /url: https://purpose.nike.com/
+            - paragraph [ref=f333e1780]: Purpose
+          - link [ref=f333e1781] [cursor=pointer]:
+            - /url: https://www.nike.com/sustainability
+            - paragraph [ref=f333e1782]: Sustainability
+          - link [ref=f333e1783] [cursor=pointer]:
+            - /url: https://www.nike.com/us/en/accessibility/#introduction
+            - paragraph [ref=f333e1784]: Accessibility
+        - generic [ref=f333e1785]:
+          - link [ref=f333e1786] [cursor=pointer]:
+            - /url: https://www.nike.com/promo-code
+            - paragraph [ref=f333e1787]: Promotions & Discounts
+          - link [ref=f333e1788] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/student-discount
+            - paragraph [ref=f333e1789]: Student
+          - link [ref=f333e1790] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/military-discount
+            - paragraph [ref=f333e1791]: Military
+          - link [ref=f333e1792] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/teacher-discount
+            - paragraph [ref=f333e1793]: Teacher
+          - link [ref=f333e1794] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/first-responder-discount
+            - paragraph [ref=f333e1795]: First Responders & Medical Professionals
+          - link [ref=f333e1796] [cursor=pointer]:
+            - /url: https://www.nike.com/help/a/birthday-terms-promo
+            - paragraph [ref=f333e1797]: Birthday
+        - button [ref=f333e1799] [cursor=pointer]: United States
+      - list [ref=f333e1804]:
+        - listitem [ref=f333e1805]:
+          - paragraph [ref=f333e1806]:
+            - generic [ref=f333e1807]: © 2026 Nike, Inc. All Rights Reserved
+        - listitem [ref=f333e1808]:
+          - group [ref=f333e1810]:
+            - menuitem [ref=f333e1811]:
+              - paragraph [ref=f333e1812]: Guides
+        - listitem [ref=f333e1813]:
+          - link [ref=f333e1814] [cursor=pointer]:
+            - /url: https://agreementservice.svs.nike.com/us/en_us/rest/agreement?agreementType=termsOfSale&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect
+            - paragraph [ref=f333e1815]: Terms of Sale
+        - listitem [ref=f333e1816]:
+          - link [ref=f333e1817] [cursor=pointer]:
+            - /url: https://agreementservice.svs.nike.com/us/en_us/rest/agreement?agreementType=termsOfUse&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect
+            - paragraph [ref=f333e1818]: Terms of Use
+        - listitem [ref=f333e1819]:
+          - link [ref=f333e1820] [cursor=pointer]:
+            - /url: https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect
+            - paragraph [ref=f333e1821]: Nike Privacy Policy
+        - listitem [ref=f333e1822]:
+          - link [ref=f333e1823] [cursor=pointer]:
+            - /url: https://www.nike.com/guest/settings/do-not-share-my-data
+            - paragraph [ref=f333e1825]: Your Privacy Choices
+        - listitem [ref=f333e1826]:
+          - link [ref=f333e1827] [cursor=pointer]:
+            - /url: https://about.nike.com/en/impact-resources/statement-on-forced-labor
+            - paragraph [ref=f333e1828]: CA Supply Chains Act
+    - status [ref=f333e1829]
+  - alert [ref=f333e1830]

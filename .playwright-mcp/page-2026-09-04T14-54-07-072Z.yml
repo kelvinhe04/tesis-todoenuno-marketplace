@@ -1,0 +1,16 @@
+- generic [ref=f1e3]:
+  - complementary [ref=f1e4]:
+    - link "VENDEDOR" [ref=f1e5] [cursor=pointer]:
+      - /url: /
+    - navigation "Panel de vendedor" [ref=f1e6]:
+      - link "Dashboard" [ref=f1e7] [cursor=pointer]:
+        - /url: /vendedor
+      - link "Publicaciones" [ref=f1e13] [cursor=pointer]:
+        - /url: /vendedor/publicaciones
+      - link "Órdenes recibidas" [ref=f1e18] [cursor=pointer]:
+        - /url: /vendedor/ordenes
+    - button "Cerrar sesión" [ref=f1e22] [cursor=pointer]
+  - generic [ref=f1e27]:
+    - heading "Mis publicaciones" [level=1] [ref=f1e28]
+    - link "+ Nueva publicación" [ref=f1e29] [cursor=pointer]:
+      - /url: /vendedor/publicaciones/nueva

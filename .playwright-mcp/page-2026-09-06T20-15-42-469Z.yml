@@ -1,0 +1,58 @@
+- generic [ref=f57e1]:
+  - generic [ref=f57e2]:
+    - banner:
+      - generic [ref=f57e4]:
+        - link [ref=f57e5] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f57e6]:
+          - generic [ref=f57e7]:
+            - generic [ref=f57e8]: Services
+            - generic [ref=f57e14]: Platform
+            - link "Pricing" [ref=f57e20] [cursor=pointer]:
+              - /url: /pricing
+            - generic [ref=f57e22]: Resources
+            - generic [ref=f57e28]: About
+          - generic [ref=f57e34]:
+            - link "Log in" [ref=f57e35] [cursor=pointer]:
+              - /url: https://bench.co/login
+            - link "Free Trial" [ref=f57e37] [cursor=pointer]:
+              - /url: /old-home-6
+            - link "Schedule Call" [ref=f57e38] [cursor=pointer]:
+              - /url: https://www.bench.co/#schedule-call
+    - banner:
+      - generic [ref=f57e40]:
+        - link [ref=f57e41] [cursor=pointer]:
+          - /url: /
+        - generic [ref=f57e42]:
+          - generic [ref=f57e43]:
+            - generic [ref=f57e44]: Services
+            - generic [ref=f57e50]: Platform
+            - link "Pricing" [ref=f57e56] [cursor=pointer]:
+              - /url: /pricing
+            - generic [ref=f57e58]: Resources
+            - generic [ref=f57e64]: About
+          - generic [ref=f57e70]:
+            - link "Log in" [ref=f57e71] [cursor=pointer]:
+              - /url: https://bench.co/login
+            - link "Free Trial" [ref=f57e73] [cursor=pointer]:
+              - /url: https://signup.bench.co/
+            - link "Schedule Call" [ref=f57e74] [cursor=pointer]:
+              - /url: https://www.bench.co/#schedule-call
+    - main [ref=f57e75]:
+      - heading "We're working hard at updating our website, please stay tuned for further news." [level=1] [ref=f57e84]
+  - generic:
+    - region "Cookie banner" [ref=f57e87]:
+      - alertdialog "Privacy" [ref=f57e88]:
+        - generic [ref=f57e90]:
+          - paragraph [ref=f57e93]:
+            - text: By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+            - link "More information about your privacy" [ref=f57e94] [cursor=pointer]:
+              - /url: https://bench.co/cookie-policy/
+              - text: More information
+          - generic [ref=f57e96]:
+            - button "Cookies Settings" [ref=f57e97] [cursor=pointer]
+            - button "Reject All" [ref=f57e98] [cursor=pointer]
+            - button "Accept All Cookies" [ref=f57e99] [cursor=pointer]
+        - button "Close" [ref=f57e101] [cursor=pointer]
+    - text: • • • • • Cookies Settings
+  - button "Hello, have a question? Let’s chat." [ref=f57e102] [cursor=pointer]

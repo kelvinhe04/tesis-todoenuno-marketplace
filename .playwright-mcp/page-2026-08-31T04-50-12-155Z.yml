@@ -1,0 +1,133 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "TodoEnUno" [ref=f1e5] [cursor=pointer]:
+        - /url: "#"
+      - textbox "Buscar productos o servicios" [ref=f1e10]
+      - navigation [ref=f1e11]:
+        - link "Explorar" [ref=f1e12] [cursor=pointer]:
+          - /url: "#"
+        - link "Vender en TodoEnUno" [ref=f1e13] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f1e14]:
+        - button "Favoritos" [ref=f1e15] [cursor=pointer]
+        - button "Carrito" [ref=f1e18] [cursor=pointer]:
+          - generic [ref=f1e23]: "2"
+        - button "Cuenta" [ref=f1e24] [cursor=pointer]
+  - generic [ref=f1e28]:
+    - generic [ref=f1e29]:
+      - generic [ref=f1e30]:
+        - paragraph [ref=f1e31]: Productos y servicios de vendedores independientes
+        - heading "Encuentra algo hecho por alguien que sabe lo que hace." [level=1] [ref=f1e32]
+        - paragraph [ref=f1e33]: "TodoEnUno reúne a talleres, estudios y profesionales independientes en un solo lugar: compra piezas hechas a mano o contrata un servicio, con pago seguro y todo en un mismo carrito."
+        - generic [ref=f1e34]:
+          - link "Explorar catálogo" [ref=f1e35] [cursor=pointer]:
+            - /url: "#"
+          - link "Vender en TodoEnUno" [ref=f1e36] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f1e37]:
+        - generic [ref=f1e39]: Cerámica artesanal
+        - generic [ref=f1e44]: Servicios
+        - generic [ref=f1e48]: "4.9"
+        - generic [ref=f1e51]: $38.00
+    - generic [ref=f1e52]:
+      - heading "Categorías" [level=2] [ref=f1e54]
+      - generic [ref=f1e55]:
+        - generic [ref=f1e56]: Hogar y decoración
+        - generic [ref=f1e62]: Moda y accesorios
+        - generic [ref=f1e68]: Tecnología
+        - generic [ref=f1e74]: Servicios profesionales
+        - generic [ref=f1e79]: Arte y manualidades
+        - generic [ref=f1e88]: Belleza y cuidado
+    - generic [ref=f1e94]:
+      - generic [ref=f1e95]:
+        - heading "Recién publicado" [level=2] [ref=f1e96]
+        - link "Ver todo" [ref=f1e97] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f1e100]:
+        - generic [ref=f1e106]:
+          - paragraph [ref=f1e107]: Hogar y decoración
+          - paragraph [ref=f1e108]: Lámpara de mesa en cerámica artesanal
+          - paragraph [ref=f1e109]: Taller Barro Fino
+          - generic [ref=f1e110]:
+            - generic [ref=f1e111]: $38.00
+            - generic [ref=f1e112]: "4.9"
+        - generic [ref=f1e120]:
+          - paragraph [ref=f1e121]: Tecnología
+          - paragraph [ref=f1e122]: Audífonos inalámbricos ClearSound Pro
+          - paragraph [ref=f1e123]: TecnoExpress PTY
+          - generic [ref=f1e124]:
+            - generic [ref=f1e125]: $64.99
+            - generic [ref=f1e126]: "4.7"
+        - generic [ref=f1e134]:
+          - paragraph [ref=f1e135]: Moda y accesorios
+          - paragraph [ref=f1e136]: Bolso tejido a mano en fibra natural
+          - paragraph [ref=f1e137]: Manos de Azuero
+          - generic [ref=f1e138]:
+            - generic [ref=f1e139]: $45.00
+            - generic [ref=f1e140]: "5.0"
+        - generic [ref=f1e148]:
+          - paragraph [ref=f1e149]: Moda y accesorios
+          - paragraph [ref=f1e150]: Reloj minimalista, correa de cuero
+          - paragraph [ref=f1e151]: Estudio Horas
+          - generic [ref=f1e152]:
+            - generic [ref=f1e153]: $89.00
+            - generic [ref=f1e154]: "4.8"
+        - generic [ref=f1e161]:
+          - paragraph [ref=f1e162]: Servicios profesionales
+          - paragraph [ref=f1e163]: Diseño de logotipo profesional
+          - paragraph [ref=f1e164]: Estudio Gráfico Norte
+          - generic [ref=f1e165]:
+            - generic [ref=f1e166]: $120.00
+            - generic [ref=f1e167]: "4.9"
+        - generic [ref=f1e175]:
+          - paragraph [ref=f1e176]: Hogar y decoración
+          - paragraph [ref=f1e177]: Planta suculenta en macetero de barro
+          - paragraph [ref=f1e178]: Vivero Verde Chico
+          - generic [ref=f1e179]:
+            - generic [ref=f1e180]: $15.00
+            - generic [ref=f1e181]: "4.6"
+        - generic [ref=f1e189]:
+          - paragraph [ref=f1e190]: Hogar y decoración
+          - paragraph [ref=f1e191]: Set de tazas de cerámica (x4)
+          - paragraph [ref=f1e192]: Taller Barro Fino
+          - generic [ref=f1e193]:
+            - generic [ref=f1e194]: $32.00
+            - generic [ref=f1e195]: "4.8"
+        - generic [ref=f1e203]:
+          - paragraph [ref=f1e204]: Servicios profesionales
+          - paragraph [ref=f1e205]: Sesión de fotografía de producto
+          - paragraph [ref=f1e206]: Lente Urbano Studio
+          - generic [ref=f1e207]:
+            - generic [ref=f1e208]: $75.00
+            - generic [ref=f1e209]: "5.0"
+  - contentinfo [ref=f1e212]:
+    - generic [ref=f1e213]:
+      - generic [ref=f1e214]:
+        - link "TodoEnUno" [ref=f1e215] [cursor=pointer]:
+          - /url: "#"
+        - paragraph [ref=f1e216]: Un marketplace para talleres, estudios y profesionales independientes.
+      - generic [ref=f1e217]:
+        - generic [ref=f1e218]:
+          - heading "Comprar" [level=4] [ref=f1e219]
+          - link "Explorar catálogo" [ref=f1e220] [cursor=pointer]:
+            - /url: "#"
+          - link "Mis órdenes" [ref=f1e221] [cursor=pointer]:
+            - /url: "#"
+          - link "Mi carrito" [ref=f1e222] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f1e223]:
+          - heading "Vender" [level=4] [ref=f1e224]
+          - link "Panel de vendedor" [ref=f1e225] [cursor=pointer]:
+            - /url: "#"
+          - link "Publicar producto" [ref=f1e226] [cursor=pointer]:
+            - /url: "#"
+          - link "Publicar servicio" [ref=f1e227] [cursor=pointer]:
+            - /url: "#"
+        - generic [ref=f1e228]:
+          - heading "Cuenta" [level=4] [ref=f1e229]
+          - link "Iniciar sesión" [ref=f1e230] [cursor=pointer]:
+            - /url: "#"
+          - link "Crear cuenta" [ref=f1e231] [cursor=pointer]:
+            - /url: "#"
+    - generic [ref=f1e232]: © 2026 TodoEnUno — prototipo de trabajo de graduación.

@@ -1,0 +1,100 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - generic [ref=f1e5]:
+      - link "TodoEnUno" [ref=f1e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=f1e7]:
+        - searchbox "Buscar productos y servicios..." [ref=f1e12]
+      - navigation "Principal" [ref=f1e13]:
+        - link "Categorías" [ref=f1e14] [cursor=pointer]:
+          - /url: /catalogo
+        - link "Mis órdenes" [ref=f1e15] [cursor=pointer]:
+          - /url: /ordenes
+        - link "Panel de vendedor" [ref=f1e16] [cursor=pointer]:
+          - /url: /vendedor
+      - generic [ref=f1e17]:
+        - link "Notificaciones" [ref=f1e18] [cursor=pointer]:
+          - /url: /perfil
+        - link "Carrito" [ref=f1e22] [cursor=pointer]:
+          - /url: /carrito
+        - link "Mi perfil" [ref=f1e27] [cursor=pointer]:
+          - /url: /perfil
+        - button "Salir" [ref=f1e31] [cursor=pointer]
+  - main [ref=f1e32]:
+    - generic [ref=f1e33]:
+      - complementary [ref=f1e34]:
+        - link "VENDEDOR" [ref=f1e35] [cursor=pointer]:
+          - /url: /
+        - navigation "Panel de vendedor" [ref=f1e36]:
+          - link "Dashboard" [ref=f1e37] [cursor=pointer]:
+            - /url: /vendedor
+          - link "Publicaciones" [ref=f1e43] [cursor=pointer]:
+            - /url: /vendedor/publicaciones
+          - link "Órdenes recibidas" [ref=f1e48] [cursor=pointer]:
+            - /url: /vendedor/ordenes
+        - button "Cerrar sesión" [ref=f1e52] [cursor=pointer]
+      - generic [ref=f1e56]:
+        - heading "Crear publicación" [level=1] [ref=f1e58]
+        - generic [ref=f1e60]:
+          - generic [ref=f1e61]:
+            - button "Producto" [ref=f1e62] [cursor=pointer]
+            - button "Servicio" [ref=f1e63] [cursor=pointer]
+          - generic [ref=f1e64]:
+            - generic [ref=f1e65]: Nombre
+            - textbox "Nombre" [ref=f1e66]
+          - generic [ref=f1e67]:
+            - generic [ref=f1e68]: Marca (opcional)
+            - textbox "Marca (opcional)" [ref=f1e69]:
+              - /placeholder: Ej. Acer, Logitech, propia...
+          - generic [ref=f1e70]:
+            - generic [ref=f1e71]: Descripción
+            - textbox "Descripción" [ref=f1e72]
+          - generic [ref=f1e73]:
+            - generic [ref=f1e74]:
+              - generic [ref=f1e75]: Categoría
+              - combobox "Categoría" [ref=f1e76]:
+                - option "Electrónica" [selected]
+                - option "Hogar"
+                - option "Moda"
+                - option "Servicios profesionales"
+                - option "Belleza"
+            - generic [ref=f1e77]:
+              - generic [ref=f1e78]: Precio (USD)
+              - spinbutton "Precio (USD)" [ref=f1e79]
+          - generic [ref=f1e80]:
+            - generic [ref=f1e81]: Stock disponible
+            - spinbutton "Stock disponible" [ref=f1e82]
+          - generic [ref=f1e83]:
+            - generic [ref=f1e84]: Imagen (URL, opcional)
+            - textbox "Imagen (URL, opcional)" [ref=f1e91]:
+              - /placeholder: https://...
+          - generic [ref=f1e92]:
+            - button "Guardar" [ref=f1e93] [cursor=pointer]
+            - button "Cancelar" [ref=f1e94] [cursor=pointer]
+  - contentinfo [ref=f1e95]:
+    - generic [ref=f1e96]:
+      - generic [ref=f1e97]:
+        - generic [ref=f1e98]: TodoEnUno
+        - paragraph [ref=f1e99]: Un marketplace para vendedores y compradores independientes. Prototipo académico construido sobre una arquitectura de microservicios.
+      - generic [ref=f1e100]:
+        - generic [ref=f1e101]:
+          - heading "Comprar" [level=4] [ref=f1e102]
+          - link "Explorar catálogo" [ref=f1e103] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Mis órdenes" [ref=f1e104] [cursor=pointer]:
+            - /url: /ordenes
+          - link "Mi carrito" [ref=f1e105] [cursor=pointer]:
+            - /url: /carrito
+        - generic [ref=f1e106]:
+          - heading "Vender" [level=4] [ref=f1e107]
+          - link "Panel de vendedor" [ref=f1e108] [cursor=pointer]:
+            - /url: /vendedor
+          - generic [ref=f1e109]: Publicar producto
+          - generic [ref=f1e110]: Publicar servicio
+        - generic [ref=f1e111]:
+          - heading "Cuenta" [level=4] [ref=f1e112]
+          - link "Iniciar sesión" [ref=f1e113] [cursor=pointer]:
+            - /url: /login
+          - link "Crear cuenta" [ref=f1e114] [cursor=pointer]:
+            - /url: /registro
+    - generic [ref=f1e115]: © 2026 TodoEnUno — prototipo de trabajo de graduación.

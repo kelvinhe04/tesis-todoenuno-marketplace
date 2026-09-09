@@ -1,0 +1,72 @@
+- generic [ref=f3e2]:
+  - banner [ref=f3e3]:
+    - generic [ref=f3e5]:
+      - link "TodoEnUno" [ref=f3e6] [cursor=pointer]:
+        - /url: /
+      - search [ref=f3e7]:
+        - searchbox "Buscar productos y servicios..." [ref=f3e12]
+      - navigation "Principal" [ref=f3e13]:
+        - link "Categorías" [ref=f3e14] [cursor=pointer]:
+          - /url: /catalogo
+      - generic [ref=f3e15]:
+        - link "Iniciar sesión" [ref=f3e16] [cursor=pointer]:
+          - /url: /login
+        - link "Crear cuenta" [ref=f3e17] [cursor=pointer]:
+          - /url: /registro
+  - main [ref=f3e18]:
+    - generic [ref=f3e20]:
+      - link "TodoEnUno" [ref=f3e21] [cursor=pointer]:
+        - /url: /
+      - generic [ref=f3e22]:
+        - heading "Crear cuenta" [level=1] [ref=f3e23]
+        - paragraph [ref=f3e24]: Regístrate como comprador o vendedor
+      - tablist "Tipo de cuenta" [ref=f3e25]:
+        - tab "Comprador" [selected] [ref=f3e26] [cursor=pointer]
+        - tab "Vendedor" [ref=f3e27] [cursor=pointer]
+      - generic [ref=f3e28]:
+        - generic [ref=f3e29]: Nombre completo
+        - textbox "Nombre completo" [ref=f3e30]:
+          - /placeholder: Ej. Kelvin He
+      - generic [ref=f3e31]:
+        - generic [ref=f3e32]: Correo electrónico
+        - textbox "Correo electrónico" [ref=f3e33]:
+          - /placeholder: correo@dominio.com
+      - generic [ref=f3e34]:
+        - generic [ref=f3e35]: Contraseña
+        - textbox "Contraseña" [ref=f3e36]:
+          - /placeholder: Mínimo 8 caracteres
+      - generic [ref=f3e37]:
+        - generic [ref=f3e38]: Confirmar contraseña
+        - textbox "Confirmar contraseña" [ref=f3e39]
+      - button "Crear cuenta" [ref=f3e40] [cursor=pointer]
+      - paragraph [ref=f3e41]:
+        - text: ¿Ya tienes cuenta?
+        - link "Iniciar sesión" [ref=f3e42] [cursor=pointer]:
+          - /url: /login
+  - contentinfo [ref=f3e43]:
+    - generic [ref=f3e44]:
+      - generic [ref=f3e45]:
+        - generic [ref=f3e46]: TodoEnUno
+        - paragraph [ref=f3e47]: Un marketplace para vendedores y compradores independientes. Prototipo académico construido sobre una arquitectura de microservicios.
+      - generic [ref=f3e48]:
+        - generic [ref=f3e49]:
+          - heading "Comprar" [level=4] [ref=f3e50]
+          - link "Explorar catálogo" [ref=f3e51] [cursor=pointer]:
+            - /url: /catalogo
+          - link "Mis órdenes" [ref=f3e52] [cursor=pointer]:
+            - /url: /ordenes
+          - link "Mi carrito" [ref=f3e53] [cursor=pointer]:
+            - /url: /carrito
+        - generic [ref=f3e54]:
+          - heading "Vender" [level=4] [ref=f3e55]
+          - link "Panel de vendedor" [ref=f3e56] [cursor=pointer]:
+            - /url: /vendedor
+          - generic [ref=f3e57]: Publicar producto
+          - generic [ref=f3e58]: Publicar servicio
+        - generic [ref=f3e59]:
+          - heading "Cuenta" [level=4] [ref=f3e60]
+          - link "Iniciar sesión" [ref=f3e61] [cursor=pointer]:
+            - /url: /login
+          - link "Crear cuenta" [ref=f3e62] [cursor=pointer]:
+            - /url: /registro
+    - generic [ref=f3e63]: © 2026 TodoEnUno — prototipo de trabajo de graduación.
