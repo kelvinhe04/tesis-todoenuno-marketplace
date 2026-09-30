@@ -17,7 +17,9 @@ export function ProductCard({ producto }: { producto: Producto }) {
   const esProducto = producto.tipo === 'producto'
   return (
     <Link to={`/productos/${producto._id}`} className={`card ${styles.card}`}>
-      <div className={`${styles.imageWrap} ${imagen && esProducto ? styles.blanco : styles[tonoPara(producto._id)]}`}>
+      <div
+        className={`${styles.imageWrap} ${imagen && esProducto ? styles.blanco : styles[tonoPara(producto._id)]} ${!esProducto ? styles.full : ''}`}
+      >
         {imagen ? (
           <img
             src={imagen}

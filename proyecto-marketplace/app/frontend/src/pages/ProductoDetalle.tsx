@@ -17,7 +17,17 @@ import {
   type Reserva,
   type SlotDisponible,
 } from '../lib/api'
-import { IconImage, IconMinus, IconPlus, IconStar, IconUser } from '../components/icons'
+import {
+  IconChevronLeft,
+  IconChevronRight,
+  IconClose,
+  IconImage,
+  IconMinus,
+  IconPlus,
+  IconSearch,
+  IconStar,
+  IconUser,
+} from '../components/icons'
 import { Stars } from '../components/Stars'
 import { Select } from '../components/Select'
 import { MapaLocal } from '../components/MapaLocal'
@@ -57,6 +67,7 @@ export default function ProductoDetalle() {
   const [mensaje, setMensaje] = useState<string | null>(null)
   const [agregando, setAgregando] = useState(false)
   const [imagenActiva, setImagenActiva] = useState(0)
+  const [zoomAbierto, setZoomAbierto] = useState(false)
   const [vendedorNombre, setVendedorNombre] = useState<string | null>(null)
 
   const hoy = new Date().toISOString().slice(0, 10)
@@ -83,6 +94,7 @@ export default function ProductoDetalle() {
       .then((p) => {
         setProducto(p)
         setImagenActiva(0)
+        setZoomAbierto(false)
         setVendedorNombre(null)
         registrarVisto(p._id)
         authApi
@@ -122,6 +134,18 @@ export default function ProductoDetalle() {
       .catch(() => setSlots([]))
       .finally(() => setCargandoSlots(false))
   }, [id, fecha, producto])
+
+  useEffect(() => {
+    if (!zoomAbierto) return
+    const total = producto?.imagenes?.length || (producto?.imagenUrl ? 1 : 0)
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setZoomAbierto(false)
+      if (total > 1 && e.key === 'ArrowRight') setImagenActiva((i) => (i + 1) % total)
+      if (total > 1 && e.key === 'ArrowLeft') setImagenActiva((i) => (i - 1 + total) % total)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [zoomAbierto, producto])
 
   const elegirSlot = async (slot: SlotDisponible) => {
     if (!id) return
@@ -185,6 +209,13 @@ export default function ProductoDetalle() {
 
   const esServicio = producto.tipo === 'servicio'
   const sinStock = !esServicio && producto.stock <= 0
+  const imagenes =
+    producto.imagenes && producto.imagenes.length > 0
+      ? producto.imagenes
+      : producto.imagenUrl
+        ? [producto.imagenUrl]
+        : []
+  const tieneImagen = imagenes.length > 0
 
   const agregarAlCarrito = async (irACheckout: boolean) => {
     if (!usuario) {
@@ -223,26 +254,34 @@ export default function ProductoDetalle() {
 
       <div className={styles.layout}>
         <div className={styles.gallery}>
-          <div className={`${styles.mainImage} ${!esServicio ? styles.blanco : ''}`}>
-            {producto.imagenes && producto.imagenes.length > 0 ? (
-              <img
-                src={producto.imagenes[imagenActiva] ?? producto.imagenes[0]}
-                alt={producto.nombre}
-                className={!esServicio ? styles.contain : styles.cover}
-              />
-            ) : producto.imagenUrl ? (
-              <img src={producto.imagenUrl} alt={producto.nombre} className={!esServicio ? styles.contain : styles.cover} />
+          <div
+            className={`${styles.mainImage} ${!esServicio ? `${styles.blanco} ${styles.padded}` : ''} ${tieneImagen ? styles.zoomable : ''}`}
+            onClick={() => tieneImagen && setZoomAbierto(true)}
+          >
+            {tieneImagen ? (
+              <>
+                <img
+                  src={imagenes[imagenActiva] ?? imagenes[0]}
+                  alt={producto.nombre}
+                  className={!esServicio ? styles.contain : styles.cover}
+                />
+                <span className={styles.zoomHint}>
+                  <IconSearch width={16} height={16} />
+                </span>
+              </>
             ) : (
               <IconImage width={56} height={56} />
             )}
           </div>
-          {producto.imagenes && producto.imagenes.length > 1 && (
+          {imagenes.length > 1 && (
             <div className={styles.thumbStrip}>
-              {producto.imagenes.map((img, idx) => (
+              {imagenes.map((img, idx) => (
                 <button
                   key={idx}
                   type="button"
-                  className={`${styles.thumbBtn} ${!esServicio ? styles.blanco : ''} ${idx === imagenActiva ? styles.active : ''}`}
+                  className={`${styles.thumbBtn} ${!esServicio ? `${styles.blanco} ${styles.padded}` : ''} ${idx === imagenActiva ? styles.active : ''}`}
+                  onMouseEnter={() => setImagenActiva(idx)}
+                  onFocus={() => setImagenActiva(idx)}
                   onClick={() => setImagenActiva(idx)}
                 >
                   <img src={img} alt={`${producto.nombre} ${idx + 1}`} className={!esServicio ? styles.contain : styles.cover} />
@@ -396,6 +435,46 @@ export default function ProductoDetalle() {
           {mensaje && <p className={mensaje.includes('agregó') ? 'hint-text' : 'error-text'}>{mensaje}</p>}
         </div>
       </div>
+
+      {zoomAbierto && tieneImagen && (
+        <div className={styles.zoomOverlay} onClick={() => setZoomAbierto(false)}>
+          <button type="button" className={styles.zoomClose} onClick={() => setZoomAbierto(false)} aria-label="Cerrar">
+            <IconClose width={20} height={20} />
+          </button>
+          {imagenes.length > 1 && (
+            <button
+              type="button"
+              className={`${styles.zoomNav} ${styles.zoomNavLeft}`}
+              onClick={(e) => {
+                e.stopPropagation()
+                setImagenActiva((i) => (i - 1 + imagenes.length) % imagenes.length)
+              }}
+              aria-label="Imagen anterior"
+            >
+              <IconChevronLeft width={22} height={22} />
+            </button>
+          )}
+          <img
+            src={imagenes[imagenActiva] ?? imagenes[0]}
+            alt={producto.nombre}
+            className={styles.zoomImg}
+            onClick={(e) => e.stopPropagation()}
+          />
+          {imagenes.length > 1 && (
+            <button
+              type="button"
+              className={`${styles.zoomNav} ${styles.zoomNavRight}`}
+              onClick={(e) => {
+                e.stopPropagation()
+                setImagenActiva((i) => (i + 1) % imagenes.length)
+              }}
+              aria-label="Imagen siguiente"
+            >
+              <IconChevronRight width={22} height={22} />
+            </button>
+          )}
+        </div>
+      )}
 
       <div className={styles.section}>
         <h2>Descripción</h2>

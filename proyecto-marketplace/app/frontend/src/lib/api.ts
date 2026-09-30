@@ -188,6 +188,7 @@ export function imagenPrincipal(p: { imagenes?: string[]; imagenUrl?: string }):
   return p.imagenes?.[0] || p.imagenUrl
 }
 
+
 function aQueryString(params: Record<string, unknown>): string {
   const usp = new URLSearchParams()
   for (const [k, v] of Object.entries(params)) {

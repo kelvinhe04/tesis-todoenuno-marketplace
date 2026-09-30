@@ -40,6 +40,30 @@
   background: #fff;
 }
 
+.mainImage.padded {
+  padding: 1rem;
+}
+
+.mainImage.zoomable {
+  cursor: zoom-in;
+}
+
+.zoomHint {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  pointer-events: none;
+}
+
 .mainImage img {
   width: 100%;
   height: 100%;
@@ -74,6 +98,10 @@
 
 .thumbBtn.blanco {
   background: #fff;
+}
+
+.thumbBtn.padded {
+  padding: 0.375rem;
 }
 
 .thumbBtn.active {
@@ -214,4 +242,97 @@
 .specRow dd {
   margin: 0;
   font-weight: 600;
+}
+
+.zoomOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 17, 10, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  z-index: 1000;
+  cursor: zoom-out;
+  animation: zoomFadeIn 0.15s ease;
+}
+
+.zoomImg {
+  max-width: min(90vw, 60rem);
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  cursor: default;
+  background: #fff;
+  animation: zoomPopIn 0.15s ease;
+}
+
+.zoomClose {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.zoomClose:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.zoomNav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.zoomNav:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.zoomNavLeft {
+  left: 1.25rem;
+}
+
+.zoomNavRight {
+  right: 1.25rem;
+}
+
+@keyframes zoomFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

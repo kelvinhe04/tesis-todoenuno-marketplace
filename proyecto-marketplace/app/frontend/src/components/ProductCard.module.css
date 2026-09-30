@@ -52,6 +52,10 @@
   background: #fff;
 }
 
+.imageWrap.full {
+  padding: 0;
+}
+
 .imageWrap.thumb1 {
   background: oklch(91% 0.045 152);
 }
