@@ -15,3 +15,6 @@
 # OS / editor
 .DS_Store
 *.local
+
+# Playwright MCP browser-testing artifacts (screenshots, snapshots, console logs)
+.playwright-mcp/
