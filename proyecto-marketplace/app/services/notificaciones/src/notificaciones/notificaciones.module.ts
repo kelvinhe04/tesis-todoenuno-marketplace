@@ -5,6 +5,7 @@ import { Notificacion } from './notificacion.entity';
 import { NotificacionesController } from './notificaciones.controller';
 import { NotificacionesService } from './notificaciones.service';
 import { RabbitmqService } from './rabbitmq.service';
+import { EmailService } from './email.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Module({
@@ -15,6 +16,6 @@ import { JwtAuthGuard } from '../auth/jwt-auth.guard';
     }),
   ],
   controllers: [NotificacionesController],
-  providers: [NotificacionesService, RabbitmqService, JwtAuthGuard],
+  providers: [NotificacionesService, RabbitmqService, EmailService, JwtAuthGuard],
 })
 export class NotificacionesModule {}

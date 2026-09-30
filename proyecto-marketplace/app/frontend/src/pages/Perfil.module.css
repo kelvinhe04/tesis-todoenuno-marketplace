@@ -12,6 +12,39 @@
   gap: 1rem;
 }
 
+.profileEditCard {
+  align-items: flex-start;
+}
+
+.passwordWrap {
+  position: relative;
+}
+
+.passwordWrap input {
+  padding-right: 2.75rem;
+}
+
+.eyeToggle {
+  position: absolute;
+  top: 50%;
+  right: 0.625rem;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: none;
+  color: var(--color-text-faint);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.eyeToggle:hover {
+  color: var(--color-text-muted);
+}
+
 .avatar {
   width: 3.5rem;
   height: 3.5rem;

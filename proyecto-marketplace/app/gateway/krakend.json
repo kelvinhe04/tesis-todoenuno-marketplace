@@ -78,6 +78,13 @@
       "backend": [{ "url_pattern": "/auth/me", "encoding": "no-op", "host": ["http://auth:3000"] }]
     },
     {
+      "endpoint": "/api/auth/me",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/auth/me", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
       "endpoint": "/api/catalogo",
       "method": "GET",
       "output_encoding": "no-op",

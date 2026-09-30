@@ -1,12 +1,15 @@
 import { forwardRef, Inject, Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import * as amqp from 'amqplib';
 import { NotificacionesService } from './notificaciones.service';
+import { EmailService } from './email.service';
 import { TipoNotificacion } from './notificacion.entity';
 
 const EXCHANGE = 'eventos';
 const QUEUE = 'notificaciones.eventos';
 const ROUTING_KEYS = ['orden.creada', 'pago.confirmado', 'pago.rechazado'];
 const MAX_LOG = 20;
+const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
+const ORDENES_URL = process.env.ORDENES_URL || 'http://ordenes:3000';
 
 interface EventoOrdenCreada {
   ordenId?: string;
@@ -31,6 +34,7 @@ export class RabbitmqService implements OnModuleInit {
   constructor(
     @Inject(forwardRef(() => NotificacionesService))
     private readonly notificacionesService: NotificacionesService,
+    private readonly email: EmailService,
   ) {}
 
   async onModuleInit() {
@@ -99,6 +103,48 @@ export class RabbitmqService implements OnModuleInit {
     }
 
     await this.notificacionesService.crear(payload.compradorId, tipo, mensaje, payload.ordenId);
+    await this.notificarPorCorreo(payload.compradorId, 'TodoEnUno — actualización de tu orden', mensaje);
+
+    if (routingKey === 'pago.confirmado') {
+      await this.notificarVendedores(payload.ordenId);
+    }
+  }
+
+  // RF-21: al confirmarse el pago, cada vendedor con al menos un item en la
+  // orden recibe su propia notificacion (in-app y por correo).
+  private async notificarVendedores(ordenId: string) {
+    try {
+      const orden = await this.obtenerOrdenInterna(ordenId);
+      const vendedores = [...new Set(orden.items.map((it) => it.vendedorId))];
+      for (const vendedorId of vendedores) {
+        const mensaje = `Recibiste una nueva orden pagada (#${ordenId.slice(0, 8)}).`;
+        await this.notificacionesService.crear(vendedorId, 'nueva_orden_vendedor', mensaje, ordenId);
+        await this.notificarPorCorreo(vendedorId, 'TodoEnUno — nueva orden pagada', mensaje);
+      }
+    } catch (err) {
+      this.logger.warn(`No se pudo notificar a los vendedores de la orden ${ordenId}: ${err}`);
+    }
+  }
+
+  private async notificarPorCorreo(usuarioId: string, asunto: string, mensaje: string) {
+    try {
+      const { email } = await this.obtenerEmailUsuario(usuarioId);
+      await this.email.enviar(email, asunto, mensaje);
+    } catch (err) {
+      this.logger.warn(`No se pudo enviar el correo al usuario ${usuarioId}: ${err}`);
+    }
+  }
+
+  private async obtenerEmailUsuario(usuarioId: string): Promise<{ email: string }> {
+    const resp = await fetch(`${AUTH_URL}/auth/internal/email/${usuarioId}`);
+    if (!resp.ok) throw new Error(`auth respondió ${resp.status}`);
+    return resp.json();
+  }
+
+  private async obtenerOrdenInterna(ordenId: string): Promise<{ items: Array<{ vendedorId: string }> }> {
+    const resp = await fetch(`${ORDENES_URL}/ordenes/internal/${ordenId}`);
+    if (!resp.ok) throw new Error(`ordenes respondió ${resp.status}`);
+    return resp.json();
   }
 
   async publish(routingKey: string, payload: Record<string, unknown>) {

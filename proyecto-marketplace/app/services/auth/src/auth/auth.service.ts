@@ -8,6 +8,7 @@ import { Usuario } from '../usuarios/usuario.entity';
 import { RegistroDto } from './dto/registro.dto';
 import { LoginDto } from './dto/login.dto';
 import { GoogleLoginDto } from './dto/google-login.dto';
+import { ActualizarPerfilDto } from './dto/actualizar-perfil.dto';
 
 const SALT_ROUNDS = 10;
 
@@ -89,11 +90,42 @@ export class AuthService {
     return this.aPublico(usuario);
   }
 
+  async actualizarPerfil(usuarioId: string, dto: ActualizarPerfilDto) {
+    const usuario = await this.usuarios.findOne({ where: { id: usuarioId } });
+    if (!usuario) {
+      throw new UnauthorizedException('Usuario no encontrado');
+    }
+
+    if (dto.nombre) {
+      usuario.nombre = dto.nombre;
+    }
+
+    if (dto.passwordNueva) {
+      if (usuario.passwordHash && !(await bcrypt.compare(dto.passwordActual, usuario.passwordHash))) {
+        throw new UnauthorizedException('La contraseña actual no es correcta');
+      }
+      usuario.passwordHash = await bcrypt.hash(dto.passwordNueva, SALT_ROUNDS);
+    }
+
+    await this.usuarios.save(usuario);
+    return this.aPublico(usuario);
+  }
+
   async obtenerPerfilPublico(usuarioId: string) {
     const usuario = await this.usuarios.findOne({ where: { id: usuarioId } });
     if (!usuario) {
       throw new NotFoundException('Usuario no encontrado');
     }
     return { id: usuario.id, nombre: usuario.nombre };
+  }
+
+  // Uso exclusivo de otros microservicios dentro de la red interna de Docker
+  // (p. ej. Notificaciones para enviar correos) — no se expone en el API Gateway.
+  async obtenerEmailInterno(usuarioId: string) {
+    const usuario = await this.usuarios.findOne({ where: { id: usuarioId } });
+    if (!usuario) {
+      throw new NotFoundException('Usuario no encontrado');
+    }
+    return { email: usuario.email, nombre: usuario.nombre };
   }
 }

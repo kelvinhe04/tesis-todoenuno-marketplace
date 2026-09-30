@@ -36,6 +36,12 @@ export class OrdenesController {
     return this.ordenes.obtener(id, request.usuario.sub, request.usuario.rol);
   }
 
+  // Uso exclusivo de otros microservicios (no se expone en el API Gateway).
+  @Get('internal/:id')
+  obtenerInterno(@Param('id') id: string) {
+    return this.ordenes.obtenerInterno(id);
+  }
+
   @UseGuards(JwtAuthGuard)
   @Patch(':id/estado-entrega')
   actualizarEstadoEntrega(

@@ -118,6 +118,8 @@ services:
       DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672
       JWT_SECRET: ${JWT_SECRET}
+      AUTH_URL: http://auth:3000
+      ORDENES_URL: http://ordenes:3000
     ports:
       - "3006:3000"
     depends_on:

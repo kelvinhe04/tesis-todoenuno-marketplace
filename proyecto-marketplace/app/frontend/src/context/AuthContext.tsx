@@ -1,9 +1,11 @@
 import { createContext, useContext, useMemo, useState, type ReactNode } from 'react'
 import {
   authApi,
+  getToken,
   getUsuarioGuardado,
   guardarSesion,
   limpiarSesion,
+  type ActualizarPerfilPayload,
   type LoginPayload,
   type RegistroPayload,
   type RequiereRolRespuesta,
@@ -17,6 +19,7 @@ interface AuthContextValue {
   login: (dto: LoginPayload) => Promise<Usuario>
   registrar: (dto: RegistroPayload) => Promise<Usuario>
   loginConGoogle: (credential: string, rol?: Rol) => Promise<Usuario | RequiereRolRespuesta>
+  actualizarPerfil: (dto: ActualizarPerfilPayload) => Promise<Usuario>
   logout: () => void
 }
 
@@ -65,13 +68,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }
 
+  const actualizarPerfil = async (dto: ActualizarPerfilPayload) => {
+    const u = await authApi.actualizarPerfil(dto)
+    const token = getToken()
+    if (token) guardarSesion(token, u)
+    setUsuario(u)
+    return u
+  }
+
   const logout = () => {
     limpiarSesion()
     setUsuario(null)
   }
 
   const value = useMemo(
-    () => ({ usuario, cargando, login, registrar, loginConGoogle, logout }),
+    () => ({ usuario, cargando, login, registrar, loginConGoogle, actualizarPerfil, logout }),
     [usuario, cargando],
   )
 

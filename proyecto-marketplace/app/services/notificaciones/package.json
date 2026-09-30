@@ -19,12 +19,14 @@
     "class-transformer": "^0.5.1",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.0",
-    "amqplib": "^0.10.4"
+    "amqplib": "^0.10.4",
+    "nodemailer": "^6.9.14"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.4.0",
     "@nestjs/schematics": "^10.2.0",
     "typescript": "^5.4.0",
-    "@types/amqplib": "^0.10.5"
+    "@types/amqplib": "^0.10.5",
+    "@types/nodemailer": "^6.4.15"
   }
 }

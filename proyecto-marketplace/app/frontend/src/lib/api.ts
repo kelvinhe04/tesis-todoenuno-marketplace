@@ -94,6 +94,12 @@ export interface RequiereRolRespuesta {
   email: string
 }
 
+export interface ActualizarPerfilPayload {
+  nombre?: string
+  passwordActual?: string
+  passwordNueva?: string
+}
+
 export const authApi = {
   registro: (dto: RegistroPayload) => request<SesionRespuesta>('/auth/registro', { method: 'POST', body: JSON.stringify(dto) }),
   login: (dto: LoginPayload) => request<SesionRespuesta>('/auth/login', { method: 'POST', body: JSON.stringify(dto) }),
@@ -103,6 +109,8 @@ export const authApi = {
       body: JSON.stringify({ credential, rol }),
     }),
   me: () => request<Usuario>('/auth/me'),
+  actualizarPerfil: (dto: ActualizarPerfilPayload) =>
+    request<Usuario>('/auth/me', { method: 'PATCH', body: JSON.stringify(dto) }),
   perfilPublico: (id: string) => request<{ id: string; nombre: string }>(`/auth/usuarios/${id}`),
 }
 

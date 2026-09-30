@@ -128,6 +128,16 @@ export class OrdenesService {
     return this.ordenes.save(orden);
   }
 
+  // Uso exclusivo de otros microservicios (p. ej. Notificaciones para saber a
+  // qué vendedores avisar) — no se expone en el API Gateway.
+  async obtenerInterno(id: string) {
+    const orden = await this.ordenes.findOne({ where: { id } });
+    if (!orden) {
+      throw new NotFoundException('Orden no encontrada');
+    }
+    return orden;
+  }
+
   async actualizarEstadoPago(ordenId: string, estadoPago: EstadoPago) {
     const orden = await this.ordenes.findOne({ where: { id: ordenId } });
     if (!orden) return; // evento de una orden que no existe (no debería pasar en flujo normal)
