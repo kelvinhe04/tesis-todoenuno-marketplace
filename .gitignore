@@ -18,3 +18,6 @@
 
 # Playwright MCP browser-testing artifacts (screenshots, snapshots, console logs)
 .playwright-mcp/
+
+# Respaldos de datos (Mongo con imágenes base64 + Postgres): pesados y con datos de usuarios
+proyecto-marketplace/backups/
