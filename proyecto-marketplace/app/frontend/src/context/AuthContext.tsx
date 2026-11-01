@@ -1,6 +1,7 @@
-import { createContext, useContext, useMemo, useState, type ReactNode } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   authApi,
+  EVENTO_SESION_EXPIRADA,
   getToken,
   getUsuarioGuardado,
   guardarSesion,
@@ -28,6 +29,13 @@ const AuthContext = createContext<AuthContextValue | undefined>(undefined)
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [usuario, setUsuario] = useState<Usuario | null>(() => getUsuarioGuardado())
   const [cargando, setCargando] = useState(false)
+
+  // Token vencido/rechazado por el servidor: limpiar la sesión y dejar que ProtectedRoute lleve a /login
+  useEffect(() => {
+    const alExpirar = () => setUsuario(null)
+    window.addEventListener(EVENTO_SESION_EXPIRADA, alExpirar)
+    return () => window.removeEventListener(EVENTO_SESION_EXPIRADA, alExpirar)
+  }, [])
 
   const login = async (dto: LoginPayload) => {
     setCargando(true)

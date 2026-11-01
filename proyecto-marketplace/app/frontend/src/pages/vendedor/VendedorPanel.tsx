@@ -13,6 +13,7 @@ export default function VendedorPanel() {
   const [totalProductos, setTotalProductos] = useState(0)
   const [ordenes, setOrdenes] = useState<Orden[]>([])
   const [cargando, setCargando] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     if (!usuario) return
@@ -25,6 +26,7 @@ export default function VendedorPanel() {
         setTotalProductos(pagina.total)
         setOrdenes(listaOrdenes)
       })
+      .catch(() => setError('No se pudieron cargar los datos del panel. Recarga la página.'))
       .finally(() => setCargando(false))
   }, [usuario])
 
@@ -56,6 +58,7 @@ export default function VendedorPanel() {
         </div>
       ) : (
         <>
+          {error && <p className="error-text">{error}</p>}
           <div className={styles.statsRow}>
             <div className={`card ${styles.statCard}`}>
               <span className={styles.statLabel}>Publicaciones activas</span>
