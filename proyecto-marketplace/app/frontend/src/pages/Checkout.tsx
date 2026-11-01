@@ -4,10 +4,28 @@ import { useCart } from '../context/CartContext'
 import { ApiError, carritoApi, ordenesApi, pagosApi, type Carrito } from '../lib/api'
 import { IconCheck } from '../components/icons'
 import { ConfirmModal } from '../components/ConfirmModal'
-import { formatHora12h } from '../lib/estado'
+import { formatFecha, formatHora12h } from '../lib/estado'
 import styles from './Checkout.module.css'
 
-const PASOS = ['Carrito', 'Envío', 'Pago', 'Confirmación']
+// Envío y pago son un solo formulario: al confirmar se crea la orden y se cobra de una vez
+const PASOS = ['Carrito', 'Envío y pago', 'Confirmación']
+
+// Solo dígitos (máx. 19), agrupados de 4 en 4: "4242424242424242" -> "4242 4242 4242 4242"
+function formatearNumeroTarjeta(valor: string): string {
+  return valor.replace(/\D/g, '').slice(0, 19).replace(/(\d{4})(?=\d)/g, '$1 ')
+}
+
+// "0229" -> "02/29"; la "/" aparece al escribir el 3.er dígito, así que se puede borrar sin trabarse
+function formatearVencimiento(valor: string): string {
+  const d = valor.replace(/\D/g, '').slice(0, 4)
+  return d.length <= 2 ? d : `${d.slice(0, 2)}/${d.slice(2)}`
+}
+
+// "69963888" -> "6996-3888"; el guion aparece al escribir el 5.º dígito (se puede borrar sin trabarse)
+function formatearTelefono(valor: string): string {
+  const d = valor.replace(/\D/g, '').slice(0, 8)
+  return d.length <= 4 ? d : `${d.slice(0, 4)}-${d.slice(4)}`
+}
 
 export default function Checkout() {
   const navigate = useNavigate()
@@ -44,12 +62,31 @@ export default function Checkout() {
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()
     setError(null)
+    if (telefono.replace(/\D/g, '').length < 7) {
+      setError('El teléfono debe tener 7 u 8 dígitos')
+      return
+    }
+    // Validar la tarjeta ANTES de crear la orden: crearla vacía el carrito, y si el pago
+    // falla después queda una orden pendiente y el carrito vacío.
+    if (metodo === 'tarjeta') {
+      if (!/^\d{13,19}$/.test(numeroTarjeta.replace(/\s+/g, ''))) {
+        setError('El número de tarjeta debe tener entre 13 y 19 dígitos')
+        return
+      }
+      if (!/^(0[1-9]|1[0-2])\/(\d{2}|\d{4})$/.test(vencimiento.trim())) {
+        setError('El vencimiento debe tener el formato MM/AA')
+        return
+      }
+      if (!/^\d{3,4}$/.test(cvv.trim())) {
+        setError('El CVV debe tener 3 o 4 dígitos')
+        return
+      }
+    }
     setMostrarConfirmacion(true)
   }
 
   const confirmarYPagar = async () => {
     setProcesando(true)
-    setPasoActual(3)
     try {
       const orden = await ordenesApi.crear({ nombre, telefono, direccion })
       await refrescar()
@@ -59,11 +96,10 @@ export default function Checkout() {
         vencimiento: metodo === 'tarjeta' ? vencimiento : undefined,
         cvv: metodo === 'tarjeta' ? cvv : undefined,
       })
-      setPasoActual(4)
+      setPasoActual(3)
       setResultado({ aprobado: pago.estado === 'aprobado', motivo: pago.motivoRechazo })
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'No se pudo procesar la orden')
-      setPasoActual(2)
     } finally {
       setProcesando(false)
       setMostrarConfirmacion(false)
@@ -142,9 +178,9 @@ export default function Checkout() {
                   id="telefono"
                   className="input"
                   required
-                  minLength={4}
+                  inputMode="tel"
                   value={telefono}
-                  onChange={(e) => setTelefono(e.target.value)}
+                  onChange={(e) => setTelefono(formatearTelefono(e.target.value))}
                   placeholder="0000-0000"
                 />
               </div>
@@ -201,7 +237,7 @@ export default function Checkout() {
                     required
                     inputMode="numeric"
                     value={numeroTarjeta}
-                    onChange={(e) => setNumeroTarjeta(e.target.value)}
+                    onChange={(e) => setNumeroTarjeta(formatearNumeroTarjeta(e.target.value))}
                     placeholder="0000 0000 0000 0000"
                   />
                 </div>
@@ -212,14 +248,23 @@ export default function Checkout() {
                       id="vencimiento"
                       className="input"
                       required
+                      inputMode="numeric"
                       value={vencimiento}
-                      onChange={(e) => setVencimiento(e.target.value)}
+                      onChange={(e) => setVencimiento(formatearVencimiento(e.target.value))}
                       placeholder="MM/AA"
                     />
                   </div>
                   <div className="field">
                     <label htmlFor="cvv">CVV</label>
-                    <input id="cvv" className="input" required value={cvv} onChange={(e) => setCvv(e.target.value)} placeholder="123" />
+                    <input
+                      id="cvv"
+                      className="input"
+                      required
+                      inputMode="numeric"
+                      value={cvv}
+                      onChange={(e) => setCvv(e.target.value.replace(/\D/g, '').slice(0, 4))}
+                      placeholder="123"
+                    />
                   </div>
                 </div>
               </>
@@ -238,7 +283,7 @@ export default function Checkout() {
           {carrito.items.map((it) => (
             <div key={it.productoId} className={styles.miniItem}>
               <span>
-                {it.nombre} {it.cita ? `· ${it.cita.fecha} ${formatHora12h(it.cita.horaInicio)}` : `× ${it.cantidad}`}
+                {it.nombre} {it.cita ? `· ${formatFecha(it.cita.fecha)} ${formatHora12h(it.cita.horaInicio)}` : `× ${it.cantidad}`}
               </span>
               <span>${it.subtotal.toFixed(2)}</span>
             </div>
