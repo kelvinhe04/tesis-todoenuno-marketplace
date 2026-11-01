@@ -64,14 +64,14 @@ cd frontend && npm run dev      # http://localhost:5173
 - Al listar/leer documentos de Mongo **no imprimir los base64** (llenan el contexto): usar `{ imagenes: 0 }` o scripts que escriban a archivo.
 - No dejar archivos temporales en la raíz del repo; usar la carpeta scratchpad de la sesión.
 
-## Estado y pendientes (actualizado 2026-10-30)
+## Estado y pendientes (actualizado 2026-10-31)
 **Hecho en la app**: 6 microservicios + gateway + frontend completos (13 pantallas del wireframe); RF-04 (editar perfil/contraseña); RF-20/21 (correo + notificación in-app a comprador y vendedor); carrusel "Vistos recientemente"; zoom de imágenes; catálogo con imágenes y nombres revisados.
 **Falta en la app** (el anteproyecto lo promete):
-1. **Pruebas de carga y escalabilidad con k6** (no existe ningún script) — bloquea el Cap. V y el Objetivo específico 5.
+1. **Pruebas de carga y escalabilidad con k6**: scripts listos en `app/loadtests/` (`humo.js` probado; `carga.js` sin ejecutar) — falta correrlos y recoger resultados; bloquea el Cap. V y el Objetivo específico 5.
 2. **Observabilidad: Prometheus + Grafana** (no hay config).
-3. **CI/CD** (no existe `.github/workflows`).
+3. **CI/CD**: `.github/workflows/ci.yml` escrito, sin probar en GitHub; el build del frontend falla por un error de tipos previo en `src/lib/api.ts`.
 **Falta en el informe** (`informe-final/*.docx`): 4.2 Implementación de microservicios, 4.5 Interfaz web (con capturas, requiere visto bueno), 4.6 Despliegue, **todo el Cap. V**, Resumen/Abstract (250-500 palabras), Conclusiones, Recomendaciones, Anexos; completar bibliografía de los Cap. IV-V; sumar los extras (reservas, reseñas) a la sección 3.1.1.
-**Detalles menores abiertos**: "Corte de cabello con mapa" comparte 2 fotos con "Corte y peinado a domicilio"; camiseta Hanes mezcla un paquete multicolor con fotos azul marino; falta el modelo exacto del mouse Acer y de la lámpara TaoTronics; la descripción del Soundcore Life Q30 dice 30 h (el modelo declara 40 h); 56 de 109 imágenes de seed miden < 700 px (casi todas miniaturas 2-4).
+**Detalles menores abiertos**: checkout crea la orden (y vacía el carrito) antes de cobrar, así que un fallo de pago deja orden `pendiente` sin reintento (documentar o arreglar); "Corte de cabello con mapa" comparte 2 fotos con "Corte y peinado a domicilio"; camiseta Hanes mezcla un paquete multicolor con fotos azul marino; falta el modelo exacto del mouse Acer y de la lámpara TaoTronics; la descripción del Soundcore Life Q30 dice 30 h (el modelo declara 40 h); 56 de 109 imágenes de seed miden < 700 px (casi todas miniaturas 2-4).
 
 ## Al terminar una sesión
 Añadir una entrada breve (fecha, qué se hizo, qué quedó pendiente, decisiones nuevas, cambios que viven solo en Mongo) al inicio de la sección de entradas de `proyecto-marketplace/docs/historial-sesiones.md` y, si cambió algo de fondo, actualizar este archivo (sobre todo "Estado y pendientes"). Mantener este archivo corto: lo cronológico va en el historial.
