@@ -6,6 +6,11 @@ Registro cronológico (lo más reciente arriba) de lo que se hizo con Claude Cod
 
 ---
 
+## 2026-11-01 — Commit/push y contexto
+- Se commiteó y subió todo lo de la jornada anterior (8 commits, hasta `26f8e0c`, rama `master`). El CI de GitHub corre desde ese push; el job del frontend sale en rojo por el error de tipos previo en `lib/api.ts` (~l.219).
+- Contraseña de prueba puesta (solo en Postgres, como hash; **no está en el repo**) a las 4 cuentas `*-seed@example.com` (ProFix, TecnoPanamá, Bella Studio, Taller Barro Fino) para que el usuario inicie sesión como esos vendedores.
+- `CLAUDE.md` ampliado: cómo arrancar (todo se apaga al cerrar Claude Code), cuentas de prueba y cómo resetear contraseñas, JWT de 1 día y cierre de sesión al vencer, servicios con `disponibilidad` obligatoria, ubicación con Google Maps/Nominatim, checkout y trampas de Playwright/Git Bash. Estos cambios en `CLAUDE.md` y este historial quedan **sin commit**.
+
 ## 2026-10-31 — Pulido de checkout, carrito y calendario de citas (sin commit)
 - **Cambios que viven solo en Mongo/archivos (no en git)**: (1) foto 3 de "Clases particulares de inglés" reemplazada por una de Pexels (pizarra de gramática, 1600×1067; también en `public/seed/ingles/3.jpg|txt`); respaldo previo `backups/2026-10-31_1546`. (2) A los 6 servicios que no tenían horarios se les puso `disponibilidad` por defecto: Reparacion de laptops (L-S 9-18, 60 min), Instalacion de software (L-V 9-17, 60), Clases de guitarra a domicilio (L-V 14-19, 60), Limpieza profunda de hogar (L-S 8-16, 120), Diseño de logotipo (L-V 10-16, 60), Asesoría contable (L-V 9-17, 60); ahora los 15 servicios tienen horarios y devuelven slots. El vendedor puede editarlos desde su panel.
 - **Otros cambios de código de la jornada**: sesión vencida (JWT dura 1 día) ahora cierra sesión y lleva a /login, y el panel del vendedor muestra error en vez de ceros; calendario de citas empieza en domingo (Dom..Sáb); scrollbar redondeado verde global; ubicación del local con "Usar mi ubicación actual", búsqueda por dirección (Nominatim) y enlace de Google Maps (`BuscadorUbicacion.tsx`, `lib/ubicacion.ts`), y enlace "Abrir en Google Maps" para el comprador.
