@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  servicios:
+    name: Build ${{ matrix.servicio }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        servicio: [auth, catalogo, carrito, ordenes, pagos, notificaciones]
+    defaults:
+      run:
+        working-directory: proyecto-marketplace/app/services/${{ matrix.servicio }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # Solo auth tiene package-lock.json, por eso se usa npm install en todos
+      - run: npm install
+      - run: npm run build
+
+  frontend:
+    name: Build frontend
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: proyecto-marketplace/app/frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: proyecto-marketplace/app/frontend/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run build
+
+  imagenes-docker:
+    name: Imágenes Docker
+    runs-on: ubuntu-latest
+    needs: servicios
+    steps:
+      - uses: actions/checkout@v4
+      - name: Construir las imágenes de los microservicios
+        working-directory: proyecto-marketplace/app
+        run: |
+          cp .env.example .env
+          docker compose build
