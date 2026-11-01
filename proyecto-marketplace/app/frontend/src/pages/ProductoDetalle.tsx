@@ -32,7 +32,9 @@ import { Stars } from '../components/Stars'
 import { Select } from '../components/Select'
 import { MapaLocal } from '../components/MapaLocal'
 import { VistosRecientemente } from '../components/VistosRecientemente'
-import { formatHora12h } from '../lib/estado'
+import { SelectorFecha } from '../components/SelectorFecha'
+import { urlGoogleMaps } from '../lib/ubicacion'
+import { aFechaISO, formatFecha, formatHora12h, NOMBRES_DIA } from '../lib/estado'
 import { registrarVisto } from '../lib/vistosRecientemente'
 import styles from './ProductoDetalle.module.css'
 
@@ -54,6 +56,29 @@ function StarInput({ valor, onChange }: { valor: number; onChange: (v: number) =
   )
 }
 
+function primerDiaDisponible(dias: number[]): string {
+  const d = new Date()
+  for (let i = 0; i < 7; i++) {
+    if (dias.includes(d.getDay())) break
+    d.setDate(d.getDate() + 1)
+  }
+  return aFechaISO(d)
+}
+
+// "lunes y miércoles: 9:00 a. m. – 12:00 p. m." (agrupa los días que comparten horario)
+function resumenAtencion(reglas: { diaSemana: number; horaInicio: string; horaFin: string }[]): string[] {
+  const grupos = new Map<string, number[]>()
+  for (const r of reglas) {
+    const clave = `${formatHora12h(r.horaInicio)} – ${formatHora12h(r.horaFin)}`
+    grupos.set(clave, [...(grupos.get(clave) ?? []), r.diaSemana])
+  }
+  return [...grupos.entries()].map(([horario, dias]) => {
+    const ordenados = [...new Set(dias)].sort((a, b) => ((a + 6) % 7) - ((b + 6) % 7)).map((d) => NOMBRES_DIA[d])
+    const lista = ordenados.length > 1 ? `${ordenados.slice(0, -1).join(', ')} y ${ordenados[ordenados.length - 1]}` : ordenados[0]
+    return `${lista[0].toUpperCase()}${lista.slice(1)}: ${horario}`
+  })
+}
+
 export default function ProductoDetalle() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
@@ -70,7 +95,7 @@ export default function ProductoDetalle() {
   const [zoomAbierto, setZoomAbierto] = useState(false)
   const [vendedorNombre, setVendedorNombre] = useState<string | null>(null)
 
-  const hoy = new Date().toISOString().slice(0, 10)
+  const hoy = aFechaISO(new Date())
   const [fecha, setFecha] = useState(hoy)
   const [slots, setSlots] = useState<SlotDisponible[]>([])
   const [cargandoSlots, setCargandoSlots] = useState(false)
@@ -93,6 +118,10 @@ export default function ProductoDetalle() {
       .obtener(id)
       .then((p) => {
         setProducto(p)
+        // Para servicios, arrancar en el primer día con atención (no en un día sin horarios)
+        if (p.tipo === 'servicio' && p.disponibilidad?.reglas.length) {
+          setFecha(primerDiaDisponible(p.disponibilidad.reglas.map((r) => r.diaSemana)))
+        }
         setImagenActiva(0)
         setZoomAbierto(false)
         setVendedorNombre(null)
@@ -327,7 +356,18 @@ export default function ProductoDetalle() {
           </div>
 
           {esServicio && producto.modalidadEntrega === 'local_vendedor' && producto.ubicacion && (
-            <MapaLocal lat={producto.ubicacion.lat} lng={producto.ubicacion.lng} altura="12rem" />
+            <div>
+              <MapaLocal lat={producto.ubicacion.lat} lng={producto.ubicacion.lng} altura="12rem" />
+              <a
+                href={urlGoogleMaps(producto.ubicacion)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hint-text"
+                style={{ display: 'inline-block', marginTop: '0.375rem', fontWeight: 600 }}
+              >
+                Abrir en Google Maps ↗
+              </a>
+            </div>
           )}
 
           {!esServicio && (
@@ -357,15 +397,18 @@ export default function ProductoDetalle() {
 
           {esServicio && producto.disponibilidad && (
             <div className="field">
-              <label htmlFor="fecha-cita">Elige una fecha</label>
-              <input
-                id="fecha-cita"
-                type="date"
-                className="input"
-                min={hoy}
+              <label>Elige una fecha</label>
+              <p className="muted" style={{ fontSize: '0.875rem', marginBottom: '0.5rem' }}>
+                Atiende: {resumenAtencion(producto.disponibilidad.reglas).join(' · ')}
+              </p>
+              <SelectorFecha
+                key={id}
                 value={fecha}
-                onChange={(e) => setFecha(e.target.value)}
+                min={hoy}
+                diasPermitidos={new Set(producto.disponibilidad.reglas.map((r) => r.diaSemana))}
+                onChange={setFecha}
               />
+              <p style={{ fontSize: '0.875rem', fontWeight: 700, marginTop: '0.5rem' }}>Fecha elegida: {formatFecha(fecha)}</p>
 
               {cargandoSlots ? (
                 <p className="muted" style={{ fontSize: '0.875rem', marginTop: '0.5rem' }}>
@@ -406,7 +449,7 @@ export default function ProductoDetalle() {
 
               {reservaActual && (
                 <p className="hint-text" style={{ marginTop: '0.5rem' }}>
-                  Horario retenido: {fecha} a las {formatHora12h(reservaActual.horaInicio)}. Tienes unos minutos para completar la compra.
+                  Horario retenido: {formatFecha(fecha)} a las {formatHora12h(reservaActual.horaInicio).replace(/\.$/, '')}. Tienes unos minutos para completar la compra.
                 </p>
               )}
               {errorReserva && <p className="error-text">{errorReserva}</p>}

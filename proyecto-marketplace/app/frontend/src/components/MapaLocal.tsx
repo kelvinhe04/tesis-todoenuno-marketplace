@@ -20,9 +20,11 @@ interface Props {
   editable?: boolean
   onChange?: (lat: number, lng: number) => void
   altura?: string
+  // Cada vez que cambia este número, el mapa se centra y acerca al pin (búsqueda / ubicación actual)
+  enfocar?: number
 }
 
-export function MapaLocal({ lat, lng, editable = false, onChange, altura = '14rem' }: Props) {
+export function MapaLocal({ lat, lng, editable = false, onChange, altura = '14rem', enfocar }: Props) {
   const contenedorRef = useRef<HTMLDivElement>(null)
   const mapaRef = useRef<L.Map | null>(null)
   const marcadorRef = useRef<L.Marker | null>(null)
@@ -81,6 +83,12 @@ export function MapaLocal({ lat, lng, editable = false, onChange, altura = '14re
       marcadorRef.current = L.marker([lat, lng], { icon: ICONO, draggable: editable }).addTo(mapaRef.current)
     }
   }, [lat, lng, editable])
+
+  useEffect(() => {
+    if (!enfocar || !mapaRef.current || lat === undefined || lng === undefined) return
+    mapaRef.current.setView([lat, lng], 17)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enfocar])
 
   return <div ref={contenedorRef} style={{ height: altura, borderRadius: 'var(--radius-md)', overflow: 'hidden' }} />
 }

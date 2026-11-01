@@ -4,6 +4,7 @@ import { VendorLayout } from '../../components/VendorLayout'
 import { ApiError, catalogoApi, type ModalidadEntrega, type TipoPublicacion } from '../../lib/api'
 import { IconImage, IconTrash } from '../../components/icons'
 import { MapaLocal } from '../../components/MapaLocal'
+import { BuscadorUbicacion } from '../../components/BuscadorUbicacion'
 import { Select } from '../../components/Select'
 
 const CATEGORIAS_PRODUCTO = ['Electrónica', 'Hogar', 'Moda', 'Belleza']
@@ -37,6 +38,7 @@ export default function VendedorCrearProducto() {
   const [modalidadEntrega, setModalidadEntrega] = useState<ModalidadEntrega>('domicilio_cliente')
   const [direccionLocal, setDireccionLocal] = useState('')
   const [ubicacion, setUbicacion] = useState<{ lat: number; lng: number } | null>(null)
+  const [enfocarMapa, setEnfocarMapa] = useState(0)
   const [duracionMinutos, setDuracionMinutos] = useState(60)
   const [diasSeleccionados, setDiasSeleccionados] = useState<Set<number>>(new Set([1, 2, 3, 4, 5]))
   const [horaInicio, setHoraInicio] = useState('09:00')
@@ -317,9 +319,19 @@ export default function VendedorCrearProducto() {
           {tipo === 'servicio' && modalidadEntrega === 'local_vendedor' && (
             <div className="field">
               <label>Ubicación exacta del local</label>
+              <BuscadorUbicacion
+                ubicacion={ubicacion}
+                onUbicacion={(coords, direccion) => {
+                  setUbicacion(coords)
+                  setEnfocarMapa((n) => n + 1)
+                  // Si la dirección del local aún está vacía, se rellena con la encontrada
+                  if (direccion && !direccionLocal.trim()) setDireccionLocal(direccion)
+                }}
+              />
               <MapaLocal
                 lat={ubicacion?.lat}
                 lng={ubicacion?.lng}
+                enfocar={enfocarMapa}
                 editable
                 onChange={(lat, lng) => setUbicacion({ lat, lng })}
               />
