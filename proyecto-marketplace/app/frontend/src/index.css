@@ -51,6 +51,41 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ---------- scrollbar ---------- */
+
+/* Chrome / Edge / Safari: barra redondeada con el color de acento */
+*::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 999px;
+  /* el borde del color del fondo "adelgaza" visualmente la barra y la deja flotando */
+  border: 3px solid var(--color-bg);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-hover);
+}
+
+*::-webkit-scrollbar-corner {
+  background: var(--color-bg);
+}
+
+/* Firefox no soporta ::-webkit-scrollbar */
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-bg);
+  }
+}
+
 #root {
   min-height: 100vh;
   display: flex;
