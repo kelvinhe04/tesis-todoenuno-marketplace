@@ -2,7 +2,8 @@ import { useEffect, useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { ApiError, notificacionesApi, type Notificacion } from '../lib/api'
-import { IconEdit, IconEye, IconEyeOff, IconUser } from '../components/icons'
+import { IconEdit, IconEye, IconEyeOff } from '../components/icons'
+import { Avatar } from '../components/Avatar'
 import styles from './Perfil.module.css'
 
 export default function Perfil() {
@@ -73,7 +74,7 @@ export default function Perfil() {
         {editando ? (
           <form className={`card ${styles.profileCard} ${styles.profileEditCard}`} onSubmit={guardarEdicion}>
             <div className={styles.avatar}>
-              <IconUser width={26} height={26} />
+              <Avatar fotoUrl={usuario.fotoUrl} nombre={usuario.nombre} size={usuario.fotoUrl ? 56 : 26} />
             </div>
             <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               <div className="field">
@@ -159,7 +160,7 @@ export default function Perfil() {
         ) : (
           <div className={`card ${styles.profileCard}`}>
             <div className={styles.avatar}>
-              <IconUser width={26} height={26} />
+              <Avatar fotoUrl={usuario.fotoUrl} nombre={usuario.nombre} size={usuario.fotoUrl ? 56 : 26} />
             </div>
             <div style={{ flex: 1 }}>
               <p style={{ fontWeight: 700, fontSize: '1.0625rem' }}>{usuario.nombre}</p>

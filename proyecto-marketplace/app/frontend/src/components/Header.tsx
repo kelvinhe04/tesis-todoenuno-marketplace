@@ -3,7 +3,8 @@ import { NavLink, useLocation, useNavigate, useSearchParams } from 'react-router
 import { useAuth } from '../context/AuthContext'
 import { useCart } from '../context/CartContext'
 import { notificacionesApi } from '../lib/api'
-import { IconBell, IconCart, IconClose, IconMenu, IconSearch, IconUser } from './icons'
+import { IconBell, IconCart, IconClose, IconMenu, IconSearch } from './icons'
+import { Avatar } from './Avatar'
 import styles from './Header.module.css'
 
 export function Header() {
@@ -134,7 +135,7 @@ export function Header() {
                   {cantidadItems > 0 && <span className={styles.badge}>{cantidadItems}</span>}
                 </NavLink>
                 <NavLink to="/perfil" className={styles.iconBtn} aria-label="Mi perfil">
-                  <IconUser />
+                  <Avatar fotoUrl={usuario.fotoUrl} nombre={usuario.nombre} size={usuario.fotoUrl ? 32 : 24} />
                 </NavLink>
                 <button type="button" className="btn btn-sm" onClick={cerrarSesion}>
                   Salir

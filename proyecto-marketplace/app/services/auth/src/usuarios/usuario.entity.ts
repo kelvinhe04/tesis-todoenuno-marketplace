@@ -16,6 +16,9 @@ export class Usuario {
   @Column({ nullable: true })
   passwordHash: string | null;
 
+  @Column({ type: 'varchar', nullable: true })
+  fotoUrl: string | null;
+
   @Column({ type: 'varchar', default: 'comprador' })
   rol: RolUsuario;
 

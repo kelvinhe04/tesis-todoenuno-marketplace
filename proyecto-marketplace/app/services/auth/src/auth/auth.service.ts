@@ -27,7 +27,7 @@ export class AuthService {
   }
 
   private aPublico(usuario: Usuario) {
-    return { id: usuario.id, nombre: usuario.nombre, email: usuario.email, rol: usuario.rol };
+    return { id: usuario.id, nombre: usuario.nombre, email: usuario.email, rol: usuario.rol, fotoUrl: usuario.fotoUrl ?? null };
   }
 
   async registrar(dto: RegistroDto) {
@@ -75,9 +75,13 @@ export class AuthService {
           nombre: payload.name || payload.email.split('@')[0],
           email: payload.email,
           passwordHash: null,
+          fotoUrl: payload.picture ?? null,
           rol: dto.rol,
         }),
       );
+    } else if (payload.picture && usuario.fotoUrl !== payload.picture) {
+      usuario.fotoUrl = payload.picture;
+      await this.usuarios.save(usuario);
     }
     return { token: this.firmarToken(usuario), usuario: this.aPublico(usuario) };
   }

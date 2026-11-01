@@ -10,6 +10,7 @@ export interface Usuario {
   nombre: string
   email: string
   rol: Rol
+  fotoUrl?: string | null
 }
 
 export function getToken(): string | null {
@@ -30,6 +31,9 @@ export function limpiarSesion() {
   localStorage.removeItem(TOKEN_KEY)
   localStorage.removeItem(USER_KEY)
 }
+
+// Se dispara cuando el servidor rechaza el token (el JWT dura 1 día): AuthContext cierra la sesión
+export const EVENTO_SESION_EXPIRADA = 'sesion-expirada'
 
 export class ApiError extends Error {
   status: number
@@ -63,6 +67,11 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
     const mensaje = Array.isArray(data?.message)
       ? data.message.join(', ')
       : data?.message || `Error ${resp.status}`
+    // Solo cuando el token fue rechazado: un 401 de "contraseña incorrecta" no debe cerrar la sesión
+    if (resp.status === 401 && token && mensaje.startsWith('Token inválido')) {
+      limpiarSesion()
+      window.dispatchEvent(new Event(EVENTO_SESION_EXPIRADA))
+    }
     throw new ApiError(resp.status, mensaje, data)
   }
 
