@@ -57,9 +57,28 @@
   object-fit: cover;
 }
 
+.itemLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Ocupa solo lo que mide su contenido; margin-right:auto empuja el resto a la derecha */
+  flex: 0 1 auto;
+  margin-right: auto;
+  min-width: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
 .itemInfo {
-  flex: 1;
   min-width: 8rem;
+}
+
+.itemInfo p:first-child {
+  display: inline-block;
+}
+
+.itemInfo p:first-child:hover {
+  text-decoration: underline;
 }
 
 .qtyStepper {

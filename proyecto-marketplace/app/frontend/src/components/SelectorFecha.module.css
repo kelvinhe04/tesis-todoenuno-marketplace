@@ -1,0 +1,83 @@
+.calendario {
+  width: 100%;
+  max-width: 20rem;
+  padding: 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+}
+
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.cabecera button {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.cabecera button:hover:not(:disabled) {
+  background: var(--color-surface-2);
+}
+
+.cabecera button:disabled {
+  color: var(--color-text-faint);
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.titulo {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.grilla {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.2rem;
+  text-align: center;
+}
+
+.diaSemana {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  padding: 0.25rem 0;
+}
+
+.dia {
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 0.875rem;
+  color: var(--color-text-faint);
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.dia.habilitado {
+  color: var(--color-text);
+  opacity: 1;
+  font-weight: 700;
+  background: var(--color-accent-soft);
+  cursor: pointer;
+}
+
+.dia.habilitado:hover {
+  background: var(--color-surface-2);
+}
+
+.dia.seleccionado {
+  background: var(--color-text);
+  color: #fff;
+}

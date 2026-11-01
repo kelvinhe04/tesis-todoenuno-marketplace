@@ -4,7 +4,7 @@ import { useCart } from '../context/CartContext'
 import { ApiError, carritoApi, type Carrito as CarritoType } from '../lib/api'
 import { IconImage, IconMinus, IconPlus, IconTrash } from '../components/icons'
 import { ConfirmModal } from '../components/ConfirmModal'
-import { formatHora12h } from '../lib/estado'
+import { formatFecha, formatHora12h } from '../lib/estado'
 import styles from './Carrito.module.css'
 
 export default function Carrito() {
@@ -79,26 +79,28 @@ export default function Carrito() {
             {error && <p className="error-text">{error}</p>}
             {carrito.items.map((item) => (
               <div key={item.productoId} className={`card ${styles.item}`}>
-                <div className={`${styles.thumb} ${item.tipo === 'producto' ? styles.blanco : ''}`}>
-                  {item.imagenUrl ? (
-                    <img
-                      src={item.imagenUrl}
-                      alt={item.nombre}
-                      className={item.tipo === 'producto' ? styles.contain : styles.cover}
-                    />
-                  ) : (
-                    <IconImage width={24} height={24} />
-                  )}
-                </div>
-                <div className={styles.itemInfo}>
-                  <p style={{ fontWeight: 700 }}>{item.nombre}</p>
-                  <p className="muted" style={{ fontSize: '0.875rem' }}>
-                    ${item.precio.toFixed(2)} c/u
-                  </p>
-                </div>
+                <Link to={`/productos/${item.productoId}`} className={styles.itemLink}>
+                  <div className={`${styles.thumb} ${item.tipo === 'producto' ? styles.blanco : ''}`}>
+                    {item.imagenUrl ? (
+                      <img
+                        src={item.imagenUrl}
+                        alt={item.nombre}
+                        className={item.tipo === 'producto' ? styles.contain : styles.cover}
+                      />
+                    ) : (
+                      <IconImage width={24} height={24} />
+                    )}
+                  </div>
+                  <div className={styles.itemInfo}>
+                    <p style={{ fontWeight: 700 }}>{item.nombre}</p>
+                    <p className="muted" style={{ fontSize: '0.875rem' }}>
+                      ${item.precio.toFixed(2)} c/u
+                    </p>
+                  </div>
+                </Link>
                 {item.tipo === 'servicio' ? (
                   <span className="badge badge-neutral" style={{ whiteSpace: 'nowrap' }}>
-                    {item.cita ? `${item.cita.fecha} · ${formatHora12h(item.cita.horaInicio)}` : 'Cita agendada'}
+                    {item.cita ? `${formatFecha(item.cita.fecha)} · ${formatHora12h(item.cita.horaInicio)}` : 'Cita agendada'}
                   </span>
                 ) : (
                   <div className={styles.qtyStepper}>
@@ -134,9 +136,6 @@ export default function Carrito() {
                 </button>
               </div>
             ))}
-            <Link to="/catalogo" className="hint-text" style={{ textDecoration: 'none' }}>
-              ‹ Seguir comprando
-            </Link>
           </div>
 
           <div className={`card ${styles.summary}`}>

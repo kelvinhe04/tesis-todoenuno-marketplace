@@ -3,7 +3,7 @@ import { VendorLayout } from '../../components/VendorLayout'
 import { Select } from '../../components/Select'
 import { useAuth } from '../../context/AuthContext'
 import { ordenesApi, type EstadoEntrega, type Orden } from '../../lib/api'
-import { ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, formatHora12h } from '../../lib/estado'
+import { ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, formatFecha, formatHora12h } from '../../lib/estado'
 import styles from './Vendedor.module.css'
 
 const TABS: Array<{ id: EstadoEntrega | 'todas'; label: string }> = [
@@ -74,7 +74,7 @@ export default function VendedorOrdenes() {
                 <div className={styles.rowInfo}>
                   <p style={{ fontWeight: 700 }}>#{orden.id.slice(0, 8)}</p>
                   <p className="muted" style={{ fontSize: '0.8125rem' }}>
-                    {propios.map((it) => (it.cita ? `${it.nombre} (cita ${it.cita.fecha} ${formatHora12h(it.cita.horaInicio)})` : `${it.nombre} ×${it.cantidad}`)).join(', ')}
+                    {propios.map((it) => (it.cita ? `${it.nombre} (cita ${formatFecha(it.cita.fecha)} ${formatHora12h(it.cita.horaInicio)})` : `${it.nombre} ×${it.cantidad}`)).join(', ')}
                   </p>
                 </div>
                 <span className="muted" style={{ fontSize: '0.8125rem' }}>
