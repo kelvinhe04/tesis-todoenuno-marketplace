@@ -9,6 +9,7 @@ import { ProductosService } from './productos.service';
 import { ResenasController } from './resenas.controller';
 import { ResenasService } from './resenas.service';
 import { ReservasController } from './reservas.controller';
+import { ReservasInternoController } from './reservas-interno.controller';
 import { ReservasService } from './reservas.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { VendedorGuard } from '../auth/vendedor.guard';
@@ -24,7 +25,7 @@ import { VendedorGuard } from '../auth/vendedor.guard';
       secret: process.env.JWT_SECRET || 'dev-secret-cambiar-en-produccion',
     }),
   ],
-  controllers: [ProductosController, ResenasController, ReservasController],
+  controllers: [ProductosController, ResenasController, ReservasInternoController, ReservasController],
   providers: [ProductosService, ResenasService, ReservasService, JwtAuthGuard, VendedorGuard],
 })
 export class ProductosModule {}

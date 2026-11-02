@@ -75,6 +75,35 @@
 
 .itemInfo p:first-child {
   display: inline-block;
+  max-width: 100%;
+}
+
+/* En pantallas anchas el título ocupa una sola línea (con "…" si no cabe) para que
+   cantidad, precio y borrar queden siempre en la misma fila */
+@media (min-width: 640px) {
+  .item {
+    flex-wrap: nowrap;
+  }
+
+  .item > :not(.itemLink) {
+    flex-shrink: 0;
+  }
+
+  .itemLink {
+    flex: 1 1 0;
+  }
+
+  .itemInfo {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .itemInfo p:first-child {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .itemInfo p:first-child:hover {
@@ -98,6 +127,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.qtyStepper button:disabled {
+  color: var(--color-text-faint);
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .qtyStepper span {
@@ -136,4 +171,16 @@
   font-weight: 800;
   padding-top: 0.75rem;
   border-top: 1px solid var(--color-border);
+}
+
+.check {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  accent-color: var(--color-accent);
+  cursor: pointer;
+}
+
+.check:disabled {
+  cursor: not-allowed;
 }

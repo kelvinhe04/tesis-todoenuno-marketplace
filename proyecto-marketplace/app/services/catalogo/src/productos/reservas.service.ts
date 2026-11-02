@@ -10,6 +10,7 @@ import { Reserva } from './reserva.schema';
 import { Producto } from './producto.schema';
 import { CrearReservaDto } from './dto/crear-reserva.dto';
 import { ConfirmarReservaDto } from './dto/confirmar-reserva.dto';
+import { ahoraEnNegocio, yaPaso } from './tiempo';
 
 const MINUTOS_HOLD = 15;
 
@@ -50,6 +51,10 @@ export class ReservasService {
       return [];
     }
     const duracion = producto.disponibilidad.duracionMinutos;
+    const ahora = ahoraEnNegocio();
+    if (fecha < ahora.fecha) {
+      return [];
+    }
 
     // Limpia holds vencidos de ese producto+fecha antes de calcular ocupación,
     // así un slot con reserva "retenida" pero expirada vuelve a contar como libre.
@@ -70,7 +75,8 @@ export class ReservasService {
       let cursor = regla.horaInicio;
       while (sumarMinutos(cursor, duracion) <= regla.horaFin) {
         const horaFin = sumarMinutos(cursor, duracion);
-        if (!horasOcupadas.has(cursor)) {
+        // Hoy solo se ofrecen los horarios que todavía no empezaron
+        if (!horasOcupadas.has(cursor) && !yaPaso(fecha, cursor, ahora)) {
           slots.push({ horaInicio: cursor, horaFin });
         }
         cursor = horaFin;
@@ -86,6 +92,10 @@ export class ReservasService {
     }
     if (producto.tipo !== 'servicio' || !producto.disponibilidad) {
       throw new BadRequestException('Esta publicación no acepta reservas');
+    }
+
+    if (yaPaso(dto.fecha, dto.horaInicio, ahoraEnNegocio())) {
+      throw new BadRequestException('Ese horario ya pasó. Elige uno posterior.');
     }
 
     const dia = diaSemanaDe(dto.fecha);
@@ -157,6 +167,12 @@ export class ReservasService {
     }
     reserva.estado = 'cancelada';
     return reserva.save();
+  }
+
+  // Pago rechazado: las reservas confirmadas de esa orden se cancelan y el horario queda libre
+  async liberarPorOrden(ordenId: string) {
+    const r = await this.reservas.updateMany({ ordenId, estado: 'confirmada' }, { $set: { estado: 'cancelada' } });
+    return { liberadas: r.modifiedCount };
   }
 
   private async buscar(productoId: string, reservaId: string) {

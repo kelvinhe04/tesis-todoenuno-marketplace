@@ -67,6 +67,11 @@ export default function Ordenes() {
                   {ESTADO_ENTREGA_LABEL[orden.estadoEntrega]}
                 </span>
               </div>
+              {orden.estadoPago !== 'pagada' && (
+                <Link to={`/checkout?orden=${orden.id}`} className="btn btn-sm btn-primary">
+                  Reintentar pago
+                </Link>
+              )}
               <span style={{ fontWeight: 800, minWidth: '4.5rem', textAlign: 'right' }}>${orden.total.toFixed(2)}</span>
             </div>
           ))}

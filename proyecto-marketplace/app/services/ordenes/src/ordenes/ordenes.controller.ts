@@ -36,6 +36,12 @@ export class OrdenesController {
     return this.ordenes.obtener(id, request.usuario.sub, request.usuario.rol);
   }
 
+  @UseGuards(JwtAuthGuard)
+  @Post(':id/reabrir')
+  reabrir(@Param('id') id: string, @Req() request: any) {
+    return this.ordenes.reabrir(id, request.usuario.sub, request.headers['authorization']);
+  }
+
   // Uso exclusivo de otros microservicios (no se expone en el API Gateway).
   @Get('internal/:id')
   obtenerInterno(@Param('id') id: string) {

@@ -1,4 +1,4 @@
-import { ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { FilterQuery, Model } from 'mongoose';
 import { Producto } from './producto.schema';
@@ -15,6 +15,9 @@ export class ProductosService {
   constructor(@InjectModel(Producto.name) private readonly modelo: Model<Producto>) {}
 
   async crear(dto: CrearProductoDto, vendedorId: string) {
+    if (!(dto.imagenes?.length || dto.imagenUrl)) {
+      throw new BadRequestException('Agrega al menos una foto de tu publicación');
+    }
     return this.modelo.create({ ...dto, vendedorId });
   }
 
@@ -61,7 +64,43 @@ export class ProductosService {
     const producto = await this.obtener(id);
     this.verificarPropietario(producto, usuarioId);
     Object.assign(producto, dto);
+    if (!(producto.imagenes?.length || producto.imagenUrl)) {
+      throw new BadRequestException('La publicación debe tener al menos una foto');
+    }
     return producto.save();
+  }
+
+  // Descuenta stock de forma atómica (un solo update condicionado a stock >= cantidad, así dos
+  // compradores no pueden llevarse la misma última unidad). Todo o nada: si un ítem no alcanza,
+  // se devuelve lo ya descontado y se responde 400.
+  async descontarStock(items: { productoId: string; cantidad: number }[]) {
+    const hechos: { productoId: string; cantidad: number }[] = [];
+    for (const it of items) {
+      const r = await this.modelo.updateOne(
+        { _id: it.productoId, tipo: 'producto', stock: { $gte: it.cantidad } },
+        { $inc: { stock: -it.cantidad } },
+      );
+      if (r.modifiedCount !== 1) {
+        await this.devolverStock(hechos);
+        const p = await this.modelo.findById(it.productoId, { nombre: 1, stock: 1 }).lean();
+        const nombre = p?.nombre ?? 'un producto';
+        const quedan = p?.stock ?? 0;
+        throw new BadRequestException(
+          quedan > 0
+            ? `Solo quedan ${quedan} unidades de "${nombre}". Ajusta la cantidad en tu carrito.`
+            : `"${nombre}" se agotó. Quítalo de tu carrito para continuar.`,
+        );
+      }
+      hechos.push(it);
+    }
+    return { ok: true };
+  }
+
+  async devolverStock(items: { productoId: string; cantidad: number }[]) {
+    for (const it of items) {
+      await this.modelo.updateOne({ _id: it.productoId, tipo: 'producto' }, { $inc: { stock: it.cantidad } });
+    }
+    return { ok: true };
   }
 
   async eliminar(id: string, usuarioId: string) {

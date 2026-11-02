@@ -23,6 +23,7 @@ interface ReservaCatalogo {
   horaInicio: string;
   horaFin: string;
   estado: 'retenida' | 'confirmada' | 'cancelada';
+  expiraEn?: string;
 }
 
 @Injectable()
@@ -154,8 +155,9 @@ export class CarritoService {
       cantidad: number;
       subtotal: number;
       imagenUrl?: string;
+      stock?: number;
       vendedorId: string;
-      cita?: { reservaId: string; fecha: string; horaInicio: string; horaFin: string; estado: string };
+      cita?: { reservaId: string; fecha: string; horaInicio: string; horaFin: string; estado: string; expiraEn?: string };
     }> = [];
 
     for (const [productoId, cantidadStr] of Object.entries(crudo)) {
@@ -168,12 +170,12 @@ export class CarritoService {
       }
       const cantidad = parseInt(cantidadStr, 10);
 
-      let cita: { reservaId: string; fecha: string; horaInicio: string; horaFin: string; estado: string } | undefined;
+      let cita: { reservaId: string; fecha: string; horaInicio: string; horaFin: string; estado: string; expiraEn?: string } | undefined;
       const reservaId = reservasCrudo[productoId];
       if (reservaId) {
         const reserva = await this.obtenerReserva(productoId, reservaId, authorizationHeader);
         if (reserva) {
-          cita = { reservaId, fecha: reserva.fecha, horaInicio: reserva.horaInicio, horaFin: reserva.horaFin, estado: reserva.estado };
+          cita = { reservaId, fecha: reserva.fecha, horaInicio: reserva.horaInicio, horaFin: reserva.horaFin, estado: reserva.estado, expiraEn: reserva.expiraEn };
         }
       }
 
@@ -185,6 +187,7 @@ export class CarritoService {
         cantidad,
         subtotal: Number((producto.precio * cantidad).toFixed(2)),
         imagenUrl: producto.imagenes?.[0] || producto.imagenUrl,
+        stock: producto.tipo === 'producto' ? producto.stock : undefined,
         vendedorId: producto.vendedorId,
         cita,
       });

@@ -14,7 +14,6 @@ import {
   type Orden,
   type Producto,
   type Resena,
-  type Reserva,
   type SlotDisponible,
 } from '../lib/api'
 import {
@@ -33,8 +32,18 @@ import { Select } from '../components/Select'
 import { MapaLocal } from '../components/MapaLocal'
 import { VistosRecientemente } from '../components/VistosRecientemente'
 import { SelectorFecha } from '../components/SelectorFecha'
+import { StockBadge } from '../components/StockBadge'
 import { urlGoogleMaps } from '../lib/ubicacion'
-import { aFechaISO, formatFecha, formatHora12h, NOMBRES_DIA } from '../lib/estado'
+import {
+  ahoraPanama,
+  formatFecha,
+  formatHora12h,
+  NOMBRES_DIA,
+  primeraFechaDisponible,
+  quedanHorariosHoy,
+  sumarDiasFecha,
+  textoStock,
+} from '../lib/estado'
 import { registrarVisto } from '../lib/vistosRecientemente'
 import styles from './ProductoDetalle.module.css'
 
@@ -54,15 +63,6 @@ function StarInput({ valor, onChange }: { valor: number; onChange: (v: number) =
       ))}
     </div>
   )
-}
-
-function primerDiaDisponible(dias: number[]): string {
-  const d = new Date()
-  for (let i = 0; i < 7; i++) {
-    if (dias.includes(d.getDay())) break
-    d.setDate(d.getDate() + 1)
-  }
-  return aFechaISO(d)
 }
 
 // "lunes y miércoles: 9:00 a. m. – 12:00 p. m." (agrupa los días que comparten horario)
@@ -95,12 +95,13 @@ export default function ProductoDetalle() {
   const [zoomAbierto, setZoomAbierto] = useState(false)
   const [vendedorNombre, setVendedorNombre] = useState<string | null>(null)
 
-  const hoy = aFechaISO(new Date())
+  const ahora = ahoraPanama()
+  const hoy = ahora.fecha
   const [fecha, setFecha] = useState(hoy)
   const [slots, setSlots] = useState<SlotDisponible[]>([])
   const [cargandoSlots, setCargandoSlots] = useState(false)
-  const [reservaActual, setReservaActual] = useState<Reserva | null>(null)
-  const [reservando, setReservando] = useState(false)
+  // Solo se ELIGE el horario; se retiene (15 min) recién al agregar al carrito o comprar
+  const [slotElegido, setSlotElegido] = useState<string | null>(null)
   const [errorReserva, setErrorReserva] = useState<string | null>(null)
 
   const [resenas, setResenas] = useState<Resena[]>([])
@@ -120,7 +121,7 @@ export default function ProductoDetalle() {
         setProducto(p)
         // Para servicios, arrancar en el primer día con atención (no en un día sin horarios)
         if (p.tipo === 'servicio' && p.disponibilidad?.reglas.length) {
-          setFecha(primerDiaDisponible(p.disponibilidad.reglas.map((r) => r.diaSemana)))
+          setFecha(primeraFechaDisponible(p.disponibilidad.reglas, p.disponibilidad.duracionMinutos))
         }
         setImagenActiva(0)
         setZoomAbierto(false)
@@ -156,7 +157,7 @@ export default function ProductoDetalle() {
       return
     }
     setCargandoSlots(true)
-    setReservaActual(null)
+    setSlotElegido(null)
     disponibilidadApi
       .obtener(id, fecha)
       .then(setSlots)
@@ -176,22 +177,9 @@ export default function ProductoDetalle() {
     return () => window.removeEventListener('keydown', onKeyDown)
   }, [zoomAbierto, producto])
 
-  const elegirSlot = async (slot: SlotDisponible) => {
-    if (!id) return
-    setReservando(true)
+  const elegirSlot = (slot: SlotDisponible) => {
     setErrorReserva(null)
-    try {
-      if (reservaActual) {
-        await reservasApi.cancelar(id, reservaActual._id).catch(() => undefined)
-      }
-      const reserva = await reservasApi.crear(id, fecha, slot.horaInicio)
-      setReservaActual(reserva)
-    } catch (err) {
-      setErrorReserva(err instanceof ApiError ? err.message : 'No se pudo reservar ese horario')
-      disponibilidadApi.obtener(id, fecha).then(setSlots)
-    } finally {
-      setReservando(false)
-    }
+    setSlotElegido(slot.horaInicio)
   }
 
   const enviarResena = async () => {
@@ -251,14 +239,31 @@ export default function ProductoDetalle() {
       navigate('/login')
       return
     }
-    if (esServicio && !reservaActual) {
+    if (esServicio && !slotElegido) {
       setMensaje('Elige un horario disponible antes de agregar este servicio')
       return
     }
     setAgregando(true)
     setMensaje(null)
     try {
-      await carritoApi.agregar(id!, esServicio ? 1 : cantidad, esServicio ? reservaActual!._id : undefined)
+      let reservaId: string | undefined
+      if (esServicio) {
+        // Aquí recién se retiene el horario; si alguien lo tomó mientras tanto, se avisa y se refresca la lista
+        try {
+          reservaId = (await reservasApi.crear(id!, fecha, slotElegido!))._id
+        } catch (err) {
+          setMensaje(err instanceof ApiError ? err.message : 'No se pudo reservar ese horario')
+          setSlotElegido(null)
+          disponibilidadApi.obtener(id!, fecha).then(setSlots)
+          return
+        }
+      }
+      try {
+        await carritoApi.agregar(id!, esServicio ? 1 : cantidad, reservaId)
+      } catch (err) {
+        if (reservaId) await reservasApi.cancelar(id!, reservaId).catch(() => undefined)
+        throw err
+      }
       await refrescar()
       if (irACheckout) {
         navigate('/carrito')
@@ -289,11 +294,18 @@ export default function ProductoDetalle() {
           >
             {tieneImagen ? (
               <>
-                <img
-                  src={imagenes[imagenActiva] ?? imagenes[0]}
-                  alt={producto.nombre}
-                  className={!esServicio ? styles.contain : styles.cover}
-                />
+                {/* Todas las fotos van apiladas y se hace fundido entre ellas al cambiar (suave, sin parpadeo) */}
+                <div className={styles.capas}>
+                  {imagenes.map((img, idx) => (
+                    <img
+                      key={idx}
+                      src={img}
+                      alt={idx === imagenActiva ? producto.nombre : ''}
+                      aria-hidden={idx !== imagenActiva}
+                      className={`${!esServicio ? styles.contain : styles.cover} ${styles.capa} ${idx === imagenActiva ? styles.capaActiva : ''}`}
+                    />
+                  ))}
+                </div>
                 <span className={styles.zoomHint}>
                   <IconSearch width={16} height={16} />
                 </span>
@@ -373,21 +385,25 @@ export default function ProductoDetalle() {
           {!esServicio && (
             <div className={styles.qtyRow}>
               <div className={styles.qtyStepper}>
-                <button type="button" onClick={() => setCantidad((c) => Math.max(1, c - 1))} aria-label="Restar">
+                <button
+                  type="button"
+                  disabled={cantidad <= 1}
+                  onClick={() => setCantidad((c) => Math.max(1, c - 1))}
+                  aria-label="Restar"
+                >
                   <IconMinus width={16} height={16} />
                 </button>
                 <span>{cantidad}</span>
                 <button
                   type="button"
+                  disabled={cantidad >= producto.stock}
                   onClick={() => setCantidad((c) => Math.min(producto.stock, c + 1))}
                   aria-label="Sumar"
                 >
                   <IconPlus width={16} height={16} />
                 </button>
               </div>
-              <span className="muted" style={{ fontSize: '0.875rem' }}>
-                {sinStock ? 'Agotado' : `${producto.stock} disponibles`}
-              </span>
+              <StockBadge stock={producto.stock} />
             </div>
           )}
 
@@ -404,7 +420,11 @@ export default function ProductoDetalle() {
               <SelectorFecha
                 key={id}
                 value={fecha}
-                min={hoy}
+                min={
+                  quedanHorariosHoy(producto.disponibilidad.reglas, producto.disponibilidad.duracionMinutos, ahora)
+                    ? hoy
+                    : sumarDiasFecha(hoy, 1)
+                }
                 diasPermitidos={new Set(producto.disponibilidad.reglas.map((r) => r.diaSemana))}
                 onChange={setFecha}
               />
@@ -421,12 +441,11 @@ export default function ProductoDetalle() {
               ) : (
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginTop: '0.5rem' }}>
                   {slots.map((slot) => {
-                    const seleccionado = reservaActual?.horaInicio === slot.horaInicio && reservaActual?.fecha === fecha
+                    const seleccionado = slotElegido === slot.horaInicio
                     return (
                       <button
                         type="button"
                         key={slot.horaInicio}
-                        disabled={reservando}
                         onClick={() => elegirSlot(slot)}
                         style={{
                           minHeight: '2.25rem',
@@ -447,9 +466,9 @@ export default function ProductoDetalle() {
                 </div>
               )}
 
-              {reservaActual && (
+              {slotElegido && (
                 <p className="hint-text" style={{ marginTop: '0.5rem' }}>
-                  Horario retenido: {formatFecha(fecha)} a las {formatHora12h(reservaActual.horaInicio).replace(/\.$/, '')}. Tienes unos minutos para completar la compra.
+                  Horario elegido: {formatFecha(fecha)} a las {formatHora12h(slotElegido).replace(/\.$/, '')}. Se reserva al continuar y lo retenemos unos minutos para que completes el pago.
                 </p>
               )}
               {errorReserva && <p className="error-text">{errorReserva}</p>}
@@ -457,22 +476,35 @@ export default function ProductoDetalle() {
           )}
 
           <div className={styles.actionsRow}>
-            <button
-              type="button"
-              className="btn btn-primary"
-              disabled={sinStock || agregando || (esServicio && !reservaActual)}
-              onClick={() => agregarAlCarrito(false)}
-            >
-              {agregando ? 'Agregando...' : 'Agregar al carrito'}
-            </button>
-            <button
-              type="button"
-              className="btn"
-              disabled={sinStock || agregando || (esServicio && !reservaActual)}
-              onClick={() => agregarAlCarrito(true)}
-            >
-              Comprar ahora
-            </button>
+            {esServicio ? (
+              <button
+                type="button"
+                className="btn btn-primary"
+                disabled={agregando || !slotElegido}
+                onClick={() => agregarAlCarrito(true)}
+              >
+                {agregando ? 'Reservando...' : 'Reservar cita y pagar'}
+              </button>
+            ) : (
+              <>
+                <button
+                  type="button"
+                  className="btn btn-primary"
+                  disabled={sinStock || agregando}
+                  onClick={() => agregarAlCarrito(false)}
+                >
+                  {agregando ? 'Agregando...' : 'Agregar al carrito'}
+                </button>
+                <button
+                  type="button"
+                  className="btn"
+                  disabled={sinStock || agregando}
+                  onClick={() => agregarAlCarrito(true)}
+                >
+                  Comprar ahora
+                </button>
+              </>
+            )}
           </div>
 
           {mensaje && <p className={mensaje.includes('agregó') ? 'hint-text' : 'error-text'}>{mensaje}</p>}
@@ -563,7 +595,7 @@ export default function ProductoDetalle() {
           ) : (
             <div className={styles.specRow}>
               <dt>Disponibilidad</dt>
-              <dd>{sinStock ? 'Agotado' : `${producto.stock} en stock`}</dd>
+              <dd>{textoStock(producto.stock)}</dd>
             </div>
           )}
         </dl>

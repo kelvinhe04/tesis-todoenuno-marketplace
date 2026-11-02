@@ -123,6 +123,54 @@ export const authApi = {
   perfilPublico: (id: string) => request<{ id: string; nombre: string }>(`/auth/usuarios/${id}`),
 }
 
+// ---------------- direcciones y tarjetas guardadas ----------------
+
+export interface DireccionGuardada {
+  id: string
+  nombre: string
+  telefono: string
+  direccion: string
+  predeterminada: boolean
+}
+
+export interface DireccionPayload {
+  nombre: string
+  telefono: string
+  direccion: string
+  predeterminada?: boolean
+}
+
+// De la tarjeta solo existe marca, últimos 4 y vencimiento: el número completo y el CVV nunca se guardan
+export interface TarjetaGuardada {
+  id: string
+  marca: 'Visa' | 'Mastercard' | 'American Express' | 'Otra'
+  ultimos4: string
+  vencimiento: string
+  predeterminada: boolean
+}
+
+export interface TarjetaPayload {
+  marca: TarjetaGuardada['marca']
+  ultimos4: string
+  vencimiento: string
+  predeterminada?: boolean
+}
+
+export const guardadosApi = {
+  direcciones: () => request<DireccionGuardada[]>('/auth/me/direcciones'),
+  crearDireccion: (dto: DireccionPayload) =>
+    request<DireccionGuardada>('/auth/me/direcciones', { method: 'POST', body: JSON.stringify(dto) }),
+  actualizarDireccion: (id: string, dto: Partial<DireccionPayload>) =>
+    request<DireccionGuardada>(`/auth/me/direcciones/${id}`, { method: 'PATCH', body: JSON.stringify(dto) }),
+  eliminarDireccion: (id: string) => request<{ eliminada: boolean }>(`/auth/me/direcciones/${id}`, { method: 'DELETE' }),
+  tarjetas: () => request<TarjetaGuardada[]>('/auth/me/tarjetas'),
+  crearTarjeta: (dto: TarjetaPayload) =>
+    request<TarjetaGuardada>('/auth/me/tarjetas', { method: 'POST', body: JSON.stringify(dto) }),
+  hacerTarjetaPredeterminada: (id: string) =>
+    request<TarjetaGuardada>(`/auth/me/tarjetas/${id}/predeterminada`, { method: 'PATCH' }),
+  eliminarTarjeta: (id: string) => request<{ eliminada: boolean }>(`/auth/me/tarjetas/${id}`, { method: 'DELETE' }),
+}
+
 // ---------------- catalogo ----------------
 
 export type TipoPublicacion = 'producto' | 'servicio'
@@ -287,6 +335,7 @@ export interface CitaCarrito {
   horaInicio: string
   horaFin: string
   estado: EstadoReserva
+  expiraEn?: string
 }
 
 export interface ItemCarrito {
@@ -297,6 +346,7 @@ export interface ItemCarrito {
   cantidad: number
   subtotal: number
   imagenUrl?: string
+  stock?: number
   vendedorId: string
   cita?: CitaCarrito
 }
@@ -354,10 +404,13 @@ export interface Orden {
 }
 
 export const ordenesApi = {
-  crear: (direccion: Direccion) => request<Orden>('/ordenes', { method: 'POST', body: JSON.stringify({ direccion }) }),
+  crear: (direccion: Direccion, productoIds?: string[]) =>
+    request<Orden>('/ordenes', { method: 'POST', body: JSON.stringify({ direccion, productoIds }) }),
   listar: () => request<Orden[]>('/ordenes'),
   listarVendedor: () => request<Orden[]>('/ordenes/vendedor'),
   obtener: (id: string) => request<Orden>(`/ordenes/${id}`),
+  // Reintentar el pago de una orden pendiente o rechazada (vuelve a retener los horarios de sus citas)
+  reabrir: (id: string) => request<Orden>(`/ordenes/${id}/reabrir`, { method: 'POST' }),
   actualizarEstadoEntrega: (id: string, estadoEntrega: EstadoEntrega) =>
     request<Orden>(`/ordenes/${id}/estado-entrega`, { method: 'PATCH', body: JSON.stringify({ estadoEntrega }) }),
 }
@@ -367,6 +420,8 @@ export const ordenesApi = {
 export interface ProcesarPagoPayload {
   metodo: 'tarjeta' | 'paypal'
   numeroTarjeta?: string
+  // Tarjeta guardada: solo los últimos 4 dígitos (el número completo no se guarda)
+  tarjetaUltimos4?: string
   vencimiento?: string
   cvv?: string
 }

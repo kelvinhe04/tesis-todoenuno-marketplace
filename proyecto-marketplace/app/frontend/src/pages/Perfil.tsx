@@ -4,6 +4,9 @@ import { useAuth } from '../context/AuthContext'
 import { ApiError, notificacionesApi, type Notificacion } from '../lib/api'
 import { IconEdit, IconEye, IconEyeOff } from '../components/icons'
 import { Avatar } from '../components/Avatar'
+import { ConfirmModal } from '../components/ConfirmModal'
+import { DireccionesGuardadas } from '../components/DireccionesGuardadas'
+import { TarjetasGuardadas } from '../components/TarjetasGuardadas'
 import styles from './Perfil.module.css'
 
 export default function Perfil() {
@@ -11,6 +14,7 @@ export default function Perfil() {
   const navigate = useNavigate()
   const [notificaciones, setNotificaciones] = useState<Notificacion[]>([])
   const [cargando, setCargando] = useState(true)
+  const [confirmarSalir, setConfirmarSalir] = useState(false)
 
   const [editando, setEditando] = useState(false)
   const [nombreEdit, setNombreEdit] = useState(usuario?.nombre || '')
@@ -178,15 +182,27 @@ export default function Perfil() {
             <button
               type="button"
               className="btn btn-danger"
-              onClick={() => {
-                logout()
-                navigate('/')
-              }}
+              onClick={() => setConfirmarSalir(true)}
             >
               Cerrar sesión
             </button>
+            <ConfirmModal
+              abierto={confirmarSalir}
+              titulo="Cerrar sesión"
+              mensaje="¿Seguro que quieres cerrar tu sesión?"
+              textoConfirmar="Cerrar sesión"
+              onConfirmar={() => {
+                setConfirmarSalir(false)
+                logout()
+                navigate('/')
+              }}
+              onCancelar={() => setConfirmarSalir(false)}
+            />
           </div>
         )}
+
+        <DireccionesGuardadas />
+        <TarjetasGuardadas />
 
         <div>
           <h2 style={{ fontSize: '1.0625rem', marginBottom: '0.75rem' }}>Notificaciones</h2>

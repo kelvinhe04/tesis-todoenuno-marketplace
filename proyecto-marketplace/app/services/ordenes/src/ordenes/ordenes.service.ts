@@ -36,11 +36,15 @@ export class OrdenesService {
 
   async crear(dto: CrearOrdenDto, compradorId: string, authorizationHeader: string) {
     const carrito = await this.obtenerCarrito(authorizationHeader);
-    if (!carrito.items.length) {
-      throw new BadRequestException('El carrito está vacío');
+    const parcial = !!dto.productoIds;
+    const elegidos = parcial ? carrito.items.filter((it) => dto.productoIds!.includes(it.productoId)) : carrito.items;
+    if (!elegidos.length) {
+      throw new BadRequestException(parcial ? 'No hay productos seleccionados en el carrito' : 'El carrito está vacío');
     }
+    const subtotal = Number(elegidos.reduce((acc, it) => acc + it.subtotal, 0).toFixed(2));
+    const total = Number((subtotal + carrito.envio).toFixed(2));
 
-    const items: ItemOrden[] = carrito.items.map((it) => ({
+    const items: ItemOrden[] = elegidos.map((it) => ({
       productoId: it.productoId,
       vendedorId: it.vendedorId,
       nombre: it.nombre,
@@ -51,23 +55,34 @@ export class OrdenesService {
       cita: it.cita ? { reservaId: it.cita.reservaId, fecha: it.cita.fecha, horaInicio: it.cita.horaInicio, horaFin: it.cita.horaFin } : undefined,
     }));
 
-    const orden = await this.ordenes.save(
-      this.ordenes.create({
-        compradorId,
-        items,
-        direccion: dto.direccion,
-        subtotal: carrito.subtotal,
-        envio: carrito.envio,
-        total: carrito.total,
-        estadoPago: 'pendiente',
-        estadoEntrega: 'pendiente',
-      }),
-    );
+    // Descontar el stock ANTES de crear la orden (atómico en catalogo): si otro comprador se llevó
+    // la última unidad, aquí responde 400 y no se crea nada.
+    await this.descontarStock(items);
+
+    let orden: Orden;
+    try {
+      orden = await this.ordenes.save(
+        this.ordenes.create({
+          compradorId,
+          items,
+          direccion: dto.direccion,
+          subtotal,
+          envio: carrito.envio,
+          total,
+          estadoPago: 'pendiente',
+          estadoEntrega: 'pendiente',
+        }),
+      );
+    } catch (err) {
+      await this.devolverStock(items).catch(() => undefined);
+      throw err;
+    }
 
     // Confirmar las reservas de servicio ANTES de vaciar el carrito: vaciar cancela
     // holds "retenida" del comprador, y una reserva ya confirmada no se debe cancelar.
     await this.confirmarReservas(items, orden.id, authorizationHeader);
-    await this.vaciarCarrito(authorizationHeader);
+    if (parcial) await this.quitarDelCarrito(items, authorizationHeader);
+    else await this.vaciarCarrito(authorizationHeader);
     await this.rabbitmq.publish('orden.creada', {
       ordenId: orden.id,
       compradorId,
@@ -76,6 +91,34 @@ export class OrdenesService {
     });
 
     return orden;
+  }
+
+  private itemsConStock(items: ItemOrden[]) {
+    return items.filter((it) => it.tipo === 'producto').map((it) => ({ productoId: it.productoId, cantidad: it.cantidad }));
+  }
+
+  private async descontarStock(items: ItemOrden[]) {
+    const lista = this.itemsConStock(items);
+    if (!lista.length) return;
+    const resp = await fetch(`${CATALOGO_URL}/catalogo/internal/descontar-stock`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: lista }),
+    });
+    if (!resp.ok) {
+      const cuerpo = await resp.json().catch(() => ({}));
+      throw new BadRequestException(cuerpo.message || 'No hay stock suficiente');
+    }
+  }
+
+  private async devolverStock(items: ItemOrden[]) {
+    const lista = this.itemsConStock(items);
+    if (!lista.length) return;
+    await fetch(`${CATALOGO_URL}/catalogo/internal/devolver-stock`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ items: lista }),
+    });
   }
 
   private async confirmarReservas(items: ItemOrden[], ordenId: string, authorizationHeader: string) {
@@ -138,11 +181,67 @@ export class OrdenesService {
     return orden;
   }
 
-  async actualizarEstadoPago(ordenId: string, estadoPago: EstadoPago) {
+  // Reintentar el pago de una orden pendiente o rechazada: vuelve a retener los horarios de sus
+  // citas (si siguen libres) y la deja "pendiente" para poder cobrarla otra vez.
+  async reabrir(id: string, usuarioId: string, authorizationHeader: string) {
+    const orden = await this.ordenes.findOne({ where: { id } });
+    if (!orden) throw new NotFoundException('Orden no encontrada');
+    if (orden.compradorId !== usuarioId) throw new ForbiddenException('Esta orden no te pertenece');
+    if (orden.estadoPago === 'pagada') throw new BadRequestException('Esta orden ya está pagada');
+
+    // Al rechazarse el pago el stock se devolvió: hay que volver a descontarlo (400 si ya no alcanza)
+    const reponerStock = orden.estadoPago === 'rechazada';
+    if (reponerStock) await this.descontarStock(orden.items);
+
+    const creadas: { productoId: string; reservaId: string }[] = [];
+    try {
+      for (const item of orden.items) {
+        if (!item.cita) continue;
+        const base = `${CATALOGO_URL}/catalogo/${item.productoId}/reservas`;
+        const headers = { 'Content-Type': 'application/json', Authorization: authorizationHeader };
+        const actual = await fetch(`${base}/${item.cita.reservaId}`, { headers });
+        if (actual.ok && (await actual.json()).estado === 'confirmada') continue; // sigue apartada
+        const nueva = await fetch(base, {
+          method: 'POST',
+          headers,
+          body: JSON.stringify({ fecha: item.cita.fecha, horaInicio: item.cita.horaInicio }),
+        });
+        if (!nueva.ok) {
+          throw new BadRequestException(`El horario de "${item.nombre}" ya no está disponible. Haz una nueva compra eligiendo otro horario.`);
+        }
+        const reserva = await nueva.json();
+        creadas.push({ productoId: item.productoId, reservaId: reserva._id });
+        await fetch(`${base}/${reserva._id}/confirmar`, { method: 'PATCH', headers, body: JSON.stringify({ ordenId: orden.id }) });
+        item.cita.reservaId = reserva._id;
+      }
+    } catch (err) {
+      for (const c of creadas) {
+        await fetch(`${CATALOGO_URL}/catalogo/${c.productoId}/reservas/${c.reservaId}/cancelar`, {
+          method: 'PATCH',
+          headers: { Authorization: authorizationHeader },
+        }).catch(() => undefined);
+      }
+      if (reponerStock) await this.devolverStock(orden.items).catch(() => undefined);
+      throw err;
+    }
+    orden.estadoPago = 'pendiente';
+    return this.ordenes.save(orden);
+  }
+
+  // Pago rechazado: devuelve al catálogo los horarios de las citas de esa orden
+  async liberarReservas(ordenId: string) {
+    await fetch(`${CATALOGO_URL}/catalogo/internal/liberar-reservas/${ordenId}`, { method: 'PATCH' });
+  }
+
+  // Devuelve true si el estado cambió (así un evento repetido no devuelve el stock dos veces)
+  async actualizarEstadoPago(ordenId: string, estadoPago: EstadoPago): Promise<boolean> {
     const orden = await this.ordenes.findOne({ where: { id: ordenId } });
-    if (!orden) return; // evento de una orden que no existe (no debería pasar en flujo normal)
+    if (!orden) return false; // evento de una orden que no existe (no debería pasar en flujo normal)
+    const cambio = orden.estadoPago !== estadoPago;
     orden.estadoPago = estadoPago;
     await this.ordenes.save(orden);
+    if (cambio && estadoPago === 'rechazada') await this.devolverStock(orden.items).catch(() => undefined);
+    return cambio;
   }
 
   private async obtenerCarrito(authorizationHeader: string): Promise<CarritoRespuesta> {
@@ -153,6 +252,16 @@ export class OrdenesService {
       throw new BadRequestException('No se pudo leer el carrito');
     }
     return resp.json();
+  }
+
+  // Compra parcial: solo salen del carrito los ítems comprados (los demás se quedan)
+  private async quitarDelCarrito(items: ItemOrden[], authorizationHeader: string) {
+    for (const it of items) {
+      await fetch(`${CARRITO_URL}/carrito/items/${it.productoId}`, {
+        method: 'DELETE',
+        headers: { Authorization: authorizationHeader },
+      });
+    }
   }
 
   private async vaciarCarrito(authorizationHeader: string) {

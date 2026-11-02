@@ -5,6 +5,7 @@ import { useCart } from '../context/CartContext'
 import { notificacionesApi } from '../lib/api'
 import { IconBell, IconCart, IconClose, IconMenu, IconSearch } from './icons'
 import { Avatar } from './Avatar'
+import { ConfirmModal } from './ConfirmModal'
 import styles from './Header.module.css'
 
 export function Header() {
@@ -70,7 +71,9 @@ export function Header() {
     setMenuAbierto(false)
   }
 
+  const [confirmarSalir, setConfirmarSalir] = useState(false)
   const cerrarSesion = () => {
+    setConfirmarSalir(false)
     logout()
     setMenuAbierto(false)
     navigate('/')
@@ -137,7 +140,7 @@ export function Header() {
                 <NavLink to="/perfil" className={styles.iconBtn} aria-label="Mi perfil">
                   <Avatar fotoUrl={usuario.fotoUrl} nombre={usuario.nombre} size={usuario.fotoUrl ? 32 : 24} />
                 </NavLink>
-                <button type="button" className="btn btn-sm" onClick={cerrarSesion}>
+                <button type="button" className="btn btn-sm" onClick={() => setConfirmarSalir(true)}>
                   Salir
                 </button>
               </>
@@ -191,6 +194,14 @@ export function Header() {
           </div>
         )}
       </div>
+      <ConfirmModal
+        abierto={confirmarSalir}
+        titulo="Cerrar sesión"
+        mensaje="¿Seguro que quieres cerrar tu sesión?"
+        textoConfirmar="Cerrar sesión"
+        onConfirmar={cerrarSesion}
+        onCancelar={() => setConfirmarSalir(false)}
+      />
     </header>
   )
 }

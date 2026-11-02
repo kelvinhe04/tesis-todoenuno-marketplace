@@ -130,6 +130,11 @@ export default function VendedorCrearProducto() {
   const onSubmit = async (e: FormEvent) => {
     e.preventDefault()
     setError(null)
+    if (imagenes.length === 0) {
+      setErrorImagenes('Agrega al menos una foto de tu publicación.')
+      document.getElementById('fotos-publicacion')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      return
+    }
     if (tipo === 'servicio' && modalidadEntrega === 'local_vendedor' && !ubicacion) {
       setError('Marca la ubicación exacta de tu local en el mapa.')
       return
@@ -177,6 +182,9 @@ export default function VendedorCrearProducto() {
         </div>
       ) : (
         <form onSubmit={onSubmit} className="card card-pad stack" style={{ maxWidth: '38rem' }}>
+          <p className="hint-text leyenda-requerido">
+            <b>*</b> Campo obligatorio
+          </p>
           <div
             style={{
               display: 'flex',
@@ -222,7 +230,7 @@ export default function VendedorCrearProducto() {
           </div>
 
           <div className="field">
-            <label htmlFor="nombre">Nombre</label>
+            <label className="requerido" htmlFor="nombre">Nombre</label>
             <input id="nombre" className="input" required minLength={3} value={nombre} onChange={(e) => setNombre(e.target.value)} />
           </div>
 
@@ -238,7 +246,7 @@ export default function VendedorCrearProducto() {
           </div>
 
           <div className="field">
-            <label htmlFor="descripcion">Descripción</label>
+            <label className="requerido" htmlFor="descripcion">Descripción</label>
             <textarea
               id="descripcion"
               className="input"
@@ -251,7 +259,7 @@ export default function VendedorCrearProducto() {
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
             <div className="field">
-              <label htmlFor="categoria">Categoría</label>
+              <label className="requerido" htmlFor="categoria">Categoría</label>
               <Select
                 id="categoria"
                 value={categoria}
@@ -260,7 +268,7 @@ export default function VendedorCrearProducto() {
               />
             </div>
             <div className="field">
-              <label htmlFor="precio">Precio (USD)</label>
+              <label className="requerido" htmlFor="precio">Precio (USD)</label>
               <input
                 id="precio"
                 type="number"
@@ -276,14 +284,14 @@ export default function VendedorCrearProducto() {
 
           {tipo === 'producto' && (
             <div className="field">
-              <label htmlFor="stock">Stock disponible</label>
-              <input id="stock" type="number" min={0} className="input" value={stock} onChange={(e) => setStock(e.target.value)} />
+              <label className="requerido" htmlFor="stock">Stock disponible</label>
+              <input id="stock" type="number" min={0} required className="input" value={stock} onChange={(e) => setStock(e.target.value)} />
             </div>
           )}
 
           {tipo === 'servicio' && (
             <div className="field">
-              <label htmlFor="modalidad">Modalidad de entrega</label>
+              <label className="requerido" htmlFor="modalidad">Modalidad de entrega</label>
               <Select
                 id="modalidad"
                 value={modalidadEntrega}
@@ -302,7 +310,7 @@ export default function VendedorCrearProducto() {
 
           {tipo === 'servicio' && modalidadEntrega === 'local_vendedor' && (
             <div className="field">
-              <label htmlFor="direccionLocal">Dirección del local</label>
+              <label className="requerido" htmlFor="direccionLocal">Dirección del local</label>
               <input
                 id="direccionLocal"
                 className="input"
@@ -318,7 +326,7 @@ export default function VendedorCrearProducto() {
 
           {tipo === 'servicio' && modalidadEntrega === 'local_vendedor' && (
             <div className="field">
-              <label>Ubicación exacta del local</label>
+              <label className="requerido">Ubicación exacta del local</label>
               <BuscadorUbicacion
                 ubicacion={ubicacion}
                 onUbicacion={(coords, direccion) => {
@@ -399,8 +407,8 @@ export default function VendedorCrearProducto() {
             </div>
           )}
 
-          <div className="field">
-            <label>Fotos (hasta {MAX_IMAGENES})</label>
+          <div className="field" id="fotos-publicacion">
+            <label className="requerido">Fotos (mínimo 1, hasta {MAX_IMAGENES})</label>
             <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
               {imagenes.map((img, idx) => (
                 <div

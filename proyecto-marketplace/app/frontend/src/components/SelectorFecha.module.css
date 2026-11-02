@@ -77,7 +77,8 @@
   background: var(--color-surface-2);
 }
 
-.dia.seleccionado {
+.dia.seleccionado,
+.dia.habilitado.seleccionado:hover {
   background: var(--color-text);
   color: #fff;
 }

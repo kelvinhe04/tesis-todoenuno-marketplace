@@ -85,6 +85,62 @@
       "backend": [{ "url_pattern": "/auth/me", "encoding": "no-op", "host": ["http://auth:3000"] }]
     },
     {
+      "endpoint": "/api/auth/me/direcciones",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/direcciones", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me/direcciones",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/direcciones", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me/direcciones/{id}",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/direcciones/{id}", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me/direcciones/{id}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/direcciones/{id}", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me/tarjetas",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/tarjetas", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me/tarjetas",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/tarjetas", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me/tarjetas/{id}/predeterminada",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/tarjetas/{id}/predeterminada", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me/tarjetas/{id}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/tarjetas/{id}", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
       "endpoint": "/api/catalogo",
       "method": "GET",
       "output_encoding": "no-op",
@@ -234,6 +290,13 @@
       "output_encoding": "no-op",
       "input_headers": ["Authorization"],
       "backend": [{ "url_pattern": "/ordenes/{id}", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes/{id}/reabrir",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/ordenes/{id}/reabrir", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
     },
     {
       "endpoint": "/api/ordenes/{id}/estado-entrega",

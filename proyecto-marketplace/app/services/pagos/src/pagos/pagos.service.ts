@@ -40,7 +40,7 @@ export class PagosService {
         metodo: dto.metodo,
         estado: aprobado ? 'aprobado' : 'rechazado',
         motivoRechazo: aprobado ? undefined : motivo,
-        tarjetaUltimos4: dto.numeroTarjeta ? dto.numeroTarjeta.slice(-4) : undefined,
+        tarjetaUltimos4: dto.numeroTarjeta ? dto.numeroTarjeta.slice(-4) : dto.tarjetaUltimos4,
       }),
     );
 
@@ -70,10 +70,11 @@ export class PagosService {
   // (seccion 1.3).
   private simularPasarela(dto: ProcesarPagoDto): { aprobado: boolean; motivo?: string } {
     if (dto.metodo === 'tarjeta') {
-      if (!dto.numeroTarjeta) {
-        throw new BadRequestException('numeroTarjeta es requerido para el método tarjeta');
+      if (!dto.numeroTarjeta && !dto.tarjetaUltimos4) {
+        throw new BadRequestException('numeroTarjeta o tarjetaUltimos4 es requerido para el método tarjeta');
       }
-      if (dto.numeroTarjeta.endsWith('0002')) {
+      const ultimos4 = dto.numeroTarjeta ? dto.numeroTarjeta.slice(-4) : dto.tarjetaUltimos4;
+      if (ultimos4 === '0002') {
         return { aprobado: false, motivo: 'Tarjeta rechazada por el banco emisor (sandbox)' };
       }
     }

@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsString, MinLength, ValidateNested } from 'class-validator';
+import { IsArray, IsOptional, IsString, MinLength, ValidateNested } from 'class-validator';
 
 class DireccionDto {
   @IsString()
@@ -19,4 +19,10 @@ export class CrearOrdenDto {
   @ValidateNested()
   @Type(() => DireccionDto)
   direccion: DireccionDto;
+
+  // Solo se compran estos ítems del carrito (si se omite, se compra todo el carrito)
+  @IsOptional()
+  @IsArray()
+  @IsString({ each: true })
+  productoIds?: string[];
 }

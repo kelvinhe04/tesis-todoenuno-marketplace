@@ -32,6 +32,9 @@ export class RabbitmqService implements OnModuleInit {
         const payload = JSON.parse(msg.content.toString());
         const nuevoEstado = msg.fields.routingKey === 'pago.confirmado' ? 'pagada' : 'rechazada';
         await this.ordenesService.actualizarEstadoPago(payload.ordenId, nuevoEstado);
+        if (nuevoEstado === 'rechazada') {
+          await this.ordenesService.liberarReservas(payload.ordenId).catch((e) => this.logger.warn(`No se pudieron liberar las reservas: ${e}`));
+        }
         this.logger.log(`Orden ${payload.ordenId} actualizada a estadoPago="${nuevoEstado}" por evento "${msg.fields.routingKey}"`);
         this.channel.ack(msg);
       } catch (err) {

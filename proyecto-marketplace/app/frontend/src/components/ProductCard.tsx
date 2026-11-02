@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { imagenPrincipal, type Producto } from '../lib/api'
+import { StockBadge } from './StockBadge'
 import { IconImage } from './icons'
 import { Stars } from './Stars'
 import styles from './ProductCard.module.css'
@@ -39,12 +40,7 @@ export function ProductCard({ producto }: { producto: Producto }) {
         <Stars valor={producto.calificacionPromedio} />
         <div className={styles.footer}>
           <span className={styles.precio}>${producto.precio.toFixed(2)}</span>
-          {producto.tipo === 'producto' && producto.stock <= 3 && producto.stock > 0 && (
-            <span className="hint-text">¡Últimas {producto.stock}!</span>
-          )}
-          {producto.tipo === 'producto' && producto.stock === 0 && (
-            <span className="badge badge-danger">Agotado</span>
-          )}
+          {producto.tipo === 'producto' && <StockBadge stock={producto.stock} soloAlertas />}
         </div>
       </div>
     </Link>

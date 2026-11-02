@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react'
+import { useState, type ReactNode } from 'react'
+import { ConfirmModal } from './ConfirmModal'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { IconDashboard, IconList, IconLogout, IconOrders } from './icons'
@@ -13,6 +14,7 @@ const links = [
 export function VendorLayout({ titulo, acciones, children }: { titulo: string; acciones?: ReactNode; children: ReactNode }) {
   const { logout } = useAuth()
   const navigate = useNavigate()
+  const [confirmarSalir, setConfirmarSalir] = useState(false)
 
   return (
     <div className={styles.shell}>
@@ -43,15 +45,25 @@ export function VendorLayout({ titulo, acciones, children }: { titulo: string; a
         <button
           type="button"
           className={styles.logout}
-          onClick={() => {
-            logout()
-            navigate('/')
-          }}
+          onClick={() => setConfirmarSalir(true)}
         >
           <IconLogout width={18} height={18} />
           Cerrar sesión
         </button>
       </aside>
+
+      <ConfirmModal
+        abierto={confirmarSalir}
+        titulo="Cerrar sesión"
+        mensaje="¿Seguro que quieres cerrar tu sesión?"
+        textoConfirmar="Cerrar sesión"
+        onConfirmar={() => {
+          setConfirmarSalir(false)
+          logout()
+          navigate('/')
+        }}
+        onCancelar={() => setConfirmarSalir(false)}
+      />
 
       <div className={styles.main}>
         <div className={styles.topbar}>

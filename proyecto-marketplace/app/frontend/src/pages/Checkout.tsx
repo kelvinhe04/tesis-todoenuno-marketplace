@@ -1,34 +1,43 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
-import { ApiError, carritoApi, ordenesApi, pagosApi, type Carrito } from '../lib/api'
+import {
+  ApiError,
+  carritoApi,
+  guardadosApi,
+  ordenesApi,
+  pagosApi,
+  type Carrito,
+  type DireccionGuardada,
+  type TarjetaGuardada,
+} from '../lib/api'
 import { IconCheck } from '../components/icons'
 import { ConfirmModal } from '../components/ConfirmModal'
 import { formatFecha, formatHora12h } from '../lib/estado'
+import {
+  estaVencida,
+  formatearNumeroTarjeta,
+  formatearTelefono,
+  formatearVencimiento,
+  marcaTarjeta,
+  validarCvv,
+  formatearCvv,
+  validarNumeroTarjeta,
+  validarVencimiento,
+} from '../lib/formatos'
 import styles from './Checkout.module.css'
+import guardados from '../components/Guardados.module.css'
 
 // Envío y pago son un solo formulario: al confirmar se crea la orden y se cobra de una vez
 const PASOS = ['Carrito', 'Envío y pago', 'Confirmación']
 
-// Solo dígitos (máx. 19), agrupados de 4 en 4: "4242424242424242" -> "4242 4242 4242 4242"
-function formatearNumeroTarjeta(valor: string): string {
-  return valor.replace(/\D/g, '').slice(0, 19).replace(/(\d{4})(?=\d)/g, '$1 ')
-}
-
-// "0229" -> "02/29"; la "/" aparece al escribir el 3.er dígito, así que se puede borrar sin trabarse
-function formatearVencimiento(valor: string): string {
-  const d = valor.replace(/\D/g, '').slice(0, 4)
-  return d.length <= 2 ? d : `${d.slice(0, 2)}/${d.slice(2)}`
-}
-
-// "69963888" -> "6996-3888"; el guion aparece al escribir el 5.º dígito (se puede borrar sin trabarse)
-function formatearTelefono(valor: string): string {
-  const d = valor.replace(/\D/g, '').slice(0, 8)
-  return d.length <= 4 ? d : `${d.slice(0, 4)}-${d.slice(4)}`
-}
-
 export default function Checkout() {
   const navigate = useNavigate()
+  const [searchParams] = useSearchParams()
+  const ordenParam = searchParams.get('orden') // entrada desde "Mis órdenes" -> Reintentar pago
+  // Ítems del carrito que se van a pagar (el resto se queda en el carrito); sin parámetro = todo
+  const itemsParam = searchParams.get('items')
+  const idsSeleccionados = itemsParam ? itemsParam.split(',').filter(Boolean) : null
   const { refrescar } = useCart()
 
   const [carrito, setCarrito] = useState<Carrito | null>(null)
@@ -49,55 +58,164 @@ export default function Checkout() {
   const [resultado, setResultado] = useState<{ aprobado: boolean; motivo?: string } | null>(null)
   const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false)
 
+  // Si el pago se rechaza la orden ya existe: el siguiente intento la reutiliza (no crea otra ni pide la dirección de nuevo)
+  const [ordenReintento, setOrdenReintento] = useState<string | null>(ordenParam)
+  const [direccionOrden, setDireccionOrden] = useState<{ nombre: string; telefono: string; direccion: string } | null>(null)
+
+  // Direcciones y tarjetas guardadas en Mi perfil ('nueva' = escribir otra)
+  const [dirGuardadas, setDirGuardadas] = useState<DireccionGuardada[]>([])
+  const [tarjetasGuardadas, setTarjetasGuardadas] = useState<TarjetaGuardada[]>([])
+  const [dirElegida, setDirElegida] = useState('nueva')
+  const [tarjetaElegida, setTarjetaElegida] = useState('nueva')
+  const [guardarDireccion, setGuardarDireccion] = useState(false)
+  const [guardarTarjeta, setGuardarTarjeta] = useState(false)
+
+  const dirSel = dirGuardadas.find((d) => d.id === dirElegida)
+  const tarjetaSel = tarjetasGuardadas.find((t) => t.id === tarjetaElegida)
+
   useEffect(() => {
+    // La predeterminada (o la más reciente) llega ya elegida: se puede pagar sin escribir nada
+    guardadosApi
+      .direcciones()
+      .then((lista) => {
+        setDirGuardadas(lista)
+        const elegida = lista.find((d) => d.predeterminada) ?? lista[0]
+        if (elegida) setDirElegida(elegida.id)
+      })
+      .catch(() => undefined)
+    guardadosApi
+      .tarjetas()
+      .then((lista) => {
+        setTarjetasGuardadas(lista)
+        const vigentes = lista.filter((t) => !estaVencida(t.vencimiento))
+        const elegida = vigentes.find((t) => t.predeterminada) ?? vigentes[0]
+        if (elegida) setTarjetaElegida(elegida.id)
+      })
+      .catch(() => undefined)
+  }, [])
+
+  useEffect(() => {
+    if (ordenParam) {
+      ordenesApi
+        .obtener(ordenParam)
+        .then((o) => {
+          if (o.estadoPago === 'pagada') {
+            navigate('/ordenes')
+            return
+          }
+          setDireccionOrden(o.direccion)
+          setCarrito({ items: o.items, subtotal: o.subtotal, envio: o.envio, total: o.total } as unknown as Carrito)
+        })
+        .catch(() => navigate('/ordenes'))
+        .finally(() => setCargando(false))
+      return
+    }
     carritoApi
       .obtener()
       .then((c) => {
-        setCarrito(c)
-        if (c.items.length === 0) navigate('/carrito')
+        const items = idsSeleccionados ? c.items.filter((it) => idsSeleccionados.includes(it.productoId)) : c.items
+        const subtotal = Number(items.reduce((acc, it) => acc + it.subtotal, 0).toFixed(2))
+        setCarrito({ items, subtotal, envio: c.envio, total: Number((subtotal + c.envio).toFixed(2)) })
+        if (items.length === 0) navigate('/carrito')
       })
       .finally(() => setCargando(false))
-  }, [navigate])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [navigate, ordenParam, itemsParam])
+
+  // Cuenta regresiva de la retención de los horarios de citas (vence la primera reserva retenida)
+  const vencimientoCita = carrito?.items
+    .filter((it) => it.cita?.estado === 'retenida' && it.cita.expiraEn)
+    .map((it) => new Date(it.cita!.expiraEn!).getTime())
+    .reduce<number | null>((min, t) => (min === null || t < min ? t : min), null)
+  const [ahora, setAhora] = useState(() => Date.now())
+  useEffect(() => {
+    if (!vencimientoCita) return
+    const id = setInterval(() => setAhora(Date.now()), 1000)
+    return () => clearInterval(id)
+  }, [vencimientoCita])
+  const segundosRestantes = vencimientoCita ? Math.max(0, Math.floor((vencimientoCita - ahora) / 1000)) : null
+  const citaVencida = segundosRestantes === 0
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()
     setError(null)
-    if (telefono.replace(/\D/g, '').length < 7) {
+    if (!ordenReintento && !dirSel && telefono.replace(/\D/g, '').length < 7) {
       setError('El teléfono debe tener 7 u 8 dígitos')
       return
     }
     // Validar la tarjeta ANTES de crear la orden: crearla vacía el carrito, y si el pago
     // falla después queda una orden pendiente y el carrito vacío.
     if (metodo === 'tarjeta') {
-      if (!/^\d{13,19}$/.test(numeroTarjeta.replace(/\s+/g, ''))) {
-        setError('El número de tarjeta debe tener entre 13 y 19 dígitos')
-        return
+      // Con una tarjeta guardada solo se pide el CVV (el número completo nunca se guarda)
+      if (!tarjetaSel) {
+        const errorNumero = validarNumeroTarjeta(numeroTarjeta)
+        if (errorNumero) {
+          setError(errorNumero)
+          return
+        }
+        const errorVencimiento = validarVencimiento(vencimiento)
+        if (errorVencimiento) {
+          setError(errorVencimiento)
+          return
+        }
       }
-      if (!/^(0[1-9]|1[0-2])\/(\d{2}|\d{4})$/.test(vencimiento.trim())) {
-        setError('El vencimiento debe tener el formato MM/AA')
-        return
-      }
-      if (!/^\d{3,4}$/.test(cvv.trim())) {
-        setError('El CVV debe tener 3 o 4 dígitos')
+      const errorCvv = validarCvv(cvv, tarjetaSel ? tarjetaSel.marca : marcaTarjeta(numeroTarjeta))
+      if (errorCvv) {
+        setError(errorCvv)
         return
       }
     }
     setMostrarConfirmacion(true)
   }
 
+  // Datos de envío efectivos: la dirección guardada elegida o lo escrito en el formulario
+  const envio =
+    ordenReintento && direccionOrden
+      ? direccionOrden
+      : dirSel
+        ? { nombre: dirSel.nombre, telefono: dirSel.telefono, direccion: dirSel.direccion }
+        : { nombre, telefono, direccion }
+
   const confirmarYPagar = async () => {
     setProcesando(true)
     try {
-      const orden = await ordenesApi.crear({ nombre, telefono, direccion })
-      await refrescar()
-      const pago = await pagosApi.procesar(orden.id, {
-        metodo,
-        numeroTarjeta: metodo === 'tarjeta' ? numeroTarjeta.replace(/\s+/g, '') : undefined,
-        vencimiento: metodo === 'tarjeta' ? vencimiento : undefined,
-        cvv: metodo === 'tarjeta' ? cvv : undefined,
-      })
+      let ordenId: string
+      if (ordenReintento) {
+        // Reintento: se reabre la misma orden (vuelve a retener los horarios de sus citas)
+        await ordenesApi.reabrir(ordenReintento)
+        ordenId = ordenReintento
+      } else {
+        const orden = await ordenesApi.crear(envio, idsSeleccionados ?? undefined)
+        ordenId = orden.id
+        setOrdenReintento(orden.id)
+        setDireccionOrden(envio)
+        await refrescar()
+        // Guardar la dirección nueva para próximas compras (si lo pidió); no bloquea la compra si falla
+        if (!dirSel && guardarDireccion) await guardadosApi.crearDireccion(envio).catch(() => undefined)
+      }
+      const digitos = numeroTarjeta.replace(/\s+/g, '')
+      const pago = await pagosApi.procesar(
+        ordenId,
+        metodo !== 'tarjeta'
+          ? { metodo }
+          : tarjetaSel
+            ? { metodo, tarjetaUltimos4: tarjetaSel.ultimos4, vencimiento: tarjetaSel.vencimiento, cvv }
+            : { metodo, numeroTarjeta: digitos, vencimiento, cvv },
+      )
+      // Solo se guarda una tarjeta nueva si el pago fue aprobado; únicamente marca, últimos 4 y vencimiento
+      if (metodo === 'tarjeta' && !tarjetaSel && guardarTarjeta && pago.estado === 'aprobado') {
+        await guardadosApi
+          .crearTarjeta({ marca: marcaTarjeta(digitos), ultimos4: digitos.slice(-4), vencimiento: vencimiento.trim() })
+          .catch(() => undefined)
+      }
+      if (pago.estado !== 'aprobado') {
+        // Rechazado: no se cambia de pantalla; se explica y se deja corregir y reintentar aquí mismo
+        setError(`Pago rechazado: ${pago.motivoRechazo || 'el banco no aprobó la tarjeta'}. Revisa los datos o usa otra tarjeta y vuelve a intentarlo.`)
+        setCvv('')
+        return
+      }
       setPasoActual(3)
-      setResultado({ aprobado: pago.estado === 'aprobado', motivo: pago.motivoRechazo })
+      setResultado({ aprobado: true })
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'No se pudo procesar la orden')
     } finally {
@@ -163,10 +281,72 @@ export default function Checkout() {
         ))}
       </div>
 
+      {segundosRestantes !== null && (
+        <div
+          className="card"
+          role="timer"
+          style={{
+            marginBottom: '1rem',
+            padding: '0.75rem 1rem',
+            background: citaVencida || segundosRestantes < 120 ? 'var(--color-danger-soft)' : 'var(--color-accent-soft)',
+          }}
+        >
+          {citaVencida ? (
+            <>
+              <strong>Tu horario ya no está retenido.</strong> Vuelve al servicio y elige un horario de nuevo.{' '}
+              <button type="button" className="btn" onClick={() => navigate('/carrito')}>
+                Ir al carrito
+              </button>
+            </>
+          ) : (
+            <>
+              Tu horario está retenido por{' '}
+              <strong>
+                {Math.floor(segundosRestantes / 60)}:{String(segundosRestantes % 60).padStart(2, '0')}
+              </strong>
+              . Completa el pago antes de que termine.
+            </>
+          )}
+        </div>
+      )}
+
       <div className={styles.layout}>
         <form className={styles.form} onSubmit={onSubmit}>
-          <div className={`card ${styles.section}`}>
+          {ordenReintento && direccionOrden && (
+            <div className={`card ${styles.section}`}>
+              <h2 style={{ fontSize: '1.0625rem' }}>Dirección de entrega</h2>
+              <p>
+                <strong>{direccionOrden.nombre}</strong> · Tel. {direccionOrden.telefono}
+                <br />
+                <span className="muted">{direccionOrden.direccion}</span>
+              </p>
+              <p className="hint-text">Tu orden ya está creada; solo falta completar el pago.</p>
+            </div>
+          )}
+          <div className={`card ${styles.section}`} style={ordenReintento ? { display: 'none' } : undefined}>
             <h2 style={{ fontSize: '1.0625rem' }}>Dirección de entrega</h2>
+            {dirGuardadas.length > 0 && (
+              <div className={guardados.opciones}>
+                {dirGuardadas.map((d) => (
+                  <label key={d.id} className={`${guardados.opcion} ${dirElegida === d.id ? guardados.activa : ''}`}>
+                    <input type="radio" name="dir" checked={dirElegida === d.id} onChange={() => setDirElegida(d.id)} />
+                    <span>
+                      <strong>{d.nombre}</strong>
+                      {d.predeterminada && <span className="badge badge-neutral" style={{ marginLeft: '0.5rem' }}>Predeterminada</span>}
+                      <br />
+                      <span className="muted" style={{ fontSize: '0.875rem' }}>
+                        {d.direccion} · Tel. {d.telefono}
+                      </span>
+                    </span>
+                  </label>
+                ))}
+                <label className={`${guardados.opcion} ${dirElegida === 'nueva' ? guardados.activa : ''}`}>
+                  <input type="radio" name="dir" checked={dirElegida === 'nueva'} onChange={() => setDirElegida('nueva')} />
+                  <span>Usar otra dirección</span>
+                </label>
+              </div>
+            )}
+            {!dirSel && (<>
             <div className={styles.row2}>
               <div className="field">
                 <label htmlFor="nombre">Nombre</label>
@@ -197,6 +377,11 @@ export default function Checkout() {
                 placeholder="Calle, número, referencia"
               />
             </div>
+            <label className={guardados.check}>
+              <input type="checkbox" checked={guardarDireccion} onChange={(e) => setGuardarDireccion(e.target.checked)} />
+              Guardar esta dirección para próximas compras
+            </label>
+            </>)}
             <p className="hint-text">
               Para servicios, esta dirección se usa según la modalidad indicada por el vendedor (a domicilio del
               cliente o en el local del vendedor).
@@ -227,7 +412,58 @@ export default function Checkout() {
               en <strong>0002</strong> simula un rechazo del banco.
             </p>
 
-            {metodo === 'tarjeta' && (
+            {metodo === 'tarjeta' && tarjetasGuardadas.length > 0 && (
+              <div className={guardados.opciones}>
+                {tarjetasGuardadas.map((t) => (
+                  <label
+                    key={t.id}
+                    className={`${guardados.opcion} ${tarjetaElegida === t.id ? guardados.activa : ''} ${estaVencida(t.vencimiento) ? guardados.deshabilitada : ''}`}
+                  >
+                    <input
+                      type="radio"
+                      name="tarjeta"
+                      disabled={estaVencida(t.vencimiento)}
+                      checked={tarjetaElegida === t.id}
+                      onChange={() => setTarjetaElegida(t.id)}
+                    />
+                    <span>
+                      <strong>
+                        {t.marca} •••• {t.ultimos4}
+                      </strong>
+                      {t.predeterminada && <span className="badge badge-neutral" style={{ marginLeft: '0.5rem' }}>Predeterminada</span>}
+                      <br />
+                      {estaVencida(t.vencimiento) ? (
+                        <span className="badge badge-danger">Vencida · {t.vencimiento}</span>
+                      ) : (
+                        <span className="muted" style={{ fontSize: '0.875rem' }}>Vence {t.vencimiento}</span>
+                      )}
+                    </span>
+                  </label>
+                ))}
+                <label className={`${guardados.opcion} ${tarjetaElegida === 'nueva' ? guardados.activa : ''}`}>
+                  <input type="radio" name="tarjeta" checked={tarjetaElegida === 'nueva'} onChange={() => setTarjetaElegida('nueva')} />
+                  <span>Usar otra tarjeta</span>
+                </label>
+              </div>
+            )}
+
+            {metodo === 'tarjeta' && tarjetaSel && (
+              <div className="field" style={{ maxWidth: '12rem' }}>
+                <label htmlFor="cvv">CVV</label>
+                <input
+                  id="cvv"
+                  className="input"
+                  required
+                  inputMode="numeric"
+                  autoComplete="off"
+                  value={cvv}
+                  onChange={(e) => setCvv(formatearCvv(e.target.value, tarjetaSel.marca))}
+                  placeholder="123"
+                />
+              </div>
+            )}
+
+            {metodo === 'tarjeta' && !tarjetaSel && (
               <>
                 <div className="field">
                   <label htmlFor="numeroTarjeta">Número de tarjeta</label>
@@ -262,11 +498,15 @@ export default function Checkout() {
                       required
                       inputMode="numeric"
                       value={cvv}
-                      onChange={(e) => setCvv(e.target.value.replace(/\D/g, '').slice(0, 4))}
+                      onChange={(e) => setCvv(formatearCvv(e.target.value, marcaTarjeta(numeroTarjeta)))}
                       placeholder="123"
                     />
                   </div>
                 </div>
+                <label className={guardados.check}>
+                  <input type="checkbox" checked={guardarTarjeta} onChange={(e) => setGuardarTarjeta(e.target.checked)} />
+                  Guardar esta tarjeta para próximas compras (solo marca, últimos 4 dígitos y vencimiento)
+                </label>
               </>
             )}
           </div>
@@ -298,7 +538,7 @@ export default function Checkout() {
       <ConfirmModal
         abierto={mostrarConfirmacion}
         titulo="Confirmar compra"
-        mensaje={`Se enviará a "${nombre}" en "${direccion}" y se cobrará $${carrito.total.toFixed(2)} con ${metodo === 'tarjeta' ? 'tarjeta' : 'PayPal'} (sandbox). ¿Confirmas la compra?`}
+        mensaje={`Se enviará a "${envio.nombre}" en "${envio.direccion}" y se cobrará $${carrito.total.toFixed(2)} con ${metodo === 'tarjeta' ? (tarjetaSel ? `la tarjeta terminada en ${tarjetaSel.ultimos4}` : 'tarjeta') : 'PayPal'} (sandbox). ¿Confirmas la compra?`}
         textoConfirmar="Sí, confirmar y pagar"
         procesando={procesando}
         onConfirmar={confirmarYPagar}
