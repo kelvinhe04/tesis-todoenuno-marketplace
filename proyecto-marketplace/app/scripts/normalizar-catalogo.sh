@@ -17,7 +17,8 @@ MODO="${1:-auditar}"
 RESPALDO="${2:-}"
 [ "$MODO" = "auditar" ] || [ "$MODO" = "aplicar" ] || { echo "Uso: bash scripts/normalizar-catalogo.sh [auditar|aplicar] [carpeta-de-respaldo-para-fotos]"; exit 1; }
 [ -f .env ] || { echo "No encuentro app/.env"; exit 1; }
-set -a; . ./.env; set +a
+# Carga .env sin ejecutarlo como shell (valores con espacios, p. ej. SMTP_PASS, rompian el 'source')
+while IFS='=' read -r _k _v; do case "$_k" in ''|'#'*) ;; *) export "$_k=${_v%$'\r'}" ;; esac; done < ./.env
 
 # nombres de los vendedores (Postgres) -> proveedor por defecto de los servicios que no lo tienen
 NOMBRES=$(docker compose exec -T postgres psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -t -A -c \

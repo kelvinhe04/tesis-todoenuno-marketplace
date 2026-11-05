@@ -17,7 +17,8 @@ export MSYS_NO_PATHCONV=1   # Git Bash en Windows reescribe rutas tipo /tmp
 
 cd "$(dirname "$0")/.."
 [ -f .env ] || { echo "No encuentro app/.env (copialo de .env.example)"; exit 1; }
-set -a; . ./.env; set +a
+# Carga .env sin ejecutarlo como shell (valores con espacios, p. ej. SMTP_PASS, rompian el 'source')
+while IFS='=' read -r _k _v; do case "$_k" in ''|'#'*) ;; *) export "$_k=${_v%$'\r'}" ;; esac; done < ./.env
 
 DESTINO="../backups/$(date +%Y-%m-%d_%H%M)"
 mkdir -p "$DESTINO"

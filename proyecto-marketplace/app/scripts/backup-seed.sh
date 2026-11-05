@@ -21,7 +21,8 @@ export MSYS_NO_PATHCONV=1
 
 cd "$(dirname "$0")/.."
 [ -f .env ] || { echo "No encuentro app/.env (copialo de .env.example)"; exit 1; }
-set -a; . ./.env; set +a
+# Carga .env sin ejecutarlo como shell (valores con espacios, p. ej. SMTP_PASS, rompian el 'source')
+while IFS='=' read -r _k _v; do case "$_k" in ''|'#'*) ;; *) export "$_k=${_v%$'\r'}" ;; esac; done < ./.env
 
 PSQL=(docker compose exec -T postgres psql -U "$POSTGRES_USER" -d "$POSTGRES_DB" -At)
 FILTRO_SQL="email like '%-seed@example.com' or email like 'seed-vendedor-%@example.com'"

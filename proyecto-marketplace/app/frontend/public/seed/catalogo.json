@@ -1,0 +1,1004 @@
+[
+ {
+  "carpeta": "contabilidad",
+  "tipo": "servicio",
+  "nombre": "Asesoría contable para pequeños negocios",
+  "marca": "Asesores Panamá",
+  "descripcion": "Sesión práctica para ordenar las finanzas de tu emprendimiento y estar al día con tus impuestos en Panamá. Vemos cómo separar gastos personales y del negocio, llevar un registro simple de ingresos y egresos, calcular tu flujo de caja y saber cuánto te queda realmente cada mes. También te orientamos con tu declaración de renta y con el ITBMS ante la DGI, y con tu facturación. Trae tus facturas y estados de cuenta del período y salimos con un plan claro de qué hacer y en qué fechas. Ideal si estás empezando o si sientes que vendes pero no sabes si ganas. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 35,
+  "stock": 0,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    }
+   ]
+  },
+  "vendedor": {
+   "email": "asesorespanama-seed@example.com",
+   "nombre": "Asesores Panamá"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "logotipo",
+  "tipo": "servicio",
+  "nombre": "Diseño de logotipo",
+  "marca": "Asesores Panamá",
+  "descripcion": "Diseño de un logotipo profesional para tu marca o negocio. Partimos de una breve entrevista sobre tu público y tu estilo, te presentamos propuestas y ajustamos la elegida. Recibes los archivos finales en formatos para redes sociales, impresión y sello (PNG, SVG y PDF), listos para usar en tu tarjeta, empaques o rótulo. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 40,
+  "stock": null,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    }
+   ],
+   "diasNoDisponibles": []
+  },
+  "vendedor": {
+   "email": "asesorespanama-seed@example.com",
+   "nombre": "Asesores Panamá"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "branding",
+  "tipo": "servicio",
+  "nombre": "Sesión de consultoría en branding y diseño de logo",
+  "marca": "Asesores Panamá",
+  "descripcion": "Sesión de consultoría para definir la identidad visual de tu negocio antes de diseñarla: qué quieres transmitir, quién es tu cliente, qué colores y tipografías encajan con tu marca y cómo mantenerla coherente en redes, empaques y local. Sales con lineamientos de marca por escrito y una dirección clara para tu logo. Ideal para emprendedores que están lanzando o renovando su marca. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 40,
+  "stock": 0,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 45,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "10:00",
+     "horaFin": "16:00"
+    }
+   ]
+  },
+  "vendedor": {
+   "email": "asesorespanama-seed@example.com",
+   "nombre": "Asesores Panamá"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "guitarra",
+  "tipo": "servicio",
+  "nombre": "Clases de guitarra a domicilio",
+  "marca": "Aula Viva",
+  "descripcion": "Clases particulares de guitarra acústica o eléctrica en tu casa, para principiantes y para quienes quieren retomarla. Aprenderás postura, afinación, acordes básicos, ritmos y tus primeras canciones, con ejercicios cortos para practicar entre clases. Puedes usar tu propia guitarra o consultarnos antes de la primera sesión; el material de apoyo (partituras y tablaturas) va incluido. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 25,
+  "stock": 0,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    }
+   ],
+   "diasNoDisponibles": []
+  },
+  "vendedor": {
+   "email": "aulaviva-seed@example.com",
+   "nombre": "Aula Viva"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "ingles",
+  "tipo": "servicio",
+  "nombre": "Clases particulares de inglés",
+  "marca": "Aula Viva",
+  "descripcion": "Clases de inglés individuales, adaptadas a tu nivel y a lo que necesitas: conversación para el trabajo o los viajes, gramática, vocabulario o preparación de exámenes como TOEFL e IELTS. En la primera sesión evaluamos tu nivel y fijamos objetivos; después trabajamos con ejercicios y práctica oral en cada clase. Ideal para estudiantes y profesionales con poco tiempo. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 20,
+  "stock": 0,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "14:00",
+     "horaFin": "19:00"
+    }
+   ]
+  },
+  "vendedor": {
+   "email": "aulaviva-seed@example.com",
+   "nombre": "Aula Viva"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "cerave",
+  "tipo": "producto",
+  "nombre": "Loción hidratante facial CeraVe PM",
+  "marca": "CeraVe",
+  "descripcion": "Loción facial hidratante de noche, ultraligera y libre de aceite, desarrollada con dermatólogos. Combina tres ceramidas esenciales que ayudan a restaurar la barrera protectora de la piel, ácido hialurónico que atrae la hidratación y niacinamida que calma la piel. Presentación de 3 oz (89 ml).",
+  "categoria": "Belleza",
+  "precio": 16,
+  "stock": 25,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "bellastudio-seed@example.com",
+   "nombre": "Bella Studio Spa"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "brochas",
+  "tipo": "producto",
+  "nombre": "Set de brochas de maquillaje Real Techniques Artist Essentials (5 piezas)",
+  "marca": "Real Techniques",
+  "descripcion": "Set de 5 brochas de cerdas sintéticas y casquillos de aluminio: RT 217 para base líquida o en crema y contorno, RT 421 para rubor o iluminador en crema, RT 420 para contorno o iluminador en polvo, RT 317 para delineador líquido o en crema y RT 425 para labial y delineador de labios. Veganas y libres de crueldad animal.",
+  "categoria": "Belleza",
+  "precio": 24.99,
+  "stock": 27,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "bellastudio-seed@example.com",
+   "nombre": "Bella Studio Spa"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "corte-salon",
+  "tipo": "servicio",
+  "nombre": "Corte de cabello en el salón",
+  "marca": "Bella Studio Spa",
+  "descripcion": "Corte de cabello para dama, caballero o niño en nuestro salón del Soho Mall, en Obarrio (Calle 50). Empezamos con una breve consulta para definir el estilo según tu tipo de cabello y la forma de tu rostro; incluye lavado con masaje capilar, corte y secado. Trabajamos con productos profesionales y herramientas desinfectadas entre cliente y cliente. Llega unos 10 minutos antes de tu cita. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Belleza",
+  "precio": 15,
+  "stock": 0,
+  "modalidadEntrega": "local_vendedor",
+  "direccionLocal": "Soho Mall, Av. Nicanor de Obarrio (Calle 50), Obarrio, Ciudad de Panamá",
+  "ubicacion": {
+   "lat": 8.9838312,
+   "lng": -79.5197033
+  },
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    }
+   ],
+   "diasNoDisponibles": []
+  },
+  "vendedor": {
+   "email": "bellastudio-seed@example.com",
+   "nombre": "Bella Studio Spa"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "corte",
+  "tipo": "servicio",
+  "nombre": "Corte y peinado a domicilio",
+  "marca": "Bella Studio Spa",
+  "descripcion": "Una estilista profesional llega a tu casa con todo lo necesario para cortarte y peinarte sin que tengas que salir. Sirve para ocasiones especiales (graduaciones, bodas, fiestas) o para tu rutina del mes. Incluye consulta del estilo, corte, secado y peinado final. Solo necesitamos un espacio con buena luz, una silla y un enchufe cerca. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Belleza",
+  "precio": 18,
+  "stock": 0,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 2,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 6,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    }
+   ]
+  },
+  "vendedor": {
+   "email": "bellastudio-seed@example.com",
+   "nombre": "Bella Studio Spa"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "manicure",
+  "tipo": "servicio",
+  "nombre": "Manicure y pedicure spa",
+  "marca": "Bella Studio Spa",
+  "descripcion": "Sesión de manicure y pedicure en un ambiente tranquilo de spa, en nuestra sucursal de Altaplaza Mall. Incluye limado y cuidado de cutículas, exfoliación, hidratación con masaje de manos y pies, y esmaltado a tu elección (tradicional o semipermanente consultando antes). Usamos instrumentos esterilizados y esmaltes de buena calidad para que tus uñas duren más. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Belleza",
+  "precio": 25,
+  "stock": 0,
+  "modalidadEntrega": "local_vendedor",
+  "direccionLocal": "Altaplaza Mall, Vía Centenario, Ancón, Ciudad de Panamá",
+  "ubicacion": {
+   "lat": 9.029518,
+   "lng": -79.5346284
+  },
+  "disponibilidad": {
+   "duracionMinutos": 90,
+   "reglas": [
+    {
+     "diaSemana": 2,
+     "horaInicio": "10:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "10:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "10:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "10:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 6,
+     "horaInicio": "10:00",
+     "horaFin": "18:00"
+    }
+   ]
+  },
+  "vendedor": {
+   "email": "bellastudio-seed@example.com",
+   "nombre": "Bella Studio Spa"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "closet",
+  "tipo": "producto",
+  "nombre": "Organizador de closet",
+  "marca": "SimpleHouseware",
+  "descripcion": "Organizador colgante de 5 estantes en tela no tejida gris, para aprovechar el espacio vertical del closet. Mide unos 30 x 30 x 114 cm y tiene 105 litros de capacidad (21 L por estante, de unos 22 cm de alto), además de bolsillos laterales para accesorios. Se cuelga con dos ganchos giratorios 360° sobre una estructura metálica con soporte superior reforzado, y su base rígida mantiene la forma.",
+  "categoria": "Hogar",
+  "precio": 22,
+  "stock": 12,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "casalista-seed@example.com",
+   "nombre": "Casa Lista"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "sabanas",
+  "tipo": "producto",
+  "nombre": "Set de sábanas queen",
+  "marca": "Utopia Bedding",
+  "descripcion": "Juego de sábanas tamaño queen de 4 piezas: sábana ajustable (152 x 203 cm), sábana encimera (229 x 259 cm) y 2 fundas de almohada (51 x 76 cm), en color blanco. El bolsillo profundo de hasta 40 cm se adapta a colchones gruesos. Tejido suave y transpirable, certificado OEKO-TEX Standard 100, lavable en máquina y resistente a la decoloración.",
+  "categoria": "Hogar",
+  "precio": 28,
+  "stock": 10,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "casalista-seed@example.com",
+   "nombre": "Casa Lista"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "limpieza",
+  "tipo": "servicio",
+  "nombre": "Limpieza profunda de hogar",
+  "marca": "Casa Lista",
+  "descripcion": "Limpieza profunda para apartamentos y casas realizada por un equipo con productos y equipo propio. Cubre cocina (grasa en estufa, campana y gabinetes), baños (sarro y juntas), pisos, ventanas interiores, polvo en zócalos y rincones y desinfección de superficies de contacto. Ideal antes de una mudanza, después de una remodelación o como limpieza de temporada. La duración depende del tamaño del espacio. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 35,
+  "stock": null,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 120,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "08:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "08:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "08:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "08:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "08:00",
+     "horaFin": "16:00"
+    },
+    {
+     "diaSemana": 6,
+     "horaInicio": "08:00",
+     "horaFin": "16:00"
+    }
+   ],
+   "diasNoDisponibles": []
+  },
+  "vendedor": {
+   "email": "casalista-seed@example.com",
+   "nombre": "Casa Lista"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "bolso-coach",
+  "tipo": "producto",
+  "nombre": "Bolso Coach Tabby 26",
+  "marca": "Coach",
+  "descripcion": "Bolso de hombro Coach Tabby 26 en piel pulida con textura pebble, de forma estructurada y unos 26 cm (10,25 in) de largo. Incluye una correa corta desmontable (caída de unos 18 cm) y una correa larga para llevarlo al hombro o cruzado, con bolsillo exterior y bolsillo interior con cierre.",
+  "categoria": "Moda",
+  "precio": 38,
+  "stock": 6,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "modaurbana-seed@example.com",
+   "nombre": "Moda Urbana PTY"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "hanes",
+  "tipo": "producto",
+  "nombre": "Camiseta básica algodón",
+  "marca": "Hanes",
+  "descripcion": "Camiseta Hanes de algodón con bolsillo en el pecho, cuello redondo y corte clásico. Con tecnología que absorbe la humedad y controla el olor, es una básica cómoda para el uso diario y fácil de combinar. Disponible en varios colores, como negro, azul marino, verde oliva, gris, blanco y azul claro.",
+  "categoria": "Moda",
+  "precio": 12,
+  "stock": 23,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "modaurbana-seed@example.com",
+   "nombre": "Moda Urbana PTY"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "fossil",
+  "tipo": "producto",
+  "nombre": "Reloj Fossil The Minimalist 44 mm FS5439",
+  "marca": "Fossil",
+  "descripcion": "Reloj Fossil Minimalist, modelo FS5439, de cuarzo con caja de acero inoxidable de 44 mm, esfera de tres manecillas con índices de barra y correa de cuero café de 22 mm. Cristal mineral endurecido y un diseño limpio de inspiración mid-century moderno que combina con ropa casual o formal.",
+  "categoria": "Moda",
+  "precio": 30,
+  "stock": 5,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "modaurbana-seed@example.com",
+   "nombre": "Moda Urbana PTY"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "nike",
+  "tipo": "producto",
+  "nombre": "Zapatillas Nike Air Diamond Turf 2",
+  "marca": "Nike",
+  "descripcion": "Zapatillas Nike Air Diamond Turf 2, el segundo modelo de entrenamiento cruzado de Deion Sanders, de regreso con su diseño retro de los años 90. Tienen unidades Nike Air y mediasuela de espuma de largo completo para amortiguar cada paso, y suela de goma para tracción y durabilidad. Ideales para uso diario con estilo deportivo.",
+  "categoria": "Moda",
+  "precio": 45,
+  "stock": 7,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "modaurbana-seed@example.com",
+   "nombre": "Moda Urbana PTY"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "instalacion-software",
+  "tipo": "servicio",
+  "nombre": "Instalacion de software",
+  "marca": "ProFix Servicios Técnicos",
+  "descripcion": "Instalación y configuración de programas en tu computadora, en tu casa: sistema operativo (Windows o macOS), paquete de oficina, antivirus, navegadores, programas de diseño o de trabajo, controladores e impresoras. También dejamos todo actualizado y te mostramos lo básico para que lo uses. Trabajamos solo con software que ya tengas con licencia o con alternativas gratuitas. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 15,
+  "stock": 0,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "09:00",
+     "horaFin": "17:00"
+    }
+   ],
+   "diasNoDisponibles": []
+  },
+  "vendedor": {
+   "email": "profix-seed@example.com",
+   "nombre": "ProFix Servicios Técnicos"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "reparacion-laptops",
+  "tipo": "servicio",
+  "nombre": "Reparacion de laptops",
+  "marca": "ProFix Servicios Técnicos",
+  "descripcion": "Diagnóstico y reparación de laptops en tu domicilio: pantallas dañadas, baterías que no cargan, teclados con teclas que fallan, equipos que no encienden o se calientan, puertos de carga y lentitud extrema. Primero revisamos el equipo y te damos el diagnóstico y el costo de las piezas antes de reparar; si no tiene arreglo o no conviene, te lo decimos. El precio de la sesión cubre la revisión y la mano de obra; las piezas se cotizan aparte. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 40,
+  "stock": 0,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 6,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    }
+   ],
+   "diasNoDisponibles": []
+  },
+  "vendedor": {
+   "email": "profix-seed@example.com",
+   "nombre": "ProFix Servicios Técnicos"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "reparacion-pc",
+  "tipo": "servicio",
+  "nombre": "Reparación de computadoras a domicilio",
+  "marca": "ProFix Servicios Técnicos",
+  "descripcion": "Servicio técnico para computadoras de escritorio y portátiles en tu casa u oficina: limpieza interna y cambio de pasta térmica, ampliación de memoria o disco, instalación de SSD, optimización del sistema, eliminación de virus y solución de fallas de hardware. Te explicamos qué encontramos y qué recomendamos hacer. Las piezas, si hacen falta, se cotizan aparte. La duración de la cita y los horarios disponibles se configuran al reservar.",
+  "categoria": "Servicios profesionales",
+  "precio": 30,
+  "stock": 0,
+  "modalidadEntrega": "domicilio_cliente",
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": {
+   "duracionMinutos": 60,
+   "reglas": [
+    {
+     "diaSemana": 1,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 2,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 3,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 4,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 5,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    },
+    {
+     "diaSemana": 6,
+     "horaInicio": "09:00",
+     "horaFin": "18:00"
+    }
+   ]
+  },
+  "vendedor": {
+   "email": "profix-seed@example.com",
+   "nombre": "ProFix Servicios Técnicos"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "bolso",
+  "tipo": "producto",
+  "nombre": "Bolso de cuero artesanal para dama",
+  "marca": "Cuero & Co.",
+  "descripcion": "Bolso tipo tote de cuero genuino, hecho a mano y con acabado envejecido en tono café caramelo. Tiene dos asas reforzadas con remaches metálicos y una abertura amplia para llevar lo del día a día, como libros, cuadernos, documentos y cartera. Cada pieza es única: el cuero puede tener ligeras variaciones de tono y textura, parte de su carácter artesanal.",
+  "categoria": "Moda",
+  "precio": 55,
+  "stock": 7,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tallerbarrofino-seed@example.com",
+   "nombre": "Taller Barro Fino"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "lampara",
+  "tipo": "producto",
+  "nombre": "Lámpara de mesa de madera minimalista",
+  "marca": "Surpars House",
+  "descripcion": "Lámpara de mesa o de mesita de noche de diseño minimalista, con base de madera maciza y pantalla de lino. Mide unos 32 cm de alto y 14 cm de ancho. Usa un bombillo de rosca E26 de hasta 40 W (no incluido) y se enciende con un interruptor en el cable. No es regulable.",
+  "categoria": "Hogar",
+  "precio": 32,
+  "stock": 15,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tallerbarrofino-seed@example.com",
+   "nombre": "Taller Barro Fino"
+  },
+  "fotos": 2
+ },
+ {
+  "carpeta": "vajilla",
+  "tipo": "producto",
+  "nombre": "Set de vajilla de cerámica artesanal (4 piezas)",
+  "marca": "LauraLynn Pottery",
+  "descripcion": "Set de 4 platos de cerámica torneados y terminados a mano, en un tono blanco mate de textura natural. Por ser artesanales, cada pieza es única y puede variar ligeramente en forma y tono. Ideales para servir en la mesa diaria o en una ocasión especial; se recomienda lavarlos a mano para conservar el acabado.",
+  "categoria": "Hogar",
+  "precio": 39.99,
+  "stock": 19,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tallerbarrofino-seed@example.com",
+   "nombre": "Taller Barro Fino"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "sony",
+  "tipo": "producto",
+  "nombre": "Audífonos inalámbricos Sony WH-CH520",
+  "marca": "Sony",
+  "descripcion": "Audífonos inalámbricos on-ear Sony WH-CH520, ligeros y cómodos para usar todo el día. Ofrecen hasta 50 horas de batería y, con solo 3 minutos de carga rápida por USB-C, tienes 1,5 horas más de música. Conexión Bluetooth 5.2 con alcance de unos 10 metros, conexión multipunto para enlazar dos dispositivos a la vez y micrófono integrado para llamadas y control por voz. Incluye cable de carga USB-C.",
+  "categoria": "Electrónica",
+  "precio": 30,
+  "stock": 10,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "audifonos",
+  "tipo": "producto",
+  "nombre": "Audífonos inalámbricos Soundcore Life Q30 con cancelación de ruido",
+  "marca": "Soundcore",
+  "descripcion": "Audífonos over-ear con cancelación activa de ruido híbrida y tres modos (Transporte, Exterior e Interior) para adaptarte a cada entorno. Drivers de 40 mm con audio de alta resolución, ecualizador personalizable desde la app y conexión a dos dispositivos a la vez. Hasta 40 horas de batería con la cancelación activada (60 sin ella) y 4 horas de uso con solo 5 minutos de carga rápida. Incluyen bolsa de transporte y cables de carga y de audio.",
+  "categoria": "Electrónica",
+  "precio": 45.99,
+  "stock": 18,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "anker",
+  "tipo": "producto",
+  "nombre": "Cargador Anker 511 (Nano Pro) USB-C 20W",
+  "marca": "Anker",
+  "descripcion": "Cargador USB-C de 20 W con tecnología PowerIQ 3.0, que detecta tu dispositivo y le entrega la carga rápida adecuada. Es un 45 % más pequeño que un cargador de 20 W convencional, ideal para llevarlo en el bolsillo o la mochila, y su sistema ActiveShield monitorea la temperatura para proteger tu equipo. Compatible con iPhone, iPad, Galaxy y Pixel. El cable se vende por separado.",
+  "categoria": "Electrónica",
+  "precio": 20,
+  "stock": 10,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "taotronics",
+  "tipo": "producto",
+  "nombre": "Lámpara LED de escritorio TaoTronics con puerto USB",
+  "marca": "TaoTronics",
+  "descripcion": "Lámpara LED de escritorio con brazo plegable y ángulos ajustables: el brazo se inclina hasta 135°, el cabezal gira 90° y la base 45°, para dirigir la luz justo donde la necesitas. Incluye controles táctiles en la base para regular el brillo y un puerto USB integrado para cargar tu teléfono mientras trabajas o estudias. Su luz LED es cómoda para la vista en largas jornadas de lectura o trabajo.",
+  "categoria": "Hogar",
+  "precio": 15,
+  "stock": 10,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "mouse",
+  "tipo": "producto",
+  "nombre": "Mouse gamer inalámbrico Logitech G502 LIGHTSPEED RGB",
+  "marca": "Logitech",
+  "descripcion": "Mouse gamer inalámbrico con sensor HERO 25K de hasta 25.600 DPI y conectividad LIGHTSPEED de 1 ms, con la respuesta de un mouse con cable. Tiene 11 botones programables, seis pesas ajustables para personalizar el peso, iluminación RGB LIGHTSYNC y memoria interna para guardar tus perfiles. Hasta 60 horas de juego por carga y compatible con la base de carga POWERPLAY. Incluye receptor USB y cable de carga.",
+  "categoria": "Electrónica",
+  "precio": 28.5,
+  "stock": 25,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "mouse-acer",
+  "tipo": "producto",
+  "nombre": "Mouse inalámbrico ergonómico Acer 2.4 GHz, 6 botones y 3 niveles de DPI",
+  "marca": "Acer",
+  "descripcion": "Mouse inalámbrico ergonómico para manos medianas y grandes, con conexión de 2.4 GHz mediante receptor USB-A (sin Bluetooth) y un alcance de unos 10 metros. Tiene 6 botones, incluidos los de avance y retroceso para navegar más rápido, y 3 niveles de DPI ajustables (800, 1200 y 1600). Mide unos 13 x 8,2 x 4,2 cm y pesa 85 g. Funciona con 2 pilas AAA (no incluidas) y un indicador luminoso avisa cuando queda poca batería.",
+  "categoria": "Electrónica",
+  "precio": 14,
+  "stock": 17,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "mousepad-razer",
+  "tipo": "producto",
+  "nombre": "Mousepad RGB Razer Goliathus Extended Chroma",
+  "marca": "Razer",
+  "descripcion": "Alfombrilla extendida para mouse y teclado con iluminación Chroma RGB de 16,8 millones de colores, que se sincroniza con juegos, dispositivos Razer y luces Philips Hue. Su superficie de tela micro-texturizada equilibra control y velocidad, y la base de goma natural antideslizante la mantiene firme. Mide aproximadamente 29 x 92 cm y 3 mm de grosor, para cubrir todo el escritorio.",
+  "categoria": "Electrónica",
+  "precio": 10,
+  "stock": 10,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "mousepad-steelseries",
+  "tipo": "producto",
+  "nombre": "Mousepad SteelSeries QcK XXL",
+  "marca": "SteelSeries",
+  "descripcion": "Alfombrilla XXL de tela micro-tejida (aprox. 90 x 40 cm y 2 mm de grosor) pensada para un seguimiento preciso y estable del sensor. Su base de goma antideslizante evita que se mueva durante las partidas, cubre teclado y mouse con una sola pieza y es lavable. Una opción clásica para jugar o trabajar con todo el escritorio cubierto.",
+  "categoria": "Electrónica",
+  "precio": 10,
+  "stock": 10,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 4
+ },
+ {
+  "carpeta": "mousepad-tecknet",
+  "tipo": "producto",
+  "nombre": "Set ergonómico TeckNet: mousepad con reposamuñecas y reposamuñecas para teclado",
+  "marca": "TeckNet",
+  "descripcion": "Set ergonómico de dos piezas: mousepad con reposamuñecas (aprox. 25 x 20 cm) y reposamuñecas para teclado (aprox. 44 x 8 cm), ambos de espuma viscoelástica (memory foam) de unos 2,5 cm de grosor y con base de goma antideslizante. Ayudan a mantener las muñecas en una posición neutra al escribir y a reducir la fatiga en jornadas largas frente a la computadora.",
+  "categoria": "Electrónica",
+  "precio": 10,
+  "stock": 10,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 3
+ },
+ {
+  "carpeta": "redragon",
+  "tipo": "producto",
+  "nombre": "Teclado mecánico Redragon K582 SURARA RGB (switches rojos)",
+  "marca": "Redragon",
+  "descripcion": "Teclado mecánico gamer de tamaño completo (104 teclas) con switches rojos lineales y silenciosos. Retroiluminación RGB con 18 modos de luz, anti-ghosting en todas las teclas y N-key rollover para registrar varias pulsaciones a la vez, sin perder ninguna en el juego. Conexión USB por cable y diseño ergonómico.",
+  "categoria": "Electrónica",
+  "precio": 50,
+  "stock": 5,
+  "modalidadEntrega": null,
+  "direccionLocal": null,
+  "ubicacion": null,
+  "disponibilidad": null,
+  "vendedor": {
+   "email": "tecnopanama-seed@example.com",
+   "nombre": "TecnoPanamá"
+  },
+  "fotos": 3
+ }
+]

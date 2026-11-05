@@ -10,7 +10,8 @@ cd "$(dirname "$0")/.."
 ORIGEN="${1:-}"
 [ -n "$ORIGEN" ] && [ -d "$ORIGEN" ] || { echo "Uso: bash scripts/restaurar-datos.sh <carpeta-del-respaldo>"; exit 1; }
 [ -f .env ] || { echo "No encuentro app/.env"; exit 1; }
-set -a; . ./.env; set +a
+# Carga .env sin ejecutarlo como shell (valores con espacios, p. ej. SMTP_PASS, rompian el 'source')
+while IFS='=' read -r _k _v; do case "$_k" in ''|'#'*) ;; *) export "$_k=${_v%$'\r'}" ;; esac; done < ./.env
 
 echo "Esto REEMPLAZARA el catalogo (Mongo) y la base $POSTGRES_DB (Postgres) con: $ORIGEN"
 read -r -p "Escribe SI para continuar: " r
