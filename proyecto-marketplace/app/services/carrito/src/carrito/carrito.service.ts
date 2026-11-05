@@ -15,6 +15,7 @@ interface ProductoCatalogo {
   imagenUrl?: string;
   imagenes?: string[];
   vendedorId: string;
+  pausada?: boolean;
 }
 
 interface ReservaCatalogo {
@@ -73,11 +74,23 @@ export class CarritoService {
       throw new BadRequestException('El producto o servicio no existe');
     }
 
+    if (producto.vendedorId === usuarioId) {
+      throw new BadRequestException('No puedes comprar tus propias publicaciones');
+    }
+    if (producto.pausada) {
+      throw new BadRequestException('Esta publicación está pausada y no se puede comprar por ahora');
+    }
+
     const clave = this.clave(usuarioId);
 
     if (producto.tipo === 'servicio') {
       if (!dto.reservaId) {
         throw new BadRequestException('Debes reservar un horario antes de agregar este servicio');
+      }
+      // La reserva debe existir, ser del comprador (catalogo responde 403 si no) y seguir retenida
+      const reserva = await this.obtenerReserva(dto.productoId, dto.reservaId, authorizationHeader);
+      if (!reserva || reserva.estado !== 'retenida') {
+        throw new BadRequestException('Ese horario ya no está reservado para ti. Elige uno nuevo.');
       }
       const claveReservas = this.claveReservas(usuarioId);
       const reservaAnterior = await this.redis.hget(claveReservas, dto.productoId);

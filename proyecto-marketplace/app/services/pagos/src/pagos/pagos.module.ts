@@ -5,6 +5,7 @@ import { Pago } from './pago.entity';
 import { PagosController } from './pagos.controller';
 import { PagosService } from './pagos.service';
 import { RabbitmqService } from './rabbitmq.service';
+import { PaypalService } from './paypal.service';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Module({
@@ -15,6 +16,6 @@ import { JwtAuthGuard } from '../auth/jwt-auth.guard';
     }),
   ],
   controllers: [PagosController],
-  providers: [PagosService, RabbitmqService, JwtAuthGuard],
+  providers: [PagosService, RabbitmqService, PaypalService, JwtAuthGuard],
 })
 export class PagosModule {}

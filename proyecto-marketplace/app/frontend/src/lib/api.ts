@@ -11,6 +11,8 @@ export interface Usuario {
   email: string
   rol: Rol
   fotoUrl?: string | null
+  // undefined en sesiones guardadas antes de existir la verificación: se tratan como verificadas
+  emailVerificado?: boolean
 }
 
 export function getToken(): string | null {
@@ -68,7 +70,7 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
       ? data.message.join(', ')
       : data?.message || `Error ${resp.status}`
     // Solo cuando el token fue rechazado: un 401 de "contraseña incorrecta" no debe cerrar la sesión
-    if (resp.status === 401 && token && mensaje.startsWith('Token inválido')) {
+    if (resp.status === 401 && token && /^(Token inválido|La sesión fue cerrada|Falta el token)/.test(mensaje)) {
       limpiarSesion()
       window.dispatchEvent(new Event(EVENTO_SESION_EXPIRADA))
     }
@@ -84,7 +86,6 @@ export interface RegistroPayload {
   nombre: string
   email: string
   password: string
-  rol: Rol
 }
 
 export interface LoginPayload {
@@ -97,12 +98,6 @@ interface SesionRespuesta {
   usuario: Usuario
 }
 
-export interface RequiereRolRespuesta {
-  requiereRol: true
-  nombre: string
-  email: string
-}
-
 export interface ActualizarPerfilPayload {
   nombre?: string
   passwordActual?: string
@@ -112,14 +107,18 @@ export interface ActualizarPerfilPayload {
 export const authApi = {
   registro: (dto: RegistroPayload) => request<SesionRespuesta>('/auth/registro', { method: 'POST', body: JSON.stringify(dto) }),
   login: (dto: LoginPayload) => request<SesionRespuesta>('/auth/login', { method: 'POST', body: JSON.stringify(dto) }),
-  google: (credential: string, rol?: Rol) =>
-    request<SesionRespuesta | RequiereRolRespuesta>('/auth/google', {
-      method: 'POST',
-      body: JSON.stringify({ credential, rol }),
-    }),
+  google: (credential: string) =>
+    request<SesionRespuesta>('/auth/google', { method: 'POST', body: JSON.stringify({ credential }) }),
+  activarVendedor: () => request<SesionRespuesta>('/auth/me/vendedor', { method: 'POST' }),
   me: () => request<Usuario>('/auth/me'),
+  // Si se cambió la contraseña el servidor devuelve además un token nuevo (cierra las demás sesiones)
   actualizarPerfil: (dto: ActualizarPerfilPayload) =>
-    request<Usuario>('/auth/me', { method: 'PATCH', body: JSON.stringify(dto) }),
+    request<Usuario & { token?: string }>('/auth/me', { method: 'PATCH', body: JSON.stringify(dto) }),
+  logout: () => request<{ cerrada: boolean }>('/auth/logout', { method: 'POST' }),
+  logoutTodos: () => request<{ cerradas: boolean }>('/auth/logout-todos', { method: 'POST' }),
+  verificarCorreo: (token: string) =>
+    request<{ verificado: boolean; email: string }>('/auth/verificar-correo', { method: 'POST', body: JSON.stringify({ token }) }),
+  reenviarVerificacion: () => request<{ enviado: boolean }>('/auth/reenviar-verificacion', { method: 'POST' }),
   perfilPublico: (id: string) => request<{ id: string; nombre: string }>(`/auth/usuarios/${id}`),
 }
 
@@ -185,6 +184,7 @@ export interface ReglaDisponibilidad {
 export interface Disponibilidad {
   duracionMinutos: number
   reglas: ReglaDisponibilidad[]
+  diasNoDisponibles?: string[]
 }
 
 export interface Ubicacion {
@@ -201,6 +201,7 @@ export interface Producto {
   categoria: string
   precio: number
   stock: number
+  pausada?: boolean
   modalidadEntrega?: ModalidadEntrega
   direccionLocal?: string
   ubicacion?: Ubicacion
@@ -221,6 +222,7 @@ export interface FiltrosCatalogo {
   calificacionMin?: number
   vendedorId?: string
   buscar?: string
+  incluirPausadas?: boolean
   pagina?: number
   limite?: number
 }
@@ -235,6 +237,7 @@ export interface PaginaCatalogo {
 
 export interface CrearProductoPayload {
   tipo: TipoPublicacion
+  pausada?: boolean
   nombre: string
   marca?: string
   descripcion: string
@@ -254,7 +257,7 @@ export function imagenPrincipal(p: { imagenes?: string[]; imagenUrl?: string }):
 }
 
 
-function aQueryString(params: Record<string, unknown>): string {
+function aQueryString(params: object): string {
   const usp = new URLSearchParams()
   for (const [k, v] of Object.entries(params)) {
     if (v !== undefined && v !== null && v !== '') usp.set(k, String(v))
@@ -278,7 +281,7 @@ export interface Resena {
   _id: string
   productoId: string
   compradorId: string
-  compradorEmail: string
+  compradorNombre: string
   ordenId: string
   calificacion: number
   comentario?: string
@@ -382,6 +385,7 @@ export interface ItemOrden {
   subtotal: number
   tipo?: TipoPublicacion
   cita?: { reservaId: string; fecha: string; horaInicio: string; horaFin: string }
+  estadoEntrega?: EstadoEntrega
 }
 
 export interface Direccion {
@@ -436,9 +440,16 @@ export interface Pago {
   tarjetaUltimos4?: string
 }
 
+export type RespuestaPaypalCrear = { modo: 'simulado' } | { modo: 'sandbox'; paypalOrderId: string; aprobacionUrl: string }
+
 export const pagosApi = {
   procesar: (ordenId: string, dto: ProcesarPagoPayload) =>
     request<Pago>(`/pagos/ordenes/${ordenId}`, { method: 'POST', body: JSON.stringify(dto) }),
+  // "sandbox" = PayPal Sandbox real (redirige a PayPal); "simulado" = sin credenciales, se simula localmente
+  config: () => request<{ paypal: 'sandbox' | 'simulado' }>('/pagos/config'),
+  paypalCrear: (ordenId: string) => request<RespuestaPaypalCrear>(`/pagos/ordenes/${ordenId}/paypal/crear`, { method: 'POST' }),
+  paypalCapturar: (ordenId: string, paypalOrderId: string) =>
+    request<Pago>(`/pagos/ordenes/${ordenId}/paypal/capturar`, { method: 'POST', body: JSON.stringify({ paypalOrderId }) }),
 }
 
 // ---------------- notificaciones ----------------
@@ -448,11 +459,23 @@ export interface Notificacion {
   tipo: string
   mensaje: string
   ordenId: string
+  productoId?: string | null
   leida: boolean
   creadoEn: string
 }
 
+// Avisa al Header (badge de la campana) de que cambiaron las notificaciones
+export const EVENTO_NOTIFICACIONES = 'mp:notificaciones'
+const avisar = <T,>(p: Promise<T>) =>
+  p.then((r) => {
+    window.dispatchEvent(new Event(EVENTO_NOTIFICACIONES))
+    return r
+  })
+
 export const notificacionesApi = {
   listar: () => request<Notificacion[]>('/notificaciones'),
-  marcarLeida: (id: string) => request<Notificacion>(`/notificaciones/${id}/leida`, { method: 'PATCH' }),
+  marcarLeida: (id: string) => avisar(request<Notificacion>(`/notificaciones/${id}/leida`, { method: 'PATCH' })),
+  marcarTodasLeidas: () => avisar(request<{ actualizadas: number }>('/notificaciones/leidas', { method: 'PATCH' })),
+  eliminar: (id: string) => avisar(request<{ eliminada: boolean }>(`/notificaciones/${id}`, { method: 'DELETE' })),
+  eliminarTodas: () => avisar(request<{ eliminadas: number }>('/notificaciones', { method: 'DELETE' })),
 }

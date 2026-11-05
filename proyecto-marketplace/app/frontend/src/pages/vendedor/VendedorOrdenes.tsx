@@ -76,6 +76,11 @@ export default function VendedorOrdenes() {
                   <p className="muted" style={{ fontSize: '0.8125rem' }}>
                     {propios.map((it) => (it.cita ? `${it.nombre} (cita ${formatFecha(it.cita.fecha)} ${formatHora12h(it.cita.horaInicio)})` : `${it.nombre} ×${it.cantidad}`)).join(', ')}
                   </p>
+                  {orden.direccion && (
+                    <p style={{ fontSize: '0.8125rem', marginTop: '0.25rem' }}>
+                      <b>Entregar a:</b> {orden.direccion.nombre} · Tel. {orden.direccion.telefono} · {orden.direccion.direccion}
+                    </p>
+                  )}
                 </div>
                 <span className="muted" style={{ fontSize: '0.8125rem' }}>
                   {new Date(orden.creadoEn).toLocaleDateString('es-PA', { day: '2-digit', month: 'short' })}
@@ -85,7 +90,7 @@ export default function VendedorOrdenes() {
                   size="sm"
                   width="9rem"
                   value={orden.estadoEntrega}
-                  disabled={actualizando === orden.id}
+                  disabled={actualizando === orden.id || orden.estadoPago !== 'pagada'}
                   onChange={(v) => cambiarEstado(orden.id, v as EstadoEntrega)}
                   options={[
                     { value: 'pendiente', label: 'Pendiente' },

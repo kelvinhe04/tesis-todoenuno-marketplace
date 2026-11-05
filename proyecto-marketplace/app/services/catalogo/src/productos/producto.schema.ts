@@ -24,6 +24,10 @@ export class Disponibilidad {
 
   @Prop({ type: [ReglaDisponibilidadSchema], required: true })
   reglas: ReglaDisponibilidad[];
+
+  // Fechas concretas (AAAA-MM-DD) en las que el vendedor no atiende (feriados, vacaciones...)
+  @Prop({ type: [String], default: [] })
+  diasNoDisponibles: string[];
 }
 export const DisponibilidadSchema = SchemaFactory.createForClass(Disponibilidad);
 
@@ -59,6 +63,10 @@ export class Producto extends Document {
 
   @Prop({ min: 0, default: 0 })
   stock: number;
+
+  // Pausada: el vendedor la oculta del catálogo y no se puede comprar/reservar, pero la conserva
+  @Prop({ default: false })
+  pausada: boolean;
 
   @Prop({ enum: ['domicilio_cliente', 'local_vendedor'], required: false })
   modalidadEntrega?: ModalidadEntrega;

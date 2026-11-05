@@ -30,6 +30,10 @@ export class Pago {
   @Column({ nullable: true })
   tarjetaUltimos4?: string;
 
+  // Id de la orden de PayPal (solo pagos hechos con PayPal Sandbox), para trazabilidad e idempotencia
+  @Column({ type: 'varchar', nullable: true })
+  referenciaExterna?: string;
+
   @CreateDateColumn()
   creadoEn: Date;
 }

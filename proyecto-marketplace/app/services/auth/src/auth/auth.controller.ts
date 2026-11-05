@@ -4,7 +4,15 @@ import { RegistroDto } from './dto/registro.dto';
 import { LoginDto } from './dto/login.dto';
 import { GoogleLoginDto } from './dto/google-login.dto';
 import { ActualizarPerfilDto } from './dto/actualizar-perfil.dto';
+import { VerificarCorreoDto } from './dto/verificar-correo.dto';
 import { JwtAuthGuard } from './jwt-auth.guard';
+
+// IP del cliente: el gateway (KrakenD) la manda en X-Forwarded-For
+function ipDe(request: any): string {
+  const reenviada = request.headers['x-forwarded-for'];
+  const primera = (Array.isArray(reenviada) ? reenviada[0] : reenviada)?.split(',')[0]?.trim();
+  return primera || request.ip || 'desconocida';
+}
 
 @Controller('auth')
 export class AuthController {
@@ -16,8 +24,31 @@ export class AuthController {
   }
 
   @Post('login')
-  login(@Body() dto: LoginDto) {
-    return this.authService.login(dto);
+  login(@Body() dto: LoginDto, @Req() request: any) {
+    return this.authService.login(dto, ipDe(request));
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('logout')
+  logout(@Req() request: any) {
+    return this.authService.cerrarSesion(request.usuario);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('logout-todos')
+  logoutTodos(@Req() request: any) {
+    return this.authService.cerrarSesionEnTodos(request.usuario.sub);
+  }
+
+  @Post('verificar-correo')
+  verificarCorreo(@Body() dto: VerificarCorreoDto) {
+    return this.authService.verificarCorreo(dto.token);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('reenviar-verificacion')
+  reenviarVerificacion(@Req() request: any) {
+    return this.authService.reenviarVerificacion(request.usuario.sub);
   }
 
   @Post('google')
@@ -29,6 +60,12 @@ export class AuthController {
   @Get('me')
   me(@Req() request: any) {
     return this.authService.obtenerPerfil(request.usuario.sub);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('me/vendedor')
+  activarVendedor(@Req() request: any) {
+    return this.authService.activarVendedor(request.usuario.sub);
   }
 
   @UseGuards(JwtAuthGuard)

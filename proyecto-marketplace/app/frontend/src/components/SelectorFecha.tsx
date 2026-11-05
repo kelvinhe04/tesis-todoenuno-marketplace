@@ -11,10 +11,12 @@ interface Props {
   min: string // AAAA-MM-DD, no se puede elegir antes
   diasPermitidos: Set<number> // Date.getDay() de los días en que hay atención
   onChange: (fecha: string) => void
+  diasBloqueados?: Set<string> // fechas concretas sin atención (feriados, vacaciones): no se pueden elegir
+  marcados?: Set<string> // modo multi-selección (vendedor): varios días resaltados a la vez
 }
 
 // Calendario mensual: los días sin atención (o pasados) salen en gris y no se pueden elegir.
-export function SelectorFecha({ value, min, diasPermitidos, onChange }: Props) {
+export function SelectorFecha({ value, min, diasPermitidos, onChange, diasBloqueados, marcados }: Props) {
   const [anio, mes] = value.split('-').map(Number)
   const [mesVisible, setMesVisible] = useState({ anio, mes: mes - 1 })
 
@@ -55,8 +57,11 @@ export function SelectorFecha({ value, min, diasPermitidos, onChange }: Props) {
         {Array.from({ length: diasEnMes }, (_, i) => {
           const dia = i + 1
           const fecha = aFechaISO(new Date(mesVisible.anio, mesVisible.mes, dia))
-          const habilitado = fecha >= min && diasPermitidos.has(new Date(mesVisible.anio, mesVisible.mes, dia).getDay())
-          const seleccionado = fecha === value
+          const habilitado =
+            fecha >= min &&
+            diasPermitidos.has(new Date(mesVisible.anio, mesVisible.mes, dia).getDay()) &&
+            !diasBloqueados?.has(fecha)
+          const seleccionado = marcados ? marcados.has(fecha) : fecha === value
           return (
             <button
               type="button"

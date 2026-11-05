@@ -23,17 +23,22 @@ services:
       - "27019:27017"
     volumes:
       - mongodata:/data/db
+      - mongoconfig:/data/configdb
 
   redis:
     image: redis:7-alpine
     ports:
       - "6379:6379"
+    volumes:
+      - redisdata:/data
 
   rabbitmq:
     image: rabbitmq:3.13-management-alpine
     ports:
       - "5672:5672"
       - "15672:15672"
+    volumes:
+      - rabbitdata:/var/lib/rabbitmq
     healthcheck:
       test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
       interval: 5s
@@ -47,11 +52,17 @@ services:
       DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       JWT_SECRET: ${JWT_SECRET}
       GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      REDIS_URL: redis://redis:6379
+      NOTIFICACIONES_URL: http://notificaciones:3000
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:5173}
+      EXIGIR_VERIFICACION_CORREO: ${EXIGIR_VERIFICACION_CORREO:-true}
     ports:
       - "3011:3000"
     depends_on:
       postgres:
         condition: service_healthy
+      redis:
+        condition: service_started
 
   catalogo:
     build: ./services/catalogo
@@ -60,10 +71,12 @@ services:
       MONGO_URL: mongodb://mongo:27017/catalogo
       ORDENES_URL: http://ordenes:3000
       JWT_SECRET: ${JWT_SECRET}
+      REDIS_URL: redis://redis:6379
     ports:
       - "3002:3000"
     depends_on:
       - mongo
+      - redis
 
   carrito:
     build: ./services/carrito
@@ -87,6 +100,9 @@ services:
       CARRITO_URL: http://carrito:3000
       CATALOGO_URL: http://catalogo:3000
       JWT_SECRET: ${JWT_SECRET}
+      REDIS_URL: redis://redis:6379
+      AUTH_URL: http://auth:3000
+      EXIGIR_VERIFICACION_CORREO: ${EXIGIR_VERIFICACION_CORREO:-true}
     ports:
       - "3004:3000"
     depends_on:
@@ -94,6 +110,8 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+      redis:
+        condition: service_started
 
   pagos:
     build: ./services/pagos
@@ -103,6 +121,12 @@ services:
       RABBITMQ_URL: amqp://guest:guest@rabbitmq:5672
       ORDENES_URL: http://ordenes:3000
       JWT_SECRET: ${JWT_SECRET}
+      REDIS_URL: redis://redis:6379
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:5173}
+      # PayPal SANDBOX (opcional): si faltan las credenciales, el pago con PayPal se simula como antes
+      PAYPAL_CLIENT_ID: ${PAYPAL_CLIENT_ID:-}
+      PAYPAL_CLIENT_SECRET: ${PAYPAL_CLIENT_SECRET:-}
+      PAYPAL_API_BASE: ${PAYPAL_API_BASE:-https://api-m.sandbox.paypal.com}
     ports:
       - "3005:3000"
     depends_on:
@@ -110,6 +134,8 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+      redis:
+        condition: service_started
 
   notificaciones:
     build: ./services/notificaciones
@@ -120,6 +146,15 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       AUTH_URL: http://auth:3000
       ORDENES_URL: http://ordenes:3000
+      REDIS_URL: redis://redis:6379
+      CATALOGO_URL: http://catalogo:3000
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:5173}
+      # SMTP real (opcional): si SMTP_HOST esta vacio se usa la cuenta de prueba Ethereal
+      SMTP_HOST: ${SMTP_HOST:-}
+      SMTP_PORT: ${SMTP_PORT:-587}
+      SMTP_USER: ${SMTP_USER:-}
+      SMTP_PASS: ${SMTP_PASS:-}
+      SMTP_FROM: ${SMTP_FROM:-}
     ports:
       - "3006:3000"
     depends_on:
@@ -127,6 +162,8 @@ services:
         condition: service_healthy
       rabbitmq:
         condition: service_healthy
+      redis:
+        condition: service_started
 
   gateway:
     image: devopsfaith/krakend:2.6
@@ -146,3 +183,6 @@ services:
 volumes:
   pgdata:
   mongodata:
+  mongoconfig:
+  redisdata:
+  rabbitdata:

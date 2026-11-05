@@ -22,6 +22,11 @@ export class Usuario {
   @Column({ type: 'varchar', default: 'comprador' })
   rol: RolUsuario;
 
+  // true por defecto: las cuentas anteriores a la verificación quedan verificadas. Las nuevas por
+  // registro con contraseña nacen en false (las de Google ya vienen verificadas por Google).
+  @Column({ default: true })
+  emailVerificado: boolean;
+
   @CreateDateColumn()
   creadoEn: Date;
 }

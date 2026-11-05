@@ -1,15 +1,50 @@
 .layout {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  max-width: 40rem;
+  gap: 2.5rem;
+}
+
+/* Datos de la cuenta (perfil, direcciones, tarjetas) */
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+}
+
+.colNotif {
+  min-width: 0;
+}
+
+/* En pantallas anchas: la cuenta a la izquierda y las notificaciones a la derecha */
+@media (min-width: 64rem) {
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(0, 40rem) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .colNotif {
+    position: sticky;
+    top: 5.5rem;
+  }
 }
 
 .profileCard {
   padding: 1.5rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.profileCard > div:nth-child(2) {
+  min-width: 12rem;
+}
+
+.profileCard .btn {
+  white-space: nowrap;
 }
 
 .profileEditCard {
@@ -66,9 +101,24 @@
 
 .notifItem {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   gap: 0.75rem;
   padding: 1rem;
+}
+
+.notifTexto {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+/* Los botones van debajo del texto (a la derecha si cabe) para que el mensaje no quede apretado */
+.notifAcciones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: auto;
 }
 
 .notifDot {

@@ -10,16 +10,19 @@ import { Reserva } from './reserva.schema';
 import { Producto } from './producto.schema';
 import { CrearReservaDto } from './dto/crear-reserva.dto';
 import { ConfirmarReservaDto } from './dto/confirmar-reserva.dto';
-import { ahoraEnNegocio, yaPaso } from './tiempo';
+import { ahoraEnNegocio, aMinutos, yaPaso } from './tiempo';
 
 const MINUTOS_HOLD = 15;
 
-function sumarMinutos(hora: string, minutos: number): string {
-  const [h, m] = hora.split(':').map(Number);
-  const total = h * 60 + m + minutos;
-  const hh = Math.floor(total / 60) % 24;
+// 870 -> '14:30'. Sin dar la vuelta a las 24 h: un horario nunca cruza la medianoche.
+function deMinutos(total: number): string {
+  const hh = Math.floor(total / 60);
   const mm = total % 60;
   return `${String(hh).padStart(2, '0')}:${String(mm).padStart(2, '0')}`;
+}
+
+function sumarMinutos(hora: string, minutos: number): string {
+  return deMinutos(aMinutos(hora) + minutos);
 }
 
 function diaSemanaDe(fecha: string): number {
@@ -37,6 +40,9 @@ export class ReservasService {
   ) {}
 
   async disponibilidad(productoId: string, fecha: string) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(fecha ?? '') || Number.isNaN(new Date(`${fecha}T00:00:00`).getTime())) {
+      throw new BadRequestException('La fecha es obligatoria y debe tener formato AAAA-MM-DD');
+    }
     const producto = await this.productos.findById(productoId);
     if (!producto) {
       throw new NotFoundException('Publicación no encontrada');
@@ -45,6 +51,9 @@ export class ReservasService {
       return [];
     }
 
+    if (producto.disponibilidad.diasNoDisponibles?.includes(fecha)) {
+      return [];
+    }
     const dia = diaSemanaDe(fecha);
     const reglasDelDia = producto.disponibilidad.reglas.filter((r) => r.diaSemana === dia);
     if (!reglasDelDia.length) {
@@ -72,14 +81,14 @@ export class ReservasService {
 
     const slots: { horaInicio: string; horaFin: string }[] = [];
     for (const regla of reglasDelDia) {
-      let cursor = regla.horaInicio;
-      while (sumarMinutos(cursor, duracion) <= regla.horaFin) {
-        const horaFin = sumarMinutos(cursor, duracion);
+      // Aritmética numérica (minutos) y no sobre texto: así el bucle siempre termina
+      const finMin = aMinutos(regla.horaFin);
+      for (let ini = aMinutos(regla.horaInicio); ini + duracion <= finMin; ini += duracion) {
+        const horaInicio = deMinutos(ini);
         // Hoy solo se ofrecen los horarios que todavía no empezaron
-        if (!horasOcupadas.has(cursor) && !yaPaso(fecha, cursor, ahora)) {
-          slots.push({ horaInicio: cursor, horaFin });
+        if (!horasOcupadas.has(horaInicio) && !yaPaso(fecha, horaInicio, ahora)) {
+          slots.push({ horaInicio, horaFin: deMinutos(ini + duracion) });
         }
-        cursor = horaFin;
       }
     }
     return slots;
@@ -93,17 +102,31 @@ export class ReservasService {
     if (producto.tipo !== 'servicio' || !producto.disponibilidad) {
       throw new BadRequestException('Esta publicación no acepta reservas');
     }
+    if (producto.vendedorId === compradorId) {
+      throw new BadRequestException('No puedes reservar tus propios servicios');
+    }
+    if (producto.pausada) {
+      throw new BadRequestException('Este servicio está pausado y no acepta reservas por ahora');
+    }
 
     if (yaPaso(dto.fecha, dto.horaInicio, ahoraEnNegocio())) {
       throw new BadRequestException('Ese horario ya pasó. Elige uno posterior.');
     }
 
+    if (producto.disponibilidad.diasNoDisponibles?.includes(dto.fecha)) {
+      throw new BadRequestException('El vendedor no atiende ese día');
+    }
     const dia = diaSemanaDe(dto.fecha);
+    // El horario debe caer exactamente en la rejilla de la regla (inicio + n x duración): si no,
+    // se podrían solapar citas (p. ej. 09:00-10:00 y 09:30-10:30).
+    const duracionCita = producto.disponibilidad.duracionMinutos;
+    const inicioCita = aMinutos(dto.horaInicio);
     const reglaValida = producto.disponibilidad.reglas.find(
       (r) =>
         r.diaSemana === dia &&
-        dto.horaInicio >= r.horaInicio &&
-        sumarMinutos(dto.horaInicio, producto.disponibilidad!.duracionMinutos) <= r.horaFin,
+        inicioCita >= aMinutos(r.horaInicio) &&
+        inicioCita + duracionCita <= aMinutos(r.horaFin) &&
+        (inicioCita - aMinutos(r.horaInicio)) % duracionCita === 0,
     );
     if (!reglaValida) {
       throw new BadRequestException('Ese horario no está dentro de la disponibilidad del vendedor');
@@ -148,6 +171,12 @@ export class ReservasService {
     const reserva = await this.buscar(productoId, reservaId);
     if (reserva.compradorId !== usuarioId) {
       throw new ForbiddenException('No puedes confirmar la reserva de otro comprador');
+    }
+    if (reserva.estado === 'confirmada' && reserva.ordenId === dto.ordenId) {
+      return reserva; // idempotente: ya estaba confirmada para esa misma orden
+    }
+    if (reserva.estado !== 'retenida') {
+      throw new BadRequestException('Esa reserva ya no está vigente. Elige otro horario.');
     }
     reserva.estado = 'confirmada';
     reserva.ordenId = dto.ordenId;

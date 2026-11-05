@@ -1,4 +1,4 @@
-import { IsEmail, IsIn, IsString, MinLength } from 'class-validator';
+import { IsEmail, IsIn, IsOptional, IsString, MinLength } from 'class-validator';
 
 export class RegistroDto {
   @IsString()
@@ -12,6 +12,8 @@ export class RegistroDto {
   @MinLength(8)
   password: string;
 
+  // Se ignora: toda cuenta nueva es comprador (el modo vendedor se activa despues desde el perfil)
+  @IsOptional()
   @IsIn(['comprador', 'vendedor'])
-  rol: 'comprador' | 'vendedor';
+  rol?: 'comprador' | 'vendedor';
 }

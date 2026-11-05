@@ -1,8 +1,9 @@
+import { BotonVender } from './BotonVender'
 import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { NavLink, useLocation, useNavigate, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { useCart } from '../context/CartContext'
-import { notificacionesApi } from '../lib/api'
+import { EVENTO_NOTIFICACIONES, notificacionesApi } from '../lib/api'
 import { IconBell, IconCart, IconClose, IconMenu, IconSearch } from './icons'
 import { Avatar } from './Avatar'
 import { ConfirmModal } from './ConfirmModal'
@@ -51,10 +52,14 @@ export function Header() {
       setNotificacionesSinLeer(0)
       return
     }
-    notificacionesApi
-      .listar()
-      .then((lista) => setNotificacionesSinLeer(lista.filter((n) => !n.leida).length))
-      .catch(() => setNotificacionesSinLeer(0))
+    const cargar = () =>
+      notificacionesApi
+        .listar()
+        .then((lista) => setNotificacionesSinLeer(lista.filter((n) => !n.leida).length))
+        .catch(() => setNotificacionesSinLeer(0))
+    cargar()
+    window.addEventListener(EVENTO_NOTIFICACIONES, cargar)
+    return () => window.removeEventListener(EVENTO_NOTIFICACIONES, cargar)
   }, [usuario])
 
   const buscar = (e: FormEvent) => {
@@ -124,6 +129,9 @@ export function Header() {
                 Panel de vendedor
               </NavLink>
             )}
+            {usuario?.rol === 'comprador' && (
+              <BotonVender className="btn btn-sm" texto="Vender" textoVendedor={null} />
+            )}
           </nav>
 
           <div className={styles.actions}>
@@ -140,7 +148,7 @@ export function Header() {
                 <NavLink to="/perfil" className={styles.iconBtn} aria-label="Mi perfil">
                   <Avatar fotoUrl={usuario.fotoUrl} nombre={usuario.nombre} size={usuario.fotoUrl ? 32 : 24} />
                 </NavLink>
-                <button type="button" className="btn btn-sm" onClick={() => setConfirmarSalir(true)}>
+                <button type="button" className={`btn btn-sm ${styles.salir}`} onClick={() => setConfirmarSalir(true)}>
                   Salir
                 </button>
               </>
@@ -188,9 +196,27 @@ export function Header() {
                 </NavLink>
               </>
             )}
+            {usuario?.rol === 'comprador' && (
+              <div style={{ padding: '0.5rem 1rem' }}>
+                <BotonVender className="btn btn-primary" texto="Quiero vender" textoVendedor={null} onAntesDeNavegar={() => setMenuAbierto(false)} />
+              </div>
+            )}
             <NavLink to="/perfil" className={styles.mobileNavLink} onClick={() => setMenuAbierto(false)}>
               Mi perfil
             </NavLink>
+            {usuario && (
+              <button
+                type="button"
+                className={styles.mobileNavLink}
+                style={{ background: 'none', border: 'none', textAlign: 'left', cursor: 'pointer', font: 'inherit' }}
+                onClick={() => {
+                  setMenuAbierto(false)
+                  setConfirmarSalir(true)
+                }}
+              >
+                Cerrar sesión
+              </button>
+            )}
           </div>
         )}
       </div>

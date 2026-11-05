@@ -6,6 +6,8 @@ import { IconImage, IconTrash } from '../../components/icons'
 import { MapaLocal } from '../../components/MapaLocal'
 import { BuscadorUbicacion } from '../../components/BuscadorUbicacion'
 import { Select } from '../../components/Select'
+import { SelectorFecha } from '../../components/SelectorFecha'
+import { ahoraPanama, formatFecha } from '../../lib/estado'
 
 const CATEGORIAS_PRODUCTO = ['Electrónica', 'Hogar', 'Moda', 'Belleza']
 const CATEGORIAS_SERVICIO = ['Servicios profesionales', 'Belleza']
@@ -41,6 +43,8 @@ export default function VendedorCrearProducto() {
   const [enfocarMapa, setEnfocarMapa] = useState(0)
   const [duracionMinutos, setDuracionMinutos] = useState(60)
   const [diasSeleccionados, setDiasSeleccionados] = useState<Set<number>>(new Set([1, 2, 3, 4, 5]))
+  const [diasNoDisponibles, setDiasNoDisponibles] = useState<Set<string>>(new Set())
+  const hoy = ahoraPanama().fecha
   const [horaInicio, setHoraInicio] = useState('09:00')
   const [horaFin, setHoraFin] = useState('17:00')
   const [imagenes, setImagenes] = useState<string[]>([])
@@ -93,6 +97,15 @@ export default function VendedorCrearProducto() {
     })
   }
 
+  const alternarDiaNoDisponible = (fecha: string) => {
+    setDiasNoDisponibles((prev) => {
+      const next = new Set(prev)
+      if (next.has(fecha)) next.delete(fecha)
+      else next.add(fecha)
+      return next
+    })
+  }
+
   const [cargando, setCargando] = useState(editando)
   const [guardando, setGuardando] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -115,6 +128,7 @@ export default function VendedorCrearProducto() {
         if (p.disponibilidad) {
           setDuracionMinutos(p.disponibilidad.duracionMinutos)
           setDiasSeleccionados(new Set(p.disponibilidad.reglas.map((r) => r.diaSemana)))
+          setDiasNoDisponibles(new Set(p.disponibilidad.diasNoDisponibles ?? []))
           if (p.disponibilidad.reglas[0]) {
             setHoraInicio(p.disponibilidad.reglas[0].horaInicio)
             setHoraFin(p.disponibilidad.reglas[0].horaFin)
@@ -139,6 +153,17 @@ export default function VendedorCrearProducto() {
       setError('Marca la ubicación exacta de tu local en el mapa.')
       return
     }
+    if (tipo === 'servicio') {
+      const aMin = (h: string) => Number(h.slice(0, 2)) * 60 + Number(h.slice(3, 5))
+      if (!horaInicio || !horaFin || aMin(horaFin) - aMin(horaInicio) < duracionMinutos) {
+        setError(`La hora de fin debe ser posterior a la de inicio y dejar espacio para al menos una cita de ${duracionMinutos} min.`)
+        return
+      }
+    }
+    if (tipo === 'servicio' && diasSeleccionados.size === 0) {
+      setError('Selecciona al menos un día de atención para que te puedan agendar citas.')
+      return
+    }
     setGuardando(true)
     try {
       const payload = {
@@ -153,10 +178,11 @@ export default function VendedorCrearProducto() {
         direccionLocal: tipo === 'servicio' && modalidadEntrega === 'local_vendedor' ? direccionLocal : undefined,
         ubicacion: tipo === 'servicio' && modalidadEntrega === 'local_vendedor' && ubicacion ? ubicacion : undefined,
         disponibilidad:
-          tipo === 'servicio' && diasSeleccionados.size > 0
+          tipo === 'servicio'
             ? {
                 duracionMinutos,
                 reglas: Array.from(diasSeleccionados).map((diaSemana) => ({ diaSemana, horaInicio, horaFin })),
+                diasNoDisponibles: Array.from(diasNoDisponibles).filter((f) => f >= hoy).sort(),
               }
             : undefined,
         imagenes: imagenes.length > 0 ? imagenes : undefined,
@@ -235,13 +261,18 @@ export default function VendedorCrearProducto() {
           </div>
 
           <div className="field">
-            <label htmlFor="marca">Marca (opcional)</label>
+            {tipo === 'servicio' ? (
+              <label className="requerido" htmlFor="marca">Proveedor</label>
+            ) : (
+              <label htmlFor="marca">Marca (opcional)</label>
+            )}
             <input
               id="marca"
               className="input"
+              required={tipo === 'servicio'}
               value={marca}
               onChange={(e) => setMarca(e.target.value)}
-              placeholder="Ej. Acer, Logitech, propia..."
+              placeholder={tipo === 'servicio' ? 'Ej. Bella Studio Spa, tu negocio...' : 'Ej. Acer, Logitech, propia...'}
             />
           </div>
 
@@ -285,7 +316,7 @@ export default function VendedorCrearProducto() {
           {tipo === 'producto' && (
             <div className="field">
               <label className="requerido" htmlFor="stock">Stock disponible</label>
-              <input id="stock" type="number" min={0} required className="input" value={stock} onChange={(e) => setStock(e.target.value)} />
+              <input id="stock" type="number" min={0} step={1} required className="input" value={stock} onChange={(e) => setStock(e.target.value)} />
             </div>
           )}
 
@@ -404,6 +435,25 @@ export default function VendedorCrearProducto() {
               <p className="hint-text">
                 Los compradores solo podrán reservar horarios dentro de estos días y ese rango de horas.
               </p>
+
+              <div style={{ marginTop: '1rem' }}>
+                <label>Días sin atención (feriados, vacaciones…)</label>
+                <p className="hint-text" style={{ marginBottom: '0.5rem' }}>
+                  Toca las fechas en las que no atenderás; los compradores no podrán reservarlas. Opcional.
+                </p>
+                <SelectorFecha
+                  value={hoy}
+                  min={hoy}
+                  diasPermitidos={new Set([0, 1, 2, 3, 4, 5, 6])}
+                  marcados={diasNoDisponibles}
+                  onChange={alternarDiaNoDisponible}
+                />
+                {diasNoDisponibles.size > 0 && (
+                  <p className="hint-text" style={{ marginTop: '0.5rem' }}>
+                    Sin atención: {Array.from(diasNoDisponibles).sort().map(formatFecha).join(' · ')}
+                  </p>
+                )}
+              </div>
             </div>
           )}
 

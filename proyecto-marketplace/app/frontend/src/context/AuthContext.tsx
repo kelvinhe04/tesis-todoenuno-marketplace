@@ -9,8 +9,6 @@ import {
   type ActualizarPerfilPayload,
   type LoginPayload,
   type RegistroPayload,
-  type RequiereRolRespuesta,
-  type Rol,
   type Usuario,
 } from '../lib/api'
 
@@ -19,9 +17,12 @@ interface AuthContextValue {
   cargando: boolean
   login: (dto: LoginPayload) => Promise<Usuario>
   registrar: (dto: RegistroPayload) => Promise<Usuario>
-  loginConGoogle: (credential: string, rol?: Rol) => Promise<Usuario | RequiereRolRespuesta>
+  loginConGoogle: (credential: string) => Promise<Usuario>
+  activarVendedor: () => Promise<Usuario>
   actualizarPerfil: (dto: ActualizarPerfilPayload) => Promise<Usuario>
+  refrescarUsuario: () => Promise<Usuario | null>
   logout: () => void
+  cerrarSesionEnTodos: () => Promise<void>
 }
 
 const AuthContext = createContext<AuthContextValue | undefined>(undefined)
@@ -61,13 +62,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }
 
-  const loginConGoogle = async (credential: string, rol?: Rol) => {
+  const loginConGoogle = async (credential: string) => {
     setCargando(true)
     try {
-      const resp = await authApi.google(credential, rol)
-      if ('requiereRol' in resp) {
-        return resp
-      }
+      const resp = await authApi.google(credential)
       guardarSesion(resp.token, resp.usuario)
       setUsuario(resp.usuario)
       return resp.usuario
@@ -77,20 +75,49 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }
 
   const actualizarPerfil = async (dto: ActualizarPerfilPayload) => {
-    const u = await authApi.actualizarPerfil(dto)
-    const token = getToken()
+    const { token: tokenNuevo, ...u } = await authApi.actualizarPerfil(dto)
+    // Al cambiar la contraseña el servidor cierra las demás sesiones y entrega un token nuevo
+    const token = tokenNuevo ?? getToken()
     if (token) guardarSesion(token, u)
     setUsuario(u)
     return u
   }
 
+  // Vuelve a leer el perfil (p. ej. tras verificar el correo en otra pestaña)
+  const refrescarUsuario = async () => {
+    try {
+      const u = await authApi.me()
+      const token = getToken()
+      if (token) guardarSesion(token, u)
+      setUsuario(u)
+      return u
+    } catch {
+      return null
+    }
+  }
+
+  const activarVendedor = async () => {
+    const { token, usuario: u } = await authApi.activarVendedor()
+    guardarSesion(token, u)
+    setUsuario(u)
+    return u
+  }
+
+  // Avisa al servidor para que REVOQUE el token (si no, seguiría valiendo hasta vencer); si falla igual se cierra aquí
   const logout = () => {
+    authApi.logout().catch(() => undefined)
+    limpiarSesion()
+    setUsuario(null)
+  }
+
+  const cerrarSesionEnTodos = async () => {
+    await authApi.logoutTodos().catch(() => undefined)
     limpiarSesion()
     setUsuario(null)
   }
 
   const value = useMemo(
-    () => ({ usuario, cargando, login, registrar, loginConGoogle, actualizarPerfil, logout }),
+    () => ({ usuario, cargando, login, registrar, loginConGoogle, activarVendedor, actualizarPerfil, refrescarUsuario, logout, cerrarSesionEnTodos }),
     [usuario, cargando],
   )
 

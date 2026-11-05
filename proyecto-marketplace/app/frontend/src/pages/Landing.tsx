@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ProductCard } from '../components/ProductCard'
 import { VistosRecientemente } from '../components/VistosRecientemente'
+import { BotonVender } from '../components/BotonVender'
 import { IconCpu, IconHome, IconShirt, IconSparkle, IconStar, IconWrench } from '../components/icons'
 import { catalogoApi, type Producto } from '../lib/api'
 import styles from './Landing.module.css'
@@ -14,14 +15,20 @@ const CATEGORIAS = [
   { nombre: 'Belleza', icono: IconSparkle },
 ]
 
+// Destacados de la última visita: al volver atrás se pintan al instante y se refrescan en segundo plano
+let destacadosCache: Producto[] | null = null
+
 export default function Landing() {
-  const [productos, setProductos] = useState<Producto[]>([])
-  const [cargando, setCargando] = useState(true)
+  const [productos, setProductos] = useState<Producto[]>(destacadosCache ?? [])
+  const [cargando, setCargando] = useState(destacadosCache === null)
 
   useEffect(() => {
     catalogoApi
       .listar({ limite: 8 })
-      .then((pagina) => setProductos(pagina.items))
+      .then((pagina) => {
+        destacadosCache = pagina.items
+        setProductos(pagina.items)
+      })
       .finally(() => setCargando(false))
   }, [])
 
@@ -39,9 +46,7 @@ export default function Landing() {
             <Link to="/catalogo" className="btn btn-primary">
               Explorar catálogo
             </Link>
-            <Link to="/registro" className="btn">
-              Vender en TodoEnUno
-            </Link>
+            <BotonVender texto="Vender en TodoEnUno" textoVendedor="Mi panel de vendedor" />
           </div>
         </div>
 
@@ -95,6 +100,17 @@ export default function Landing() {
             ))}
           </div>
         )}
+      </section>
+
+      <section className={styles.bannerVender}>
+        <div>
+          <h2>¿Tienes algo que ofrecer?</h2>
+          <p>
+            Publica tus productos o servicios desde la misma cuenta con la que compras. Activarlo toma un clic y no
+            tiene costo.
+          </p>
+        </div>
+        <BotonVender className="btn btn-primary" texto="Quiero vender" textoVendedor="Ir a mi panel de vendedor" />
       </section>
 
       <VistosRecientemente />

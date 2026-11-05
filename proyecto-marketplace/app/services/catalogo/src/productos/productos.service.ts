@@ -6,6 +6,9 @@ import { CrearProductoDto } from './dto/crear-producto.dto';
 import { ActualizarProductoDto } from './dto/actualizar-producto.dto';
 import { FiltrosCatalogoDto } from './dto/filtros-catalogo.dto';
 
+const CATEGORIAS_PRODUCTO = ['Electrónica', 'Hogar', 'Moda', 'Belleza'];
+const CATEGORIAS_SERVICIO = ['Servicios profesionales', 'Belleza'];
+
 function escaparRegex(texto: string): string {
   return texto.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -14,7 +17,47 @@ function escaparRegex(texto: string): string {
 export class ProductosService {
   constructor(@InjectModel(Producto.name) private readonly modelo: Model<Producto>) {}
 
+  // Cada regla debe terminar después de empezar y dejar espacio para al menos una cita
+  private validarDisponibilidad(d?: { duracionMinutos: number; reglas: { horaInicio: string; horaFin: string }[] }) {
+    if (!d) return;
+    for (const r of d.reglas) {
+      const [hi, mi] = r.horaInicio.split(':').map(Number);
+      const [hf, mf] = r.horaFin.split(':').map(Number);
+      if (hf * 60 + mf - (hi * 60 + mi) < d.duracionMinutos) {
+        throw new BadRequestException(
+          `El horario ${r.horaInicio}-${r.horaFin} no alcanza para una cita de ${d.duracionMinutos} min: la hora fin debe ser posterior a la de inicio`,
+        );
+      }
+    }
+  }
+
+  // Reglas de negocio de una publicación: categoría acorde al tipo y, si es servicio, que se pueda agendar
+  private validarPublicacion(
+    f: Pick<CrearProductoDto, 'tipo' | 'categoria' | 'modalidadEntrega' | 'direccionLocal' | 'ubicacion' | 'disponibilidad'>,
+    revisar: { categoria: boolean; servicio: boolean },
+  ) {
+    if (revisar.categoria) {
+      const validas = f.tipo === 'servicio' ? CATEGORIAS_SERVICIO : CATEGORIAS_PRODUCTO;
+      if (!validas.includes(f.categoria)) {
+        throw new BadRequestException(`Categoría no válida para ${f.tipo === 'servicio' ? 'un servicio' : 'un producto'}. Opciones: ${validas.join(', ')}`);
+      }
+    }
+    if (f.tipo === 'servicio' && revisar.servicio) {
+      if (!f.disponibilidad?.reglas?.length) {
+        throw new BadRequestException('Un servicio necesita al menos un día y horario de atención para poder agendarlo');
+      }
+      if (!f.modalidadEntrega) {
+        throw new BadRequestException('Indica si el servicio es a domicilio o en tu local');
+      }
+      if (f.modalidadEntrega === 'local_vendedor' && (!f.direccionLocal?.trim() || !f.ubicacion)) {
+        throw new BadRequestException('Un servicio en tu local necesita la dirección y la ubicación en el mapa');
+      }
+      this.validarDisponibilidad(f.disponibilidad);
+    }
+  }
+
   async crear(dto: CrearProductoDto, vendedorId: string) {
+    this.validarPublicacion(dto, { categoria: true, servicio: true });
     if (!(dto.imagenes?.length || dto.imagenUrl)) {
       throw new BadRequestException('Agrega al menos una foto de tu publicación');
     }
@@ -26,6 +69,7 @@ export class ProductosService {
     if (filtros.tipo) query.tipo = filtros.tipo;
     if (filtros.categoria) query.categoria = filtros.categoria;
     if (filtros.vendedorId) query.vendedorId = filtros.vendedorId;
+    if (!(filtros.incluirPausadas && filtros.vendedorId)) query.pausada = { $ne: true };
     if (filtros.calificacionMin !== undefined) query.calificacionPromedio = { $gte: filtros.calificacionMin };
     if (filtros.precioMin !== undefined || filtros.precioMax !== undefined) {
       query.precio = {};
@@ -63,6 +107,13 @@ export class ProductosService {
   async actualizar(id: string, dto: ActualizarProductoDto, usuarioId: string) {
     const producto = await this.obtener(id);
     this.verificarPropietario(producto, usuarioId);
+    // Solo se revisa lo que el vendedor está tocando (no se bloquean ediciones simples como pausar
+    // por datos antiguos que ya estaban incompletos)
+    const toca = (...campos: string[]) => campos.some((c) => c in dto);
+    this.validarPublicacion({ ...(producto.toObject() as any), ...dto }, {
+      categoria: toca('categoria', 'tipo'),
+      servicio: toca('tipo', 'modalidadEntrega', 'direccionLocal', 'ubicacion', 'disponibilidad'),
+    });
     Object.assign(producto, dto);
     if (!(producto.imagenes?.length || producto.imagenUrl)) {
       throw new BadRequestException('La publicación debe tener al menos una foto');
@@ -77,14 +128,17 @@ export class ProductosService {
     const hechos: { productoId: string; cantidad: number }[] = [];
     for (const it of items) {
       const r = await this.modelo.updateOne(
-        { _id: it.productoId, tipo: 'producto', stock: { $gte: it.cantidad } },
+        { _id: it.productoId, tipo: 'producto', pausada: { $ne: true }, stock: { $gte: it.cantidad } },
         { $inc: { stock: -it.cantidad } },
       );
       if (r.modifiedCount !== 1) {
         await this.devolverStock(hechos);
-        const p = await this.modelo.findById(it.productoId, { nombre: 1, stock: 1 }).lean();
+        const p = await this.modelo.findById(it.productoId, { nombre: 1, stock: 1, pausada: 1 }).lean();
         const nombre = p?.nombre ?? 'un producto';
         const quedan = p?.stock ?? 0;
+        if (p?.pausada) {
+          throw new BadRequestException(`"${nombre}" ya no está disponible. Quítalo de tu carrito para continuar.`);
+        }
         throw new BadRequestException(
           quedan > 0
             ? `Solo quedan ${quedan} unidades de "${nombre}". Ajusta la cantidad en tu carrito.`

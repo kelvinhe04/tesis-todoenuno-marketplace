@@ -184,3 +184,21 @@
   color: var(--color-text);
   border-bottom: 1px solid var(--color-border);
 }
+
+/* Móvil estrecho: con sesión iniciada la barra (logo + campana + carrito + perfil + Salir) no cabía en 390 px */
+@media (max-width: 480px) {
+  .bar {
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.25rem;
+  }
+}
+
+/* En pantallas muy estrechas "Salir" no cabe: se cierra sesión desde el menú o desde Mi perfil */
+@media (max-width: 400px) {
+  .actions .salir {
+    display: none;
+  }
+}

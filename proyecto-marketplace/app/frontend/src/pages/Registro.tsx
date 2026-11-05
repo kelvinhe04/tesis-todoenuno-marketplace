@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-import { ApiError, type Rol, type Usuario } from '../lib/api'
+import { ApiError, type Usuario } from '../lib/api'
 import { IconEye, IconEyeOff } from '../components/icons'
 import { GoogleLoginButton } from '../components/GoogleLoginButton'
 import { AuthExito } from '../components/AuthExito'
@@ -13,7 +13,6 @@ export default function Registro() {
   const { registrar, loginConGoogle, cargando } = useAuth()
   const navigate = useNavigate()
 
-  const [rol, setRol] = useState<Rol>('comprador')
   const [nombre, setNombre] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -24,7 +23,11 @@ export default function Registro() {
   const [mensajeExito, setMensajeExito] = useState<string | null>(null)
 
   const entrarConExito = (usuario: Usuario) => {
-    setMensajeExito(`¡Cuenta creada, ${usuario.nombre}!`)
+    setMensajeExito(
+      usuario.emailVerificado === false
+        ? `¡Cuenta creada, ${usuario.nombre}! Te enviamos un correo para verificar tu dirección.`
+        : `¡Cuenta creada, ${usuario.nombre}!`,
+    )
     setTimeout(() => navigate(usuario.rol === 'vendedor' ? '/vendedor' : '/'), RETRASO_EXITO_MS)
   }
 
@@ -38,7 +41,7 @@ export default function Registro() {
     }
 
     try {
-      const usuario = await registrar({ nombre, email, password, rol })
+      const usuario = await registrar({ nombre, email, password })
       entrarConExito(usuario)
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'No se pudo crear la cuenta')
@@ -48,8 +51,7 @@ export default function Registro() {
   const onCredencialGoogle = async (credential: string) => {
     setError(null)
     try {
-      const resp = await loginConGoogle(credential, rol)
-      if ('requiereRol' in resp) return
+      const resp = await loginConGoogle(credential)
       entrarConExito(resp)
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'No se pudo crear la cuenta con Google')
@@ -63,10 +65,9 @@ export default function Registro() {
           Todo<span>En</span>Uno
         </Link>
         <div className={styles.brandMid}>
-          <h2>Publica lo que haces, vende a tu manera.</h2>
+          <h2>Compra y vende desde una sola cuenta.</h2>
           <p>
-            Únete a talleres, estudios y profesionales que ya venden productos y servicios en TodoEnUno, con pago
-            protegido y sin comisiones ocultas.
+            Crea tu cuenta para comprar productos y servicios. Cuando quieras vender, actívalo desde tu perfil con un clic.
           </p>
         </div>
         <div className={styles.quote}>
@@ -83,27 +84,6 @@ export default function Registro() {
 
           <h1>Crea tu cuenta</h1>
           <p className={styles.subtitle}>Es gratis y toma menos de un minuto.</p>
-
-          <div className={styles.rolTabs} role="tablist" aria-label="Tipo de cuenta">
-            <button
-              type="button"
-              role="tab"
-              aria-selected={rol === 'comprador'}
-              className={`${styles.rolTab} ${rol === 'comprador' ? styles.active : ''}`}
-              onClick={() => setRol('comprador')}
-            >
-              Quiero comprar
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={rol === 'vendedor'}
-              className={`${styles.rolTab} ${rol === 'vendedor' ? styles.active : ''}`}
-              onClick={() => setRol('vendedor')}
-            >
-              Quiero vender
-            </button>
-          </div>
 
           <div className={styles.field}>
             <label htmlFor="nombre">Nombre completo</label>

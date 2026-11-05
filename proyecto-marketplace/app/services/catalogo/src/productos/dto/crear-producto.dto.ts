@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { ArrayMaxSize, IsArray, IsIn, IsNumber, IsOptional, IsString, Min, MinLength, ValidateNested } from 'class-validator';
+import { ArrayMaxSize, IsArray, IsBoolean, IsIn, IsInt, IsNumber, IsOptional, IsString, Min, MinLength, ValidateNested } from 'class-validator';
 import { ModalidadEntrega, TipoPublicacion } from '../producto.schema';
 import { DisponibilidadDto } from './disponibilidad.dto';
 import { UbicacionDto } from './ubicacion.dto';
@@ -23,12 +23,12 @@ export class CrearProductoDto {
   @IsString()
   categoria: string;
 
-  @IsNumber()
+  @IsNumber({ maxDecimalPlaces: 2 }, { message: 'El precio admite como máximo 2 decimales' })
   @Min(0)
   precio: number;
 
   @IsOptional()
-  @IsNumber()
+  @IsInt({ message: 'El stock debe ser un número entero' })
   @Min(0)
   stock?: number;
 
@@ -49,6 +49,10 @@ export class CrearProductoDto {
   @ValidateNested()
   @Type(() => DisponibilidadDto)
   disponibilidad?: DisponibilidadDto;
+
+  @IsOptional()
+  @IsBoolean()
+  pausada?: boolean;
 
   @IsOptional()
   @IsString()

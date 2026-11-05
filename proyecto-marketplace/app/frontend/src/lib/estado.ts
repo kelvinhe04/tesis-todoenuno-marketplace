@@ -120,11 +120,12 @@ export function primeraFechaDisponible(
   reglas: ReglaHorario[],
   duracionMinutos: number,
   ahora: { fecha: string; minutos: number } = ahoraPanama(),
+  diasNoDisponibles: string[] = [],
 ): string {
   const dias = new Set(reglas.map((r) => r.diaSemana))
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 60; i++) {
     const fecha = sumarDiasFecha(ahora.fecha, i)
-    if (!dias.has(diaSemanaDeFecha(fecha))) continue
+    if (!dias.has(diaSemanaDeFecha(fecha)) || diasNoDisponibles.includes(fecha)) continue
     if (i === 0 && !quedanHorariosHoy(reglas, duracionMinutos, ahora)) continue
     return fecha
   }

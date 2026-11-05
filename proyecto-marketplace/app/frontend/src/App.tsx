@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
+import { GestorScroll } from './components/GestorScroll'
 import { ProtectedRoute } from './components/ProtectedRoute'
 import Landing from './pages/Landing'
 import Registro from './pages/Registro'
@@ -15,16 +16,20 @@ import VendedorPublicaciones from './pages/vendedor/VendedorPublicaciones'
 import VendedorCrearProducto from './pages/vendedor/VendedorCrearProducto'
 import VendedorOrdenes from './pages/vendedor/VendedorOrdenes'
 import NotFound from './pages/NotFound'
+import VerificarCorreo from './pages/VerificarCorreo'
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <GestorScroll />
+      <Routes>
       <Route path="/registro" element={<Registro />} />
       <Route path="/login" element={<Login />} />
 
       <Route element={<Layout />}>
         <Route path="/" element={<Landing />} />
         <Route path="/catalogo" element={<Catalogo />} />
+        <Route path="/verificar-correo" element={<VerificarCorreo />} />
         <Route path="/productos/:id" element={<ProductoDetalle />} />
         <Route
           path="/carrito"
@@ -101,6 +106,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
-    </Routes>
+      </Routes>
+    </>
   )
 }

@@ -1,5 +1,5 @@
-import { Type } from 'class-transformer';
-import { IsIn, IsInt, IsNumber, IsOptional, IsString, Min } from 'class-validator';
+import { Transform, Type } from 'class-transformer';
+import { IsIn, IsInt, IsNumber, IsOptional, IsString, Max, Min } from 'class-validator';
 import { TipoPublicacion } from '../producto.schema';
 
 export class FiltrosCatalogoDto {
@@ -33,6 +33,11 @@ export class FiltrosCatalogoDto {
   @IsString()
   vendedorId?: string;
 
+  // Solo se respeta junto con vendedorId (el panel del vendedor ve también sus pausadas)
+  @IsOptional()
+  @Transform(({ value }) => value === 'true' || value === true)
+  incluirPausadas?: boolean;
+
   @IsOptional()
   @IsString()
   buscar?: string;
@@ -47,5 +52,6 @@ export class FiltrosCatalogoDto {
   @Type(() => Number)
   @IsInt()
   @Min(1)
+  @Max(50)
   limite: number = 12;
 }

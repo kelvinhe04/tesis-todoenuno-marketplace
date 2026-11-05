@@ -1,13 +1,14 @@
 import { BadRequestException, ForbiddenException, forwardRef, Inject, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { EstadoPago, ItemOrden, Orden } from './orden.entity';
+import { EstadoEntrega, EstadoPago, ItemOrden, Orden } from './orden.entity';
 import { CrearOrdenDto } from './dto/crear-orden.dto';
 import { ActualizarEstadoEntregaDto } from './dto/actualizar-estado-entrega.dto';
 import { RabbitmqService } from './rabbitmq.service';
 
 const CARRITO_URL = process.env.CARRITO_URL || 'http://carrito:3000';
 const CATALOGO_URL = process.env.CATALOGO_URL || 'http://catalogo:3000';
+const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
 
 interface ItemCarrito {
   productoId: string;
@@ -34,7 +35,22 @@ export class OrdenesService {
     @Inject(forwardRef(() => RabbitmqService)) private readonly rabbitmq: RabbitmqService,
   ) {}
 
+  // Comprar exige tener el correo verificado (EXIGIR_VERIFICACION_CORREO=false lo desactiva). Si auth no
+  // responde no se bloquea la compra: la verificación no es un dato crítico.
+  private async exigirCorreoVerificado(compradorId: string) {
+    if (process.env.EXIGIR_VERIFICACION_CORREO === 'false') return;
+    try {
+      const resp = await fetch(`${AUTH_URL}/auth/internal/email/${compradorId}`);
+      if (resp.ok && (await resp.json()).emailVerificado === false) {
+        throw new ForbiddenException('Verifica tu correo electrónico para poder comprar. Te enviamos un enlace al registrarte.');
+      }
+    } catch (err) {
+      if (err instanceof ForbiddenException) throw err;
+    }
+  }
+
   async crear(dto: CrearOrdenDto, compradorId: string, authorizationHeader: string) {
+    await this.exigirCorreoVerificado(compradorId);
     const carrito = await this.obtenerCarrito(authorizationHeader);
     const parcial = !!dto.productoIds;
     const elegidos = parcial ? carrito.items.filter((it) => dto.productoIds!.includes(it.productoId)) : carrito.items;
@@ -52,8 +68,13 @@ export class OrdenesService {
       cantidad: it.cantidad,
       subtotal: it.subtotal,
       tipo: it.tipo,
+      estadoEntrega: 'pendiente',
       cita: it.cita ? { reservaId: it.cita.reservaId, fecha: it.cita.fecha, horaInicio: it.cita.horaInicio, horaFin: it.cita.horaFin } : undefined,
     }));
+
+    if (items.some((it) => it.vendedorId === compradorId)) {
+      throw new BadRequestException('No puedes comprar tus propias publicaciones');
+    }
 
     // Descontar el stock ANTES de crear la orden (atómico en catalogo): si otro comprador se llevó
     // la última unidad, aquí responde 400 y no se crea nada.
@@ -136,14 +157,43 @@ export class OrdenesService {
     return this.ordenes.find({ where: { compradorId }, order: { creadoEn: 'DESC' } });
   }
 
+  // Estado de entrega de una orden a partir de sus ítems: entregada si todos lo están, pendiente si
+  // ninguno ha salido, y "en camino" en cualquier punto intermedio.
+  private agregarEntrega(items: ItemOrden[], respaldo: EstadoEntrega): EstadoEntrega {
+    if (!items.length) return respaldo;
+    const estados = items.map((it) => it.estadoEntrega ?? respaldo);
+    if (estados.every((e) => e === 'entregada')) return 'entregada';
+    if (estados.every((e) => e === 'pendiente')) return 'pendiente';
+    return 'en_camino';
+  }
+
+  // Lo que ve un vendedor de una orden: solo SUS ítems, con subtotal/total propios y su propio estado de
+  // entrega (no se le muestran los productos ni los precios de otros vendedores).
+  private vistaVendedor(orden: Orden, vendedorId: string): Orden {
+    const propios = orden.items.filter((it) => it.vendedorId === vendedorId);
+    const subtotal = Number(propios.reduce((acc, it) => acc + it.subtotal, 0).toFixed(2));
+    return {
+      ...orden,
+      items: propios.map((it) => ({ ...it, estadoEntrega: it.estadoEntrega ?? orden.estadoEntrega })),
+      subtotal,
+      envio: 0,
+      total: subtotal,
+      estadoEntrega: this.agregarEntrega(propios, orden.estadoEntrega),
+    };
+  }
+
+  // Solo órdenes PAGADAS: una orden pendiente o rechazada todavía no es una venta y el vendedor no debe
+  // recibir la dirección y el teléfono de alguien que no ha pagado.
   async listarVendedor(vendedorId: string) {
-    return this.ordenes
+    const ordenes = await this.ordenes
       .createQueryBuilder('orden')
       .where("EXISTS (SELECT 1 FROM jsonb_array_elements(orden.items) elem WHERE elem->>'vendedorId' = :vendedorId)", {
         vendedorId,
       })
+      .andWhere("orden.estadoPago = 'pagada'")
       .orderBy('orden.creadoEn', 'DESC')
       .getMany();
+    return ordenes.map((o) => this.vistaVendedor(o, vendedorId));
   }
 
   async obtener(id: string, usuarioId: string, rol: string) {
@@ -156,7 +206,13 @@ export class OrdenesService {
     if (!esComprador && !esVendedorDeAlgunItem) {
       throw new ForbiddenException('No tienes acceso a esta orden');
     }
-    return orden;
+    if (esComprador) {
+      return { ...orden, items: orden.items.map((it) => ({ ...it, estadoEntrega: it.estadoEntrega ?? orden.estadoEntrega })) };
+    }
+    if (orden.estadoPago !== 'pagada') {
+      throw new ForbiddenException('No tienes acceso a esta orden');
+    }
+    return this.vistaVendedor(orden, usuarioId);
   }
 
   async actualizarEstadoEntrega(id: string, dto: ActualizarEstadoEntregaDto, vendedorId: string) {
@@ -167,8 +223,32 @@ export class OrdenesService {
     if (!orden.items.some((it) => it.vendedorId === vendedorId)) {
       throw new ForbiddenException('Esta orden no tiene publicaciones tuyas');
     }
-    orden.estadoEntrega = dto.estadoEntrega;
-    return this.ordenes.save(orden);
+    if (orden.estadoPago !== 'pagada') {
+      throw new BadRequestException('Solo se puede actualizar la entrega de una orden pagada');
+    }
+    // Cada vendedor cambia solo la entrega de SUS ítems; la de la orden se recalcula con todos.
+    const itemsActualizados = orden.items.map((it) =>
+      it.vendedorId === vendedorId ? { ...it, estadoEntrega: dto.estadoEntrega } : { ...it, estadoEntrega: it.estadoEntrega ?? orden.estadoEntrega },
+    );
+    // Ítems de este vendedor que pasan a "entregada" ahora (no los que ya lo estaban)
+    const recienEntregados =
+      dto.estadoEntrega === 'entregada'
+        ? orden.items.filter((it) => it.vendedorId === vendedorId && (it.estadoEntrega ?? orden.estadoEntrega) !== 'entregada')
+        : [];
+    orden.items = itemsActualizados;
+    orden.estadoEntrega = this.agregarEntrega(itemsActualizados, orden.estadoEntrega);
+    const guardada = await this.ordenes.save(orden);
+    if (recienEntregados.length) {
+      // Notificaciones avisa al comprador que ya puede dejar su reseña
+      await this.rabbitmq
+        .publish('orden.entregada', {
+          ordenId: orden.id,
+          compradorId: orden.compradorId,
+          items: recienEntregados.map((it) => ({ productoId: it.productoId, nombre: it.nombre })),
+        })
+        .catch(() => undefined);
+    }
+    return this.vistaVendedor(guardada, vendedorId);
   }
 
   // Uso exclusivo de otros microservicios (p. ej. Notificaciones para saber a

@@ -6,6 +6,7 @@
   "timeout": "5000ms",
   "cache_ttl": "0s",
   "output_encoding": "json",
+  "extra_config": { "router": { "disable_redirect_fixed_path": true, "disable_redirect_trailing_slash": true } },
   "endpoints": [
     {
       "endpoint": "/api/auth/health",
@@ -76,6 +77,41 @@
       "output_encoding": "no-op",
       "input_headers": ["Authorization"],
       "backend": [{ "url_pattern": "/auth/me", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/logout",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/logout", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/logout-todos",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/logout-todos", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/verificar-correo",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type"],
+      "backend": [{ "url_pattern": "/auth/verificar-correo", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/reenviar-verificacion",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/auth/reenviar-verificacion", "encoding": "no-op", "host": ["http://auth:3000"] }]
+    },
+    {
+      "endpoint": "/api/auth/me/vendedor",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/auth/me/vendedor", "encoding": "no-op", "host": ["http://auth:3000"] }]
     },
     {
       "endpoint": "/api/auth/me",
@@ -313,6 +349,27 @@
       "backend": [{ "url_pattern": "/pagos/ordenes/{ordenId}", "encoding": "no-op", "host": ["http://pagos:3000"] }]
     },
     {
+      "endpoint": "/api/pagos/config",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/pagos/config", "encoding": "no-op", "host": ["http://pagos:3000"] }]
+    },
+    {
+      "endpoint": "/api/pagos/ordenes/{ordenId}/paypal/crear",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/pagos/ordenes/{ordenId}/paypal/crear", "encoding": "no-op", "host": ["http://pagos:3000"] }]
+    },
+    {
+      "endpoint": "/api/pagos/ordenes/{ordenId}/paypal/capturar",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/pagos/ordenes/{ordenId}/paypal/capturar", "encoding": "no-op", "host": ["http://pagos:3000"] }]
+    },
+    {
       "endpoint": "/api/pagos/ordenes/{ordenId}",
       "method": "GET",
       "output_encoding": "no-op",
@@ -332,6 +389,27 @@
       "output_encoding": "no-op",
       "input_headers": ["Authorization"],
       "backend": [{ "url_pattern": "/notificaciones/{id}/leida", "encoding": "no-op", "host": ["http://notificaciones:3000"] }]
+    },
+    {
+      "endpoint": "/api/notificaciones/leidas",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/notificaciones/leidas", "encoding": "no-op", "host": ["http://notificaciones:3000"] }]
+    },
+    {
+      "endpoint": "/api/notificaciones",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/notificaciones", "encoding": "no-op", "host": ["http://notificaciones:3000"] }]
+    },
+    {
+      "endpoint": "/api/notificaciones/{id}",
+      "method": "DELETE",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/notificaciones/{id}", "encoding": "no-op", "host": ["http://notificaciones:3000"] }]
     },
     {
       "endpoint": "/api/notificaciones/demo/log",

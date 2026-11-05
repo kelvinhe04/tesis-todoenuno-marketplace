@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import {
@@ -11,7 +11,7 @@ import {
   type DireccionGuardada,
   type TarjetaGuardada,
 } from '../lib/api'
-import { IconCheck } from '../components/icons'
+import { IconCheck, IconClose } from '../components/icons'
 import { ConfirmModal } from '../components/ConfirmModal'
 import { formatFecha, formatHora12h } from '../lib/estado'
 import {
@@ -57,6 +57,10 @@ export default function Checkout() {
   const [error, setError] = useState<string | null>(null)
   const [resultado, setResultado] = useState<{ aprobado: boolean; motivo?: string } | null>(null)
   const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false)
+  // PayPal Sandbox real (redirige a PayPal) o simulado (sin credenciales en el servidor)
+  const [paypalModo, setPaypalModo] = useState<'sandbox' | 'simulado'>('simulado')
+  const capturaIniciada = useRef(false)
+  const [confirmandoPaypal, setConfirmandoPaypal] = useState(() => searchParams.get('paypal') === 'ok' && !!searchParams.get('token'))
 
   // Si el pago se rechaza la orden ya existe: el siguiente intento la reutiliza (no crea otra ni pide la dirección de nuevo)
   const [ordenReintento, setOrdenReintento] = useState<string | null>(ordenParam)
@@ -72,6 +76,43 @@ export default function Checkout() {
 
   const dirSel = dirGuardadas.find((d) => d.id === dirElegida)
   const tarjetaSel = tarjetasGuardadas.find((t) => t.id === tarjetaElegida)
+
+  useEffect(() => {
+    pagosApi.config().then((c) => setPaypalModo(c.paypal)).catch(() => undefined)
+  }, [])
+
+  // Regreso desde PayPal (?orden=...&paypal=ok&token=...): se captura el pago y se muestra el resultado
+  useEffect(() => {
+    const retorno = searchParams.get('paypal')
+    const paypalOrderId = searchParams.get('token')
+    if (!ordenParam || !retorno || capturaIniciada.current) return
+    capturaIniciada.current = true
+    if (retorno === 'cancelado') {
+      setError('Cancelaste el pago en PayPal. Tu orden sigue pendiente: puedes intentarlo de nuevo.')
+      return
+    }
+    if (!paypalOrderId) return
+    setProcesando(true)
+    const pausa = new Promise((r) => setTimeout(r, 1100)) // que "Confirmando…" se alcance a ver
+    pagosApi
+      .paypalCapturar(ordenParam, paypalOrderId)
+      .then(async (pago) => {
+        await pausa
+        if (pago.estado === 'aprobado') {
+          setPasoActual(3)
+          setResultado({ aprobado: true })
+        } else {
+          setMetodo('paypal')
+          setError(`Pago rechazado: ${pago.motivoRechazo || 'PayPal no aprobó el pago'}. Puedes intentarlo de nuevo.`)
+        }
+      })
+      .catch((err) => setError(err instanceof ApiError ? err.message : 'No se pudo confirmar el pago con PayPal'))
+      .finally(() => {
+        setProcesando(false)
+        setConfirmandoPaypal(false)
+      })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     // La predeterminada (o la más reciente) llega ya elegida: se puede pagar sin escribir nada
@@ -193,6 +234,15 @@ export default function Checkout() {
         // Guardar la dirección nueva para próximas compras (si lo pidió); no bloquea la compra si falla
         if (!dirSel && guardarDireccion) await guardadosApi.crearDireccion(envio).catch(() => undefined)
       }
+      if (metodo === 'paypal') {
+        const paypal = await pagosApi.paypalCrear(ordenId)
+        if (paypal.modo === 'sandbox') {
+          // Se sale a PayPal Sandbox a aprobar; al volver, el efecto de arriba captura el pago
+          window.location.href = paypal.aprobacionUrl
+          return
+        }
+        // modo "simulado": sigue abajo con el simulador local
+      }
       const digitos = numeroTarjeta.replace(/\s+/g, '')
       const pago = await pagosApi.procesar(
         ordenId,
@@ -224,43 +274,48 @@ export default function Checkout() {
     }
   }
 
-  if (cargando || !carrito) {
+  // Vuelta desde PayPal: mientras el servidor captura el pago se muestra esta pantalla (no el formulario)
+  if (confirmandoPaypal) {
     return (
-      <div className="center-loading">
-        <div className="spinner" />
+      <div className={styles.confirmando} role="status" aria-live="polite">
+        <div className={styles.anillo} />
+        <h1 style={{ fontSize: '1.375rem', marginBottom: '0.5rem' }}>Confirmando tu pago…</h1>
+        <p className="muted">Estamos verificando la aprobación con PayPal. No cierres esta ventana.</p>
       </div>
     )
   }
 
   if (resultado) {
     return (
-      <div className="container" style={{ maxWidth: '32rem', textAlign: 'center', paddingTop: '2rem' }}>
+      <div className={styles.resultado}>
         <div
+          className={styles.resultadoIcono}
           style={{
-            width: '4rem',
-            height: '4rem',
-            borderRadius: '50%',
-            margin: '0 auto 1.25rem',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
             background: resultado.aprobado ? 'var(--color-success-soft)' : 'var(--color-danger-soft)',
             color: resultado.aprobado ? 'var(--color-success)' : 'var(--color-danger)',
           }}
         >
-          <IconCheck width={32} height={32} />
+          {resultado.aprobado ? <IconCheck width={32} height={32} /> : <IconClose width={30} height={30} />}
         </div>
-        <h1 style={{ fontSize: '1.375rem', marginBottom: '0.5rem' }}>
+        <h1 className={styles.resultadoTitulo} style={{ fontSize: '1.375rem', marginBottom: '0.5rem' }}>
           {resultado.aprobado ? 'Pago aprobado' : 'Pago rechazado'}
         </h1>
-        <p className="muted" style={{ marginBottom: '1.5rem' }}>
+        <p className={`muted ${styles.resultadoTexto}`} style={{ marginBottom: '1.5rem' }}>
           {resultado.aprobado
             ? 'Tu orden fue creada y el pago quedó confirmado (entorno de prueba / sandbox).'
             : resultado.motivo || 'El pago no pudo procesarse. Puedes revisar el estado en Mis órdenes.'}
         </p>
-        <button type="button" className="btn btn-primary" onClick={() => navigate('/ordenes')}>
+        <button type="button" className={`btn btn-primary ${styles.resultadoBoton}`} onClick={() => navigate('/ordenes')}>
           Ver mis órdenes
         </button>
+      </div>
+    )
+  }
+
+  if (cargando || !carrito) {
+    return (
+      <div className="center-loading">
+        <div className="spinner" />
       </div>
     )
   }
@@ -350,14 +405,14 @@ export default function Checkout() {
             <div className={styles.row2}>
               <div className="field">
                 <label htmlFor="nombre">Nombre</label>
-                <input id="nombre" className="input" required minLength={2} value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                <input id="nombre" className="input" required={!ordenReintento} minLength={2} value={nombre} onChange={(e) => setNombre(e.target.value)} />
               </div>
               <div className="field">
                 <label htmlFor="telefono">Teléfono</label>
                 <input
                   id="telefono"
                   className="input"
-                  required
+                  required={!ordenReintento}
                   inputMode="tel"
                   value={telefono}
                   onChange={(e) => setTelefono(formatearTelefono(e.target.value))}
@@ -370,7 +425,7 @@ export default function Checkout() {
               <input
                 id="direccion"
                 className="input"
-                required
+                required={!ordenReintento}
                 minLength={5}
                 value={direccion}
                 onChange={(e) => setDireccion(e.target.value)}
@@ -408,8 +463,17 @@ export default function Checkout() {
             </div>
 
             <p className={styles.sandboxNote}>
-              Entorno de prueba (sandbox): ninguna transacción es real. Usa cualquier número de tarjeta; uno terminado
-              en <strong>0002</strong> simula un rechazo del banco.
+              {metodo === 'paypal' && paypalModo === 'sandbox' ? (
+                <>
+                  Entorno de prueba (PayPal Sandbox): al confirmar te llevaremos a PayPal para aprobar el pago con una cuenta
+                  de comprador de prueba. Ninguna transacción es real.
+                </>
+              ) : (
+                <>
+                  Entorno de prueba (sandbox): ninguna transacción es real. Usa cualquier número de tarjeta; uno terminado
+                  en <strong>0002</strong> simula un rechazo del banco.
+                </>
+              )}
             </p>
 
             {metodo === 'tarjeta' && tarjetasGuardadas.length > 0 && (

@@ -6,6 +6,7 @@ import { Producto } from './producto.schema';
 import { CrearResenaDto } from './dto/crear-resena.dto';
 
 const ORDENES_URL = process.env.ORDENES_URL || 'http://ordenes:3000';
+const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
 
 interface OrdenRespuesta {
   compradorId: string;
@@ -20,8 +21,26 @@ export class ResenasService {
     @InjectModel(Producto.name) private readonly productos: Model<Producto>,
   ) {}
 
+  // Lista PUBLICA: nunca incluye el correo del comprador, solo su nombre (se consulta a auth, que expone
+  // unicamente id y nombre) para mostrar quien escribio la resena.
   async listar(productoId: string) {
-    return this.resenas.find({ productoId }).sort({ creadoEn: -1 }).exec();
+    const docs = await this.resenas.find({ productoId }).sort({ creadoEn: -1 }).lean().exec();
+    const ids = [...new Set(docs.map((d) => d.compradorId))];
+    const nombres = new Map<string, string>();
+    await Promise.all(
+      ids.map(async (id) => {
+        try {
+          const resp = await fetch(`${AUTH_URL}/auth/usuarios/${id}`);
+          if (resp.ok) nombres.set(id, (await resp.json()).nombre);
+        } catch {
+          // sin nombre: se muestra "Comprador"
+        }
+      }),
+    );
+    return docs.map(({ compradorEmail: _correo, ...resto }) => ({
+      ...resto,
+      compradorNombre: nombres.get(resto.compradorId) ?? 'Comprador',
+    }));
   }
 
   async crear(productoId: string, dto: CrearResenaDto, compradorId: string, compradorEmail: string, authorizationHeader: string) {

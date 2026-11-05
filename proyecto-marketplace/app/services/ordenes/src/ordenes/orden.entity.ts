@@ -19,6 +19,9 @@ export interface ItemOrden {
   subtotal: number;
   tipo?: 'producto' | 'servicio';
   cita?: CitaOrden;
+  // Entrega por ítem: cada vendedor gestiona solo la de sus ítems. Las órdenes antiguas no lo traen
+  // (se usa el estado de la orden).
+  estadoEntrega?: EstadoEntrega;
 }
 
 export interface DireccionOrden {

@@ -5,8 +5,18 @@ import { obtenerVistos } from '../lib/vistosRecientemente'
 import { IconChevronLeft, IconChevronRight } from './icons'
 import styles from './VistosRecientemente.module.css'
 
+// Productos ya traídos: al volver a la página se pintan de inmediato (con su altura real) y se refrescan después
+const cacheProductos = new Map<string, Producto>()
+
+function desdeCache(excluirId?: string): Producto[] | null {
+  const ids = obtenerVistos().filter((id) => id !== excluirId)
+  if (ids.length === 0) return []
+  const enCache = ids.map((id) => cacheProductos.get(id))
+  return enCache.every(Boolean) ? (enCache as Producto[]) : null
+}
+
 export function VistosRecientemente({ excluirId }: { excluirId?: string }) {
-  const [productos, setProductos] = useState<Producto[] | null>(null)
+  const [productos, setProductos] = useState<Producto[] | null>(() => desdeCache(excluirId))
   const [puedeIzq, setPuedeIzq] = useState(false)
   const [puedeDer, setPuedeDer] = useState(false)
   const rowRef = useRef<HTMLDivElement>(null)
@@ -18,7 +28,9 @@ export function VistosRecientemente({ excluirId }: { excluirId?: string }) {
       return
     }
     Promise.all(ids.map((id) => catalogoApi.obtener(id).catch(() => null))).then((resultados) => {
-      setProductos(resultados.filter((p): p is Producto => p !== null))
+      const validos = resultados.filter((p): p is Producto => p !== null)
+      validos.forEach((p) => cacheProductos.set(p._id, p))
+      setProductos(validos)
     })
   }, [excluirId])
 

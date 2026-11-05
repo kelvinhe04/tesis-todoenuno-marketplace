@@ -1,15 +1,34 @@
 import { forwardRef, Inject, Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import * as amqp from 'amqplib';
 import { NotificacionesService } from './notificaciones.service';
-import { EmailService } from './email.service';
+import { AdjuntoCorreo, EmailService } from './email.service';
+import { DatosCorreo, ItemCorreo } from './plantilla-correo';
 import { TipoNotificacion } from './notificacion.entity';
 
 const EXCHANGE = 'eventos';
 const QUEUE = 'notificaciones.eventos';
-const ROUTING_KEYS = ['orden.creada', 'pago.confirmado', 'pago.rechazado'];
+const ROUTING_KEYS = ['orden.creada', 'pago.confirmado', 'pago.rechazado', 'orden.entregada'];
 const MAX_LOG = 20;
 const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
 const ORDENES_URL = process.env.ORDENES_URL || 'http://ordenes:3000';
+const CATALOGO_URL = process.env.CATALOGO_URL || 'http://catalogo:3000';
+const FRONTEND_URL = (process.env.FRONTEND_URL || 'http://localhost:5173').replace(/\/$/, '');
+
+interface ItemOrdenInterna {
+  productoId: string;
+  vendedorId: string;
+  nombre: string;
+  precio: number;
+  cantidad: number;
+  tipo?: string;
+  cita?: { fecha: string; horaInicio: string; horaFin: string };
+}
+
+interface OrdenInterna {
+  id: string;
+  total: number;
+  items: ItemOrdenInterna[];
+}
 
 interface EventoOrdenCreada {
   ordenId?: string;
@@ -22,6 +41,12 @@ interface EventoPago {
   compradorId?: string;
   monto?: number;
   motivo?: string;
+}
+
+interface EventoEntrega {
+  ordenId: string;
+  compradorId: string;
+  items?: Array<{ productoId: string; nombre: string }>;
 }
 
 @Injectable()
@@ -89,6 +114,11 @@ export class RabbitmqService implements OnModuleInit {
       return;
     }
 
+    if (routingKey === 'orden.entregada') {
+      await this.avisarResena(payload as unknown as EventoEntrega);
+      return;
+    }
+
     let tipo: TipoNotificacion;
     let mensaje: string;
     if (routingKey === 'orden.creada') {
@@ -103,10 +133,48 @@ export class RabbitmqService implements OnModuleInit {
     }
 
     await this.notificacionesService.crear(payload.compradorId, tipo, mensaje, payload.ordenId);
-    await this.notificarPorCorreo(payload.compradorId, 'TodoEnUno — actualización de tu orden', mensaje);
+
+    const url = `${FRONTEND_URL}/ordenes`;
+    const correo: Record<string, { asunto: string; datos: Omit<DatosCorreo, 'ordenId' | 'items' | 'total'> }> = {
+      // orden_creada NO manda correo: el checkout cobra al instante y el de "pago aprobado/rechazado" llega
+      // en el mismo segundo (dos correos casi iguales, y a veces en orden invertido). Queda solo la notificación in-app.
+      pago_confirmado: {
+        asunto: 'TodoEnUno — pago aprobado',
+        datos: { etiqueta: 'Pago aprobado', tono: 'ok', titulo: '¡Tu pago fue aprobado!', mensaje: `Recibimos tu pago de $${payload.monto ?? '--'}. Los vendedores ya fueron avisados y se pondrán en marcha.`, boton: { texto: 'Ver mi orden', url } },
+      },
+      pago_rechazado: {
+        asunto: 'TodoEnUno — pago rechazado',
+        datos: { etiqueta: 'Pago rechazado', tono: 'error', titulo: 'No pudimos procesar tu pago', mensaje: `Tu pago fue rechazado${payload.motivo ? `: ${payload.motivo}` : '.'} Puedes reintentarlo desde tus órdenes.`, boton: { texto: 'Reintentar pago', url: `${FRONTEND_URL}/checkout?orden=${payload.ordenId}` } },
+      },
+    };
+    const c = correo[tipo];
+    if (c) await this.correoDeOrden(payload.compradorId, c.asunto, c.datos, payload.ordenId, mensaje);
 
     if (routingKey === 'pago.confirmado') {
       await this.notificarVendedores(payload.ordenId);
+    }
+  }
+
+  // Cuando el vendedor marca un ítem como entregado, el comprador recibe un aviso para reseñarlo
+  private async avisarResena(evento: EventoEntrega) {
+    for (const item of evento.items ?? []) {
+      if (await this.notificacionesService.existeAvisoResena(evento.compradorId, evento.ordenId, item.productoId)) continue;
+      const mensaje = `Tu pedido «${item.nombre}» fue entregado. ¿Qué tal te fue? Deja tu reseña.`;
+      await this.notificacionesService.crear(evento.compradorId, 'resena_pendiente', mensaje, evento.ordenId, item.productoId);
+      await this.correoDeOrden(
+        evento.compradorId,
+        'TodoEnUno — cuéntanos qué te pareció',
+        {
+          etiqueta: 'Entregado',
+          tono: 'ok',
+          titulo: '¿Qué tal te fue?',
+          mensaje: `Tu pedido «${item.nombre}» fue entregado. Tu opinión ayuda a otros compradores y al vendedor.`,
+          boton: { texto: 'Dejar mi reseña', url: `${FRONTEND_URL}/productos/${item.productoId}#resenas` },
+        },
+        evento.ordenId,
+        mensaje,
+        (it) => it.productoId === item.productoId,
+      );
     }
   }
 
@@ -119,10 +187,70 @@ export class RabbitmqService implements OnModuleInit {
       for (const vendedorId of vendedores) {
         const mensaje = `Recibiste una nueva orden pagada (#${ordenId.slice(0, 8)}).`;
         await this.notificacionesService.crear(vendedorId, 'nueva_orden_vendedor', mensaje, ordenId);
-        await this.notificarPorCorreo(vendedorId, 'TodoEnUno — nueva orden pagada', mensaje);
+        await this.correoDeOrden(
+          vendedorId,
+          'TodoEnUno — nueva orden pagada',
+          {
+            etiqueta: 'Nueva orden',
+            tono: 'ok',
+            titulo: '¡Tienes una nueva venta!',
+            mensaje: 'Un comprador pagó por tus publicaciones. Prepara la entrega o atiende la cita y marca el estado en tu panel.',
+            boton: { texto: 'Ir a mis órdenes de venta', url: `${FRONTEND_URL}/vendedor/ordenes` },
+          },
+          ordenId,
+          mensaje,
+          (it) => it.vendedorId === vendedorId,
+        );
       }
     } catch (err) {
       this.logger.warn(`No se pudo notificar a los vendedores de la orden ${ordenId}: ${err}`);
+    }
+  }
+
+  // Correo con diseño: lista los ítems de la orden con su foto (adjunto en línea) y, en servicios, la fecha
+  // y hora de la cita. Si no se puede leer la orden, sale un correo sencillo con el mensaje.
+  // "filtro" deja solo ciertos ítems (cada vendedor ve solo los suyos; la reseña, solo el entregado).
+  private async correoDeOrden(
+    usuarioId: string,
+    asunto: string,
+    datos: Omit<DatosCorreo, 'ordenId' | 'items' | 'total'>,
+    ordenId: string,
+    mensajeSimple: string,
+    filtro?: (it: ItemOrdenInterna) => boolean,
+  ) {
+    try {
+      const [{ email }, orden] = await Promise.all([this.obtenerEmailUsuario(usuarioId), this.obtenerOrdenInterna(ordenId)]);
+      const propios = filtro ? orden.items.filter(filtro) : orden.items;
+      const adjuntos: AdjuntoCorreo[] = [];
+      const items: ItemCorreo[] = await Promise.all(
+        propios.map(async (it, i) => {
+          const adjunto = await this.fotoDe(it.productoId, `item${i}@todoenuno`);
+          if (adjunto) adjuntos.push(adjunto);
+          return { nombre: it.nombre, cantidad: it.cantidad, precio: it.precio, cita: it.cita, imagenCid: adjunto?.cid };
+        }),
+      );
+      const total = filtro ? Number(propios.reduce((a, it) => a + it.precio * it.cantidad, 0).toFixed(2)) : orden.total;
+      await this.email.enviar(email, asunto, mensajeSimple, { ...datos, ordenId, items, total }, adjuntos);
+    } catch (err) {
+      this.logger.warn(`No se pudo armar el correo con diseño (usuario ${usuarioId}); se envía el sencillo: ${err}`);
+      await this.notificarPorCorreo(usuarioId, asunto, mensajeSimple);
+    }
+  }
+
+  // Foto principal de la publicación como adjunto en línea (cid). Si no hay foto o falla, el correo sale sin ella.
+  private async fotoDe(productoId: string, cid: string): Promise<AdjuntoCorreo | null> {
+    try {
+      const resp = await fetch(`${CATALOGO_URL}/catalogo/${productoId}`);
+      if (!resp.ok) return null;
+      const p = (await resp.json()) as { imagenes?: string[]; imagenUrl?: string };
+      const img = p.imagenes?.[0] || p.imagenUrl;
+      if (!img) return null;
+      const m = img.match(/^data:(image\/[a-z+.-]+);base64,(.+)$/i);
+      if (m) return { filename: `${cid.split('@')[0]}.${m[1].split('/')[1].replace('jpeg', 'jpg')}`, cid, content: Buffer.from(m[2], 'base64'), contentType: m[1], contentDisposition: 'inline' };
+      if (/^https?:\/\//i.test(img)) return { filename: `${cid.split('@')[0]}.jpg`, cid, path: img, contentDisposition: 'inline' };
+      return null;
+    } catch {
+      return null;
     }
   }
 
@@ -141,7 +269,7 @@ export class RabbitmqService implements OnModuleInit {
     return resp.json();
   }
 
-  private async obtenerOrdenInterna(ordenId: string): Promise<{ items: Array<{ vendedorId: string }> }> {
+  private async obtenerOrdenInterna(ordenId: string): Promise<OrdenInterna> {
     const resp = await fetch(`${ORDENES_URL}/ordenes/internal/${ordenId}`);
     if (!resp.ok) throw new Error(`ordenes respondió ${resp.status}`);
     return resp.json();

@@ -6,10 +6,15 @@ import styles from './Catalogo.module.css'
 
 const CATEGORIAS = ['Electrónica', 'Hogar', 'Moda', 'Servicios profesionales', 'Belleza']
 
+// Última respuesta por búsqueda: al volver atrás se pinta al instante (sin spinner) y se refresca en segundo plano,
+// así la página conserva su altura y el scroll se restaura sin saltos.
+const cachePaginas = new Map<string, PaginaCatalogo>()
+
 export default function Catalogo() {
   const [params, setParams] = useSearchParams()
-  const [pagina, setPagina] = useState<PaginaCatalogo | null>(null)
-  const [cargando, setCargando] = useState(true)
+  const claveCache = params.toString()
+  const [pagina, setPagina] = useState<PaginaCatalogo | null>(() => cachePaginas.get(claveCache) ?? null)
+  const [cargando, setCargando] = useState(() => !cachePaginas.has(claveCache))
 
   const buscar = params.get('buscar') || ''
   const categoria = params.get('categoria') || ''
@@ -25,7 +30,13 @@ export default function Catalogo() {
   useEffect(() => setMaxInput(precioMax), [precioMax])
 
   useEffect(() => {
-    setCargando(true)
+    const enCache = cachePaginas.get(claveCache)
+    if (enCache) {
+      setPagina(enCache)
+      setCargando(false)
+    } else {
+      setCargando(true)
+    }
     catalogoApi
       .listar({
         buscar: buscar || undefined,
@@ -36,7 +47,10 @@ export default function Catalogo() {
         pagina: paginaActual,
         limite: 9,
       })
-      .then(setPagina)
+      .then((resp) => {
+        cachePaginas.set(claveCache, resp)
+        setPagina(resp)
+      })
       .finally(() => setCargando(false))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [buscar, categoria, tipo, precioMin, precioMax, paginaActual])

@@ -121,7 +121,7 @@ export default function ProductoDetalle() {
         setProducto(p)
         // Para servicios, arrancar en el primer día con atención (no en un día sin horarios)
         if (p.tipo === 'servicio' && p.disponibilidad?.reglas.length) {
-          setFecha(primeraFechaDisponible(p.disponibilidad.reglas, p.disponibilidad.duracionMinutos))
+          setFecha(primeraFechaDisponible(p.disponibilidad.reglas, p.disponibilidad.duracionMinutos, undefined, p.disponibilidad.diasNoDisponibles))
         }
         setImagenActiva(0)
         setZoomAbierto(false)
@@ -136,6 +136,13 @@ export default function ProductoDetalle() {
       .finally(() => setCargando(false))
     resenasApi.listar(id).then(setResenas)
   }, [id])
+
+  // Enlace desde el aviso de reseña (/productos/:id#resenas): baja hasta la sección
+  useEffect(() => {
+    if (producto && window.location.hash === '#resenas') {
+      document.getElementById('resenas')?.scrollIntoView({ block: 'start' })
+    }
+  }, [producto])
 
   useEffect(() => {
     if (!id || !usuario) {
@@ -226,6 +233,8 @@ export default function ProductoDetalle() {
 
   const esServicio = producto.tipo === 'servicio'
   const sinStock = !esServicio && producto.stock <= 0
+  const pausada = Boolean(producto.pausada)
+  const esPropia = Boolean(usuario) && usuario!.id === producto.vendedorId
   const imagenes =
     producto.imagenes && producto.imagenes.length > 0
       ? producto.imagenes
@@ -426,6 +435,7 @@ export default function ProductoDetalle() {
                     : sumarDiasFecha(hoy, 1)
                 }
                 diasPermitidos={new Set(producto.disponibilidad.reglas.map((r) => r.diaSemana))}
+                diasBloqueados={new Set(producto.disponibilidad.diasNoDisponibles ?? [])}
                 onChange={setFecha}
               />
               <p style={{ fontSize: '0.875rem', fontWeight: 700, marginTop: '0.5rem' }}>Fecha elegida: {formatFecha(fecha)}</p>
@@ -475,12 +485,23 @@ export default function ProductoDetalle() {
             </div>
           )}
 
+          {esPropia && (
+            <p className="hint-text" style={{ marginBottom: '0.5rem' }}>
+              Esta es tu publicación: no puedes comprarla ni reservarla.
+            </p>
+          )}
+          {pausada && (
+            <p className="error-text" style={{ marginBottom: '0.5rem' }}>
+              Esta publicación está pausada: no está disponible por ahora.
+            </p>
+          )}
+
           <div className={styles.actionsRow}>
             {esServicio ? (
               <button
                 type="button"
                 className="btn btn-primary"
-                disabled={agregando || !slotElegido}
+                disabled={pausada || esPropia || agregando || !slotElegido}
                 onClick={() => agregarAlCarrito(true)}
               >
                 {agregando ? 'Reservando...' : 'Reservar cita y pagar'}
@@ -490,7 +511,7 @@ export default function ProductoDetalle() {
                 <button
                   type="button"
                   className="btn btn-primary"
-                  disabled={sinStock || agregando}
+                  disabled={pausada || esPropia || sinStock || agregando}
                   onClick={() => agregarAlCarrito(false)}
                 >
                   {agregando ? 'Agregando...' : 'Agregar al carrito'}
@@ -498,7 +519,7 @@ export default function ProductoDetalle() {
                 <button
                   type="button"
                   className="btn"
-                  disabled={sinStock || agregando}
+                  disabled={pausada || esPropia || sinStock || agregando}
                   onClick={() => agregarAlCarrito(true)}
                 >
                   Comprar ahora
@@ -561,7 +582,7 @@ export default function ProductoDetalle() {
         <dl className={styles.specs}>
           {producto.marca && (
             <div className={styles.specRow}>
-              <dt>Marca</dt>
+              <dt>{esServicio ? 'Proveedor' : 'Marca'}</dt>
               <dd>{producto.marca}</dd>
             </div>
           )}
@@ -601,7 +622,7 @@ export default function ProductoDetalle() {
         </dl>
       </div>
 
-      <div className={styles.section}>
+      <div className={styles.section} id="resenas" style={{ scrollMarginTop: '6rem' }}>
         <h2>Reseñas {producto.numResenas > 0 && `(${producto.numResenas})`}</h2>
 
         {ordenesElegibles.length > 0 && (
@@ -657,7 +678,7 @@ export default function ProductoDetalle() {
                   </span>
                 </div>
                 <p className="muted" style={{ fontSize: '0.75rem', marginBottom: r.comentario ? '0.375rem' : 0 }}>
-                  {r.compradorEmail}
+                  {r.compradorNombre}
                 </p>
                 {r.comentario && <p style={{ fontSize: '0.875rem' }}>{r.comentario}</p>}
               </div>

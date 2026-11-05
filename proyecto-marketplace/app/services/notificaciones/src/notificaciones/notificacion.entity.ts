@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-export type TipoNotificacion = 'orden_creada' | 'pago_confirmado' | 'pago_rechazado' | 'nueva_orden_vendedor';
+export type TipoNotificacion = 'orden_creada' | 'pago_confirmado' | 'pago_rechazado' | 'nueva_orden_vendedor' | 'resena_pendiente';
 
 @Entity('notificaciones')
 export class Notificacion {
@@ -18,6 +18,10 @@ export class Notificacion {
 
   @Column()
   ordenId: string;
+
+  // Solo en avisos de reseña: la publicación que se puede reseñar
+  @Column({ type: 'varchar', nullable: true })
+  productoId: string | null;
 
   @Column({ default: false })
   leida: boolean;

@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import styles from './ConfirmModal.module.css'
 
 interface Props {
@@ -35,7 +36,8 @@ export function ConfirmModal({
 
   if (!abierto) return null
 
-  return (
+  // En un portal para no heredar estilos (p. ej. texto blanco) del contenedor donde se use
+  return createPortal(
     <div className={styles.overlay} onClick={onCancelar}>
       <div
         className={styles.modal}
@@ -62,6 +64,7 @@ export function ConfirmModal({
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }

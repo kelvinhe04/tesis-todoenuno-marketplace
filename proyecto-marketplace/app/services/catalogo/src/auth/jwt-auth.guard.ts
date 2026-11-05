@@ -1,5 +1,6 @@
 import { CanActivate, ExecutionContext, Injectable, UnauthorizedException } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
+import { PayloadSesion, sesionRevocada } from './sesion-revocada';
 
 // Verifica el mismo JWT emitido por el microservicio de auth, usando el secreto
 // compartido (JWT_SECRET). No hay llamada de red a auth: al ser un token stateless
@@ -15,11 +16,16 @@ export class JwtAuthGuard implements CanActivate {
       throw new UnauthorizedException('Falta el token de autenticación');
     }
     const token = header.slice('Bearer '.length);
+    let payload: PayloadSesion;
     try {
-      request.usuario = await this.jwt.verifyAsync(token);
-      return true;
+      payload = await this.jwt.verifyAsync(token);
     } catch {
       throw new UnauthorizedException('Token inválido o expirado');
     }
+    if (await sesionRevocada(payload)) {
+      throw new UnauthorizedException('La sesión fue cerrada. Inicia sesión de nuevo');
+    }
+    request.usuario = payload;
+    return true;
   }
 }

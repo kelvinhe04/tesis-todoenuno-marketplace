@@ -12,12 +12,13 @@ export default function VendedorPublicaciones() {
   const [productos, setProductos] = useState<Producto[]>([])
   const [cargando, setCargando] = useState(true)
   const [eliminando, setEliminando] = useState<string | null>(null)
+  const [cambiando, setCambiando] = useState<string | null>(null)
 
   const cargar = () => {
     if (!usuario) return
     setCargando(true)
     catalogoApi
-      .listar({ vendedorId: usuario.id, limite: 50 })
+      .listar({ vendedorId: usuario.id, limite: 50, incluirPausadas: true })
       .then((pagina) => setProductos(pagina.items))
       .finally(() => setCargando(false))
   }
@@ -32,6 +33,16 @@ export default function VendedorPublicaciones() {
       setProductos((prev) => prev.filter((p) => p._id !== id))
     } finally {
       setEliminando(null)
+    }
+  }
+
+  const alternarPausa = async (p: Producto) => {
+    setCambiando(p._id)
+    try {
+      const actualizado = await catalogoApi.actualizar(p._id, { pausada: !p.pausada })
+      setProductos((prev) => prev.map((x) => (x._id === p._id ? { ...x, pausada: actualizado.pausada } : x)))
+    } finally {
+      setCambiando(null)
     }
   }
 
@@ -77,8 +88,20 @@ export default function VendedorPublicaciones() {
                 </p>
               </div>
               <span style={{ fontWeight: 700, minWidth: '4rem' }}>${p.precio.toFixed(2)}</span>
-              <span className="badge badge-success">Activo</span>
+              {p.pausada ? (
+                <span className="badge badge-neutral">Pausada</span>
+              ) : (
+                <span className="badge badge-success">Activo</span>
+              )}
               <div className={styles.rowActions}>
+                <button
+                  type="button"
+                  className="btn btn-sm"
+                  disabled={cambiando === p._id}
+                  onClick={() => alternarPausa(p)}
+                >
+                  {p.pausada ? 'Reactivar' : 'Pausar'}
+                </button>
                 <button
                   type="button"
                   className={styles.iconBtn}

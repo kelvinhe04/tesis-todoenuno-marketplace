@@ -1,10 +1,9 @@
 import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
-import { ApiError, type Rol, type Usuario } from '../lib/api'
+import { ApiError, type Usuario } from '../lib/api'
 import { IconEye, IconEyeOff } from '../components/icons'
 import { GoogleLoginButton } from '../components/GoogleLoginButton'
-import { RolGoogleModal } from '../components/RolGoogleModal'
 import { AuthExito } from '../components/AuthExito'
 import styles from './Auth.module.css'
 
@@ -19,14 +18,9 @@ export default function Login() {
   const [mostrarPassword, setMostrarPassword] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  const [credencialGoogle, setCredencialGoogle] = useState<string | null>(null)
-  const [nombreGoogle, setNombreGoogle] = useState('')
-  const [creandoCuentaGoogle, setCreandoCuentaGoogle] = useState(false)
-
   const [mensajeExito, setMensajeExito] = useState<string | null>(null)
 
   const entrarConExito = (usuario: Usuario) => {
-    setCredencialGoogle(null)
     setMensajeExito(`¡Bienvenido, ${usuario.nombre}!`)
     setTimeout(() => navigate(usuario.rol === 'vendedor' ? '/vendedor' : '/'), RETRASO_EXITO_MS)
   }
@@ -46,29 +40,9 @@ export default function Login() {
     setError(null)
     try {
       const resp = await loginConGoogle(credential)
-      if ('requiereRol' in resp) {
-        setCredencialGoogle(credential)
-        setNombreGoogle(resp.nombre)
-        return
-      }
       entrarConExito(resp)
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'No se pudo iniciar sesión con Google')
-    }
-  }
-
-  const elegirRolGoogle = async (rol: Rol) => {
-    if (!credencialGoogle) return
-    setError(null)
-    setCreandoCuentaGoogle(true)
-    try {
-      const resp = await loginConGoogle(credencialGoogle, rol)
-      if ('requiereRol' in resp) return
-      entrarConExito(resp)
-    } catch (err) {
-      setError(err instanceof ApiError ? err.message : 'No se pudo crear la cuenta')
-    } finally {
-      setCreandoCuentaGoogle(false)
     }
   }
 
@@ -150,12 +124,6 @@ export default function Login() {
         </form>
       </div>
 
-      <RolGoogleModal
-        abierto={credencialGoogle !== null}
-        nombre={nombreGoogle}
-        procesando={creandoCuentaGoogle}
-        onElegir={elegirRolGoogle}
-      />
       <AuthExito mostrar={mensajeExito !== null} mensaje={mensajeExito || ''} />
     </div>
   )

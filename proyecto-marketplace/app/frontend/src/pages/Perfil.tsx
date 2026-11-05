@@ -1,20 +1,24 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { ApiError, notificacionesApi, type Notificacion } from '../lib/api'
-import { IconEdit, IconEye, IconEyeOff } from '../components/icons'
+import { IconEdit, IconEye, IconEyeOff, IconTrash } from '../components/icons'
 import { Avatar } from '../components/Avatar'
 import { ConfirmModal } from '../components/ConfirmModal'
+import { BotonVender } from '../components/BotonVender'
 import { DireccionesGuardadas } from '../components/DireccionesGuardadas'
 import { TarjetasGuardadas } from '../components/TarjetasGuardadas'
 import styles from './Perfil.module.css'
 
 export default function Perfil() {
-  const { usuario, actualizarPerfil, logout } = useAuth()
+  const { usuario, actualizarPerfil, logout, cerrarSesionEnTodos } = useAuth()
   const navigate = useNavigate()
   const [notificaciones, setNotificaciones] = useState<Notificacion[]>([])
   const [cargando, setCargando] = useState(true)
   const [confirmarSalir, setConfirmarSalir] = useState(false)
+  const [confirmarSalirTodos, setConfirmarSalirTodos] = useState(false)
+  const [confirmarBorrarNotifs, setConfirmarBorrarNotifs] = useState(false)
+  const [notifPorBorrar, setNotifPorBorrar] = useState<string | null>(null)
 
   const [editando, setEditando] = useState(false)
   const [nombreEdit, setNombreEdit] = useState(usuario?.nombre || '')
@@ -32,6 +36,23 @@ export default function Perfil() {
       .then(setNotificaciones)
       .finally(() => setCargando(false))
   }, [])
+
+  const eliminarNotificacion = async (id: string) => {
+    await notificacionesApi.eliminar(id)
+    setNotificaciones((prev) => prev.filter((n) => n.id !== id))
+    setNotifPorBorrar(null)
+  }
+
+  const marcarTodasLeidas = async () => {
+    await notificacionesApi.marcarTodasLeidas()
+    setNotificaciones((prev) => prev.map((n) => ({ ...n, leida: true })))
+  }
+
+  const eliminarTodasNotificaciones = async () => {
+    await notificacionesApi.eliminarTodas()
+    setNotificaciones([])
+    setConfirmarBorrarNotifs(false)
+  }
 
   const marcarLeida = async (id: string) => {
     const actualizada = await notificacionesApi.marcarLeida(id)
@@ -73,6 +94,7 @@ export default function Perfil() {
       <h1 style={{ fontSize: '1.375rem', marginBottom: '1.25rem' }}>Mi perfil</h1>
 
       <div className={styles.layout}>
+       <div className={styles.col}>
         {exitoEdicion && <p className="hint-text">{exitoEdicion}</p>}
 
         {editando ? (
@@ -174,11 +196,19 @@ export default function Perfil() {
               <span className="badge badge-neutral" style={{ marginTop: '0.375rem' }}>
                 {usuario.rol === 'vendedor' ? 'Vendedor' : 'Comprador'}
               </span>
+              {usuario.emailVerificado === false && (
+                <span className="badge badge-warning" style={{ marginTop: '0.375rem', marginLeft: '0.375rem' }}>
+                  Correo sin verificar
+                </span>
+              )}
             </div>
             <button type="button" className="btn" onClick={abrirEdicion} aria-label="Editar perfil">
               <IconEdit width={16} height={16} />
               Editar
             </button>
+            {usuario.rol === 'comprador' && (
+              <BotonVender className="btn btn-primary" texto="Quiero vender" textoVendedor={null} />
+            )}
             <button
               type="button"
               className="btn btn-danger"
@@ -186,6 +216,22 @@ export default function Perfil() {
             >
               Cerrar sesión
             </button>
+            <button type="button" className="btn" onClick={() => setConfirmarSalirTodos(true)}>
+              Cerrar sesión en todos los dispositivos
+            </button>
+            <ConfirmModal
+              abierto={confirmarSalirTodos}
+              titulo="Cerrar sesión en todos los dispositivos"
+              mensaje="Se cerrarán tus sesiones abiertas en este y en cualquier otro dispositivo. Tendrás que iniciar sesión de nuevo."
+              textoConfirmar="Cerrar todas"
+              peligro
+              onConfirmar={async () => {
+                setConfirmarSalirTodos(false)
+                await cerrarSesionEnTodos()
+                navigate('/login')
+              }}
+              onCancelar={() => setConfirmarSalirTodos(false)}
+            />
             <ConfirmModal
               abierto={confirmarSalir}
               titulo="Cerrar sesión"
@@ -203,9 +249,45 @@ export default function Perfil() {
 
         <DireccionesGuardadas />
         <TarjetasGuardadas />
+       </div>
 
-        <div>
-          <h2 style={{ fontSize: '1.0625rem', marginBottom: '0.75rem' }}>Notificaciones</h2>
+        <div className={styles.colNotif}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.75rem' }}>
+            <h2 style={{ fontSize: '1.0625rem' }}>Notificaciones</h2>
+            {notificaciones.length > 0 && (
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                {notificaciones.some((n) => !n.leida) && (
+                  <button type="button" className="btn btn-sm" onClick={marcarTodasLeidas}>
+                    Marcar todas como leídas
+                  </button>
+                )}
+                <button type="button" className="btn btn-sm btn-danger" onClick={() => setConfirmarBorrarNotifs(true)}>
+                  Eliminar todas
+                </button>
+              </div>
+            )}
+          </div>
+          <p className="hint-text" style={{ marginBottom: '0.75rem' }}>
+            Se eliminan solas a los 30 días.
+          </p>
+          <ConfirmModal
+            abierto={confirmarBorrarNotifs}
+            titulo="Eliminar notificaciones"
+            mensaje="Se borrarán todas tus notificaciones. Esta acción no se puede deshacer."
+            textoConfirmar="Eliminar todas"
+            peligro
+            onConfirmar={eliminarTodasNotificaciones}
+            onCancelar={() => setConfirmarBorrarNotifs(false)}
+          />
+          <ConfirmModal
+            abierto={notifPorBorrar !== null}
+            titulo="Eliminar notificación"
+            mensaje="Se borrará esta notificación. Esta acción no se puede deshacer."
+            textoConfirmar="Eliminar"
+            peligro
+            onConfirmar={() => notifPorBorrar && eliminarNotificacion(notifPorBorrar)}
+            onCancelar={() => setNotifPorBorrar(null)}
+          />
 
           {cargando ? (
             <div className="center-loading">
@@ -218,17 +300,37 @@ export default function Perfil() {
               {notificaciones.map((n) => (
                 <div key={n.id} className={`card ${styles.notifItem}`}>
                   {!n.leida && <span className={styles.notifDot} />}
-                  <div style={{ flex: 1 }}>
+                  <div className={styles.notifTexto}>
                     <p style={{ fontSize: '0.9375rem' }}>{n.mensaje}</p>
                     <p className="muted" style={{ fontSize: '0.75rem', marginTop: '0.25rem' }}>
                       {new Date(n.creadoEn).toLocaleString('es-PA')}
                     </p>
                   </div>
+                  <div className={styles.notifAcciones}>
+                  {n.tipo === 'resena_pendiente' && n.productoId && (
+                    <Link
+                      to={`/productos/${n.productoId}#resenas`}
+                      className="btn btn-sm btn-primary"
+                      onClick={() => !n.leida && marcarLeida(n.id)}
+                    >
+                      Dejar reseña
+                    </Link>
+                  )}
                   {!n.leida && (
                     <button type="button" className="btn btn-sm" onClick={() => marcarLeida(n.id)}>
                       Marcar leída
                     </button>
                   )}
+                  <button
+                    type="button"
+                    className="btn btn-sm"
+                    aria-label="Eliminar notificación"
+                    title="Eliminar"
+                    onClick={() => setNotifPorBorrar(n.id)}
+                  >
+                    <IconTrash width={16} height={16} />
+                  </button>
+                  </div>
                 </div>
               ))}
             </div>
