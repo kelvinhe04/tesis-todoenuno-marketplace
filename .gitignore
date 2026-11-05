@@ -21,3 +21,6 @@
 
 # Respaldos de datos (Mongo con imágenes base64 + Postgres): pesados y con datos de usuarios
 proyecto-marketplace/backups/
+
+# Archivos temporales de bloqueo de Word/Office (aparecen mientras un .docx esta abierto)
+~$*

@@ -127,6 +127,11 @@ services:
       PAYPAL_CLIENT_ID: ${PAYPAL_CLIENT_ID:-}
       PAYPAL_CLIENT_SECRET: ${PAYPAL_CLIENT_SECRET:-}
       PAYPAL_API_BASE: ${PAYPAL_API_BASE:-https://api-m.sandbox.paypal.com}
+      # PayU Latam SANDBOX (opcional): credenciales de prueba publicas de developers.payulatam.com (Panama: accountId 512326)
+      PAYU_MERCHANT_ID: ${PAYU_MERCHANT_ID:-}
+      PAYU_ACCOUNT_ID: ${PAYU_ACCOUNT_ID:-}
+      PAYU_API_KEY: ${PAYU_API_KEY:-}
+      PAYU_CHECKOUT_URL: ${PAYU_CHECKOUT_URL:-https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/}
     ports:
       - "3005:3000"
     depends_on:

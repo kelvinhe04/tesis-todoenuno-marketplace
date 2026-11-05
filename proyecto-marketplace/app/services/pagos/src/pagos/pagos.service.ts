@@ -5,8 +5,10 @@ import { MetodoPago, Pago } from './pago.entity';
 import { ProcesarPagoDto } from './dto/procesar-pago.dto';
 import { RabbitmqService } from './rabbitmq.service';
 import { PaypalService } from './paypal.service';
+import { PayuService } from './payu.service';
 
 const ORDENES_URL = process.env.ORDENES_URL || 'http://ordenes:3000';
+const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
 const FRONTEND_URL = (process.env.FRONTEND_URL || 'http://localhost:5173').replace(/\/$/, '');
 
 interface OrdenRemota {
@@ -30,11 +32,16 @@ export class PagosService {
     @InjectRepository(Pago) private readonly pagos: Repository<Pago>,
     private readonly rabbitmq: RabbitmqService,
     private readonly paypal: PaypalService,
+    private readonly payu: PayuService,
   ) {}
 
-  // Qué modo de PayPal hay activo: "sandbox" (PayPal Sandbox real) o "simulado" (sin credenciales)
+  // Modo de cada pasarela: PayPal "sandbox" (real) o "simulado"; PayU "sandbox" o "no-configurado"
   config() {
-    return { paypal: this.paypal.habilitado ? 'sandbox' : 'simulado' };
+    return {
+      paypal: this.paypal.habilitado ? 'sandbox' : 'simulado',
+      payu: this.payu.habilitado ? 'sandbox' : 'no-configurado',
+      payuPrueba: this.payu.habilitado ? this.payu.tarjetaPrueba : undefined,
+    };
   }
 
   // Simulador local (tarjeta y PayPal simulado)
@@ -86,6 +93,58 @@ export class PagosService {
       motivo = 'El pago de PayPal no coincide con la orden';
     }
     return this.registrarCobro(orden, usuarioId, { aprobado, motivo, metodo: 'paypal', referenciaExterna: paypalOrderId });
+  }
+
+  // PayU Latam (WebCheckout, sandbox), paso 1: devuelve los campos firmados del formulario al que el navegador hace
+  // POST para ir a la página de PayU (el número de tarjeta se escribe allá, nunca en nuestro servidor).
+  async payuCrear(ordenId: string, usuarioId: string, authorizationHeader: string) {
+    const orden = await this.obtenerOrdenPendiente(ordenId, usuarioId, authorizationHeader);
+    if (!this.payu.habilitado) return { modo: 'no-configurado' as const };
+    let buyerEmail = 'comprador@todoenuno.test';
+    try {
+      const resp = await fetch(`${AUTH_URL}/auth/internal/email/${usuarioId}`);
+      if (resp.ok) buyerEmail = (await resp.json()).email ?? buyerEmail;
+    } catch {
+      // sin correo real PayU igual funciona en sandbox
+    }
+    const formulario = this.payu.prepararFormulario({
+      ordenId,
+      total: orden.total,
+      buyerEmail,
+      descripcion: `TodoEnUno orden ${ordenId.slice(0, 8)}`,
+      responseUrl: `${FRONTEND_URL}/checkout/payu`,
+    });
+    return { modo: 'sandbox' as const, ...formulario };
+  }
+
+  // PayU, paso 2: el comprador volvió de PayU a nuestra página de respuesta con los parámetros firmados. Se valida la
+  // firma, que corresponda a una orden SUYA, la moneda y el monto exacto, antes de dar el pago por aprobado.
+  async payuConfirmar(params: Record<string, string>, usuarioId: string, authorizationHeader: string) {
+    if (!this.payu.habilitado) throw new BadRequestException('PayU Sandbox no está configurado');
+    const ordenId = this.payu.ordenIdDe(params.referenceCode);
+    if (!ordenId) throw new BadRequestException('Referencia de pago inválida');
+    if (!this.payu.firmaRespuestaValida(params)) throw new BadRequestException('La firma de PayU no es válida');
+
+    const orden = await this.obtenerOrden(ordenId, authorizationHeader);
+    if (orden.compradorId !== usuarioId) throw new ForbiddenException('Esta orden no te pertenece');
+
+    const referencia = params.reference_pol || params.transactionId || params.referenceCode;
+    const previo = await this.pagos.findOne({ where: { ordenId, referenciaExterna: referencia, estado: 'aprobado' } });
+    if (previo) return previo; // recarga de la página de respuesta: idempotente
+    if (orden.estadoPago !== 'pendiente') {
+      throw new BadRequestException(`La orden ya fue procesada (estado actual: ${orden.estadoPago})`);
+    }
+    if (params.transactionState === '7') {
+      throw new BadRequestException('PayU dejó el pago pendiente de confirmación. Revisa Mis órdenes en unos minutos.');
+    }
+
+    let aprobado = params.transactionState === '4';
+    let motivo: string | undefined = aprobado ? undefined : `${params.message || 'PayU no aprobó el pago'}${params.lapResponseCode ? ` (${params.lapResponseCode})` : ''}`;
+    if (aprobado && (params.currency !== 'USD' || Number(params.TX_VALUE) !== Number(orden.total.toFixed(2)))) {
+      aprobado = false;
+      motivo = 'El pago de PayU no coincide con la orden';
+    }
+    return this.registrarCobro(orden, usuarioId, { aprobado, motivo, metodo: 'payu', referenciaExterna: referencia });
   }
 
   // Registrar el pago y verificar "¿ya está pagada?" debe ser atómico: el estado de la orden se actualiza

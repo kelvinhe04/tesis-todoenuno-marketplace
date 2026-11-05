@@ -1,5 +1,5 @@
 import { Body, Controller, Get, Param, Post, Req, UseGuards } from '@nestjs/common';
-import { IsString, MinLength } from 'class-validator';
+import { IsObject, IsString, MinLength } from 'class-validator';
 import { PagosService } from './pagos.service';
 import { ProcesarPagoDto } from './dto/procesar-pago.dto';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
@@ -8,6 +8,11 @@ class CapturarPaypalDto {
   @IsString()
   @MinLength(5)
   paypalOrderId: string;
+}
+
+class ConfirmarPayuDto {
+  @IsObject()
+  params: Record<string, string>;
 }
 
 @UseGuards(JwtAuthGuard)
@@ -34,6 +39,16 @@ export class PagosController {
   @Post('ordenes/:ordenId/paypal/capturar')
   paypalCapturar(@Param('ordenId') ordenId: string, @Body() dto: CapturarPaypalDto, @Req() request: any) {
     return this.pagosService.paypalCapturar(ordenId, dto.paypalOrderId, request.usuario.sub, request.headers['authorization']);
+  }
+
+  @Post('ordenes/:ordenId/payu/crear')
+  payuCrear(@Param('ordenId') ordenId: string, @Req() request: any) {
+    return this.pagosService.payuCrear(ordenId, request.usuario.sub, request.headers['authorization']);
+  }
+
+  @Post('payu/confirmar')
+  payuConfirmar(@Body() dto: ConfirmarPayuDto, @Req() request: any) {
+    return this.pagosService.payuConfirmar(dto.params, request.usuario.sub, request.headers['authorization']);
   }
 
   @Get('ordenes/:ordenId')

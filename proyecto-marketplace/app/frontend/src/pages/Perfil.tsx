@@ -303,7 +303,7 @@ export default function Perfil() {
                   <div className={styles.notifTexto}>
                     <p style={{ fontSize: '0.9375rem' }}>{n.mensaje}</p>
                     <p className="muted" style={{ fontSize: '0.75rem', marginTop: '0.25rem' }}>
-                      {new Date(n.creadoEn).toLocaleString('es-PA')}
+                      {new Date(n.creadoEn).toLocaleString('es-PA', { year: 'numeric', month: '2-digit', day: '2-digit', hour: 'numeric', minute: '2-digit' })}
                     </p>
                   </div>
                   <div className={styles.notifAcciones}>

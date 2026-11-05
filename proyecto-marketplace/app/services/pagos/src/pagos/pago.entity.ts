@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-export type MetodoPago = 'tarjeta' | 'paypal';
+export type MetodoPago = 'tarjeta' | 'paypal' | 'payu';
 export type EstadoPago = 'aprobado' | 'rechazado';
 
 @Entity('pagos')
@@ -30,7 +30,7 @@ export class Pago {
   @Column({ nullable: true })
   tarjetaUltimos4?: string;
 
-  // Id de la orden de PayPal (solo pagos hechos con PayPal Sandbox), para trazabilidad e idempotencia
+  // Id de la orden de PayPal o de la transacción de PayU (solo pagos hechos con esas pasarelas sandbox), para trazabilidad e idempotencia
   @Column({ type: 'varchar', nullable: true })
   referenciaExterna?: string;
 

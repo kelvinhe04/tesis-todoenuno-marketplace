@@ -446,8 +446,19 @@ export const pagosApi = {
   procesar: (ordenId: string, dto: ProcesarPagoPayload) =>
     request<Pago>(`/pagos/ordenes/${ordenId}`, { method: 'POST', body: JSON.stringify(dto) }),
   // "sandbox" = PayPal Sandbox real (redirige a PayPal); "simulado" = sin credenciales, se simula localmente
-  config: () => request<{ paypal: 'sandbox' | 'simulado' }>('/pagos/config'),
+  config: () =>
+    request<{ paypal: 'sandbox' | 'simulado'; payu: 'sandbox' | 'no-configurado'; payuPrueba?: { pais: string; marca: string; numero: string } }>(
+      '/pagos/config',
+    ),
   paypalCrear: (ordenId: string) => request<RespuestaPaypalCrear>(`/pagos/ordenes/${ordenId}/paypal/crear`, { method: 'POST' }),
+  // PayU Latam (sandbox): devuelve el formulario firmado al que el navegador hace POST para ir a la página de PayU
+  payuCrear: (ordenId: string) =>
+    request<{ modo: 'no-configurado' } | { modo: 'sandbox'; actionUrl: string; campos: Record<string, string> }>(
+      `/pagos/ordenes/${ordenId}/payu/crear`,
+      { method: 'POST' },
+    ),
+  payuConfirmar: (params: Record<string, string>) =>
+    request<Pago>('/pagos/payu/confirmar', { method: 'POST', body: JSON.stringify({ params }) }),
   paypalCapturar: (ordenId: string, paypalOrderId: string) =>
     request<Pago>(`/pagos/ordenes/${ordenId}/paypal/capturar`, { method: 'POST', body: JSON.stringify({ paypalOrderId }) }),
 }

@@ -11,7 +11,7 @@ import {
   type DireccionGuardada,
   type TarjetaGuardada,
 } from '../lib/api'
-import { IconCheck, IconClose } from '../components/icons'
+import { PantallaConfirmando, PantallaResultado } from '../components/PantallasPago'
 import { ConfirmModal } from '../components/ConfirmModal'
 import { formatFecha, formatHora12h } from '../lib/estado'
 import {
@@ -47,7 +47,7 @@ export default function Checkout() {
   const [telefono, setTelefono] = useState('')
   const [direccion, setDireccion] = useState('')
 
-  const [metodo, setMetodo] = useState<'tarjeta' | 'paypal'>('tarjeta')
+  const [metodo, setMetodo] = useState<'tarjeta' | 'paypal' | 'payu'>('tarjeta')
   const [numeroTarjeta, setNumeroTarjeta] = useState('')
   const [vencimiento, setVencimiento] = useState('')
   const [cvv, setCvv] = useState('')
@@ -59,6 +59,8 @@ export default function Checkout() {
   const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false)
   // PayPal Sandbox real (redirige a PayPal) o simulado (sin credenciales en el servidor)
   const [paypalModo, setPaypalModo] = useState<'sandbox' | 'simulado'>('simulado')
+  const [payuActivo, setPayuActivo] = useState(false) // PayU Latam sandbox configurado en el servidor
+  const [payuPrueba, setPayuPrueba] = useState<{ pais: string; marca: string; numero: string } | null>(null)
   const capturaIniciada = useRef(false)
   const [confirmandoPaypal, setConfirmandoPaypal] = useState(() => searchParams.get('paypal') === 'ok' && !!searchParams.get('token'))
 
@@ -78,7 +80,14 @@ export default function Checkout() {
   const tarjetaSel = tarjetasGuardadas.find((t) => t.id === tarjetaElegida)
 
   useEffect(() => {
-    pagosApi.config().then((c) => setPaypalModo(c.paypal)).catch(() => undefined)
+    pagosApi
+      .config()
+      .then((c) => {
+        setPaypalModo(c.paypal)
+        setPayuActivo(c.payu === 'sandbox')
+        setPayuPrueba(c.payuPrueba ?? null)
+      })
+      .catch(() => undefined)
   }, [])
 
   // Regreso desde PayPal (?orden=...&paypal=ok&token=...): se captura el pago y se muestra el resultado
@@ -234,6 +243,26 @@ export default function Checkout() {
         // Guardar la dirección nueva para próximas compras (si lo pidió); no bloquea la compra si falla
         if (!dirSel && guardarDireccion) await guardadosApi.crearDireccion(envio).catch(() => undefined)
       }
+      if (metodo === 'payu') {
+        const payu = await pagosApi.payuCrear(ordenId)
+        if (payu.modo === 'sandbox') {
+          // POST a la página de PayU (WebCheckout); al volver, /checkout/payu valida la firma y confirma el pago
+          const form = document.createElement('form')
+          form.method = 'POST'
+          form.action = payu.actionUrl
+          Object.entries(payu.campos).forEach(([nombre, valor]) => {
+            const input = document.createElement('input')
+            input.type = 'hidden'
+            input.name = nombre
+            input.value = valor
+            form.appendChild(input)
+          })
+          document.body.appendChild(form)
+          form.submit()
+          return
+        }
+        throw new ApiError(400, 'PayU no está configurado en el servidor')
+      }
       if (metodo === 'paypal') {
         const paypal = await pagosApi.paypalCrear(ordenId)
         if (paypal.modo === 'sandbox') {
@@ -275,41 +304,10 @@ export default function Checkout() {
   }
 
   // Vuelta desde PayPal: mientras el servidor captura el pago se muestra esta pantalla (no el formulario)
-  if (confirmandoPaypal) {
-    return (
-      <div className={styles.confirmando} role="status" aria-live="polite">
-        <div className={styles.anillo} />
-        <h1 style={{ fontSize: '1.375rem', marginBottom: '0.5rem' }}>Confirmando tu pago…</h1>
-        <p className="muted">Estamos verificando la aprobación con PayPal. No cierres esta ventana.</p>
-      </div>
-    )
-  }
+  if (confirmandoPaypal) return <PantallaConfirmando pasarela="PayPal" />
 
   if (resultado) {
-    return (
-      <div className={styles.resultado}>
-        <div
-          className={styles.resultadoIcono}
-          style={{
-            background: resultado.aprobado ? 'var(--color-success-soft)' : 'var(--color-danger-soft)',
-            color: resultado.aprobado ? 'var(--color-success)' : 'var(--color-danger)',
-          }}
-        >
-          {resultado.aprobado ? <IconCheck width={32} height={32} /> : <IconClose width={30} height={30} />}
-        </div>
-        <h1 className={styles.resultadoTitulo} style={{ fontSize: '1.375rem', marginBottom: '0.5rem' }}>
-          {resultado.aprobado ? 'Pago aprobado' : 'Pago rechazado'}
-        </h1>
-        <p className={`muted ${styles.resultadoTexto}`} style={{ marginBottom: '1.5rem' }}>
-          {resultado.aprobado
-            ? 'Tu orden fue creada y el pago quedó confirmado (entorno de prueba / sandbox).'
-            : resultado.motivo || 'El pago no pudo procesarse. Puedes revisar el estado en Mis órdenes.'}
-        </p>
-        <button type="button" className={`btn btn-primary ${styles.resultadoBoton}`} onClick={() => navigate('/ordenes')}>
-          Ver mis órdenes
-        </button>
-      </div>
-    )
+    return <PantallaResultado aprobado={resultado.aprobado} motivo={resultado.motivo} onVerOrdenes={() => navigate('/ordenes')} />
   }
 
   if (cargando || !carrito) {
@@ -460,10 +458,27 @@ export default function Checkout() {
               >
                 PayPal
               </button>
+              {payuActivo && (
+                <button
+                  type="button"
+                  className={`${styles.methodTab} ${metodo === 'payu' ? styles.active : ''}`}
+                  onClick={() => setMetodo('payu')}
+                >
+                  PayU
+                </button>
+              )}
             </div>
 
             <p className={styles.sandboxNote}>
-              {metodo === 'paypal' && paypalModo === 'sandbox' ? (
+              {metodo === 'payu' ? (
+                <>
+                  Entorno de prueba (PayU Latam Sandbox{payuPrueba ? `, cuenta de ${payuPrueba.pais}` : ''}): te llevaremos a PayU para escribir
+                  la tarjeta ahí. Usa la {payuPrueba?.marca ?? 'Visa'} <strong>{payuPrueba?.numero ?? '4097 4400 0000 0004'}</strong>, titular{' '}
+                  <strong>APPROVED</strong>, CVV <strong>777</strong> y vencimiento <strong>05/2028</strong>; el documento y el teléfono pueden ser
+                  inventados. Para ver un rechazo: titular <strong>REJECTED</strong>, CVV <strong>666</strong> y vencimiento <strong>07/2028</strong>.
+                  Ninguna transacción es real.
+                </>
+              ) : metodo === 'paypal' && paypalModo === 'sandbox' ? (
                 <>
                   Entorno de prueba (PayPal Sandbox): al confirmar te llevaremos a PayPal para aprobar el pago con una cuenta
                   de comprador de prueba. Ninguna transacción es real.

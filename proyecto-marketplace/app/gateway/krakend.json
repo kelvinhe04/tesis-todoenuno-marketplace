@@ -356,6 +356,20 @@
       "backend": [{ "url_pattern": "/pagos/config", "encoding": "no-op", "host": ["http://pagos:3000"] }]
     },
     {
+      "endpoint": "/api/pagos/ordenes/{ordenId}/payu/crear",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/pagos/ordenes/{ordenId}/payu/crear", "encoding": "no-op", "host": ["http://pagos:3000"] }]
+    },
+    {
+      "endpoint": "/api/pagos/payu/confirmar",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/pagos/payu/confirmar", "encoding": "no-op", "host": ["http://pagos:3000"] }]
+    },
+    {
       "endpoint": "/api/pagos/ordenes/{ordenId}/paypal/crear",
       "method": "POST",
       "output_encoding": "no-op",

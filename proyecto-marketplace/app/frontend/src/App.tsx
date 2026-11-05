@@ -9,6 +9,7 @@ import Catalogo from './pages/Catalogo'
 import ProductoDetalle from './pages/ProductoDetalle'
 import Carrito from './pages/Carrito'
 import Checkout from './pages/Checkout'
+import CheckoutPayu from './pages/CheckoutPayu'
 import Ordenes from './pages/Ordenes'
 import Perfil from './pages/Perfil'
 import VendedorPanel from './pages/vendedor/VendedorPanel'
@@ -44,6 +45,14 @@ export default function App() {
           element={
             <ProtectedRoute>
               <Checkout />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/checkout/payu"
+          element={
+            <ProtectedRoute>
+              <CheckoutPayu />
             </ProtectedRoute>
           }
         />
