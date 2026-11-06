@@ -2,10 +2,11 @@
 # Respaldo SOLO de los datos sembrados (la "seed"): los productos/servicios de las cuentas
 # vendedoras de prueba (*-seed@example.com, seed-vendedor-*@example.com) con todas sus
 # IMAGENES (base64 dentro de Mongo) y esas cuentas de Postgres. No incluye lo que se cree
-# despues desde la web con otras cuentas, ni ordenes, pagos, reservas ni resenas.
+# despues desde la web con otras cuentas, ni ordenes, pagos ni reservas. SI incluye las resenas de ejemplo de esos productos.
 #
 # Guarda en proyecto-marketplace/backups/seed/<fecha>/ :
 #   seed-productos.jsonl.gz  -> productos y servicios de la seed (documentos Mongo, con imagenes)
+#   seed-resenas.jsonl.gz    -> resenas de ejemplo de esos productos
 #   seed-usuarios.sql        -> las cuentas vendedoras de la seed (contrasena como hash bcrypt)
 #   LEEME.txt                -> conteos y como restaurar
 #
@@ -44,6 +45,10 @@ echo "-> Productos y servicios de la seed (Mongo, con imagenes)..."
 docker compose exec -T mongo mongoexport --quiet --db catalogo --collection productos \
   --query "{\"vendedorId\":{\"\$in\":[$IDS]}$EXCLUIR}" | gzip > "$DESTINO/seed-productos.jsonl.gz"
 
+echo "-> Resenas de los productos de la seed (Mongo)..."
+IDS_PROD=$(gunzip -c "$DESTINO/seed-productos.jsonl.gz" | sed -n 's/^{"_id":{"\$oid":"\([0-9a-f]*\)".*/"\1"/p' | paste -sd, -)
+docker compose exec -T mongo mongoexport --quiet --db catalogo --collection resenas   --query "{\"productoId\":{\"\$in\":[$IDS_PROD]}}" | gzip > "$DESTINO/seed-resenas.jsonl.gz"
+
 echo "-> Cuentas vendedoras de la seed (Postgres)..."
 "${PSQL[@]}" -c "select format(
   'insert into usuarios (id, nombre, email, \"passwordHash\", rol, \"fotoUrl\", \"creadoEn\") values (%L, %L, %L, %L, %L, %L, %L) on conflict (id) do update set nombre = excluded.nombre, email = excluded.email, \"passwordHash\" = excluded.\"passwordHash\", rol = excluded.rol, \"fotoUrl\" = excluded.\"fotoUrl\";',
@@ -54,6 +59,7 @@ N_USR=$(wc -l < "$DESTINO/seed-usuarios.sql" | tr -d ' ')
 cat > "$DESTINO/LEEME.txt" <<EOF
 Respaldo de la seed - $(date '+%Y-%m-%d %H:%M')
 Productos/servicios: $N_PROD
+Resenas:             $(gunzip -c "$DESTINO/seed-resenas.jsonl.gz" | wc -l | tr -d ' ')
 Cuentas vendedoras:  $N_USR
 Restaurar (desde proyecto-marketplace/app):  bash scripts/restaurar-seed.sh $DESTINO
 EOF
