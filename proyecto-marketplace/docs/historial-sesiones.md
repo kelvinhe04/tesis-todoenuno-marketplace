@@ -10,7 +10,14 @@ Registro cronológico (lo más reciente arriba) de lo que se hizo con Claude Cod
 
 - **Destacados de la portada**: antes eran solo los 8 más recientes (sin criterio). Ahora son los 4 productos + 4 servicios mejor calificados, intercalados. Catalogo acepta `orden=mejor_calificados` (promedio, nº de reseñas, fecha); el gateway ya pasaba cualquier query string. Archivos: `productos.service.ts`, `filtros-catalogo.dto.ts`, `lib/api.ts`, `pages/Landing.tsx`.
 - **Catálogo, filtro de precio**: Mín./Máx. solo se aplicaban al salir del campo (`onBlur`); ahora se aplican solos 500 ms después de dejar de escribir (`pages/Catalogo.tsx`).
-- Probado en navegador; `qa_api.py` NO se corrió tras tocar catalogo. Nada vive solo en Mongo. Sin commit.
+- **Footer**: "Publicar servicio" ahora va a `/vendedor/publicaciones/nueva?tipo=servicio` y el formulario (`VendedorCrearProducto.tsx`) arranca en Servicio con su categoría.
+- **Header**: el logo sube al inicio (scroll suave) si ya estás en la portada.
+- **Carrito**: toda la tarjeta abre el producto (casilla, cantidad y basurero conservan su acción); se quitó el verde del nombre al pasar el mouse.
+- **Perfil**: tocar una notificación lleva a su destino (`nueva_orden_vendedor` -> `/vendedor/ordenes`, `resena_pendiente` -> producto, el resto -> `/ordenes`) y la marca leída. No hay enlace directo a la orden concreta.
+- **Órdenes recibidas (vendedor)**: muestra hasta 3 fotos de los ítems de cada orden.
+- **Sidebar del vendedor**: `position: sticky` + `100vh`, ya no se mueve con el scroll (solo escritorio).
+- **Decisiones**: "Marca" del formulario se queda opcional (se ofreció hacerla obligatoria solo en Electrónica; sin respuesta). Que a hoy no aparezca el horario de las 9:00 es correcto (hora ya pasada).
+- Probado en navegador (algunas con respuestas de API simuladas); `qa_api.py` NO se corrió tras tocar catalogo. Nada vive solo en Mongo. Subido en `4533269`.
 
 ## 2026-11-05 (tarde) — Textos de cita por modalidad, cupos simultáneos y traslado
 
