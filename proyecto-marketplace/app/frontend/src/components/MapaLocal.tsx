@@ -35,10 +35,24 @@ export function MapaLocal({ lat, lng, editable = false, onChange, altura = '14re
     if (!contenedorRef.current || mapaRef.current) return
     const centro: [number, number] = lat !== undefined && lng !== undefined ? [lat, lng] : PANAMA
     const mapa = L.map(contenedorRef.current, { scrollWheelZoom: false }).setView(centro, lat !== undefined ? 15 : 12)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    // Vista satelital por defecto (Esri World Imagery, gratis y sin clave) con nombres de calles y lugares encima;
+    // el selector de la esquina permite volver al mapa de calles de OpenStreetMap.
+    const calles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap',
       maxZoom: 19,
-    }).addTo(mapa)
+    })
+    const satelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Imágenes &copy; Esri, Maxar, Earthstar Geographics',
+      maxZoom: 19,
+    })
+    const etiquetas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19,
+    })
+    const transporte = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Transportation/MapServer/tile/{z}/{y}/{x}', {
+      maxZoom: 19,
+    })
+    const vistaSatelite = L.layerGroup([satelite, transporte, etiquetas]).addTo(mapa)
+    L.control.layers({ Satélite: vistaSatelite, Mapa: calles }, undefined, { position: 'topright' }).addTo(mapa)
 
     if (lat !== undefined && lng !== undefined) {
       marcadorRef.current = L.marker([lat, lng], { icon: ICONO, draggable: editable }).addTo(mapa)
