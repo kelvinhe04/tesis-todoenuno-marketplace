@@ -507,7 +507,7 @@ export default function VendedorCrearProducto() {
                 <SelectorFecha
                   value={hoy}
                   min={hoy}
-                  diasPermitidos={new Set([0, 1, 2, 3, 4, 5, 6])}
+                  diasPermitidos={diasSeleccionados}
                   marcados={diasNoDisponibles}
                   onChange={alternarDiaNoDisponible}
                 />
