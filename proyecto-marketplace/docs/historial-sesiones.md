@@ -17,7 +17,7 @@ Registro cronológico (lo más reciente arriba) de lo que se hizo con Claude Cod
 - **Órdenes recibidas (vendedor)**: muestra hasta 3 fotos de los ítems de cada orden.
 - **Sidebar del vendedor**: `position: sticky` + `100vh`, ya no se mueve con el scroll (solo escritorio).
 - **Decisiones**: "Marca" del formulario se queda opcional (se ofreció hacerla obligatoria solo en Electrónica; sin respuesta). Que a hoy no aparezca el horario de las 9:00 es correcto (hora ya pasada).
-- **Mapa** (`components/MapaLocal.tsx`): ahora arranca en vista satelital (Esri World Imagery + capas de calles y lugares, gratis y sin clave) con selector de capas para volver al mapa de calles de OpenStreetMap. Afecta al detalle del servicio y al formulario del vendedor. Esri exige citarse en el pie del mapa (ya sale); mencionarlo en el informe si se pone captura del mapa.
+- **Mapa** (`components/MapaLocal.tsx`): ahora arranca en vista satelital (Esri World Imagery + capas de calles y lugares, gratis y sin clave) con selector de capas para volver al mapa de calles de OpenStreetMap. Afecta al detalle del servicio y al formulario del vendedor. Esri exige citarse en el pie del mapa (ya sale); mencionarlo en el informe si se pone captura del mapa. Los botones de zoom y de capas se achicaron (24 px y 26 px) con reglas al final de `index.css`.
 - Probado en navegador (algunas con respuestas de API simuladas); `qa_api.py` NO se corrió tras tocar catalogo. Nada vive solo en Mongo. Subido en `4533269` (el commit del historial y el del mapa quedan por subir).
 
 ## 2026-11-05 (tarde) — Textos de cita por modalidad, cupos simultáneos y traslado
