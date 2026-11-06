@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Restaura un respaldo hecho con backup-seed.sh. Devuelve los productos/servicios de la seed
 # (y sus cuentas vendedoras) al estado del respaldo: si los editaste o borraste, vuelven como
-# estaban. Tambien restaura las resenas de ejemplo (si el respaldo las trae). NO toca nada mas.
+# estaban. Tambien restaura las resenas de ejemplo y las ordenes/pagos/reservas ficticias de las cuentas *-seed
+# (si el respaldo las trae). NO toca nada mas.
 # Los contenedores deben estar levantados.
 #
 # Uso:  bash scripts/restaurar-seed.sh ../backups/seed/2026-11-01_1200
@@ -34,6 +35,16 @@ gunzip -c "$ORIGEN/seed-productos.jsonl.gz" | docker compose exec -T mongo mongo
 if [ -f "$ORIGEN/seed-resenas.jsonl.gz" ]; then
   echo "-> Resenas de ejemplo (Mongo)..."
   gunzip -c "$ORIGEN/seed-resenas.jsonl.gz" | docker compose exec -T mongo mongoimport --quiet --db catalogo --collection resenas --mode upsert
+fi
+
+if [ -f "$ORIGEN/seed-ordenes.sql" ]; then
+  echo "-> Ordenes y pagos ficticios de la seed (Postgres)..."
+  docker compose exec -T postgres psql -q -U "$POSTGRES_USER" -d "$POSTGRES_DB" < "$ORIGEN/seed-ordenes.sql"
+fi
+
+if [ -f "$ORIGEN/seed-reservas.jsonl.gz" ]; then
+  echo "-> Reservas de las citas de la seed (Mongo)..."
+  gunzip -c "$ORIGEN/seed-reservas.jsonl.gz" | docker compose exec -T mongo mongoimport --quiet --db catalogo --collection reservas --mode upsert
 fi
 
 echo "Listo."
