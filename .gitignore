@@ -25,7 +25,7 @@ proyecto-marketplace/backups/*
 # seed-usuarios.sql queda fuera: lleva hashes de contrasena y el repo es publico.
 !proyecto-marketplace/backups/seed/
 proyecto-marketplace/backups/seed/*
-!proyecto-marketplace/backups/seed/2026-11-05_2048/
+!proyecto-marketplace/backups/seed/2026-11-05_2101/
 proyecto-marketplace/backups/seed/*/seed-usuarios.sql
 
 # Archivos temporales de bloqueo de Word/Office (aparecen mientras un .docx esta abierto)

@@ -1,5 +1,0 @@
-Respaldo de la seed - 2026-11-05 20:48
-Productos/servicios: 33
-Resenas:             26
-Cuentas vendedoras:  9
-Restaurar (desde proyecto-marketplace/app):  bash scripts/restaurar-seed.sh ../backups/seed/2026-11-05_2048
