@@ -142,3 +142,27 @@
     display: none;
   }
 }
+
+/* Filtros de órdenes recibidas: tipo (productos / servicios) y estado */
+.filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  margin-bottom: 1.25rem;
+}
+
+.filtroFila {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filtroTitulo {
+  width: 3.75rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+}

@@ -13,7 +13,17 @@ export function PantallaConfirmando({ pasarela }: { pasarela: string }) {
   )
 }
 
-export function PantallaResultado({ aprobado, motivo, onVerOrdenes }: { aprobado: boolean; motivo?: string; onVerOrdenes: () => void }) {
+export function PantallaResultado({
+  aprobado,
+  motivo,
+  enLugar = false,
+  onVerOrdenes,
+}: {
+  aprobado: boolean
+  motivo?: string
+  enLugar?: boolean // cita agendada con pago en el lugar (no hubo cobro en línea)
+  onVerOrdenes: () => void
+}) {
   return (
     <div className={styles.resultado}>
       <div
@@ -26,10 +36,12 @@ export function PantallaResultado({ aprobado, motivo, onVerOrdenes }: { aprobado
         {aprobado ? <IconCheck width={32} height={32} /> : <IconClose width={30} height={30} />}
       </div>
       <h1 className={styles.resultadoTitulo} style={{ fontSize: '1.375rem', marginBottom: '0.5rem' }}>
-        {aprobado ? 'Pago aprobado' : 'Pago rechazado'}
+        {enLugar ? 'Cita agendada' : aprobado ? 'Pago aprobado' : 'Pago rechazado'}
       </h1>
       <p className={`muted ${styles.resultadoTexto}`} style={{ marginBottom: '1.5rem' }}>
-        {aprobado
+        {enLugar
+          ? 'Tu cita quedó agendada. Pagarás en efectivo en el lugar. Puedes cancelarla desde Mis órdenes hasta 2 horas antes.'
+          : aprobado
           ? 'Tu orden fue creada y el pago quedó confirmado (entorno de prueba / sandbox).'
           : motivo || 'El pago no pudo procesarse. Puedes revisar el estado en Mis órdenes.'}
       </p>

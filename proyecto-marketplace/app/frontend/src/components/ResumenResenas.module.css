@@ -24,7 +24,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.25rem;
   margin: 0;
   padding: 0;
 }
@@ -35,6 +35,50 @@
   align-items: center;
   gap: 0.625rem;
   font-size: 0.8125rem;
+  width: 100%;
+  padding: 0.3rem 0.4rem;
+  border: none;
+  border-radius: var(--radius-sm, 6px);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.fila:hover:not(:disabled) {
+  background: var(--color-bg);
+}
+
+.fila:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.activa,
+.activa:hover:not(:disabled) {
+  background: var(--color-accent-soft);
+  box-shadow: inset 0 0 0 1.5px var(--color-accent);
+}
+
+.activa .estrella,
+.activa .cantidad {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.quitar {
+  margin-top: 0.75rem;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  cursor: pointer;
+}
+
+.quitar:hover {
+  color: var(--color-accent-hover);
 }
 
 .estrella {

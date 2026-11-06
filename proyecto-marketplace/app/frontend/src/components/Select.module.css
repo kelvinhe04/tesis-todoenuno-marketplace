@@ -101,3 +101,8 @@
     transform: translateY(0);
   }
 }
+
+.option.deshabilitada {
+  opacity: 0.45;
+  cursor: not-allowed;
+}

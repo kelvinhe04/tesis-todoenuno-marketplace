@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
+import { useAuth } from '../context/AuthContext'
 import { ApiError, carritoApi, type Carrito as CarritoType } from '../lib/api'
 import { IconImage, IconMinus, IconPlus, IconTrash } from '../components/icons'
 import { ConfirmModal } from '../components/ConfirmModal'
@@ -23,7 +24,7 @@ function HorarioVencido({ productoId }: { productoId: string }) {
   return (
     <span style={{ fontSize: '0.8125rem', color: 'var(--color-danger)' }}>
       Horario vencido ·{' '}
-      <Link to={`/productos/${productoId}`} style={{ textDecoration: 'underline' }}>
+      <Link to={`/productos/${productoId}`} style={{ fontWeight: 700, color: 'var(--color-accent)' }}>
         elegir otro
       </Link>
     </span>
@@ -58,8 +59,20 @@ export default function Carrito() {
   const [error, setError] = useState<string | null>(null)
   const [actualizando, setActualizando] = useState<string | null>(null)
   const [itemAEliminar, setItemAEliminar] = useState<{ productoId: string; nombre: string } | null>(null)
+  const { usuario } = useAuth()
   // Ítems que el comprador decidió NO pagar ahora (se quedan en el carrito). Por defecto se paga todo lo válido.
-  const [omitidos, setOmitidos] = useState<Set<string>>(new Set())
+  // Se recuerdan en el navegador (por usuario) para que no se vuelvan a marcar al salir y volver.
+  const claveOmitidos = `mp_carrito_omitidos_${usuario?.id ?? ''}`
+  const [omitidos, setOmitidos] = useState<Set<string>>(() => {
+    try {
+      return new Set<string>(JSON.parse(localStorage.getItem(claveOmitidos) ?? '[]'))
+    } catch {
+      return new Set<string>()
+    }
+  })
+  useEffect(() => {
+    localStorage.setItem(claveOmitidos, JSON.stringify([...omitidos]))
+  }, [omitidos, claveOmitidos])
 
   const conProblema = (it: CarritoType['items'][number]) => horarioVencido(it) || faltaStock(it)
   const seleccionado = (it: CarritoType['items'][number]) => !omitidos.has(it.productoId) && !conProblema(it)
@@ -75,7 +88,15 @@ export default function Carrito() {
     setCargando(true)
     carritoApi
       .obtener()
-      .then(setCarrito)
+      .then((c) => {
+        setCarrito(c)
+        // Olvidar los ítems omitidos que ya no están en el carrito (comprados o eliminados)
+        const ids = new Set(c.items.map((it) => it.productoId))
+        setOmitidos((prev) => {
+          const filtrado = new Set([...prev].filter((id) => ids.has(id)))
+          return filtrado.size === prev.size ? prev : filtrado
+        })
+      })
       .finally(() => setCargando(false))
   }
 
@@ -137,7 +158,15 @@ export default function Carrito() {
           <div className={styles.items}>
             {error && <p className="error-text">{error}</p>}
             {carrito.items.map((item) => (
-              <div key={item.productoId} className={`card ${styles.item}`}>
+              <div
+                key={item.productoId}
+                className={`card ${styles.item}`}
+                // Toda la tarjeta abre el producto; los controles (casilla, cantidad, borrar, enlaces) siguen con su acción
+                onClick={(e) => {
+                  if ((e.target as HTMLElement).closest('button, input, a, label')) return
+                  navigate(`/productos/${item.productoId}`)
+                }}
+              >
                 <input
                   type="checkbox"
                   className={styles.check}

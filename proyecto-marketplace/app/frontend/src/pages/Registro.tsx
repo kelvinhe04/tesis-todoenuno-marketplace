@@ -72,7 +72,7 @@ export default function Registro() {
         </div>
         <div className={styles.quote}>
           "Publiqué mi primer producto en cinco minutos y ya tenía mi primera orden esa semana."
-          <b>— Ana Ríos, Taller Barro Fino</b>
+          <b>Ana Ríos, Taller Barro Fino</b>
         </div>
       </div>
 

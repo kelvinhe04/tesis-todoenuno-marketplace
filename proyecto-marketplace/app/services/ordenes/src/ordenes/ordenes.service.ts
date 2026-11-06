@@ -10,6 +10,13 @@ const CARRITO_URL = process.env.CARRITO_URL || 'http://carrito:3000';
 const CATALOGO_URL = process.env.CATALOGO_URL || 'http://catalogo:3000';
 const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
 
+// Una cita se puede cancelar hasta estas horas antes de su inicio
+const HORAS_MIN_CANCELACION = 2;
+// Panamá no tiene horario de verano: UTC-5 fijo (las fechas/horas de las citas están en hora de Panamá)
+const OFFSET_PANAMA = '-05:00';
+// Estados de pago en los que el vendedor ya ve la orden (hay una venta o una cita agendada, incluso si luego se canceló)
+const ESTADOS_VISIBLES_VENDEDOR: EstadoPago[] = ['pagada', 'por_cobrar', 'reembolsada', 'cancelada'];
+
 interface ItemCarrito {
   productoId: string;
   tipo?: 'producto' | 'servicio';
@@ -19,7 +26,7 @@ interface ItemCarrito {
   cantidad: number;
   subtotal: number;
   vendedorId: string;
-  cita?: { reservaId: string; fecha: string; horaInicio: string; horaFin: string; estado: string };
+  cita?: { reservaId: string; fecha: string; horaInicio: string; horaFin: string; estado: string; expiraEn?: string };
 }
 
 interface CarritoRespuesta {
@@ -57,6 +64,16 @@ export class OrdenesService {
     const elegidos = parcial ? carrito.items.filter((it) => dto.productoIds!.includes(it.productoId)) : carrito.items;
     if (!elegidos.length) {
       throw new BadRequestException(parcial ? 'No hay productos seleccionados en el carrito' : 'El carrito está vacío');
+    }
+    // Un servicio solo se puede pagar mientras su horario siga retenido (o ya confirmado)
+    for (const it of elegidos) {
+      if (it.tipo !== 'servicio') continue;
+      const c = it.cita;
+      const vigente =
+        !!c && (c.estado === 'confirmada' || (c.estado === 'retenida' && (!c.expiraEn || new Date(c.expiraEn).getTime() > Date.now())));
+      if (!vigente) {
+        throw new BadRequestException(`El horario de "${it.nombre}" ya no está retenido. Vuelve al servicio y elige un horario de nuevo.`);
+      }
     }
     const subtotal = Number(elegidos.reduce((acc, it) => acc + it.subtotal, 0).toFixed(2));
     const total = Number((subtotal + carrito.envio).toFixed(2));
@@ -103,7 +120,15 @@ export class OrdenesService {
 
     // Confirmar las reservas de servicio ANTES de vaciar el carrito: vaciar cancela
     // holds "retenida" del comprador, y una reserva ya confirmada no se debe cancelar.
-    await this.confirmarReservas(items, orden.id, authorizationHeader);
+    try {
+      await this.confirmarReservas(items, orden.id, authorizationHeader);
+    } catch (err) {
+      // Si no se pudo confirmar algún horario no se deja la orden a medias
+      await this.liberarReservas(orden.id).catch(() => undefined);
+      await this.devolverStock(items).catch(() => undefined);
+      await this.ordenes.delete(orden.id).catch(() => undefined);
+      throw err;
+    }
     if (parcial) await this.quitarDelCarrito(items, authorizationHeader);
     else await this.vaciarCarrito(authorizationHeader);
     await this.rabbitmq.publish('orden.creada', {
@@ -147,11 +172,15 @@ export class OrdenesService {
   private async confirmarReservas(items: ItemOrden[], ordenId: string, authorizationHeader: string) {
     for (const item of items) {
       if (!item.cita) continue;
-      await fetch(`${CATALOGO_URL}/catalogo/${item.productoId}/reservas/${item.cita.reservaId}/confirmar`, {
+      const resp = await fetch(`${CATALOGO_URL}/catalogo/${item.productoId}/reservas/${item.cita.reservaId}/confirmar`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json', Authorization: authorizationHeader },
         body: JSON.stringify({ ordenId }),
       });
+      if (!resp.ok) {
+        const cuerpo = await resp.json().catch(() => ({}));
+        throw new BadRequestException(cuerpo.message || `El horario de "${item.nombre}" ya no está disponible. Elige otro.`);
+      }
     }
   }
 
@@ -169,7 +198,9 @@ export class OrdenesService {
   // punto intermedio. Una mezcla de entregadas y no asistidas ya no tiene nada pendiente: cuenta como entregada.
   private agregarEntrega(items: ItemOrden[], respaldo: EstadoEntrega): EstadoEntrega {
     if (!items.length) return respaldo;
-    const estados = items.map((it) => it.estadoEntrega ?? respaldo);
+    const activos = items.filter((it) => (it.estadoEntrega ?? respaldo) !== 'cancelada');
+    if (!activos.length) return 'cancelada';
+    const estados = activos.map((it) => it.estadoEntrega ?? respaldo);
     if (estados.every((e) => e === 'entregada')) return 'entregada';
     if (estados.every((e) => e === 'pendiente')) return 'pendiente';
     if (estados.every((e) => e === 'no_asistio')) return 'no_asistio';
@@ -192,15 +223,15 @@ export class OrdenesService {
     };
   }
 
-  // Solo órdenes PAGADAS: una orden pendiente o rechazada todavía no es una venta y el vendedor no debe
-  // recibir la dirección y el teléfono de alguien que no ha pagado.
+  // Solo órdenes PAGADAS (o con pago en el lugar): una orden pendiente o rechazada todavía no es una venta y el
+  // vendedor no debe recibir la dirección y el teléfono de alguien que no ha pagado ni agendado.
   async listarVendedor(vendedorId: string) {
     const ordenes = await this.ordenes
       .createQueryBuilder('orden')
       .where("EXISTS (SELECT 1 FROM jsonb_array_elements(orden.items) elem WHERE elem->>'vendedorId' = :vendedorId)", {
         vendedorId,
       })
-      .andWhere("orden.estadoPago = 'pagada'")
+      .andWhere("orden.estadoPago IN ('pagada', 'por_cobrar', 'reembolsada', 'cancelada')")
       .orderBy('orden.creadoEn', 'DESC')
       .getMany();
     return ordenes.map((o) => this.vistaVendedor(o, vendedorId));
@@ -219,7 +250,7 @@ export class OrdenesService {
     if (esComprador) {
       return { ...orden, items: orden.items.map((it) => ({ ...it, estadoEntrega: it.estadoEntrega ?? orden.estadoEntrega })) };
     }
-    if (orden.estadoPago !== 'pagada') {
+    if (!ESTADOS_VISIBLES_VENDEDOR.includes(orden.estadoPago)) {
       throw new ForbiddenException('No tienes acceso a esta orden');
     }
     return this.vistaVendedor(orden, usuarioId);
@@ -233,24 +264,42 @@ export class OrdenesService {
     if (!orden.items.some((it) => it.vendedorId === vendedorId)) {
       throw new ForbiddenException('Esta orden no tiene publicaciones tuyas');
     }
-    if (orden.estadoPago !== 'pagada') {
-      throw new BadRequestException('Solo se puede actualizar la entrega de una orden pagada');
+    if (orden.estadoPago !== 'pagada' && orden.estadoPago !== 'por_cobrar') {
+      throw new BadRequestException('Solo se puede actualizar la entrega de una orden pagada o con pago en el lugar');
+    }
+    const propiosActivos = orden.items.filter((it) => it.vendedorId === vendedorId && (it.estadoEntrega ?? orden.estadoEntrega) !== 'cancelada');
+    if (!propiosActivos.length) {
+      throw new BadRequestException('El cliente canceló todas tus citas de esta orden');
     }
     // "No asistió" solo tiene sentido para citas de servicio, no para productos.
     if (dto.estadoEntrega === 'no_asistio' && !orden.items.filter((it) => it.vendedorId === vendedorId).every((it) => this.esCita(it))) {
       throw new BadRequestException('"No asistió" solo se puede usar en citas de servicios');
     }
+    // Una cita no se puede dar por completada ni por "no asistió" antes de que llegue su día y hora
+    if (dto.estadoEntrega === 'entregada' || dto.estadoEntrega === 'no_asistio') {
+      const futura = propiosActivos.find((it) => it.cita && Date.parse(`${it.cita.fecha}T${it.cita.horaInicio}:00${OFFSET_PANAMA}`) > Date.now());
+      if (futura?.cita) {
+        const [a, m, d] = futura.cita.fecha.split('-');
+        throw new BadRequestException(
+          `La cita de "${futura.nombre}" es el ${d}/${m}/${a} a las ${futura.cita.horaInicio}. Podrás marcarla como completada o no asistió cuando llegue esa hora.`,
+        );
+      }
+    }
     // Cada vendedor cambia solo la entrega de SUS ítems; la de la orden se recalcula con todos.
     const itemsActualizados = orden.items.map((it) =>
-      it.vendedorId === vendedorId ? { ...it, estadoEntrega: dto.estadoEntrega } : { ...it, estadoEntrega: it.estadoEntrega ?? orden.estadoEntrega },
+      it.vendedorId === vendedorId && (it.estadoEntrega ?? orden.estadoEntrega) !== 'cancelada'
+        ? { ...it, estadoEntrega: dto.estadoEntrega }
+        : { ...it, estadoEntrega: it.estadoEntrega ?? orden.estadoEntrega },
     );
     // Ítems de este vendedor que pasan a "entregada" ahora (no los que ya lo estaban)
     const recienEntregados =
       dto.estadoEntrega === 'entregada'
-        ? orden.items.filter((it) => it.vendedorId === vendedorId && (it.estadoEntrega ?? orden.estadoEntrega) !== 'entregada')
+        ? orden.items.filter((it) => it.vendedorId === vendedorId && !['entregada', 'cancelada'].includes(it.estadoEntrega ?? orden.estadoEntrega))
         : [];
     orden.items = itemsActualizados;
     orden.estadoEntrega = this.agregarEntrega(itemsActualizados, orden.estadoEntrega);
+    // Pago en el lugar: al completarse todas las citas se da por cobrado
+    if (orden.estadoPago === 'por_cobrar' && orden.estadoEntrega === 'entregada') orden.estadoPago = 'pagada';
     const guardada = await this.ordenes.save(orden);
     if (recienEntregados.length) {
       // Notificaciones avisa al comprador que ya puede dejar su reseña
@@ -281,7 +330,9 @@ export class OrdenesService {
     const orden = await this.ordenes.findOne({ where: { id } });
     if (!orden) throw new NotFoundException('Orden no encontrada');
     if (orden.compradorId !== usuarioId) throw new ForbiddenException('Esta orden no te pertenece');
-    if (orden.estadoPago === 'pagada') throw new BadRequestException('Esta orden ya está pagada');
+    if (orden.estadoPago !== 'pendiente' && orden.estadoPago !== 'rechazada') {
+      throw new BadRequestException('Esta orden ya no admite reintentar el pago');
+    }
 
     // Al rechazarse el pago el stock se devolvió: hay que volver a descontarlo (400 si ya no alcanza)
     const reponerStock = orden.estadoPago === 'rechazada';
@@ -320,6 +371,75 @@ export class OrdenesService {
     }
     orden.estadoPago = 'pendiente';
     return this.ordenes.save(orden);
+  }
+
+  // Pago en el lugar (efectivo en el local o al llegar a domicilio): solo para órdenes de servicios. Los horarios ya
+  // quedaron confirmados al crear la orden; queda "por cobrar" hasta que el vendedor complete la cita.
+  async pagarEnElLugar(id: string, usuarioId: string) {
+    const orden = await this.ordenes.findOne({ where: { id } });
+    if (!orden) throw new NotFoundException('Orden no encontrada');
+    if (orden.compradorId !== usuarioId) throw new ForbiddenException('Esta orden no te pertenece');
+    if (orden.estadoPago !== 'pendiente') throw new BadRequestException('Esta orden ya no está pendiente de pago');
+    if (!orden.items.every((it) => this.esCita(it))) {
+      throw new BadRequestException('El pago en el lugar solo está disponible para órdenes de servicios');
+    }
+    orden.estadoPago = 'por_cobrar';
+    const guardada = await this.ordenes.save(orden);
+    await this.rabbitmq
+      .publish('orden.por_cobrar', { ordenId: orden.id, compradorId: orden.compradorId, total: orden.total })
+      .catch(() => undefined);
+    return guardada;
+  }
+
+  // El comprador cancela una de sus citas (hasta HORAS_MIN_CANCELACION antes): el horario vuelve a quedar libre
+  // (el cupo se recupera) y, si ya había pagado, se registra un reembolso SIMULADO.
+  async cancelarCita(id: string, productoId: string, usuarioId: string) {
+    const orden = await this.ordenes.findOne({ where: { id } });
+    if (!orden) throw new NotFoundException('Orden no encontrada');
+    if (orden.compradorId !== usuarioId) throw new ForbiddenException('Esta orden no te pertenece');
+    if (orden.estadoPago !== 'pagada' && orden.estadoPago !== 'por_cobrar') {
+      throw new BadRequestException('Solo se pueden cancelar citas de órdenes pagadas o con pago en el lugar');
+    }
+    const item = orden.items.find((it) => it.productoId === productoId && this.esCita(it) && it.cita);
+    if (!item || !item.cita) throw new NotFoundException('No se encontró esa cita en la orden');
+    if ((item.estadoEntrega ?? orden.estadoEntrega) !== 'pendiente') {
+      throw new BadRequestException('Solo se puede cancelar una cita que sigue agendada');
+    }
+    const inicio = Date.parse(`${item.cita.fecha}T${item.cita.horaInicio}:00${OFFSET_PANAMA}`);
+    if (Number.isNaN(inicio) || inicio - Date.now() < HORAS_MIN_CANCELACION * 3_600_000) {
+      throw new BadRequestException(`Solo puedes cancelar una cita hasta ${HORAS_MIN_CANCELACION} horas antes de que empiece`);
+    }
+
+    // Primero se libera el horario en catálogo: si falla, la orden queda intacta
+    const resp = await fetch(`${CATALOGO_URL}/catalogo/internal/liberar-reserva/${item.cita.reservaId}`, { method: 'PATCH' });
+    if (!resp.ok) throw new BadRequestException('No se pudo liberar el horario. Inténtalo de nuevo en un momento.');
+
+    const habiaPagado = orden.estadoPago === 'pagada';
+    const reembolso = habiaPagado ? item.subtotal : undefined;
+    const items = orden.items.map((it) =>
+      it === item
+        ? { ...it, estadoEntrega: 'cancelada' as const, canceladaEn: new Date().toISOString(), reembolso }
+        : { ...it, estadoEntrega: it.estadoEntrega ?? orden.estadoEntrega },
+    );
+    orden.items = items;
+    orden.estadoEntrega = this.agregarEntrega(items, orden.estadoEntrega);
+    if (orden.estadoEntrega === 'cancelada') orden.estadoPago = habiaPagado ? 'reembolsada' : 'cancelada';
+    else if (orden.estadoPago === 'por_cobrar' && orden.estadoEntrega === 'entregada') orden.estadoPago = 'pagada';
+    const guardada = await this.ordenes.save(orden);
+
+    await this.rabbitmq
+      .publish('orden.cita_cancelada', {
+        ordenId: orden.id,
+        compradorId: orden.compradorId,
+        productoId: item.productoId,
+        nombre: item.nombre,
+        vendedorId: item.vendedorId,
+        fecha: item.cita.fecha,
+        horaInicio: item.cita.horaInicio,
+        reembolso: reembolso ?? 0,
+      })
+      .catch(() => undefined);
+    return guardada;
   }
 
   // Pago rechazado: devuelve al catálogo los horarios de las citas de esa orden

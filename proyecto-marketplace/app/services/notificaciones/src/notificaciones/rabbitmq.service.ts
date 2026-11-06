@@ -7,7 +7,7 @@ import { TipoNotificacion } from './notificacion.entity';
 
 const EXCHANGE = 'eventos';
 const QUEUE = 'notificaciones.eventos';
-const ROUTING_KEYS = ['orden.creada', 'pago.confirmado', 'pago.rechazado', 'orden.entregada'];
+const ROUTING_KEYS = ['orden.creada', 'pago.confirmado', 'pago.rechazado', 'orden.entregada', 'orden.por_cobrar', 'orden.cita_cancelada'];
 const MAX_LOG = 20;
 const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
 const ORDENES_URL = process.env.ORDENES_URL || 'http://ordenes:3000';
@@ -47,6 +47,27 @@ interface EventoEntrega {
   ordenId: string;
   compradorId: string;
   items?: Array<{ productoId: string; nombre: string; esCita?: boolean }>;
+}
+
+interface EventoCancelacion {
+  ordenId: string;
+  compradorId: string;
+  productoId: string;
+  nombre: string;
+  vendedorId: string;
+  fecha: string;
+  horaInicio: string;
+  reembolso?: number;
+}
+
+// 'AAAA-MM-DD' -> 'dd/mm/aaaa'; 'HH:mm' -> 'h:mm a. m./p. m.'
+function fechaLegible(fecha: string): string {
+  const [a, m, d] = fecha.split('-');
+  return `${d}/${m}/${a}`;
+}
+function horaLegible(hora: string): string {
+  const [h, m] = hora.split(':').map(Number);
+  return `${h % 12 === 0 ? 12 : h % 12}:${String(m).padStart(2, '0')} ${h < 12 ? 'a. m.' : 'p. m.'}`;
 }
 
 @Injectable()
@@ -118,6 +139,14 @@ export class RabbitmqService implements OnModuleInit {
       await this.avisarResena(payload as unknown as EventoEntrega);
       return;
     }
+    if (routingKey === 'orden.por_cobrar') {
+      await this.avisarPorCobrar(payload as unknown as EventoOrdenCreada & { ordenId: string; compradorId: string });
+      return;
+    }
+    if (routingKey === 'orden.cita_cancelada') {
+      await this.avisarCancelacion(payload as unknown as EventoCancelacion);
+      return;
+    }
 
     let tipo: TipoNotificacion;
     let mensaje: string;
@@ -139,11 +168,11 @@ export class RabbitmqService implements OnModuleInit {
       // orden_creada NO manda correo: el checkout cobra al instante y el de "pago aprobado/rechazado" llega
       // en el mismo segundo (dos correos casi iguales, y a veces en orden invertido). Queda solo la notificación in-app.
       pago_confirmado: {
-        asunto: 'TodoEnUno — pago aprobado',
+        asunto: 'TodoEnUno: pago aprobado',
         datos: { etiqueta: 'Pago aprobado', tono: 'ok', titulo: '¡Tu pago fue aprobado!', mensaje: `Recibimos tu pago de $${payload.monto ?? '--'}. Los vendedores ya fueron avisados y se pondrán en marcha.`, boton: { texto: 'Ver mi orden', url } },
       },
       pago_rechazado: {
-        asunto: 'TodoEnUno — pago rechazado',
+        asunto: 'TodoEnUno: pago rechazado',
         datos: { etiqueta: 'Pago rechazado', tono: 'error', titulo: 'No pudimos procesar tu pago', mensaje: `Tu pago fue rechazado${payload.motivo ? `: ${payload.motivo}` : '.'} Puedes reintentarlo desde tus órdenes.`, boton: { texto: 'Reintentar pago', url: `${FRONTEND_URL}/checkout?orden=${payload.ordenId}` } },
       },
     };
@@ -153,6 +182,53 @@ export class RabbitmqService implements OnModuleInit {
     if (routingKey === 'pago.confirmado') {
       await this.notificarVendedores(payload.ordenId);
     }
+  }
+
+  // Citas con pago en el lugar: el comprador recibe la confirmación y cada vendedor, su aviso de cita nueva
+  private async avisarPorCobrar(evento: EventoOrdenCreada & { ordenId: string; compradorId: string }) {
+    const mensaje = `Tu cita quedó agendada (orden #${evento.ordenId.slice(0, 8)}). Pagarás $${evento.total ?? '--'} en el lugar.`;
+    await this.notificacionesService.crear(evento.compradorId, 'cita_agendada', mensaje, evento.ordenId);
+    await this.correoDeOrden(
+      evento.compradorId,
+      'TodoEnUno: cita agendada',
+      {
+        etiqueta: 'Cita agendada',
+        tono: 'ok',
+        titulo: '¡Tu cita quedó agendada!',
+        mensaje: `Pagarás $${evento.total ?? '--'} en efectivo en el lugar. Puedes cancelarla desde Mis órdenes hasta 2 horas antes.`,
+        boton: { texto: 'Ver mi orden', url: `${FRONTEND_URL}/ordenes` },
+      },
+      evento.ordenId,
+      mensaje,
+    );
+    await this.notificarVendedores(evento.ordenId, true);
+  }
+
+  // El comprador canceló una cita: aviso al comprador (con el reembolso simulado, si había pagado) y al vendedor
+  private async avisarCancelacion(e: EventoCancelacion) {
+    const cuando = `${fechaLegible(e.fecha)} a las ${horaLegible(e.horaInicio)}`;
+    const reembolso = e.reembolso && e.reembolso > 0 ? ` Se registró un reembolso de $${e.reembolso.toFixed(2)} (simulado en este entorno de pruebas).` : '';
+    const msgComprador = `Cancelaste tu cita «${e.nombre}» del ${cuando}.${reembolso}`;
+    const msgVendedor = `El cliente canceló la cita «${e.nombre}» del ${cuando}. El horario volvió a quedar libre.`;
+    // Primero los dos avisos dentro de la app (rápidos); luego los correos, que pueden tardar
+    await this.notificacionesService.crear(e.compradorId, 'cita_cancelada', msgComprador, e.ordenId);
+    await this.notificacionesService.crear(e.vendedorId, 'cita_cancelada', msgVendedor, e.ordenId);
+    await this.correoDeOrden(
+      e.compradorId,
+      'TodoEnUno: cita cancelada',
+      { etiqueta: 'Cita cancelada', tono: 'info', titulo: 'Cancelaste tu cita', mensaje: msgComprador, boton: { texto: 'Ver mis órdenes', url: `${FRONTEND_URL}/ordenes` } },
+      e.ordenId,
+      msgComprador,
+      (it) => it.productoId === e.productoId,
+    );
+    await this.correoDeOrden(
+      e.vendedorId,
+      'TodoEnUno: cita cancelada por el cliente',
+      { etiqueta: 'Cita cancelada', tono: 'info', titulo: 'Un cliente canceló su cita', mensaje: msgVendedor, boton: { texto: 'Ir a mis órdenes de venta', url: `${FRONTEND_URL}/vendedor/ordenes` } },
+      e.ordenId,
+      msgVendedor,
+      (it) => it.productoId === e.productoId,
+    );
   }
 
   // Cuando el vendedor marca un ítem como entregado, el comprador recibe un aviso para reseñarlo
@@ -165,7 +241,7 @@ export class RabbitmqService implements OnModuleInit {
       await this.notificacionesService.crear(evento.compradorId, 'resena_pendiente', mensaje, evento.ordenId, item.productoId);
       await this.correoDeOrden(
         evento.compradorId,
-        'TodoEnUno — cuéntanos qué te pareció',
+        'TodoEnUno: cuéntanos qué te pareció',
         {
           etiqueta: item.esCita ? 'Completada' : 'Entregado',
           tono: 'ok',
@@ -182,21 +258,25 @@ export class RabbitmqService implements OnModuleInit {
 
   // RF-21: al confirmarse el pago, cada vendedor con al menos un item en la
   // orden recibe su propia notificacion (in-app y por correo).
-  private async notificarVendedores(ordenId: string) {
+  private async notificarVendedores(ordenId: string, enLugar = false) {
     try {
       const orden = await this.obtenerOrdenInterna(ordenId);
       const vendedores = [...new Set(orden.items.map((it) => it.vendedorId))];
       for (const vendedorId of vendedores) {
-        const mensaje = `Recibiste una nueva orden pagada (#${ordenId.slice(0, 8)}).`;
+        const mensaje = enLugar
+          ? `Recibiste una nueva cita (#${ordenId.slice(0, 8)}). El cliente pagará en el lugar.`
+          : `Recibiste una nueva orden pagada (#${ordenId.slice(0, 8)}).`;
         await this.notificacionesService.crear(vendedorId, 'nueva_orden_vendedor', mensaje, ordenId);
         await this.correoDeOrden(
           vendedorId,
-          'TodoEnUno — nueva orden pagada',
+          enLugar ? 'TodoEnUno: nueva cita agendada' : 'TodoEnUno: nueva orden pagada',
           {
-            etiqueta: 'Nueva orden',
+            etiqueta: enLugar ? 'Nueva cita' : 'Nueva orden',
             tono: 'ok',
-            titulo: '¡Tienes una nueva venta!',
-            mensaje: 'Un comprador pagó por tus publicaciones. Prepara la entrega o atiende la cita y marca el estado en tu panel.',
+            titulo: enLugar ? '¡Tienes una nueva cita!' : '¡Tienes una nueva venta!',
+            mensaje: enLugar
+              ? 'Un cliente agendó una cita contigo y pagará en efectivo en el lugar. Al completarla, márcala en tu panel para dar el cobro por recibido.'
+              : 'Un comprador pagó por tus publicaciones. Prepara la entrega o atiende la cita y marca el estado en tu panel.',
             boton: { texto: 'Ir a mis órdenes de venta', url: `${FRONTEND_URL}/vendedor/ordenes` },
           },
           ordenId,

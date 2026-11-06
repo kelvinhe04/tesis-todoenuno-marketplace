@@ -190,6 +190,13 @@ export class ReservasService {
     if (reserva.estado !== 'retenida') {
       throw new BadRequestException('Esa reserva ya no está vigente. Elige otro horario.');
     }
+    // Los holds vencidos se borran "perezosamente" (al consultar la disponibilidad); si este aún no se
+    // limpió, igual hay que rechazarlo: el tiempo de retención terminó.
+    if (reserva.expiraEn && reserva.expiraEn.getTime() <= Date.now()) {
+      reserva.estado = 'cancelada';
+      await reserva.save();
+      throw new BadRequestException('El tiempo de retención de tu horario terminó. Elige un horario de nuevo.');
+    }
     reserva.estado = 'confirmada';
     reserva.ordenId = dto.ordenId;
     reserva.expiraEn = undefined;
@@ -214,6 +221,17 @@ export class ReservasService {
   async liberarPorOrden(ordenId: string) {
     const r = await this.reservas.updateMany({ ordenId, estado: 'confirmada' }, { $set: { estado: 'cancelada' } });
     return { liberadas: r.modifiedCount };
+  }
+
+  // Cita cancelada por el comprador: la reserva deja de contar y el cupo queda disponible otra vez
+  async liberarReserva(reservaId: string) {
+    const reserva = await this.reservas.findById(reservaId);
+    if (!reserva) throw new NotFoundException('Reserva no encontrada');
+    if (reserva.estado === 'confirmada' || reserva.estado === 'retenida') {
+      reserva.estado = 'cancelada';
+      await reserva.save();
+    }
+    return { liberada: true };
   }
 
   private async buscar(productoId: string, reservaId: string) {

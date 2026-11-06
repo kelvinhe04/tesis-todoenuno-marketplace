@@ -225,6 +225,7 @@ export interface FiltrosCatalogo {
   vendedorId?: string
   buscar?: string
   incluirPausadas?: boolean
+  orden?: 'recientes' | 'mejor_calificados'
   pagina?: number
   limite?: number
 }
@@ -357,6 +358,8 @@ export interface ItemCarrito {
   imagenUrl?: string
   stock?: number
   vendedorId: string
+  modalidadEntrega?: ModalidadEntrega
+  direccionLocal?: string
   cita?: CitaCarrito
 }
 
@@ -379,8 +382,9 @@ export const carritoApi = {
 
 // ---------------- ordenes ----------------
 
-export type EstadoPago = 'pendiente' | 'pagada' | 'rechazada'
-export type EstadoEntrega = 'pendiente' | 'en_camino' | 'entregada' | 'no_asistio'
+// 'por_cobrar': servicio que se paga en efectivo en el lugar. 'reembolsada' / 'cancelada': se cancelaron todas las citas.
+export type EstadoPago = 'pendiente' | 'pagada' | 'rechazada' | 'por_cobrar' | 'reembolsada' | 'cancelada'
+export type EstadoEntrega = 'pendiente' | 'en_camino' | 'entregada' | 'no_asistio' | 'cancelada'
 
 export interface ItemOrden {
   productoId: string
@@ -393,6 +397,9 @@ export interface ItemOrden {
   modalidadEntrega?: ModalidadEntrega
   cita?: { reservaId: string; fecha: string; horaInicio: string; horaFin: string }
   estadoEntrega?: EstadoEntrega
+  // Solo citas canceladas: el reembolso es simulado (entorno de pruebas)
+  canceladaEn?: string
+  reembolso?: number
 }
 
 export interface Direccion {
@@ -422,6 +429,10 @@ export const ordenesApi = {
   obtener: (id: string) => request<Orden>(`/ordenes/${id}`),
   // Reintentar el pago de una orden pendiente o rechazada (vuelve a retener los horarios de sus citas)
   reabrir: (id: string) => request<Orden>(`/ordenes/${id}/reabrir`, { method: 'POST' }),
+  // Servicios: se paga en efectivo en el lugar (queda 'por_cobrar')
+  pagarEnLugar: (id: string) => request<Orden>(`/ordenes/${id}/pagar-en-lugar`, { method: 'POST' }),
+  // Cancelar una cita (hasta 2 h antes): el horario queda libre; si ya se pagó, reembolso simulado
+  cancelarCita: (id: string, productoId: string) => request<Orden>(`/ordenes/${id}/items/${productoId}/cancelar`, { method: 'PATCH' }),
   actualizarEstadoEntrega: (id: string, estadoEntrega: EstadoEntrega) =>
     request<Orden>(`/ordenes/${id}/estado-entrega`, { method: 'PATCH', body: JSON.stringify({ estadoEntrega }) }),
 }

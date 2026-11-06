@@ -77,7 +77,7 @@ export class EmailService implements OnModuleInit {
     this.logger.log(
       this.real
         ? `Correo enviado a ${destinatario} (SMTP real)`
-        : `Correo enviado a ${destinatario} — vista previa: ${nodemailer.getTestMessageUrl(info)}`,
+        : `Correo enviado a ${destinatario}. Vista previa: ${nodemailer.getTestMessageUrl(info)}`,
     );
   }
 }

@@ -286,3 +286,19 @@
     animation-duration: 2s;
   }
 }
+
+.localLista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.localItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  background: var(--color-accent-soft);
+  font-size: 0.875rem;
+}

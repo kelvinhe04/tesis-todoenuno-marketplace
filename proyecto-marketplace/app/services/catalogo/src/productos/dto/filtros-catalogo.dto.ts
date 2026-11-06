@@ -42,6 +42,11 @@ export class FiltrosCatalogoDto {
   @IsString()
   buscar?: string;
 
+  // 'recientes' (por defecto) o 'mejor_calificados' (promedio, luego nº de reseñas)
+  @IsOptional()
+  @IsIn(['recientes', 'mejor_calificados'])
+  orden?: 'recientes' | 'mejor_calificados';
+
   @IsOptional()
   @Type(() => Number)
   @IsInt()

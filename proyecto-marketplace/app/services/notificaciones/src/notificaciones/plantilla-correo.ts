@@ -119,7 +119,7 @@ export function htmlCorreo(d: DatosCorreo): string {
         ${items}
         ${boton}
       </td></tr>
-      <tr><td align="center" style="padding:18px 8px;font-size:12px;line-height:1.5;color:${COLORES.suave};">Prototipo académico de TodoEnUno — trabajo de graduación, UTP.<br>Recibes este correo por una acción en tu cuenta.</td></tr>
+      <tr><td align="center" style="padding:18px 8px;font-size:12px;line-height:1.5;color:${COLORES.suave};">Prototipo académico de TodoEnUno, trabajo de graduación, UTP.<br>Recibes este correo por una acción en tu cuenta.</td></tr>
     </table>
   </td></tr></table>
 </body></html>`;
@@ -145,7 +145,7 @@ export function datosDeTextoLibre(asunto: string, texto: string): DatosCorreo {
   return {
     etiqueta: 'Tu cuenta',
     tono: 'info',
-    titulo: asunto.replace(/^TodoEnUno\s*[—-]\s*/i, ''),
+    titulo: asunto.replace(/^TodoEnUno\s*[—:-]\s*/i, ''),
     mensaje,
     boton: enlace ? { texto: 'Abrir enlace', url: enlace } : undefined,
   };

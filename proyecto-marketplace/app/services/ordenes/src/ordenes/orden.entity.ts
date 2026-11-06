@@ -1,9 +1,12 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-export type EstadoPago = 'pendiente' | 'pagada' | 'rechazada';
+// 'por_cobrar': servicio que se paga en efectivo en el lugar (local o domicilio); pasa a 'pagada' cuando el
+// vendedor completa la cita. 'reembolsada' / 'cancelada': todas las citas de la orden se cancelaron (con o sin
+// pago previo). El reembolso es SIMULADO (entorno de pruebas): no se devuelve dinero por la pasarela.
+export type EstadoPago = 'pendiente' | 'pagada' | 'rechazada' | 'por_cobrar' | 'reembolsada' | 'cancelada';
 // Para productos: pendiente -> en_camino -> entregada. Para citas de servicio la pantalla los muestra
 // como Agendada -> Completada, y "no_asistio" (solo citas) cuando el cliente no se presentó.
-export type EstadoEntrega = 'pendiente' | 'en_camino' | 'entregada' | 'no_asistio';
+export type EstadoEntrega = 'pendiente' | 'en_camino' | 'entregada' | 'no_asistio' | 'cancelada';
 
 export interface CitaOrden {
   reservaId: string;
@@ -26,6 +29,9 @@ export interface ItemOrden {
   // Entrega por ítem: cada vendedor gestiona solo la de sus ítems. Las órdenes antiguas no lo traen
   // (se usa el estado de la orden).
   estadoEntrega?: EstadoEntrega;
+  // Solo citas canceladas por el comprador
+  canceladaEn?: string;
+  reembolso?: number;
 }
 
 export interface DireccionOrden {

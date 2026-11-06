@@ -25,6 +25,12 @@
   gap: 1rem;
   padding: 1rem;
   flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.item:hover {
+  box-shadow: var(--shadow-md, 0 6px 18px rgba(0, 0, 0, 0.08));
+  border-color: var(--color-accent);
 }
 
 .thumb {
@@ -106,8 +112,8 @@
   }
 }
 
-.itemInfo p:first-child:hover {
-  text-decoration: underline;
+.itemInfo p:first-child {
+  transition: color 0.2s var(--ease);
 }
 
 .qtyStepper {

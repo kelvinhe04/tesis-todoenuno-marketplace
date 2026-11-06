@@ -4,12 +4,18 @@ export const ESTADO_PAGO_LABEL: Record<EstadoPago, string> = {
   pendiente: 'Pago pendiente',
   pagada: 'Pagada',
   rechazada: 'Pago rechazado',
+  por_cobrar: 'Pago en el lugar',
+  reembolsada: 'Reembolsada',
+  cancelada: 'Cancelada',
 }
 
 export const ESTADO_PAGO_BADGE: Record<EstadoPago, string> = {
   pendiente: 'badge-warning',
   pagada: 'badge-success',
   rechazada: 'badge-danger',
+  por_cobrar: 'badge-muted',
+  reembolsada: 'badge-muted',
+  cancelada: 'badge-muted',
 }
 
 export const ESTADO_ENTREGA_LABEL: Record<EstadoEntrega, string> = {
@@ -17,6 +23,7 @@ export const ESTADO_ENTREGA_LABEL: Record<EstadoEntrega, string> = {
   en_camino: 'En camino',
   entregada: 'Entregada',
   no_asistio: 'No asistió',
+  cancelada: 'Cancelada',
 }
 
 // Una cita no se "entrega" ni va "en camino": se agenda, se completa o el cliente no se presenta.
@@ -25,6 +32,7 @@ export const ESTADO_CITA_LABEL: Record<EstadoEntrega, string> = {
   en_camino: 'En curso',
   entregada: 'Completada',
   no_asistio: 'No asistió',
+  cancelada: 'Cancelada',
 }
 
 // Servicio a domicilio: el profesional viaja a casa del cliente
@@ -33,6 +41,7 @@ export const ESTADO_CITA_DOMICILIO_LABEL: Record<EstadoEntrega, string> = {
   en_camino: 'En camino',
   entregada: 'Completada',
   no_asistio: 'Cliente ausente',
+  cancelada: 'Cancelada',
 }
 
 // Servicio en el local del vendedor: el cliente es quien va
@@ -41,6 +50,7 @@ export const ESTADO_CITA_LOCAL_LABEL: Record<EstadoEntrega, string> = {
   en_camino: 'En curso',
   entregada: 'Completada',
   no_asistio: 'No asistió',
+  cancelada: 'Cancelada',
 }
 
 export const ESTADO_ENTREGA_BADGE: Record<EstadoEntrega, string> = {
@@ -48,6 +58,7 @@ export const ESTADO_ENTREGA_BADGE: Record<EstadoEntrega, string> = {
   en_camino: 'badge-neutral',
   entregada: 'badge-success',
   no_asistio: 'badge-danger',
+  cancelada: 'badge-muted',
 }
 
 // ¿El ítem es una cita de servicio? (las órdenes antiguas pueden no traer `tipo`, pero sí la cita)
@@ -191,4 +202,25 @@ export function haceCuanto(iso: string, ahora: Date = new Date()): string {
   if (dias < 30) return plural(Math.floor(dias / 7), 'semana', 'semanas')
   if (dias < 365) return plural(Math.floor(dias / 30), 'mes', 'meses')
   return plural(Math.floor(dias / 365), 'año', 'años')
+}
+
+// ¿Ya llegó el día y la hora de la cita? (hora de Panamá, UTC-5 fijo). Antes de eso el vendedor no puede
+// marcarla como completada ni como "no asistió".
+export function citaYaEmpezo(it: Pick<ItemOrden, 'cita'>, ahora: number = Date.now()): boolean {
+  if (!it.cita) return true
+  const inicio = Date.parse(`${it.cita.fecha}T${it.cita.horaInicio}:00-05:00`)
+  return Number.isNaN(inicio) || inicio <= ahora
+}
+
+// Una cita se puede cancelar hasta estas horas antes de empezar (el servidor lo vuelve a comprobar)
+export const HORAS_MIN_CANCELACION = 2
+
+// ¿Se puede cancelar esta cita? Debe estar agendada, la orden pagada o con pago en el lugar, y faltar 2 h o más.
+// Las citas están en hora de Panamá (UTC-5 fijo, sin horario de verano).
+export function puedeCancelarCita(it: ItemOrden, estadoPago: EstadoPago, ahora: number = Date.now()): boolean {
+  if (!it.cita || !esCita(it)) return false
+  if (estadoPago !== 'pagada' && estadoPago !== 'por_cobrar') return false
+  if ((it.estadoEntrega ?? 'pendiente') !== 'pendiente') return false
+  const inicio = Date.parse(`${it.cita.fecha}T${it.cita.horaInicio}:00-05:00`)
+  return !Number.isNaN(inicio) && inicio - ahora >= HORAS_MIN_CANCELACION * 3_600_000
 }

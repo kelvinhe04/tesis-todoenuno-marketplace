@@ -86,7 +86,11 @@ export class ProductosService {
     const [items, total] = await Promise.all([
       this.modelo
         .find(query)
-        .sort({ creadoEn: -1 })
+        .sort(
+          filtros.orden === 'mejor_calificados'
+            ? { calificacionPromedio: -1, numResenas: -1, creadoEn: -1 }
+            : { creadoEn: -1 },
+        )
         .skip((pagina - 1) * limite)
         .limit(limite)
         .exec(),

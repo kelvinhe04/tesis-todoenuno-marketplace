@@ -342,6 +342,20 @@
       "backend": [{ "url_pattern": "/ordenes/{id}/reabrir", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
     },
     {
+      "endpoint": "/api/ordenes/{id}/pagar-en-lugar",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/ordenes/{id}/pagar-en-lugar", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
+      "endpoint": "/api/ordenes/{id}/items/{productoId}/cancelar",
+      "method": "PATCH",
+      "output_encoding": "no-op",
+      "input_headers": ["Authorization"],
+      "backend": [{ "url_pattern": "/ordenes/{id}/items/{productoId}/cancelar", "encoding": "no-op", "host": ["http://ordenes:3000"] }]
+    },
+    {
       "endpoint": "/api/ordenes/{id}/estado-entrega",
       "method": "PATCH",
       "output_encoding": "no-op",

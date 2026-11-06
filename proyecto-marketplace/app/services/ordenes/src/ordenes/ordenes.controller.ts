@@ -42,6 +42,18 @@ export class OrdenesController {
     return this.ordenes.reabrir(id, request.usuario.sub, request.headers['authorization']);
   }
 
+  @UseGuards(JwtAuthGuard)
+  @Post(':id/pagar-en-lugar')
+  pagarEnLugar(@Param('id') id: string, @Req() request: any) {
+    return this.ordenes.pagarEnElLugar(id, request.usuario.sub);
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Patch(':id/items/:productoId/cancelar')
+  cancelarCita(@Param('id') id: string, @Param('productoId') productoId: string, @Req() request: any) {
+    return this.ordenes.cancelarCita(id, productoId, request.usuario.sub);
+  }
+
   // Uso exclusivo de otros microservicios (no se expone en el API Gateway).
   @Get('internal/:id')
   obtenerInterno(@Param('id') id: string) {

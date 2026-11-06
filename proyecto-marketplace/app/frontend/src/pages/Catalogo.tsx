@@ -29,6 +29,24 @@ export default function Catalogo() {
   useEffect(() => setMinInput(precioMin), [precioMin])
   useEffect(() => setMaxInput(precioMax), [precioMax])
 
+  // El precio se aplica solo, medio segundo después de dejar de escribir (no hace falta salir del campo)
+  useEffect(() => {
+    if (minInput === precioMin && maxInput === precioMax) return
+    const t = setTimeout(() => {
+      setParams((prev) => {
+        const next = new URLSearchParams(prev)
+        if (minInput) next.set('precioMin', minInput)
+        else next.delete('precioMin')
+        if (maxInput) next.set('precioMax', maxInput)
+        else next.delete('precioMax')
+        next.delete('pagina')
+        return next
+      })
+    }, 500)
+    return () => clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [minInput, maxInput])
+
   useEffect(() => {
     const enCache = cachePaginas.get(claveCache)
     if (enCache) {

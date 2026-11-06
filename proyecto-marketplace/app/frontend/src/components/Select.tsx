@@ -5,6 +5,8 @@ import styles from './Select.module.css'
 export interface SelectOption {
   value: string
   label: string
+  disabled?: boolean // se ve atenuada y no se puede elegir
+  title?: string // explicación al pasar el mouse (p. ej. por qué está deshabilitada)
 }
 
 interface Props {
@@ -56,7 +58,7 @@ export function Select({
 
   const elegir = (idx: number) => {
     const opt = options[idx]
-    if (!opt) return
+    if (!opt || opt.disabled) return
     onChange(opt.value)
     setAbierto(false)
     botonRef.current?.focus()
@@ -112,8 +114,10 @@ export function Select({
               key={opt.value}
               role="option"
               aria-selected={opt.value === value}
-              className={`${styles.option} ${i === activo ? styles.active : ''} ${opt.value === value ? styles.selected : ''}`}
-              onMouseEnter={() => setActivo(i)}
+              aria-disabled={opt.disabled || undefined}
+              title={opt.title}
+              className={`${styles.option} ${i === activo && !opt.disabled ? styles.active : ''} ${opt.value === value ? styles.selected : ''} ${opt.disabled ? styles.deshabilitada : ''}`}
+              onMouseEnter={() => !opt.disabled && setActivo(i)}
               onClick={() => elegir(i)}
             >
               {opt.label}

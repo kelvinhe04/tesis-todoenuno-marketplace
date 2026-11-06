@@ -23,11 +23,19 @@ export default function Landing() {
   const [cargando, setCargando] = useState(destacadosCache === null)
 
   useEffect(() => {
-    catalogoApi
-      .listar({ limite: 8 })
-      .then((pagina) => {
-        destacadosCache = pagina.items
-        setProductos(pagina.items)
+    // Destacados: los 4 productos y los 4 servicios mejor calificados, intercalados
+    Promise.all([
+      catalogoApi.listar({ tipo: 'producto', orden: 'mejor_calificados', limite: 4 }),
+      catalogoApi.listar({ tipo: 'servicio', orden: 'mejor_calificados', limite: 4 }),
+    ])
+      .then(([prods, servs]) => {
+        const mezcla: Producto[] = []
+        for (let i = 0; i < 4; i++) {
+          if (prods.items[i]) mezcla.push(prods.items[i])
+          if (servs.items[i]) mezcla.push(servs.items[i])
+        }
+        destacadosCache = mezcla
+        setProductos(mezcla)
       })
       .finally(() => setCargando(false))
   }, [])

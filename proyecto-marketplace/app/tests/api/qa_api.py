@@ -143,6 +143,13 @@ def dir_orden():
     return {"direccion": {"nombre": "QA Comprador", "telefono": "6000-0000", "direccion": "Calle 1, Panama"}}
 
 
+def cita_ya_empezo(orden_id):
+    """Mueve la cita de la orden a ayer (directo en Postgres) para poder completarla / marcar 'no asistio'."""
+    ayer = fecha_futura(-1)
+    sql = f"update ordenes set items = jsonb_set(items,'{{0,cita,fecha}}',to_jsonb('{ayer}'::text)) where id::text = '{orden_id}'"
+    _compose("exec", "-T", "postgres", "psql", "-U", "marketplace", "-d", "marketplace", "-c", sql)
+
+
 # --------------------------------------------------------------------------------------
 sec("Salud y gateway")
 for s in ["auth", "catalogo", "carrito", "ordenes", "pagos", "notificaciones"]:
@@ -893,6 +900,16 @@ c, OC = call("POST", "/ordenes", token=tokB, body=dir_orden())
 check("orden con una cita", c == 201 and OC["items"][0].get("tipo") == "servicio" and OC["items"][0].get("cita"), (c, msg(OC)))
 c, x = call("POST", f"/pagos/ordenes/{OC['id']}", token=tokB, body={"metodo": "tarjeta", "numeroTarjeta": "4242424242424242"})
 check("pagar la cita", c in (200, 201) and x["estado"] == "aprobado", (c, msg(x)))
+for _ in range(20):  # el estado 'pagada' de la orden llega por evento (RabbitMQ)
+    c, y = call("GET", f"/ordenes/{OC['id']}", token=tokB)
+    if c == 200 and y["estadoPago"] == "pagada":
+        break
+    time.sleep(0.5)
+c, x = call("PATCH", f"/ordenes/{OC['id']}/estado-entrega", token=tokS, body={"estadoEntrega": "no_asistio"})
+check("'no asistio' ANTES del dia y la hora de la cita -> 400", c == 400 and "cuando llegue esa hora" in str(msg(x)), (c, msg(x)))
+c, x = call("PATCH", f"/ordenes/{OC['id']}/estado-entrega", token=tokS, body={"estadoEntrega": "entregada"})
+check("'completada' ANTES del dia y la hora de la cita -> 400", c == 400, (c, msg(x)))
+cita_ya_empezo(OC["id"])
 c, x = call("PATCH", f"/ordenes/{OC['id']}/estado-entrega", token=tokS, body={"estadoEntrega": "no_asistio"})
 check("el vendedor marca la cita como 'no asistio'", c == 200 and x["estadoEntrega"] == "no_asistio", (c, msg(x)))
 c, y = call("GET", f"/ordenes/{OC['id']}", token=tokB)
@@ -901,6 +918,132 @@ c, x = call("PATCH", f"/ordenes/{OC['id']}/estado-entrega", token=tokS, body={"e
 check("el vendedor puede corregirla a 'completada' (entregada)", c == 200 and x["estadoEntrega"] == "entregada", (c, msg(x)))
 c, x = call("PATCH", f"/ordenes/{OC['id']}/estado-entrega", token=tokB, body={"estadoEntrega": "no_asistio"})
 check("el comprador no puede marcar 'no asistio' -> 403", c == 403, c)
+
+sec("Pago en el lugar y cancelacion de citas")
+
+
+def orden_de_cita(tok, hora, dia=None):
+    """Reserva una cita, la mete al carrito y crea la orden (queda pendiente de pago)."""
+    dia = dia or f_ok
+    call("DELETE", "/carrito", token=tok)
+    c, rr = call("POST", f"/catalogo/{SV['_id']}/reservas", token=tok, body={"fecha": dia, "horaInicio": hora})
+    if c != 201:
+        return None, (c, msg(rr))
+    call("POST", "/carrito/items", token=tok, body={"productoId": SV["_id"], "cantidad": 1, "reservaId": rr["_id"]})
+    c, oo = call("POST", "/ordenes", token=tok, body=dir_orden())
+    return (oo if c == 201 else None), (c, msg(oo))
+
+
+def horas_libres(dia=None):
+    c, sl = call("GET", f"/catalogo/{SV['_id']}/disponibilidad?fecha={dia or f_ok}")
+    return [s["horaInicio"] for s in sl] if c == 200 else []
+
+
+# --- pago en el lugar ---
+OE, d = orden_de_cita(tokB, "12:00")
+check("orden de una cita (pendiente de pago)", OE is not None and OE["estadoPago"] == "pendiente", d)
+c, x = call("POST", f"/ordenes/{OE['id']}/pagar-en-lugar", token=tokA)
+check("pagar en el lugar una orden ajena -> 403", c == 403, (c, msg(x)))
+c, x = call("POST", f"/ordenes/{OE['id']}/pagar-en-lugar")
+check("pagar en el lugar sin token -> 401", c == 401, c)
+c, x = call("POST", f"/ordenes/{OE['id']}/pagar-en-lugar", token=tokB)
+check("pagar en el lugar -> la orden queda 'por_cobrar'", c in (200, 201) and x["estadoPago"] == "por_cobrar", (c, msg(x)))
+c, x = call("POST", f"/ordenes/{OE['id']}/pagar-en-lugar", token=tokB)
+check("pagar en el lugar dos veces -> 400", c == 400, (c, msg(x)))
+c, x = call("POST", f"/ordenes/{OE['id']}/reabrir", token=tokB)
+check("una orden por cobrar no admite 'reintentar pago' -> 400", c == 400, (c, msg(x)))
+c, lista = call("GET", "/ordenes/vendedor", token=tokS)
+check("el vendedor ve la orden por cobrar", c == 200 and any(o["id"] == OE["id"] for o in lista), c)
+check("el horario sigue apartado mientras la cita esta agendada", "12:00" not in horas_libres())
+
+# el pago en el lugar es solo para servicios
+call("DELETE", "/carrito", token=tokB)
+c, PE = call("POST", "/catalogo", token=tokS, body=prod_payload(nombre="QA Producto efectivo " + RUN, stock=3))
+if c == 201:
+    creados["productos"].append(PE["_id"])
+call("POST", "/carrito/items", token=tokB, body={"productoId": PE["_id"], "cantidad": 1})
+c, OP2 = call("POST", "/ordenes", token=tokB, body=dir_orden())
+if c == 201:
+    c, x = call("POST", f"/ordenes/{OP2['id']}/pagar-en-lugar", token=tokB)
+    check("pagar en el lugar una orden de PRODUCTOS -> 400", c == 400, (c, msg(x)))
+else:
+    check("(preparacion) orden de un producto", False, (c, msg(OP2)))
+
+# --- cancelar una cita agendada con pago en el lugar ---
+c, x = call("PATCH", f"/ordenes/{OE['id']}/items/{SV['_id']}/cancelar", token=tokA)
+check("cancelar la cita de otra persona -> 403", c == 403, (c, msg(x)))
+c, x = call("PATCH", f"/ordenes/{OE['id']}/items/{SV['_id']}/cancelar")
+check("cancelar sin token -> 401", c == 401, c)
+c, x = call("PATCH", f"/ordenes/{OE['id']}/items/no-existe/cancelar", token=tokB)
+check("cancelar un item que no esta en la orden -> 404", c == 404, (c, msg(x)))
+c, x = call("PATCH", f"/ordenes/{OE['id']}/items/{SV['_id']}/cancelar", token=tokB)
+check("cancelar la cita (por cobrar) -> item cancelado y orden 'cancelada'",
+      c == 200 and x["items"][0]["estadoEntrega"] == "cancelada" and x["estadoPago"] == "cancelada" and not x["items"][0].get("reembolso"), (c, msg(x)))
+check("el cupo vuelve: el horario cancelado se ofrece otra vez", "12:00" in horas_libres())
+c, x = call("PATCH", f"/ordenes/{OE['id']}/items/{SV['_id']}/cancelar", token=tokB)
+check("cancelar dos veces -> 400", c == 400, (c, msg(x)))
+c, x = call("PATCH", f"/ordenes/{OE['id']}/estado-entrega", token=tokS, body={"estadoEntrega": "entregada"})
+check("el vendedor no puede cambiar una cita cancelada -> 400", c == 400, (c, msg(x)))
+c, lista = call("GET", "/ordenes/vendedor", token=tokS)
+check("el vendedor sigue viendo la orden cancelada (como 'cancelada')",
+      c == 200 and any(o["id"] == OE["id"] and o["estadoEntrega"] == "cancelada" for o in lista), c)
+def espera_aviso(tok, tipo, intentos=20):
+    for _ in range(intentos):
+        c, nots = call("GET", "/notificaciones", token=tok)
+        if c == 200 and any(n["tipo"] == tipo for n in nots):
+            return True
+        time.sleep(1)
+    return False
+
+
+check("el vendedor recibe el aviso de cita cancelada", espera_aviso(tokS, "cita_cancelada"))
+check("el comprador recibe la confirmacion de la cancelacion", espera_aviso(tokB, "cita_cancelada"))
+check("el comprador recibe el aviso de cita agendada (pago en el lugar)", espera_aviso(tokB, "cita_agendada"))
+
+# --- cancelar una cita ya pagada con tarjeta: reembolso simulado ---
+OT, d = orden_de_cita(tokB, "13:00")
+check("orden de otra cita", OT is not None, d)
+c, x = call("POST", f"/pagos/ordenes/{OT['id']}", token=tokB, body={"metodo": "tarjeta", "numeroTarjeta": "4242424242424242"})
+check("pagar la cita con tarjeta", c in (200, 201) and x["estado"] == "aprobado", (c, msg(x)))
+for _ in range(20):  # el estado de la orden se actualiza por evento (RabbitMQ): se espera a que figure 'pagada'
+    c, y = call("GET", f"/ordenes/{OT['id']}", token=tokB)
+    if c == 200 and y["estadoPago"] == "pagada":
+        break
+    time.sleep(0.5)
+c, x = call("PATCH", f"/ordenes/{OT['id']}/items/{SV['_id']}/cancelar", token=tokB)
+check("cancelar una cita pagada -> 'reembolsada' con reembolso simulado igual al subtotal",
+      c == 200 and x["estadoPago"] == "reembolsada" and x["items"][0].get("reembolso") == OT["items"][0]["subtotal"], (c, msg(x)))
+check("el cupo tambien vuelve al cancelar una cita pagada", "13:00" in horas_libres())
+
+# --- no se puede cancelar a menos de 2 horas ---
+OL, d = orden_de_cita(tokB, "16:00")
+check("orden de una cita para probar el limite de 2 horas", OL is not None, d)
+if OL:
+    c, x = call("POST", f"/ordenes/{OL['id']}/pagar-en-lugar", token=tokB)
+    check("pagar en el lugar", c in (200, 201), (c, msg(x)))
+    pronto = hoy_panama() + timedelta(hours=1)
+    sql = (f"update ordenes set items = jsonb_set(jsonb_set(items,'{{0,cita,fecha}}',to_jsonb('{pronto:%Y-%m-%d}'::text)),"
+           f"'{{0,cita,horaInicio}}',to_jsonb('{pronto:%H:%M}'::text)) where id::text = '{OL['id']}'")
+    _compose("exec", "-T", "postgres", "psql", "-U", "marketplace", "-d", "marketplace", "-c", sql)
+    c, x = call("PATCH", f"/ordenes/{OL['id']}/items/{SV['_id']}/cancelar", token=tokB)
+    check("cancelar a menos de 2 horas de la cita -> 400", c == 400 and "2 horas" in str(msg(x)), (c, msg(x)))
+
+# --- el vendedor completa la cita: lo por cobrar pasa a pagado ---
+OK_, d = orden_de_cita(tokB, "09:00")
+check("orden de una cita para completar", OK_ is not None, d)
+if OK_:
+    call("POST", f"/ordenes/{OK_['id']}/pagar-en-lugar", token=tokB)
+    c, x = call("PATCH", f"/ordenes/{OK_['id']}/estado-entrega", token=tokS, body={"estadoEntrega": "en_camino"})
+    check("'en camino' SI se puede antes de la hora (el profesional sale hacia el domicilio)", c == 200, (c, msg(x)))
+    c, x = call("PATCH", f"/ordenes/{OK_['id']}/estado-entrega", token=tokS, body={"estadoEntrega": "entregada"})
+    check("completar una cita que aun no llega su hora -> 400", c == 400, (c, msg(x)))
+    cita_ya_empezo(OK_["id"])
+    c, x = call("PATCH", f"/ordenes/{OK_['id']}/estado-entrega", token=tokS, body={"estadoEntrega": "entregada"})
+    check("el vendedor completa una cita por cobrar", c == 200 and x["estadoEntrega"] == "entregada", (c, msg(x)))
+    c, y = call("GET", f"/ordenes/{OK_['id']}", token=tokB)
+    check("al completarse, el cobro queda registrado ('pagada')", c == 200 and y["estadoPago"] == "pagada", y.get("estadoPago") if c == 200 else msg(y))
+    c, x = call("PATCH", f"/ordenes/{OK_['id']}/items/{SV['_id']}/cancelar", token=tokB)
+    check("una cita ya completada no se puede cancelar -> 400", c == 400, (c, msg(x)))
 
 sec("Superficie expuesta (informativo)")
 c, x = call("POST", "/ordenes/demo")

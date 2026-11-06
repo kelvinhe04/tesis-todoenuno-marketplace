@@ -107,6 +107,7 @@ export default function ProductoDetalle() {
   const [errorReserva, setErrorReserva] = useState<string | null>(null)
 
   const [resenas, setResenas] = useState<Resena[]>([])
+  const [filtroEstrellas, setFiltroEstrellas] = useState<number | null>(null)
   const [ordenesElegibles, setOrdenesElegibles] = useState<Orden[]>([])
   const [ordenParaResena, setOrdenParaResena] = useState('')
   const [calificacionNueva, setCalificacionNueva] = useState(0)
@@ -136,6 +137,7 @@ export default function ProductoDetalle() {
       })
       .catch(() => setError('No se encontró la publicación'))
       .finally(() => setCargando(false))
+    setFiltroEstrellas(null)
     resenasApi.listar(id).then(setResenas)
   }, [id])
 
@@ -385,8 +387,7 @@ export default function ProductoDetalle() {
                 href={urlGoogleMaps(producto.ubicacion)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hint-text"
-                style={{ display: 'inline-block', marginTop: '0.375rem', fontWeight: 600 }}
+                className={styles.enlaceMapa}
               >
                 Abrir en Google Maps ↗
               </a>
@@ -614,18 +615,10 @@ export default function ProductoDetalle() {
                 </div>
               )}
               {producto.disponibilidad && (
-                <>
                 <div className={styles.specRow}>
                   <dt>Duración de la cita</dt>
                   <dd>{producto.disponibilidad.duracionMinutos} min</dd>
                 </div>
-                {(producto.disponibilidad.margenMinutos ?? 0) > 0 && (
-                  <div className={styles.specRow}>
-                    <dt>{producto.modalidadEntrega === 'domicilio_cliente' ? 'Traslado entre citas' : 'Descanso entre citas'}</dt>
-                    <dd>{producto.disponibilidad.margenMinutos} min</dd>
-                  </div>
-                )}
-                </>
               )}
             </>
           ) : (
@@ -642,7 +635,7 @@ export default function ProductoDetalle() {
 
         {ordenesElegibles.length > 0 && (
           <div className="card card-pad stack" style={{ maxWidth: '32rem', marginBottom: '1.5rem' }}>
-            <p style={{ fontWeight: 700, fontSize: '0.9375rem' }}>Compraste este producto — déjanos tu reseña</p>
+            <p style={{ fontWeight: 700, fontSize: '0.9375rem' }}>Compraste este producto, déjanos tu reseña</p>
             {ordenesElegibles.length > 1 && (
               <div className="field">
                 <label htmlFor="orden-resena">Orden</label>
@@ -653,7 +646,7 @@ export default function ProductoDetalle() {
                   placeholder="Selecciona una orden"
                   options={ordenesElegibles.map((o) => ({
                     value: o.id,
-                    label: `#${o.id.slice(0, 8)} — ${new Date(o.creadoEn).toLocaleDateString()}`,
+                    label: `#${o.id.slice(0, 8)} · ${new Date(o.creadoEn).toLocaleDateString()}`,
                   }))}
                 />
               </div>
@@ -685,12 +678,20 @@ export default function ProductoDetalle() {
         ) : (
           <div className={styles.resenasGrid}>
             <div className={styles.resenasResumen}>
-              <ResumenResenas resenas={resenas} />
+              <ResumenResenas resenas={resenas} seleccion={filtroEstrellas} onSeleccionar={setFiltroEstrellas} />
             </div>
             <div className="stack">
-              {resenas.map((r) => (
-                <ResenaCard key={r._id} resena={r} productoId={producto._id} />
-              ))}
+              {filtroEstrellas !== null && (
+                <p className="muted" style={{ fontSize: '0.875rem' }}>
+                  Mostrando {resenas.filter((r) => r.calificacion === filtroEstrellas).length} de {resenas.length} reseñas de {filtroEstrellas}{' '}
+                  {filtroEstrellas === 1 ? 'estrella' : 'estrellas'}.
+                </p>
+              )}
+              {resenas
+                .filter((r) => filtroEstrellas === null || r.calificacion === filtroEstrellas)
+                .map((r) => (
+                  <ResenaCard key={r._id} resena={r} productoId={producto._id} />
+                ))}
             </div>
           </div>
         )}

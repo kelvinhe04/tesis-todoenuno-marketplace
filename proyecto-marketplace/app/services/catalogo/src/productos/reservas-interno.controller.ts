@@ -21,6 +21,12 @@ export class ReservasInternoController {
     return this.reservas.liberarPorOrden(ordenId);
   }
 
+  // Ordenes lo llama cuando el comprador cancela una cita: ese horario (cupo) vuelve a quedar libre.
+  @Patch('liberar-reserva/:reservaId')
+  liberarUna(@Param('reservaId') reservaId: string) {
+    return this.reservas.liberarReserva(reservaId);
+  }
+
   // Ordenes lo llama al crear/reabrir una orden: descuenta el stock (400 si no alcanza).
   @Post('descontar-stock')
   descontarStock(@Body() body: { items: ItemStock[] }) {

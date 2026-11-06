@@ -99,7 +99,14 @@ export function Header() {
             {menuAbierto ? <IconClose /> : <IconMenu />}
           </button>
 
-          <NavLink to="/" className={styles.logo}>
+          <NavLink
+            to="/"
+            className={styles.logo}
+            // Si ya estás en la portada, el enlace no navega: subir al inicio a mano
+            onClick={() => {
+              if (location.pathname === '/' && !location.search) window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
             Todo<span>En</span>Uno
           </NavLink>
 

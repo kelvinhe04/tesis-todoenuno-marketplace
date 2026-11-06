@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { VendorLayout } from '../../components/VendorLayout'
 import { ApiError, catalogoApi, type ModalidadEntrega, type Producto, type TipoPublicacion } from '../../lib/api'
 import { IconImage, IconTrash } from '../../components/icons'
@@ -33,11 +33,17 @@ export default function VendedorCrearProducto() {
   const editando = Boolean(id)
   const navigate = useNavigate()
 
-  const [tipo, setTipo] = useState<TipoPublicacion>('producto')
+  // /vendedor/publicaciones/nueva?tipo=servicio abre el formulario ya en "Servicio"
+  const [params] = useSearchParams()
+  const tipoInicial: TipoPublicacion = !id && params.get('tipo') === 'servicio' ? 'servicio' : 'producto'
+
+  const [tipo, setTipo] = useState<TipoPublicacion>(tipoInicial)
   const [nombre, setNombre] = useState('')
   const [marca, setMarca] = useState('')
   const [descripcion, setDescripcion] = useState('')
-  const [categoria, setCategoria] = useState(CATEGORIAS_PRODUCTO[0])
+  const [categoria, setCategoria] = useState(
+    tipoInicial === 'servicio' ? CATEGORIAS_SERVICIO[0] : CATEGORIAS_PRODUCTO[0],
+  )
   const [precio, setPrecio] = useState('')
   const [stock, setStock] = useState('')
   const [modalidadEntrega, setModalidadEntrega] = useState<ModalidadEntrega>('domicilio_cliente')

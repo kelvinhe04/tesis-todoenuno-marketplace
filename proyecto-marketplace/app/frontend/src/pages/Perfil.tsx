@@ -10,6 +10,13 @@ import { DireccionesGuardadas } from '../components/DireccionesGuardadas'
 import { TarjetasGuardadas } from '../components/TarjetasGuardadas'
 import styles from './Perfil.module.css'
 
+// A dónde lleva cada notificación al tocarla
+function destinoNotificacion(n: Notificacion): string {
+  if (n.tipo === 'nueva_orden_vendedor') return '/vendedor/ordenes'
+  if (n.tipo === 'resena_pendiente' && n.productoId) return `/productos/${n.productoId}#resenas`
+  return '/ordenes'
+}
+
 export default function Perfil() {
   const { usuario, actualizarPerfil, logout } = useAuth()
   const navigate = useNavigate()
@@ -283,7 +290,16 @@ export default function Perfil() {
           ) : (
             <div className={styles.notifList}>
               {notificaciones.map((n) => (
-                <div key={n.id} className={`card ${styles.notifItem}`}>
+                <div
+                  key={n.id}
+                  className={`card ${styles.notifItem}`}
+                  style={{ cursor: 'pointer' }}
+                  onClick={(e) => {
+                    if ((e.target as HTMLElement).closest('button, a')) return
+                    if (!n.leida) marcarLeida(n.id)
+                    navigate(destinoNotificacion(n))
+                  }}
+                >
                   {!n.leida && <span className={styles.notifDot} />}
                   <div className={styles.notifTexto}>
                     <p style={{ fontSize: '0.9375rem' }}>{n.mensaje}</p>

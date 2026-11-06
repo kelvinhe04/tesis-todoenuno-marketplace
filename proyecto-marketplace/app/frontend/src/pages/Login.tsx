@@ -58,7 +58,7 @@ export default function Login() {
         </div>
         <div className={styles.quote}>
           "Encontré una diseñadora de logos increíble en menos de diez minutos."
-          <b>— Roberto Sanjur, comprador</b>
+          <b>Roberto Sanjur, comprador</b>
         </div>
       </div>
 

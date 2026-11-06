@@ -28,7 +28,7 @@ export function Footer() {
             <h4>Vender</h4>
             <Link to="/vendedor">Panel de vendedor</Link>
             <Link to="/vendedor/publicaciones/nueva">Publicar producto</Link>
-            <Link to="/vendedor/publicaciones/nueva">Publicar servicio</Link>
+            <Link to="/vendedor/publicaciones/nueva?tipo=servicio">Publicar servicio</Link>
           </div>
           <div className={styles.col}>
             <h4>Cuenta</h4>
@@ -45,7 +45,7 @@ export function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <div className="container">© 2026 TodoEnUno — prototipo de trabajo de graduación.</div>
+        <div className="container">© 2026 TodoEnUno · prototipo de trabajo de graduación.</div>
       </div>
     </footer>
   )

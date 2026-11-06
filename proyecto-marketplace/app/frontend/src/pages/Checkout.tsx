@@ -47,7 +47,7 @@ export default function Checkout() {
   const [telefono, setTelefono] = useState('')
   const [direccion, setDireccion] = useState('')
 
-  const [metodo, setMetodo] = useState<'tarjeta' | 'paypal' | 'payu'>('tarjeta')
+  const [metodo, setMetodo] = useState<'tarjeta' | 'paypal' | 'payu' | 'efectivo'>('tarjeta')
   const [numeroTarjeta, setNumeroTarjeta] = useState('')
   const [vencimiento, setVencimiento] = useState('')
   const [cvv, setCvv] = useState('')
@@ -55,7 +55,7 @@ export default function Checkout() {
   const [pasoActual, setPasoActual] = useState(2)
   const [procesando, setProcesando] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [resultado, setResultado] = useState<{ aprobado: boolean; motivo?: string } | null>(null)
+  const [resultado, setResultado] = useState<{ aprobado: boolean; motivo?: string; enLugar?: boolean } | null>(null)
   const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false)
   const [payuActivo, setPayuActivo] = useState(false) // PayU Latam sandbox configurado en el servidor
   const capturaIniciada = useRef(false)
@@ -73,7 +73,26 @@ export default function Checkout() {
   const [guardarDireccion, setGuardarDireccion] = useState(false)
   const [guardarTarjeta, setGuardarTarjeta] = useState(false)
 
-  const dirSel = dirGuardadas.find((d) => d.id === dirElegida)
+  // Qué necesita el pedido según lo que hay en el carrito: los productos y los servicios a domicilio
+  // necesitan una dirección del cliente; un servicio en el local del vendedor no (el cliente va allá).
+  const itemsCarrito = carrito?.items ?? []
+  const hayProductos = itemsCarrito.some((it) => it.tipo === 'producto')
+  const serviciosLocal = itemsCarrito.filter((it) => it.tipo === 'servicio' && it.modalidadEntrega === 'local_vendedor')
+  const hayDomicilio = itemsCarrito.some((it) => it.tipo === 'servicio' && it.modalidadEntrega !== 'local_vendedor')
+  const soloLocal = itemsCarrito.length > 0 && !hayProductos && !hayDomicilio
+  const dirSel = soloLocal ? undefined : dirGuardadas.find((d) => d.id === dirElegida)
+  // Pago en el lugar (efectivo): solo cuando TODO el pedido son servicios
+  const permiteEfectivo = itemsCarrito.length > 0 && !hayProductos
+  const etiquetaEfectivo = soloLocal ? 'Pagar en el local' : serviciosLocal.length === 0 ? 'Pagar al llegar' : 'Pagar en el lugar'
+  const cuandoPaga = soloLocal ? 'cuando llegues al local' : serviciosLocal.length === 0 ? 'cuando el profesional llegue a tu domicilio' : 'en el lugar de cada cita'
+  // Con servicios, el pago en el lugar es la opción por defecto (no tiene sentido pagar por adelantado a la fuerza)
+  const efectivoPorDefecto = useRef(false)
+  useEffect(() => {
+    if (permiteEfectivo && !ordenParam && !efectivoPorDefecto.current) {
+      efectivoPorDefecto.current = true
+      setMetodo('efectivo')
+    }
+  }, [permiteEfectivo, ordenParam])
   const tarjetaSel = tarjetasGuardadas.find((t) => t.id === tarjetaElegida)
 
   useEffect(() => {
@@ -144,7 +163,7 @@ export default function Checkout() {
       ordenesApi
         .obtener(ordenParam)
         .then((o) => {
-          if (o.estadoPago === 'pagada') {
+          if (o.estadoPago !== 'pendiente' && o.estadoPago !== 'rechazada') {
             navigate('/ordenes')
             return
           }
@@ -181,9 +200,18 @@ export default function Checkout() {
   const segundosRestantes = vencimientoCita ? Math.max(0, Math.floor((vencimientoCita - ahora) / 1000)) : null
   const citaVencida = segundosRestantes === 0
 
+  // Si el tiempo se acaba con el modal de confirmación abierto, se cierra: ya no se puede pagar
+  useEffect(() => {
+    if (citaVencida) setMostrarConfirmacion(false)
+  }, [citaVencida])
+
   const onSubmit = (e: FormEvent) => {
     e.preventDefault()
     setError(null)
+    if (citaVencida) {
+      setError('Tu horario ya no está retenido. Vuelve al carrito y elige un horario de nuevo.')
+      return
+    }
     if (!ordenReintento && !dirSel && telefono.replace(/\D/g, '').length < 7) {
       setError('El teléfono debe tener 7 u 8 dígitos')
       return
@@ -219,7 +247,34 @@ export default function Checkout() {
       ? direccionOrden
       : dirSel
         ? { nombre: dirSel.nombre, telefono: dirSel.telefono, direccion: dirSel.direccion }
-        : { nombre, telefono, direccion }
+        : soloLocal
+          ? { nombre, telefono, direccion: `Cita en el local del vendedor: ${serviciosLocal.map((it) => it.direccionLocal).filter(Boolean).join(' · ') || 'ver detalle del servicio'}` }
+          : { nombre, telefono, direccion }
+
+  const detalleLocales = (
+    <div className={styles.localLista}>
+      {serviciosLocal.map((it) => (
+        <div key={it.productoId} className={styles.localItem}>
+          <strong>{it.nombre}</strong>
+          {it.cita && (
+            <span>
+              {formatFecha(it.cita.fecha)} · {formatHora12h(it.cita.horaInicio)}
+            </span>
+          )}
+          <span className="muted">{it.direccionLocal ?? 'Dirección en el detalle del servicio'}</span>
+        </div>
+      ))}
+    </div>
+  )
+
+  const tituloDireccion = hayProductos ? 'Dirección de entrega' : 'Dirección del servicio'
+  const notaDireccion = hayProductos
+    ? hayDomicilio
+      ? 'Se usa para enviar tus productos y para los servicios a domicilio.'
+      : serviciosLocal.length > 0
+        ? 'Se usa para enviar tus productos. Tus servicios en el local no la necesitan: se prestan en la dirección del vendedor.'
+        : null
+    : 'El profesional irá a esta dirección en la fecha y hora de tu cita.'
 
   const confirmarYPagar = async () => {
     setProcesando(true)
@@ -236,7 +291,13 @@ export default function Checkout() {
         setDireccionOrden(envio)
         await refrescar()
         // Guardar la dirección nueva para próximas compras (si lo pidió); no bloquea la compra si falla
-        if (!dirSel && guardarDireccion) await guardadosApi.crearDireccion(envio).catch(() => undefined)
+        if (!soloLocal && !dirSel && guardarDireccion) await guardadosApi.crearDireccion(envio).catch(() => undefined)
+      }
+      if (metodo === 'efectivo') {
+        await ordenesApi.pagarEnLugar(ordenId)
+        setPasoActual(3)
+        setResultado({ aprobado: true, enLugar: true })
+        return
       }
       if (metodo === 'payu') {
         const payu = await pagosApi.payuCrear(ordenId)
@@ -302,7 +363,7 @@ export default function Checkout() {
   if (confirmandoPaypal) return <PantallaConfirmando pasarela="PayPal" />
 
   if (resultado) {
-    return <PantallaResultado aprobado={resultado.aprobado} motivo={resultado.motivo} onVerOrdenes={() => navigate('/ordenes')} />
+    return <PantallaResultado aprobado={resultado.aprobado} motivo={resultado.motivo} enLugar={resultado.enLugar} onVerOrdenes={() => navigate('/ordenes')} />
   }
 
   if (cargando || !carrito) {
@@ -371,8 +432,34 @@ export default function Checkout() {
               <p className="hint-text">Tu orden ya está creada; solo falta completar el pago.</p>
             </div>
           )}
+          {soloLocal && !ordenReintento && (
+            <div className={`card ${styles.section}`}>
+              <h2 style={{ fontSize: '1.0625rem' }}>Tu cita en el local</h2>
+              {detalleLocales}
+              <p className="hint-text">No necesitas dar una dirección: acudes al local del vendedor en la fecha y hora elegidas. Solo dejamos tus datos de contacto.</p>
+              <div className={styles.row2}>
+                <div className="field">
+                  <label htmlFor="nombre">Nombre</label>
+                  <input id="nombre" className="input" required minLength={2} value={nombre} onChange={(e) => setNombre(e.target.value)} />
+                </div>
+                <div className="field">
+                  <label htmlFor="telefono">Teléfono</label>
+                  <input
+                    id="telefono"
+                    className="input"
+                    required
+                    inputMode="tel"
+                    value={telefono}
+                    onChange={(e) => setTelefono(formatearTelefono(e.target.value))}
+                    placeholder="0000-0000"
+                  />
+                </div>
+              </div>
+            </div>
+          )}
+          {!soloLocal && (
           <div className={`card ${styles.section}`} style={ordenReintento ? { display: 'none' } : undefined}>
-            <h2 style={{ fontSize: '1.0625rem' }}>Dirección de entrega</h2>
+            <h2 style={{ fontSize: '1.0625rem' }}>{tituloDireccion}</h2>
             {dirGuardadas.length > 0 && (
               <div className={guardados.opciones}>
                 {dirGuardadas.map((d) => (
@@ -430,15 +517,28 @@ export default function Checkout() {
               Guardar esta dirección para próximas compras
             </label>
             </>)}
-            <p className="hint-text">
-              Para servicios, esta dirección se usa según la modalidad indicada por el vendedor (a domicilio del
-              cliente o en el local del vendedor).
-            </p>
+            {notaDireccion && <p className="hint-text">{notaDireccion}</p>}
           </div>
+          )}
+          {!soloLocal && serviciosLocal.length > 0 && !ordenReintento && (
+            <div className={`card ${styles.section}`}>
+              <h2 style={{ fontSize: '1.0625rem' }}>{serviciosLocal.length === 1 ? 'Tu cita en el local' : 'Tus citas en el local'}</h2>
+              {detalleLocales}
+            </div>
+          )}
 
           <div className={`card ${styles.section}`}>
             <h2 style={{ fontSize: '1.0625rem' }}>Método de pago</h2>
             <div className={styles.methodTabs}>
+              {permiteEfectivo && (
+                <button
+                  type="button"
+                  className={`${styles.methodTab} ${metodo === 'efectivo' ? styles.active : ''}`}
+                  onClick={() => setMetodo('efectivo')}
+                >
+                  {etiquetaEfectivo}
+                </button>
+              )}
               <button
                 type="button"
                 className={`${styles.methodTab} ${metodo === 'tarjeta' ? styles.active : ''}`}
@@ -464,6 +564,12 @@ export default function Checkout() {
               )}
             </div>
 
+
+            {metodo === 'efectivo' && (
+              <p className="hint-text">
+                Pagarás ${carrito.total.toFixed(2)} en efectivo {cuandoPaga}. Puedes cancelar la cita hasta 2 horas antes sin costo.
+              </p>
+            )}
 
             {metodo === 'tarjeta' && tarjetasGuardadas.length > 0 && (
               <div className={guardados.opciones}>
@@ -566,8 +672,8 @@ export default function Checkout() {
 
           {error && <p className="error-text">{error}</p>}
 
-          <button type="submit" className="btn btn-primary btn-block" disabled={procesando}>
-            {procesando ? 'Procesando...' : `Confirmar pago de $${carrito.total.toFixed(2)}`}
+          <button type="submit" className="btn btn-primary btn-block" disabled={procesando || citaVencida}>
+            {procesando ? 'Procesando...' : metodo === 'efectivo' ? 'Confirmar cita' : `Confirmar pago de $${carrito.total.toFixed(2)}`}
           </button>
         </form>
 
@@ -590,9 +696,13 @@ export default function Checkout() {
 
       <ConfirmModal
         abierto={mostrarConfirmacion}
-        titulo="Confirmar compra"
-        mensaje={`Se enviará a "${envio.nombre}" en "${envio.direccion}" y se cobrará $${carrito.total.toFixed(2)} con ${metodo === 'tarjeta' ? (tarjetaSel ? `la tarjeta terminada en ${tarjetaSel.ultimos4}` : 'tarjeta') : metodo === 'payu' ? 'PayU' : 'PayPal'} (sandbox). ¿Confirmas la compra?`}
-        textoConfirmar="Sí, confirmar y pagar"
+        titulo={metodo === 'efectivo' ? 'Confirmar cita' : 'Confirmar compra'}
+        mensaje={`${soloLocal ? 'Tu cita será en el local del vendedor' : hayProductos ? `Se enviará a "${envio.nombre}" en "${envio.direccion}"` : `El servicio se prestará en "${envio.direccion}"`} ${
+          metodo === 'efectivo'
+            ? `y pagarás $${carrito.total.toFixed(2)} en efectivo ${cuandoPaga}. ¿Confirmas la cita?`
+            : `y se cobrará $${carrito.total.toFixed(2)} con ${metodo === 'tarjeta' ? (tarjetaSel ? `la tarjeta terminada en ${tarjetaSel.ultimos4}` : 'tarjeta') : metodo === 'payu' ? 'PayU' : 'PayPal'} (sandbox). ¿Confirmas la compra?`
+        }`}
+        textoConfirmar={metodo === 'efectivo' ? 'Sí, agendar cita' : 'Sí, confirmar y pagar'}
         procesando={procesando}
         onConfirmar={confirmarYPagar}
         onCancelar={() => setMostrarConfirmacion(false)}
