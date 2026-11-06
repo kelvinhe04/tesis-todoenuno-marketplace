@@ -22,6 +22,18 @@ export class DisponibilidadDto {
   @Max(480)
   duracionMinutos: number;
 
+  @IsOptional()
+  @IsInt()
+  @Min(1)
+  @Max(20)
+  cupos?: number;
+
+  @IsOptional()
+  @IsInt()
+  @Min(0)
+  @Max(240)
+  margenMinutos?: number;
+
   @IsArray()
   @ArrayMinSize(1, { message: 'Selecciona al menos un día de atención' })
   @ValidateNested({ each: true })

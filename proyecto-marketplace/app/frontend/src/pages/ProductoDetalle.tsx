@@ -28,6 +28,8 @@ import {
   IconUser,
 } from '../components/icons'
 import { Stars } from '../components/Stars'
+import { ResenaCard } from '../components/ResenaCard'
+import { ResumenResenas } from '../components/ResumenResenas'
 import { Select } from '../components/Select'
 import { MapaLocal } from '../components/MapaLocal'
 import { VistosRecientemente } from '../components/VistosRecientemente'
@@ -121,7 +123,7 @@ export default function ProductoDetalle() {
         setProducto(p)
         // Para servicios, arrancar en el primer día con atención (no en un día sin horarios)
         if (p.tipo === 'servicio' && p.disponibilidad?.reglas.length) {
-          setFecha(primeraFechaDisponible(p.disponibilidad.reglas, p.disponibilidad.duracionMinutos, undefined, p.disponibilidad.diasNoDisponibles))
+          setFecha(primeraFechaDisponible(p.disponibilidad.reglas, p.disponibilidad.duracionMinutos, undefined, p.disponibilidad.diasNoDisponibles, p.disponibilidad.margenMinutos ?? 0))
         }
         setImagenActiva(0)
         setZoomAbierto(false)
@@ -430,7 +432,7 @@ export default function ProductoDetalle() {
                 key={id}
                 value={fecha}
                 min={
-                  quedanHorariosHoy(producto.disponibilidad.reglas, producto.disponibilidad.duracionMinutos, ahora)
+                  quedanHorariosHoy(producto.disponibilidad.reglas, producto.disponibilidad.duracionMinutos, ahora, producto.disponibilidad.margenMinutos ?? 0)
                     ? hoy
                     : sumarDiasFecha(hoy, 1)
                 }
@@ -470,6 +472,11 @@ export default function ProductoDetalle() {
                         }}
                       >
                         {formatHora12h(slot.horaInicio)}
+                        {(producto.disponibilidad?.cupos ?? 1) > 1 && slot.cuposLibres !== undefined && (
+                          <span style={{ fontWeight: 500, opacity: 0.75, marginLeft: '0.35rem' }}>
+                            · {slot.cuposLibres} {slot.cuposLibres === 1 ? 'cupo' : 'cupos'}
+                          </span>
+                        )}
                       </button>
                     )
                   })}
@@ -607,10 +614,18 @@ export default function ProductoDetalle() {
                 </div>
               )}
               {producto.disponibilidad && (
+                <>
                 <div className={styles.specRow}>
                   <dt>Duración de la cita</dt>
                   <dd>{producto.disponibilidad.duracionMinutos} min</dd>
                 </div>
+                {(producto.disponibilidad.margenMinutos ?? 0) > 0 && (
+                  <div className={styles.specRow}>
+                    <dt>{producto.modalidadEntrega === 'domicilio_cliente' ? 'Traslado entre citas' : 'Descanso entre citas'}</dt>
+                    <dd>{producto.disponibilidad.margenMinutos} min</dd>
+                  </div>
+                )}
+                </>
               )}
             </>
           ) : (
@@ -668,21 +683,15 @@ export default function ProductoDetalle() {
             Todavía no hay reseñas para esta publicación.
           </p>
         ) : (
-          <div className="stack" style={{ maxWidth: '40rem' }}>
-            {resenas.map((r) => (
-              <div key={r._id} className="card card-pad">
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.375rem' }}>
-                  <Stars valor={r.calificacion} />
-                  <span className="muted" style={{ fontSize: '0.75rem' }}>
-                    {new Date(r.creadoEn).toLocaleDateString()}
-                  </span>
-                </div>
-                <p className="muted" style={{ fontSize: '0.75rem', marginBottom: r.comentario ? '0.375rem' : 0 }}>
-                  {r.compradorNombre}
-                </p>
-                {r.comentario && <p style={{ fontSize: '0.875rem' }}>{r.comentario}</p>}
-              </div>
-            ))}
+          <div className={styles.resenasGrid}>
+            <div className={styles.resenasResumen}>
+              <ResumenResenas resenas={resenas} />
+            </div>
+            <div className="stack">
+              {resenas.map((r) => (
+                <ResenaCard key={r._id} resena={r} productoId={producto._id} />
+              ))}
+            </div>
           </div>
         )}
       </div>

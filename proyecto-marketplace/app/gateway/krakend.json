@@ -224,6 +224,13 @@
       "backend": [{ "url_pattern": "/catalogo/{id}/resenas", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
     },
     {
+      "endpoint": "/api/catalogo/{id}/resenas/{resenaId}/util",
+      "method": "POST",
+      "output_encoding": "no-op",
+      "input_headers": ["Content-Type", "Authorization"],
+      "backend": [{ "url_pattern": "/catalogo/{id}/resenas/{resenaId}/util", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
       "endpoint": "/api/catalogo/{id}/disponibilidad",
       "method": "GET",
       "output_encoding": "no-op",

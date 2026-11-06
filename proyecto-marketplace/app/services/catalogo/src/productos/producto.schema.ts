@@ -25,6 +25,14 @@ export class Disponibilidad {
   @Prop({ type: [ReglaDisponibilidadSchema], required: true })
   reglas: ReglaDisponibilidad[];
 
+  // Cuántas citas puede atender a la vez a la misma hora (personas trabajando en paralelo)
+  @Prop({ default: 1, min: 1 })
+  cupos: number;
+
+  // Minutos de respiro entre una cita y la siguiente (traslado, preparación, limpieza)
+  @Prop({ default: 0, min: 0 })
+  margenMinutos: number;
+
   // Fechas concretas (AAAA-MM-DD) en las que el vendedor no atiende (feriados, vacaciones...)
   @Prop({ type: [String], default: [] })
   diasNoDisponibles: string[];

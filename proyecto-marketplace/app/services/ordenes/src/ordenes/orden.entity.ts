@@ -1,7 +1,9 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 export type EstadoPago = 'pendiente' | 'pagada' | 'rechazada';
-export type EstadoEntrega = 'pendiente' | 'en_camino' | 'entregada';
+// Para productos: pendiente -> en_camino -> entregada. Para citas de servicio la pantalla los muestra
+// como Agendada -> Completada, y "no_asistio" (solo citas) cuando el cliente no se presentó.
+export type EstadoEntrega = 'pendiente' | 'en_camino' | 'entregada' | 'no_asistio';
 
 export interface CitaOrden {
   reservaId: string;
@@ -18,6 +20,8 @@ export interface ItemOrden {
   cantidad: number;
   subtotal: number;
   tipo?: 'producto' | 'servicio';
+  // Solo servicios: dónde se presta (define los textos de estado de la cita)
+  modalidadEntrega?: 'domicilio_cliente' | 'local_vendedor';
   cita?: CitaOrden;
   // Entrega por ítem: cada vendedor gestiona solo la de sus ítems. Las órdenes antiguas no lo traen
   // (se usa el estado de la orden).

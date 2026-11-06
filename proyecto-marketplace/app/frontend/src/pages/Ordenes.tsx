@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { catalogoApi, imagenPrincipal, ordenesApi, type EstadoPago, type Orden } from '../lib/api'
 import { IconImage } from '../components/icons'
-import { ESTADO_ENTREGA_BADGE, ESTADO_ENTREGA_LABEL, ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, formatFecha, formatHora12h } from '../lib/estado'
+import { ESTADO_ENTREGA_BADGE, ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, esCita, etiquetaEstado, formatFecha, formatHora12h, soloCitas } from '../lib/estado'
 import styles from './Ordenes.module.css'
 
 const TABS: Array<{ id: EstadoPago | 'todas'; label: string }> = [
@@ -89,7 +89,7 @@ export default function Ordenes() {
                       </p>
                       {orden.estadoPago === 'pagada' && orden.items.length > 1 && it.estadoEntrega && (
                         <p className="muted" style={{ fontSize: '0.8125rem' }}>
-                          Entrega: {ESTADO_ENTREGA_LABEL[it.estadoEntrega]}
+                          {esCita(it) ? 'Estado de la cita' : 'Entrega'}: {etiquetaEstado(it.estadoEntrega, [it])}
                         </p>
                       )}
                       {it.cita && (
@@ -103,8 +103,11 @@ export default function Ordenes() {
               </div>
               <div className={styles.badges}>
                 <span className={`badge ${ESTADO_PAGO_BADGE[orden.estadoPago]}`}>{ESTADO_PAGO_LABEL[orden.estadoPago]}</span>
-                <span className={`badge ${ESTADO_ENTREGA_BADGE[orden.estadoEntrega]}`} title="Estado de la entrega">
-                  {ESTADO_ENTREGA_LABEL[orden.estadoEntrega]}
+                <span
+                  className={`badge ${ESTADO_ENTREGA_BADGE[orden.estadoEntrega]}`}
+                  title={soloCitas(orden.items) ? 'Estado de la cita' : 'Estado de la entrega'}
+                >
+                  {etiquetaEstado(orden.estadoEntrega, orden.items)}
                 </span>
               </div>
               {orden.estadoPago !== 'pagada' && (

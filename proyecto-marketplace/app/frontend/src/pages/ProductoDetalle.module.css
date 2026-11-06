@@ -375,3 +375,25 @@
     transform: scale(1);
   }
 }
+
+.resenasGrid {
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 48rem);
+  gap: 2rem;
+  align-items: start;
+}
+
+.resenasResumen {
+  position: sticky;
+  top: 6rem;
+}
+
+@media (max-width: 860px) {
+  .resenasGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .resenasResumen {
+    position: static;
+  }
+}

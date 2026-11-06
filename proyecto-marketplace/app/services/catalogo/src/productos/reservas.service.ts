@@ -77,17 +77,20 @@ export class ReservasService {
     const ocupadas = await this.reservas
       .find({ productoId, fecha, estado: { $in: ['retenida', 'confirmada'] } })
       .exec();
-    const horasOcupadas = new Set(ocupadas.map((r) => r.horaInicio));
+    const cupos = producto.disponibilidad.cupos ?? 1;
+    const margen = producto.disponibilidad.margenMinutos ?? 0;
+    const usados = new Map<string, number>();
+    for (const r of ocupadas) usados.set(r.horaInicio, (usados.get(r.horaInicio) ?? 0) + 1);
 
-    const slots: { horaInicio: string; horaFin: string }[] = [];
+    const slots: { horaInicio: string; horaFin: string; cuposLibres: number }[] = [];
     for (const regla of reglasDelDia) {
       // Aritmética numérica (minutos) y no sobre texto: así el bucle siempre termina
       const finMin = aMinutos(regla.horaFin);
-      for (let ini = aMinutos(regla.horaInicio); ini + duracion <= finMin; ini += duracion) {
+      for (let ini = aMinutos(regla.horaInicio); ini + duracion <= finMin; ini += duracion + margen) {
         const horaInicio = deMinutos(ini);
         // Hoy solo se ofrecen los horarios que todavía no empezaron
-        if (!horasOcupadas.has(horaInicio) && !yaPaso(fecha, horaInicio, ahora)) {
-          slots.push({ horaInicio, horaFin: deMinutos(ini + duracion) });
+        if ((usados.get(horaInicio) ?? 0) < cupos && !yaPaso(fecha, horaInicio, ahora)) {
+          slots.push({ horaInicio, horaFin: deMinutos(ini + duracion), cuposLibres: cupos - (usados.get(horaInicio) ?? 0) });
         }
       }
     }
@@ -126,7 +129,7 @@ export class ReservasService {
         r.diaSemana === dia &&
         inicioCita >= aMinutos(r.horaInicio) &&
         inicioCita + duracionCita <= aMinutos(r.horaFin) &&
-        (inicioCita - aMinutos(r.horaInicio)) % duracionCita === 0,
+        (inicioCita - aMinutos(r.horaInicio)) % (duracionCita + (producto.disponibilidad.margenMinutos ?? 0)) === 0,
     );
     if (!reglaValida) {
       throw new BadRequestException('Ese horario no está dentro de la disponibilidad del vendedor');
@@ -139,24 +142,33 @@ export class ReservasService {
       expiraEn: { $lt: new Date() },
     });
 
-    try {
-      const reserva = await this.reservas.create({
-        productoId,
-        vendedorId: producto.vendedorId,
-        compradorId,
-        fecha: dto.fecha,
-        horaInicio: dto.horaInicio,
-        horaFin: sumarMinutos(dto.horaInicio, producto.disponibilidad.duracionMinutos),
-        estado: 'retenida',
-        expiraEn: new Date(Date.now() + MINUTOS_HOLD * 60_000),
-      });
-      return reserva;
-    } catch (err: any) {
-      if (err?.code === 11000) {
-        throw new BadRequestException('Ese horario ya no está disponible');
+    // Se toma el primer cupo libre de ese horario; el índice único (producto, fecha, hora, cupo)
+    // impide que dos compradores tomen el mismo cupo a la vez: si pierde la carrera, prueba el siguiente.
+    const cupos = producto.disponibilidad.cupos ?? 1;
+    for (let intento = 0; intento < cupos; intento++) {
+      const tomados = await this.reservas
+        .find({ productoId, fecha: dto.fecha, horaInicio: dto.horaInicio, estado: { $in: ['retenida', 'confirmada'] } })
+        .distinct('cupo');
+      let cupo = 1;
+      while (tomados.includes(cupo) && cupo <= cupos) cupo++;
+      if (cupo > cupos) break;
+      try {
+        return await this.reservas.create({
+          productoId,
+          vendedorId: producto.vendedorId,
+          compradorId,
+          fecha: dto.fecha,
+          horaInicio: dto.horaInicio,
+          horaFin: sumarMinutos(dto.horaInicio, producto.disponibilidad.duracionMinutos),
+          cupo,
+          estado: 'retenida',
+          expiraEn: new Date(Date.now() + MINUTOS_HOLD * 60_000),
+        });
+      } catch (err: any) {
+        if (err?.code !== 11000) throw err;
       }
-      throw err;
     }
+    throw new BadRequestException('Ese horario ya no está disponible');
   }
 
   async obtener(productoId: string, reservaId: string, usuarioId: string) {

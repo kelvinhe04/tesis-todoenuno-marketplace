@@ -76,8 +76,14 @@
   border-left: 3px solid transparent;
 }
 
+.navLink {
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease), padding-left 0.2s var(--ease);
+}
+
 .navLink:hover {
   background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  padding-left: 1.5rem;
 }
 
 .navLink.active {

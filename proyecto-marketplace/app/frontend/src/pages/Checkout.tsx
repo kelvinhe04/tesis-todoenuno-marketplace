@@ -57,10 +57,7 @@ export default function Checkout() {
   const [error, setError] = useState<string | null>(null)
   const [resultado, setResultado] = useState<{ aprobado: boolean; motivo?: string } | null>(null)
   const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false)
-  // PayPal Sandbox real (redirige a PayPal) o simulado (sin credenciales en el servidor)
-  const [paypalModo, setPaypalModo] = useState<'sandbox' | 'simulado'>('simulado')
   const [payuActivo, setPayuActivo] = useState(false) // PayU Latam sandbox configurado en el servidor
-  const [payuPrueba, setPayuPrueba] = useState<{ pais: string; marca: string; numero: string } | null>(null)
   const capturaIniciada = useRef(false)
   const [confirmandoPaypal, setConfirmandoPaypal] = useState(() => searchParams.get('paypal') === 'ok' && !!searchParams.get('token'))
 
@@ -83,9 +80,7 @@ export default function Checkout() {
     pagosApi
       .config()
       .then((c) => {
-        setPaypalModo(c.paypal)
         setPayuActivo(c.payu === 'sandbox')
-        setPayuPrueba(c.payuPrueba ?? null)
       })
       .catch(() => undefined)
   }, [])
@@ -469,27 +464,6 @@ export default function Checkout() {
               )}
             </div>
 
-            <p className={styles.sandboxNote}>
-              {metodo === 'payu' ? (
-                <>
-                  Entorno de prueba (PayU Latam Sandbox{payuPrueba ? `, cuenta de ${payuPrueba.pais}` : ''}): te llevaremos a PayU para escribir
-                  la tarjeta ahí. Usa la {payuPrueba?.marca ?? 'Visa'} <strong>{payuPrueba?.numero ?? '4097 4400 0000 0004'}</strong>, titular{' '}
-                  <strong>APPROVED</strong>, CVV <strong>777</strong> y vencimiento <strong>05/2028</strong>; el documento y el teléfono pueden ser
-                  inventados. Para ver un rechazo: titular <strong>REJECTED</strong>, CVV <strong>666</strong> y vencimiento <strong>07/2028</strong>.
-                  Ninguna transacción es real.
-                </>
-              ) : metodo === 'paypal' && paypalModo === 'sandbox' ? (
-                <>
-                  Entorno de prueba (PayPal Sandbox): al confirmar te llevaremos a PayPal para aprobar el pago con una cuenta
-                  de comprador de prueba. Ninguna transacción es real.
-                </>
-              ) : (
-                <>
-                  Entorno de prueba (sandbox): ninguna transacción es real. Usa cualquier número de tarjeta; uno terminado
-                  en <strong>0002</strong> simula un rechazo del banco.
-                </>
-              )}
-            </p>
 
             {metodo === 'tarjeta' && tarjetasGuardadas.length > 0 && (
               <div className={guardados.opciones}>
@@ -617,7 +591,7 @@ export default function Checkout() {
       <ConfirmModal
         abierto={mostrarConfirmacion}
         titulo="Confirmar compra"
-        mensaje={`Se enviará a "${envio.nombre}" en "${envio.direccion}" y se cobrará $${carrito.total.toFixed(2)} con ${metodo === 'tarjeta' ? (tarjetaSel ? `la tarjeta terminada en ${tarjetaSel.ultimos4}` : 'tarjeta') : 'PayPal'} (sandbox). ¿Confirmas la compra?`}
+        mensaje={`Se enviará a "${envio.nombre}" en "${envio.direccion}" y se cobrará $${carrito.total.toFixed(2)} con ${metodo === 'tarjeta' ? (tarjetaSel ? `la tarjeta terminada en ${tarjetaSel.ultimos4}` : 'tarjeta') : metodo === 'payu' ? 'PayU' : 'PayPal'} (sandbox). ¿Confirmas la compra?`}
         textoConfirmar="Sí, confirmar y pagar"
         procesando={procesando}
         onConfirmar={confirmarYPagar}

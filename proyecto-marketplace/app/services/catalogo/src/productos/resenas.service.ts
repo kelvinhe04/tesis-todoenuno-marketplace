@@ -25,7 +25,7 @@ export class ResenasService {
   // unicamente id y nombre) para mostrar quien escribio la resena.
   async listar(productoId: string) {
     const docs = await this.resenas.find({ productoId }).sort({ creadoEn: -1 }).lean().exec();
-    const ids = [...new Set(docs.map((d) => d.compradorId))];
+    const ids = [...new Set(docs.filter((d) => !d.nombreVisible).map((d) => d.compradorId))];
     const nombres = new Map<string, string>();
     await Promise.all(
       ids.map(async (id) => {
@@ -39,7 +39,8 @@ export class ResenasService {
     );
     return docs.map(({ compradorEmail: _correo, ...resto }) => ({
       ...resto,
-      compradorNombre: nombres.get(resto.compradorId) ?? 'Comprador',
+      compradorNombre: resto.nombreVisible ?? nombres.get(resto.compradorId) ?? 'Comprador',
+      utiles: resto.utiles ?? [],
     }));
   }
 
@@ -72,6 +73,24 @@ export class ResenasService {
 
     await this.recalcularPromedio(productoId);
     return this.listar(productoId);
+  }
+
+  // "Útil": alterna el voto de la persona (un voto por reseña); no se puede votar la propia reseña.
+  async alternarUtil(productoId: string, resenaId: string, usuarioId: string) {
+    const resena = await this.resenas.findOne({ _id: resenaId, productoId });
+    if (!resena) {
+      throw new NotFoundException('Reseña no encontrada');
+    }
+    if (resena.compradorId === usuarioId) {
+      throw new BadRequestException('No puedes votar tu propia reseña');
+    }
+    const yaVoto = (resena.utiles ?? []).includes(usuarioId);
+    const actualizada = await this.resenas.findByIdAndUpdate(
+      resenaId,
+      yaVoto ? { $pull: { utiles: usuarioId } } : { $addToSet: { utiles: usuarioId } },
+      { new: true },
+    );
+    return { utiles: actualizada?.utiles ?? [] };
   }
 
   private async verificarCompra(productoId: string, compradorId: string, ordenId: string, authorizationHeader: string) {

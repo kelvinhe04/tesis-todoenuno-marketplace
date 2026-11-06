@@ -6,8 +6,8 @@
 .inner {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 4.5rem;
+  justify-content: space-between;
+  gap: 3rem 4.5rem;
   padding: 3.5rem 0 4rem;
 }
 
@@ -59,7 +59,12 @@
   margin-bottom: 0.875rem;
 }
 
+.col a {
+  transition: color 0.18s var(--ease), transform 0.18s var(--ease);
+}
+
 .col a:hover {
+  transform: translateX(3px);
   color: var(--color-text);
 }
 

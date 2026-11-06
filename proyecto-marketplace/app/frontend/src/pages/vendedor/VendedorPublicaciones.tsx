@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { VendorLayout } from '../../components/VendorLayout'
+import { ConfirmModal } from '../../components/ConfirmModal'
 import { useAuth } from '../../context/AuthContext'
 import { catalogoApi, imagenPrincipal, type Producto } from '../../lib/api'
 import { IconEdit, IconImage, IconTrash } from '../../components/icons'
@@ -13,6 +14,8 @@ export default function VendedorPublicaciones() {
   const [cargando, setCargando] = useState(true)
   const [eliminando, setEliminando] = useState<string | null>(null)
   const [cambiando, setCambiando] = useState<string | null>(null)
+  const [aEliminar, setAEliminar] = useState<Producto | null>(null)
+  const [aPausar, setAPausar] = useState<Producto | null>(null)
 
   const cargar = () => {
     if (!usuario) return
@@ -26,7 +29,6 @@ export default function VendedorPublicaciones() {
   useEffect(cargar, [usuario])
 
   const eliminar = async (id: string) => {
-    if (!confirm('¿Eliminar esta publicación?')) return
     setEliminando(id)
     try {
       await catalogoApi.eliminar(id)
@@ -98,7 +100,7 @@ export default function VendedorPublicaciones() {
                   type="button"
                   className="btn btn-sm"
                   disabled={cambiando === p._id}
-                  onClick={() => alternarPausa(p)}
+                  onClick={() => (p.pausada ? alternarPausa(p) : setAPausar(p))}
                 >
                   {p.pausada ? 'Reactivar' : 'Pausar'}
                 </button>
@@ -115,7 +117,7 @@ export default function VendedorPublicaciones() {
                   className={styles.iconBtn}
                   aria-label="Eliminar"
                   disabled={eliminando === p._id}
-                  onClick={() => eliminar(p._id)}
+                  onClick={() => setAEliminar(p)}
                 >
                   <IconTrash width={16} height={16} />
                 </button>
@@ -124,6 +126,31 @@ export default function VendedorPublicaciones() {
           ))}
         </div>
       )}
+      <ConfirmModal
+        abierto={!!aEliminar}
+        titulo="Eliminar publicación"
+        mensaje={`Se eliminará "${aEliminar?.nombre ?? ''}" con todas sus fotos y reseñas. Esta acción no se puede deshacer.`}
+        textoConfirmar="Eliminar"
+        peligro
+        procesando={!!aEliminar && eliminando === aEliminar._id}
+        onConfirmar={async () => {
+          if (aEliminar) await eliminar(aEliminar._id)
+          setAEliminar(null)
+        }}
+        onCancelar={() => setAEliminar(null)}
+      />
+      <ConfirmModal
+        abierto={!!aPausar}
+        titulo="Pausar publicación"
+        mensaje={`"${aPausar?.nombre ?? ''}" dejará de aparecer en el catálogo y nadie podrá comprarla ni reservarla hasta que la reactives.`}
+        textoConfirmar="Pausar"
+        procesando={!!aPausar && cambiando === aPausar._id}
+        onConfirmar={async () => {
+          if (aPausar) await alternarPausa(aPausar)
+          setAPausar(null)
+        }}
+        onCancelar={() => setAPausar(null)}
+      />
     </VendorLayout>
   )
 }

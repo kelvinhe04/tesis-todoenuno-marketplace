@@ -13,6 +13,12 @@ export class ResenasController {
   }
 
   @UseGuards(JwtAuthGuard)
+  @Post(':resenaId/util')
+  alternarUtil(@Param('productoId') productoId: string, @Param('resenaId') resenaId: string, @Req() request: any) {
+    return this.resenas.alternarUtil(productoId, resenaId, request.usuario.sub);
+  }
+
+  @UseGuards(JwtAuthGuard)
   @Post()
   crear(@Param('productoId') productoId: string, @Body() dto: CrearResenaDto, @Req() request: any) {
     return this.resenas.crear(productoId, dto, request.usuario.sub, request.usuario.email, request.headers['authorization']);

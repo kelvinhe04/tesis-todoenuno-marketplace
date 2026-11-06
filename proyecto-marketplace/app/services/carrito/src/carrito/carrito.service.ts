@@ -16,6 +16,7 @@ interface ProductoCatalogo {
   imagenes?: string[];
   vendedorId: string;
   pausada?: boolean;
+  modalidadEntrega?: 'domicilio_cliente' | 'local_vendedor';
 }
 
 interface ReservaCatalogo {
@@ -163,6 +164,7 @@ export class CarritoService {
     const items: Array<{
       productoId: string;
       tipo: 'producto' | 'servicio';
+      modalidadEntrega?: 'domicilio_cliente' | 'local_vendedor';
       nombre: string;
       precio: number;
       cantidad: number;
@@ -195,6 +197,7 @@ export class CarritoService {
       items.push({
         productoId,
         tipo: producto.tipo,
+        modalidadEntrega: producto.tipo === 'servicio' ? producto.modalidadEntrega : undefined,
         nombre: producto.nombre,
         precio: producto.precio,
         cantidad,

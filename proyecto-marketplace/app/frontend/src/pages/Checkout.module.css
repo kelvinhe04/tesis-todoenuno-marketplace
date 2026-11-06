@@ -105,13 +105,6 @@
   background: var(--color-accent-soft);
 }
 
-.sandboxNote {
-  font-size: 0.8125rem;
-  background: var(--color-warning-soft);
-  color: var(--color-warning);
-  padding: 0.625rem 0.875rem;
-  border-radius: var(--radius-md);
-}
 
 .summary {
   padding: 1.5rem;

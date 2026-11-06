@@ -11,12 +11,11 @@ import { TarjetasGuardadas } from '../components/TarjetasGuardadas'
 import styles from './Perfil.module.css'
 
 export default function Perfil() {
-  const { usuario, actualizarPerfil, logout, cerrarSesionEnTodos } = useAuth()
+  const { usuario, actualizarPerfil, logout } = useAuth()
   const navigate = useNavigate()
   const [notificaciones, setNotificaciones] = useState<Notificacion[]>([])
   const [cargando, setCargando] = useState(true)
   const [confirmarSalir, setConfirmarSalir] = useState(false)
-  const [confirmarSalirTodos, setConfirmarSalirTodos] = useState(false)
   const [confirmarBorrarNotifs, setConfirmarBorrarNotifs] = useState(false)
   const [notifPorBorrar, setNotifPorBorrar] = useState<string | null>(null)
 
@@ -202,36 +201,18 @@ export default function Perfil() {
                 </span>
               )}
             </div>
-            <button type="button" className="btn" onClick={abrirEdicion} aria-label="Editar perfil">
-              <IconEdit width={16} height={16} />
-              Editar
-            </button>
-            {usuario.rol === 'comprador' && (
-              <BotonVender className="btn btn-primary" texto="Quiero vender" textoVendedor={null} />
-            )}
-            <button
-              type="button"
-              className="btn btn-danger"
-              onClick={() => setConfirmarSalir(true)}
-            >
-              Cerrar sesión
-            </button>
-            <button type="button" className="btn" onClick={() => setConfirmarSalirTodos(true)}>
-              Cerrar sesión en todos los dispositivos
-            </button>
-            <ConfirmModal
-              abierto={confirmarSalirTodos}
-              titulo="Cerrar sesión en todos los dispositivos"
-              mensaje="Se cerrarán tus sesiones abiertas en este y en cualquier otro dispositivo. Tendrás que iniciar sesión de nuevo."
-              textoConfirmar="Cerrar todas"
-              peligro
-              onConfirmar={async () => {
-                setConfirmarSalirTodos(false)
-                await cerrarSesionEnTodos()
-                navigate('/login')
-              }}
-              onCancelar={() => setConfirmarSalirTodos(false)}
-            />
+            <div className={styles.acciones}>
+              {usuario.rol === 'comprador' && (
+                <BotonVender className="btn btn-primary" texto="Quiero vender" textoVendedor={null} />
+              )}
+              <button type="button" className="btn" onClick={abrirEdicion} aria-label="Editar perfil">
+                <IconEdit width={16} height={16} />
+                Editar
+              </button>
+              <button type="button" className="btn btn-danger" onClick={() => setConfirmarSalir(true)}>
+                Cerrar sesión
+              </button>
+            </div>
             <ConfirmModal
               abierto={confirmarSalir}
               titulo="Cerrar sesión"
@@ -247,8 +228,12 @@ export default function Perfil() {
           </div>
         )}
 
-        <DireccionesGuardadas />
-        <TarjetasGuardadas />
+        <div style={{ marginTop: '0.75rem' }}>
+          <DireccionesGuardadas />
+        </div>
+        <div style={{ marginTop: '0.75rem' }}>
+          <TarjetasGuardadas />
+        </div>
        </div>
 
         <div className={styles.colNotif}>

@@ -1,11 +1,14 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { VendorLayout } from '../../components/VendorLayout'
-import { ApiError, catalogoApi, type ModalidadEntrega, type TipoPublicacion } from '../../lib/api'
+import { ApiError, catalogoApi, type ModalidadEntrega, type Producto, type TipoPublicacion } from '../../lib/api'
 import { IconImage, IconTrash } from '../../components/icons'
 import { MapaLocal } from '../../components/MapaLocal'
 import { BuscadorUbicacion } from '../../components/BuscadorUbicacion'
 import { Select } from '../../components/Select'
+import { ConfirmModal } from '../../components/ConfirmModal'
+import { ProductCard } from '../../components/ProductCard'
+import styles from './Vendedor.module.css'
 import { SelectorFecha } from '../../components/SelectorFecha'
 import { ahoraPanama, formatFecha } from '../../lib/estado'
 
@@ -42,6 +45,8 @@ export default function VendedorCrearProducto() {
   const [ubicacion, setUbicacion] = useState<{ lat: number; lng: number } | null>(null)
   const [enfocarMapa, setEnfocarMapa] = useState(0)
   const [duracionMinutos, setDuracionMinutos] = useState(60)
+  const [cupos, setCupos] = useState(1)
+  const [margenMinutos, setMargenMinutos] = useState(0)
   const [diasSeleccionados, setDiasSeleccionados] = useState<Set<number>>(new Set([1, 2, 3, 4, 5]))
   const [diasNoDisponibles, setDiasNoDisponibles] = useState<Set<string>>(new Set())
   const hoy = ahoraPanama().fecha
@@ -74,13 +79,16 @@ export default function VendedorCrearProducto() {
     const validos = candidatos.filter((f) => f.size <= MAX_TAMANO_IMAGEN)
     const nuevas = await Promise.all(validos.map(archivoADataUrl))
     setImagenes((prev) => [...prev, ...nuevas])
+    setModificado(true)
   }
 
   const eliminarImagen = (idx: number) => {
+    setModificado(true)
     setImagenes((prev) => prev.filter((_, i) => i !== idx))
   }
 
   const hacerPortada = (idx: number) => {
+    setModificado(true)
     setImagenes((prev) => {
       const copia = [...prev]
       const [seleccionada] = copia.splice(idx, 1)
@@ -108,6 +116,9 @@ export default function VendedorCrearProducto() {
 
   const [cargando, setCargando] = useState(editando)
   const [guardando, setGuardando] = useState(false)
+  const [imagenAEliminar, setImagenAEliminar] = useState<number | null>(null)
+  const [confirmarSalir, setConfirmarSalir] = useState(false)
+  const [modificado, setModificado] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
@@ -127,6 +138,8 @@ export default function VendedorCrearProducto() {
         if (p.ubicacion) setUbicacion(p.ubicacion)
         if (p.disponibilidad) {
           setDuracionMinutos(p.disponibilidad.duracionMinutos)
+          setCupos(p.disponibilidad.cupos ?? 1)
+          setMargenMinutos(p.disponibilidad.margenMinutos ?? 0)
           setDiasSeleccionados(new Set(p.disponibilidad.reglas.map((r) => r.diaSemana)))
           setDiasNoDisponibles(new Set(p.disponibilidad.diasNoDisponibles ?? []))
           if (p.disponibilidad.reglas[0]) {
@@ -181,6 +194,8 @@ export default function VendedorCrearProducto() {
           tipo === 'servicio'
             ? {
                 duracionMinutos,
+                cupos,
+                margenMinutos,
                 reglas: Array.from(diasSeleccionados).map((diaSemana) => ({ diaSemana, horaInicio, horaFin })),
                 diasNoDisponibles: Array.from(diasNoDisponibles).filter((f) => f >= hoy).sort(),
               }
@@ -200,6 +215,22 @@ export default function VendedorCrearProducto() {
     }
   }
 
+  const vistaPrevia: Producto = {
+    _id: 'vista-previa',
+    tipo,
+    nombre: nombre.trim() || 'Nombre de tu publicación',
+    marca: marca.trim() || undefined,
+    descripcion: descripcion,
+    categoria,
+    precio: Number(precio) || 0,
+    stock: Number(stock) || 0,
+    imagenes,
+    vendedorId: '',
+    calificacionPromedio: 0,
+    numResenas: 0,
+    creadoEn: '',
+  }
+
   return (
     <VendorLayout titulo={editando ? 'Editar publicación' : 'Crear publicación'}>
       {cargando ? (
@@ -207,7 +238,13 @@ export default function VendedorCrearProducto() {
           <div className="spinner" />
         </div>
       ) : (
-        <form onSubmit={onSubmit} className="card card-pad stack" style={{ maxWidth: '38rem' }}>
+        <div className={styles.formGrid}>
+        <form
+          onSubmit={onSubmit}
+          onChange={() => setModificado(true)}
+          className="card card-pad stack"
+          style={{ width: '100%', maxWidth: '38rem' }}
+        >
           <p className="hint-text leyenda-requerido">
             <b>*</b> Campo obligatorio
           </p>
@@ -410,6 +447,26 @@ export default function VendedorCrearProducto() {
                   <input id="horaFin" type="time" className="input" value={horaFin} onChange={(e) => setHoraFin(e.target.value)} />
                 </div>
               </div>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '0.75rem' }}>
+                <div className="field">
+                  <label htmlFor="cupos">Personas que atienden a la vez</label>
+                  <Select
+                    id="cupos"
+                    value={String(cupos)}
+                    onChange={(v) => setCupos(Number(v))}
+                    options={[1, 2, 3, 4, 5, 6, 8, 10].map((n) => ({ value: String(n), label: n === 1 ? '1 (una cita por horario)' : `${n} (hasta ${n} citas a la misma hora)` }))}
+                  />
+                </div>
+                <div className="field">
+                  <label htmlFor="margen">{modalidadEntrega === 'domicilio_cliente' ? 'Tiempo de traslado entre citas' : 'Descanso entre citas'}</label>
+                  <Select
+                    id="margen"
+                    value={String(margenMinutos)}
+                    onChange={(v) => setMargenMinutos(Number(v))}
+                    options={[0, 15, 30, 45, 60].map((m) => ({ value: String(m), label: m === 0 ? 'Ninguno' : `${m} min` }))}
+                  />
+                </div>
+              </div>
               <div style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap', marginTop: '0.5rem' }}>
                 {DIAS.map((nombreDia, dia) => (
                   <button
@@ -506,7 +563,7 @@ export default function VendedorCrearProducto() {
                   )}
                   <button
                     type="button"
-                    onClick={() => eliminarImagen(idx)}
+                    onClick={() => setImagenAEliminar(idx)}
                     aria-label="Eliminar imagen"
                     style={{
                       position: 'absolute',
@@ -568,12 +625,51 @@ export default function VendedorCrearProducto() {
             <button type="submit" className="btn btn-primary" disabled={guardando}>
               {guardando ? 'Guardando...' : 'Guardar'}
             </button>
-            <button type="button" className="btn" onClick={() => navigate(-1)}>
+            <button type="button" className="btn" onClick={() => (modificado ? setConfirmarSalir(true) : navigate(-1))}>
               Cancelar
             </button>
           </div>
         </form>
+        <aside className={styles.vistaPrevia} aria-label="Vista previa de la publicación">
+          <p className={styles.vistaPreviaTitulo}>Así se verá en el catálogo</p>
+          <div style={{ pointerEvents: 'none' }} aria-hidden="true">
+            <ProductCard producto={vistaPrevia} />
+          </div>
+          <p className="hint-text" style={{ marginTop: '0.75rem' }}>
+            Se actualiza mientras llenas el formulario. La primera foto es la portada.
+          </p>
+        </aside>
+        </div>
       )}
+      <ConfirmModal
+        abierto={imagenAEliminar !== null}
+        titulo="Eliminar foto"
+        mensaje={
+          imagenes.length <= 1
+            ? 'Es tu única foto. Toda publicación necesita al menos una, así que tendrás que subir otra antes de guardar.'
+            : 'La foto se quitará de la publicación cuando guardes los cambios.'
+        }
+        textoConfirmar="Eliminar"
+        peligro
+        onConfirmar={() => {
+          if (imagenAEliminar !== null) eliminarImagen(imagenAEliminar)
+          setImagenAEliminar(null)
+        }}
+        onCancelar={() => setImagenAEliminar(null)}
+      />
+      <ConfirmModal
+        abierto={confirmarSalir}
+        titulo="¿Descartar los cambios?"
+        mensaje="Tienes cambios sin guardar. Si sales ahora, se perderán."
+        textoConfirmar="Descartar y salir"
+        textoCancelar="Seguir editando"
+        peligro
+        onConfirmar={() => {
+          setConfirmarSalir(false)
+          navigate(-1)
+        }}
+        onCancelar={() => setConfirmarSalir(false)}
+      />
     </VendorLayout>
   )
 }

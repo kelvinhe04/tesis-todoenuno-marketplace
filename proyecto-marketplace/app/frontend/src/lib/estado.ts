@@ -1,4 +1,4 @@
-import type { EstadoEntrega, EstadoPago } from './api'
+import type { EstadoEntrega, EstadoPago, ItemOrden } from './api'
 
 export const ESTADO_PAGO_LABEL: Record<EstadoPago, string> = {
   pendiente: 'Pago pendiente',
@@ -16,13 +16,61 @@ export const ESTADO_ENTREGA_LABEL: Record<EstadoEntrega, string> = {
   pendiente: 'Pendiente',
   en_camino: 'En camino',
   entregada: 'Entregada',
+  no_asistio: 'No asistió',
+}
+
+// Una cita no se "entrega" ni va "en camino": se agenda, se completa o el cliente no se presenta.
+export const ESTADO_CITA_LABEL: Record<EstadoEntrega, string> = {
+  pendiente: 'Agendada',
+  en_camino: 'En curso',
+  entregada: 'Completada',
+  no_asistio: 'No asistió',
+}
+
+// Servicio a domicilio: el profesional viaja a casa del cliente
+export const ESTADO_CITA_DOMICILIO_LABEL: Record<EstadoEntrega, string> = {
+  pendiente: 'Agendada',
+  en_camino: 'En camino',
+  entregada: 'Completada',
+  no_asistio: 'Cliente ausente',
+}
+
+// Servicio en el local del vendedor: el cliente es quien va
+export const ESTADO_CITA_LOCAL_LABEL: Record<EstadoEntrega, string> = {
+  pendiente: 'Agendada',
+  en_camino: 'En curso',
+  entregada: 'Completada',
+  no_asistio: 'No asistió',
 }
 
 export const ESTADO_ENTREGA_BADGE: Record<EstadoEntrega, string> = {
   pendiente: 'badge-warning',
   en_camino: 'badge-neutral',
   entregada: 'badge-success',
+  no_asistio: 'badge-danger',
 }
+
+// ¿El ítem es una cita de servicio? (las órdenes antiguas pueden no traer `tipo`, pero sí la cita)
+export const esCita = (it: Pick<ItemOrden, 'tipo' | 'cita'>): boolean => it.tipo === 'servicio' || !!it.cita
+
+// Si TODOS los ítems son citas se usa el vocabulario de citas; con productos (o mezcla), el de entrega.
+export const soloCitas = (items: Array<Pick<ItemOrden, 'tipo' | 'cita'>>): boolean => items.length > 0 && items.every(esCita)
+
+type ItemEstado = Pick<ItemOrden, 'tipo' | 'cita' | 'modalidadEntrega'>
+
+// Textos de estado según lo que hay en los ítems: productos (o mezcla) -> entrega; solo citas -> según
+// la modalidad (domicilio / local); citas de modalidades distintas -> vocabulario genérico de cita.
+export function etiquetasDe(items: ItemEstado[]): Record<EstadoEntrega, string> {
+  if (!soloCitas(items)) return ESTADO_ENTREGA_LABEL
+  if (items.every((it) => it.modalidadEntrega === 'domicilio_cliente')) return ESTADO_CITA_DOMICILIO_LABEL
+  if (items.every((it) => it.modalidadEntrega === 'local_vendedor')) return ESTADO_CITA_LOCAL_LABEL
+  return ESTADO_CITA_LABEL
+}
+
+export const etiquetaEstado = (estado: EstadoEntrega, items: ItemEstado[]): string => etiquetasDe(items)[estado]
+
+// Solo citas a domicilio: el vendedor puede marcar "En camino" mientras viaja
+export const soloDomicilio = (items: ItemEstado[]): boolean => soloCitas(items) && items.every((it) => it.modalidadEntrega === 'domicilio_cliente')
 
 // Al comprador no se le muestra la cantidad exacta: solo si hay, si quedan pocos o si se agotó
 export const UMBRAL_POCO_STOCK = 5
@@ -102,6 +150,7 @@ export function quedanHorariosHoy(
   reglas: ReglaHorario[],
   duracionMinutos: number,
   ahora: { fecha: string; minutos: number } = ahoraPanama(),
+  margenMinutos = 0,
 ): boolean {
   const dia = diaSemanaDeFecha(ahora.fecha)
   return reglas
@@ -110,7 +159,7 @@ export function quedanHorariosHoy(
       const inicio = aMinutos(r.horaInicio)
       const espacio = aMinutos(r.horaFin) - inicio
       if (espacio < duracionMinutos) return false
-      const ultimoInicio = inicio + Math.floor((espacio - duracionMinutos) / duracionMinutos) * duracionMinutos
+      const ultimoInicio = inicio + Math.floor((espacio - duracionMinutos) / (duracionMinutos + margenMinutos)) * (duracionMinutos + margenMinutos)
       return ultimoInicio > ahora.minutos
     })
 }
@@ -121,13 +170,25 @@ export function primeraFechaDisponible(
   duracionMinutos: number,
   ahora: { fecha: string; minutos: number } = ahoraPanama(),
   diasNoDisponibles: string[] = [],
+  margenMinutos = 0,
 ): string {
   const dias = new Set(reglas.map((r) => r.diaSemana))
   for (let i = 0; i < 60; i++) {
     const fecha = sumarDiasFecha(ahora.fecha, i)
     if (!dias.has(diaSemanaDeFecha(fecha)) || diasNoDisponibles.includes(fecha)) continue
-    if (i === 0 && !quedanHorariosHoy(reglas, duracionMinutos, ahora)) continue
+    if (i === 0 && !quedanHorariosHoy(reglas, duracionMinutos, ahora, margenMinutos)) continue
     return fecha
   }
   return ahora.fecha
+}
+
+// '2026-07-05T...' -> 'Hace 4 meses'
+export function haceCuanto(iso: string, ahora: Date = new Date()): string {
+  const dias = Math.max(0, Math.floor((ahora.getTime() - new Date(iso).getTime()) / 86_400_000))
+  const plural = (n: number, u: string, p: string) => `Hace ${n} ${n === 1 ? u : p}`
+  if (dias < 1) return 'Hoy'
+  if (dias < 7) return plural(dias, 'día', 'días')
+  if (dias < 30) return plural(Math.floor(dias / 7), 'semana', 'semanas')
+  if (dias < 365) return plural(Math.floor(dias / 30), 'mes', 'meses')
+  return plural(Math.floor(dias / 365), 'año', 'años')
 }

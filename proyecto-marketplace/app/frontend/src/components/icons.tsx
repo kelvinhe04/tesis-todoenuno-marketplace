@@ -203,3 +203,9 @@ export const IconEyeOff = (p: SVGProps<SVGSVGElement>) => (
     <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
   </svg>
 )
+
+export const IconThumbUp = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M7.5 10.5v9H4.5a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zM7.5 10.5l3.3-6.2a1.6 1.6 0 0 1 3 1v3.2h4.6a1.6 1.6 0 0 1 1.6 1.9l-1.2 6.4a2 2 0 0 1-2 1.7H7.5" />
+  </svg>
+)

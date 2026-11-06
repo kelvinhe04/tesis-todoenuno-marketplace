@@ -13,6 +13,7 @@ const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
 interface ItemCarrito {
   productoId: string;
   tipo?: 'producto' | 'servicio';
+  modalidadEntrega?: 'domicilio_cliente' | 'local_vendedor';
   nombre: string;
   precio: number;
   cantidad: number;
@@ -68,6 +69,7 @@ export class OrdenesService {
       cantidad: it.cantidad,
       subtotal: it.subtotal,
       tipo: it.tipo,
+      modalidadEntrega: it.modalidadEntrega,
       estadoEntrega: 'pendiente',
       cita: it.cita ? { reservaId: it.cita.reservaId, fecha: it.cita.fecha, horaInicio: it.cita.horaInicio, horaFin: it.cita.horaFin } : undefined,
     }));
@@ -157,13 +159,21 @@ export class OrdenesService {
     return this.ordenes.find({ where: { compradorId }, order: { creadoEn: 'DESC' } });
   }
 
+  // Un ítem es una cita si es un servicio (las órdenes antiguas pueden no traer `tipo`, pero sí la cita).
+  private esCita(it: ItemOrden): boolean {
+    return it.tipo === 'servicio' || !!it.cita;
+  }
+
   // Estado de entrega de una orden a partir de sus ítems: entregada si todos lo están, pendiente si
-  // ninguno ha salido, y "en camino" en cualquier punto intermedio.
+  // ninguno ha salido, "no_asistio" si todas las citas quedaron sin asistir, y "en camino" en cualquier
+  // punto intermedio. Una mezcla de entregadas y no asistidas ya no tiene nada pendiente: cuenta como entregada.
   private agregarEntrega(items: ItemOrden[], respaldo: EstadoEntrega): EstadoEntrega {
     if (!items.length) return respaldo;
     const estados = items.map((it) => it.estadoEntrega ?? respaldo);
     if (estados.every((e) => e === 'entregada')) return 'entregada';
     if (estados.every((e) => e === 'pendiente')) return 'pendiente';
+    if (estados.every((e) => e === 'no_asistio')) return 'no_asistio';
+    if (estados.every((e) => e === 'entregada' || e === 'no_asistio')) return 'entregada';
     return 'en_camino';
   }
 
@@ -226,6 +236,10 @@ export class OrdenesService {
     if (orden.estadoPago !== 'pagada') {
       throw new BadRequestException('Solo se puede actualizar la entrega de una orden pagada');
     }
+    // "No asistió" solo tiene sentido para citas de servicio, no para productos.
+    if (dto.estadoEntrega === 'no_asistio' && !orden.items.filter((it) => it.vendedorId === vendedorId).every((it) => this.esCita(it))) {
+      throw new BadRequestException('"No asistió" solo se puede usar en citas de servicios');
+    }
     // Cada vendedor cambia solo la entrega de SUS ítems; la de la orden se recalcula con todos.
     const itemsActualizados = orden.items.map((it) =>
       it.vendedorId === vendedorId ? { ...it, estadoEntrega: dto.estadoEntrega } : { ...it, estadoEntrega: it.estadoEntrega ?? orden.estadoEntrega },
@@ -244,7 +258,7 @@ export class OrdenesService {
         .publish('orden.entregada', {
           ordenId: orden.id,
           compradorId: orden.compradorId,
-          items: recienEntregados.map((it) => ({ productoId: it.productoId, nombre: it.nombre })),
+          items: recienEntregados.map((it) => ({ productoId: it.productoId, nombre: it.nombre, esCita: this.esCita(it) })),
         })
         .catch(() => undefined);
     }

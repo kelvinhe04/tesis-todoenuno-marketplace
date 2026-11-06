@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 import styles from './Footer.module.css'
 
 export function Footer() {
+  const { usuario } = useAuth()
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.inner}`}>
@@ -25,13 +27,19 @@ export function Footer() {
           <div className={styles.col}>
             <h4>Vender</h4>
             <Link to="/vendedor">Panel de vendedor</Link>
-            <span>Publicar producto</span>
-            <span>Publicar servicio</span>
+            <Link to="/vendedor/publicaciones/nueva">Publicar producto</Link>
+            <Link to="/vendedor/publicaciones/nueva">Publicar servicio</Link>
           </div>
           <div className={styles.col}>
             <h4>Cuenta</h4>
-            <Link to="/login">Iniciar sesión</Link>
-            <Link to="/registro">Crear cuenta</Link>
+            {usuario ? (
+              <Link to="/perfil">Mi perfil</Link>
+            ) : (
+              <>
+                <Link to="/login">Iniciar sesión</Link>
+                <Link to="/registro">Crear cuenta</Link>
+              </>
+            )}
           </div>
         </div>
       </div>

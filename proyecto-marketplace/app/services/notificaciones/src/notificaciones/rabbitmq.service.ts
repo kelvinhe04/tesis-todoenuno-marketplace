@@ -46,7 +46,7 @@ interface EventoPago {
 interface EventoEntrega {
   ordenId: string;
   compradorId: string;
-  items?: Array<{ productoId: string; nombre: string }>;
+  items?: Array<{ productoId: string; nombre: string; esCita?: boolean }>;
 }
 
 @Injectable()
@@ -159,16 +159,18 @@ export class RabbitmqService implements OnModuleInit {
   private async avisarResena(evento: EventoEntrega) {
     for (const item of evento.items ?? []) {
       if (await this.notificacionesService.existeAvisoResena(evento.compradorId, evento.ordenId, item.productoId)) continue;
-      const mensaje = `Tu pedido «${item.nombre}» fue entregado. ¿Qué tal te fue? Deja tu reseña.`;
+      // Una cita no se "entrega": se completa
+      const hecho = item.esCita ? `Tu cita «${item.nombre}» fue completada` : `Tu pedido «${item.nombre}» fue entregado`;
+      const mensaje = `${hecho}. ¿Qué tal te fue? Deja tu reseña.`;
       await this.notificacionesService.crear(evento.compradorId, 'resena_pendiente', mensaje, evento.ordenId, item.productoId);
       await this.correoDeOrden(
         evento.compradorId,
         'TodoEnUno — cuéntanos qué te pareció',
         {
-          etiqueta: 'Entregado',
+          etiqueta: item.esCita ? 'Completada' : 'Entregado',
           tono: 'ok',
           titulo: '¿Qué tal te fue?',
-          mensaje: `Tu pedido «${item.nombre}» fue entregado. Tu opinión ayuda a otros compradores y al vendedor.`,
+          mensaje: `${hecho}. Tu opinión ayuda a otros compradores y al vendedor.`,
           boton: { texto: 'Dejar mi reseña', url: `${FRONTEND_URL}/productos/${item.productoId}#resenas` },
         },
         evento.ordenId,

@@ -198,11 +198,21 @@
   color: var(--color-text);
   font-size: 0.8125rem;
   font-weight: 600;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
 }
 
 .catCard:hover {
-  border-color: var(--color-border-strong);
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.catCard:hover .catIcon {
+  transform: scale(1.12);
+}
+
+.catIcon {
+  transition: transform 0.25s var(--ease);
 }
 
 .catIcon {

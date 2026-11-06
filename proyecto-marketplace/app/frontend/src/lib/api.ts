@@ -183,6 +183,8 @@ export interface ReglaDisponibilidad {
 
 export interface Disponibilidad {
   duracionMinutos: number
+  cupos?: number
+  margenMinutos?: number
   reglas: ReglaDisponibilidad[]
   diasNoDisponibles?: string[]
 }
@@ -285,6 +287,7 @@ export interface Resena {
   ordenId: string
   calificacion: number
   comentario?: string
+  utiles: string[]
   creadoEn: string
 }
 
@@ -296,6 +299,8 @@ export interface CrearResenaPayload {
 
 export const resenasApi = {
   listar: (productoId: string) => request<Resena[]>(`/catalogo/${productoId}/resenas`),
+  alternarUtil: (productoId: string, resenaId: string) =>
+    request<{ utiles: string[] }>(`/catalogo/${productoId}/resenas/${resenaId}/util`, { method: 'POST' }),
   crear: (productoId: string, dto: CrearResenaPayload) =>
     request<Resena[]>(`/catalogo/${productoId}/resenas`, { method: 'POST', body: JSON.stringify(dto) }),
 }
@@ -303,6 +308,7 @@ export const resenasApi = {
 // ---------------- disponibilidad / reservas (citas de servicios) ----------------
 
 export interface SlotDisponible {
+  cuposLibres?: number
   horaInicio: string
   horaFin: string
 }
@@ -374,7 +380,7 @@ export const carritoApi = {
 // ---------------- ordenes ----------------
 
 export type EstadoPago = 'pendiente' | 'pagada' | 'rechazada'
-export type EstadoEntrega = 'pendiente' | 'en_camino' | 'entregada'
+export type EstadoEntrega = 'pendiente' | 'en_camino' | 'entregada' | 'no_asistio'
 
 export interface ItemOrden {
   productoId: string
@@ -384,6 +390,7 @@ export interface ItemOrden {
   cantidad: number
   subtotal: number
   tipo?: TipoPublicacion
+  modalidadEntrega?: ModalidadEntrega
   cita?: { reservaId: string; fecha: string; horaInicio: string; horaFin: string }
   estadoEntrega?: EstadoEntrega
 }

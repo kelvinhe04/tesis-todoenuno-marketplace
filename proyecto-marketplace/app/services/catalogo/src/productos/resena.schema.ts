@@ -20,6 +20,14 @@ export class Resena extends Document {
 
   @Prop({ required: false, maxlength: 500 })
   comentario?: string;
+
+  // Solo reseñas de ejemplo (seed): nombre a mostrar sin necesidad de una cuenta real
+  @Prop({ required: false })
+  nombreVisible?: string;
+
+  // Ids de quienes marcaron la reseña como "Útil" (uno por persona)
+  @Prop({ type: [String], default: [] })
+  utiles: string[];
 }
 
 export const ResenaSchema = SchemaFactory.createForClass(Resena);
