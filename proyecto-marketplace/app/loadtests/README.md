@@ -55,15 +55,15 @@ Límites de la prueba: solo lecturas y login (no compras), una sola instancia de
 
 ## Escalabilidad del catálogo (RNF-03)
 
-`bash loadtests/escalar-catalogo.sh` (usa `docker-compose.escala.yml` para poder tener varias instancias) repite una prueba de **estrés sin pausas** (`estres.js`, 100 usuarios, 45 s, listado + detalle) con 1, 2 y 3 instancias del servicio de catálogo y reinicia el gateway en cada cambio. Dos rondas (`resultados/escalabilidad/ronda1|ronda2`):
+`bash loadtests/escalar-catalogo.sh` (usa `docker-compose.escala.yml` para poder tener varias instancias) repite una prueba de **estrés sin pausas** (`estres.js`, 100 usuarios, 45 s, listado + detalle) con 1, 2 y 3 instancias del servicio de catálogo y reinicia el gateway en cada cambio. Tres rondas (`resultados/escalabilidad/ronda1|ronda2|ronda3`). Las rondas 1 y 2 se hicieron con otros programas abiertos en el equipo (un navegador con Grafana y Gmail, entre otros); la **ronda 3 se hizo con todo lo demás cerrado**.
 
-| Instancias de catálogo | req/s (ronda 1 / ronda 2 / promedio) | Errores (promedio) |
-|---|---|---|
-| 1 | 460 / 399 / **429** | ~3.2 % |
-| 2 | 753 / 623 / **688** (+60 %) | 0.03 % |
-| 3 | 642 / 758 / **700** (+63 %) | ~0.2 % |
+| Instancias de catálogo | Ronda 1 (req/s) | Ronda 2 | **Ronda 3 (equipo limpio)** | Errores, ronda 3 |
+|---|---|---|---|---|
+| 1 | 460 | 399 | **470** | 2.76 % |
+| 2 | 753 | 623 | **737** (+57 % vs 1) | 0.05 % |
+| 3 | 642 | 758 | **937** (+99 % vs 1) | 0.04 % |
 
-Pasar de 1 a 2 instancias mejora claramente el rendimiento y casi elimina los errores; la tercera no aporta una mejora apreciable porque el límite se traslada a otros componentes (gateway, MongoDB y el propio generador de carga, que corre en el mismo equipo). El gateway reparte las solicitudes entre instancias por DNS de Docker (las 3 instancias mostraron CPU alta).
+Con el equipo limpio el rendimiento sube con cada instancia (1 -> 2 -> 3: 470 -> 737 -> 937 req/s) y los errores casi desaparecen. En las rondas con procesos de fondo la tercera instancia no mostró mejora (642 y 758): los otros procesos del equipo (el generador k6 y las herramientas de medición ya comparten máquina con el sistema) restan capacidad y distorsionan sobre todo las configuraciones más exigentes. La variación entre rondas de una misma configuración llega al 15-25 %, por eso las cifras deben leerse como orden de magnitud. El gateway reparte las solicitudes entre instancias por el DNS de Docker (todas las instancias mostraron CPU alta).
 
 ## Pruebas de requerimientos no funcionales
 
