@@ -52,3 +52,26 @@ Umbrales (p95 < 800 ms y < 1 % de errores): **antes fallaban los 3 perfiles; des
 **Optimización:** las respuestas del catálogo ya no incluyen las fotos: mandan una URL por foto (`/api/catalogo/:id/imagen/:n`). Ese endpoint sirve la foto original o una miniatura (`?w=480`, redimensionada con `sharp` y guardada en memoria), con `ETag` y `Cache-Control` para que el navegador no la vuelva a pedir. Listado: 9.7 MB -> 13 KB; detalle: 1 MB -> 1.4 KB; miniatura típica: 8 KB frente a 394 KB del original. Las fotos siguen guardadas igual en Mongo.
 
 Límites de la prueba: solo lecturas y login (no compras), una sola instancia de cada servicio, y el generador de carga corre en el mismo equipo que el sistema.
+
+## Escalabilidad del catálogo (RNF-03)
+
+`bash loadtests/escalar-catalogo.sh` (usa `docker-compose.escala.yml` para poder tener varias instancias) repite una prueba de **estrés sin pausas** (`estres.js`, 100 usuarios, 45 s, listado + detalle) con 1, 2 y 3 instancias del servicio de catálogo y reinicia el gateway en cada cambio. Dos rondas (`resultados/escalabilidad/ronda1|ronda2`):
+
+| Instancias de catálogo | req/s (ronda 1 / ronda 2 / promedio) | Errores (promedio) |
+|---|---|---|
+| 1 | 460 / 399 / **429** | ~3.2 % |
+| 2 | 753 / 623 / **688** (+60 %) | 0.03 % |
+| 3 | 642 / 758 / **700** (+63 %) | ~0.2 % |
+
+Pasar de 1 a 2 instancias mejora claramente el rendimiento y casi elimina los errores; la tercera no aporta una mejora apreciable porque el límite se traslada a otros componentes (gateway, MongoDB y el propio generador de carga, que corre en el mismo equipo). El gateway reparte las solicitudes entre instancias por DNS de Docker (las 3 instancias mostraron CPU alta).
+
+## Pruebas de requerimientos no funcionales
+
+`python tests/api/pruebas_rnf.py` (con `SMTP_HOST` vacío en `.env`): crea cuentas y una publicación temporales y las borra al terminar. Resultados del 2026-11-07:
+
+| Prueba | Resultado |
+|---|---|
+| RNF-01, `GET /carrito` (200 consultas) | media 12.7 ms, p95 30.3 ms, máx 33 ms (< 500 ms) |
+| RNF-06, pago aprobado -> orden "pagada" (10 compras) | media 65 ms, máx 98 ms |
+| RNF-06, pago aprobado -> notificación al comprador (10 compras) | media 39 ms, máx 71 ms |
+| RNF-02, con el servicio de Notificaciones apagado | el pago se aprueba, la orden queda "pagada" y el vendedor la ve; al encender Notificaciones, el aviso llega en ~1.2 s (RabbitMQ conserva el mensaje en la cola) |

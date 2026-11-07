@@ -1,0 +1,5 @@
+# Override solo para la prueba de escalabilidad (RNF-03): quita el puerto publicado del catalogo para poder
+# levantar varias instancias. Uso: docker compose -f docker-compose.yml -f docker-compose.escala.yml up -d --scale catalogo=3 catalogo
+services:
+  catalogo:
+    ports: !reset []
