@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ApiError, catalogoApi, imagenPrincipal, ordenesApi, type EstadoPago, type ItemOrden, type Orden } from '../lib/api'
 import { ConfirmModal } from '../components/ConfirmModal'
 import { IconImage } from '../components/icons'
-import { ESTADO_ENTREGA_BADGE, ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, esCita, etiquetaEstado, formatFecha, formatHora12h, puedeCancelarCita, soloCitas } from '../lib/estado'
+import { ESTADO_ENTREGA_BADGE, ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, esCita, etiquetaEstado, formatFecha, formatFechaHora, formatHora12h, puedeCancelarCita, soloCitas } from '../lib/estado'
 import styles from './Ordenes.module.css'
 
 const TABS: Array<{ id: EstadoPago | 'todas'; label: string }> = [
@@ -16,6 +16,7 @@ const TABS: Array<{ id: EstadoPago | 'todas'; label: string }> = [
 ]
 
 export default function Ordenes() {
+  const navigate = useNavigate()
   const [ordenes, setOrdenes] = useState<Orden[]>([])
   const [cargando, setCargando] = useState(true)
   const [tab, setTab] = useState<EstadoPago | 'todas'>('todas')
@@ -88,11 +89,19 @@ export default function Ordenes() {
       ) : (
         <div className={styles.list}>
           {filtradas.map((orden) => (
-            <div key={orden.id} className={`card ${styles.row}`}>
+            <div
+              key={orden.id}
+              // Con un solo ítem, toda la tarjeta abre el producto (como en el carrito); los botones y enlaces siguen con lo suyo
+              className={`card ${styles.row} ${orden.items.length === 1 ? styles.clicable : ''}`}
+              onClick={(e) => {
+                if (orden.items.length !== 1 || (e.target as HTMLElement).closest('button, a')) return
+                navigate(`/productos/${orden.items[0].productoId}`)
+              }}
+            >
               <div className={styles.rowMeta}>
                 <p style={{ fontWeight: 700 }}>#{orden.id.slice(0, 8)}</p>
                 <p className="muted" style={{ fontSize: '0.8125rem' }}>
-                  {new Date(orden.creadoEn).toLocaleDateString('es-PA', { day: '2-digit', month: 'short', year: 'numeric' })}
+                  {formatFechaHora(orden.creadoEn)}
                 </p>
               </div>
               <div className={styles.rowItems}>
@@ -120,6 +129,17 @@ export default function Ordenes() {
                           Cita: {formatFecha(it.cita.fecha)} · {formatHora12h(it.cita.horaInicio)} – {formatHora12h(it.cita.horaFin)}
                         </p>
                       )}
+                      {/* Cancelar solo se permite hasta 1 h antes: si ya pasó ese límite, se explica por qué no hay botón */}
+                      {it.cita &&
+                        esCita(it) &&
+                        (orden.estadoPago === 'pagada' || orden.estadoPago === 'por_cobrar') &&
+                        (it.estadoEntrega ?? 'pendiente') === 'pendiente' &&
+                        !puedeCancelarCita(it, orden.estadoPago) &&
+                        Date.parse(`${it.cita.fecha}T${it.cita.horaInicio}:00-05:00`) > Date.now() && (
+                          <p style={{ fontSize: '0.8125rem', color: 'var(--color-warning, #9a6700)', fontWeight: 600 }}>
+                            Ya no se puede cancelar: falta menos de 1 hora para la cita.
+                          </p>
+                        )}
                       {it.estadoEntrega === 'cancelada' && it.reembolso !== undefined && (
                         <p className="muted" style={{ fontSize: '0.8125rem' }}>
                           Reembolso de ${it.reembolso.toFixed(2)} (simulado)

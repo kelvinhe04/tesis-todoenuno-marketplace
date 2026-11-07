@@ -12,7 +12,7 @@ import styles from './Perfil.module.css'
 
 // A dónde lleva cada notificación al tocarla
 function destinoNotificacion(n: Notificacion): string {
-  if (n.tipo === 'nueva_orden_vendedor') return '/vendedor/ordenes'
+  if (n.tipo === 'nueva_orden_vendedor' || n.tipo === 'cita_recordatorio_vendedor') return '/vendedor/ordenes'
   if (n.tipo === 'resena_pendiente' && n.productoId) return `/productos/${n.productoId}#resenas`
   return '/ordenes'
 }

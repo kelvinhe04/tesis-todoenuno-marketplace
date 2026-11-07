@@ -35,6 +35,10 @@ export class Reserva extends Document {
 
   @Prop({ required: false })
   expiraEn?: Date;
+
+  // true cuando ya se mandó el recordatorio de "tu cita empieza en 30 min" (se manda una sola vez)
+  @Prop({ default: false })
+  recordatorioEnviado: boolean;
 }
 
 export const ReservaSchema = SchemaFactory.createForClass(Reserva);

@@ -57,11 +57,13 @@ export function SelectorFecha({ value, min, diasPermitidos, onChange, diasBloque
         {Array.from({ length: diasEnMes }, (_, i) => {
           const dia = i + 1
           const fecha = aFechaISO(new Date(mesVisible.anio, mesVisible.mes, dia))
-          const habilitado =
-            fecha >= min &&
-            diasPermitidos.has(new Date(mesVisible.anio, mesVisible.mes, dia).getDay()) &&
-            !diasBloqueados?.has(fecha)
           const seleccionado = marcados ? marcados.has(fecha) : fecha === value
+          // Un día marcado (modo multi-selección) siempre se puede tocar para desmarcarlo, aunque ya no sea de atención
+          const habilitado =
+            (fecha >= min &&
+              diasPermitidos.has(new Date(mesVisible.anio, mesVisible.mes, dia).getDay()) &&
+              !diasBloqueados?.has(fecha)) ||
+            (!!marcados && seleccionado)
           return (
             <button
               type="button"

@@ -37,7 +37,7 @@ export function ProductCard({ producto }: { producto: Producto }) {
         </span>
         {producto.marca && <span className={styles.marca}>{producto.marca}</span>}
         <h3 className={styles.nombre}>{producto.nombre}</h3>
-        <Stars valor={producto.calificacionPromedio} />
+        <Stars valor={producto.calificacionPromedio} resenas={producto.numResenas ?? 0} />
         <div className={styles.footer}>
           <span className={styles.precio}>${producto.precio.toFixed(2)}</span>
           {producto.tipo === 'producto' && <StockBadge stock={producto.stock} soloAlertas />}

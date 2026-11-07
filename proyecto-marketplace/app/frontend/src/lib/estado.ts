@@ -103,6 +103,15 @@ export function formatHora12h(hora: string): string {
   return `${h12}:${String(m).padStart(2, '0')} ${periodo}`
 }
 
+// Instante ISO (creadoEn) -> '06 nov 2026 · 3:12 p. m.' en la hora de Panamá (no la del navegador)
+export function formatFechaHora(iso: string): string {
+  const d = new Date(iso)
+  const zona = { timeZone: 'America/Panama' } as const
+  const fecha = d.toLocaleDateString('es-PA', { ...zona, day: '2-digit', month: 'short', year: 'numeric' }).replace(/\./g, '')
+  const hora = d.toLocaleTimeString('es-PA', { ...zona, hour: 'numeric', minute: '2-digit', hour12: true }).replace(/\s/g, ' ').toLowerCase()
+  return `${fecha} · ${hora}`
+}
+
 // Date -> 'AAAA-MM-DD' en hora LOCAL (toISOString usaría UTC y desfasaría el día por la noche)
 export function aFechaISO(d: Date): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
@@ -213,9 +222,9 @@ export function citaYaEmpezo(it: Pick<ItemOrden, 'cita'>, ahora: number = Date.n
 }
 
 // Una cita se puede cancelar hasta estas horas antes de empezar (el servidor lo vuelve a comprobar)
-export const HORAS_MIN_CANCELACION = 2
+export const HORAS_MIN_CANCELACION = 1
 
-// ¿Se puede cancelar esta cita? Debe estar agendada, la orden pagada o con pago en el lugar, y faltar 2 h o más.
+// ¿Se puede cancelar esta cita? Debe estar agendada, la orden pagada o con pago en el lugar, y faltar 1 h o más.
 // Las citas están en hora de Panamá (UTC-5 fijo, sin horario de verano).
 export function puedeCancelarCita(it: ItemOrden, estadoPago: EstadoPago, ahora: number = Date.now()): boolean {
   if (!it.cita || !esCita(it)) return false

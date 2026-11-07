@@ -59,7 +59,16 @@ export function Header() {
         .catch(() => setNotificacionesSinLeer(0))
     cargar()
     window.addEventListener(EVENTO_NOTIFICACIONES, cargar)
-    return () => window.removeEventListener(EVENTO_NOTIFICACIONES, cargar)
+    // Avisos que llegan mientras la página está abierta (nueva orden, recordatorio de cita): se consulta cada 30 s
+    // y al volver a la pestaña, para que el número de la campana se actualice solo
+    const reloj = setInterval(cargar, 30_000)
+    const alVolver = () => document.visibilityState === 'visible' && cargar()
+    document.addEventListener('visibilitychange', alVolver)
+    return () => {
+      window.removeEventListener(EVENTO_NOTIFICACIONES, cargar)
+      clearInterval(reloj)
+      document.removeEventListener('visibilitychange', alVolver)
+    }
   }, [usuario])
 
   const buscar = (e: FormEvent) => {

@@ -1,5 +1,5 @@
-import { useEffect, useState, type FormEvent } from 'react'
-import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
+import { useBlocker, useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import { VendorLayout } from '../../components/VendorLayout'
 import { ApiError, catalogoApi, type ModalidadEntrega, type Producto, type TipoPublicacion } from '../../lib/api'
 import { IconImage, IconTrash } from '../../components/icons'
@@ -85,16 +85,13 @@ export default function VendedorCrearProducto() {
     const validos = candidatos.filter((f) => f.size <= MAX_TAMANO_IMAGEN)
     const nuevas = await Promise.all(validos.map(archivoADataUrl))
     setImagenes((prev) => [...prev, ...nuevas])
-    setModificado(true)
   }
 
   const eliminarImagen = (idx: number) => {
-    setModificado(true)
     setImagenes((prev) => prev.filter((_, i) => i !== idx))
   }
 
   const hacerPortada = (idx: number) => {
-    setModificado(true)
     setImagenes((prev) => {
       const copia = [...prev]
       const [seleccionada] = copia.splice(idx, 1)
@@ -109,6 +106,10 @@ export default function VendedorCrearProducto() {
       else next.add(dia)
       return next
     })
+    // Si deja de atender ese día de la semana, sus feriados marcados ya no tienen sentido: se quitan
+    if (diasSeleccionados.has(dia)) {
+      setDiasNoDisponibles((prev) => new Set([...prev].filter((f) => new Date(`${f}T00:00:00`).getDay() !== dia)))
+    }
   }
 
   const alternarDiaNoDisponible = (fecha: string) => {
@@ -123,9 +124,37 @@ export default function VendedorCrearProducto() {
   const [cargando, setCargando] = useState(editando)
   const [guardando, setGuardando] = useState(false)
   const [imagenAEliminar, setImagenAEliminar] = useState<number | null>(null)
-  const [confirmarSalir, setConfirmarSalir] = useState(false)
-  const [modificado, setModificado] = useState(false)
   const [error, setError] = useState<string | null>(null)
+
+  // ¿Hay cambios sin guardar? Se compara el formulario con cómo estaba al cargar (así también cuentan los botones
+  // de días, el calendario, el mapa, etc., no solo los inputs). De las fotos basta el tamaño y el final de cada una.
+  const actual = JSON.stringify({
+    tipo, nombre, marca, descripcion, categoria, precio, stock, modalidadEntrega, direccionLocal, ubicacion,
+    duracionMinutos, cupos, margenMinutos, horaInicio, horaFin,
+    dias: [...diasSeleccionados].sort(),
+    noDisp: [...diasNoDisponibles].sort(),
+    fotos: imagenes.map((i) => `${i.length}:${i.slice(-24)}`),
+  })
+  const inicialRef = useRef<string | null>(null)
+  const guardadoRef = useRef(false)
+  useEffect(() => {
+    if (!cargando && inicialRef.current === null) inicialRef.current = actual
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cargando])
+  const hayCambios = inicialRef.current !== null && actual !== inicialRef.current
+  const sucio = hayCambios && !guardadoRef.current
+
+  // Al irse a otra sección (menú, enlaces, botón Atrás) con cambios sin guardar: preguntar.
+  // guardadoRef se lee en el momento de navegar (no el valor del último render): al guardar se marca y se navega enseguida.
+  const bloqueo = useBlocker(({ currentLocation, nextLocation }) => hayCambios && !guardadoRef.current && currentLocation.pathname !== nextLocation.pathname)
+
+  // Cerrar o recargar la pestaña con cambios sin guardar: aviso del navegador
+  useEffect(() => {
+    if (!sucio) return
+    const aviso = (e: BeforeUnloadEvent) => e.preventDefault()
+    window.addEventListener('beforeunload', aviso)
+    return () => window.removeEventListener('beforeunload', aviso)
+  }, [sucio])
 
   useEffect(() => {
     if (!id) return
@@ -160,28 +189,28 @@ export default function VendedorCrearProducto() {
       .finally(() => setCargando(false))
   }, [id])
 
-  const onSubmit = async (e: FormEvent) => {
-    e.preventDefault()
+  // Valida y guarda; devuelve true si se guardó (la navegación la decide quien llama)
+  const guardar = async (): Promise<boolean> => {
     setError(null)
     if (imagenes.length === 0) {
       setErrorImagenes('Agrega al menos una foto de tu publicación.')
       document.getElementById('fotos-publicacion')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-      return
+      return false
     }
     if (tipo === 'servicio' && modalidadEntrega === 'local_vendedor' && !ubicacion) {
       setError('Marca la ubicación exacta de tu local en el mapa.')
-      return
+      return false
     }
     if (tipo === 'servicio') {
       const aMin = (h: string) => Number(h.slice(0, 2)) * 60 + Number(h.slice(3, 5))
       if (!horaInicio || !horaFin || aMin(horaFin) - aMin(horaInicio) < duracionMinutos) {
         setError(`La hora de fin debe ser posterior a la de inicio y dejar espacio para al menos una cita de ${duracionMinutos} min.`)
-        return
+        return false
       }
     }
     if (tipo === 'servicio' && diasSeleccionados.size === 0) {
       setError('Selecciona al menos un día de atención para que te puedan agendar citas.')
-      return
+      return false
     }
     setGuardando(true)
     try {
@@ -213,12 +242,19 @@ export default function VendedorCrearProducto() {
       } else {
         await catalogoApi.crear(payload)
       }
-      navigate('/vendedor/publicaciones')
+      guardadoRef.current = true
+      return true
     } catch (err) {
       setError(err instanceof ApiError ? err.message : 'No se pudo guardar la publicación')
+      return false
     } finally {
       setGuardando(false)
     }
+  }
+
+  const onSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+    if (await guardar()) navigate('/vendedor/publicaciones')
   }
 
   const vistaPrevia: Producto = {
@@ -247,7 +283,6 @@ export default function VendedorCrearProducto() {
         <div className={styles.formGrid}>
         <form
           onSubmit={onSubmit}
-          onChange={() => setModificado(true)}
           className="card card-pad stack"
           style={{ width: '100%', maxWidth: '38rem' }}
         >
@@ -631,7 +666,7 @@ export default function VendedorCrearProducto() {
             <button type="submit" className="btn btn-primary" disabled={guardando}>
               {guardando ? 'Guardando...' : 'Guardar'}
             </button>
-            <button type="button" className="btn" onClick={() => (modificado ? setConfirmarSalir(true) : navigate(-1))}>
+            <button type="button" className="btn" onClick={() => navigate(-1)}>
               Cancelar
             </button>
           </div>
@@ -664,17 +699,23 @@ export default function VendedorCrearProducto() {
         onCancelar={() => setImagenAEliminar(null)}
       />
       <ConfirmModal
-        abierto={confirmarSalir}
-        titulo="¿Descartar los cambios?"
-        mensaje="Tienes cambios sin guardar. Si sales ahora, se perderán."
-        textoConfirmar="Descartar y salir"
+        abierto={bloqueo.state === 'blocked'}
+        titulo="Tienes cambios sin guardar"
+        mensaje="¿Quieres guardar los cambios antes de salir o descartarlos?"
+        textoConfirmar="Descartar"
         textoCancelar="Seguir editando"
+        textoExtra="Guardar"
+        procesando={guardando}
         peligro
         onConfirmar={() => {
-          setConfirmarSalir(false)
-          navigate(-1)
+          guardadoRef.current = true
+          bloqueo.proceed?.()
         }}
-        onCancelar={() => setConfirmarSalir(false)}
+        onExtra={async () => {
+          if (await guardar()) bloqueo.proceed?.()
+          else bloqueo.reset?.()
+        }}
+        onCancelar={() => bloqueo.reset?.()}
       />
     </VendorLayout>
   )

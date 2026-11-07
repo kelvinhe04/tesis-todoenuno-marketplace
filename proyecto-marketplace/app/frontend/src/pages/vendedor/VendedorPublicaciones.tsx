@@ -5,6 +5,8 @@ import { ConfirmModal } from '../../components/ConfirmModal'
 import { useAuth } from '../../context/AuthContext'
 import { catalogoApi, imagenPrincipal, type Producto } from '../../lib/api'
 import { IconEdit, IconImage, IconTrash } from '../../components/icons'
+import { Stars } from '../../components/Stars'
+import { formatFechaHora } from '../../lib/estado'
 import styles from './Vendedor.module.css'
 
 export default function VendedorPublicaciones() {
@@ -72,12 +74,12 @@ export default function VendedorPublicaciones() {
         <div className={styles.table}>
           {productos.map((p) => (
             <div key={p._id} className={`card ${styles.tableRow}`}>
-              <div className={`${styles.thumb} ${p.tipo === 'producto' ? styles.blanco : ''}`}>
+              <div className={`${styles.thumb} ${styles.blanco}`}>
                 {imagenPrincipal(p) ? (
                   <img
                     src={imagenPrincipal(p)}
                     alt={p.nombre}
-                    className={p.tipo === 'producto' ? styles.contain : styles.cover}
+                    className={styles.contain}
                   />
                 ) : (
                   <IconImage width={20} height={20} />
@@ -88,6 +90,10 @@ export default function VendedorPublicaciones() {
                 <p className="muted" style={{ fontSize: '0.8125rem' }}>
                   {p.tipo === 'producto' ? `Stock: ${p.stock}` : 'Servicio'} · {p.categoria}
                 </p>
+                <p className="muted" style={{ fontSize: '0.75rem' }}>Publicada el {formatFechaHora(p.creadoEn)}</p>
+                <div style={{ marginTop: '0.25rem' }}>
+                  <Stars valor={p.calificacionPromedio} size={12} resenas={p.numResenas ?? 0} />
+                </div>
               </div>
               <span style={{ fontWeight: 700, minWidth: '4rem' }}>${p.precio.toFixed(2)}</span>
               {p.pausada ? (

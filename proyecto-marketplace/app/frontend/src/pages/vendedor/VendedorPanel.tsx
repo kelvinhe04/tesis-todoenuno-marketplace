@@ -92,12 +92,12 @@ export default function VendedorPanel() {
             <div className={styles.table}>
               {productos.map((p) => (
                 <div key={p._id} className={`card ${styles.tableRow}`}>
-                  <div className={`${styles.thumb} ${p.tipo === 'producto' ? styles.blanco : ''}`}>
+                  <div className={`${styles.thumb} ${styles.blanco}`}>
                     {imagenPrincipal(p) ? (
                       <img
                         src={imagenPrincipal(p)}
                         alt={p.nombre}
-                        className={p.tipo === 'producto' ? styles.contain : styles.cover}
+                        className={styles.contain}
                       />
                     ) : (
                       <IconImage width={20} height={20} />
@@ -105,7 +105,7 @@ export default function VendedorPanel() {
                   </div>
                   <div className={styles.rowInfo}>
                     <p style={{ fontWeight: 700 }}>{p.nombre}</p>
-                    <Stars valor={p.calificacionPromedio} size={12} />
+                    <Stars valor={p.calificacionPromedio} size={12} resenas={p.numResenas ?? 0} />
                   </div>
                   <span style={{ fontWeight: 700 }}>${p.precio.toFixed(2)}</span>
                 </div>

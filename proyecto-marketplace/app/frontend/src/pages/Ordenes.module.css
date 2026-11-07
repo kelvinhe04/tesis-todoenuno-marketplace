@@ -39,6 +39,20 @@
   padding: 1.25rem;
 }
 
+.row.clicable {
+  cursor: pointer;
+}
+
+.row.clicable:hover {
+  box-shadow: var(--shadow-md, 0 6px 18px rgba(0, 0, 0, 0.08));
+  border-color: var(--color-accent);
+}
+
+/* Con la tarjeta entera como enlace, el nombre no necesita su propio resaltado */
+.row.clicable .item:hover .itemNombre {
+  color: inherit;
+}
+
 .rowMeta {
   min-width: 10rem;
 }

@@ -234,6 +234,36 @@ export class ReservasService {
     return { liberada: true };
   }
 
+  // Recordatorios: reclama las citas confirmadas que empiezan en `minutos` o menos y aún no se avisaron.
+  // Cada una se marca como avisada al reclamarla (update atómico), así dos consultas seguidas no repiten el aviso.
+  async reclamarRecordatorios(minutos = 30) {
+    const ahora = ahoraEnNegocio();
+    const [a, m, d] = ahora.fecha.split('-').map(Number);
+    const manana = new Date(Date.UTC(a, m - 1, d + 1)).toISOString().slice(0, 10);
+    const candidatas = await this.reservas
+      .find({ estado: 'confirmada', recordatorioEnviado: { $ne: true }, fecha: { $in: [ahora.fecha, manana] }, ordenId: { $exists: true } })
+      .lean();
+    const resultado: Array<{ ordenId: string; productoId: string; nombre: string; vendedorId: string; compradorId: string; fecha: string; horaInicio: string; faltan: number }> = [];
+    for (const r of candidatas) {
+      const faltan = (r.fecha === ahora.fecha ? 0 : 1440) + aMinutos(r.horaInicio) - ahora.minutos;
+      if (faltan <= 0 || faltan > minutos) continue;
+      const reclamada = await this.reservas.findOneAndUpdate({ _id: r._id, recordatorioEnviado: { $ne: true } }, { $set: { recordatorioEnviado: true } });
+      if (!reclamada) continue;
+      const producto = await this.productos.findById(r.productoId).select('nombre').lean();
+      resultado.push({
+        ordenId: r.ordenId!,
+        productoId: r.productoId,
+        nombre: producto?.nombre ?? 'tu cita',
+        vendedorId: r.vendedorId,
+        compradorId: r.compradorId,
+        fecha: r.fecha,
+        horaInicio: r.horaInicio,
+        faltan,
+      });
+    }
+    return resultado;
+  }
+
   private async buscar(productoId: string, reservaId: string) {
     const reserva = await this.reservas.findOne({ _id: reservaId, productoId });
     if (!reserva) {

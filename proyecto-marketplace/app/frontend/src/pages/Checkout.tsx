@@ -567,7 +567,7 @@ export default function Checkout() {
 
             {metodo === 'efectivo' && (
               <p className="hint-text">
-                Pagarás ${carrito.total.toFixed(2)} en efectivo {cuandoPaga}. Puedes cancelar la cita hasta 2 horas antes sin costo.
+                Pagarás ${carrito.total.toFixed(2)} en efectivo {cuandoPaga}. Puedes cancelar la cita hasta 1 hora antes sin costo.
               </p>
             )}
 

@@ -431,7 +431,7 @@ export const ordenesApi = {
   reabrir: (id: string) => request<Orden>(`/ordenes/${id}/reabrir`, { method: 'POST' }),
   // Servicios: se paga en efectivo en el lugar (queda 'por_cobrar')
   pagarEnLugar: (id: string) => request<Orden>(`/ordenes/${id}/pagar-en-lugar`, { method: 'POST' }),
-  // Cancelar una cita (hasta 2 h antes): el horario queda libre; si ya se pagó, reembolso simulado
+  // Cancelar una cita (hasta 1 h antes): el horario queda libre; si ya se pagó, reembolso simulado
   cancelarCita: (id: string, productoId: string) => request<Orden>(`/ordenes/${id}/items/${productoId}/cancelar`, { method: 'PATCH' }),
   actualizarEstadoEntrega: (id: string, estadoEntrega: EstadoEntrega) =>
     request<Orden>(`/ordenes/${id}/estado-entrega`, { method: 'PATCH', body: JSON.stringify({ estadoEntrega }) }),

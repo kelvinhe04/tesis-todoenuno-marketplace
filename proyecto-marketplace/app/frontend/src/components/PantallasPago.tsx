@@ -40,7 +40,7 @@ export function PantallaResultado({
       </h1>
       <p className={`muted ${styles.resultadoTexto}`} style={{ marginBottom: '1.5rem' }}>
         {enLugar
-          ? 'Tu cita quedó agendada. Pagarás en efectivo en el lugar. Puedes cancelarla desde Mis órdenes hasta 2 horas antes.'
+          ? 'Tu cita quedó agendada. Pagarás en efectivo en el lugar. Puedes cancelarla desde Mis órdenes hasta 1 hora antes.'
           : aprobado
           ? 'Tu orden fue creada y el pago quedó confirmado (entorno de prueba / sandbox).'
           : motivo || 'El pago no pudo procesarse. Puedes revisar el estado en Mis órdenes.'}

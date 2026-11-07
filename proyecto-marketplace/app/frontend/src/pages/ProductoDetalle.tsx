@@ -40,6 +40,7 @@ import {
   ahoraPanama,
   formatFecha,
   formatHora12h,
+  HORAS_MIN_CANCELACION,
   NOMBRES_DIA,
   primeraFechaDisponible,
   quedanHorariosHoy,
@@ -428,6 +429,24 @@ export default function ProductoDetalle() {
               <label>Elige una fecha</label>
               <p className="muted" style={{ fontSize: '0.875rem', marginBottom: '0.5rem' }}>
                 Atiende: {resumenAtencion(producto.disponibilidad.reglas).join(' · ')}
+              </p>
+              <p
+                role="note"
+                style={{
+                  margin: '0 0 0.75rem',
+                  padding: '0.625rem 0.875rem',
+                  background: 'var(--color-warning-soft)',
+                  borderRadius: 'var(--radius-md)',
+                  color: 'var(--color-text)',
+                  fontSize: '0.875rem',
+                  lineHeight: 1.45,
+                }}
+              >
+                <b style={{ color: 'var(--color-warning)' }}>Política de cancelación:</b> puedes cancelar tu cita desde Mis órdenes hasta{' '}
+                <b>
+                  {HORAS_MIN_CANCELACION} {HORAS_MIN_CANCELACION === 1 ? 'hora' : 'horas'} antes
+                </b>{' '}
+                de que empiece. <b>Después ya no se puede cancelar.</b>
               </p>
               <SelectorFecha
                 key={id}

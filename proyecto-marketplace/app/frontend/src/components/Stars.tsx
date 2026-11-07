@@ -1,8 +1,9 @@
 import { IconStar } from './icons'
 
 // Estrellas con relleno parcial: 4.5 pinta cuatro completas y la quinta a la mitad, 4.2 al 20 %, etc.
-export function Stars({ valor, size = 15 }: { valor: number; size?: number }) {
-  return (
+// Con `resenas` (cantidad) muestra además el puntaje y el total: "4.5 (9)" o "Sin reseñas".
+export function Stars({ valor, size = 15, resenas }: { valor: number; size?: number; resenas?: number }) {
+  const estrellas = (
     <div
       style={{ display: 'inline-flex', gap: 2, color: 'oklch(70% 0.15 75)' }}
       aria-label={`${valor.toFixed(1)} de 5 estrellas`}
@@ -22,6 +23,19 @@ export function Stars({ valor, size = 15 }: { valor: number; size?: number }) {
           </span>
         )
       })}
+    </div>
+  )
+  if (resenas === undefined) return estrellas
+  return (
+    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.375rem', fontSize: '0.8125rem', color: 'var(--color-text-muted)' }}>
+      {estrellas}
+      {resenas > 0 ? (
+        <span>
+          <b style={{ color: 'var(--color-text)', fontWeight: 700 }}>{valor.toFixed(1)}</b> ({resenas})
+        </span>
+      ) : (
+        <span>Sin reseñas</span>
+      )}
     </div>
   )
 }

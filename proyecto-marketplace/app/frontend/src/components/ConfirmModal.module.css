@@ -40,6 +40,10 @@
   gap: 0.75rem;
 }
 
+.acciones button {
+  white-space: nowrap;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

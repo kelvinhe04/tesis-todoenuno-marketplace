@@ -5,13 +5,15 @@ import { ConfirmModal } from '../../components/ConfirmModal'
 import { useAuth } from '../../context/AuthContext'
 import { catalogoApi, imagenPrincipal, ordenesApi, type EstadoEntrega, type Orden } from '../../lib/api'
 import { IconImage } from '../../components/icons'
-import { ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, esCita, etiquetasDe, citaYaEmpezo, formatFecha, formatHora12h, soloCitas, soloDomicilio } from '../../lib/estado'
+import { ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, esCita, etiquetasDe, citaYaEmpezo, formatFecha, formatFechaHora, formatHora12h, soloCitas, soloDomicilio } from '../../lib/estado'
 import styles from './Vendedor.module.css'
 
 // Filtros por tipo de publicación y, dentro de cada tipo, por estado (las palabras cambian: un producto se envía y
 // se entrega; una cita se agenda, se completa, no asiste o se cancela).
 type Tipo = 'todos' | 'producto' | 'servicio'
-type Filtro = 'todas' | EstadoEntrega | 'por_cobrar'
+type Filtro = 'todas' | EstadoEntrega
+// Pago: aparte del estado de entrega (una cita por cobrar puede estar agendada, en camino o completada)
+type FiltroPago = 'todos' | 'pagada' | 'por_cobrar'
 
 const TIPOS: Array<{ id: Tipo; label: string }> = [
   { id: 'todos', label: 'Todos' },
@@ -19,20 +21,22 @@ const TIPOS: Array<{ id: Tipo; label: string }> = [
   { id: 'servicio', label: 'Servicios' },
 ]
 
+// Las etiquetas coinciden con las del selector de cada fila (Pendiente / En camino / Entregada...).
 const FILTROS: Record<Tipo, Array<{ id: Filtro; label: string }>> = {
+  // Con "Todos" se mezclan productos y citas: cada etiqueta nombra las dos palabras que agrupa
   todos: [
     { id: 'todas', label: 'Todas' },
-    { id: 'pendiente', label: 'Pendientes' },
+    { id: 'pendiente', label: 'Pendientes / Agendadas' },
     { id: 'en_camino', label: 'En camino' },
-    { id: 'entregada', label: 'Completadas' },
+    { id: 'entregada', label: 'Entregadas / Completadas' },
     { id: 'no_asistio', label: 'No asistió' },
     { id: 'cancelada', label: 'Canceladas' },
   ],
   producto: [
-    { id: 'todas', label: 'Todos' },
-    { id: 'pendiente', label: 'Por enviar' },
+    { id: 'todas', label: 'Todas' },
+    { id: 'pendiente', label: 'Pendientes' },
     { id: 'en_camino', label: 'En camino' },
-    { id: 'entregada', label: 'Entregados' },
+    { id: 'entregada', label: 'Entregadas' },
   ],
   servicio: [
     { id: 'todas', label: 'Todas' },
@@ -41,9 +45,14 @@ const FILTROS: Record<Tipo, Array<{ id: Filtro; label: string }>> = {
     { id: 'entregada', label: 'Completadas' },
     { id: 'no_asistio', label: 'No asistió' },
     { id: 'cancelada', label: 'Canceladas' },
-    { id: 'por_cobrar', label: 'Por cobrar' },
   ],
 }
+
+const FILTROS_PAGO: Array<{ id: FiltroPago; label: string }> = [
+  { id: 'todos', label: 'Todos' },
+  { id: 'pagada', label: 'Pagadas' },
+  { id: 'por_cobrar', label: 'Por cobrar (pago en el lugar)' },
+]
 
 // Opciones del selector: un producto se entrega; una cita se completa o el cliente no asiste
 const OPCIONES_PRODUCTO: EstadoEntrega[] = ['pendiente', 'en_camino', 'entregada']
@@ -56,6 +65,7 @@ export default function VendedorOrdenes() {
   const [cargando, setCargando] = useState(true)
   const [tipo, setTipo] = useState<Tipo>('todos')
   const [filtro, setFiltro] = useState<Filtro>('todas')
+  const [pago, setPago] = useState<FiltroPago>('todos')
   const [actualizando, setActualizando] = useState<string | null>(null)
   const [pendiente, setPendiente] = useState<{ ordenId: string; estado: EstadoEntrega; etiqueta: string; porCobrar: boolean; total: number } | null>(null)
 
@@ -95,13 +105,16 @@ export default function VendedorOrdenes() {
     const propios = propiosDe(o)
     return t === 'servicio' ? propios.some(esCita) : propios.some((it) => !esCita(it))
   }
-  const cumple = (o: Orden, f: Filtro) => f === 'todas' || (f === 'por_cobrar' ? o.estadoPago === 'por_cobrar' : o.estadoEntrega === f)
+  const cumple = (o: Orden, f: Filtro) => f === 'todas' || o.estadoEntrega === f
+  const cumplePago = (o: Orden, p: FiltroPago) => p === 'todos' || o.estadoPago === p
 
+  // Los dos filtros se combinan; cada contador muestra cuántas habría al elegir ese chip con el otro filtro ya aplicado
   const delTipo = ordenes.filter((o) => esDelTipo(o, tipo))
-  const filtradas = delTipo.filter((o) => cumple(o, filtro))
+  const filtradas = delTipo.filter((o) => cumple(o, filtro) && cumplePago(o, pago))
   const cambiarTipo = (t: Tipo) => {
     setTipo(t)
     setFiltro('todas')
+    setPago('todos')
   }
   const chipEstilo = (activo: boolean) =>
     activo ? { background: 'var(--color-text)', borderColor: 'var(--color-text)', color: '#fff' } : undefined
@@ -121,10 +134,20 @@ export default function VendedorOrdenes() {
           <span className={styles.filtroTitulo}>Estado</span>
           {FILTROS[tipo].map((f) => (
             <button key={f.id} type="button" onClick={() => setFiltro(f.id)} className="btn btn-sm" style={chipEstilo(filtro === f.id)}>
-              {f.label} ({delTipo.filter((o) => cumple(o, f.id)).length})
+              {f.label} ({delTipo.filter((o) => cumple(o, f.id) && cumplePago(o, pago)).length})
             </button>
           ))}
         </div>
+        {tipo !== 'producto' && (
+          <div className={styles.filtroFila}>
+            <span className={styles.filtroTitulo}>Pago</span>
+            {FILTROS_PAGO.map((f) => (
+              <button key={f.id} type="button" onClick={() => setPago(f.id)} className="btn btn-sm" style={chipEstilo(pago === f.id)}>
+                {f.label} ({delTipo.filter((o) => cumple(o, filtro) && cumplePago(o, f.id)).length})
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       {cargando ? (
@@ -148,9 +171,9 @@ export default function VendedorOrdenes() {
               <div key={orden.id} className={`card ${styles.tableRow}`}>
                 <div style={{ display: 'flex', gap: '0.375rem', flexShrink: 0 }}>
                   {propios.slice(0, 3).map((it, i) => (
-                    <div key={`${it.productoId}-${i}`} className={`${styles.thumb} ${it.cita ? '' : styles.blanco}`} title={it.nombre}>
+                    <div key={`${it.productoId}-${i}`} className={`${styles.thumb} ${styles.blanco}`} title={it.nombre}>
                       {fotos[it.productoId] ? (
-                        <img src={fotos[it.productoId]} alt={it.nombre} className={it.cita ? styles.cover : styles.contain} />
+                        <img src={fotos[it.productoId]} alt={it.nombre} className={styles.contain} />
                       ) : (
                         <IconImage width={20} height={20} />
                       )}
@@ -170,7 +193,7 @@ export default function VendedorOrdenes() {
                   )}
                 </div>
                 <span className="muted" style={{ fontSize: '0.8125rem' }}>
-                  {new Date(orden.creadoEn).toLocaleDateString('es-PA', { day: '2-digit', month: 'short' })}
+                  {formatFechaHora(orden.creadoEn)}
                 </span>
                 <span className={`badge ${ESTADO_PAGO_BADGE[orden.estadoPago]}`}>{ESTADO_PAGO_LABEL[orden.estadoPago]}</span>
                 <Select

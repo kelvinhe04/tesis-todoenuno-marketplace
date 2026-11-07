@@ -1015,18 +1015,18 @@ check("cancelar una cita pagada -> 'reembolsada' con reembolso simulado igual al
       c == 200 and x["estadoPago"] == "reembolsada" and x["items"][0].get("reembolso") == OT["items"][0]["subtotal"], (c, msg(x)))
 check("el cupo tambien vuelve al cancelar una cita pagada", "13:00" in horas_libres())
 
-# --- no se puede cancelar a menos de 2 horas ---
+# --- no se puede cancelar a menos de 1 hora ---
 OL, d = orden_de_cita(tokB, "16:00")
-check("orden de una cita para probar el limite de 2 horas", OL is not None, d)
+check("orden de una cita para probar el limite de 1 hora", OL is not None, d)
 if OL:
     c, x = call("POST", f"/ordenes/{OL['id']}/pagar-en-lugar", token=tokB)
     check("pagar en el lugar", c in (200, 201), (c, msg(x)))
-    pronto = hoy_panama() + timedelta(hours=1)
+    pronto = hoy_panama() + timedelta(minutes=30)
     sql = (f"update ordenes set items = jsonb_set(jsonb_set(items,'{{0,cita,fecha}}',to_jsonb('{pronto:%Y-%m-%d}'::text)),"
            f"'{{0,cita,horaInicio}}',to_jsonb('{pronto:%H:%M}'::text)) where id::text = '{OL['id']}'")
     _compose("exec", "-T", "postgres", "psql", "-U", "marketplace", "-d", "marketplace", "-c", sql)
     c, x = call("PATCH", f"/ordenes/{OL['id']}/items/{SV['_id']}/cancelar", token=tokB)
-    check("cancelar a menos de 2 horas de la cita -> 400", c == 400 and "2 horas" in str(msg(x)), (c, msg(x)))
+    check("cancelar a menos de 1 hora de la cita -> 400", c == 400 and "1 hora" in str(msg(x)), (c, msg(x)))
 
 # --- el vendedor completa la cita: lo por cobrar pasa a pagado ---
 OK_, d = orden_de_cita(tokB, "09:00")

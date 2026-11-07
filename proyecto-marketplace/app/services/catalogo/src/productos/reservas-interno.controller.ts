@@ -27,6 +27,12 @@ export class ReservasInternoController {
     return this.reservas.liberarReserva(reservaId);
   }
 
+  // Notificaciones lo llama cada minuto: devuelve (y marca como avisadas) las citas que empiezan en 30 min o menos.
+  @Post('recordatorios/reclamar')
+  reclamarRecordatorios() {
+    return this.reservas.reclamarRecordatorios(30);
+  }
+
   // Ordenes lo llama al crear/reabrir una orden: descuenta el stock (400 si no alcanza).
   @Post('descontar-stock')
   descontarStock(@Body() body: { items: ItemStock[] }) {

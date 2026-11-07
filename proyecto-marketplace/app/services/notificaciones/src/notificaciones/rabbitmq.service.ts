@@ -60,6 +60,22 @@ interface EventoCancelacion {
   reembolso?: number;
 }
 
+interface EventoRecordatorio {
+  ordenId: string;
+  productoId: string;
+  nombre: string;
+  vendedorId: string;
+  compradorId: string;
+  fecha: string;
+  horaInicio: string;
+  faltan: number; // minutos que faltan para la cita
+}
+
+// Fecha de hoy en la zona del negocio (los contenedores corren en UTC)
+function hoyISO(): string {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: process.env.TZ_NEGOCIO || 'America/Panama' }).format(new Date());
+}
+
 // 'AAAA-MM-DD' -> 'dd/mm/aaaa'; 'HH:mm' -> 'h:mm a. m./p. m.'
 function fechaLegible(fecha: string): string {
   const [a, m, d] = fecha.split('-');
@@ -112,7 +128,50 @@ export class RabbitmqService implements OnModuleInit {
       }
     });
 
+    // Recordatorios de citas: cada minuto se le pregunta a catalogo qué citas empiezan en 30 min o menos
+    setInterval(() => void this.revisarRecordatorios(), 60_000);
+
     this.logger.log(`Escuchando cola "${QUEUE}" ligada a [${ROUTING_KEYS.join(', ')}] en el exchange "${EXCHANGE}"`);
+  }
+
+  private async revisarRecordatorios() {
+    try {
+      const resp = await fetch(`${CATALOGO_URL}/catalogo/internal/recordatorios/reclamar`, { method: 'POST' });
+      if (!resp.ok) throw new Error(`catalogo respondió ${resp.status}`);
+      const citas = (await resp.json()) as EventoRecordatorio[];
+      for (const cita of citas) {
+        await this.avisarRecordatorioCita(cita).catch((err) => this.logger.warn(`Recordatorio de la cita ${cita.productoId} (orden ${cita.ordenId}) falló: ${err}`));
+      }
+    } catch (err) {
+      this.logger.warn(`No se pudieron revisar los recordatorios de citas: ${err}`);
+    }
+  }
+
+  // Media hora antes de la cita: aviso dentro de la app y por correo, al comprador y al vendedor
+  private async avisarRecordatorioCita(e: EventoRecordatorio) {
+    const cuando = `hoy a las ${horaLegible(e.horaInicio)}`;
+    const falta = e.faltan >= 2 ? `en ${e.faltan} minutos` : 'en 1 minuto';
+    const msgComprador = `Recordatorio: tu cita «${e.nombre}» empieza ${falta} (${e.fecha === hoyISO() ? cuando : `${fechaLegible(e.fecha)} a las ${horaLegible(e.horaInicio)}`}).`;
+    const msgVendedor = `Recordatorio: tienes la cita «${e.nombre}» ${falta} (${e.fecha === hoyISO() ? cuando : `${fechaLegible(e.fecha)} a las ${horaLegible(e.horaInicio)}`}).`;
+    await this.notificacionesService.crear(e.compradorId, 'cita_recordatorio', msgComprador, e.ordenId, e.productoId);
+    await this.notificacionesService.crear(e.vendedorId, 'cita_recordatorio_vendedor', msgVendedor, e.ordenId, e.productoId);
+    const solo = (it: ItemOrdenInterna) => it.productoId === e.productoId;
+    await this.correoDeOrden(
+      e.compradorId,
+      'TodoEnUno: tu cita empieza pronto',
+      { etiqueta: 'Recordatorio', tono: 'info', titulo: 'Tu cita empieza pronto', mensaje: msgComprador, boton: { texto: 'Ver mi cita', url: `${FRONTEND_URL}/ordenes` } },
+      e.ordenId,
+      msgComprador,
+      solo,
+    );
+    await this.correoDeOrden(
+      e.vendedorId,
+      'TodoEnUno: tienes una cita pronto',
+      { etiqueta: 'Recordatorio', tono: 'info', titulo: 'Tienes una cita pronto', mensaje: msgVendedor, boton: { texto: 'Ver mis citas', url: `${FRONTEND_URL}/vendedor/ordenes` } },
+      e.ordenId,
+      msgVendedor,
+      solo,
+    );
   }
 
   private async connectWithRetry(url: string, maxAttempts = 10, delayMs = 3000): Promise<amqp.ChannelModel> {
@@ -195,8 +254,8 @@ export class RabbitmqService implements OnModuleInit {
         etiqueta: 'Cita agendada',
         tono: 'ok',
         titulo: '¡Tu cita quedó agendada!',
-        mensaje: `Pagarás $${evento.total ?? '--'} en efectivo en el lugar. Puedes cancelarla desde Mis órdenes hasta 2 horas antes.`,
-        boton: { texto: 'Ver mi orden', url: `${FRONTEND_URL}/ordenes` },
+        mensaje: `Pagarás $${evento.total ?? '--'} en efectivo en el lugar. Puedes cancelarla desde Mis órdenes hasta 1 hora antes.`,
+        boton: { texto: 'Ver mi cita', url: `${FRONTEND_URL}/ordenes` },
       },
       evento.ordenId,
       mensaje,
@@ -216,7 +275,7 @@ export class RabbitmqService implements OnModuleInit {
     await this.correoDeOrden(
       e.compradorId,
       'TodoEnUno: cita cancelada',
-      { etiqueta: 'Cita cancelada', tono: 'info', titulo: 'Cancelaste tu cita', mensaje: msgComprador, boton: { texto: 'Ver mis órdenes', url: `${FRONTEND_URL}/ordenes` } },
+      { etiqueta: 'Cita cancelada', tono: 'info', titulo: 'Cancelaste tu cita', mensaje: msgComprador, boton: { texto: 'Ver mis citas', url: `${FRONTEND_URL}/ordenes` } },
       e.ordenId,
       msgComprador,
       (it) => it.productoId === e.productoId,
@@ -224,7 +283,7 @@ export class RabbitmqService implements OnModuleInit {
     await this.correoDeOrden(
       e.vendedorId,
       'TodoEnUno: cita cancelada por el cliente',
-      { etiqueta: 'Cita cancelada', tono: 'info', titulo: 'Un cliente canceló su cita', mensaje: msgVendedor, boton: { texto: 'Ir a mis órdenes de venta', url: `${FRONTEND_URL}/vendedor/ordenes` } },
+      { etiqueta: 'Cita cancelada', tono: 'info', titulo: 'Un cliente canceló su cita', mensaje: msgVendedor, boton: { texto: 'Ver mis citas', url: `${FRONTEND_URL}/vendedor/ordenes` } },
       e.ordenId,
       msgVendedor,
       (it) => it.productoId === e.productoId,
@@ -277,7 +336,7 @@ export class RabbitmqService implements OnModuleInit {
             mensaje: enLugar
               ? 'Un cliente agendó una cita contigo y pagará en efectivo en el lugar. Al completarla, márcala en tu panel para dar el cobro por recibido.'
               : 'Un comprador pagó por tus publicaciones. Prepara la entrega o atiende la cita y marca el estado en tu panel.',
-            boton: { texto: 'Ir a mis órdenes de venta', url: `${FRONTEND_URL}/vendedor/ordenes` },
+            boton: { texto: enLugar ? 'Ver mis citas' : 'Ir a mis órdenes de venta', url: `${FRONTEND_URL}/vendedor/ordenes` },
           },
           ordenId,
           mensaje,

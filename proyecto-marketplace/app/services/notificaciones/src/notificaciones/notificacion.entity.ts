@@ -1,6 +1,6 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-export type TipoNotificacion = 'orden_creada' | 'pago_confirmado' | 'pago_rechazado' | 'nueva_orden_vendedor' | 'resena_pendiente' | 'cita_agendada' | 'cita_cancelada';
+export type TipoNotificacion = 'orden_creada' | 'pago_confirmado' | 'pago_rechazado' | 'nueva_orden_vendedor' | 'resena_pendiente' | 'cita_agendada' | 'cita_cancelada' | 'cita_recordatorio' | 'cita_recordatorio_vendedor';
 
 @Entity('notificaciones')
 export class Notificacion {

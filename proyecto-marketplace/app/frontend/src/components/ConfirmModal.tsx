@@ -12,6 +12,9 @@ interface Props {
   procesando?: boolean
   onConfirmar: () => void
   onCancelar: () => void
+  // Tercer botón opcional (p. ej. "Guardar" junto a "Descartar" y "Seguir editando")
+  textoExtra?: string
+  onExtra?: () => void
 }
 
 export function ConfirmModal({
@@ -24,6 +27,8 @@ export function ConfirmModal({
   procesando = false,
   onConfirmar,
   onCancelar,
+  textoExtra,
+  onExtra,
 }: Props) {
   useEffect(() => {
     if (!abierto) return
@@ -41,6 +46,7 @@ export function ConfirmModal({
     <div className={styles.overlay} onClick={onCancelar}>
       <div
         className={styles.modal}
+        style={textoExtra ? { maxWidth: '31rem' } : undefined}
         role="alertdialog"
         aria-modal="true"
         aria-labelledby="confirm-modal-title"
@@ -50,10 +56,15 @@ export function ConfirmModal({
           {titulo}
         </h2>
         <p className={styles.mensaje}>{mensaje}</p>
-        <div className={styles.acciones}>
+        <div className={styles.acciones} style={textoExtra ? { justifyContent: 'center' } : undefined}>
           <button type="button" className="btn" onClick={onCancelar} disabled={procesando}>
             {textoCancelar}
           </button>
+          {textoExtra && onExtra && (
+            <button type="button" className="btn btn-primary" onClick={onExtra} disabled={procesando}>
+              {procesando ? 'Guardando...' : textoExtra}
+            </button>
+          )}
           <button
             type="button"
             className={peligro ? 'btn btn-danger' : 'btn btn-primary'}

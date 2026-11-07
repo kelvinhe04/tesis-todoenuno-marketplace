@@ -11,7 +11,7 @@ const CATALOGO_URL = process.env.CATALOGO_URL || 'http://catalogo:3000';
 const AUTH_URL = process.env.AUTH_URL || 'http://auth:3000';
 
 // Una cita se puede cancelar hasta estas horas antes de su inicio
-const HORAS_MIN_CANCELACION = 2;
+const HORAS_MIN_CANCELACION = 1;
 // Panamá no tiene horario de verano: UTC-5 fijo (las fechas/horas de las citas están en hora de Panamá)
 const OFFSET_PANAMA = '-05:00';
 // Estados de pago en los que el vendedor ya ve la orden (hay una venta o una cita agendada, incluso si luego se canceló)
@@ -407,7 +407,7 @@ export class OrdenesService {
     }
     const inicio = Date.parse(`${item.cita.fecha}T${item.cita.horaInicio}:00${OFFSET_PANAMA}`);
     if (Number.isNaN(inicio) || inicio - Date.now() < HORAS_MIN_CANCELACION * 3_600_000) {
-      throw new BadRequestException(`Solo puedes cancelar una cita hasta ${HORAS_MIN_CANCELACION} horas antes de que empiece`);
+      throw new BadRequestException(`Solo puedes cancelar una cita hasta ${HORAS_MIN_CANCELACION} ${HORAS_MIN_CANCELACION === 1 ? 'hora' : 'horas'} antes de que empiece`);
     }
 
     // Primero se libera el horario en catálogo: si falla, la orden queda intacta
