@@ -82,7 +82,7 @@ export default function Ordenes() {
     ids.forEach((id) => {
       catalogoApi
         .obtener(id)
-        .then((p) => setFotos((prev) => ({ ...prev, [id]: imagenPrincipal(p) ?? '' })))
+        .then((p) => setFotos((prev) => ({ ...prev, [id]: imagenPrincipal(p, 160) ?? '' })))
         .catch(() => setFotos((prev) => ({ ...prev, [id]: '' })))
     })
   }, [ordenes])

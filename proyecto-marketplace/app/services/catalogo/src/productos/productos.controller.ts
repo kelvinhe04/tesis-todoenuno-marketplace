@@ -8,6 +8,7 @@ import {
   Post,
   Query,
   Req,
+  Res,
   UseGuards,
 } from '@nestjs/common';
 import { ProductosService } from './productos.service';
@@ -26,9 +27,26 @@ export class ProductosController {
     return this.productos.listar(filtros);
   }
 
+  // `fotos=originales` (uso entre servicios, no está expuesto en el gateway): devuelve las fotos completas en base64
   @Get(':id')
-  obtener(@Param('id') id: string) {
-    return this.productos.obtener(id);
+  obtener(@Param('id') id: string, @Query('fotos') fotos?: string) {
+    return this.productos.obtener(id, fotos === 'originales');
+  }
+
+  // Una foto de la publicación; `w` = ancho en píxeles para pedir una miniatura (se cachea en el navegador)
+  @Get(':id/imagen/:n')
+  async imagen(@Param('id') id: string, @Param('n') n: string, @Query('w') w: string | undefined, @Req() req: any, @Res() res: any) {
+    if (!/^(\d+|u)$/.test(n)) return res.status(404).json({ message: 'Foto no encontrada' });
+    const ancho = w ? Math.min(1600, Math.max(48, parseInt(w, 10) || 0)) || undefined : undefined;
+    const r = await this.productos.foto(id, n, ancho);
+    if ('redirigir' in r) return res.redirect(302, r.redirigir);
+    res.setHeader('ETag', r.etag);
+    res.setHeader('Cache-Control', 'public, max-age=3600');
+    if (req.headers['if-none-match'] === r.etag) return res.status(304).end();
+    const foto = await r.cargar();
+    if (!foto) return res.status(404).json({ message: 'Foto no encontrada' });
+    res.setHeader('Content-Type', foto.tipo);
+    return res.send(foto.cuerpo);
   }
 
   @UseGuards(JwtAuthGuard, VendedorGuard)

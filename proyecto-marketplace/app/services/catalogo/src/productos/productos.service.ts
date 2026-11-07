@@ -5,6 +5,7 @@ import { Producto } from './producto.schema';
 import { CrearProductoDto } from './dto/crear-producto.dto';
 import { ActualizarProductoDto } from './dto/actualizar-producto.dto';
 import { FiltrosCatalogoDto } from './dto/filtros-catalogo.dto';
+import { RUTA_IMAGEN, aVista, esDataUri, etagDe, prepararFoto, restaurarOriginales } from './imagenes.util';
 
 const CATEGORIAS_PRODUCTO = ['Electrónica', 'Hogar', 'Moda', 'Belleza'];
 const CATEGORIAS_SERVICIO = ['Servicios profesionales', 'Belleza'];
@@ -61,7 +62,8 @@ export class ProductosService {
     if (!(dto.imagenes?.length || dto.imagenUrl)) {
       throw new BadRequestException('Agrega al menos una foto de tu publicación');
     }
-    return this.modelo.create({ ...dto, vendedorId });
+    const creada = await this.modelo.create({ ...dto, vendedorId });
+    return aVista(creada, true);
   }
 
   async listar(filtros: FiltrosCatalogoDto) {
@@ -93,14 +95,21 @@ export class ProductosService {
         )
         .skip((pagina - 1) * limite)
         .limit(limite)
+        .select('-imagenes -imagenUrl') // las fotos no se leen: el listado manda la URL de la principal
         .exec(),
       this.modelo.countDocuments(query),
     ]);
 
-    return { items, total, pagina, limite, totalPaginas: Math.max(1, Math.ceil(total / limite)) };
+    const vistas = items.map((p) => {
+      const o = p.toObject() as any;
+      o.imagenes = [RUTA_IMAGEN(String(o._id), 0)];
+      return o;
+    });
+    return { items: vistas, total, pagina, limite, totalPaginas: Math.max(1, Math.ceil(total / limite)) };
   }
 
-  async obtener(id: string) {
+  // Documento completo de Mongo (con las fotos originales): uso interno y servicios que piden `fotos=originales`
+  async obtenerDoc(id: string) {
     const producto = await this.modelo.findById(id).exec();
     if (!producto) {
       throw new NotFoundException('Publicación no encontrada');
@@ -108,9 +117,27 @@ export class ProductosService {
     return producto;
   }
 
+  async obtener(id: string, originales = false) {
+    const producto = await this.obtenerDoc(id);
+    return originales ? producto : aVista(producto, true);
+  }
+
+  // Una foto de la publicación (n = posición, o "u" para la imagenUrl antigua), opcionalmente en miniatura.
+  async foto(id: string, n: string, ancho?: number) {
+    const proyeccion: any = n === 'u' ? { imagenUrl: 1 } : { imagenes: { $slice: [Number(n), 1] }, imagenUrl: 1 };
+    const p = await this.modelo.findById(id, proyeccion).lean<{ imagenes?: string[]; imagenUrl?: string }>();
+    const img = n === 'u' ? p?.imagenUrl : p?.imagenes?.[0] ?? (Number(n) === 0 ? p?.imagenUrl : undefined);
+    if (!img) throw new NotFoundException('Foto no encontrada');
+    if (!esDataUri(img)) return { redirigir: img };
+    const etag = etagDe(id, n, img, ancho);
+    return { etag, cargar: () => prepararFoto(img, ancho, etag) };
+  }
+
   async actualizar(id: string, dto: ActualizarProductoDto, usuarioId: string) {
-    const producto = await this.obtener(id);
+    const producto = await this.obtenerDoc(id);
     this.verificarPropietario(producto, usuarioId);
+    // Si el formulario devolvió las URLs de las fotos de antes, se restauran las originales
+    if (dto.imagenes) dto.imagenes = restaurarOriginales(dto.imagenes, producto.imagenes, producto.imagenUrl);
     // Solo se revisa lo que el vendedor está tocando (no se bloquean ediciones simples como pausar
     // por datos antiguos que ya estaban incompletos)
     const toca = (...campos: string[]) => campos.some((c) => c in dto);
@@ -122,7 +149,8 @@ export class ProductosService {
     if (!(producto.imagenes?.length || producto.imagenUrl)) {
       throw new BadRequestException('La publicación debe tener al menos una foto');
     }
-    return producto.save();
+    const guardada = await producto.save();
+    return aVista(guardada, true);
   }
 
   // Descuenta stock de forma atómica (un solo update condicionado a stock >= cantidad, así dos
@@ -162,7 +190,7 @@ export class ProductosService {
   }
 
   async eliminar(id: string, usuarioId: string) {
-    const producto = await this.obtener(id);
+    const producto = await this.obtenerDoc(id);
     this.verificarPropietario(producto, usuarioId);
     await producto.deleteOne();
     return { eliminado: true };

@@ -255,8 +255,15 @@ export interface CrearProductoPayload {
   imagenes?: string[]
 }
 
-export function imagenPrincipal(p: { imagenes?: string[]; imagenUrl?: string }): string | undefined {
-  return p.imagenes?.[0] || p.imagenUrl
+// Las fotos del catálogo llegan como URL (/api/catalogo/:id/imagen/:n): se puede pedir una miniatura con `?w=ancho`
+// (mucho más liviana que la foto completa). Las data-URI (fotos recién elegidas en el formulario) pasan sin cambios.
+export function miniatura(src: string | undefined, ancho: number): string | undefined {
+  return src && src.startsWith('/api/catalogo/') && !src.includes('?') ? `${src}?w=${ancho}` : src
+}
+
+export function imagenPrincipal(p: { imagenes?: string[]; imagenUrl?: string }, ancho?: number): string | undefined {
+  const src = p.imagenes?.[0] || p.imagenUrl
+  return ancho ? miniatura(src, ancho) : src
 }
 
 

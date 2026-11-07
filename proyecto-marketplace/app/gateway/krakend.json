@@ -6,7 +6,17 @@
   "timeout": "5000ms",
   "cache_ttl": "0s",
   "output_encoding": "json",
-  "extra_config": { "router": { "disable_redirect_fixed_path": true, "disable_redirect_trailing_slash": true } },
+  "extra_config": {
+    "router": { "disable_redirect_fixed_path": true, "disable_redirect_trailing_slash": true },
+    "telemetry/opencensus": {
+      "sample_rate": 100,
+      "reporting_period": 5,
+      "enabled_layers": { "backend": true, "router": true, "pipe": false },
+      "exporters": {
+        "prometheus": { "port": 9091, "process_metrics": true, "go_metrics": true, "namespace": "krakend", "tag_host": false, "tag_path": true, "tag_method": true, "tag_statuscode": true }
+      }
+    }
+  },
   "endpoints": [
     {
       "endpoint": "/api/auth/health",
@@ -189,6 +199,14 @@
       "output_encoding": "no-op",
       "input_headers": ["Content-Type", "Authorization"],
       "backend": [{ "url_pattern": "/catalogo", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
+    },
+    {
+      "endpoint": "/api/catalogo/{id}/imagen/{n}",
+      "method": "GET",
+      "output_encoding": "no-op",
+      "input_headers": ["If-None-Match"],
+      "input_query_strings": ["w"],
+      "backend": [{ "url_pattern": "/catalogo/{id}/imagen/{n}", "encoding": "no-op", "host": ["http://catalogo:3000"] }]
     },
     {
       "endpoint": "/api/catalogo/{id}",

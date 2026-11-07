@@ -8,6 +8,7 @@ import {
   carritoApi,
   catalogoApi,
   disponibilidadApi,
+  miniatura,
   ordenesApi,
   reservasApi,
   resenasApi,
@@ -315,7 +316,7 @@ export default function ProductoDetalle() {
                   {imagenes.map((img, idx) => (
                     <img
                       key={idx}
-                      src={img}
+                      src={miniatura(img, 900)}
                       alt={idx === imagenActiva ? producto.nombre : ''}
                       aria-hidden={idx !== imagenActiva}
                       className={`${!esServicio ? styles.contain : styles.cover} ${styles.capa} ${idx === imagenActiva ? styles.capaActiva : ''}`}
@@ -341,7 +342,7 @@ export default function ProductoDetalle() {
                   onFocus={() => setImagenActiva(idx)}
                   onClick={() => setImagenActiva(idx)}
                 >
-                  <img src={img} alt={`${producto.nombre} ${idx + 1}`} className={!esServicio ? styles.contain : styles.cover} />
+                  <img src={miniatura(img, 160)} alt={`${producto.nombre} ${idx + 1}`} className={!esServicio ? styles.contain : styles.cover} />
                 </button>
               ))}
             </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { useAuth } from '../context/AuthContext'
-import { ApiError, carritoApi, type Carrito as CarritoType } from '../lib/api'
+import { ApiError, carritoApi, miniatura, type Carrito as CarritoType } from '../lib/api'
 import { IconImage, IconMinus, IconPlus, IconTrash } from '../components/icons'
 import { ConfirmModal } from '../components/ConfirmModal'
 import { formatFecha, formatHora12h } from '../lib/estado'
@@ -180,7 +180,7 @@ export default function Carrito() {
                   <div className={`${styles.thumb} ${item.tipo === 'producto' ? styles.blanco : ''}`}>
                     {item.imagenUrl ? (
                       <img
-                        src={item.imagenUrl}
+                        src={miniatura(item.imagenUrl, 200)}
                         alt={item.nombre}
                         className={item.tipo === 'producto' ? styles.contain : styles.cover}
                       />

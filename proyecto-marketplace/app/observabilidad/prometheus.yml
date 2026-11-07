@@ -1,0 +1,15 @@
+# Prometheus: cada 5 s recoge metricas del gateway (KrakenD), de los contenedores (cAdvisor) y de RabbitMQ.
+global:
+  scrape_interval: 5s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: gateway
+    static_configs:
+      - targets: ["gateway:9091"]
+  - job_name: contenedores
+    static_configs:
+      - targets: ["cadvisor:8080"]
+  - job_name: rabbitmq
+    static_configs:
+      - targets: ["rabbitmq:15692"]

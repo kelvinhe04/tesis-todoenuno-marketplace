@@ -381,7 +381,7 @@ export class RabbitmqService implements OnModuleInit {
   // Foto principal de la publicación como adjunto en línea (cid). Si no hay foto o falla, el correo sale sin ella.
   private async fotoDe(productoId: string, cid: string): Promise<AdjuntoCorreo | null> {
     try {
-      const resp = await fetch(`${CATALOGO_URL}/catalogo/${productoId}`);
+      const resp = await fetch(`${CATALOGO_URL}/catalogo/${productoId}?fotos=originales`); // el correo adjunta la foto completa
       if (!resp.ok) return null;
       const p = (await resp.json()) as { imagenes?: string[]; imagenUrl?: string };
       const img = p.imagenes?.[0] || p.imagenUrl;

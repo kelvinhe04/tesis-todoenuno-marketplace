@@ -77,7 +77,7 @@ export default function VendedorPublicaciones() {
               <div className={`${styles.thumb} ${styles.blanco}`}>
                 {imagenPrincipal(p) ? (
                   <img
-                    src={imagenPrincipal(p)}
+                    src={imagenPrincipal(p, 160)}
                     alt={p.nombre}
                     className={styles.contain}
                   />

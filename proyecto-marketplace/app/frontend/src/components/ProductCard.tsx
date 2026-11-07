@@ -14,7 +14,7 @@ function tonoPara(id: string) {
 }
 
 export function ProductCard({ producto }: { producto: Producto }) {
-  const imagen = imagenPrincipal(producto)
+  const imagen = imagenPrincipal(producto, 520)
   const esProducto = producto.tipo === 'producto'
   return (
     <Link to={`/productos/${producto._id}`} className={`card ${styles.card}`}>

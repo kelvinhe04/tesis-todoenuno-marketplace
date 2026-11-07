@@ -1,0 +1,1008 @@
+
+         /\      Grafana   /‾‾/  
+    /\  /  \     |\  __   /  /   
+   /  \/    \    | |/ /  /   ‾‾\ 
+  /          \   |   (  |  (‾)  |
+ / __________ \  |_|\_\  \_____/ 
+
+
+     execution: local
+        script: /scripts/carga.js
+        output: -
+
+     scenarios: (100.00%) 1 scenario, 200 max VUs, 4m30s max duration (incl. graceful stop):
+              * default: Up to 200 looping VUs for 4m0s over 4 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+
+Run       [ 100% ] setup()
+default   [   0% ]
+
+running (0m02.0s), 003/200 VUs, 0 complete and 0 interrupted iterations
+default   [   0% ] 003/200 VUs  0m00.8s/4m00.0s
+
+running (0m03.0s), 006/200 VUs, 0 complete and 0 interrupted iterations
+default   [   1% ] 006/200 VUs  0m01.8s/4m00.0s
+
+running (0m04.0s), 010/200 VUs, 1 complete and 0 interrupted iterations
+default   [   1% ] 010/200 VUs  0m02.8s/4m00.0s
+
+running (0m05.0s), 013/200 VUs, 3 complete and 0 interrupted iterations
+default   [   2% ] 013/200 VUs  0m03.8s/4m00.0s
+
+running (0m06.0s), 016/200 VUs, 6 complete and 0 interrupted iterations
+default   [   2% ] 016/200 VUs  0m04.8s/4m00.0s
+
+running (0m07.0s), 019/200 VUs, 8 complete and 0 interrupted iterations
+default   [   2% ] 019/200 VUs  0m05.8s/4m00.0s
+
+running (0m08.0s), 023/200 VUs, 9 complete and 0 interrupted iterations
+default   [   3% ] 023/200 VUs  0m06.8s/4m00.0s
+
+running (0m09.0s), 026/200 VUs, 10 complete and 0 interrupted iterations
+default   [   3% ] 026/200 VUs  0m07.8s/4m00.0s
+
+running (0m10.0s), 029/200 VUs, 14 complete and 0 interrupted iterations
+default   [   4% ] 029/200 VUs  0m08.8s/4m00.0s
+
+running (0m11.0s), 033/200 VUs, 17 complete and 0 interrupted iterations
+default   [   4% ] 033/200 VUs  0m09.8s/4m00.0s
+
+running (0m12.0s), 036/200 VUs, 20 complete and 0 interrupted iterations
+default   [   4% ] 036/200 VUs  0m10.8s/4m00.0s
+
+running (0m13.0s), 039/200 VUs, 23 complete and 0 interrupted iterations
+default   [   5% ] 039/200 VUs  0m11.8s/4m00.0s
+
+running (0m14.0s), 043/200 VUs, 27 complete and 0 interrupted iterations
+default   [   5% ] 043/200 VUs  0m12.8s/4m00.0s
+
+running (0m15.0s), 046/200 VUs, 29 complete and 0 interrupted iterations
+default   [   6% ] 046/200 VUs  0m13.8s/4m00.0s
+
+running (0m16.0s), 049/200 VUs, 32 complete and 0 interrupted iterations
+default   [   6% ] 049/200 VUs  0m14.8s/4m00.0s
+
+running (0m17.0s), 052/200 VUs, 35 complete and 0 interrupted iterations
+default   [   7% ] 052/200 VUs  0m15.8s/4m00.0s
+
+running (0m18.0s), 056/200 VUs, 39 complete and 0 interrupted iterations
+default   [   7% ] 056/200 VUs  0m16.8s/4m00.0s
+
+running (0m19.0s), 059/200 VUs, 40 complete and 0 interrupted iterations
+default   [   7% ] 059/200 VUs  0m17.8s/4m00.0s
+
+running (0m21.7s), 062/200 VUs, 44 complete and 0 interrupted iterations
+default   [   8% ] 062/200 VUs  0m18.8s/4m00.0s
+
+running (0m22.7s), 066/200 VUs, 47 complete and 0 interrupted iterations
+default   [   8% ] 066/200 VUs  0m19.8s/4m00.0s
+
+running (0m23.7s), 069/200 VUs, 48 complete and 0 interrupted iterations
+default   [   9% ] 069/200 VUs  0m20.8s/4m00.0s
+
+running (0m24.7s), 072/200 VUs, 50 complete and 0 interrupted iterations
+default   [   9% ] 072/200 VUs  0m21.8s/4m00.0s
+
+running (0m25.7s), 076/200 VUs, 51 complete and 0 interrupted iterations
+default   [   9% ] 076/200 VUs  0m22.8s/4m00.0s
+
+running (0m26.7s), 079/200 VUs, 53 complete and 0 interrupted iterations
+default   [  10% ] 079/200 VUs  0m23.8s/4m00.0s
+
+running (0m27.7s), 082/200 VUs, 56 complete and 0 interrupted iterations
+default   [  10% ] 082/200 VUs  0m24.8s/4m00.0s
+time="2026-11-07T03:51:47Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:51:48Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m28.7s), 085/200 VUs, 60 complete and 0 interrupted iterations
+default   [  11% ] 085/200 VUs  0m25.8s/4m00.0s
+
+running (0m29.7s), 089/200 VUs, 65 complete and 0 interrupted iterations
+default   [  11% ] 089/200 VUs  0m26.8s/4m00.0s
+time="2026-11-07T03:51:50Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m30.7s), 092/200 VUs, 70 complete and 0 interrupted iterations
+default   [  12% ] 092/200 VUs  0m27.8s/4m00.0s
+
+running (0m31.7s), 095/200 VUs, 75 complete and 0 interrupted iterations
+default   [  12% ] 095/200 VUs  0m28.8s/4m00.0s
+
+running (0m32.7s), 099/200 VUs, 82 complete and 0 interrupted iterations
+default   [  12% ] 099/200 VUs  0m29.8s/4m00.0s
+
+running (0m33.7s), 101/200 VUs, 87 complete and 0 interrupted iterations
+default   [  13% ] 101/200 VUs  0m30.8s/4m00.0s
+
+running (0m34.7s), 102/200 VUs, 89 complete and 0 interrupted iterations
+default   [  13% ] 102/200 VUs  0m31.8s/4m00.0s
+time="2026-11-07T03:51:55Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m35.7s), 104/200 VUs, 96 complete and 0 interrupted iterations
+default   [  14% ] 104/200 VUs  0m32.8s/4m00.0s
+time="2026-11-07T03:51:56Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m36.7s), 106/200 VUs, 98 complete and 0 interrupted iterations
+default   [  14% ] 106/200 VUs  0m33.8s/4m00.0s
+
+running (0m37.7s), 107/200 VUs, 103 complete and 0 interrupted iterations
+default   [  14% ] 107/200 VUs  0m34.8s/4m00.0s
+time="2026-11-07T03:51:57Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m38.7s), 109/200 VUs, 107 complete and 0 interrupted iterations
+default   [  15% ] 109/200 VUs  0m35.8s/4m00.0s
+time="2026-11-07T03:51:59Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m39.7s), 111/200 VUs, 109 complete and 0 interrupted iterations
+default   [  15% ] 111/200 VUs  0m36.8s/4m00.0s
+time="2026-11-07T03:52:00Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:00Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:00Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:00Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m40.7s), 112/200 VUs, 111 complete and 0 interrupted iterations
+default   [  16% ] 112/200 VUs  0m37.8s/4m00.0s
+time="2026-11-07T03:52:01Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m41.7s), 114/200 VUs, 112 complete and 0 interrupted iterations
+default   [  16% ] 114/200 VUs  0m38.8s/4m00.0s
+
+running (0m42.7s), 116/200 VUs, 116 complete and 0 interrupted iterations
+default   [  17% ] 116/200 VUs  0m39.8s/4m00.0s
+time="2026-11-07T03:52:03Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m43.7s), 117/200 VUs, 121 complete and 0 interrupted iterations
+default   [  17% ] 117/200 VUs  0m40.8s/4m00.0s
+
+running (0m44.7s), 119/200 VUs, 123 complete and 0 interrupted iterations
+default   [  17% ] 119/200 VUs  0m41.8s/4m00.0s
+
+running (0m45.7s), 121/200 VUs, 127 complete and 0 interrupted iterations
+default   [  18% ] 121/200 VUs  0m42.8s/4m00.0s
+
+running (0m46.7s), 122/200 VUs, 130 complete and 0 interrupted iterations
+default   [  18% ] 122/200 VUs  0m43.8s/4m00.0s
+time="2026-11-07T03:52:07Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:07Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:07Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m47.7s), 124/200 VUs, 133 complete and 0 interrupted iterations
+default   [  19% ] 124/200 VUs  0m44.8s/4m00.0s
+time="2026-11-07T03:52:08Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m48.7s), 126/200 VUs, 138 complete and 0 interrupted iterations
+default   [  19% ] 126/200 VUs  0m45.8s/4m00.0s
+time="2026-11-07T03:52:09Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m49.7s), 127/200 VUs, 141 complete and 0 interrupted iterations
+default   [  19% ] 127/200 VUs  0m46.8s/4m00.0s
+time="2026-11-07T03:52:10Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m50.7s), 129/200 VUs, 144 complete and 0 interrupted iterations
+default   [  20% ] 129/200 VUs  0m47.8s/4m00.0s
+time="2026-11-07T03:52:11Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:11Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:13Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m53.5s), 131/200 VUs, 151 complete and 0 interrupted iterations
+default   [  20% ] 131/200 VUs  0m48.8s/4m00.0s
+
+running (0m54.5s), 132/200 VUs, 158 complete and 0 interrupted iterations
+default   [  21% ] 132/200 VUs  0m49.8s/4m00.0s
+time="2026-11-07T03:52:15Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m55.5s), 134/200 VUs, 162 complete and 0 interrupted iterations
+default   [  21% ] 134/200 VUs  0m50.8s/4m00.0s
+
+running (0m56.5s), 136/200 VUs, 168 complete and 0 interrupted iterations
+default   [  22% ] 136/200 VUs  0m51.8s/4m00.0s
+
+running (0m57.5s), 137/200 VUs, 175 complete and 0 interrupted iterations
+default   [  22% ] 137/200 VUs  0m52.8s/4m00.0s
+time="2026-11-07T03:52:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m58.5s), 139/200 VUs, 177 complete and 0 interrupted iterations
+default   [  22% ] 139/200 VUs  0m53.8s/4m00.0s
+time="2026-11-07T03:52:19Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (0m59.5s), 141/200 VUs, 181 complete and 0 interrupted iterations
+default   [  23% ] 141/200 VUs  0m54.8s/4m00.0s
+time="2026-11-07T03:52:19Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m00.5s), 142/200 VUs, 184 complete and 0 interrupted iterations
+default   [  23% ] 142/200 VUs  0m55.8s/4m00.0s
+time="2026-11-07T03:52:21Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:21Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m01.5s), 144/200 VUs, 188 complete and 0 interrupted iterations
+default   [  24% ] 144/200 VUs  0m56.8s/4m00.0s
+
+running (1m02.5s), 146/200 VUs, 194 complete and 0 interrupted iterations
+default   [  24% ] 146/200 VUs  0m57.8s/4m00.0s
+time="2026-11-07T03:52:22Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:22Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:23Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:23Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:23Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:23Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m03.5s), 147/200 VUs, 197 complete and 0 interrupted iterations
+default   [  24% ] 147/200 VUs  0m58.8s/4m00.0s
+
+running (1m04.5s), 149/200 VUs, 202 complete and 0 interrupted iterations
+default   [  25% ] 149/200 VUs  0m59.8s/4m00.0s
+time="2026-11-07T03:52:24Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m05.5s), 151/200 VUs, 209 complete and 0 interrupted iterations
+default   [  25% ] 151/200 VUs  1m00.8s/4m00.0s
+time="2026-11-07T03:52:26Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:26Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m06.5s), 152/200 VUs, 216 complete and 0 interrupted iterations
+default   [  26% ] 152/200 VUs  1m01.8s/4m00.0s
+time="2026-11-07T03:52:27Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m07.5s), 154/200 VUs, 219 complete and 0 interrupted iterations
+default   [  26% ] 154/200 VUs  1m02.8s/4m00.0s
+
+running (1m08.5s), 156/200 VUs, 224 complete and 0 interrupted iterations
+default   [  27% ] 156/200 VUs  1m03.8s/4m00.0s
+time="2026-11-07T03:52:29Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:29Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m09.5s), 157/200 VUs, 229 complete and 0 interrupted iterations
+default   [  27% ] 157/200 VUs  1m04.8s/4m00.0s
+time="2026-11-07T03:52:29Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:30Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:30Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m10.5s), 159/200 VUs, 233 complete and 0 interrupted iterations
+default   [  27% ] 159/200 VUs  1m05.8s/4m00.0s
+time="2026-11-07T03:52:30Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m11.5s), 161/200 VUs, 238 complete and 0 interrupted iterations
+default   [  28% ] 161/200 VUs  1m06.8s/4m00.0s
+time="2026-11-07T03:52:31Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:31Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:32Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m12.5s), 162/200 VUs, 240 complete and 0 interrupted iterations
+default   [  28% ] 162/200 VUs  1m07.8s/4m00.0s
+time="2026-11-07T03:52:32Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m13.5s), 164/200 VUs, 244 complete and 0 interrupted iterations
+default   [  29% ] 164/200 VUs  1m08.8s/4m00.0s
+
+running (1m14.5s), 166/200 VUs, 249 complete and 0 interrupted iterations
+default   [  29% ] 166/200 VUs  1m09.8s/4m00.0s
+time="2026-11-07T03:52:34Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:35Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m15.5s), 167/200 VUs, 256 complete and 0 interrupted iterations
+default   [  29% ] 167/200 VUs  1m10.8s/4m00.0s
+
+running (1m16.5s), 169/200 VUs, 261 complete and 0 interrupted iterations
+default   [  30% ] 169/200 VUs  1m11.8s/4m00.0s
+
+running (1m17.5s), 171/200 VUs, 272 complete and 0 interrupted iterations
+default   [  30% ] 171/200 VUs  1m12.8s/4m00.0s
+
+running (1m18.5s), 172/200 VUs, 276 complete and 0 interrupted iterations
+default   [  31% ] 172/200 VUs  1m13.8s/4m00.0s
+time="2026-11-07T03:52:39Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m19.5s), 174/200 VUs, 279 complete and 0 interrupted iterations
+default   [  31% ] 174/200 VUs  1m14.8s/4m00.0s
+time="2026-11-07T03:52:40Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m20.5s), 176/200 VUs, 281 complete and 0 interrupted iterations
+default   [  32% ] 176/200 VUs  1m15.8s/4m00.0s
+time="2026-11-07T03:52:41Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:41Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:41Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m21.5s), 177/200 VUs, 284 complete and 0 interrupted iterations
+default   [  32% ] 177/200 VUs  1m16.8s/4m00.0s
+
+running (1m22.5s), 179/200 VUs, 288 complete and 0 interrupted iterations
+default   [  32% ] 179/200 VUs  1m17.8s/4m00.0s
+
+running (1m25.3s), 181/200 VUs, 290 complete and 0 interrupted iterations
+default   [  33% ] 181/200 VUs  1m18.8s/4m00.0s
+
+running (1m26.3s), 182/200 VUs, 291 complete and 0 interrupted iterations
+default   [  33% ] 182/200 VUs  1m19.8s/4m00.0s
+time="2026-11-07T03:52:47Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m27.3s), 184/200 VUs, 297 complete and 0 interrupted iterations
+default   [  34% ] 184/200 VUs  1m20.8s/4m00.0s
+time="2026-11-07T03:52:48Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m28.3s), 186/200 VUs, 300 complete and 0 interrupted iterations
+default   [  34% ] 186/200 VUs  1m21.8s/4m00.0s
+
+running (1m29.3s), 187/200 VUs, 306 complete and 0 interrupted iterations
+default   [  34% ] 187/200 VUs  1m22.8s/4m00.0s
+
+running (1m30.3s), 189/200 VUs, 311 complete and 0 interrupted iterations
+default   [  35% ] 189/200 VUs  1m23.8s/4m00.0s
+time="2026-11-07T03:52:50Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:51Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m31.3s), 191/200 VUs, 311 complete and 0 interrupted iterations
+default   [  35% ] 191/200 VUs  1m24.8s/4m00.0s
+time="2026-11-07T03:52:51Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:51Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:52Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m32.3s), 192/200 VUs, 316 complete and 0 interrupted iterations
+default   [  36% ] 192/200 VUs  1m25.8s/4m00.0s
+time="2026-11-07T03:52:52Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:53Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m33.3s), 194/200 VUs, 320 complete and 0 interrupted iterations
+default   [  36% ] 194/200 VUs  1m26.8s/4m00.0s
+time="2026-11-07T03:52:54Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:54Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:54Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m34.3s), 196/200 VUs, 326 complete and 0 interrupted iterations
+default   [  37% ] 196/200 VUs  1m27.8s/4m00.0s
+time="2026-11-07T03:52:54Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:54Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:54Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:55Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:55Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m35.3s), 197/200 VUs, 333 complete and 0 interrupted iterations
+default   [  37% ] 197/200 VUs  1m28.8s/4m00.0s
+time="2026-11-07T03:52:55Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m36.3s), 199/200 VUs, 335 complete and 0 interrupted iterations
+default   [  37% ] 199/200 VUs  1m29.8s/4m00.0s
+
+running (1m37.3s), 200/200 VUs, 337 complete and 0 interrupted iterations
+default   [  38% ] 200/200 VUs  1m30.8s/4m00.0s
+time="2026-11-07T03:52:57Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:58Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:52:58Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m38.3s), 200/200 VUs, 343 complete and 0 interrupted iterations
+default   [  38% ] 200/200 VUs  1m31.8s/4m00.0s
+
+running (1m39.3s), 200/200 VUs, 356 complete and 0 interrupted iterations
+default   [  39% ] 200/200 VUs  1m32.8s/4m00.0s
+time="2026-11-07T03:53:00Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m40.3s), 200/200 VUs, 362 complete and 0 interrupted iterations
+default   [  39% ] 200/200 VUs  1m33.8s/4m00.0s
+time="2026-11-07T03:53:00Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m41.3s), 200/200 VUs, 373 complete and 0 interrupted iterations
+default   [  39% ] 200/200 VUs  1m34.8s/4m00.0s
+time="2026-11-07T03:53:01Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m42.3s), 200/200 VUs, 373 complete and 0 interrupted iterations
+default   [  40% ] 200/200 VUs  1m35.8s/4m00.0s
+time="2026-11-07T03:53:03Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m43.3s), 200/200 VUs, 376 complete and 0 interrupted iterations
+default   [  40% ] 200/200 VUs  1m36.8s/4m00.0s
+time="2026-11-07T03:53:04Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:04Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m44.3s), 200/200 VUs, 382 complete and 0 interrupted iterations
+default   [  41% ] 200/200 VUs  1m37.8s/4m00.0s
+time="2026-11-07T03:53:04Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m45.3s), 200/200 VUs, 386 complete and 0 interrupted iterations
+default   [  41% ] 200/200 VUs  1m38.8s/4m00.0s
+time="2026-11-07T03:53:05Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:06Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m46.3s), 200/200 VUs, 389 complete and 0 interrupted iterations
+default   [  42% ] 200/200 VUs  1m39.8s/4m00.0s
+
+running (1m47.3s), 200/200 VUs, 393 complete and 0 interrupted iterations
+default   [  42% ] 200/200 VUs  1m40.8s/4m00.0s
+time="2026-11-07T03:53:08Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m48.3s), 200/200 VUs, 400 complete and 0 interrupted iterations
+default   [  42% ] 200/200 VUs  1m41.8s/4m00.0s
+
+running (1m49.3s), 200/200 VUs, 403 complete and 0 interrupted iterations
+default   [  43% ] 200/200 VUs  1m42.8s/4m00.0s
+time="2026-11-07T03:53:10Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m50.3s), 200/200 VUs, 406 complete and 0 interrupted iterations
+default   [  43% ] 200/200 VUs  1m43.8s/4m00.0s
+time="2026-11-07T03:53:11Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:11Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m51.3s), 200/200 VUs, 410 complete and 0 interrupted iterations
+default   [  44% ] 200/200 VUs  1m44.8s/4m00.0s
+time="2026-11-07T03:53:11Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:12Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m52.3s), 200/200 VUs, 413 complete and 0 interrupted iterations
+default   [  44% ] 200/200 VUs  1m45.8s/4m00.0s
+
+running (1m53.3s), 200/200 VUs, 419 complete and 0 interrupted iterations
+default   [  44% ] 200/200 VUs  1m46.8s/4m00.0s
+
+running (1m54.3s), 200/200 VUs, 423 complete and 0 interrupted iterations
+default   [  45% ] 200/200 VUs  1m47.8s/4m00.0s
+
+running (1m57.2s), 200/200 VUs, 427 complete and 0 interrupted iterations
+default   [  45% ] 200/200 VUs  1m48.8s/4m00.0s
+time="2026-11-07T03:53:17Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m58.2s), 200/200 VUs, 432 complete and 0 interrupted iterations
+default   [  46% ] 200/200 VUs  1m49.8s/4m00.0s
+time="2026-11-07T03:53:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (1m59.2s), 200/200 VUs, 437 complete and 0 interrupted iterations
+default   [  46% ] 200/200 VUs  1m50.8s/4m00.0s
+time="2026-11-07T03:53:19Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:19Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:20Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m00.2s), 200/200 VUs, 438 complete and 0 interrupted iterations
+default   [  47% ] 200/200 VUs  1m51.8s/4m00.0s
+time="2026-11-07T03:53:20Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:20Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:21Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m01.2s), 200/200 VUs, 442 complete and 0 interrupted iterations
+default   [  47% ] 200/200 VUs  1m52.8s/4m00.0s
+time="2026-11-07T03:53:21Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:22Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:22Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m02.2s), 200/200 VUs, 446 complete and 0 interrupted iterations
+default   [  47% ] 200/200 VUs  1m53.8s/4m00.0s
+time="2026-11-07T03:53:22Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:23Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m03.2s), 200/200 VUs, 453 complete and 0 interrupted iterations
+default   [  48% ] 200/200 VUs  1m54.8s/4m00.0s
+time="2026-11-07T03:53:23Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m04.2s), 200/200 VUs, 455 complete and 0 interrupted iterations
+default   [  48% ] 200/200 VUs  1m55.8s/4m00.0s
+time="2026-11-07T03:53:24Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m05.2s), 200/200 VUs, 463 complete and 0 interrupted iterations
+default   [  49% ] 200/200 VUs  1m56.8s/4m00.0s
+time="2026-11-07T03:53:25Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:26Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:26Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m06.2s), 200/200 VUs, 472 complete and 0 interrupted iterations
+default   [  49% ] 200/200 VUs  1m57.8s/4m00.0s
+
+running (2m07.2s), 200/200 VUs, 477 complete and 0 interrupted iterations
+default   [  49% ] 200/200 VUs  1m58.8s/4m00.0s
+time="2026-11-07T03:53:27Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:27Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:28Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m08.2s), 200/200 VUs, 483 complete and 0 interrupted iterations
+default   [  50% ] 200/200 VUs  1m59.8s/4m00.0s
+time="2026-11-07T03:53:28Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m09.2s), 200/200 VUs, 494 complete and 0 interrupted iterations
+default   [  50% ] 200/200 VUs  2m00.8s/4m00.0s
+
+running (2m10.2s), 200/200 VUs, 502 complete and 0 interrupted iterations
+default   [  51% ] 200/200 VUs  2m01.8s/4m00.0s
+time="2026-11-07T03:53:31Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m11.2s), 200/200 VUs, 505 complete and 0 interrupted iterations
+default   [  51% ] 200/200 VUs  2m02.8s/4m00.0s
+time="2026-11-07T03:53:31Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m12.2s), 200/200 VUs, 510 complete and 0 interrupted iterations
+default   [  52% ] 200/200 VUs  2m03.8s/4m00.0s
+time="2026-11-07T03:53:32Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:33Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m13.2s), 200/200 VUs, 518 complete and 0 interrupted iterations
+default   [  52% ] 200/200 VUs  2m04.8s/4m00.0s
+time="2026-11-07T03:53:34Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m14.2s), 200/200 VUs, 526 complete and 0 interrupted iterations
+default   [  52% ] 200/200 VUs  2m05.8s/4m00.0s
+time="2026-11-07T03:53:34Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:34Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m15.2s), 200/200 VUs, 532 complete and 0 interrupted iterations
+default   [  53% ] 200/200 VUs  2m06.8s/4m00.0s
+time="2026-11-07T03:53:35Z" level=warning msg="Request Failed" error="request timeout"
+time="2026-11-07T03:53:36Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m16.2s), 200/200 VUs, 535 complete and 0 interrupted iterations
+default   [  53% ] 200/200 VUs  2m07.8s/4m00.0s
+time="2026-11-07T03:53:36Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:37Z" level=warning msg="Request Failed" error="request timeout"
+time="2026-11-07T03:53:37Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m17.2s), 200/200 VUs, 540 complete and 0 interrupted iterations
+default   [  54% ] 200/200 VUs  2m08.8s/4m00.0s
+time="2026-11-07T03:53:37Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m18.2s), 200/200 VUs, 550 complete and 0 interrupted iterations
+default   [  54% ] 200/200 VUs  2m09.8s/4m00.0s
+
+running (2m19.2s), 200/200 VUs, 558 complete and 0 interrupted iterations
+default   [  54% ] 200/200 VUs  2m10.8s/4m00.0s
+
+running (2m20.2s), 200/200 VUs, 565 complete and 0 interrupted iterations
+default   [  55% ] 200/200 VUs  2m11.8s/4m00.0s
+time="2026-11-07T03:53:40Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m21.2s), 200/200 VUs, 571 complete and 0 interrupted iterations
+default   [  55% ] 200/200 VUs  2m12.8s/4m00.0s
+time="2026-11-07T03:53:41Z" level=warning msg="Request Failed" error="request timeout"
+time="2026-11-07T03:53:41Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m22.2s), 200/200 VUs, 578 complete and 0 interrupted iterations
+default   [  56% ] 200/200 VUs  2m13.8s/4m00.0s
+time="2026-11-07T03:53:42Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m23.2s), 200/200 VUs, 580 complete and 0 interrupted iterations
+default   [  56% ] 200/200 VUs  2m14.8s/4m00.0s
+time="2026-11-07T03:53:43Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m24.2s), 200/200 VUs, 584 complete and 0 interrupted iterations
+default   [  57% ] 200/200 VUs  2m15.8s/4m00.0s
+time="2026-11-07T03:53:44Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:45Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m25.2s), 200/200 VUs, 589 complete and 0 interrupted iterations
+default   [  57% ] 200/200 VUs  2m16.8s/4m00.0s
+
+running (2m26.2s), 200/200 VUs, 591 complete and 0 interrupted iterations
+default   [  57% ] 200/200 VUs  2m17.8s/4m00.0s
+time="2026-11-07T03:53:46Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m29.0s), 200/200 VUs, 595 complete and 0 interrupted iterations
+default   [  58% ] 200/200 VUs  2m18.8s/4m00.0s
+time="2026-11-07T03:53:49Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m30.0s), 200/200 VUs, 598 complete and 0 interrupted iterations
+default   [  58% ] 200/200 VUs  2m19.8s/4m00.0s
+time="2026-11-07T03:53:50Z" level=warning msg="Request Failed" error="request timeout"
+
+running (2m31.0s), 200/200 VUs, 605 complete and 0 interrupted iterations
+default   [  59% ] 200/200 VUs  2m20.8s/4m00.0s
+time="2026-11-07T03:53:51Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:51Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:51Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m32.0s), 200/200 VUs, 610 complete and 0 interrupted iterations
+default   [  59% ] 200/200 VUs  2m21.8s/4m00.0s
+time="2026-11-07T03:53:52Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m33.0s), 200/200 VUs, 613 complete and 0 interrupted iterations
+default   [  59% ] 200/200 VUs  2m22.8s/4m00.0s
+
+running (2m34.0s), 200/200 VUs, 618 complete and 0 interrupted iterations
+default   [  60% ] 200/200 VUs  2m23.8s/4m00.0s
+time="2026-11-07T03:53:54Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:55Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m35.0s), 200/200 VUs, 620 complete and 0 interrupted iterations
+default   [  60% ] 200/200 VUs  2m24.8s/4m00.0s
+
+running (2m36.0s), 200/200 VUs, 630 complete and 0 interrupted iterations
+default   [  61% ] 200/200 VUs  2m25.8s/4m00.0s
+time="2026-11-07T03:53:56Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m37.0s), 200/200 VUs, 638 complete and 0 interrupted iterations
+default   [  61% ] 200/200 VUs  2m26.8s/4m00.0s
+
+running (2m38.0s), 200/200 VUs, 643 complete and 0 interrupted iterations
+default   [  62% ] 200/200 VUs  2m27.8s/4m00.0s
+time="2026-11-07T03:53:58Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:53:58Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m39.0s), 200/200 VUs, 649 complete and 0 interrupted iterations
+default   [  62% ] 200/200 VUs  2m28.8s/4m00.0s
+time="2026-11-07T03:53:59Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m40.0s), 200/200 VUs, 653 complete and 0 interrupted iterations
+default   [  62% ] 200/200 VUs  2m29.8s/4m00.0s
+
+running (2m41.0s), 200/200 VUs, 659 complete and 0 interrupted iterations
+default   [  63% ] 200/200 VUs  2m30.8s/4m00.0s
+
+running (2m42.0s), 200/200 VUs, 664 complete and 0 interrupted iterations
+default   [  63% ] 200/200 VUs  2m31.8s/4m00.0s
+time="2026-11-07T03:54:02Z" level=warning msg="Request Failed" error="request timeout"
+
+running (2m43.0s), 200/200 VUs, 665 complete and 0 interrupted iterations
+default   [  64% ] 200/200 VUs  2m32.8s/4m00.0s
+
+running (2m44.0s), 200/200 VUs, 673 complete and 0 interrupted iterations
+default   [  64% ] 200/200 VUs  2m33.8s/4m00.0s
+
+running (2m45.0s), 200/200 VUs, 680 complete and 0 interrupted iterations
+default   [  64% ] 200/200 VUs  2m34.8s/4m00.0s
+
+running (2m46.0s), 200/200 VUs, 687 complete and 0 interrupted iterations
+default   [  65% ] 200/200 VUs  2m35.8s/4m00.0s
+time="2026-11-07T03:54:06Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:06Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:06Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:06Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:06Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m47.0s), 200/200 VUs, 691 complete and 0 interrupted iterations
+default   [  65% ] 200/200 VUs  2m36.8s/4m00.0s
+
+running (2m48.0s), 200/200 VUs, 695 complete and 0 interrupted iterations
+default   [  66% ] 200/200 VUs  2m37.8s/4m00.0s
+
+running (2m49.0s), 200/200 VUs, 699 complete and 0 interrupted iterations
+default   [  66% ] 200/200 VUs  2m38.8s/4m00.0s
+
+running (2m50.0s), 200/200 VUs, 704 complete and 0 interrupted iterations
+default   [  67% ] 200/200 VUs  2m39.8s/4m00.0s
+
+running (2m51.0s), 200/200 VUs, 709 complete and 0 interrupted iterations
+default   [  67% ] 200/200 VUs  2m40.8s/4m00.0s
+
+running (2m52.0s), 200/200 VUs, 711 complete and 0 interrupted iterations
+default   [  67% ] 200/200 VUs  2m41.8s/4m00.0s
+
+running (2m53.0s), 200/200 VUs, 717 complete and 0 interrupted iterations
+default   [  68% ] 200/200 VUs  2m42.8s/4m00.0s
+time="2026-11-07T03:54:13Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:13Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m54.0s), 200/200 VUs, 722 complete and 0 interrupted iterations
+default   [  68% ] 200/200 VUs  2m43.8s/4m00.0s
+time="2026-11-07T03:54:14Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:14Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m55.0s), 200/200 VUs, 726 complete and 0 interrupted iterations
+default   [  69% ] 200/200 VUs  2m44.8s/4m00.0s
+time="2026-11-07T03:54:15Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:15Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (2m56.0s), 200/200 VUs, 736 complete and 0 interrupted iterations
+default   [  69% ] 200/200 VUs  2m45.8s/4m00.0s
+
+running (2m57.0s), 200/200 VUs, 739 complete and 0 interrupted iterations
+default   [  69% ] 200/200 VUs  2m46.8s/4m00.0s
+
+running (2m58.0s), 200/200 VUs, 749 complete and 0 interrupted iterations
+default   [  70% ] 200/200 VUs  2m47.8s/4m00.0s
+time="2026-11-07T03:54:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m00.7s), 200/200 VUs, 750 complete and 0 interrupted iterations
+default   [  70% ] 200/200 VUs  2m48.8s/4m00.0s
+time="2026-11-07T03:54:21Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m01.7s), 200/200 VUs, 757 complete and 0 interrupted iterations
+default   [  71% ] 200/200 VUs  2m49.8s/4m00.0s
+time="2026-11-07T03:54:22Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m02.7s), 200/200 VUs, 767 complete and 0 interrupted iterations
+default   [  71% ] 200/200 VUs  2m50.8s/4m00.0s
+
+running (3m03.7s), 200/200 VUs, 771 complete and 0 interrupted iterations
+default   [  72% ] 200/200 VUs  2m51.8s/4m00.0s
+
+running (3m04.7s), 200/200 VUs, 775 complete and 0 interrupted iterations
+default   [  72% ] 200/200 VUs  2m52.8s/4m00.0s
+
+running (3m05.7s), 200/200 VUs, 782 complete and 0 interrupted iterations
+default   [  72% ] 200/200 VUs  2m53.8s/4m00.0s
+
+running (3m06.7s), 200/200 VUs, 785 complete and 0 interrupted iterations
+default   [  73% ] 200/200 VUs  2m54.8s/4m00.0s
+
+running (3m07.7s), 200/200 VUs, 794 complete and 0 interrupted iterations
+default   [  73% ] 200/200 VUs  2m55.8s/4m00.0s
+
+running (3m08.7s), 200/200 VUs, 798 complete and 0 interrupted iterations
+default   [  74% ] 200/200 VUs  2m56.8s/4m00.0s
+time="2026-11-07T03:54:29Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:29Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m09.7s), 200/200 VUs, 804 complete and 0 interrupted iterations
+default   [  74% ] 200/200 VUs  2m57.8s/4m00.0s
+
+running (3m10.7s), 200/200 VUs, 809 complete and 0 interrupted iterations
+default   [  74% ] 200/200 VUs  2m58.8s/4m00.0s
+
+running (3m11.7s), 200/200 VUs, 811 complete and 0 interrupted iterations
+default   [  75% ] 200/200 VUs  2m59.8s/4m00.0s
+time="2026-11-07T03:54:32Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m12.7s), 200/200 VUs, 818 complete and 0 interrupted iterations
+default   [  75% ] 200/200 VUs  3m00.8s/4m00.0s
+time="2026-11-07T03:54:33Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m13.7s), 200/200 VUs, 824 complete and 0 interrupted iterations
+default   [  76% ] 200/200 VUs  3m01.8s/4m00.0s
+
+running (3m14.7s), 200/200 VUs, 827 complete and 0 interrupted iterations
+default   [  76% ] 200/200 VUs  3m02.8s/4m00.0s
+
+running (3m15.7s), 200/200 VUs, 831 complete and 0 interrupted iterations
+default   [  77% ] 200/200 VUs  3m03.8s/4m00.0s
+
+running (3m16.7s), 200/200 VUs, 837 complete and 0 interrupted iterations
+default   [  77% ] 200/200 VUs  3m04.8s/4m00.0s
+
+running (3m17.7s), 200/200 VUs, 846 complete and 0 interrupted iterations
+default   [  77% ] 200/200 VUs  3m05.8s/4m00.0s
+
+running (3m18.7s), 200/200 VUs, 851 complete and 0 interrupted iterations
+default   [  78% ] 200/200 VUs  3m06.8s/4m00.0s
+time="2026-11-07T03:54:39Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m19.7s), 200/200 VUs, 858 complete and 0 interrupted iterations
+default   [  78% ] 200/200 VUs  3m07.8s/4m00.0s
+
+running (3m20.7s), 200/200 VUs, 863 complete and 0 interrupted iterations
+default   [  79% ] 200/200 VUs  3m08.8s/4m00.0s
+
+running (3m21.7s), 200/200 VUs, 868 complete and 0 interrupted iterations
+default   [  79% ] 200/200 VUs  3m09.8s/4m00.0s
+time="2026-11-07T03:54:42Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m22.7s), 200/200 VUs, 872 complete and 0 interrupted iterations
+default   [  79% ] 200/200 VUs  3m10.8s/4m00.0s
+time="2026-11-07T03:54:42Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m23.7s), 200/200 VUs, 879 complete and 0 interrupted iterations
+default   [  80% ] 200/200 VUs  3m11.8s/4m00.0s
+time="2026-11-07T03:54:44Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m24.7s), 200/200 VUs, 882 complete and 0 interrupted iterations
+default   [  80% ] 200/200 VUs  3m12.8s/4m00.0s
+
+running (3m25.7s), 200/200 VUs, 887 complete and 0 interrupted iterations
+default   [  81% ] 200/200 VUs  3m13.8s/4m00.0s
+
+running (3m26.7s), 200/200 VUs, 890 complete and 0 interrupted iterations
+default   [  81% ] 200/200 VUs  3m14.8s/4m00.0s
+time="2026-11-07T03:54:46Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:47Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m27.7s), 200/200 VUs, 900 complete and 0 interrupted iterations
+default   [  82% ] 200/200 VUs  3m15.8s/4m00.0s
+
+running (3m28.7s), 200/200 VUs, 901 complete and 0 interrupted iterations
+default   [  82% ] 200/200 VUs  3m16.8s/4m00.0s
+time="2026-11-07T03:54:49Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m29.7s), 200/200 VUs, 905 complete and 0 interrupted iterations
+default   [  82% ] 200/200 VUs  3m17.8s/4m00.0s
+time="2026-11-07T03:54:49Z" level=warning msg="Request Failed" error="unexpected EOF"
+time="2026-11-07T03:54:50Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m32.6s), 200/200 VUs, 910 complete and 0 interrupted iterations
+default   [  83% ] 200/200 VUs  3m18.8s/4m00.0s
+
+running (3m33.6s), 200/200 VUs, 915 complete and 0 interrupted iterations
+default   [  83% ] 200/200 VUs  3m19.8s/4m00.0s
+
+running (3m34.6s), 200/200 VUs, 919 complete and 0 interrupted iterations
+default   [  84% ] 200/200 VUs  3m20.8s/4m00.0s
+
+running (3m35.6s), 200/200 VUs, 925 complete and 0 interrupted iterations
+default   [  84% ] 200/200 VUs  3m21.8s/4m00.0s
+
+running (3m36.6s), 200/200 VUs, 931 complete and 0 interrupted iterations
+default   [  84% ] 200/200 VUs  3m22.8s/4m00.0s
+
+running (3m37.6s), 200/200 VUs, 937 complete and 0 interrupted iterations
+default   [  85% ] 200/200 VUs  3m23.8s/4m00.0s
+
+running (3m38.6s), 200/200 VUs, 942 complete and 0 interrupted iterations
+default   [  85% ] 200/200 VUs  3m24.8s/4m00.0s
+
+running (3m39.6s), 200/200 VUs, 947 complete and 0 interrupted iterations
+default   [  86% ] 200/200 VUs  3m25.8s/4m00.0s
+time="2026-11-07T03:55:00Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m40.6s), 200/200 VUs, 954 complete and 0 interrupted iterations
+default   [  86% ] 200/200 VUs  3m26.8s/4m00.0s
+
+running (3m41.6s), 200/200 VUs, 957 complete and 0 interrupted iterations
+default   [  87% ] 200/200 VUs  3m27.8s/4m00.0s
+
+running (3m42.6s), 200/200 VUs, 959 complete and 0 interrupted iterations
+default   [  87% ] 200/200 VUs  3m28.8s/4m00.0s
+
+running (3m43.6s), 200/200 VUs, 962 complete and 0 interrupted iterations
+default   [  87% ] 200/200 VUs  3m29.8s/4m00.0s
+
+running (3m44.6s), 200/200 VUs, 971 complete and 0 interrupted iterations
+default   [  88% ] 200/200 VUs  3m30.8s/4m00.0s
+time="2026-11-07T03:55:05Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m45.6s), 200/200 VUs, 977 complete and 0 interrupted iterations
+default   [  88% ] 200/200 VUs  3m31.8s/4m00.0s
+
+running (3m46.6s), 198/200 VUs, 986 complete and 0 interrupted iterations
+default   [  89% ] 198/200 VUs  3m32.8s/4m00.0s
+time="2026-11-07T03:55:07Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m47.6s), 198/200 VUs, 990 complete and 0 interrupted iterations
+default   [  89% ] 198/200 VUs  3m33.8s/4m00.0s
+time="2026-11-07T03:55:08Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m48.6s), 198/200 VUs, 996 complete and 0 interrupted iterations
+default   [  89% ] 198/200 VUs  3m34.8s/4m00.0s
+
+running (3m49.6s), 198/200 VUs, 998 complete and 0 interrupted iterations
+default   [  90% ] 198/200 VUs  3m35.8s/4m00.0s
+
+running (3m50.6s), 197/200 VUs, 1005 complete and 0 interrupted iterations
+default   [  90% ] 197/200 VUs  3m36.8s/4m00.0s
+
+running (3m51.6s), 196/200 VUs, 1008 complete and 0 interrupted iterations
+default   [  91% ] 196/200 VUs  3m37.8s/4m00.0s
+
+running (3m52.6s), 192/200 VUs, 1020 complete and 0 interrupted iterations
+default   [  91% ] 192/200 VUs  3m38.8s/4m00.0s
+
+running (3m53.6s), 191/200 VUs, 1024 complete and 0 interrupted iterations
+default   [  92% ] 191/200 VUs  3m39.8s/4m00.0s
+time="2026-11-07T03:55:13Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m54.6s), 188/200 VUs, 1029 complete and 0 interrupted iterations
+default   [  92% ] 188/200 VUs  3m40.8s/4m00.0s
+time="2026-11-07T03:55:15Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m55.6s), 186/200 VUs, 1035 complete and 0 interrupted iterations
+default   [  92% ] 186/200 VUs  3m41.8s/4m00.0s
+
+running (3m56.6s), 185/200 VUs, 1041 complete and 0 interrupted iterations
+default   [  93% ] 185/200 VUs  3m42.8s/4m00.0s
+time="2026-11-07T03:55:17Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m57.6s), 183/200 VUs, 1049 complete and 0 interrupted iterations
+default   [  93% ] 183/200 VUs  3m43.8s/4m00.0s
+
+running (3m58.6s), 182/200 VUs, 1054 complete and 0 interrupted iterations
+default   [  94% ] 182/200 VUs  3m44.8s/4m00.0s
+time="2026-11-07T03:55:18Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (3m59.6s), 180/200 VUs, 1061 complete and 0 interrupted iterations
+default   [  94% ] 180/200 VUs  3m45.8s/4m00.0s
+
+running (4m00.6s), 178/200 VUs, 1065 complete and 0 interrupted iterations
+default   [  94% ] 178/200 VUs  3m46.8s/4m00.0s
+
+running (4m01.6s), 175/200 VUs, 1070 complete and 0 interrupted iterations
+default   [  95% ] 175/200 VUs  3m47.8s/4m00.0s
+
+running (4m04.4s), 173/200 VUs, 1074 complete and 0 interrupted iterations
+default   [  95% ] 173/200 VUs  3m48.8s/4m00.0s
+
+running (4m05.4s), 167/200 VUs, 1085 complete and 0 interrupted iterations
+default   [  96% ] 167/200 VUs  3m49.8s/4m00.0s
+
+running (4m06.4s), 162/200 VUs, 1093 complete and 0 interrupted iterations
+default   [  96% ] 162/200 VUs  3m50.8s/4m00.0s
+
+running (4m07.4s), 153/200 VUs, 1106 complete and 0 interrupted iterations
+default   [  97% ] 153/200 VUs  3m51.8s/4m00.0s
+time="2026-11-07T03:55:28Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (4m08.4s), 151/200 VUs, 1109 complete and 0 interrupted iterations
+default   [  97% ] 151/200 VUs  3m52.8s/4m00.0s
+
+running (4m09.4s), 143/200 VUs, 1117 complete and 0 interrupted iterations
+default   [  97% ] 143/200 VUs  3m53.8s/4m00.0s
+
+running (4m10.4s), 139/200 VUs, 1122 complete and 0 interrupted iterations
+default   [  98% ] 139/200 VUs  3m54.8s/4m00.0s
+
+running (4m11.4s), 126/200 VUs, 1136 complete and 0 interrupted iterations
+default   [  98% ] 126/200 VUs  3m55.8s/4m00.0s
+time="2026-11-07T03:55:32Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (4m12.4s), 122/200 VUs, 1140 complete and 0 interrupted iterations
+default   [  99% ] 122/200 VUs  3m56.8s/4m00.0s
+time="2026-11-07T03:55:33Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (4m13.4s), 119/200 VUs, 1143 complete and 0 interrupted iterations
+default   [  99% ] 119/200 VUs  3m57.8s/4m00.0s
+
+running (4m14.4s), 109/200 VUs, 1154 complete and 0 interrupted iterations
+default   [  99% ] 109/200 VUs  3m58.8s/4m00.0s
+
+running (4m15.4s), 101/200 VUs, 1162 complete and 0 interrupted iterations
+default   [ 100% ] 101/200 VUs  3m59.8s/4m00.0s
+
+running (4m16.4s), 089/200 VUs, 1174 complete and 0 interrupted iterations
+default ↓ [ 100% ] 096/200 VUs  4m0s
+
+running (4m17.4s), 074/200 VUs, 1188 complete and 1 interrupted iterations
+default ↓ [ 100% ] 096/200 VUs  4m0s
+
+running (4m18.4s), 067/200 VUs, 1193 complete and 3 interrupted iterations
+default ↓ [ 100% ] 096/200 VUs  4m0s
+time="2026-11-07T03:55:39Z" level=warning msg="Request Failed" error="unexpected EOF"
+
+running (4m19.4s), 053/200 VUs, 1206 complete and 4 interrupted iterations
+default ↓ [ 100% ] 096/200 VUs  4m0s
+
+running (4m20.4s), 040/200 VUs, 1219 complete and 4 interrupted iterations
+default ↓ [ 100% ] 096/200 VUs  4m0s
+
+running (4m21.4s), 022/200 VUs, 1237 complete and 4 interrupted iterations
+default ↓ [ 100% ] 096/200 VUs  4m0s
+
+running (4m22.4s), 012/200 VUs, 1247 complete and 4 interrupted iterations
+default ↓ [ 100% ] 096/200 VUs  4m0s
+
+running (4m23.4s), 003/200 VUs, 1256 complete and 4 interrupted iterations
+default ↓ [ 100% ] 096/200 VUs  4m0s
+
+
+  █ THRESHOLDS 
+
+    http_req_duration
+    ✗ 'p(95)<800' p(95)=41.93s
+
+      {endpoint:detalle}
+      ✗ 'p(95)<800' p(95)=10.65s
+
+      {endpoint:listado}
+      ✗ 'p(95)<800' p(95)=49.05s
+
+    http_req_failed
+    ✗ 'rate<0.01' rate=6.90%
+
+
+  █ TOTAL RESULTS 
+
+    checks_total.......: 2767   10.469167/s
+    checks_succeeded...: 93.09% 2576 out of 2767
+    checks_failed......: 6.90%  191 out of 2767
+
+    ✗ listado 200
+      ↳  84% — ✓ 1071 / ✗ 191
+    ✓ detalle 200
+    ✓ login 200/201
+
+    CUSTOM
+    tiempo_login...................: avg=777.24ms min=40.08ms  med=560ms  max=6.09s  p(90)=1.6s   p(95)=2.62s 
+
+    HTTP
+    http_req_duration..............: avg=14.24s   min=20.82ms  med=7.52s  max=1m3s   p(90)=35.15s p(95)=41.93s
+      { endpoint:detalle }.........: avg=4.14s    min=20.82ms  med=3.4s   max=17.99s p(90)=8.88s  p(95)=10.65s
+      { endpoint:listado }.........: avg=26.94s   min=531.46ms med=26.47s max=1m3s   p(90)=43.01s p(95)=49.05s
+      { expected_response:true }...: avg=13.21s   min=20.82ms  med=6.22s  max=1m1s   p(90)=33.87s p(95)=41.11s
+    http_req_failed................: 6.90%  191 out of 2768
+    http_reqs......................: 2768   10.472951/s
+
+    EXECUTION
+    iteration_duration.............: avg=31.62s   min=2.65s    med=31.15s max=1m16s  p(90)=48.95s p(95)=53.65s
+    iterations.....................: 1259   4.763528/s
+    vus............................: 3      min=0           max=200
+    vus_max........................: 200    min=200         max=200
+
+    NETWORK
+    data_received..................: 13 GB  49 MB/s
+    data_sent......................: 319 kB 1.2 kB/s
+
+
+
+
+running (4m24.3s), 000/200 VUs, 1259 complete and 4 interrupted iterations
+default ✓ [ 100% ] 000/200 VUs  4m0s
+time="2026-11-07T03:55:44Z" level=error msg="thresholds on metrics 'http_req_duration, http_req_duration{endpoint:detalle}, http_req_duration{endpoint:listado}, http_req_failed' have been crossed"
