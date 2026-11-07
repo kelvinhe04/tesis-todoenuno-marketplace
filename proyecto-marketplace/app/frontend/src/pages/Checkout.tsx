@@ -59,6 +59,15 @@ export default function Checkout() {
   const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false)
   const [payuActivo, setPayuActivo] = useState(false) // PayU Latam sandbox configurado en el servidor
   const capturaIniciada = useRef(false)
+  // Aviso flotante cuando el pago es rechazado (el mensaje del formulario queda abajo y pasaba desapercibido)
+  const [avisoRechazo, setAvisoRechazo] = useState(false)
+  const errorRef = useRef<HTMLParagraphElement>(null)
+  useEffect(() => {
+    if (!avisoRechazo) return
+    errorRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    const t = setTimeout(() => setAvisoRechazo(false), 6000)
+    return () => clearTimeout(t)
+  }, [avisoRechazo])
   const [confirmandoPaypal, setConfirmandoPaypal] = useState(() => searchParams.get('paypal') === 'ok' && !!searchParams.get('token'))
 
   // Si el pago se rechaza la orden ya existe: el siguiente intento la reutiliza (no crea otra ni pide la dirección de nuevo)
@@ -345,7 +354,8 @@ export default function Checkout() {
       }
       if (pago.estado !== 'aprobado') {
         // Rechazado: no se cambia de pantalla; se explica y se deja corregir y reintentar aquí mismo
-        setError(`Pago rechazado: ${pago.motivoRechazo || 'el banco no aprobó la tarjeta'}. Revisa los datos o usa otra tarjeta y vuelve a intentarlo.`)
+        setError(`Pago rechazado: ${pago.motivoRechazo || 'el banco no aprobó la tarjeta'}. Tu pedido quedó guardado (también en Mis órdenes): revisa los datos o usa otra tarjeta y vuelve a intentarlo aquí mismo.`)
+        setAvisoRechazo(true)
         setCvv('')
         return
       }
@@ -670,7 +680,16 @@ export default function Checkout() {
             )}
           </div>
 
-          {error && <p className="error-text">{error}</p>}
+          {error && (
+            <p
+              ref={errorRef}
+              role="alert"
+              className="error-text"
+              style={{ padding: '0.75rem 1rem', border: '1px solid var(--color-danger)', borderRadius: 'var(--radius-md)', background: 'rgba(220, 38, 38, 0.06)' }}
+            >
+              {error}
+            </p>
+          )}
 
           <button type="submit" className="btn btn-primary btn-block" disabled={procesando || citaVencida}>
             {procesando ? 'Procesando...' : metodo === 'efectivo' ? 'Confirmar cita' : `Confirmar pago de $${carrito.total.toFixed(2)}`}
@@ -693,6 +712,12 @@ export default function Checkout() {
           </div>
         </div>
       </div>
+
+      {avisoRechazo && (
+        <div className="toast toast-error" role="alert">
+          Pago rechazado. Puedes intentarlo de nuevo con otra tarjeta; tu pedido sigue guardado.
+        </div>
+      )}
 
       <ConfirmModal
         abierto={mostrarConfirmacion}

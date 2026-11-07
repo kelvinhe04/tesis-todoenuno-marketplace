@@ -132,22 +132,34 @@ export default function VendedorOrdenes() {
         </div>
         <div className={styles.filtroFila}>
           <span className={styles.filtroTitulo}>Estado</span>
-          {FILTROS[tipo].map((f) => (
-            <button key={f.id} type="button" onClick={() => setFiltro(f.id)} className="btn btn-sm" style={chipEstilo(filtro === f.id)}>
-              {f.label} ({delTipo.filter((o) => cumple(o, f.id) && cumplePago(o, pago)).length})
-            </button>
-          ))}
+          <Select
+            size="sm"
+            width="15rem"
+            value={filtro}
+            onChange={(v) => setFiltro(v as Filtro)}
+            options={FILTROS[tipo].map((f) => ({
+              value: f.id,
+              label: `${f.label} (${delTipo.filter((o) => cumple(o, f.id) && cumplePago(o, pago)).length})`,
+            }))}
+          />
+          {tipo !== 'producto' && (
+            <>
+              <span className={styles.filtroTitulo} style={{ marginLeft: '0.75rem' }}>
+                Pago
+              </span>
+              <Select
+                size="sm"
+                width="16rem"
+                value={pago}
+                onChange={(v) => setPago(v as FiltroPago)}
+                options={FILTROS_PAGO.map((f) => ({
+                  value: f.id,
+                  label: `${f.label} (${delTipo.filter((o) => cumple(o, filtro) && cumplePago(o, f.id)).length})`,
+                }))}
+              />
+            </>
+          )}
         </div>
-        {tipo !== 'producto' && (
-          <div className={styles.filtroFila}>
-            <span className={styles.filtroTitulo}>Pago</span>
-            {FILTROS_PAGO.map((f) => (
-              <button key={f.id} type="button" onClick={() => setPago(f.id)} className="btn btn-sm" style={chipEstilo(pago === f.id)}>
-                {f.label} ({delTipo.filter((o) => cumple(o, filtro) && cumplePago(o, f.id)).length})
-              </button>
-            ))}
-          </div>
-        )}
       </div>
 
       {cargando ? (

@@ -6,6 +6,17 @@ Registro cronológico (lo más reciente arriba) de lo que se hizo con Claude Cod
 
 ---
 
+## 2026-11-06 (noche) — Arranque de la app y commit de cambios acumulados
+
+- Se levantó la app (Docker Desktop estaba apagado: hubo que abrirlo; luego `docker compose up -d` y Vite). Gateway y frontend respondieron 200.
+- Se commiteó y subió (`9b27874`) lo que estaba pendiente en el árbol: recordatorios de citas 30 min antes (catalogo `recordatorios/reclamar` + notificaciones cada minuto, tipos `cita_recordatorio` y `cita_recordatorio_vendedor`), cancelación de cita hasta 1 h antes, `formatFechaHora` en zona Panamá, ajustes de UI y `qa_api.py`.
+- Se explicó la diferencia entre `backup-seed.sh`/`restaurar-seed.sh` y `backup-datos.sh`/`restaurar-datos.sh`.
+- **No se probó visualmente ni se corrió `qa_api.py`** sobre ese commit (el mensaje se armó leyendo el diff).
+- **Checkout**: al rechazarse un pago ahora sale un aviso flotante (6 s) y el cuadro de error resaltado con scroll, y el texto dice que el pedido quedó guardado (el carrito se vacía a propósito porque la orden ya existe). Probado con Playwright (tarjeta `0002` -> reintento aprobado).
+- **Filtros de órdenes** (comprador y vendedor): chips de Tipo (Todos/Productos/Servicios) + menús desplegables compactos (`Select`) de Pago y Entrega (comprador) / Estado y Pago (vendedor), con contadores. Reemplazan los tabs de solo estado de pago del comprador. Probado con capturas (cuentas `ana.morales-seed` y `tecnopanama-seed` con token temporal de 1 h; no se tocó ninguna contraseña).
+- **Videos de demostración** (Playwright, sin audio, en el scratchpad de la sesión, no en git): compra con rechazo y reintento, correo en Gmail real, panel del vendedor y aviso de reseña; se hicieron con cuentas temporales `kelvinhe04+demo*@gmail.com` que se borraron junto con su orden y su publicación. Para grabar video hizo falta `npx playwright install ffmpeg`. Recomendado para la defensa: SMTP real activo y dos sesiones abiertas; el panel del vendedor no tiene campanita (al vendedor le avisan por correo).
+- Sin cambios solo en Mongo. Pendiente: verificar visualmente los recordatorios de citas, correr `qa_api.py`, y probar los chips Pendientes/Rechazadas/Canceladas de Mis órdenes con órdenes reales en esos estados.
+
 ## 2026-11-06 — Destacados por calificación y filtro de precio inmediato
 
 - **ÓRDENES FICTICIAS EN LA SEED (pedido del usuario, 2026-11-06, después del reinicio)**: `app/scripts/sembrar-ordenes.py` (idempotente, semilla fija) crea 5 compradoras `*-seed@` (hash copiado de una vendedora = misma contraseña) y 36 órdenes para las 8 vendedoras: productos (pendiente / en camino / entregada, con stock descontado) y citas de servicio (agendadas a futuro, completadas, no asistió, canceladas con reembolso simulado y una cancelada en efectivo, por cobrar), 27 pagos (tarjeta ····4242, PayPal y PayU ficticios) y 18 reservas coherentes con los días, horas, duración, margen y cupos de cada servicio. Cada vendedor de servicios tiene ≥1 cita agendada. `backup-seed.sh` y `restaurar-seed.sh` ahora incluyen `seed-ordenes.sql` (órdenes y pagos) y `seed-reservas.jsonl.gz`; restauración verificada (36/27 órdenes-pagos, mismo total, 18 reservas). Respaldo nuevo `backups/seed/2026-11-06_1532` (reemplaza a `2026-11-05_2101` en `.gitignore`). `qa_api.py` NO se corrió con estos datos sembrados (no se verificó que sus conteos sigan valiendo).

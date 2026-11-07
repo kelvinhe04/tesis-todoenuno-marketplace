@@ -1,28 +1,24 @@
-.tabs {
+.filtros {
   display: flex;
-  gap: 0;
-  border-bottom: 1.5px solid var(--color-border);
+  flex-direction: column;
+  gap: 0.625rem;
   margin-bottom: 1.25rem;
-  overflow-x: auto;
-  overflow-y: hidden;
 }
 
-.tab {
-  padding: 0.75rem 1.125rem;
-  font-weight: 600;
-  font-size: 0.9375rem;
+.filtroFila {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filtroTitulo {
+  width: 4rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--color-text-muted);
-  border: none;
-  background: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1.5px;
-  cursor: pointer;
-  white-space: nowrap;
-}
-
-.tab.active {
-  color: var(--color-text);
-  border-bottom-color: var(--color-text);
 }
 
 .list {

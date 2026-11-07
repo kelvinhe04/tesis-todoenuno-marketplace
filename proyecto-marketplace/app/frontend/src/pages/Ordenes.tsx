@@ -1,25 +1,68 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { ApiError, catalogoApi, imagenPrincipal, ordenesApi, type EstadoPago, type ItemOrden, type Orden } from '../lib/api'
+import { ApiError, catalogoApi, imagenPrincipal, ordenesApi, type EstadoEntrega, type EstadoPago, type ItemOrden, type Orden } from '../lib/api'
 import { ConfirmModal } from '../components/ConfirmModal'
+import { Select } from '../components/Select'
 import { IconImage } from '../components/icons'
 import { ESTADO_ENTREGA_BADGE, ESTADO_PAGO_BADGE, ESTADO_PAGO_LABEL, esCita, etiquetaEstado, formatFecha, formatFechaHora, formatHora12h, puedeCancelarCita, soloCitas } from '../lib/estado'
 import styles from './Ordenes.module.css'
 
-const TABS: Array<{ id: EstadoPago | 'todas'; label: string }> = [
+// Tres filtros que se combinan: tipo de publicación, estado del pago y estado de la entrega / cita
+// (las palabras cambian: un producto se envía y se entrega; una cita se agenda y se completa).
+type Tipo = 'todos' | 'producto' | 'servicio'
+type FiltroPago = EstadoPago | 'todas'
+type FiltroEntrega = EstadoEntrega | 'todas'
+
+const TIPOS: Array<{ id: Tipo; label: string }> = [
+  { id: 'todos', label: 'Todos' },
+  { id: 'producto', label: 'Productos' },
+  { id: 'servicio', label: 'Servicios' },
+]
+
+const PAGOS: Array<{ id: FiltroPago; label: string }> = [
   { id: 'todas', label: 'Todas' },
-  { id: 'pendiente', label: 'Pendientes' },
+  { id: 'pendiente', label: 'Pendientes de pago' },
   { id: 'pagada', label: 'Pagadas' },
   { id: 'por_cobrar', label: 'Pago en el lugar' },
   { id: 'rechazada', label: 'Rechazadas' },
   { id: 'cancelada', label: 'Canceladas' },
 ]
 
+const ENTREGAS: Record<Tipo, Array<{ id: FiltroEntrega; label: string }>> = {
+  todos: [
+    { id: 'todas', label: 'Todas' },
+    { id: 'pendiente', label: 'Pendientes / Agendadas' },
+    { id: 'en_camino', label: 'En camino' },
+    { id: 'entregada', label: 'Entregadas / Completadas' },
+    { id: 'no_asistio', label: 'No asistió' },
+    { id: 'cancelada', label: 'Canceladas' },
+  ],
+  producto: [
+    { id: 'todas', label: 'Todas' },
+    { id: 'pendiente', label: 'Pendientes' },
+    { id: 'en_camino', label: 'En camino' },
+    { id: 'entregada', label: 'Entregadas' },
+    { id: 'cancelada', label: 'Canceladas' },
+  ],
+  servicio: [
+    { id: 'todas', label: 'Todas' },
+    { id: 'pendiente', label: 'Agendadas' },
+    { id: 'en_camino', label: 'En camino' },
+    { id: 'entregada', label: 'Completadas' },
+    { id: 'no_asistio', label: 'No asistió' },
+    { id: 'cancelada', label: 'Canceladas' },
+  ],
+}
+
+const chipEstilo = (activo: boolean) => (activo ? { background: 'var(--color-text)', borderColor: 'var(--color-text)', color: '#fff' } : undefined)
+
 export default function Ordenes() {
   const navigate = useNavigate()
   const [ordenes, setOrdenes] = useState<Orden[]>([])
   const [cargando, setCargando] = useState(true)
-  const [tab, setTab] = useState<EstadoPago | 'todas'>('todas')
+  const [tipo, setTipo] = useState<Tipo>('todos')
+  const [pago, setPago] = useState<FiltroPago>('todas')
+  const [entrega, setEntrega] = useState<FiltroEntrega>('todas')
   const [aCancelar, setACancelar] = useState<{ orden: Orden; item: ItemOrden } | null>(null)
   const [cancelando, setCancelando] = useState(false)
   const [errorCancelar, setErrorCancelar] = useState<string | null>(null)
@@ -44,9 +87,20 @@ export default function Ordenes() {
     })
   }, [ordenes])
 
+  // Una orden cuenta como "producto" y/o "servicio" según sus ítems (puede tener de ambos)
+  const esDelTipo = (o: Orden, t: Tipo) => t === 'todos' || (t === 'servicio' ? o.items.some(esCita) : o.items.some((it) => !esCita(it)))
   // "Canceladas" agrupa las reembolsadas y las canceladas sin pago previo
-  const coincide = (o: Orden) => tab === 'todas' || o.estadoPago === tab || (tab === 'cancelada' && o.estadoPago === 'reembolsada')
-  const filtradas = ordenes.filter(coincide)
+  const cumplePago = (o: Orden, p: FiltroPago) => p === 'todas' || o.estadoPago === p || (p === 'cancelada' && o.estadoPago === 'reembolsada')
+  const cumpleEntrega = (o: Orden, e: FiltroEntrega) => e === 'todas' || o.estadoEntrega === e
+
+  // Cada contador muestra cuántas órdenes habría al elegir ese chip con los otros filtros ya aplicados
+  const delTipo = ordenes.filter((o) => esDelTipo(o, tipo))
+  const filtradas = delTipo.filter((o) => cumplePago(o, pago) && cumpleEntrega(o, entrega))
+  const cambiarTipo = (t: Tipo) => {
+    setTipo(t)
+    setEntrega('todas')
+    if (t === 'producto' && pago === 'por_cobrar') setPago('todas') // el pago en el lugar es solo de servicios
+  }
 
   const confirmarCancelacion = async () => {
     if (!aCancelar) return
@@ -67,12 +121,41 @@ export default function Ordenes() {
     <div className="container">
       <h1 style={{ fontSize: '1.375rem', marginBottom: '1.25rem' }}>Mis órdenes</h1>
 
-      <div className={styles.tabs}>
-        {TABS.map((t) => (
-          <button key={t.id} className={`${styles.tab} ${tab === t.id ? styles.active : ''}`} onClick={() => setTab(t.id)}>
-            {t.label}
-          </button>
-        ))}
+      <div className={styles.filtros}>
+        <div className={styles.filtroFila}>
+          <span className={styles.filtroTitulo}>Tipo</span>
+          {TIPOS.map((t) => (
+            <button key={t.id} type="button" onClick={() => cambiarTipo(t.id)} className="btn btn-sm" style={chipEstilo(tipo === t.id)}>
+              {t.label} ({ordenes.filter((o) => esDelTipo(o, t.id) && cumplePago(o, pago) && cumpleEntrega(o, entrega)).length})
+            </button>
+          ))}
+        </div>
+        <div className={styles.filtroFila}>
+          <span className={styles.filtroTitulo}>Pago</span>
+          <Select
+            size="sm"
+            width="16rem"
+            value={pago}
+            onChange={(v) => setPago(v as FiltroPago)}
+            options={PAGOS.filter((p) => !(tipo === 'producto' && p.id === 'por_cobrar')).map((p) => ({
+              value: p.id,
+              label: `${p.label} (${delTipo.filter((o) => cumplePago(o, p.id) && cumpleEntrega(o, entrega)).length})`,
+            }))}
+          />
+          <span className={styles.filtroTitulo} style={{ marginLeft: '0.75rem' }}>
+            Entrega
+          </span>
+          <Select
+            size="sm"
+            width="17rem"
+            value={entrega}
+            onChange={(v) => setEntrega(v as FiltroEntrega)}
+            options={ENTREGAS[tipo].map((e) => ({
+              value: e.id,
+              label: `${e.label} (${delTipo.filter((o) => cumplePago(o, pago) && cumpleEntrega(o, e.id)).length})`,
+            }))}
+          />
+        </div>
       </div>
 
       {cargando ? (
