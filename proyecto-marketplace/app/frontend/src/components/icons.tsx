@@ -209,3 +209,25 @@ export const IconThumbUp = (p: SVGProps<SVGSVGElement>) => (
     <path d="M7.5 10.5v9H4.5a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1h3zM7.5 10.5l3.3-6.2a1.6 1.6 0 0 1 3 1v3.2h4.6a1.6 1.6 0 0 1 1.6 1.9l-1.2 6.4a2 2 0 0 1-2 1.7H7.5" />
   </svg>
 )
+
+export const IconPin = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" />
+    <circle cx="12" cy="10" r="2.3" />
+  </svg>
+)
+
+export const IconExternal = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <path d="M14 4h6v6" />
+    <line x1="20" y1="4" x2="11" y2="13" />
+    <path d="M18 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 18.5v-11A1.5 1.5 0 0 1 5.5 6H10" />
+  </svg>
+)
+
+export const IconArrowRight = (p: SVGProps<SVGSVGElement>) => (
+  <svg {...base(p)}>
+    <line x1="4.5" y1="12" x2="19" y2="12" />
+    <polyline points="13 6 19 12 13 18" />
+  </svg>
+)

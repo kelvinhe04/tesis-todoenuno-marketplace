@@ -1,5 +1,6 @@
 import type { Resena } from '../lib/api'
 import { Stars } from './Stars'
+import { IconStar } from './icons'
 import styles from './ResumenResenas.module.css'
 
 interface Props {
@@ -34,7 +35,9 @@ export function ResumenResenas({ resenas, seleccion, onSeleccionar }: Props) {
               title={cantidad === 0 ? 'No hay reseñas con esta calificación' : `Ver solo las de ${n} ${n === 1 ? 'estrella' : 'estrellas'}`}
               onClick={() => onSeleccionar(seleccion === n ? null : n)}
             >
-              <span className={styles.estrella}>{n} ★</span>
+              <span className={styles.estrella}>
+                {n} <IconStar filled width={12} height={12} style={{ verticalAlign: '-1px' }} />
+              </span>
               <span className={styles.pista}>
                 <span className={styles.relleno} style={{ width: `${(cantidad / total) * 100}%` }} />
               </span>

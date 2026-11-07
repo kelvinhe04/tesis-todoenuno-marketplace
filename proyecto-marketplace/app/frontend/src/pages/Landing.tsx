@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { ProductCard } from '../components/ProductCard'
 import { VistosRecientemente } from '../components/VistosRecientemente'
 import { BotonVender } from '../components/BotonVender'
-import { IconCpu, IconHome, IconShirt, IconSparkle, IconStar, IconWrench } from '../components/icons'
+import { IconArrowRight, IconCpu, IconHome, IconShirt, IconSparkle, IconStar, IconWrench } from '../components/icons'
 import { catalogoApi, type Producto } from '../lib/api'
 import styles from './Landing.module.css'
 
@@ -66,7 +66,7 @@ export default function Landing() {
           </div>
           <div className={styles.stageCardA}>
             <IconHome width={34} height={34} />
-            <span>Cerámica artesanal</span>
+            <span>Hogar</span>
           </div>
           <div className={styles.stagePrice}>$38.00</div>
           <div className={styles.stageCardB}>
@@ -91,7 +91,7 @@ export default function Landing() {
         <div className={styles.sectionHeading}>
           <h2 style={{ fontSize: '1.25rem' }}>Productos y servicios destacados</h2>
           <Link to="/catalogo" className="muted" style={{ fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none' }}>
-            Ver todo →
+            Ver todo <IconArrowRight width={14} height={14} style={{ marginLeft: '0.25rem', verticalAlign: '-2px' }} />
           </Link>
         </div>
 

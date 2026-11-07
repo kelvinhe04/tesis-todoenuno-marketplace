@@ -20,8 +20,10 @@ import {
   IconChevronLeft,
   IconChevronRight,
   IconClose,
+  IconExternal,
   IconImage,
   IconMinus,
+  IconPin,
   IconPlus,
   IconSearch,
   IconStar,
@@ -376,7 +378,10 @@ export default function ProductoDetalle() {
                   : 'Publicación de producto'}
               </p>
               {esServicio && producto.modalidadEntrega === 'local_vendedor' && producto.direccionLocal && (
-                <p className="muted" style={{ fontSize: '0.8125rem' }}>📍 {producto.direccionLocal}</p>
+                <p className="muted" style={{ fontSize: '0.8125rem', display: 'flex', alignItems: 'center', gap: '0.375rem' }}>
+                  <IconPin width={15} height={15} style={{ flexShrink: 0, color: 'var(--color-danger)' }} />
+                  {producto.direccionLocal}
+                </p>
               )}
             </div>
           </div>
@@ -390,7 +395,7 @@ export default function ProductoDetalle() {
                 rel="noopener noreferrer"
                 className={styles.enlaceMapa}
               >
-                Abrir en Google Maps ↗
+                Abrir en Google Maps <IconExternal width={14} height={14} style={{ marginLeft: '0.25rem', verticalAlign: '-2px' }} />
               </a>
             </div>
           )}

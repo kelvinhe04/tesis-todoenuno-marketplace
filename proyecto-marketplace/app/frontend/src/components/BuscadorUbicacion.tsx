@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { IconExternal, IconPin } from './icons'
 import { buscarDireccion, coordenadasDeTexto, esEnlaceCortoGoogle, esUrl, urlGoogleMaps, type Coordenadas } from '../lib/ubicacion'
 
 interface Props {
@@ -91,13 +92,13 @@ export function BuscadorUbicacion({ ubicacion, onUbicacion }: Props) {
           {ocupado === 'buscando' ? 'Buscando...' : 'Buscar'}
         </button>
         <button type="button" className="btn btn-sm" onClick={usarMiUbicacion} disabled={ocupado !== null}>
-          {ocupado === 'ubicando' ? 'Ubicando...' : '📍 Usar mi ubicación actual'}
+          {ocupado === 'ubicando' ? 'Ubicando...' : (<><IconPin width={14} height={14} style={{ marginRight: '0.375rem', verticalAlign: '-2px' }} />Usar mi ubicación actual</>)}
         </button>
       </div>
       {mensaje && <p className="error-text">{mensaje}</p>}
       {ubicacion && (
         <a href={urlGoogleMaps(ubicacion)} target="_blank" rel="noopener noreferrer" className="hint-text" style={{ fontWeight: 600 }}>
-          Ver este punto en Google Maps ↗
+          Ver este punto en Google Maps <IconExternal width={13} height={13} style={{ marginLeft: '0.25rem', verticalAlign: '-2px' }} />
         </a>
       )}
     </div>

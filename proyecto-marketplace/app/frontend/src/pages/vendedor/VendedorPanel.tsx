@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { VendorLayout } from '../../components/VendorLayout'
 import { useAuth } from '../../context/AuthContext'
 import { catalogoApi, imagenPrincipal, ordenesApi, type Orden, type Producto } from '../../lib/api'
-import { IconImage } from '../../components/icons'
+import { IconArrowRight, IconImage } from '../../components/icons'
 import { Stars } from '../../components/Stars'
 import styles from './Vendedor.module.css'
 
@@ -77,7 +77,7 @@ export default function VendedorPanel() {
           <div className={styles.sectionHeading}>
             <h2 style={{ fontSize: '1.0625rem' }}>Publicaciones recientes</h2>
             <Link to="/vendedor/publicaciones" className="muted" style={{ fontSize: '0.875rem', fontWeight: 600, textDecoration: 'none' }}>
-              Ver todas →
+              Ver todas <IconArrowRight width={14} height={14} style={{ marginLeft: '0.25rem', verticalAlign: '-2px' }} />
             </Link>
           </div>
 
